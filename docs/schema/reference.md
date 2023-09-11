@@ -9,7 +9,7 @@ Releases are immutable – presenting information about a particular event in th
 ```{admonition} Browsing the schema
 :class: note
 
-This page presents the release schema in tables, with additional information in paragraphs. You can also download the canonical version of the release schema as {download}`JSON Schema <../../build/current_lang/release-schema.json>`, download it as a [CSV spreadsheet](https://toucan.open-contracting.org/mapping-sheet/?source=https://standard.open-contracting.org/1.1/en/release-schema.json), view it in an [interactive browser](release), or access it through the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/).
+This page presents the release schema in tables, with additional information in paragraphs. You can also download the canonical version of the release schema as [JSON Schema](../../build/current_lang/release-schema.json), download it as a [CSV spreadsheet](../../build/current_lang/release-schema.csv), view it in an [interactive browser](release), or access it through the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/).
 ```
 
 ## Release handling
@@ -59,7 +59,6 @@ A contract for ‘Software consultancy services’ is published in a release wit
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../examples/language_localization/language.csv
 ```
 
@@ -585,7 +584,7 @@ The items block is used to list the line-items associated with a tender, award o
 
 The `unit` block allows detailed specification of the parameters and price of units that make up a line-item.
 
-If the [Quantities, Units, Dimensions and Data Types Ontologies](https://www.qudt.org/qudt/owl/1.0.0/unit/) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
+If the [Quantities, Units, Dimensions and Data Types Ontologies](https://www.qudt.org) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
 
 Other unit classification schemes can be used, including those in the [unitClassificationScheme codelist](codelists.md#unit-classification-scheme).
 
@@ -745,4 +744,13 @@ The entries of the top-level `links` array are `Link` objects:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Link
+```
+
+### SimpleIdentifier
+
+```{field-description} ../../build/current_lang/release-schema.json /definitions/SimpleIdentifier
+```
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/SimpleIdentifier
 ```

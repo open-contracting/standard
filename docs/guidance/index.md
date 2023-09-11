@@ -17,4 +17,4 @@ build
 publish
 ```
 
-Do you have questions or need assistance? Contact the [OCDS Helpesk](../support/index).
+Do you have questions or need assistance? Contact the [Data Support Team](../support/index).

@@ -1,5 +1,9 @@
 # Data files and APIs
 
+```{tip}
+Did you arrive at this page looking to [download OCDS data](https://data.open-contracting.org)? Check out the [OCP Data Registry](https://data.open-contracting.org).
+```
+
 Different users have different needs when it comes to accessing OCDS data. A common need is to automate the download of all the OCDS data, in some form.
 
 The W3C [Data on the Web Best Practices](https://www.w3.org/TR/dwbp/#MultipleFormats) describe ways to increase the number of users, tools and applications that can access and make effective use of a given dataset.
@@ -84,7 +88,7 @@ If access controls are necessary, do not use access tokens that need to be refre
 If the API implements rate limits (throttling):
 
 * Document the rate limits in the API documentation ([example](https://developer.twitter.com/en/docs/twitter-api/rate-limits)).
-* When a user exceeds a rate limit, return a [HTTP 429 “Too Many Requests” response status code, ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)and set the [Retry-After](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) HTTP header to indicate how long to wait before making a new request.
+* When a user exceeds a rate limit, return a [HTTP 429 “Too Many Requests” response status code,](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) and set the [Retry-After](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) HTTP header to indicate how long to wait before making a new request.
 
 ### Completeness
 

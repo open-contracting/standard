@@ -66,8 +66,10 @@ Once you have published your data, it's time to share it with the world. It is a
 
 **Action:** Share your publication on the [OCDS mailing list](../support/index.md#ocds-community).
 
-**Action:** Request a data quality and usability feedback report from the [OCDS Helpdesk](../support/index.md#ocds-helpdesk).
+**Action:** Request a data quality and usability feedback report from the [Data Support Team](../support/index).
 
-**Action:** [Request support from OCP](mailto:data@open-contracting.org) to build capacity or tools for key stakeholders to start using the data.
+**Action:** [Request assistance from OCP](mailto:data@open-contracting.org) to build capacity or tools for key stakeholders to start using the data.
 
 **Resource:** [Guidance for using OCDS data](https://www.open-contracting.org/data/data-use/)
+
+**Resource:** [Best practices for developing open contracting data portals](https://www.open-contracting.org/resources/best-practices-open-contracting-portals/)

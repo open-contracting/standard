@@ -77,7 +77,7 @@ For example:
 
 This internal identifier can be exchanged with, and recorded in, any other systems which process information about this contracting process. For example, systems for reporting or recording spending transactions to suppliers.
 
-Mexico City then registered a prefix with the OCDS helpdesk. They have been given the prefix ‘ocds-87sd3t’ which can be added to their unique process identifiers to give a globally unique `ocid`. E.g.
+Mexico City then registered a prefix with the Data Support Team. They have been given the prefix ‘ocds-87sd3t’ which can be added to their unique process identifiers to give a globally unique `ocid`. E.g.
 
 > ocds-87sd3t-OM-DGRMSG-004-13
 ```
@@ -92,7 +92,7 @@ It is encouraged to separate the ocds prefix and the internal identifier with a 
 
 Publishers must register an ocid prefix. See the [registration pages](../guidance/build) for details of how to obtain your ocid prefix.
 
-Prefix are randomly generated lowercase alpha-numeric strings. A prefix is assigned to each organization that holds the existing internal identifier for a Contracting Processes.
+Prefix are randomly generated lowercase alphanumeric strings. A prefix is assigned to each organization that holds the existing internal identifier for a Contracting Processes.
 
 Currently, only the Open Contracting Partnership issues valid prefixes. In future, other organizations might be able to issue prefixes, each with their own prefix agency identifiers.
 

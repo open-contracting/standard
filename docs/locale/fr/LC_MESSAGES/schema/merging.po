@@ -8,22 +8,22 @@
 # samgoeta <samgoeta@gmail.com>, 2017
 # Cecile LG <cecile@datactivi.st>, 2019
 # Colin Maudry <colin@maudry.com>, 2021
-# James McKinney, 2021
+# James McKinney, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-13 09:12-0300\n"
+"POT-Creation-Date: 2023-01-10 13:45-0500\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
-"Last-Translator: James McKinney, 2021\n"
+"Last-Translator: James McKinney, 2023\n"
 "Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/schema/merging.md:1
 msgid "Merging"
@@ -89,7 +89,7 @@ msgstr ""
 msgid "Worked Example"
 msgstr ""
 
-#: ../../docs/schema/merging.md:1
+#: ../../docs/schema/merging.md:16
 msgid ""
 "A public procurement agency publishes a release to announce an opportunity "
 "on January 1, in which the total estimated value of the procurement is "
@@ -106,7 +106,7 @@ msgstr ""
 "de modifier l'annonce, dans lequel la valeur totale estimée de l’achat est "
 "portée à 2 000 USD."
 
-#: ../../docs/schema/merging.md:3
+#: ../../docs/schema/merging.md:18
 msgid ""
 "The agency decides to award the opportunity to two of the bidders. On March "
 "1, the agency publishes a release to announce that Company A is awarded a "
@@ -119,7 +119,7 @@ msgstr ""
 "instance OCDS qui annonce l'attribution à la société B d'un contrat de 750 "
 "USD."
 
-#: ../../docs/schema/merging.md:5
+#: ../../docs/schema/merging.md:20
 msgid ""
 "Through these individual releases, the agency provides real-time data about "
 "the contracting process."
@@ -127,7 +127,7 @@ msgstr ""
 "À travers ces deux instances, le service achat fournit des données en temps "
 "réel au fur et à mesure du processus de passation de marché."
 
-#: ../../docs/schema/merging.md:7
+#: ../../docs/schema/merging.md:22
 msgid ""
 "At each release, the agency also updates the record, which combines all the "
 "releases to date. In the final record:"
@@ -136,7 +136,7 @@ msgstr ""
 " qui rassemble toutes les instances à date. Dans l'archive finale, on trouve"
 " : "
 
-#: ../../docs/schema/merging.md:9
+#: ../../docs/schema/merging.md:24
 msgid ""
 "The compiled release contains all the information about the opportunity and "
 "awards, using the same schema as a release."
@@ -145,7 +145,7 @@ msgstr ""
 "l'opportunité du marché, ainsi que les attributions, en utilisant le même "
 "schéma qu'une instance."
 
-#: ../../docs/schema/merging.md:10
+#: ../../docs/schema/merging.md:25
 msgid ""
 "The versioned release makes it easy to see how the description and total "
 "estimated value changed over time."
@@ -204,7 +204,7 @@ msgstr ""
 msgid "If `omitWhenMerged` is set to `false`, ignore it."
 msgstr "Si `omitWhenMerged` est défini à `false`, ignorez le champ."
 
-#: ../../docs/schema/merging.md:1
+#: ../../docs/schema/merging.md:78
 msgid ""
 "The compiled release presently uses the same schema as the release schema, "
 "which means that the `id`, `date` and `tag` fields are required in a "
@@ -223,7 +223,7 @@ msgstr ""
 "de façon pertinente les instances compilées et versionnées, dans l'issue "
 "[#834](https://github.com/open-contracting/standard/issues/834)."
 
-#: ../../docs/schema/merging.md:3
+#: ../../docs/schema/merging.md:80
 msgid ""
 "In the meantime, an intermediate solution is to set `tag` to "
 "`[\"compiled\"]`, `date` to the date of the most recent release, and `id` to"
@@ -303,15 +303,13 @@ msgstr ""
 
 #: ../../docs/schema/merging.md:122
 msgid ""
-"The structure of the versioned release is described by the "
-"{download}`versioned release schema <../../build/current_lang/versioned-"
-"release-validation-schema.json>`; note that the `ocid` field's value is not "
-"versioned."
+"The structure of the versioned release is described by the [versioned "
+"release schema](../../build/current_lang/versioned-release-validation-"
+"schema.json); note that the `ocid` field's value is not versioned."
 msgstr ""
-"La structure de l'instance versionnée est décrite par le {download}`schéma "
-"d'instance versionnée <../../build/current_lang/versioned-release-"
-"validation-schema.json>`;  à noter que la valeur du champ `ocid` n'est pas "
-"versionné."
+"La structure de l'instance versionnée est décrite par le [schéma d'instance "
+"versionnée](../../build/current_lang/versioned-release-validation-"
+"schema.json);  à noter que la valeur du champ `ocid` n'est pas versionné."
 
 #: ../../docs/schema/merging.md:124
 msgid "Merge routine"
@@ -460,16 +458,15 @@ msgstr "Fusion d'une liste intégrale"
 #: ../../docs/schema/merging.md:162
 msgid ""
 "An **input** array must be treated as a literal value if the corresponding "
-"field in a {download}`dereferenced copy "
-"<../../build/current_lang/dereferenced-release-schema.json>` of the release "
-"schema has `\"array\"` in its `type` and if any of the following are also "
-"true:"
+"field in a [dereferenced copy](../../build/current_lang/dereferenced-"
+"release-schema.json) of the release schema has `\"array\"` in its `type` and"
+" if any of the following are also true:"
 msgstr ""
 "Un array d'*input** doit être traité en tant que valeur littérale si le "
-"champ correspondant de la {download}`copie déréférencée "
-"<../../build/current_lang/dereferenced-release-schema.json>` du schéma "
-"d'instance contient un `\"array\"` dans son `type` et si l'un des éléments "
-"suivants est également vrai : "
+"champ correspondant de la [copie "
+"déréférencée](../../build/current_lang/dereferenced-release-schema.json) du "
+"schéma d'instance contient un `\"array\"` dans son `type` et si l'un des "
+"éléments suivants est également vrai : "
 
 #: ../../docs/schema/merging.md:164
 msgid "The field has `\"wholeListMerge\": true`"
@@ -544,7 +541,7 @@ msgstr ""
 "n'est pas versionné mais conservé à l'identique, et ajouter le résultat à la"
 " liste dans **output**"
 
-#: ../../docs/schema/merging.md:1
+#: ../../docs/schema/merging.md:180
 msgid ""
 "In this case, to remove an object from an array, you need to instead set "
 "each of its fields to `null`. We invite discussion on how to remove objects "
@@ -556,7 +553,7 @@ msgstr ""
 "façon de supprimer des objets des tableaux dans le ticket "
 "[#232](https://github.com/open-contracting/standard/issues/232)."
 
-#: ../../docs/schema/merging.md:1
+#: ../../docs/schema/merging.md:184
 msgid ""
 "In the release schema, `\"versionId\": true` is declared on `id` fields that"
 " must be versioned. This is only for convenience and might be removed in "

@@ -1,31 +1,31 @@
 # Translations template for PROJECT.
-# Copyright (C) 2022 ORGANIZATION
+# Copyright (C) 2023 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
 # 
 # Translators:
 # Ben Webb <ben.webb@opendataservices.coop>, 2018
 # Oscar Montiel <oscar.montiel@okfn.org>, 2018
 # Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2018
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
-# James McKinney, 2021
 # Maria Esther Cervantes <mcervantes@cds.com.py>, 2021
+# James McKinney, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-01-13 09:58-0300\n"
+"POT-Creation-Date: 2023-01-10 13:46-0500\n"
 "PO-Revision-Date: 2017-04-24 10:46+0000\n"
-"Last-Translator: Maria Esther Cervantes <mcervantes@cds.com.py>, 2021\n"
+"Last-Translator: James McKinney, 2023\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. /title
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
@@ -220,106 +220,43 @@ msgid "Entity ID"
 msgstr "ID de Entidad"
 
 #. /properties/parties/items/properties/identifier/title
-#. /properties/parties/items/properties/additionalIdentifiers/items/title
 #. /properties/buyer/properties/identifier/title
-#. /properties/buyer/properties/additionalIdentifiers/items/title
 #. /properties/tender/properties/procuringEntity/properties/identifier/title
-#. /properties/tender/properties/procuringEntity/properties/additionalIdentifiers/items/title
 #. /properties/tender/properties/tenderers/items/properties/identifier/title
-#. /properties/tender/properties/tenderers/items/properties/additionalIdentifiers/items/title
 #. /properties/awards/items/properties/suppliers/items/properties/identifier/title
-#. /properties/awards/items/properties/suppliers/items/properties/additionalIdentifiers/items/title
 #. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/properties/identifier/title
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/properties/additionalIdentifiers/items/title
 #. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/properties/identifier/title
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/properties/additionalIdentifiers/items/title
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/providerOrganization/title
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/receiverOrganization/title
-#. /properties/contracts/items/properties/relatedProcesses/items/properties/identifier/title
-#. /properties/relatedProcesses/items/properties/identifier/title
 #. /definitions/Tender/properties/procuringEntity/properties/identifier/title
-#. /definitions/Tender/properties/procuringEntity/properties/additionalIdentifiers/items/title
 #. /definitions/Tender/properties/tenderers/items/properties/identifier/title
-#. /definitions/Tender/properties/tenderers/items/properties/additionalIdentifiers/items/title
 #. /definitions/Award/properties/suppliers/items/properties/identifier/title
-#. /definitions/Award/properties/suppliers/items/properties/additionalIdentifiers/items/title
 #. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/properties/identifier/title
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/properties/additionalIdentifiers/items/title
 #. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/properties/identifier/title
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/properties/additionalIdentifiers/items/title
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/providerOrganization/title
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/receiverOrganization/title
-#. /definitions/Contract/properties/relatedProcesses/items/properties/identifier/title
 #. /definitions/Implementation/properties/transactions/items/properties/payer/properties/identifier/title
-#. /definitions/Implementation/properties/transactions/items/properties/payer/properties/additionalIdentifiers/items/title
 #. /definitions/Implementation/properties/transactions/items/properties/payee/properties/identifier/title
-#. /definitions/Implementation/properties/transactions/items/properties/payee/properties/additionalIdentifiers/items/title
-#. /definitions/Implementation/properties/transactions/items/properties/providerOrganization/title
-#. /definitions/Implementation/properties/transactions/items/properties/receiverOrganization/title
 #. /definitions/Transaction/properties/payer/properties/identifier/title
-#. /definitions/Transaction/properties/payer/properties/additionalIdentifiers/items/title
 #. /definitions/Transaction/properties/payee/properties/identifier/title
-#. /definitions/Transaction/properties/payee/properties/additionalIdentifiers/items/title
-#. /definitions/Transaction/properties/providerOrganization/title
-#. /definitions/Transaction/properties/receiverOrganization/title
 #. /definitions/OrganizationReference/properties/identifier/title
-#. /definitions/OrganizationReference/properties/additionalIdentifiers/items/title
 #. /definitions/Organization/properties/identifier/title
-#. /definitions/Organization/properties/additionalIdentifiers/items/title
-#. /definitions/Identifier/title
-#. /definitions/RelatedProcess/properties/identifier/title
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
-msgid "Identifier"
-msgstr "Identificador"
+msgid "Primary identifier"
+msgstr "Identificador principal"
 
 #. /properties/parties/items/properties/identifier/description
-#. /properties/parties/items/properties/additionalIdentifiers/items/description
-#. /properties/buyer/properties/identifier/description
-#. /properties/buyer/properties/additionalIdentifiers/items/description
-#. /properties/tender/properties/procuringEntity/properties/identifier/description
-#. /properties/tender/properties/procuringEntity/properties/additionalIdentifiers/items/description
-#. /properties/tender/properties/tenderers/items/properties/identifier/description
-#. /properties/tender/properties/tenderers/items/properties/additionalIdentifiers/items/description
-#. /properties/awards/items/properties/suppliers/items/properties/identifier/description
-#. /properties/awards/items/properties/suppliers/items/properties/additionalIdentifiers/items/description
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/properties/identifier/description
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/properties/additionalIdentifiers/items/description
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/properties/identifier/description
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/properties/additionalIdentifiers/items/description
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/providerOrganization/description
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/receiverOrganization/description
-#. /definitions/Tender/properties/procuringEntity/properties/identifier/description
-#. /definitions/Tender/properties/procuringEntity/properties/additionalIdentifiers/items/description
-#. /definitions/Tender/properties/tenderers/items/properties/identifier/description
-#. /definitions/Tender/properties/tenderers/items/properties/additionalIdentifiers/items/description
-#. /definitions/Award/properties/suppliers/items/properties/identifier/description
-#. /definitions/Award/properties/suppliers/items/properties/additionalIdentifiers/items/description
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/properties/identifier/description
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/properties/additionalIdentifiers/items/description
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/properties/identifier/description
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/properties/additionalIdentifiers/items/description
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/providerOrganization/description
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/receiverOrganization/description
-#. /definitions/Implementation/properties/transactions/items/properties/payer/properties/identifier/description
-#. /definitions/Implementation/properties/transactions/items/properties/payer/properties/additionalIdentifiers/items/description
-#. /definitions/Implementation/properties/transactions/items/properties/payee/properties/identifier/description
-#. /definitions/Implementation/properties/transactions/items/properties/payee/properties/additionalIdentifiers/items/description
-#. /definitions/Implementation/properties/transactions/items/properties/providerOrganization/description
-#. /definitions/Implementation/properties/transactions/items/properties/receiverOrganization/description
-#. /definitions/Transaction/properties/payer/properties/identifier/description
-#. /definitions/Transaction/properties/payer/properties/additionalIdentifiers/items/description
-#. /definitions/Transaction/properties/payee/properties/identifier/description
-#. /definitions/Transaction/properties/payee/properties/additionalIdentifiers/items/description
-#. /definitions/Transaction/properties/providerOrganization/description
-#. /definitions/Transaction/properties/receiverOrganization/description
-#. /definitions/OrganizationReference/properties/identifier/description
-#. /definitions/OrganizationReference/properties/additionalIdentifiers/items/description
 #. /definitions/Organization/properties/identifier/description
-#. /definitions/Organization/properties/additionalIdentifiers/items/description
-#. /definitions/Identifier/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
-msgid "A unique identifier for a party (organization)."
-msgstr "Un identificador único para una parte involucrada (organización)."
+msgid ""
+"The primary identifier for this organization or participant. Identifiers "
+"that uniquely pick out a legal entity should be preferred. Consult the "
+"[organization identifier guidance](https://standard.open-"
+"contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred "
+"scheme and identifier to use."
+msgstr ""
+"El identificador primario para esta organización o participante. Son "
+"preferibles los identificadores que denotan de forma única a una entidad "
+"legal. Consulta la [guía de identificadores de "
+"organización](https://standard.open-"
+"contracting.org/{{version}}/{{lang}}/schema/identifiers/) para el esquema e "
+"identificador preferido."
 
 #. /properties/parties/items/properties/identifier/properties/scheme/title
 #. /properties/parties/items/properties/additionalIdentifiers/items/properties/scheme/title
@@ -910,6 +847,56 @@ msgstr ""
 " para dar un identificador de uso interno para esta organización además del "
 "identificador legal primario. "
 
+#. /properties/parties/items/properties/additionalIdentifiers/items/title
+#. /properties/buyer/properties/additionalIdentifiers/items/title
+#. /properties/tender/properties/procuringEntity/properties/additionalIdentifiers/items/title
+#. /properties/tender/properties/tenderers/items/properties/additionalIdentifiers/items/title
+#. /properties/awards/items/properties/suppliers/items/properties/additionalIdentifiers/items/title
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/properties/additionalIdentifiers/items/title
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/properties/additionalIdentifiers/items/title
+#. /properties/contracts/items/properties/relatedProcesses/items/properties/identifier/title
+#. /properties/relatedProcesses/items/properties/identifier/title
+#. /definitions/Tender/properties/procuringEntity/properties/additionalIdentifiers/items/title
+#. /definitions/Tender/properties/tenderers/items/properties/additionalIdentifiers/items/title
+#. /definitions/Award/properties/suppliers/items/properties/additionalIdentifiers/items/title
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/properties/additionalIdentifiers/items/title
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/properties/additionalIdentifiers/items/title
+#. /definitions/Contract/properties/relatedProcesses/items/properties/identifier/title
+#. /definitions/Implementation/properties/transactions/items/properties/payer/properties/additionalIdentifiers/items/title
+#. /definitions/Implementation/properties/transactions/items/properties/payee/properties/additionalIdentifiers/items/title
+#. /definitions/Transaction/properties/payer/properties/additionalIdentifiers/items/title
+#. /definitions/Transaction/properties/payee/properties/additionalIdentifiers/items/title
+#. /definitions/OrganizationReference/properties/additionalIdentifiers/items/title
+#. /definitions/Organization/properties/additionalIdentifiers/items/title
+#. /definitions/Identifier/title
+#. /definitions/RelatedProcess/properties/identifier/title
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "Identifier"
+msgstr "Identificador"
+
+#. /properties/parties/items/properties/additionalIdentifiers/items/description
+#. /properties/buyer/properties/additionalIdentifiers/items/description
+#. /properties/tender/properties/procuringEntity/properties/additionalIdentifiers/items/description
+#. /properties/tender/properties/tenderers/items/properties/additionalIdentifiers/items/description
+#. /properties/awards/items/properties/suppliers/items/properties/additionalIdentifiers/items/description
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/properties/additionalIdentifiers/items/description
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/properties/additionalIdentifiers/items/description
+#. /definitions/Tender/properties/procuringEntity/properties/additionalIdentifiers/items/description
+#. /definitions/Tender/properties/tenderers/items/properties/additionalIdentifiers/items/description
+#. /definitions/Award/properties/suppliers/items/properties/additionalIdentifiers/items/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/properties/additionalIdentifiers/items/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/properties/additionalIdentifiers/items/description
+#. /definitions/Implementation/properties/transactions/items/properties/payer/properties/additionalIdentifiers/items/description
+#. /definitions/Implementation/properties/transactions/items/properties/payee/properties/additionalIdentifiers/items/description
+#. /definitions/Transaction/properties/payer/properties/additionalIdentifiers/items/description
+#. /definitions/Transaction/properties/payee/properties/additionalIdentifiers/items/description
+#. /definitions/OrganizationReference/properties/additionalIdentifiers/items/description
+#. /definitions/Organization/properties/additionalIdentifiers/items/description
+#. /definitions/Identifier/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "A unique identifier for a party (organization)."
+msgstr "Un identificador único para una parte involucrada (organización)."
+
 #. /properties/parties/items/properties/address/title
 #. /properties/buyer/properties/address/title
 #. /properties/tender/properties/procuringEntity/properties/address/title
@@ -934,27 +921,15 @@ msgid "Address"
 msgstr "Dirección"
 
 #. /properties/parties/items/properties/address/description
-#. /properties/buyer/properties/address/description
-#. /properties/tender/properties/procuringEntity/properties/address/description
-#. /properties/tender/properties/tenderers/items/properties/address/description
-#. /properties/awards/items/properties/suppliers/items/properties/address/description
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/properties/address/description
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/properties/address/description
-#. /definitions/Tender/properties/procuringEntity/properties/address/description
-#. /definitions/Tender/properties/tenderers/items/properties/address/description
-#. /definitions/Award/properties/suppliers/items/properties/address/description
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/properties/address/description
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/properties/address/description
-#. /definitions/Implementation/properties/transactions/items/properties/payer/properties/address/description
-#. /definitions/Implementation/properties/transactions/items/properties/payee/properties/address/description
-#. /definitions/Transaction/properties/payer/properties/address/description
-#. /definitions/Transaction/properties/payee/properties/address/description
-#. /definitions/OrganizationReference/properties/address/description
 #. /definitions/Organization/properties/address/description
-#. /definitions/Address/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
-msgid "An address."
-msgstr "Una dirección."
+msgid ""
+"An address. This may be the legally registered address of the organization, "
+"or may be a correspondence address for this particular contracting process."
+msgstr ""
+"Una dirección. Esta puede ser la dirección legalmente registrada de la "
+"organización o puede ser una dirección donde se reciba correspondencia para "
+"este proceso de contratación particular."
 
 #. /properties/parties/items/properties/address/properties/streetAddress/title
 #. /properties/buyer/properties/address/properties/streetAddress/title
@@ -1210,31 +1185,10 @@ msgid "Contact point"
 msgstr "Punto de contacto"
 
 #. /properties/parties/items/properties/contactPoint/description
-#. /properties/buyer/properties/contactPoint/description
-#. /properties/tender/properties/procuringEntity/properties/contactPoint/description
-#. /properties/tender/properties/tenderers/items/properties/contactPoint/description
-#. /properties/awards/items/properties/suppliers/items/properties/contactPoint/description
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/properties/contactPoint/description
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/properties/contactPoint/description
-#. /definitions/Tender/properties/procuringEntity/properties/contactPoint/description
-#. /definitions/Tender/properties/tenderers/items/properties/contactPoint/description
-#. /definitions/Award/properties/suppliers/items/properties/contactPoint/description
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/properties/contactPoint/description
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/properties/contactPoint/description
-#. /definitions/Implementation/properties/transactions/items/properties/payer/properties/contactPoint/description
-#. /definitions/Implementation/properties/transactions/items/properties/payee/properties/contactPoint/description
-#. /definitions/Transaction/properties/payer/properties/contactPoint/description
-#. /definitions/Transaction/properties/payee/properties/contactPoint/description
-#. /definitions/OrganizationReference/properties/contactPoint/description
 #. /definitions/Organization/properties/contactPoint/description
-#. /definitions/ContactPoint/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
-msgid ""
-"A person, contact point or department to contact in relation to this "
-"contracting process."
-msgstr ""
-"Una persona, punto de contacto o departamento para contactar en relación a "
-"este proceso de contrataciones."
+msgid "Contact details that can be used for this party."
+msgstr "Detalles de contacto que pueden usarse para esta parte involucrada."
 
 #. /properties/parties/items/properties/contactPoint/properties/name/title
 #. /properties/buyer/properties/contactPoint/properties/name/title
@@ -1634,6 +1588,132 @@ msgstr ""
 msgid "Organization ID"
 msgstr "ID de Organización"
 
+#. /properties/buyer/properties/identifier/description
+#. /properties/tender/properties/procuringEntity/properties/identifier/description
+#. /properties/tender/properties/tenderers/items/properties/identifier/description
+#. /properties/awards/items/properties/suppliers/items/properties/identifier/description
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/properties/identifier/description
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/properties/identifier/description
+#. /definitions/Tender/properties/procuringEntity/properties/identifier/description
+#. /definitions/Tender/properties/tenderers/items/properties/identifier/description
+#. /definitions/Award/properties/suppliers/items/properties/identifier/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/properties/identifier/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/properties/identifier/description
+#. /definitions/Implementation/properties/transactions/items/properties/payer/properties/identifier/description
+#. /definitions/Implementation/properties/transactions/items/properties/payee/properties/identifier/description
+#. /definitions/Transaction/properties/payer/properties/identifier/description
+#. /definitions/Transaction/properties/payee/properties/identifier/description
+#. /definitions/OrganizationReference/properties/identifier/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"The primary identifier for this organization. Identifiers that uniquely pick"
+" out a legal entity should be preferred. Consult the [organization "
+"identifier guidance](https://standard.open-"
+"contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred "
+"scheme and identifier to use."
+msgstr ""
+"El identificador primario para esta organización o participante. Son "
+"preferibles los identificadores que identifican a una sola entidad legal. "
+"Consulta la [guía de identificadores de organización](https://standard.open-"
+"contracting.org/{{version}}/{{lang}}/schema/identifiers/) para encontrar el "
+"esquema preferido y el identificador que usarás."
+
+#. /properties/buyer/properties/identifier/deprecated/description
+#. /properties/tender/properties/procuringEntity/properties/identifier/deprecated/description
+#. /properties/tender/properties/tenderers/items/properties/identifier/deprecated/description
+#. /properties/awards/items/properties/suppliers/items/properties/identifier/deprecated/description
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/properties/identifier/deprecated/description
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/properties/identifier/deprecated/description
+#. /definitions/Tender/properties/procuringEntity/properties/identifier/deprecated/description
+#. /definitions/Tender/properties/tenderers/items/properties/identifier/deprecated/description
+#. /definitions/Award/properties/suppliers/items/properties/identifier/deprecated/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/properties/identifier/deprecated/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/properties/identifier/deprecated/description
+#. /definitions/Implementation/properties/transactions/items/properties/payer/properties/identifier/deprecated/description
+#. /definitions/Implementation/properties/transactions/items/properties/payee/properties/identifier/deprecated/description
+#. /definitions/Transaction/properties/payer/properties/identifier/deprecated/description
+#. /definitions/Transaction/properties/payee/properties/identifier/deprecated/description
+#. /definitions/OrganizationReference/properties/identifier/deprecated/description
+#. /definitions/OrganizationReferenceVersionedId/properties/identifier/deprecated/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
+msgid ""
+"From version 1.1, organizations should be referenced by their identifier and"
+" name in a document, and detailed legal identifier information should only "
+"be provided in the relevant cross-referenced entry in the parties section at"
+" the top level of a release."
+msgstr ""
+"A partir de la versión 1.1, se debe hacer referencia a las organizaciones a "
+"través de su identificador y nombre en un documento y la información legal "
+"detallada sólo debe de proveerse en la entrada de referencia cruzada en la "
+"sección de partes involucradas, en el nivel más alto de una entrega."
+
+#. /properties/buyer/properties/address/description
+#. /properties/buyer/properties/contactPoint/description
+#. /properties/tender/properties/procuringEntity/properties/address/description
+#. /properties/tender/properties/procuringEntity/properties/contactPoint/description
+#. /properties/tender/properties/tenderers/items/properties/address/description
+#. /properties/tender/properties/tenderers/items/properties/contactPoint/description
+#. /properties/awards/items/properties/suppliers/items/properties/address/description
+#. /properties/awards/items/properties/suppliers/items/properties/contactPoint/description
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/properties/address/description
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/properties/contactPoint/description
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/properties/address/description
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/properties/contactPoint/description
+#. /definitions/Tender/properties/procuringEntity/properties/address/description
+#. /definitions/Tender/properties/procuringEntity/properties/contactPoint/description
+#. /definitions/Tender/properties/tenderers/items/properties/address/description
+#. /definitions/Tender/properties/tenderers/items/properties/contactPoint/description
+#. /definitions/Award/properties/suppliers/items/properties/address/description
+#. /definitions/Award/properties/suppliers/items/properties/contactPoint/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/properties/address/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/properties/contactPoint/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/properties/address/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/properties/contactPoint/description
+#. /definitions/Implementation/properties/transactions/items/properties/payer/properties/address/description
+#. /definitions/Implementation/properties/transactions/items/properties/payer/properties/contactPoint/description
+#. /definitions/Implementation/properties/transactions/items/properties/payee/properties/address/description
+#. /definitions/Implementation/properties/transactions/items/properties/payee/properties/contactPoint/description
+#. /definitions/Transaction/properties/payer/properties/address/description
+#. /definitions/Transaction/properties/payer/properties/contactPoint/description
+#. /definitions/Transaction/properties/payee/properties/address/description
+#. /definitions/Transaction/properties/payee/properties/contactPoint/description
+#. /definitions/OrganizationReference/properties/address/description
+#. /definitions/OrganizationReference/properties/contactPoint/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "(Deprecated outside the parties section)"
+msgstr "(Descontinuado fuera de la sección de partes involucradas)"
+
+#. /properties/buyer/properties/address/deprecated/description
+#. /properties/tender/properties/procuringEntity/properties/address/deprecated/description
+#. /properties/tender/properties/tenderers/items/properties/address/deprecated/description
+#. /properties/awards/items/properties/suppliers/items/properties/address/deprecated/description
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/properties/address/deprecated/description
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/properties/address/deprecated/description
+#. /definitions/Tender/properties/procuringEntity/properties/address/deprecated/description
+#. /definitions/Tender/properties/tenderers/items/properties/address/deprecated/description
+#. /definitions/Award/properties/suppliers/items/properties/address/deprecated/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/properties/address/deprecated/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/properties/address/deprecated/description
+#. /definitions/Implementation/properties/transactions/items/properties/payer/properties/address/deprecated/description
+#. /definitions/Implementation/properties/transactions/items/properties/payee/properties/address/deprecated/description
+#. /definitions/Transaction/properties/payer/properties/address/deprecated/description
+#. /definitions/Transaction/properties/payee/properties/address/deprecated/description
+#. /definitions/OrganizationReference/properties/address/deprecated/description
+#. /definitions/OrganizationReferenceVersionedId/properties/address/deprecated/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
+msgid ""
+"From version 1.1, organizations should be referenced by their identifier and"
+" name in a document, and address information should only be provided in the "
+"relevant cross-referenced entry in the parties section at the top level of a"
+" release."
+msgstr ""
+"A partir de la versión 1.1, se debe hacer referencia a las organizaciones a "
+"través de su identificador y nombre en un documento y la dirección detallada"
+" sólo debe de proveerse en la entrada de referencia en la sección de partes "
+"involucradas, en el nivel más alto de una entrega."
+
 #. /properties/buyer/properties/additionalIdentifiers/deprecated/description
 #. /properties/tender/properties/procuringEntity/properties/additionalIdentifiers/deprecated/description
 #. /properties/tender/properties/tenderers/items/properties/additionalIdentifiers/deprecated/description
@@ -1698,49 +1778,52 @@ msgstr ""
 " para dar un identificador utilizado internamente por esta organización "
 "además del identificador primario legal de la entidad. "
 
+#. /properties/buyer/properties/contactPoint/deprecated/description
+#. /properties/tender/properties/procuringEntity/properties/contactPoint/deprecated/description
+#. /properties/tender/properties/tenderers/items/properties/contactPoint/deprecated/description
+#. /properties/awards/items/properties/suppliers/items/properties/contactPoint/deprecated/description
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/properties/contactPoint/deprecated/description
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/properties/contactPoint/deprecated/description
+#. /definitions/Tender/properties/procuringEntity/properties/contactPoint/deprecated/description
+#. /definitions/Tender/properties/tenderers/items/properties/contactPoint/deprecated/description
+#. /definitions/Award/properties/suppliers/items/properties/contactPoint/deprecated/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/properties/contactPoint/deprecated/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/properties/contactPoint/deprecated/description
+#. /definitions/Implementation/properties/transactions/items/properties/payer/properties/contactPoint/deprecated/description
+#. /definitions/Implementation/properties/transactions/items/properties/payee/properties/contactPoint/deprecated/description
+#. /definitions/Transaction/properties/payer/properties/contactPoint/deprecated/description
+#. /definitions/Transaction/properties/payee/properties/contactPoint/deprecated/description
+#. /definitions/OrganizationReference/properties/contactPoint/deprecated/description
+#. /definitions/OrganizationReferenceVersionedId/properties/contactPoint/deprecated/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
+msgid ""
+"From version 1.1, organizations should be referenced by their identifier and"
+" name in a document, and contact point information for an organization "
+"should be provided in the relevant cross-referenced entry in the parties "
+"section at the top level of a release."
+msgstr ""
+"A partir de la versión 1.1, se debe hacer referencia a las organizaciones a "
+"través de su identificador y nombre en un documento y la información de "
+"punto de contacto para una organización sólo debe de proveerse en la entrada"
+" de referencia cruzada en la sección de partes involucradas, en el nivel más"
+" alto de una entrega."
+
 #. /properties/buyer/description
-#. /properties/tender/properties/procuringEntity/description
-#. /properties/tender/properties/tenderers/items/description
-#. /properties/awards/items/properties/suppliers/items/description
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/description
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/description
-#. /definitions/Tender/properties/procuringEntity/description
-#. /definitions/Tender/properties/tenderers/items/description
-#. /definitions/Award/properties/suppliers/items/description
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/description
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/description
-#. /definitions/Implementation/properties/transactions/items/properties/payer/description
-#. /definitions/Implementation/properties/transactions/items/properties/payee/description
-#. /definitions/Transaction/properties/payer/description
-#. /definitions/Transaction/properties/payee/description
-#. /definitions/OrganizationReference/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
-"The id and name of the party being referenced. Used to cross-reference to "
-"the parties section"
+"A buyer is an entity whose budget will be used to pay for goods, works or "
+"services related to a contract. This may be different from the procuring "
+"entity who may be specified in the tender data."
 msgstr ""
-"El id y nombre de la parte a la que se hace referencia. Usado para hacer "
-"referencia de la sección de partes"
+"Un comprador es una entidad cuyo presupuesto se utilizará para pagar bienes,"
+" obras o servicios relacionados con un contrato. Este puede ser diferente de"
+" la entidad contratante que puede especificarse en los datos de licitación."
 
 #. /properties/buyer/title
-#. /properties/tender/properties/procuringEntity/title
-#. /properties/tender/properties/tenderers/items/title
-#. /properties/awards/items/properties/suppliers/items/title
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/title
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/title
-#. /definitions/Tender/properties/procuringEntity/title
-#. /definitions/Tender/properties/tenderers/items/title
-#. /definitions/Award/properties/suppliers/items/title
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/title
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/title
-#. /definitions/Implementation/properties/transactions/items/properties/payer/title
-#. /definitions/Implementation/properties/transactions/items/properties/payee/title
-#. /definitions/Transaction/properties/payer/title
-#. /definitions/Transaction/properties/payee/title
-#. /definitions/OrganizationReference/title
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
-msgid "Organization reference"
-msgstr "Referencia de la organización"
+msgid "Buyer"
+msgstr "Comprador"
 
 #. /properties/planning/title
 #. /definitions/Planning/title
@@ -1749,18 +1832,15 @@ msgid "Planning"
 msgstr "Planeación"
 
 #. /properties/planning/description
-#. /definitions/Planning/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
-"Information from the planning phase of the contracting process. Note that "
-"many other fields can be filled in a planning release, in the appropriate "
-"fields in other schema sections; these would likely be estimates at this "
-"stage, e.g. value in tender."
+"Information from the planning phase of the contracting process. This "
+"includes information related to the process of deciding what to contract, "
+"when and how."
 msgstr ""
-"Información de la fase de planeación del proceso de contrataciones. Note que"
-" muchos otros campos pueden llenarse en la entrega de planeación, en los "
-"campos apropiados de otras secciones del esquema; lo más probable es que "
-"estos sean estimados en este punto, e.j. value en la licitación."
+"Información sobre la fase de planeación del proceso de contratación. Esto "
+"incluye información relacionada con el proceso de decidir qué contratar, "
+"cuándo y cómo."
 
 #. /properties/planning/properties/rationale/title
 #. /properties/tender/properties/amendments/items/properties/rationale/title
@@ -1793,35 +1873,15 @@ msgstr ""
 
 #. /properties/planning/properties/budget/title
 #. /definitions/Planning/properties/budget/title
-#. /definitions/Budget/title
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
-msgid "Budget information"
-msgstr "Información de presupuesto"
+msgid "Budget"
+msgstr "Presupuesto"
 
 #. /properties/planning/properties/budget/description
 #. /definitions/Planning/properties/budget/description
-#. /definitions/Budget/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
-msgid ""
-"This section contains information about the budget line, and associated "
-"projects, through which this contracting process is funded. It draws upon "
-"the data model of the [Fiscal Data "
-"Package](https://frictionlessdata.io/specs/fiscal-data-package/), and should"
-" be used to cross-reference to more detailed information held using a Budget"
-" Data Package, or, where no linked Budget Data Package is available, to "
-"provide enough information to allow a user to manually or automatically "
-"cross-reference with another published source of budget and project "
-"information."
-msgstr ""
-"Esta sección contiene información sobre la línea presupuestaria, y los "
-"proyectos asociados, a través de los cuales se está financiando este proceso"
-" de contrataciones. Se basa en el modelo de datos del [Fiscal Data "
-"Package](https://frictionlessdata.io/specs/fiscal-data-package/), y debe de "
-"usarse para hacer referencias cruzadas con información más detallada "
-"contenida en un Paquete de Datos de Presupuesto, o cuando no hay un Paquete "
-"de Datos de Presupuesto enlazado, para dar información suficiente que "
-"permita al usuario realizar una referencia cruzada manual o automática con "
-"otra fuente publicada de presupuesto e información del proyecto."
+msgid "Details of the budget that funds this contracting process."
+msgstr "Detalles del presupuesto que financia este proceso de contratación."
 
 #. /properties/planning/properties/budget/properties/id/description
 #. /definitions/Planning/properties/budget/properties/id/description
@@ -1856,68 +1916,6 @@ msgstr ""
 "financiar este proyecto. "
 
 #. /properties/planning/properties/budget/properties/amount/title
-#. /properties/tender/properties/items/items/properties/unit/properties/value/title
-#. /properties/tender/properties/value/title
-#. /properties/tender/properties/minValue/title
-#. /properties/awards/items/properties/value/title
-#. /properties/awards/items/properties/items/items/properties/unit/properties/value/title
-#. /properties/contracts/items/properties/value/title
-#. /properties/contracts/items/properties/items/items/properties/unit/properties/value/title
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/value/title
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/amount/title
-#. /definitions/Planning/properties/budget/properties/amount/title
-#. /definitions/Tender/properties/items/items/properties/unit/properties/value/title
-#. /definitions/Tender/properties/value/title
-#. /definitions/Tender/properties/minValue/title
-#. /definitions/Award/properties/value/title
-#. /definitions/Award/properties/items/items/properties/unit/properties/value/title
-#. /definitions/Contract/properties/value/title
-#. /definitions/Contract/properties/items/items/properties/unit/properties/value/title
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/value/title
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/amount/title
-#. /definitions/Implementation/properties/transactions/items/properties/value/title
-#. /definitions/Implementation/properties/transactions/items/properties/amount/title
-#. /definitions/Budget/properties/amount/title
-#. /definitions/Transaction/properties/value/title
-#. /definitions/Transaction/properties/amount/title
-#. /definitions/Item/properties/unit/properties/value/title
-#. /definitions/Value/title
-#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
-msgid "Value"
-msgstr "Valor"
-
-#. /properties/planning/properties/budget/properties/amount/description
-#. /properties/tender/properties/items/items/properties/unit/properties/value/description
-#. /properties/tender/properties/value/description
-#. /properties/tender/properties/minValue/description
-#. /properties/awards/items/properties/value/description
-#. /properties/awards/items/properties/items/items/properties/unit/properties/value/description
-#. /properties/contracts/items/properties/value/description
-#. /properties/contracts/items/properties/items/items/properties/unit/properties/value/description
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/value/description
-#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/amount/description
-#. /definitions/Planning/properties/budget/properties/amount/description
-#. /definitions/Tender/properties/items/items/properties/unit/properties/value/description
-#. /definitions/Tender/properties/value/description
-#. /definitions/Tender/properties/minValue/description
-#. /definitions/Award/properties/value/description
-#. /definitions/Award/properties/items/items/properties/unit/properties/value/description
-#. /definitions/Contract/properties/value/description
-#. /definitions/Contract/properties/items/items/properties/unit/properties/value/description
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/value/description
-#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/amount/description
-#. /definitions/Implementation/properties/transactions/items/properties/value/description
-#. /definitions/Implementation/properties/transactions/items/properties/amount/description
-#. /definitions/Budget/properties/amount/description
-#. /definitions/Transaction/properties/value/description
-#. /definitions/Transaction/properties/amount/description
-#. /definitions/Item/properties/unit/properties/value/description
-#. /definitions/Value/description
-#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
-msgid "Financial values should be published with a currency attached."
-msgstr ""
-"Valores financieros deben de ser publicados con un valor de moneda adjunto."
-
 #. /properties/planning/properties/budget/properties/amount/properties/amount/title
 #. /properties/tender/properties/items/items/properties/unit/properties/value/properties/amount/title
 #. /properties/tender/properties/value/properties/amount/title
@@ -1927,7 +1925,9 @@ msgstr ""
 #. /properties/contracts/items/properties/value/properties/amount/title
 #. /properties/contracts/items/properties/items/items/properties/unit/properties/value/properties/amount/title
 #. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/value/properties/amount/title
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/amount/title
 #. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/amount/properties/amount/title
+#. /definitions/Planning/properties/budget/properties/amount/title
 #. /definitions/Planning/properties/budget/properties/amount/properties/amount/title
 #. /definitions/Tender/properties/items/items/properties/unit/properties/value/properties/amount/title
 #. /definitions/Tender/properties/value/properties/amount/title
@@ -1937,19 +1937,37 @@ msgstr ""
 #. /definitions/Contract/properties/value/properties/amount/title
 #. /definitions/Contract/properties/items/items/properties/unit/properties/value/properties/amount/title
 #. /definitions/Contract/properties/implementation/properties/transactions/items/properties/value/properties/amount/title
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/amount/title
 #. /definitions/Contract/properties/implementation/properties/transactions/items/properties/amount/properties/amount/title
 #. /definitions/Implementation/properties/transactions/items/properties/value/properties/amount/title
+#. /definitions/Implementation/properties/transactions/items/properties/amount/title
 #. /definitions/Implementation/properties/transactions/items/properties/amount/properties/amount/title
+#. /definitions/Budget/properties/amount/title
 #. /definitions/Budget/properties/amount/properties/amount/title
 #. /definitions/Transaction/properties/value/properties/amount/title
+#. /definitions/Transaction/properties/amount/title
 #. /definitions/Transaction/properties/amount/properties/amount/title
 #. /definitions/Item/properties/unit/properties/value/properties/amount/title
 #. /definitions/Value/properties/amount/title
-#. /definitions/Budget/properties/amount/title
-#. /definitions/Transaction/properties/amount/title
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Amount"
 msgstr "Monto"
+
+#. /properties/planning/properties/budget/properties/amount/description
+#. /definitions/Planning/properties/budget/properties/amount/description
+#. /definitions/Budget/properties/amount/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"The value reserved in the budget for this contracting process. A negative "
+"value indicates anticipated income to the budget as a result of this "
+"contracting process, rather than expenditure. Where the budget is drawn from"
+" multiple sources, the budget breakdown extension can be used."
+msgstr ""
+"El valor reservado en el presupuesto para este proceso de contratación. Un "
+"valor negativo indica ingresos anticipados al presupuesto como resultado de "
+"este proceso de contratación, en lugar de gastos. Cuando se extrae el "
+"presupuesto de múltiples fuentes, se puede utilizar la extensión del "
+"desglose presupuestario."
 
 #. /properties/planning/properties/budget/properties/amount/properties/amount/description
 #. /properties/tender/properties/items/items/properties/unit/properties/value/properties/amount/description
@@ -3123,15 +3141,9 @@ msgid "Tender"
 msgstr "Licitación"
 
 #. /properties/tender/description
-#. /definitions/Tender/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
-msgid ""
-"Data regarding tender process - publicly inviting prospective contractors to"
-" submit bids for evaluation and selecting a winner or winners."
-msgstr ""
-"Datos sobre el proceso de licitación - invitación pública de posibles "
-"contratistas que enviarán propuestas para evaluación y seleccionar a un "
-"ganador o ganadores."
+msgid "The activities undertaken in order to enter into a contract."
+msgstr "Las actividades llevadas a cabo para celebrar un contrato."
 
 #. /properties/tender/properties/id/title
 #. /definitions/Tender/properties/id/title
@@ -3204,6 +3216,22 @@ msgstr ""
 "El estatus actual de la licitación, desde la lista de código cerrada "
 "[tenderStatus](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#tender-status)."
+
+#. /properties/tender/properties/procuringEntity/description
+#. /definitions/Tender/properties/procuringEntity/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"The entity managing the procurement. This may be different from the buyer "
+"who pays for, or uses, the items being procured."
+msgstr ""
+"La entidad que gestiona el proceso de contratación. Esta puede ser distinta "
+"del comprador que paga/usa los artículos adquiridos."
+
+#. /properties/tender/properties/procuringEntity/title
+#. /definitions/Tender/properties/procuringEntity/title
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "Procuring entity"
+msgstr "Entidad contratante"
 
 #. /properties/tender/properties/items/title
 #. /definitions/Tender/properties/items/title
@@ -3294,32 +3322,15 @@ msgid "Classification"
 msgstr "Clasificación"
 
 #. /properties/tender/properties/items/items/properties/classification/description
-#. /properties/tender/properties/items/items/properties/additionalClassifications/items/description
 #. /properties/awards/items/properties/items/items/properties/classification/description
-#. /properties/awards/items/properties/items/items/properties/additionalClassifications/items/description
 #. /properties/contracts/items/properties/items/items/properties/classification/description
-#. /properties/contracts/items/properties/items/items/properties/additionalClassifications/items/description
 #. /definitions/Tender/properties/items/items/properties/classification/description
-#. /definitions/Tender/properties/items/items/properties/additionalClassifications/items/description
 #. /definitions/Award/properties/items/items/properties/classification/description
-#. /definitions/Award/properties/items/items/properties/additionalClassifications/items/description
 #. /definitions/Contract/properties/items/items/properties/classification/description
-#. /definitions/Contract/properties/items/items/properties/additionalClassifications/items/description
 #. /definitions/Item/properties/classification/description
-#. /definitions/Item/properties/additionalClassifications/items/description
-#. /definitions/Classification/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
-msgid ""
-"A classification consists of at least two parts: an identifier for the list "
-"(scheme) from which the classification is taken, and an identifier for the "
-"category from that list being applied. It is useful to also publish a text "
-"label and/or URI that users can draw on to interpret the classification."
-msgstr ""
-"Una clasificación consiste de al menos dos partes: un identificador para la "
-"lista (esquema) del cual se obtiene la clasificación, y un identificador "
-"para la categoría de la lista que se está aplicando. Es útil también "
-"publicar una etiqueta de texto y/o un URI del cual los usuarios pueden "
-"basarse para interpretar la clasificación."
+msgid "The primary classification for the item."
+msgstr "La clasificación primaria para un artículo."
 
 #. /properties/tender/properties/items/items/properties/classification/properties/scheme/description
 #. /properties/tender/properties/items/items/properties/additionalClassifications/items/properties/scheme/description
@@ -3429,6 +3440,27 @@ msgstr "Clasificaciones adicionales"
 msgid "An array of additional classifications for the item."
 msgstr "Una lista de clasificaciones adicionales para el artículo."
 
+#. /properties/tender/properties/items/items/properties/additionalClassifications/items/description
+#. /properties/awards/items/properties/items/items/properties/additionalClassifications/items/description
+#. /properties/contracts/items/properties/items/items/properties/additionalClassifications/items/description
+#. /definitions/Tender/properties/items/items/properties/additionalClassifications/items/description
+#. /definitions/Award/properties/items/items/properties/additionalClassifications/items/description
+#. /definitions/Contract/properties/items/items/properties/additionalClassifications/items/description
+#. /definitions/Item/properties/additionalClassifications/items/description
+#. /definitions/Classification/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"A classification consists of at least two parts: an identifier for the list "
+"(scheme) from which the classification is taken, and an identifier for the "
+"category from that list being applied. It is useful to also publish a text "
+"label and/or URI that users can draw on to interpret the classification."
+msgstr ""
+"Una clasificación consiste de al menos dos partes: un identificador para la "
+"lista (esquema) del cual se obtiene la clasificación, y un identificador "
+"para la categoría de la lista que se está aplicando. Es útil también "
+"publicar una etiqueta de texto y/o un URI del cual los usuarios pueden "
+"basarse para interpretar la clasificación."
+
 #. /properties/tender/properties/items/items/properties/quantity/title
 #. /properties/awards/items/properties/items/items/properties/quantity/title
 #. /properties/contracts/items/properties/items/items/properties/quantity/title
@@ -3530,6 +3562,39 @@ msgstr ""
 msgid "Name of the unit."
 msgstr "Nombre de la unidad."
 
+#. /properties/tender/properties/items/items/properties/unit/properties/value/title
+#. /properties/tender/properties/value/title
+#. /properties/awards/items/properties/value/title
+#. /properties/awards/items/properties/items/items/properties/unit/properties/value/title
+#. /properties/contracts/items/properties/value/title
+#. /properties/contracts/items/properties/items/items/properties/unit/properties/value/title
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/value/title
+#. /definitions/Tender/properties/items/items/properties/unit/properties/value/title
+#. /definitions/Tender/properties/value/title
+#. /definitions/Award/properties/value/title
+#. /definitions/Award/properties/items/items/properties/unit/properties/value/title
+#. /definitions/Contract/properties/value/title
+#. /definitions/Contract/properties/items/items/properties/unit/properties/value/title
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/value/title
+#. /definitions/Implementation/properties/transactions/items/properties/value/title
+#. /definitions/Transaction/properties/value/title
+#. /definitions/Item/properties/unit/properties/value/title
+#. /definitions/Value/title
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "Value"
+msgstr "Valor"
+
+#. /properties/tender/properties/items/items/properties/unit/properties/value/description
+#. /properties/awards/items/properties/items/items/properties/unit/properties/value/description
+#. /properties/contracts/items/properties/items/items/properties/unit/properties/value/description
+#. /definitions/Tender/properties/items/items/properties/unit/properties/value/description
+#. /definitions/Award/properties/items/items/properties/unit/properties/value/description
+#. /definitions/Contract/properties/items/items/properties/unit/properties/value/description
+#. /definitions/Item/properties/unit/properties/value/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "The monetary value of a single unit."
+msgstr "El valor monetario de una unidad."
+
 #. /properties/tender/properties/items/items/properties/unit/properties/uri/description
 #. /properties/awards/items/properties/items/items/properties/unit/properties/uri/description
 #. /properties/contracts/items/properties/items/items/properties/unit/properties/uri/description
@@ -3542,6 +3607,36 @@ msgid ""
 "The machine-readable URI for the unit of measure, provided by the scheme."
 msgstr ""
 "Un URI leíble por máquina para la unidad de medida, dada por el esquema."
+
+#. /properties/tender/properties/value/description
+#. /definitions/Tender/properties/value/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"The total upper estimated value of the procurement. A negative value "
+"indicates that the contracting process may involve payments from the "
+"supplier to the buyer (commonly used in concession contracts)."
+msgstr ""
+"El valor máximo estimado de la contratación. Un valor negativo indica que el"
+" proceso de contratación puede incluir pagos del proveedor al comprador "
+"(usado comúnmente en contratos de concesión)."
+
+#. /properties/tender/properties/minValue/title
+#. /definitions/Tender/properties/minValue/title
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "Minimum value"
+msgstr "Valor mínimo"
+
+#. /properties/tender/properties/minValue/description
+#. /definitions/Tender/properties/minValue/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"The minimum estimated value of the procurement.  A negative value indicates "
+"that the contracting process may involve payments from the supplier to the "
+"buyer (commonly used in concession contracts)."
+msgstr ""
+"El valor mínimo estimado de la contratación. Un valor negativo indica que el"
+" proceso de contratación puede incluir pagos del proveedor al comprador "
+"(usado comúnmente en contratos de concesión)."
 
 #. /properties/tender/properties/procurementMethod/title
 #. /definitions/Tender/properties/procurementMethod/title
@@ -3709,46 +3804,21 @@ msgstr ""
 "para entregarlas."
 
 #. /properties/tender/properties/tenderPeriod/title
-#. /properties/tender/properties/enquiryPeriod/title
-#. /properties/tender/properties/awardPeriod/title
-#. /properties/tender/properties/contractPeriod/title
-#. /properties/awards/items/properties/contractPeriod/title
-#. /properties/contracts/items/properties/period/title
 #. /definitions/Tender/properties/tenderPeriod/title
-#. /definitions/Tender/properties/enquiryPeriod/title
-#. /definitions/Tender/properties/awardPeriod/title
-#. /definitions/Tender/properties/contractPeriod/title
-#. /definitions/Award/properties/contractPeriod/title
-#. /definitions/Contract/properties/period/title
-#. /definitions/Period/title
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
-msgid "Period"
-msgstr "Periodo"
+msgid "Tender period"
+msgstr "Periodo de licitación"
 
 #. /properties/tender/properties/tenderPeriod/description
-#. /properties/tender/properties/enquiryPeriod/description
-#. /properties/tender/properties/awardPeriod/description
-#. /properties/tender/properties/contractPeriod/description
-#. /properties/awards/items/properties/contractPeriod/description
-#. /properties/contracts/items/properties/period/description
 #. /definitions/Tender/properties/tenderPeriod/description
-#. /definitions/Tender/properties/enquiryPeriod/description
-#. /definitions/Tender/properties/awardPeriod/description
-#. /definitions/Tender/properties/contractPeriod/description
-#. /definitions/Award/properties/contractPeriod/description
-#. /definitions/Contract/properties/period/description
-#. /definitions/Period/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
-"Key events during a contracting process may have a known start date, end "
-"date, duration, or maximum extent (the latest date the period can extend "
-"to). In some cases, not all of these fields will have known or relevant "
-"values."
+"The period when the tender is open for submissions. The end date is the "
+"closing date for tender submissions."
 msgstr ""
-"Los eventos clave durante un proceso de contratación pueden tener una fecha "
-"de inicio, una fecha de finalización, una duración o un alcance máximo "
-"conocidos (la última fecha a la que se puede extender el período). En "
-"algunos casos, no todos estos campos tendrán valores conocidos o relevantes."
+"El periodo cuando la licitación está abierta para la recepción de las "
+"propuestas. La fecha de final es la fecha de cierre de recepción de las "
+"propuestas."
 
 #. /properties/tender/properties/tenderPeriod/properties/startDate/title
 #. /properties/tender/properties/enquiryPeriod/properties/startDate/title
@@ -3914,6 +3984,29 @@ msgstr ""
 msgid "Duration (days)"
 msgstr "Duración (días)"
 
+#. /properties/tender/properties/enquiryPeriod/title
+#. /definitions/Tender/properties/enquiryPeriod/title
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "Enquiry period"
+msgstr "Periodo de consulta"
+
+#. /properties/tender/properties/enquiryPeriod/description
+#. /definitions/Tender/properties/enquiryPeriod/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"The period during which potential bidders may submit questions and requests "
+"for clarification to the entity managing procurement. Details of how to "
+"submit enquiries should be provided in attached notices, or in "
+"submissionMethodDetails. Structured dates for when responses to questions "
+"will be made can be provided using tender milestones."
+msgstr ""
+"El periodo durante el cual los postulantes potenciales pueden hacer "
+"preguntas o solicitudes de aclaración a la entidad que gestiona el proceso "
+"de contratación. Los detalles de cómo enviar solicitudes deben especificarse"
+" en documentos de notificaciones adjuntos o en el campo "
+"submissionMethodDetails. Las fechas estructuradas para cuando se dará "
+"respuesta a las preguntas se puede proveer usando hitos de la licitación."
+
 #. /properties/tender/properties/hasEnquiries/title
 #. /definitions/Tender/properties/hasEnquiries/title
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
@@ -3948,6 +4041,43 @@ msgstr ""
 "potenciales. Requisitos y condiciones que deben cumplir los interesados para"
 " participar en el procedimiento de contratación."
 
+#. /properties/tender/properties/awardPeriod/title
+#. /definitions/Tender/properties/awardPeriod/title
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "Evaluation and award period"
+msgstr "Periodo de evaluación y adjudicación"
+
+#. /properties/tender/properties/awardPeriod/description
+#. /definitions/Tender/properties/awardPeriod/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"The period for decision making regarding the contract award. The end date "
+"should be the date on which an award decision is due to be finalized. The "
+"start date may be used to indicate the start of an evaluation period."
+msgstr ""
+"El período para tomar decisiones relacionados a la adjudicación del "
+"contrato. La fecha final debe de indicar la fecha en que se debe finalizar "
+"la decisión de adjudicación. La fecha de inicio puede usarse para indicar el"
+" comienzo de un período de evaluación."
+
+#. /properties/tender/properties/contractPeriod/title
+#. /properties/awards/items/properties/contractPeriod/title
+#. /definitions/Tender/properties/contractPeriod/title
+#. /definitions/Award/properties/contractPeriod/title
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "Contract period"
+msgstr "Periodo de contrato"
+
+#. /properties/tender/properties/contractPeriod/description
+#. /definitions/Tender/properties/contractPeriod/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"The period over which the contract is estimated or required to be active. If"
+" the tender does not specify explicit dates, the duration field may be used."
+msgstr ""
+"El periodo sobre el cual se estima el contrato o requiere que esté activo. "
+"Si la licitación no especifica fechas, se puede usar el campo de duración."
+
 #. /properties/tender/properties/numberOfTenderers/title
 #. /definitions/Tender/properties/numberOfTenderers/title
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
@@ -3976,6 +4106,28 @@ msgstr ""
 "Todas las partes que hacen una oferta en una licitación. Información más "
 "detallada sobre las ofertas y la organización que hace la oferta puede "
 "proveerse usando la extensión Bid."
+
+#. /properties/tender/properties/tenderers/items/description
+#. /properties/awards/items/properties/suppliers/items/description
+#. /definitions/Tender/properties/tenderers/items/description
+#. /definitions/Award/properties/suppliers/items/description
+#. /definitions/OrganizationReference/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"The id and name of the party being referenced. Used to cross-reference to "
+"the parties section"
+msgstr ""
+"El id y nombre de la parte a la que se hace referencia. Usado para hacer "
+"referencia de la sección de partes"
+
+#. /properties/tender/properties/tenderers/items/title
+#. /properties/awards/items/properties/suppliers/items/title
+#. /definitions/Tender/properties/tenderers/items/title
+#. /definitions/Award/properties/suppliers/items/title
+#. /definitions/OrganizationReference/title
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "Organization reference"
+msgstr "Referencia de la organización"
 
 #. /properties/tender/properties/documents/description
 #. /definitions/Tender/properties/documents/description
@@ -4054,17 +4206,11 @@ msgid "Amendment"
 msgstr "Enmienda"
 
 #. /properties/tender/properties/amendments/items/description
-#. /properties/tender/properties/amendment/description
 #. /properties/awards/items/properties/amendments/items/description
-#. /properties/awards/items/properties/amendment/description
 #. /properties/contracts/items/properties/amendments/items/description
-#. /properties/contracts/items/properties/amendment/description
 #. /definitions/Tender/properties/amendments/items/description
-#. /definitions/Tender/properties/amendment/description
 #. /definitions/Award/properties/amendments/items/description
-#. /definitions/Award/properties/amendment/description
 #. /definitions/Contract/properties/amendments/items/description
-#. /definitions/Contract/properties/amendment/description
 #. /definitions/Amendment/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Amendment information"
@@ -4385,6 +4531,35 @@ msgstr ""
 "que han cambiado, los publicadores deben de proveer entregas indicando el "
 "estado del proceso de contratación antes y después de la enmienda."
 
+#. /properties/tender/properties/amendment/description
+#. /properties/awards/items/properties/amendment/description
+#. /properties/contracts/items/properties/amendment/description
+#. /definitions/Tender/properties/amendment/description
+#. /definitions/Award/properties/amendment/description
+#. /definitions/Contract/properties/amendment/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"The use of individual amendment objects has been deprecated. From OCDS 1.1 "
+"information should be provided in the amendments array."
+msgstr ""
+"El uso la propiedad de enmienda individual es obsoleto. Desde el OCDS 1.1 la"
+" información debe de proveerse en la lista de enmiendas."
+
+#. /properties/tender/properties/amendment/deprecated/description
+#. /properties/awards/items/properties/amendment/deprecated/description
+#. /properties/contracts/items/properties/amendment/deprecated/description
+#. /definitions/Tender/properties/amendment/deprecated/description
+#. /definitions/Award/properties/amendment/deprecated/description
+#. /definitions/Contract/properties/amendment/deprecated/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
+msgid ""
+"The single amendment object has been deprecated in favour of including "
+"amendments in an amendments (plural) array."
+msgstr ""
+"El objeto de enmienda individual es obsoleto y se ha cambiado para incluir "
+"enmiendas en una lista de enmiendas (en plural)."
+
 #. /properties/awards/title
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid "Awards"
@@ -4490,6 +4665,22 @@ msgstr ""
 "La fecha de la adjudicación del contrato. Usualmente es la fecha en que se "
 "tomó la decisión de adjudicar."
 
+#. /properties/awards/items/properties/value/description
+#. /definitions/Award/properties/value/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"The total value of this award. In the case of a framework contract this may "
+"be the total estimated lifetime value, or maximum value, of the agreement. "
+"There may be more than one award per procurement. A negative value indicates"
+" that the award may involve payments from the supplier to the buyer "
+"(commonly used in concession contracts)."
+msgstr ""
+"El valor o monto total de esta adjudicación. En el caso de un contracto "
+"marco este puede ser el estimado del valor total o valor máximo del acuerdo."
+" Puede haber más de una adjudicación por proceso de contratación. Un valor "
+"negativo indica que la adjudicación puede implicar pagos del proveedor al "
+"comprador (comúnmente utilizado en contratos de concesiones)."
+
 #. /properties/awards/items/properties/suppliers/title
 #. /definitions/Award/properties/suppliers/title
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
@@ -4525,6 +4716,12 @@ msgstr ""
 "tipos de artículos de una clasificación preexistente cuando sea posible. Los"
 " artículos no deberían de estar duplicados, sino se debe especificar la "
 "cantidad."
+
+#. /properties/awards/items/properties/contractPeriod/description
+#. /definitions/Award/properties/contractPeriod/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "The period for which the contract has been awarded."
+msgstr "El periodo por el cual se ha adjudicado el contrato."
 
 #. /properties/awards/items/properties/documents/description
 #. /definitions/Award/properties/documents/description
@@ -4640,6 +4837,31 @@ msgstr ""
 "[contractStatus](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/schema/codelists/#contract-status)."
 
+#. /properties/contracts/items/properties/period/title
+#. /definitions/Contract/properties/period/title
+#. /definitions/Period/title
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "Period"
+msgstr "Periodo"
+
+#. /properties/contracts/items/properties/period/description
+#. /definitions/Contract/properties/period/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "The start and end date for the contract."
+msgstr "Las fechas de inicio y fin del contrato."
+
+#. /properties/contracts/items/properties/value/description
+#. /definitions/Contract/properties/value/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"The total value of this contract. A negative value indicates that the "
+"contract will involve payments from the supplier to the buyer (commonly used"
+" in concession contracts)."
+msgstr ""
+"Un valor o monto total de este contrato. Un valor negativo indica que el "
+"contrato implicará pagos del proveedor al comprador (comúnmente usado en "
+"contratos de concesión)."
+
 #. /properties/contracts/items/properties/items/title
 #. /definitions/Contract/properties/items/title
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
@@ -4691,12 +4913,13 @@ msgstr "Implementación"
 
 #. /properties/contracts/items/properties/implementation/description
 #. /definitions/Contract/properties/implementation/description
-#. /definitions/Implementation/description
 #: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
 msgid ""
-"Information during the performance / implementation stage of the contract."
+"Information related to the implementation of the contract in accordance with"
+" the obligations laid out therein."
 msgstr ""
-"Información durante la etapa de realización/implementación del contrato"
+"La información relacionada con la implementación del contrato de acuerdo con"
+" las obligaciones definidas en el mismo."
 
 #. /properties/contracts/items/properties/implementation/properties/transactions/title
 #. /definitions/Contract/properties/implementation/properties/transactions/title
@@ -4801,6 +5024,53 @@ msgstr "Fecha"
 msgid "The date of the transaction"
 msgstr "La fecha de la transacción"
 
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/value/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/value/description
+#. /definitions/Implementation/properties/transactions/items/properties/value/description
+#. /definitions/Transaction/properties/value/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "The value of the transaction."
+msgstr "El monto o valor de la transacción."
+
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/description
+#. /definitions/Implementation/properties/transactions/items/properties/payer/description
+#. /definitions/Transaction/properties/payer/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"An organization reference for the organization from which the funds in this "
+"transaction originate."
+msgstr ""
+"Una referencia a la organización que provee los fondos para esta transacción"
+" de pago."
+
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payer/title
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payer/title
+#. /definitions/Implementation/properties/transactions/items/properties/payer/title
+#. /definitions/Transaction/properties/payer/title
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "Payer"
+msgstr "Pagador"
+
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/description
+#. /definitions/Implementation/properties/transactions/items/properties/payee/description
+#. /definitions/Transaction/properties/payee/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"An organization reference for the organization which receives the funds in "
+"this transaction."
+msgstr ""
+"Una referencia a la organización que recibe los fondos en esta transacción."
+
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/payee/title
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/payee/title
+#. /definitions/Implementation/properties/transactions/items/properties/payee/title
+#. /definitions/Transaction/properties/payee/title
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "Payee"
+msgstr "Beneficiarios"
+
 #. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/uri/title
 #. /definitions/Contract/properties/implementation/properties/transactions/items/properties/uri/title
 #. /definitions/Implementation/properties/transactions/items/properties/uri/title
@@ -4820,6 +5090,111 @@ msgid ""
 msgstr ""
 "Una URI apuntando directamente al registro legible por computadora sobre "
 "esta transacción."
+
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/amount/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/amount/description
+#. /definitions/Implementation/properties/transactions/items/properties/amount/description
+#. /definitions/Transaction/properties/amount/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"(Deprecated in 1.1. Use transaction.value instead) The value of the "
+"transaction. A negative value indicates a refund or correction."
+msgstr ""
+"(Obsoleto en 1.1. Usar transaction.value) El valor de la transacción. Un "
+"valor negativo indica un reembolso o una corrección."
+
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/amount/deprecated/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/amount/deprecated/description
+#. /definitions/Implementation/properties/transactions/items/properties/amount/deprecated/description
+#. /definitions/Transaction/properties/amount/deprecated/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
+msgid ""
+"This field has been replaced by the `transaction.value` field for "
+"consistency with the use of value and amount elsewhere in the standard."
+msgstr ""
+"Este campo ha sido reemplazado por el campo `transaction.value` buscando "
+"consistencia con el uso de valor y monto en otras partes del estándar."
+
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/providerOrganization/title
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/providerOrganization/title
+#. /definitions/Implementation/properties/transactions/items/properties/providerOrganization/title
+#. /definitions/Transaction/properties/providerOrganization/title
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "Provider organization"
+msgstr "Organización proveedora"
+
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/providerOrganization/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/providerOrganization/description
+#. /definitions/Implementation/properties/transactions/items/properties/providerOrganization/description
+#. /definitions/Transaction/properties/providerOrganization/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"(Deprecated in 1.1. Use transaction.payer instead.) The Organization "
+"Identifier for the organization from which the funds in this transaction "
+"originate. Expressed following the Organizational Identifier standard - "
+"consult the documentation and the codelist."
+msgstr ""
+"(Obsoleto en 1.1. Usar transaction.payer.) El Identificador de Organización "
+"para la organización de la cuál se originan los fondos en esta transacción. "
+"Expresados siguiendo el estándar de Identificador Organizacional - consulta "
+"la documentación y la lista de códigos. "
+
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/providerOrganization/deprecated/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/providerOrganization/deprecated/description
+#. /definitions/Implementation/properties/transactions/items/properties/providerOrganization/deprecated/description
+#. /definitions/Transaction/properties/providerOrganization/deprecated/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
+msgid ""
+"This field has been replaced by the `transaction.payer` field to resolve "
+"ambiguity arising from 'provider' being interpreted as relating to the goods"
+" or services procured rather than the flow of funds between the parties."
+msgstr ""
+"Este campo ha sido reemplazado por el campo `transaction.payer` para "
+"resolver ambigüedades generadas por la interpretación de 'proveedor'  como "
+"relacionado con los bienes y los servicios en vez del flujo o los fondos "
+"entre partes."
+
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/receiverOrganization/title
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/receiverOrganization/title
+#. /definitions/Implementation/properties/transactions/items/properties/receiverOrganization/title
+#. /definitions/Transaction/properties/receiverOrganization/title
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "Receiver organization"
+msgstr "Organización receptora"
+
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/receiverOrganization/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/receiverOrganization/description
+#. /definitions/Implementation/properties/transactions/items/properties/receiverOrganization/description
+#. /definitions/Transaction/properties/receiverOrganization/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"(Deprecated in 1.1. Use transaction.payee instead). The Organization "
+"Identifier for the organization which receives the funds in this "
+"transaction. Expressed following the Organizational Identifier standard - "
+"consult the documentation and the codelist."
+msgstr ""
+"(Obsoleto en 1.1. Usar transaction.payee.) El Identificador de Organización "
+"para la organización que recibe los fondos en esta transacción. Expresados "
+"siguiendo el estándar de Identificador Organizacional - consulta la "
+"documentación y la lista de códigos. "
+
+#. /properties/contracts/items/properties/implementation/properties/transactions/items/properties/receiverOrganization/deprecated/description
+#. /definitions/Contract/properties/implementation/properties/transactions/items/properties/receiverOrganization/deprecated/description
+#. /definitions/Implementation/properties/transactions/items/properties/receiverOrganization/deprecated/description
+#. /definitions/Transaction/properties/receiverOrganization/deprecated/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+#: schema/versioned-release-validation-schema.json:1
+msgid ""
+"This field has been replaced by the `transaction.payee` field to resolve "
+"ambiguity arising from 'receiver' being interpreted as relating to the goods"
+" or services procured rather than the flow of funds between the parties."
+msgstr ""
+"Este campo ha sido reemplazado por el campo `transaction.payee` para "
+"resolver ambigüedades generadas por la interpretación de 'receptor'  como "
+"relacionado con los bienes y los servicios en vez del flujo o los fondos "
+"entre partes."
 
 #. /properties/contracts/items/properties/implementation/properties/milestones/description
 #. /definitions/Contract/properties/implementation/properties/milestones/description
@@ -5059,6 +5434,97 @@ msgstr ""
 "competencias a los acuerdos marco o licitaciones individuales a un proceso "
 "más grande de planeación."
 
+#. /definitions/Planning/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"Information from the planning phase of the contracting process. Note that "
+"many other fields can be filled in a planning release, in the appropriate "
+"fields in other schema sections; these would likely be estimates at this "
+"stage, e.g. value in tender."
+msgstr ""
+"Información de la fase de planeación del proceso de contrataciones. Note que"
+" muchos otros campos pueden llenarse en la entrega de planeación, en los "
+"campos apropiados de otras secciones del esquema; lo más probable es que "
+"estos sean estimados en este punto, e.j. value en la licitación."
+
+#. /definitions/Tender/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"Data regarding tender process - publicly inviting prospective contractors to"
+" submit bids for evaluation and selecting a winner or winners."
+msgstr ""
+"Datos sobre el proceso de licitación - invitación pública de posibles "
+"contratistas que enviarán propuestas para evaluación y seleccionar a un "
+"ganador o ganadores."
+
+#. /definitions/Implementation/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"Information during the performance / implementation stage of the contract."
+msgstr ""
+"Información durante la etapa de realización/implementación del contrato"
+
+#. /definitions/Budget/title
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "Budget information"
+msgstr "Información de presupuesto"
+
+#. /definitions/Budget/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"This section contains information about the budget line, and associated "
+"projects, through which this contracting process is funded. It draws upon "
+"the data model of the [Fiscal Data "
+"Package](https://frictionlessdata.io/specs/fiscal-data-package/), and should"
+" be used to cross-reference to more detailed information held using a Budget"
+" Data Package, or, where no linked Budget Data Package is available, to "
+"provide enough information to allow a user to manually or automatically "
+"cross-reference with another published source of budget and project "
+"information."
+msgstr ""
+"Esta sección contiene información sobre la línea presupuestaria, y los "
+"proyectos asociados, a través de los cuales se está financiando este proceso"
+" de contrataciones. Se basa en el modelo de datos del [Fiscal Data "
+"Package](https://frictionlessdata.io/specs/fiscal-data-package/), y debe de "
+"usarse para hacer referencias cruzadas con información más detallada "
+"contenida en un Paquete de Datos de Presupuesto, o cuando no hay un Paquete "
+"de Datos de Presupuesto enlazado, para dar información suficiente que "
+"permita al usuario realizar una referencia cruzada manual o automática con "
+"otra fuente publicada de presupuesto e información del proyecto."
+
+#. /definitions/Address/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "An address."
+msgstr "Una dirección."
+
+#. /definitions/ContactPoint/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"A person, contact point or department to contact in relation to this "
+"contracting process."
+msgstr ""
+"Una persona, punto de contacto o departamento para contactar en relación a "
+"este proceso de contrataciones."
+
+#. /definitions/Value/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid "Financial values should be published with a currency attached."
+msgstr ""
+"Valores financieros deben de ser publicados con un valor de moneda adjunto."
+
+#. /definitions/Period/description
+#: schema/dereferenced-release-schema.json:1 schema/release-schema.json:1
+msgid ""
+"Key events during a contracting process may have a known start date, end "
+"date, duration, or maximum extent (the latest date the period can extend "
+"to). In some cases, not all of these fields will have known or relevant "
+"values."
+msgstr ""
+"Los eventos clave durante un proceso de contratación pueden tener una fecha "
+"de inicio, una fecha de finalización, una duración o un alcance máximo "
+"conocidos (la última fecha a la que se puede extender el período). En "
+"algunos casos, no todos estos campos tendrán valores conocidos o relevantes."
+
 #. /description
 #: schema/meta-schema.json:1
 msgid "Core schema meta-schema"
@@ -5180,7 +5646,7 @@ msgid ""
 msgstr ""
 "Un enlace a la licencia que aplica para los datos en este paquete. Se "
 "recomiendan licencias de Entrega al Dominio Público o [que cumplan con la "
-"Open Definition ](https://opendefinition.org/licenses/). Se deberá usar la "
+"Open Definition](https://opendefinition.org/licenses/). Se deberá usar la "
 "URI canónica de la licencia. Los documentos enlazados desde este archivo "
 "pueden estar bajo otras condiciones de licencia."
 
@@ -5421,466 +5887,6 @@ msgstr ""
 "publicación](https://standard.open-"
 "contracting.org/{{version}}/{{lang}}/guidance/publish/#finalize-your-"
 "publication-policy) de los publicadores."
-
-#. /properties/buyer/title
-#: schema/release-schema.json:1
-msgid "Buyer"
-msgstr "Comprador"
-
-#. /properties/buyer/description
-#: schema/release-schema.json:1
-msgid ""
-"A buyer is an entity whose budget will be used to pay for goods, works or "
-"services related to a contract. This may be different from the procuring "
-"entity who may be specified in the tender data."
-msgstr ""
-"Un comprador es una entidad cuyo presupuesto se utilizará para pagar bienes,"
-" obras o servicios relacionados con un contrato. Este puede ser diferente de"
-" la entidad contratante que puede especificarse en los datos de licitación."
-
-#. /properties/planning/description
-#: schema/release-schema.json:1
-msgid ""
-"Information from the planning phase of the contracting process. This "
-"includes information related to the process of deciding what to contract, "
-"when and how."
-msgstr ""
-"Información sobre la fase de planeación del proceso de contratación. Esto "
-"incluye información relacionada con el proceso de decidir qué contratar, "
-"cuándo y cómo."
-
-#. /properties/tender/description
-#: schema/release-schema.json:1
-msgid "The activities undertaken in order to enter into a contract."
-msgstr "Las actividades llevadas a cabo para celebrar un contrato."
-
-#. /definitions/Planning/properties/budget/title
-#: schema/release-schema.json:1
-msgid "Budget"
-msgstr "Presupuesto"
-
-#. /definitions/Planning/properties/budget/description
-#: schema/release-schema.json:1
-msgid "Details of the budget that funds this contracting process."
-msgstr "Detalles del presupuesto que financia este proceso de contratación."
-
-#. /definitions/Tender/properties/procuringEntity/title
-#: schema/release-schema.json:1
-msgid "Procuring entity"
-msgstr "Entidad contratante"
-
-#. /definitions/Tender/properties/procuringEntity/description
-#: schema/release-schema.json:1
-msgid ""
-"The entity managing the procurement. This may be different from the buyer "
-"who pays for, or uses, the items being procured."
-msgstr ""
-"La entidad que gestiona el proceso de contratación. Esta puede ser distinta "
-"del comprador que paga/usa los artículos adquiridos."
-
-#. /definitions/Tender/properties/value/description
-#: schema/release-schema.json:1
-msgid ""
-"The total upper estimated value of the procurement. A negative value "
-"indicates that the contracting process may involve payments from the "
-"supplier to the buyer (commonly used in concession contracts)."
-msgstr ""
-"El valor máximo estimado de la contratación. Un valor negativo indica que el"
-" proceso de contratación puede incluir pagos del proveedor al comprador "
-"(usado comúnmente en contratos de concesión)."
-
-#. /definitions/Tender/properties/minValue/title
-#: schema/release-schema.json:1
-msgid "Minimum value"
-msgstr "Valor mínimo"
-
-#. /definitions/Tender/properties/minValue/description
-#: schema/release-schema.json:1
-msgid ""
-"The minimum estimated value of the procurement.  A negative value indicates "
-"that the contracting process may involve payments from the supplier to the "
-"buyer (commonly used in concession contracts)."
-msgstr ""
-"El valor mínimo estimado de la contratación. Un valor negativo indica que el"
-" proceso de contratación puede incluir pagos del proveedor al comprador "
-"(usado comúnmente en contratos de concesión)."
-
-#. /definitions/Tender/properties/tenderPeriod/title
-#: schema/release-schema.json:1
-msgid "Tender period"
-msgstr "Periodo de licitación"
-
-#. /definitions/Tender/properties/tenderPeriod/description
-#: schema/release-schema.json:1
-msgid ""
-"The period when the tender is open for submissions. The end date is the "
-"closing date for tender submissions."
-msgstr ""
-"El periodo cuando la licitación está abierta para la recepción de las "
-"propuestas. La fecha de final es la fecha de cierre de recepción de las "
-"propuestas."
-
-#. /definitions/Tender/properties/enquiryPeriod/title
-#: schema/release-schema.json:1
-msgid "Enquiry period"
-msgstr "Periodo de consulta"
-
-#. /definitions/Tender/properties/enquiryPeriod/description
-#: schema/release-schema.json:1
-msgid ""
-"The period during which potential bidders may submit questions and requests "
-"for clarification to the entity managing procurement. Details of how to "
-"submit enquiries should be provided in attached notices, or in "
-"submissionMethodDetails. Structured dates for when responses to questions "
-"will be made can be provided using tender milestones."
-msgstr ""
-"El periodo durante el cual los postulantes potenciales pueden hacer "
-"preguntas o solicitudes de aclaración a la entidad que gestiona el proceso "
-"de contratación. Los detalles de cómo enviar solicitudes deben especificarse"
-" en documentos de notificaciones adjuntos o en el campo "
-"submissionMethodDetails. Las fechas estructuradas para cuando se dará "
-"respuesta a las preguntas se puede proveer usando hitos de la licitación."
-
-#. /definitions/Tender/properties/awardPeriod/title
-#: schema/release-schema.json:1
-msgid "Evaluation and award period"
-msgstr "Periodo de evaluación y adjudicación"
-
-#. /definitions/Tender/properties/awardPeriod/description
-#: schema/release-schema.json:1
-msgid ""
-"The period for decision making regarding the contract award. The end date "
-"should be the date on which an award decision is due to be finalized. The "
-"start date may be used to indicate the start of an evaluation period."
-msgstr ""
-"El período para tomar decisiones relacionados a la adjudicación del "
-"contrato. La fecha final debe de indicar la fecha en que se debe finalizar "
-"la decisión de adjudicación. La fecha de inicio puede usarse para indicar el"
-" comienzo de un período de evaluación."
-
-#. /definitions/Tender/properties/contractPeriod/description
-#: schema/release-schema.json:1
-msgid ""
-"The period over which the contract is estimated or required to be active. If"
-" the tender does not specify explicit dates, the duration field may be used."
-msgstr ""
-"El periodo sobre el cual se estima el contrato o requiere que esté activo. "
-"Si la licitación no especifica fechas, se puede usar el campo de duración."
-
-#. /definitions/Tender/properties/contractPeriod/title
-#. /definitions/Award/properties/contractPeriod/title
-#: schema/release-schema.json:1
-msgid "Contract period"
-msgstr "Periodo de contrato"
-
-#. /definitions/Tender/properties/amendment/description
-#. /definitions/Award/properties/amendment/description
-#. /definitions/Contract/properties/amendment/description
-#: schema/release-schema.json:1
-msgid ""
-"The use of individual amendment objects has been deprecated. From OCDS 1.1 "
-"information should be provided in the amendments array."
-msgstr ""
-"El uso la propiedad de enmienda individual es obsoleto. Desde el OCDS 1.1 la"
-" información debe de proveerse en la lista de enmiendas."
-
-#. /definitions/Tender/properties/amendment/deprecated/description
-#. /definitions/Award/properties/amendment/deprecated/description
-#. /definitions/Contract/properties/amendment/deprecated/description
-#: schema/release-schema.json:1
-#: schema/versioned-release-validation-schema.json:1
-msgid ""
-"The single amendment object has been deprecated in favour of including "
-"amendments in an amendments (plural) array."
-msgstr ""
-"El objeto de enmienda individual es obsoleto y se ha cambiado para incluir "
-"enmiendas en una lista de enmiendas (en plural)."
-
-#. /definitions/Award/properties/value/description
-#: schema/release-schema.json:1
-msgid ""
-"The total value of this award. In the case of a framework contract this may "
-"be the total estimated lifetime value, or maximum value, of the agreement. "
-"There may be more than one award per procurement. A negative value indicates"
-" that the award may involve payments from the supplier to the buyer "
-"(commonly used in concession contracts)."
-msgstr ""
-"El valor o monto total de esta adjudicación. En el caso de un contracto "
-"marco este puede ser el estimado del valor total o valor máximo del acuerdo."
-" Puede haber más de una adjudicación por proceso de contratación. Un valor "
-"negativo indica que la adjudicación puede implicar pagos del proveedor al "
-"comprador (comúnmente utilizado en contratos de concesiones)."
-
-#. /definitions/Award/properties/contractPeriod/description
-#: schema/release-schema.json:1
-msgid "The period for which the contract has been awarded."
-msgstr "El periodo por el cual se ha adjudicado el contrato."
-
-#. /definitions/Contract/properties/period/description
-#: schema/release-schema.json:1
-msgid "The start and end date for the contract."
-msgstr "Las fechas de inicio y fin del contrato."
-
-#. /definitions/Contract/properties/value/description
-#: schema/release-schema.json:1
-msgid ""
-"The total value of this contract. A negative value indicates that the "
-"contract will involve payments from the supplier to the buyer (commonly used"
-" in concession contracts)."
-msgstr ""
-"Un valor o monto total de este contrato. Un valor negativo indica que el "
-"contrato implicará pagos del proveedor al comprador (comúnmente usado en "
-"contratos de concesión)."
-
-#. /definitions/Contract/properties/implementation/description
-#: schema/release-schema.json:1
-msgid ""
-"Information related to the implementation of the contract in accordance with"
-" the obligations laid out therein."
-msgstr ""
-"La información relacionada con la implementación del contrato de acuerdo con"
-" las obligaciones definidas en el mismo."
-
-#. /definitions/Budget/properties/amount/description
-#: schema/release-schema.json:1
-msgid ""
-"The value reserved in the budget for this contracting process. A negative "
-"value indicates anticipated income to the budget as a result of this "
-"contracting process, rather than expenditure. Where the budget is drawn from"
-" multiple sources, the budget breakdown extension can be used."
-msgstr ""
-"El valor reservado en el presupuesto para este proceso de contratación. Un "
-"valor negativo indica ingresos anticipados al presupuesto como resultado de "
-"este proceso de contratación, en lugar de gastos. Cuando se extrae el "
-"presupuesto de múltiples fuentes, se puede utilizar la extensión del "
-"desglose presupuestario."
-
-#. /definitions/Transaction/properties/value/description
-#: schema/release-schema.json:1
-msgid "The value of the transaction."
-msgstr "El monto o valor de la transacción."
-
-#. /definitions/Transaction/properties/payer/title
-#: schema/release-schema.json:1
-msgid "Payer"
-msgstr "Pagador"
-
-#. /definitions/Transaction/properties/payer/description
-#: schema/release-schema.json:1
-msgid ""
-"An organization reference for the organization from which the funds in this "
-"transaction originate."
-msgstr ""
-"Una referencia a la organización que provee los fondos para esta transacción"
-" de pago."
-
-#. /definitions/Transaction/properties/payee/title
-#: schema/release-schema.json:1
-msgid "Payee"
-msgstr "Beneficiarios"
-
-#. /definitions/Transaction/properties/payee/description
-#: schema/release-schema.json:1
-msgid ""
-"An organization reference for the organization which receives the funds in "
-"this transaction."
-msgstr ""
-"Una referencia a la organización que recibe los fondos en esta transacción."
-
-#. /definitions/Transaction/properties/amount/description
-#: schema/release-schema.json:1
-msgid ""
-"(Deprecated in 1.1. Use transaction.value instead) The value of the "
-"transaction. A negative value indicates a refund or correction."
-msgstr ""
-"(Obsoleto en 1.1. Usar transaction.value) El valor de la transacción. Un "
-"valor negativo indica un reembolso o una corrección."
-
-#. /definitions/Transaction/properties/amount/deprecated/description
-#: schema/release-schema.json:1
-#: schema/versioned-release-validation-schema.json:1
-msgid ""
-"This field has been replaced by the `transaction.value` field for "
-"consistency with the use of value and amount elsewhere in the standard."
-msgstr ""
-"Este campo ha sido reemplazado por el campo `transaction.value` buscando "
-"consistencia con el uso de valor y monto en otras partes del estándar."
-
-#. /definitions/Transaction/properties/providerOrganization/title
-#: schema/release-schema.json:1
-msgid "Provider organization"
-msgstr "Organización proveedora"
-
-#. /definitions/Transaction/properties/providerOrganization/description
-#: schema/release-schema.json:1
-msgid ""
-"(Deprecated in 1.1. Use transaction.payer instead.) The Organization "
-"Identifier for the organization from which the funds in this transaction "
-"originate. Expressed following the Organizational Identifier standard - "
-"consult the documentation and the codelist."
-msgstr ""
-"(Obsoleto en 1.1. Usar transaction.payer.) El Identificador de Organización "
-"para la organización de la cuál se originan los fondos en esta transacción. "
-"Expresados siguiendo el estándar de Identificador Organizacional - consulta "
-"la documentación y la lista de códigos. "
-
-#. /definitions/Transaction/properties/providerOrganization/deprecated/description
-#: schema/release-schema.json:1
-#: schema/versioned-release-validation-schema.json:1
-msgid ""
-"This field has been replaced by the `transaction.payer` field to resolve "
-"ambiguity arising from 'provider' being interpreted as relating to the goods"
-" or services procured rather than the flow of funds between the parties."
-msgstr ""
-"Este campo ha sido reemplazado por el campo `transaction.payer` para "
-"resolver ambigüedades generadas por la interpretación de 'proveedor'  como "
-"relacionado con los bienes y los servicios en vez del flujo o los fondos "
-"entre partes."
-
-#. /definitions/Transaction/properties/receiverOrganization/title
-#: schema/release-schema.json:1
-msgid "Receiver organization"
-msgstr "Organización receptora"
-
-#. /definitions/Transaction/properties/receiverOrganization/description
-#: schema/release-schema.json:1
-msgid ""
-"(Deprecated in 1.1. Use transaction.payee instead). The Organization "
-"Identifier for the organization which receives the funds in this "
-"transaction. Expressed following the Organizational Identifier standard - "
-"consult the documentation and the codelist."
-msgstr ""
-"(Obsoleto en 1.1. Usar transaction.payee.) El Identificador de Organización "
-"para la organización que recibe los fondos en esta transacción. Expresados "
-"siguiendo el estándar de Identificador Organizacional - consulta la "
-"documentación y la lista de códigos. "
-
-#. /definitions/Transaction/properties/receiverOrganization/deprecated/description
-#: schema/release-schema.json:1
-#: schema/versioned-release-validation-schema.json:1
-msgid ""
-"This field has been replaced by the `transaction.payee` field to resolve "
-"ambiguity arising from 'receiver' being interpreted as relating to the goods"
-" or services procured rather than the flow of funds between the parties."
-msgstr ""
-"Este campo ha sido reemplazado por el campo `transaction.payee` para "
-"resolver ambigüedades generadas por la interpretación de 'receptor'  como "
-"relacionado con los bienes y los servicios en vez del flujo o los fondos "
-"entre partes."
-
-#. /definitions/OrganizationReference/properties/identifier/title
-#. /definitions/Organization/properties/identifier/title
-#: schema/release-schema.json:1
-msgid "Primary identifier"
-msgstr "Identificador principal"
-
-#. /definitions/OrganizationReference/properties/identifier/description
-#: schema/release-schema.json:1
-msgid ""
-"The primary identifier for this organization. Identifiers that uniquely pick"
-" out a legal entity should be preferred. Consult the [organization "
-"identifier guidance](https://standard.open-"
-"contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred "
-"scheme and identifier to use."
-msgstr ""
-"El identificador primario para esta organización o participante. Son "
-"preferibles los identificadores que identifican a una sola entidad legal. "
-"Consulta la [guía de identificadores de organización](https://standard.open-"
-"contracting.org/{{version}}/{{lang}}/schema/identifiers/) para encontrar el "
-"esquema preferido y el identificador que usarás."
-
-#. /definitions/OrganizationReference/properties/identifier/deprecated/description
-#. /definitions/OrganizationReferenceVersionedId/properties/identifier/deprecated/description
-#: schema/release-schema.json:1
-#: schema/versioned-release-validation-schema.json:1
-msgid ""
-"From version 1.1, organizations should be referenced by their identifier and"
-" name in a document, and detailed legal identifier information should only "
-"be provided in the relevant cross-referenced entry in the parties section at"
-" the top level of a release."
-msgstr ""
-"A partir de la versión 1.1, se debe hacer referencia a las organizaciones a "
-"través de su identificador y nombre en un documento y la información legal "
-"detallada sólo debe de proveerse en la entrada de referencia cruzada en la "
-"sección de partes involucradas, en el nivel más alto de una entrega."
-
-#. /definitions/OrganizationReference/properties/address/deprecated/description
-#. /definitions/OrganizationReferenceVersionedId/properties/address/deprecated/description
-#: schema/release-schema.json:1
-#: schema/versioned-release-validation-schema.json:1
-msgid ""
-"From version 1.1, organizations should be referenced by their identifier and"
-" name in a document, and address information should only be provided in the "
-"relevant cross-referenced entry in the parties section at the top level of a"
-" release."
-msgstr ""
-"A partir de la versión 1.1, se debe hacer referencia a las organizaciones a "
-"través de su identificador y nombre en un documento y la dirección detallada"
-" sólo debe de proveerse en la entrada de referencia en la sección de partes "
-"involucradas, en el nivel más alto de una entrega."
-
-#. /definitions/OrganizationReference/properties/address/description
-#. /definitions/OrganizationReference/properties/contactPoint/description
-#: schema/release-schema.json:1
-msgid "(Deprecated outside the parties section)"
-msgstr "(Descontinuado fuera de la sección de partes involucradas)"
-
-#. /definitions/OrganizationReference/properties/contactPoint/deprecated/description
-#. /definitions/OrganizationReferenceVersionedId/properties/contactPoint/deprecated/description
-#: schema/release-schema.json:1
-#: schema/versioned-release-validation-schema.json:1
-msgid ""
-"From version 1.1, organizations should be referenced by their identifier and"
-" name in a document, and contact point information for an organization "
-"should be provided in the relevant cross-referenced entry in the parties "
-"section at the top level of a release."
-msgstr ""
-"A partir de la versión 1.1, se debe hacer referencia a las organizaciones a "
-"través de su identificador y nombre en un documento y la información de "
-"punto de contacto para una organización sólo debe de proveerse en la entrada"
-" de referencia cruzada en la sección de partes involucradas, en el nivel más"
-" alto de una entrega."
-
-#. /definitions/Organization/properties/identifier/description
-#: schema/release-schema.json:1
-msgid ""
-"The primary identifier for this organization or participant. Identifiers "
-"that uniquely pick out a legal entity should be preferred. Consult the "
-"[organization identifier guidance](https://standard.open-"
-"contracting.org/{{version}}/{{lang}}/schema/identifiers/) for the preferred "
-"scheme and identifier to use."
-msgstr ""
-"El identificador primario para esta organización o participante. Son "
-"preferibles los identificadores que denotan de forma única a una entidad "
-"legal. Consulta la [guía de identificadores de "
-"organización](https://standard.open-"
-"contracting.org/{{version}}/{{lang}}/schema/identifiers/) para el esquema e "
-"identificador preferido."
-
-#. /definitions/Organization/properties/address/description
-#: schema/release-schema.json:1
-msgid ""
-"An address. This may be the legally registered address of the organization, "
-"or may be a correspondence address for this particular contracting process."
-msgstr ""
-"Una dirección. Esta puede ser la dirección legalmente registrada de la "
-"organización o puede ser una dirección donde se reciba correspondencia para "
-"este proceso de contratación particular."
-
-#. /definitions/Organization/properties/contactPoint/description
-#: schema/release-schema.json:1
-msgid "Contact details that can be used for this party."
-msgstr "Detalles de contacto que pueden usarse para esta parte involucrada."
-
-#. /definitions/Item/properties/classification/description
-#: schema/release-schema.json:1
-msgid "The primary classification for the item."
-msgstr "La clasificación primaria para un artículo."
-
-#. /definitions/Item/properties/unit/properties/value/description
-#: schema/release-schema.json:1
-msgid "The monetary value of a single unit."
-msgstr "El valor monetario de una unidad."
 
 #. /title
 #: schema/versioned-release-validation-schema.json:1
