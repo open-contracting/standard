@@ -5,30 +5,15 @@
   "description": "The record package contains a list of records along with some publishing metadata.",
   "type": "object",
   "properties": {
-    "links": {
-      "title": "Links",
-      "description": "Links to the next and previous sequential packages, to support pagination.",
-      "type": "object",
-      "properties": {
-        "next": {
-          "title": "Next",
-          "description": "A URL to the next sequential package.",
-          "type": "string",
-          "format": "uri"
-        },
-        "prev": {
-          "title": "Previous",
-          "description": "A URL to the previous sequential package.",
-          "type": "string",
-          "format": "uri"
-        }
-      }
-    },
     "uri": {
       "title": "Package identifier",
       "description": "The URI of this package that identifies it uniquely in the world.",
       "type": "string",
-      "format": "uri"
+      "format": "uri",
+      "deprecated": {
+        "description": "This field is deprecated for consistency with a planned future JSONL bulk data format.",
+        "deprecatedVersion": "1.2"
+      }
     },
     "version": {
       "title": "OCDS schema version",
@@ -81,9 +66,10 @@
           "format": "uri"
         }
       },
-      "required": [
-        "name"
-      ]
+      "deprecated": {
+        "description": "This field is deprecated in favour of the `publisher` field at release level.",
+        "deprecatedVersion": "1.2"
+      }
     },
     "license": {
       "title": "License",
@@ -92,7 +78,11 @@
         "string",
         "null"
       ],
-      "format": "uri"
+      "format": "uri",
+      "deprecated": {
+        "description": "This field is deprecated, because it isn't critical to distribute the license as data. However, the license can be expressed in the machine-readable description of the OCDS data in a data registry.",
+        "deprecatedVersion": "1.2"
+      }
     },
     "publicationPolicy": {
       "title": "Publication policy",
@@ -101,13 +91,21 @@
         "string",
         "null"
       ],
-      "format": "uri"
+      "format": "uri",
+      "deprecated": {
+        "description": "This field is deprecated, because it isn't critical to distribute the publication policy as data. However, the publication policy can be expressed in the machine-readable description of the OCDS data in a data registry.",
+        "deprecatedVersion": "1.2"
+      }
     },
     "publishedDate": {
       "title": "Published date",
       "description": "The date that this package was published. If this package is generated 'on demand', this date should reflect the date of the last change to the underlying contents of the package.",
       "type": "string",
-      "format": "date-time"
+      "format": "date-time",
+      "deprecated": {
+        "description": "This field is deprecated for consistency with a planned future JSONL bulk data format.",
+        "deprecatedVersion": "1.2"
+      }
     },
     "packages": {
       "title": "Packages",
@@ -130,14 +128,10 @@
       "type": "array",
       "items": {
         "$ref": "#/definitions/Record"
-      },
-      "uniqueItems": true
+      }
     }
   },
   "required": [
-    "uri",
-    "publisher",
-    "publishedDate",
     "records",
     "version"
   ],
