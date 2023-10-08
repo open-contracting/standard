@@ -94,7 +94,7 @@ Releases must be published within a [release package](release_package). The rele
 ````
 
 ```{jsonschema} ../../build/current_lang/release-package-schema.json
-:collapse: releases,publisher
+:collapse: releases
 ```
 
 See the [licensing guidance](../guidance/publish.md#license-your-data) for more details on selecting a license, and publishing license information.
