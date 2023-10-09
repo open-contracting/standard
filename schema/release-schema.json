@@ -178,6 +178,30 @@
           "items": {
             "$ref": "#/definitions/Milestone"
           }
+        },
+        "finalStatus": {
+          "title": "Planning final status",
+          "description": "The final status of the planning process, from the closed [planningFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#planning-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "planningFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "cancelled",
+            "unsuccessful",
+            null
+          ]
+        },
+        "finalStatusDate": {
+          "title": "Planning final status date",
+          "description": "The date on which the planning process reached its final status.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "patternProperties": {
