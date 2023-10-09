@@ -74,6 +74,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1316](https://github.com/open-contracting/standard/pull/1316) `language`
   * [#1308](https://github.com/open-contracting/standard/pull/1308) `mediaType`
   * [#1459](https://github.com/open-contracting/standard/pull/1459) `partyScale`
+  * [#1642](https://github.com/open-contracting/standard/pull/1642) `planningFinalStatus`
 
 * `classificationScheme.csv`:
   * [#1319](https://github.com/open-contracting/standard/pull/1319) Rename from `itemClassificationScheme.csv`.
@@ -170,6 +171,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * Add new fields:
   * [#1335](https://github.com/open-contracting/standard/pull/1335) `planning.id`
+  * [#1642](https://github.com/open-contracting/standard/pull/1642) `planning.finalStatus` and `planning.finalStatusDate`
   * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
   * [#1421](https://github.com/open-contracting/standard/pull/1421) `tender.standstillPeriod`
   * [#1492](https://github.com/open-contracting/standard/pull/1492) `awards.datePublished`
