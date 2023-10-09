@@ -140,6 +140,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1232](https://github.com/open-contracting/standard/pull/1232) Clarify the description of 'supplier'.
   * [#1352](https://github.com/open-contracting/standard/pull/1352) Replace "party", "entity", etc. with "organization".
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
+  * [#1644](https://github.com/open-contracting/standard/pull/1644) Clarify the description of 'interestedParty'.
 
 * `releaseTag.csv`:
   * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
