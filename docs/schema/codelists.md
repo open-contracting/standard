@@ -121,8 +121,8 @@ The submission method codelist is used to identify the mechanism through which a
 ```{versionadded} 1.1
 ```
 
-```{deprecated} 1.2
-Deprecated "parent-to-child" codes: 'subContract', 'replacementProcess' and 'renewalProcess'.
+```{versionchanged} 1.2
+Deprecated "parent-to-child" codes: 'subContract', 'replacementProcess' and 'renewalProcess'. Added sub-codes of prior: 'prior.replacement', 'prior.renewal', 'prior.additional' and 'prior.repetition'.
 ```
 
 The related process block is used at the release level to point backwards to prior processes, such as planning or framework establishment. The related process codelist determines the kind of relationship that is being described.
