@@ -50,19 +50,28 @@ Local identifiers must be used consistently. For example, if the `id` of an awar
 
 <img src="../../_static/svg/green_compilation.svg" width="150" align="right"/>
 
-An open contracting process identifier (ocid) is a **globally unique identifier**. Every release has an `ocid`. OCDS defines an `ocid` as:
+An open contracting process identifier (ocid) is a **globally unique identifier** for a contracting process. Every contracting process in OCDS is assigned an ocid.
+
+The contracting process to which an OCDS release or record relates is identified by the `ocid` field. Therefore, a contracting process's ocid be used to join up data that is published at different times or from different systems.
+
+In the context of a release, the `ocid` field is described as:
 
 ```{field-description} ../../build/current_lang/release-schema.json /properties/ocid
 ```
 
-It can be used to join up information published at different times and in different places.
+In the context of a record, it is described as:
 
-Setting the `ocid` is usually a simple two step process:
+```{field-description} ../../build/current_lang/record-package-schema.json /definitions/Record/properties/ocid
+```
 
-1. Identify the best **internal identifier** recorded against the processes being disclosed;
-2. Register an `ocid` prefix to prepend to this internal identifier.
+An ocid is composed of two parts:
 
-In some cases, you might need to consider changes to existing systems to ensure that different systems handling information about your contracting and planning processes have a common internal identifier to draw upon.
+1. An [ocid prefix](#ocid-prefix) that establishes an identifier series, for which there is one publisher with the authority to mint ocids
+1. An internal contracting process identifier that is unique within the scope of the identifier series
+
+The ocid is case-sensitive; in other words, the letter case of an ocid must be consistent. It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`).
+
+Before assigning an ocid to a contracting process, you need to [register an ocid prefix](../guidance/build.md#register-an-ocid-prefix) and decide on suitable identifier to use as the internal contracting process identifier. You might need to consider changes to existing systems to ensure that different systems handling information about your contracting and planning processes share a common internal contracting process identifier.
 
 ```{admonition} Worked Example
 :class: hint
@@ -82,23 +91,25 @@ Mexico City then registered a prefix with the Data Support Team. They have been 
 > ocds-87sd3t-OM-DGRMSG-004-13
 ```
 
-The ocid prefix itself is made up of two parts: a prefix agency identifier (currently only 'ocds' is used), and a random six-character alphanumeric string generated for each publisher of data.
+### ocid prefix
 
-The ocid is case-sensitive; in other words, the letter case of an ocid must be consistent.
+The purpose of the ocid prefix is to ensure that each ocid is globally unique. To ensure that their ocids do not conflict with those of another publisher, publisher must [register an ocid prefix](../guidance/build.md#register-an-ocid-prefix).
 
-It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`).
+An ocid prefix is made up of two parts:
 
-### Registered prefixes
+1. A prefix agency identifier that establishes a prefix series, for which there is one agency with the authority to mint prefixes
+2. A randomly generated six character lowercase alphanumeric string
 
-Publishers must register an ocid prefix. See the [registration pages](../guidance/build) for details of how to obtain your ocid prefix.
+```{admonition} Who can mint ocid prefixes?
+:class: hint
 
-Prefix are randomly generated lowercase alphanumeric strings. A prefix is assigned to each organization that holds the existing internal identifier for a Contracting Processes.
+Currently, only the Open Contracting Partnership can mint ocid prefixes, under the 'ocds' prefix agency identifier. In future, other organizations might be able to issue prefixes, each with their own prefix agency identifiers.
 
-Currently, only the Open Contracting Partnership issues valid prefixes. In future, other organizations might be able to issue prefixes, each with their own prefix agency identifiers.
+```
 
-You can find a [list of registered prefixes here along with a registration form for creating new prefixes](../guidance/build).
+ocid prefixes are 'dumb' identifiers. They are not intended to carry any semantics and their sole purpose is to turn internal identifiers into globally unique identifiers.
 
-The registered prefixes are dumb identifiers. They are not intended to carry any semantics, and their sole purpose is to turn internal identifiers into globally unique identifiers which can be cross-referenced between systems.
+All registered OCID prefixes are accessible as a [web page](https://docs.google.com/spreadsheets/d/1E5ZVhc8VhGOakCq4GegvkyFYT974QQb-sSjvOfaxH7s/pubhtml?gid=506986894&single=true&widget=true) or [CSV file](https://docs.google.com/spreadsheets/d/e/2PACX-1vQP8EwbUhsfxN7Fx7vX3mTA6Y8CXyGi04bHUepdcfxvM6VRVP9f5BWAYEG6MPbnJjWJp-La81DgG8wx/pub?gid=506986894&single=true&output=csv).
 
 ### Publisher namespace
 
