@@ -107,6 +107,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1464](https://github.com/open-contracting/standard/pull/1464) Deprecate 'eligibilityCriteria', add 'exclusionGrounds' and 'selectionCriteria'.
   * [#1508](https://github.com/open-contracting/standard/pull/1508) Clarify that "evaluation" in 'evaluationCriteria' and 'evaluationReports' covers exclusion grounds, selection criteria and award criteria. Add a document type for 'awardCriteria'. 
   * [#1618](https://github.com/open-contracting/standard/pull/1618) Remove non-existent sections from `Section` column.
+  * [#1647](https://github.com/open-contracting/standard/pull/1647) Add 'noObjectionCertificate'.
 
 * `method.csv`:
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
