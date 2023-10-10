@@ -120,6 +120,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
     * 'procurement'
     * 'contractClose'
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "tender submissions" with "bid submissions".
+  * [#1644](https://github.com/open-contracting/standard/pull/1644) Replace "pre-procurement phase" with "planning process".
 
 * `partyRole.csv`:
   * [#1187](https://github.com/open-contracting/standard/pull/1187) Add 'contractImplementationManager'
