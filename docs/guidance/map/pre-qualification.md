@@ -139,7 +139,7 @@ The procuring entity will invite a maximum of 5 qualified potential suppliers to
 
 ## Example: Pre-qualification in Paraguay
 
-The Ministry of Public Works and Communications issues an [invitation for potential suppliers to pre-qualify for two tenders for road construction in different neighbourhoods](https://contrataciones.gov.py/licitaciones/convocatoria/338229-servicios-consultoria-estudios-factibilidad-diseno-final-ingenieria-tramos-caminos-1/precalificacion.html). Each tender will re-use the list of pre-qualified potential suppliers established as a result of this first procedure.
+The Ministry of Public Works and Communications issues an [invitation for potential suppliers to pre-qualify for two tenders for road construction in different neighbourhoods](https://contrataciones.gov.py/licitaciones/convocatoria/338229-servicios-consultoria-estudios-factibilidad-diseno-final-ingenieria-tramos-caminos-1/precalificacion.html). Each tender will reuse the list of pre-qualified potential suppliers established as a result of this first procedure.
 
 The invitation represents the initiation of a contracting process to establish a list of pre-qualified potential suppliers, so it is modelled using the `tender` section in OCDS.
 
