@@ -120,6 +120,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
     * 'procurement'
     * 'contractClose'
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "tender submissions" with "bid submissions".
+  * [#1644](https://github.com/open-contracting/standard/pull/1644) Replace "pre-procurement phase" with "planning process".
 
 * `partyRole.csv`:
   * [#1187](https://github.com/open-contracting/standard/pull/1187) Add 'contractImplementationManager'
@@ -135,9 +136,12 @@ Per the [normative and non-normative content and changes policy](../governance/n
     * 'lender'
     * 'equityInvestor'
   * [#1182](https://github.com/open-contracting/standard/pull/1182) Deprecate 'funder'
-  * [#1163](https://github.com/open-contracting/standard/pull/1163) Clarify the description of 'procuringEntity'.
-  * [#1182](https://github.com/open-contracting/standard/pull/1182) Clarify the description of 'buyer'.
-  * [#1232](https://github.com/open-contracting/standard/pull/1232) Clarify the description of 'supplier'.
+  * Clarify the descriptions of:
+    * [#1182](https://github.com/open-contracting/standard/pull/1182) 'buyer'
+    * [#1644](https://github.com/open-contracting/standard/pull/1182) 'enquirer'
+    * [#1644](https://github.com/open-contracting/standard/pull/1644) 'interestedParty'
+    * [#1163](https://github.com/open-contracting/standard/pull/1163) 'procuringEntity'
+    * [#1232](https://github.com/open-contracting/standard/pull/1232) 'supplier'
   * [#1352](https://github.com/open-contracting/standard/pull/1352) Replace "party", "entity", etc. with "organization".
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
 
