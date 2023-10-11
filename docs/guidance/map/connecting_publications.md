@@ -118,7 +118,7 @@ Building on the PCS and FTS example, the publishers agreed that PCS is the canon
   ],
   "parties": [
     {
-      "id": "org-1",across different 
+      "id": "org-1",
       "identifier": {
         "legalName": "Fife Council"
       },
