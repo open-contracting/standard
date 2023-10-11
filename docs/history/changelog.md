@@ -446,7 +446,7 @@ See the changelogs for:
 ### Schema
 
 * [#251](https://github.com/open-contracting/standard/issues/251) Allow optional field `parties.role` to be `null`.
-* [#479](https://github.com/open-contracting/standard/issues/479) Remove `releases` as a required field in [`record-package-schema.json`](../schema/record_package).
+* [#479](https://github.com/open-contracting/standard/issues/479) Remove `releases` as a required field in [`record-package-schema.json`](../schema/packaging/record_package).
 * [#475](https://github.com/open-contracting/standard/issues/475) Add an `enum` property to every field in the schema with a closed codelist.
 
 ### Codelists
@@ -483,7 +483,7 @@ See the changelogs for:
 * [#323](https://github.com/open-contracting/standard/issues/323) **[Standard should specify use of UTF-8 for encoding JSON](../guidance/build/serialization.md#json)** - We now recommend use of I-JSON and UTF-8 for JSON publication
 * [#166](https://github.com/open-contracting/standard/issues/166) **[Indicate encoding for CSV serializations](../guidance/build/serialization.md#multi-table)** - We have added information on CSV encoding to the implementation guidance to recommend UTF-8 or Windows-1252.
 * [#336](https://github.com/open-contracting/standard/issues/336) **[Codelist properties in schema](https://github.com/open-contracting/standard/commit/ee1db256d7364ee70e3553f4384d9908bff604a6)** - We have included explicit references to the codelist files (CSV versions) in the schema. This will be used in future versions of the validator to support validation against codelists.
-* [#301](https://github.com/open-contracting/standard/issues/301) **[Specifying versions and extensions in package metadata](../schema/records_reference.md#package-metadata)** - We have updated the package schemas to require that version is declared, and to provide a means of declaring extensions in use. This will be used in future versions of the validator to support validation against extensions.
+* [#301](https://github.com/open-contracting/standard/issues/301) **[Specifying versions and extensions in package metadata](../schema/packaging/index)** - We have updated the package schemas to require that version is declared, and to provide a means of declaring extensions in use. This will be used in future versions of the validator to support validation against extensions.
 * [#287](https://github.com/open-contracting/standard/issues/287) [#447](https://github.com/open-contracting/standard/pull/447) **[Change how merge strategies are expressed](../schema/merging)** - The `omitWhenMerged` and `wholeListMerge` properties replace the `mergeStrategy` and `mergeOptions` properties, with different semantics.
 * [#431](https://github.com/open-contracting/standard/pull/431) **Add `minLength` property to required string fields**.
 

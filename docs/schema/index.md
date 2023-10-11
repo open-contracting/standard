@@ -2,7 +2,7 @@
 
 The Open Contracting Data Standard is maintained using JSON Schema. 
 
-In this section you will find the schema for [releases](release) along with the schemas for [release packages](release_package) and [record packages](record_package), which act as envelopes for releases and records, respectively.
+In this section you will find the schema for [releases](release) along with the schemas for [packaging](packaging/index.md), which act as envelopes for releases and records.
 
 The [release schema reference](reference) provides guidance on using each of the [sections](reference.md#release-structure) and [building blocks](reference.md#building-block-reference) in the schema, and the [record schema reference](records_reference) provides additional information on publishing records with compiled and versioned releases.
 
@@ -13,9 +13,8 @@ OCDS data must follow the I-JSON (Internet JSON) specification in [RFC7493](http
 
 reference
 release
-release_package
 records_reference
-record_package
+packaging/index
 merging
 identifiers
 codelists

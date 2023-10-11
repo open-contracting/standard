@@ -6,36 +6,16 @@ There should be a single record per ocid per [distribution](https://www.w3.org/T
 
 **Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 
+Records must be published within a [record package](packaging/record_package). 
+
 ```{admonition} Browsing the schema
 :class: note
 
-This page presents the record package schema as tables. You can also download the canonical version of the record package schema as [JSON Schema](../../build/current_lang/record-package-schema.json), or view it in an [interactive browser](record_package).
+This page presents the record package schema as tables. You can also download the canonical version of the record package schema as [JSON Schema](../../build/current_lang/record-package-schema.json), or view it in an [interactive browser](packaging/record_package).
 ```
 
 ```{workedexamplelist} The following worked examples are available for records
 :tag: record
-```
-
-## Package metadata
-
-Records must be published within a [record package](record_package). The record package provides metadata about the record(s) that it contains.
-
-```{jsonschema} ../../build/current_lang/record-package-schema.json
-:collapse: records
-```
-
-See the [licensing guidance](../guidance/publish.md#license-your-data) for more details on selecting a license, and publishing license information.
-
-See the [publication policy](../guidance/publish.md#finalize-your-publication-policy) guidance for more details on what to include in a publication policy.
-
-The record package metadata has one difference from the release package metadata: instead of a `releases` array, a record package has a `records` array containing one or more records.
-
-The following example demonstrates the package metadata and record fields.
-
-```{jsoninclude} ../examples/merging/updates/versioned.json
-:jsonpointer:
-:expand: records
-:title: package
 ```
 
 ## Record structure
@@ -108,6 +88,8 @@ A versioned release aggregates all values of all fields from all releases. For e
 This versioned information is relevant to many use cases relating to contract monitoring. However, it can significantly increase file sizes. As such, publishers can consider publishing records both with and without the versioned release.
 
 If the versioned release is not provided, third parties can generate it by processing the record's releases according to the [merging](merging) reference.
+
+A separate, auto-generated [versioned release schema](../../build/current_lang/versioned-release-validation-schema.json) is provided for validating versioned releases within records.
 
 The following example displays a single field's [versioned values](merging.md#versioned-values). This shows that the amount changed between the tender stage and a tender amendment, while the currency did not.
 
