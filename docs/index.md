@@ -70,7 +70,7 @@ Check whether your data follows the OCDS correctly
 
 ````
 
-The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](https://www.open-contracting.org/) (OCP). If you are interested to learn more about Open Contracting advocacy and how it can be used to support wider reform and measurable improvements in public contracting, please visit www.open-contracting.org.
+The Open Contracting Data Standard is a core product of the [Open Contracting Partnership](https://www.open-contracting.org/) (OCP). If you are interested to learn more about Open Contracting advocacy and how it can be used to support wider reform and measurable improvements in public contracting, please visit [www.open-contracting.org](https://www.open-contracting.org/).
 
 ```{note}
 This is the English (and canonical) version of the OCDS documentation. You can switch to the Spanish and French translations using the language switcher.
