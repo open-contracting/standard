@@ -215,6 +215,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1528](https://github.com/open-contracting/standard/pull/1528) `tender.id`, `tender.hasEnquiries`, to reduce ambiguity and use consistent wording in the description of procurement stages.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) `tender.enquiryPeriod`, to remove the suggestion to use `tender.submissionMethodDetails` for information about how to submit enquiries.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) Normalize field descriptions according to a style guide.
+  * [#1648](https://github.com/open-contracting/standard/pull/1648) `tender.datePublished`, to clarify its relation to bidding documents.
 
 * Remove confusing terminology:
   * [#1487](https://github.com/open-contracting/standard/pull/1487) `planning.budget.project`, to remove sentence about translation options.
