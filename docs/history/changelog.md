@@ -86,8 +86,10 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1637](https://github.com/open-contracting/standard/pull/1637) Add 'sdg' and 'sdgTarget'.
 
 * `documentType.csv`:
-  * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'.
-  * [#1453](https://github.com/open-contracting/standard/pull/1453) Add 'marketEngagementNotice'.
+  * Add codes:
+    * [#1336](https://github.com/open-contracting/standard/pull/1336) 'unsuccessfulDetails'
+    * [#1453](https://github.com/open-contracting/standard/pull/1453) 'marketEngagementNotice'
+    * [#1647](https://github.com/open-contracting/standard/pull/1647) 'noObjectionCertificate'
   * [#1419](https://github.com/open-contracting/standard/pull/1419) Add codes for document types described in the [UNCITRAL Model Law on Public Procurement](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement):
     * 'otherParticipationRequirements'
     * 'procurementMethodRationale'
@@ -107,7 +109,6 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1464](https://github.com/open-contracting/standard/pull/1464) Deprecate 'eligibilityCriteria', add 'exclusionGrounds' and 'selectionCriteria'.
   * [#1508](https://github.com/open-contracting/standard/pull/1508) Clarify that "evaluation" in 'evaluationCriteria' and 'evaluationReports' covers exclusion grounds, selection criteria and award criteria. Add a document type for 'awardCriteria'. 
   * [#1618](https://github.com/open-contracting/standard/pull/1618) Remove non-existent sections from `Section` column.
-  * [#1647](https://github.com/open-contracting/standard/pull/1647) Add 'noObjectionCertificate'.
 
 * `method.csv`:
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
