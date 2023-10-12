@@ -597,6 +597,41 @@
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
+        },
+        "finalStatus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "tenderFinalStatus.csv",
+                "openCodelist": false,
+                "enum": [
+                  "cancelled",
+                  "unsuccessful",
+                  "withdrawn",
+                  null
+                ]
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         }
       },
       "patternProperties": {
@@ -753,6 +788,42 @@
           "deprecated": {
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
+          }
+        },
+        "finalStatus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "awardFinalStatus.csv",
+                "openCodelist": false,
+                "enum": [
+                  "complete",
+                  "cancelled",
+                  "unsuccessful",
+                  "withdrawn",
+                  null
+                ]
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -945,6 +1016,43 @@
           "deprecated": {
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
+          }
+        },
+        "finalStatus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "contractFinalStatus.csv",
+                "openCodelist": false,
+                "enum": [
+                  "terminatedSuccessfully",
+                  "terminatedEarly",
+                  "cancelled",
+                  "unsuccessful",
+                  "withdrawn",
+                  null
+                ]
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },

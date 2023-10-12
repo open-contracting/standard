@@ -6365,6 +6365,22 @@
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
+        },
+        "finalStatus": {
+          "title": "Tender final status",
+          "description": "The final status of the tender, from the closed [tenderFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#tender-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "tenderFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "cancelled",
+            "unsuccessful",
+            "withdrawn",
+            null
+          ]
         }
       },
       "patternProperties": {
@@ -8936,6 +8952,23 @@
               "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
               "deprecatedVersion": "1.1"
             }
+          },
+          "finalStatus": {
+            "title": "Award final status",
+            "description": "The final status of the award, from the closed [awardFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#award-final-status) codelist.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "codelist": "awardFinalStatus.csv",
+            "openCodelist": false,
+            "enum": [
+              "complete",
+              "cancelled",
+              "unsuccessful",
+              "withdrawn",
+              null
+            ]
           }
         },
         "patternProperties": {
@@ -14274,6 +14307,24 @@
               "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
               "deprecatedVersion": "1.1"
             }
+          },
+          "finalStatus": {
+            "title": "Contract final status",
+            "description": "The final status of the contract, from the closed [contractFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#contract-final-status) codelist.",
+            "type": [
+              "string",
+              "null"
+            ],
+            "codelist": "contractFinalStatus.csv",
+            "openCodelist": false,
+            "enum": [
+              "terminatedSuccessfully",
+              "terminatedEarly",
+              "cancelled",
+              "unsuccessful",
+              "withdrawn",
+              null
+            ]
           }
         },
         "patternProperties": {
@@ -19579,6 +19630,22 @@
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
+        },
+        "finalStatus": {
+          "title": "Tender final status",
+          "description": "The final status of the tender, from the closed [tenderFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#tender-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "tenderFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "cancelled",
+            "unsuccessful",
+            "withdrawn",
+            null
+          ]
         }
       },
       "patternProperties": {
@@ -22146,6 +22213,23 @@
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
+        },
+        "finalStatus": {
+          "title": "Award final status",
+          "description": "The final status of the award, from the closed [awardFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#award-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "awardFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "complete",
+            "cancelled",
+            "unsuccessful",
+            "withdrawn",
+            null
+          ]
         }
       },
       "patternProperties": {
@@ -27478,6 +27562,24 @@
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
+        },
+        "finalStatus": {
+          "title": "Contract final status",
+          "description": "The final status of the contract, from the closed [contractFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#contract-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "contractFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "terminatedSuccessfully",
+            "terminatedEarly",
+            "cancelled",
+            "unsuccessful",
+            "withdrawn",
+            null
+          ]
         }
       },
       "patternProperties": {

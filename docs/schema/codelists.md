@@ -333,3 +333,33 @@ For enterprises without employees, use the 'micro' code.
 :header-rows: 1
 :file: ../../build/current_lang/codelists/partyScale.csv
 ```
+
+### Tender final status
+
+```{versionadded} 1.2
+```
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/tenderFinalStatus.csv
+```
+
+### Award final status
+
+```{versionadded} 1.2
+```
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/awardFinalStatus.csv
+```
+
+### Contract final status
+
+```{versionadded} 1.2
+```
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/contractFinalStatus.csv
+```
