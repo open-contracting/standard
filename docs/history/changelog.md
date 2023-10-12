@@ -86,8 +86,10 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1637](https://github.com/open-contracting/standard/pull/1637) Add 'sdg' and 'sdgTarget'.
 
 * `documentType.csv`:
-  * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'.
-  * [#1453](https://github.com/open-contracting/standard/pull/1453) Add 'marketEngagementNotice'.
+  * Add codes:
+    * [#1336](https://github.com/open-contracting/standard/pull/1336) 'unsuccessfulDetails'
+    * [#1453](https://github.com/open-contracting/standard/pull/1453) 'marketEngagementNotice'
+    * [#1647](https://github.com/open-contracting/standard/pull/1647) 'noObjectionCertificate'
   * [#1419](https://github.com/open-contracting/standard/pull/1419) Add codes for document types described in the [UNCITRAL Model Law on Public Procurement](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement):
     * 'otherParticipationRequirements'
     * 'procurementMethodRationale'
