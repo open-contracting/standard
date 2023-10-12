@@ -10,7 +10,7 @@ jobs:
           submodules: true
       - uses: actions/setup-python@v4
         with:
-          python-version: 3.8
+          python-version: '3.10'
           cache: pip
           cache-dependency-path: '**/requirements*.txt'
       # Don't install editable projects in the current working directory.
@@ -23,10 +23,8 @@ jobs:
       # - run: |
       #     make linkcheck
       #     rm -f output.json output.txt
-      # Google Chrome and ChromeDriver are already included.
-      # https://help.github.com/en/actions/reference/software-installed-on-github-hosted-runners
-      # https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-Readme.md
-      - run: pytest -W error
+      # "ResourceWarning: unclosed file <_io.BufferedWriter name='/dev/null'>"
+      - run: pytest -W error -W ignore::ResourceWarning
       # Deploy the built documentation to the staging directory.
       - if: github.event_name == 'push'
         uses: shimataro/ssh-key-action@v2

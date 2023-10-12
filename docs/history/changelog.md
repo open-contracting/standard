@@ -4,7 +4,7 @@ These release notes describe what's new in each version. OCDS adheres to [Semant
 
 ## Iterative improvements
 
-Per the [normative and non-normative content and changes policy](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit), iterative improvements to non-normative content can be made outside the release cycle.
+Per the [normative and non-normative content and changes policy](../governance/normative), iterative improvements to non-normative content can be made outside the release cycle.
 
 ### Documentation
 
@@ -83,10 +83,13 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1218](https://github.com/open-contracting/standard/pull/1218) Add codes from the organization classification extension:
     * 'COFOG'
   * [#1452](https://github.com/open-contracting/standard/pull/1452) Add 'proClass'.
+  * [#1637](https://github.com/open-contracting/standard/pull/1637) Add 'sdg' and 'sdgTarget'.
 
 * `documentType.csv`:
-  * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'.
-  * [#1453](https://github.com/open-contracting/standard/pull/1453) Add 'marketEngagementNotice'.
+  * Add codes:
+    * [#1336](https://github.com/open-contracting/standard/pull/1336) 'unsuccessfulDetails'
+    * [#1453](https://github.com/open-contracting/standard/pull/1453) 'marketEngagementNotice'
+    * [#1647](https://github.com/open-contracting/standard/pull/1647) 'noObjectionCertificate'
   * [#1419](https://github.com/open-contracting/standard/pull/1419) Add codes for document types described in the [UNCITRAL Model Law on Public Procurement](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement):
     * 'otherParticipationRequirements'
     * 'procurementMethodRationale'
@@ -119,6 +122,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * 'procurement'
     * 'contractClose'
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "tender submissions" with "bid submissions".
+  * [#1644](https://github.com/open-contracting/standard/pull/1644) Replace "pre-procurement phase" with "planning process".
 
 * `partyRole.csv`:
   * [#1187](https://github.com/open-contracting/standard/pull/1187) Add 'contractImplementationManager'
@@ -134,9 +138,12 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * 'lender'
     * 'equityInvestor'
   * [#1182](https://github.com/open-contracting/standard/pull/1182) Deprecate 'funder'
-  * [#1163](https://github.com/open-contracting/standard/pull/1163) Clarify the description of 'procuringEntity'.
-  * [#1182](https://github.com/open-contracting/standard/pull/1182) Clarify the description of 'buyer'.
-  * [#1232](https://github.com/open-contracting/standard/pull/1232) Clarify the description of 'supplier'.
+  * Clarify the descriptions of:
+    * [#1182](https://github.com/open-contracting/standard/pull/1182) 'buyer'
+    * [#1644](https://github.com/open-contracting/standard/pull/1182) 'enquirer'
+    * [#1644](https://github.com/open-contracting/standard/pull/1644) 'interestedParty'
+    * [#1163](https://github.com/open-contracting/standard/pull/1163) 'procuringEntity'
+    * [#1232](https://github.com/open-contracting/standard/pull/1232) 'supplier'
   * [#1352](https://github.com/open-contracting/standard/pull/1352) Replace "party", "entity", etc. with "organization".
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
 
@@ -189,7 +196,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1439](https://github.com/open-contracting/standard/pull/1439) `Document.relatedItems`
   * [#1455](https://github.com/open-contracting/standard/pull/1455) `Milestone.dueAfterDate`
   * [#1434](https://github.com/open-contracting/standard/pull/1434) `Milestone.value`
-  * [#1490](https://github.com/open-contracting/standard/pull/1490) `SimpleIdentifier`
+  * [#1490](https://github.com/open-contracting/standard/pull/1490) `tender.identifiers` and `contracts.identifiers`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
@@ -277,10 +284,11 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 * [#1618](https://github.com/open-contracting/standard/pull/1618) Add conformance rule about normative statements.
 * [#1618](https://github.com/open-contracting/standard/pull/1618) Remove validator and application conformance rules.
 * [#1618](https://github.com/open-contracting/standard/pull/1618) Move governance policies from Google Docs, updating references for OCDS 1.1.5 and OCDS 1.2.0, and removing references to GitHub issues.
+* [#1643](https://github.com/open-contracting/standard/pull/1643) Update identifier section in release reference.
 
 ## [1.1.5] - 2020-08-20
 
-* [#1054](https://github.com/open-contracting/standard/pull/1054) The [Translation and localization policy](../governance/index.md#translation-and-localization-policy) is amended to read "normative content will be translated into all core supported languages *as soon as possible*" instead of "*before the release*". A Spanish translation is ready for release, and a French translation will be ready as soon as possible.
+* [#1054](https://github.com/open-contracting/standard/pull/1054) The [Translation and localization policy](../governance/translation) is amended to read "normative content will be translated into all core supported languages *as soon as possible*" instead of "*before the release*". A Spanish translation is ready for release, and a French translation will be ready as soon as possible.
 
 ### Codelists
 
@@ -337,8 +345,8 @@ See the changelogs for:
   * **Action:** If you had upgraded to OCDS 1.1.3, then compiled releases and versioned releases that set `Item.unit` will likely need to be re-created to validate against the OCDS 1.1.4 schema.
 * [#810](https://github.com/open-contracting/standard/pull/810) `buyer.id`, `Tender.procuringEntity.id`, `Contract.implementation.payer.id` `Contract.implementation.payee.id`, `Budget.id`, `Identifier.id`, and `Classification.id` are now versioned, consistent with the documentation.
   * **Action:** Versioned releases that set these fields will likely need to be re-created to validate against the OCDS 1.1.4 schema.
-* [#831](https://github.com/open-contracting/standard/pull/831) OCDS now has a [Normative and non-normative content and changes policy](https://docs.google.com/document/d/1xjlAneqgewZvHh6_hwuQ98hbjxRcA2IUqOTJiNGcOf8/edit).
-* [#744](https://github.com/open-contracting/standard/pull/744) OCDS now has a [Translation and localization policy](../governance/index.md#translation-and-localization-policy).
+* [#831](https://github.com/open-contracting/standard/pull/831) OCDS now has a [Normative and non-normative content and changes policy](../governance/normative).
+* [#744](https://github.com/open-contracting/standard/pull/744) OCDS now has a [Translation and localization policy](../governance/translation).
 * [#717](https://github.com/open-contracting/standard/pull/717) [#734](https://github.com/open-contracting/standard/pull/734) The OCDS documentation website now has a privacy notice.
 * The documentation is now available in Italian.
 
