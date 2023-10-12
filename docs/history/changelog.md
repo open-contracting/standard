@@ -142,16 +142,10 @@ Per the [normative and non-normative content and changes policy](https://docs.go
 
 * `releaseTag.csv`:
   * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
-  * [#1415](https://github.com/open-contracting/standard/pull/1415) Align descriptions of 'planning', 'tender', 'award' and 'contract' with the corresponding schema fields.
+  * [#1415](https://github.com/open-contracting/standard/pull/1415), [#1509](https://github.com/open-contracting/standard/pull/1509) Align descriptions of 'planning', 'tender', 'award' and 'contract' with the corresponding schema fields.
 
 * `tenderStatus`, `awardStatus` and `contractStatus`:
-  * [#1509](https://github.com/open-contracting/standard/pull/1509) Major change of descriptions, adding and deprecating the following codes.
-    * Deprecated: 'planning' in `tenderStatus`. Deprecated because it is unnecessary since contracting processes are now split from planning processes (which do not have any states themselves).
-    * Deprecated: 'pending' in `awardStatus` and `contractStatus`. Deprecated because the code (which would follow 'active') does not provide any additional information compared to `awardDate` and `dateSigned` and, in the case of `contractStatus` has unclear semantics ("proposed").
-    * Added: 'withdrawn' in `awardStatus` and `contractStatus`, as information can stop being published at any moment also for only individual awards / contracts.
-    * Added: 'complete' in `awardStatus`, as there was no code suggesting that the award successfully happened and was done (the equivalent in `contractStatus` is 'terminated'.)
-    * Added 'unsuccessful' in `contractStatus`, as a failure not caused by the buyer can happen also in the contract stage (e.g. the winning bidder(s) refuses to sign the contract). 
-  * [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
+  * [#1509](https://github.com/open-contracting/standard/pull/1509) Clarify semantics and deprecate codes.
 
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `submissionMethod` codelist, because its codes were either not submission methods, or not supported by use cases.
 * [#1389](https://github.com/open-contracting/standard/pull/1389) Deprecate the `initiationType` codelist, because the approach to data modelling that it supports was not pursued.
@@ -203,6 +197,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.countryName` in favor of the new `Address.country` field, to promote standardized country codes instead of non-standardized country names.
   * [#1389](https://github.com/open-contracting/standard/pull/1389) `initiationType`, because the approach to data modelling that it supports was not pursued.
   * [#1380](https://github.com/open-contracting/standard/pull/1380) `Document.language` in favor of the new `Document.languages` field, to support documents in which multiple languages are used.
+  * [#1509](https://github.com/open-contracting/standard/pull/1509) `tender.status`, `Award.status`, `Contract.status`, because the same information can be provided by filling in the relevant date fields.
 
 * Update and clarify field descriptions:
   * [#1113](https://github.com/open-contracting/standard/pull/1113) `ocid`, to recommend a hyphen after the ocid prefix.
@@ -218,6 +213,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
   * [#1528](https://github.com/open-contracting/standard/pull/1528) `tender.id`, `tender.hasEnquiries`, to reduce ambiguity and use consistent wording in the description of procurement stages.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) `tender.enquiryPeriod`, to remove the suggestion to use `tender.submissionMethodDetails` for information about how to submit enquiries.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) Normalize field descriptions according to a style guide.
+  * [#1509](https://github.com/open-contracting/standard/pull/1509) `planning`, `Planning`, `tender` and `Tender` to clarify relationships with the availability of documents.
 
 * Remove confusing terminology:
   * [#1487](https://github.com/open-contracting/standard/pull/1487) `planning.budget.project`, to remove sentence about translation options.
