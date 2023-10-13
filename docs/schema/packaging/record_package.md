@@ -25,7 +25,7 @@ This page presents the record package schema in an interactive browser and in a 
 
 Click on schema elements to expand the tree, or use the '+' icon to expand all elements. Use { } to view the underlying schema for any section. Required fields are indicated in **bold**. [Deprecated fields](../../governance/deprecation) and [multilingual fields](../reference.md#language) are omitted.
 
-<script src="../../../_static/docson/public/js/widget.js" data-schema="../../../../record-package-schema.json"></script>
+<script src="../../../_static/docson/public/js/widget.js" data-schema="../../../../../record-package-schema.json"></script>
 
 ## Reference table
 
