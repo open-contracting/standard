@@ -11,7 +11,7 @@ Records must be published within a [record package](packaging/record_package).
 ```{admonition} Browsing the schema
 :class: note
 
-This page presents the record package schema as tables. You can also download the canonical version of the record package schema as [JSON Schema](../../build/current_lang/record-package-schema.json), or view it in an [interactive browser](packaging/record_package).
+This page presents the record package schema as tables. You can also download the canonical version of the record package schema as [JSON Schema](../../build/current_lang/record-package-schema.json), or view it in an [interactive browser](record).
 ```
 
 ```{workedexamplelist} The following worked examples are available for records
@@ -35,7 +35,7 @@ Each release in a record can be provided as either a linked release or an embedd
 
 A linked release follows a simple schema:
 
-```{jsonschema} ../../build/current_lang/record-package-schema.json
+```{jsonschema} ../../build/current_lang/record-schema.json
 :pointer: /definitions/LinkedRelease
 ```
 

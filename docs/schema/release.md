@@ -1,6 +1,6 @@
 # Release Schema
 
-The release schema provides the authoritative definition of fields and their structure. It is used to check the structure of the `releases` array of [release packages](packaging/release_package), and any `compiledRelease` fields in a [record package](packaging/record_package).
+The release schema provides the authoritative definition of fields and their structure. It is used to check the structure of the `releases` array of [release packages](packaging/release_package), and any `compiledRelease` fields in a [record](records_reference).
 
 For this version of OCDS, the canonical URL of the release schema is: <https://standard.open-contracting.org/schema/1__1__5/release-schema.json>. Using the canonical URL guarantees that your software, documentation or other resources will always refer to the specific version of the schema with which they were authored and tested.
 

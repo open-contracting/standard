@@ -247,6 +247,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1374](https://github.com/open-contracting/standard/pull/1374) Remove `records.minItems` requirement.
   * [#1393](https://github.com/open-contracting/standard/pull/1393) Remove `releases` as a required field of the `Record` object.
   * [#1422](https://github.com/open-contracting/standard/pull/1422) Add `links` to support pagination.
+  * [#1640](https://github.com/open-contracting/standard/pull/1640) Refactor to move the `Record` definition to its own schema.
  
 * Release package schema:
   * [#1374](https://github.com/open-contracting/standard/pull/1374) Remove `releases.minItems` requirement.
