@@ -116,19 +116,19 @@ keywords_to_remove = (
 )
 
 
-def json_load(filename, library=json, **kwargs):
+def json_load(basename, library=json, **kwargs):
     """
-    Loads JSON data from the given filename.
+    Loads JSON data from the given basename.
     """
-    with (schemadir / filename).open() as f:
+    with (schemadir / f"{basename}.json").open() as f:
         return library.load(f, **kwargs)
 
 
-def json_dump(filename, data):
+def json_dump(basename, data):
     """
-    Writes JSON data to the given filename.
+    Writes JSON data to the given basename.
     """
-    with (schemadir / filename).open('w') as f:
+    with (schemadir / f"{basename}.json").open('w') as f:
         json.dump(data, f, indent=2)
         f.write('\n')
 
@@ -178,8 +178,8 @@ def get_metaschema():
     """
     Patches and returns the JSON Schema Draft 4 metaschema.
     """
-    return json_merge_patch.merge(json_load('metaschema/json-schema-draft-4.json'),
-                                  json_load('metaschema/meta-schema-patch.json'))
+    return json_merge_patch.merge(json_load('metaschema/json-schema-draft-4'),
+                                  json_load('metaschema/meta-schema-patch'))
 
 
 def get_common_definition_ref(item):
@@ -597,24 +597,24 @@ def pre_commit():
     - strict-dereferenced-release-schema.json
     - strict-versioned-release-validation-schema.json
     """
-    json_dump('meta-schema.json', get_metaschema())
-    release_schema = json_load('release-schema.json')
+    json_dump('meta-schema', get_metaschema())
+    release_schema = json_load('release-schema')
 
-    dereferenced_release_schema = json_load('release-schema.json', jsonref, merge_props=True)
-    json_dump('dereferenced-release-schema.json', dereferenced_release_schema)
-    json_dump('versioned-release-validation-schema.json', get_versioned_release_schema(release_schema))
+    dereferenced_release_schema = json_load('release-schema', jsonref, merge_props=True)
+    json_dump('dereferenced-release-schema', dereferenced_release_schema)
+    json_dump('versioned-release-validation-schema', get_versioned_release_schema(release_schema))
 
     # Strict schemas.
     directory = Path('strict')
     strict_release_schema = get_strict_schema(deepcopy(release_schema))
-    json_dump(directory / 'release-schema.json', strict_release_schema)
+    json_dump(directory / 'release-schema', strict_release_schema)
 
-    strict_dereferenced_release_schema = json_load(directory / 'release-schema.json', jsonref, merge_props=True)
-    json_dump(directory / 'dereferenced-release-schema.json', strict_dereferenced_release_schema)
-    json_dump(directory / 'versioned-release-validation-schema.json', get_versioned_release_schema(strict_release_schema))
+    strict_dereferenced_release_schema = json_load(directory / 'release-schema', jsonref, merge_props=True)
+    json_dump(directory / 'dereferenced-release-schema', strict_dereferenced_release_schema)
+    json_dump(directory / 'versioned-release-validation-schema', get_versioned_release_schema(strict_release_schema))
 
-    json_dump(directory / 'release-package-schema.json', get_strict_schema(json_load('release-package-schema.json')))
-    json_dump(directory / 'record-package-schema.json', get_strict_schema(json_load('record-package-schema.json')))
+    json_dump(directory / 'release-package-schema', get_strict_schema(json_load('release-package-schema')))
+    json_dump(directory / 'record-package-schema', get_strict_schema(json_load('record-package-schema')))
 
 
 @cli.command()
@@ -702,11 +702,11 @@ def update_currency():
         for code in sorted(historic_codes):
             writer.writerow([code, historic_codes[code]['Title'], historic_codes[code]['Valid Until']])
 
-    release_schema = json_load('release-schema.json')
+    release_schema = json_load('release-schema')
     codes = sorted(list(current_codes) + list(historic_codes))
     release_schema['definitions']['Value']['properties']['currency']['enum'] = codes + [None]
 
-    json_dump('release-schema.json', release_schema)
+    json_dump('release-schema', release_schema)
 
 
 @cli.command()
