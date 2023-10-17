@@ -597,24 +597,24 @@ def pre_commit():
     - strict-dereferenced-release-schema.json
     - strict-versioned-release-validation-schema.json
     """
-    release_schema = json_load('release-schema.json')
-    release_package_schema = json_load('release-package-schema.json')
-    record_package_schema = json_load('record-package-schema.json')
-    jsonref_release_schema = json_load('release-schema.json', jsonref, merge_props=True)
-
-    strict_release_schema = get_strict_schema(deepcopy(release_schema))
-
     json_dump('meta-schema.json', get_metaschema())
-    json_dump('dereferenced-release-schema.json', jsonref_release_schema)
+    release_schema = json_load('release-schema.json')
+
+    dereferenced_release_schema = json_load('release-schema.json', jsonref, merge_props=True)
+    json_dump('dereferenced-release-schema.json', dereferenced_release_schema)
     json_dump('versioned-release-validation-schema.json', get_versioned_release_schema(release_schema))
 
-    json_dump('strict/release-schema.json', strict_release_schema)
-    json_dump('strict/release-package-schema.json', get_strict_schema(release_package_schema))
-    json_dump('strict/record-package-schema.json', get_strict_schema(record_package_schema))
-    strict_jsonref_release_schema = json_load('strict/release-schema.json', jsonref)
-    json_dump('strict/dereferenced-release-schema.json',
-              get_dereferenced_release_schema(strict_jsonref_release_schema))
-    json_dump('strict/versioned-release-validation-schema.json', get_versioned_release_schema(strict_release_schema))
+    # Strict schemas.
+    directory = Path('strict')
+    strict_release_schema = get_strict_schema(deepcopy(release_schema))
+    json_dump(directory / 'release-schema.json', strict_release_schema)
+
+    strict_dereferenced_release_schema = json_load(directory / 'release-schema.json', jsonref, merge_props=True)
+    json_dump(directory / 'dereferenced-release-schema.json', strict_dereferenced_release_schema)
+    json_dump(directory / 'versioned-release-validation-schema.json', get_versioned_release_schema(strict_release_schema))
+
+    json_dump(directory / 'release-package-schema.json', get_strict_schema(json_load('release-package-schema.json')))
+    json_dump(directory / 'record-package-schema.json', get_strict_schema(json_load('record-package-schema.json')))
 
 
 @cli.command()
