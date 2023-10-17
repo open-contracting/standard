@@ -196,6 +196,8 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1439](https://github.com/open-contracting/standard/pull/1439) `Document.relatedItems`
   * [#1455](https://github.com/open-contracting/standard/pull/1455) `Milestone.dueAfterDate`
   * [#1434](https://github.com/open-contracting/standard/pull/1434) `Milestone.value`
+  * [#1490](https://github.com/open-contracting/standard/pull/1490) `SimpleIdentifier`
+  * [#1519](https://github.com/open-contracting/standard/pull/1519) `Value.amountNet` and `Value.amountGross`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `tender.identifiers` and `contracts.identifiers`
 
 * Deprecate some fields:
@@ -217,6 +219,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1335](https://github.com/open-contracting/standard/pull/1335) Standardize the descriptions of `planning`, `planning.rationale`, `planning.budget`, `planning.documents`, and `planning.milestones`.
   * [#1530](https://github.com/open-contracting/standard/pull/1530) `Buyer`, `tender.items`, `awards.items`, `contracts.items`, `Item`, `Item.description`, `Item.unit`, `Unit`, `transaction.providerOrganization`, `transaction.receiverOrganization` to use consistent wording for "goods, services and/or works".
   * [#1528](https://github.com/open-contracting/standard/pull/1528) `tender.id`, `tender.hasEnquiries`, to reduce ambiguity and use consistent wording in the description of procurement stages.
+  * [#1519](https://github.com/open-contracting/standard/pull/1519) `value.amount`, to clarify amount taken from system or document.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) `tender.enquiryPeriod`, to remove the suggestion to use `tender.submissionMethodDetails` for information about how to submit enquiries.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) Normalize field descriptions according to a style guide.
 
