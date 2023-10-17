@@ -12,17 +12,21 @@ LOCALE_DIR=docs/locale
 # Directory in which to build documentation files.
 BUILD_DIR=build
 # Extra build files or directories. (These should match paths in .gitignore.)
-EXTRA_BUILD_FILES=chromedriver*
+EXTRA_BUILD_FILES=
 # Files that are built and distributed (you may use Bash extended globbing).
 DIST_FILES=
 # Directory in which to build .pot files.
 POT_DIR=$(BUILD_DIR)/locale
 # The prefix, if any, to the schema and codelists domains.
 DOMAIN_PREFIX=
+# The Transifex organization name.
+TRANSIFEX_ORGANIZATION=open-contracting-partnership-1
 # The Transifex project name.
 TRANSIFEX_PROJECT=open-contracting-standard-1-1
 # Any additional extract targets.
 EXTRACT_TARGETS=
+# Extra arguments for sphinx-autobuild.
+SPHINX_AUTOBUILD_EXTRA_ARGS=
 
 # The path to the branch of the documentation to print to PDF.
 PDF_ROOT=/1.1-dev

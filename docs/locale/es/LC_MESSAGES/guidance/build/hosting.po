@@ -4,28 +4,26 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Oscar Montiel <oscar.montiel@okfn.org>, 2020
-# Catalina Demidchuk <catalina.d@idatosabiertos.org>, 2020
 # Maria Esther Cervantes <mcervantes@cds.com.py>, 2020
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
-# James McKinney, 2021
-# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
-# Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2021
+# James McKinney, 2022
+# Oscar Montiel <oscar.montiel@okfn.org>, 2022
+# Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-13 09:12-0300\n"
+"POT-Creation-Date: 2023-01-06 13:49-0300\n"
 "PO-Revision-Date: 2020-06-29 22:59+0000\n"
-"Last-Translator: Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2021\n"
+"Last-Translator: Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2023\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112300/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/guidance/build/hosting.md:1
 msgid "Data files and APIs"
@@ -33,126 +31,150 @@ msgstr "Archivos de datos y APIs"
 
 #: ../../docs/guidance/build/hosting.md:3
 msgid ""
-"Different users have different needs when it comes to accessing OCDS data. "
-"It also needs to be possible to automate the download of all the OCDS data, "
-"in some form."
+"Different users have different needs when it comes to accessing OCDS data. A"
+" common need is to automate the download of all the OCDS data, in some form."
 msgstr ""
-"Los diferentes usuarios tienen diferentes necesidades cuando se trata de "
-"acceder a los datos OCDS. También debe ser posible automatizar la descarga "
-"de todos los datos OCDS, de alguna forma."
+"Diferentes usuarios tienen diferentes necesidades cuando se trata de acceder"
+" a datos OCDS. Una necesidad común es la de automatizar la descarga de todos"
+" los datos OCDS, de alguna forma."
 
 #: ../../docs/guidance/build/hosting.md:5
 msgid ""
-"[Data on the Web Best "
-"Practices](https://www.w3.org/TR/dwbp/#MultipleFormats) suggests that \"Data"
-" should be available in multiple data formats\" in order to increases the "
-"number of different users, tools and applications that can process the data."
+"The W3C [Data on the Web Best "
+"Practices](https://www.w3.org/TR/dwbp/#MultipleFormats) describe ways to "
+"increase the number of users, tools and applications that can access and "
+"make effective use of a given dataset."
 msgstr ""
-"[Los datos sobre La Mejores Prácticas en la "
-"Web](https://www.w3.org/TR/dwbp/#MultipleFormats) sugiere que \"los datos "
-"deben estar disponibles en múltiples formatos de datos\" con el fin de "
-"aumentar el número de usuarios diferentes, las herramientas y aplicaciones "
-"que pueden procesar estos datos."
+"Las [Prácticas recomendadas de datos en la "
+"web](https://www.w3.org/TR/dwbp/#MultipleFormats) del W3C describen formas "
+"de aumentar la cantidad de usuarios, herramientas y aplicaciones que pueden "
+"acceder y hacer un uso efectivo de un determinado conjunto de datos."
 
 #: ../../docs/guidance/build/hosting.md:7
 msgid ""
-"Which formats are most important will depend on the priority use cases for "
-"each OCDS implementation, but you are encouraged to consider:"
+"With respect to your OCDS publication, which best practices are most "
+"important will depend on the particular needs of your users, but you are "
+"encouraged to consider:"
 msgstr ""
-"La importancia de ciertos formatos sobre otros va a depender de la prioridad"
-" de los casos de uso para cada implementación OCDS, pero lo invitamos a "
-"considerar:"
+"Con respecto a tu publicacion OCDS, qué mejores prácticas son más las "
+"importantes dependerá de las necesidades particulares de tus usuarios, pero "
+"se recomienda considerar:"
 
 #: ../../docs/guidance/build/hosting.md:9
 msgid ""
-"**Bulk downloads** - packaging together multiple releases or multiple "
-"records in one or more files for users to download and import into local "
-"tools."
+"**[Bulk downloads](#bulk-downloads)** - packaging together multiple releases"
+" or multiple records in one or more files for users to download and import "
+"into local tools. ([Best Practice "
+"17](https://www.w3.org/TR/dwbp/#BulkAccess))"
 msgstr ""
-"**Descargas masivas** - empaquetando múltiples entregas o registros en uno o"
-" más archivos para que los usuarios los descarguen e importen en las "
-"herramientas locales."
+"**[Descargas masivas](#bulk-downloads)** - empaquetar varias entregas o "
+"varios registros en uno o más archivos para que los usuarios los descarguen "
+"e importen en herramientas locales. ([Práctica recomendada "
+"17](https://www.w3.org/TR/dwbp/#BulkAccess))"
 
 #: ../../docs/guidance/build/hosting.md:10
 msgid ""
-"**Individual release and record downloads** - providing a URI at which each "
-"release or record can be obtained."
+"**[Individual release and records](#individual-releases-and-records)** - "
+"providing a URL at which each release or record can be accessed ([Best "
+"Practice 10](https://www.w3.org/TR/dwbp/#identifiersWithinDatasets))."
 msgstr ""
-"**Descargas de entregas y registros individuales**: proporcionando una URI "
-"en la que se puede obtener cada entrega o registro."
+"**[Entrega y registros individuales](#individual-releases-and-records)**: "
+"proporcionar una URL en la que se puede acceder a cada entrega o registro "
+"([Buena práctica "
+"10](https://www.w3.org/TR/dwbp/#identifiersWithinDatasets))."
 
 #: ../../docs/guidance/build/hosting.md:11
 msgid ""
-"**CSV and spreadsheet serializations** - providing multiple releases or "
-"compiled records for download, enabling users to work with data directly in "
-"spreadsheet software or other tools."
+"**[API access](#api-access)** - enabling interactive access to your data. "
+"([Best Practice 23](https://www.w3.org/TR/dwbp/#useanAPI))"
 msgstr ""
-"**CSV y serializaciones en hojas de cálculo** - proveer múltiples entregas o"
-" records compilados para descargar, permitiendo a los usuarios trabajar con "
-"los datos directamente en un software de hojas de cálculo u otras "
-"herramientas"
+"**[Acceso API](#api-access)**: habilitar el acceso interactivo a sus datos. "
+"([Práctica recomendada 23](https://www.w3.org/TR/dwbp/#useanAPI))"
 
 #: ../../docs/guidance/build/hosting.md:12
-msgid "**API access** - enabling interactive access to your data."
+msgid ""
+"**[CSV and spreadsheet serializations](#csv-and-spreadsheet-"
+"serializations)** - providing multiple releases or compiled records for "
+"download, enabling users to work with data directly in spreadsheet software "
+"or other tools. ([Best Practice "
+"14](https://www.w3.org/TR/dwbp/#MultipleFormats))"
 msgstr ""
-"**Acceso a través de APIs** - permite el acceso interactivo a sus datos."
+"**[CSV y serializaciones de hojas de cálculo](#csv-and-spreadsheet-"
+"serializations)**: proporcionar múltiples entregas o registros compilados "
+"para descargar, lo que permite a los usuarios trabajar con datos "
+"directamente en software de hojas de cálculo u otras herramientas. "
+"([Práctica recomendada 14](https://www.w3.org/TR/dwbp/#MultipleFormats))"
 
 #: ../../docs/guidance/build/hosting.md:14
+msgid ""
+"To meet the [basic criteria for data quality](../publish/quality.md#basic-"
+"criteria), it ought to be possible for a user to automate the download of "
+"all the data, either using an HTML page listing bulk download URLs, or using"
+" only machine-readable data as input."
+msgstr ""
+"Para cumplir con los [criterios básicos para la calidad de los "
+"datos](../publish/quality.md#basic-criteria), un usuario debería poder "
+"automatizar la descarga de todos los datos, ya sea utilizando una página "
+"HTML que lista las URLs de descargas masiva, o utilizando solo datos "
+"legibles por máquina como entrada."
+
+#: ../../docs/guidance/build/hosting.md:16
 msgid "Bulk downloads"
 msgstr "Descargas masivas"
 
-#: ../../docs/guidance/build/hosting.md:16
-msgid ""
-"The release package and record package can provide **bulk access** to "
-"releases and records, respectively."
-msgstr ""
-"El paquete de entregas y el paquete de registros pueden dar **acceso "
-"masivo** a las entregas y registros, respectivamente."
-
 #: ../../docs/guidance/build/hosting.md:18
 msgid ""
-"However, very large files can be difficult for users to download and "
-"process. The following section provides suggested good practices which will "
-"assist users in accessing data. These are not requirements of the standard, "
-"but are based on experiences of maximizing the number of users able to work "
-"with datasets with their existing hardware and software."
+"The [release package](../../schema/release_package) and [record "
+"package](../../schema/record_package) can provide **bulk access** to "
+"releases and records, respectively."
 msgstr ""
-"Sin embargo, los archivos muy grandes pueden ser difíciles de descargar y "
-"procesar. En la siguiente sección se ofrecen buenas prácticas sugeridas que "
-"ayudarán a los usuarios a acceder a estos datos. Estas prácticas no son "
-"requisitos del estándar, sino que se basan en experiencias para maximizar el"
-" número de usuarios capaces de trabajar con conjuntos de datos con hardware "
-"y software existentes."
+"El [paquete de entrega](../../schema/release_package) y el [paquete de "
+"registro](../../schema/record_package) pueden proporcionar **acceso masivo**"
+" a entregas y registros, respectivamente."
 
 #: ../../docs/guidance/build/hosting.md:20
-msgid "File size limits"
-msgstr "Límites de tamaño de archivo"
+msgid ""
+"However, very large files can be difficult for users to download and "
+"process. The following section suggests good practices to assist users in "
+"accessing data. These are not requirements of the standard, but are based on"
+" experiences of maximizing the number of users able to work with datasets "
+"with their existing hardware and software."
+msgstr ""
+"Sin embargo, archivos muy grandes pueden ser difíciles de descargar y "
+"procesar por los usuarios. La siguiente sección sugiere buenas prácticas "
+"para ayudar a los usuarios a acceder a los datos. Estos no son requisitos "
+"del estándar, pero se basan en experiencias para maximizar la cantidad de "
+"usuarios que pueden trabajar con conjuntos de datos con su hardware y "
+"software existente."
 
 #: ../../docs/guidance/build/hosting.md:22
+msgid "File size limits"
+msgstr "Límites de tamaño de archivos"
+
+#: ../../docs/guidance/build/hosting.md:24
 msgid ""
 "When generating packages for bulk download, apply the following limits:"
 msgstr ""
 "Cuando se generan paquetes para descarga masiva, se aplican los siguientes "
 "límites:"
 
-#: ../../docs/guidance/build/hosting.md:24
-msgid "Unzipped OCDS packages ought to not exceed 1Gb each;"
-msgstr ""
-"Los paquetes OCDS descomprimidos no deberían de exceder 1 GB cada uno;"
-
-#: ../../docs/guidance/build/hosting.md:25
-msgid "Zipped OCDS packages ought to not exceed 10 Mb each;"
-msgstr "Los paquetes OCDS comprimidos no deben exceder 10 mb cada uno;"
-
 #: ../../docs/guidance/build/hosting.md:26
-msgid ""
-"A single OCDS package ought to contain a maximum of 250,000 awards or "
-"contracts;"
-msgstr ""
-"Un paquete OCDS único debe contener un máximo de 250,000 adjudicaciones o "
-"contratos;"
+msgid "Unzipped OCDS packages ought to not exceed 1 Gb each."
+msgstr "Los paquetes OCDS descomprimidos no deben exceder 1 Gb cada uno."
+
+#: ../../docs/guidance/build/hosting.md:27
+msgid "Zipped OCDS packages ought to not exceed 10 Mb each."
+msgstr "Los paquetes OCDS comprimidos no deben exceder los 10 Mb cada uno."
 
 #: ../../docs/guidance/build/hosting.md:28
+msgid ""
+"A single OCDS package ought to contain a maximum of 250,000 awards or "
+"contracts."
+msgstr ""
+"Un mismo paquete OCDS debe contener un máximo de 250.000 adjudicaciones o "
+"contratos."
+
+#: ../../docs/guidance/build/hosting.md:30
 msgid ""
 "When a file is likely to exceed one of these limits, release or records "
 "ought to be split across multiple files. Dynamically generated bulk "
@@ -166,11 +188,11 @@ msgstr ""
 "aunque los publicadores deben considerar guiar a los usuarios cuando una "
 "consulta puede generar un archivo muy grande."
 
-#: ../../docs/guidance/build/hosting.md:30
+#: ../../docs/guidance/build/hosting.md:32
 msgid "Segmenting files"
 msgstr "Segmentación de archivos"
 
-#: ../../docs/guidance/build/hosting.md:32
+#: ../../docs/guidance/build/hosting.md:34
 msgid ""
 "When the suggested limits entail publication of multiple files, publishers "
 "ought to consider ways to split data across available files."
@@ -179,11 +201,11 @@ msgstr ""
 "los publicadores deben considerar la manera de dividir los datos en "
 "múltiples archivos."
 
-#: ../../docs/guidance/build/hosting.md:34
+#: ../../docs/guidance/build/hosting.md:36
 msgid "For releases, publishers can:"
 msgstr "Para entregas, los publicadores pueden:"
 
-#: ../../docs/guidance/build/hosting.md:36
+#: ../../docs/guidance/build/hosting.md:38
 msgid ""
 "Segment by **release date** - placing all the releases from a given day, "
 "month or year in the same file;"
@@ -191,7 +213,7 @@ msgstr ""
 "Segmentar por **fecha de entrega**- poniendo todas las entregas que salieron"
 " en un mismo día, mes o año en el mismo archivo;"
 
-#: ../../docs/guidance/build/hosting.md:37
+#: ../../docs/guidance/build/hosting.md:39
 msgid ""
 "Segment by **contracting process identifier** - placing all the releases "
 "related to a given set of contract process identifiers together in the same "
@@ -201,7 +223,7 @@ msgstr ""
 " las entregas relacionadas a un conjunto de identificadores de proceso de "
 "contrataciones en el mismo paquete; "
 
-#: ../../docs/guidance/build/hosting.md:39
+#: ../../docs/guidance/build/hosting.md:41
 msgid ""
 "For records, publishers can segment by the first **release date** associated"
 " with a contracting process, or by **contracting process identifier.**"
@@ -210,19 +232,19 @@ msgstr ""
 "entrega** asociada con un proceso de contrataciones, o por **identificador "
 "de proceso de contrataciones**."
 
-#: ../../docs/guidance/build/hosting.md:41
-msgid ""
-"Following these approaches will avoid release and records 'jumping' between "
-"files when the bulk files are updated."
-msgstr ""
-"Seguir estos enfoques evitará los 'saltos' entre los archivos de entregas y "
-"registros cuando se actualicen los archivos masivos."
-
 #: ../../docs/guidance/build/hosting.md:43
+msgid ""
+"Following these approaches will avoid releases and records 'jumping' between"
+" files when the bulk files are updated."
+msgstr ""
+"Seguir estos enfoques evitará que las entregas y los registros \"salten\" "
+"entre archivos cuando se actualicen los archivos masivos."
+
+#: ../../docs/guidance/build/hosting.md:45
 msgid "Compression"
 msgstr "Compresión"
 
-#: ../../docs/guidance/build/hosting.md:45
+#: ../../docs/guidance/build/hosting.md:47
 msgid ""
 "OCDS packages can be compressed in order to save on disk space and "
 "bandwidth."
@@ -230,94 +252,476 @@ msgstr ""
 "Los paquetes OCDS pueden comprimirse para ahorrar en espacio de disco y en "
 "ancho de banda."
 
-#: ../../docs/guidance/build/hosting.md:47
-msgid "If compressing packages, publishers ought to use the ZIP file format."
-msgstr ""
-"Si se comprimen paquetes, los publicadores deben de usar el formato ZIP."
-
 #: ../../docs/guidance/build/hosting.md:49
+msgid ""
+"When compressing packages, use ZIP or GZIP, as these are commonly available,"
+" often without additional software. Avoid RAR, which requires additional "
+"software."
+msgstr ""
+"Cuando comprima paquetes, use ZIP o GZIP, ya que estos están comúnmente "
+"disponibles, a menudo sin software adicional. Evite RAR, que requiere "
+"software adicional."
+
+#: ../../docs/guidance/build/hosting.md:51
 msgid "Serving files"
 msgstr "Servir archivos"
 
-#: ../../docs/guidance/build/hosting.md:51
-msgid ""
-"The web server providing access to bulk files ought to correctly report the "
-"[HTTP Last-"
-"Modified](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29) "
-"header so that consuming applications only need to download updated files."
-msgstr ""
-"El servidor web que da acceso a archivos masivos debe de reportar "
-"correctamente el header HTTP Last-"
-"Modified](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29) "
-"para que al consumir aplicaciones solo se necesite descargar los archivos "
-"actualizados."
-
 #: ../../docs/guidance/build/hosting.md:53
-msgid "Individual releases and records"
-msgstr "Entregas y registros individuales"
+msgid ""
+"The web server providing access to bulk files ought to report the [HTTP "
+"Last-"
+"Modified](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29) "
+"header correctly, so that consuming applications only need to download "
+"updated files."
+msgstr ""
+"El servidor web que proporciona acceso a archivos masivos debe informar el "
+"encabezado [HTTP Last-"
+"Modified](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29) "
+"correctamente, para que las aplicaciones que consumen los datos solo "
+"necesiten descargar archivos actualizados."
 
 #: ../../docs/guidance/build/hosting.md:55
 msgid ""
-"Each release and record can be made accessible at a permanent URI. This can "
-"be achieved by:"
+"Also, publishers ought to ensure that the data export is completed "
+"successfully, i.e. that no files were truncated."
 msgstr ""
-"Cada entrega y registro se puede disponibilizar en una URI permanente. Esto "
-"se puede lograr:"
+"Además, los publicadores deben asegurarse de que la exportación de datos se "
+"complete con éxito, es decir, que no se trunca ningún archivo."
 
 #: ../../docs/guidance/build/hosting.md:57
-msgid ""
-"(a) Archiving a single-release release package for each release to a web "
-"accessible file system as it is created, and then regularly merging these "
-"releases to compile individual record files in the same file system. One "
-"approach might be to have a folder for each `ocid` and to place the releases"
-" and record related to that process into that folder."
-msgstr ""
-"(a) Archivando un paquete de entregas con una única entrega en un sistema de"
-" archivos accesible a través de la Web al momento de ser creada, y después "
-"fusionar regularmente estas entregas para compilar archivos de registro "
-"individuales en el mismo sistema de archivos. Una manera de hacer esto "
-"podría ser tener una carpeta para cada `ocid` y poner las entregas y "
-"registro relacionados con ese proceso en esa carpeta."
+msgid "Individual releases and records"
+msgstr "Entregas y registros individuales"
 
 #: ../../docs/guidance/build/hosting.md:59
-msgid "(b) Providing access to releases and records through an API."
+msgid ""
+"Each release and record can be made accessible at a permanent URL. This can "
+"be achieved by:"
 msgstr ""
-"(B) Proporcionando acceso a las entregas y registros a través de una API."
+"Cada entrega y registro debe poder ser accedido mediante una URL permanente."
+" Esto se puede lograr mediante:"
 
 #: ../../docs/guidance/build/hosting.md:61
 msgid ""
-"Note that the second approach needs the API to maintain a full revision "
-"history of each contracting process, so that releases from each stage of a "
-"contracting process can be provided."
+"Archiving a ‘single-release’ release package for each release to a web "
+"accessible file system as it is created, and then regularly merging these "
+"releases into records in the same file system. One approach might be to have"
+" a directory for each ocid and to put the releases and the record related to"
+" that process in that directory."
 msgstr ""
-"Note que el segundo enfoque necesita un API para mantener un historial de "
-"revisión completo en cada proceso de contrataciones, para que se puedan dar "
-"entregas de cada etapa del proceso de contrataciones."
+"Archivando un paquete de entrega de \"entrega-única\" para cada entrega en "
+"un sistema de archivos accesible desde la web a medida que se crea, y luego "
+"fusionando regularmente estas entregas en registros en el mismo sistema de "
+"archivos. Un enfoque podría ser tener un directorio para cada ocid y colocar"
+" las entregas y el registro relacionado con ese proceso en ese directorio."
 
-#: ../../docs/guidance/build/hosting.md:63
+#: ../../docs/guidance/build/hosting.md:62
+msgid "Providing access to each release and the merged records via an API."
+msgstr ""
+"Proporcionar acceso a cada entrega y los registros fusionados a través de "
+"una API."
+
+#: ../../docs/guidance/build/hosting.md:64
 msgid ""
-"Publishers ought to consider how to [ensure URIs can remain "
+"Publishers ought to consider how to [ensure that URLs remain "
 "stable](https://www.w3.org/Provider/Style/URI.html), even across a change of"
 " systems."
 msgstr ""
-"Los publicadores deben considerar cómo [asegurar que las URIs se mantengan "
-"estables](https://www.w3.org/Provider/Style/URI.html), incluso si ocurre un "
-"cambio de sistemas."
+"Los editores deben considerar cómo [garantizar que las URL se mantengan "
+"estables](https://www.w3.org/Provider/Style/URI.html), incluso cuando se "
+"produce un cambio de sistemas."
 
-#: ../../docs/guidance/build/hosting.md:65
-msgid "Flattened serializations"
-msgstr "Serializaciones planas"
+#: ../../docs/guidance/build/hosting.md:66
+msgid "API access"
+msgstr "Acceso a la API"
 
-#: ../../docs/guidance/build/hosting.md:67
+#: ../../docs/guidance/build/hosting.md:68
+msgid ""
+"API design is a deep topic. As such, the following guidance is not intended "
+"to be comprehensive or prescriptive. Wherever possible, publishers ought to "
+"carry out their own user research."
+msgstr ""
+"El diseño de una API es un tema extenso. Como tal, la siguiente guía no "
+"pretende ser exhaustiva ni prescriptiva. Siempre que sea posible, los "
+"publicadores deben realizar su propia investigación de usuarios."
+
+#: ../../docs/guidance/build/hosting.md:70
+msgid "Discoverability"
+msgstr "Visibilidad"
+
+#: ../../docs/guidance/build/hosting.md:72
+msgid ""
+"Ensure that the API endpoints and documentation are discoverable. For "
+"example, add a link to the footer of your procurement portal, and list the "
+"API endpoints in your open data portal."
+msgstr ""
+"Asegúrese de que los endpoints y la documentación de la API sean "
+"descubribles. Por ejemplo, agregue un enlace al pie de página de su portal "
+"de contrataciones y enumere los endpoints de la API en su portal de datos "
+"abiertos."
+
+#: ../../docs/guidance/build/hosting.md:74
+msgid "Documentation"
+msgstr "Documentación"
+
+#: ../../docs/guidance/build/hosting.md:76
+msgid ""
+"Provide API documentation, with at least the lists of endpoints, methods and"
+" parameters. Many publishers use [Swagger](https://swagger.io) to document "
+"their APIs."
+msgstr ""
+"Proporcione la documentación de la API, con al menos las listas de "
+"endpoints, métodos y parámetros. Muchos publicadores usan "
+"[Swagger](https://swagger.io) para documentar sus API."
+
+#: ../../docs/guidance/build/hosting.md:78
+msgid "Access control and rate limiting"
+msgstr "Control de acceso y limitación de velocidad"
+
+#: ../../docs/guidance/build/hosting.md:80
+msgid ""
+"Avoid adding access controls (like user registration or API keys), in order "
+"to maximize the ease of access to the publication."
+msgstr ""
+"Evite agregar controles de acceso (como registro de usuarios o API keys), "
+"para maximizar la facilidad de acceso a la publicación."
+
+#: ../../docs/guidance/build/hosting.md:82
+msgid ""
+"If access controls are necessary, do not use access tokens that need to be "
+"refreshed regularly. For example, every two hours is too frequent."
+msgstr ""
+"Si los controles de acceso son necesarios, no utilice tokens de acceso que "
+"deban actualizarse regularmente. Por ejemplo, cada dos horas es demasiado "
+"frecuente."
+
+#: ../../docs/guidance/build/hosting.md:84
+msgid "If the API implements rate limits (throttling):"
+msgstr "Si la API implementa límites de velocidad (throttling):"
+
+#: ../../docs/guidance/build/hosting.md:86
+msgid ""
+"Document the rate limits in the API documentation "
+"([example](https://developer.twitter.com/en/docs/twitter-api/rate-limits))."
+msgstr ""
+"Documente los límites de velocidad en la documentación de la API "
+"([ejemplo](https://developer.twitter.com/en/docs/twitter-api/rate-limits))."
+
+#: ../../docs/guidance/build/hosting.md:87
+msgid ""
+"When a user exceeds a rate limit, return a [HTTP 429 “Too Many Requests” "
+"response status code,](https://developer.mozilla.org/en-"
+"US/docs/Web/HTTP/Status/429) and set the [Retry-"
+"After](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-"
+"After) HTTP header to indicate how long to wait before making a new request."
+msgstr ""
+"Cuando un usuario excede un límite de velocidad, devuelva un [código de "
+"estado de respuesta HTTP 429 \"Too Many "
+"Requests\"](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) y "
+"establezca el encabezado HTTP [Retry-"
+"After](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-"
+"After) para indicar cuánto tiempo debe esperar antes de realizar una nueva "
+"solicitud."
+
+#: ../../docs/guidance/build/hosting.md:89
+msgid "Completeness"
+msgstr "Completitud"
+
+#: ../../docs/guidance/build/hosting.md:91
+msgid ""
+"Ensure that all the OCDS data can be accessed via the API. For example, if "
+"the data source is an Elasticsearch index, either implement pagination using"
+" the "
+"[search_after](https://www.elastic.co/guide/en/elasticsearch/reference/current/paginate-"
+"search-results.html#search-after) parameter, or ensure that "
+"[index.max_result_window](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-"
+"modules.html#index-max-result-window) is large enough to return all results."
+msgstr ""
+"Asegúrese de que se pueda acceder a todos los datos de OCDS a través de la "
+"API. Por ejemplo, si la fuente de datos es un índice de Elasticsearch, "
+"implemente la paginación mediante "
+"[search_after](https://www.elastic.co/guide/en/elasticsearch/reference/current/paginate-"
+"search-results.html#search-after), o asegúrese de que "
+"[index.max_result_window](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-"
+"modules.html#index-max-result-window) sea suficientemente grande para "
+"devolver todos los resultados."
+
+#: ../../docs/guidance/build/hosting.md:93
+msgid "Endpoints"
+msgstr "Endpoints"
+
+#: ../../docs/guidance/build/hosting.md:95
+msgid ""
+"Your design choices in this area ought to be informed by user research. That"
+" said, you can consider providing:"
+msgstr ""
+"Sus opciones de diseño en esta área deben estar informadas por "
+"investigaciones de usuario. Dicho esto, puede considerar proporcionar:"
+
+#: ../../docs/guidance/build/hosting.md:97
+msgid ""
+"A release package endpoint with [pagination](#pagination), for retrieving "
+"multiple releases without providing a specific OCID and release ID"
+msgstr ""
+"Un endpoint de paquete de entregas con [paginación](#pagination), para "
+"obtener múltiples entregas sin proporcionar un OCID e ID de entrega "
+"específicos"
+
+#: ../../docs/guidance/build/hosting.md:98
+msgid ""
+"A record package endpoint with pagination, for retrieving multiple records "
+"without providing a specific OCID"
+msgstr ""
+"Un endpoint de paquete de registros con paginación, para obtener múltiples "
+"registros sin proporcionar un OCID específico"
+
+#: ../../docs/guidance/build/hosting.md:99
+msgid ""
+"A release endpoint, for retrieving an individual release by OCID and release"
+" ID"
+msgstr ""
+"Un endpoint de entrega, para obtener una entrega individual por OCID y ID de"
+" entrega"
+
+#: ../../docs/guidance/build/hosting.md:100
+msgid "A record endpoint, for retrieving an individual record by OCID"
+msgstr "Un endpoint de registro, para obtener un registro individual por OCID"
+
+#: ../../docs/guidance/build/hosting.md:102
+msgid ""
+"For package endpoints, you can also provide filtering and ordering options. "
+"In particular, consider date filters and/or a reverse chronological order "
+"option, so that users can retrieve only new or updated data."
+msgstr ""
+"Para los endpoints de paquete, también puedes proveer opciones de filtros y "
+"ordenamiento. En particular, considera filtros de fecha y/o una opción de "
+"ordenamiento en orden cronológico inverso, para que los usuarios puedan "
+"obtener solamente datos nuevos o actualizados."
+
+#: ../../docs/guidance/build/hosting.md:104
+msgid ""
+"If you choose to provide endpoints for retrieving individual records and/or "
+"releases but **not** endpoints for paginating through records and/or "
+"releases, then you need to provide a machine-readable list of OCIDs and/or "
+"release IDs. Otherwise, it will not be possible to automate the download of "
+"all the data, which is a [basic criterion for data "
+"quality](../publish/quality.md#basic-criteria)."
+msgstr ""
+"Si escoges proveer endpoints para obtener registros y/o entregas "
+"individuales pero **no** endpoints para paginar a través de registros y/o "
+"entregas, entonces necesitas proveer una lista legible por máquina de los "
+"OCIDs y/o IDs de las entregas. De lo contrario, no será posible automatizar "
+"la descarga de todos los datos, lo cual es un [criterio básico de calidad de"
+" los datos](../publish/quality.md#basic-criteria)."
+
+#: ../../docs/guidance/build/hosting.md:106
+msgid "Response format"
+msgstr "Formato de respuesta"
+
+#: ../../docs/guidance/build/hosting.md:108
+msgid ""
+"Put the release, record or package at the top-level of the JSON data. For "
+"example, do not embed it under a results array."
+msgstr ""
+"Coloque la entrega, el registro o el paquete en el nivel superior de los "
+"datos JSON. Por ejemplo, no lo incruste en un array de resultados."
+
+#: ../../docs/guidance/build/hosting.md:109
+msgid ""
+"Use a JSON library instead of implementing JSON serialization yourself. This"
+" also guarantees that the encoding is UTF-8."
+msgstr ""
+"Use una biblioteca JSON en lugar de implementar la serialización JSON usted "
+"mismo. Esto también garantiza que la codificación sea UTF-8."
+
+#: ../../docs/guidance/build/hosting.md:110
+msgid ""
+"Remove NULL characters (\\u0000) from the JSON response. These characters "
+"cannot be imported by users into some SQL databases."
+msgstr ""
+"Elimine los caracteres NULL (\\u0000) de la respuesta JSON. Los usuarios no "
+"pueden importar estos caracteres a algunas bases de datos SQL."
+
+#: ../../docs/guidance/build/hosting.md:111
+msgid ""
+"If results cannot be returned, use an appropriate HTTP error code (400-599);"
+" do not return a JSON object with an error message and a 200 HTTP status "
+"code. That said, if a search request returns no results, it is appropriate "
+"to use a 200 HTTP status code, with an empty result set."
+msgstr ""
+"Si no se pueden devolver resultados, utilice un código de error HTTP "
+"adecuado (400-599); no devuelva un objeto JSON con un mensaje de error y un "
+"código de estado HTTP 200. Dicho esto, si una solicitud de búsqueda no "
+"arroja resultados, es apropiado usar un código de estado HTTP 200, con un "
+"conjunto de resultados vacío."
+
+#: ../../docs/guidance/build/hosting.md:113
+msgid "Pagination"
+msgstr "Paginación"
+
+#: ../../docs/guidance/build/hosting.md:115
+msgid ""
+"To support pagination, the top-level `links` object in release packages and "
+"record packages has two fields:"
+msgstr ""
+"Para soportar la paginación, el objeto `links` de nivel superior en los "
+"paquetes de entrega y los paquetes de registro tiene dos campos:"
+
+#: ../../docs/guidance/build/hosting.md:117
+msgid "`next`: A URL to the next sequential package"
+msgstr "`next`: Una URL al siguiente paquete sequencial"
+
+#: ../../docs/guidance/build/hosting.md:118
+msgid "`prev`: A URL to the previous sequential package"
+msgstr "`prev`: Una URL al paquete sequencial anterior"
+
+#: ../../docs/guidance/build/hosting.md:120
+msgid ""
+"Ensure that the API's performance does not degrade on deep pages. For "
+"example, if the data source is a SQL database, use the [seek "
+"method](https://developer.wordpress.com/2014/02/14/an-efficient-alternative-"
+"to-paging-with-sql-offsets/) (also known as keyset pagination) rather than "
+"an [OFFSET clause](https://www.postgresql.org/docs/current/queries-"
+"limit.html)."
+msgstr ""
+"Asegúrese de que el rendimiento de la API no se degrade en páginas "
+"avanzadas. Por ejemplo, si la fuente de datos es una base de datos SQL, "
+"utilice el [método seek](https://developer.wordpress.com/2014/02/14/an-"
+"efficient-alternative-to-paging-with-sql-offsets/) (también conocido como "
+"paginación de conjunto de claves) en lugar de una [cláusula "
+"OFFSET](https://www.postgresql.org/docs/current/queries-limit.html)."
+
+#: ../../docs/guidance/build/hosting.md:122
+msgid ""
+"When using the **seek method**, you can use _either_ of these query string "
+"parameters to construct the `next` and/or `prev` URLs:"
+msgstr ""
+"Al usar el **método seek**, puede usar _cualquiera_ de estos parámetros del "
+"tipo query string para construir las URL `next` y/o `prev`:"
+
+#: ../../docs/guidance/build/hosting.md:124
+msgid ""
+"`cursor=CURSOR`, to return a page of results that are positioned after the "
+"cursor, in sequential order. The cursor might be a row ID or similar."
+msgstr ""
+"`cursor=CURSOR`, para devolver una página de resultados posicionada después "
+"del cursor, en orden secuencial. El cursor puede ser un ID de fila o "
+"similar."
+
+#: ../../docs/guidance/build/hosting.md:125
+msgid ""
+"`since=TIMESTAMP`, to return a page of results that are modified after the "
+"`since` timestamp, in chronological order."
+msgstr ""
+"`since=TIMESTAMP`, para devolver una página de resultados que se modifican "
+"después de la marca de tiempo `since`, en orden cronológico."
+
+#: ../../docs/guidance/build/hosting.md:127
+msgid ""
+"When using the **offset method**, you can use _either_ of these query string"
+" parameters to construct the `next` and/or `prev` URLs:"
+msgstr ""
+"Al usar el **método offset**, puede usar _cualquiera_ de estos parámetros "
+"del tipo query string para construir las URL `next` y/o `prev`:"
+
+#: ../../docs/guidance/build/hosting.md:129
+msgid ""
+"`offset=NUMBER`, to return a page of results that are positioned after the "
+"`offset` number, in sequential order. Use `offset=0` for the first offset."
+msgstr ""
+"`offset=NUMBER`, para devolver una página de resultados que se colocan "
+"después del número de `offset`, en orden secuencial. Utilice `offset=0` para"
+" el primer desplazamiento."
+
+#: ../../docs/guidance/build/hosting.md:130
+msgid ""
+"`page=NUMBER`, to return a page of results that are positioned at the `page`"
+" number, in sequential order. Use `page=1` for the first page, not `page=0`."
+msgstr ""
+"`page=NUMBER`, para devolver una página de resultados que están posicionados"
+" en el número de `page`, en orden secuencial. Usa `page=1` para la primera "
+"página, no `page=0`."
+
+#: ../../docs/guidance/build/hosting.md:132
+msgid "In either case:"
+msgstr "En cualquier caso:"
+
+#: ../../docs/guidance/build/hosting.md:134
+msgid ""
+"Use `limit=NUMBER`, to limit the number of results returned on each page."
+msgstr ""
+"Utilice `limit=NUMBER` para limitar el número de resultados devueltos en "
+"cada página."
+
+#: ../../docs/guidance/build/hosting.md:135
+msgid "Include the total number of results across all pages."
+msgstr "Incluya el número total de resultados en todas las páginas."
+
+#: ../../docs/guidance/build/hosting.md:137
+msgid ""
+"In addition to performance reasons, the seek method is preferred to the "
+"offset method when results are ordered in reverse chronology, because:"
+msgstr ""
+"Además de las razones de rendimiento, se prefiere el método seek al método "
+"offset cuando los resultados se ordenan en cronología inversa, porque:"
+
+#: ../../docs/guidance/build/hosting.md:139
+msgid ""
+"A given page won't return the same results over time. `page=1` will return "
+"different results today, next week, and next year."
+msgstr ""
+"Una página determinada no devolverá los mismos resultados con el tiempo. "
+"`page=1` devolverá resultados diferentes hoy, la próxima semana y el próximo"
+" año."
+
+#: ../../docs/guidance/build/hosting.md:140
+msgid ""
+"Users can receive duplicate results while paginating. For example, if a new "
+"release is published to page 1 while users are paginating, then the result "
+"at the bottom of each page will be moved to the top of the following page."
+msgstr ""
+"Los usuarios pueden recibir resultados duplicados mientras paginan. Por "
+"ejemplo, si se publica una nueva entrega en la página 1 mientras los "
+"usuarios están paginando, el resultado en la parte inferior de cada página "
+"se moverá a la parte superior de la página siguiente."
+
+#: ../../docs/guidance/build/hosting.md:141
+msgid ""
+"It is harder for users to synchronize with the API. With the seek method, "
+"users can retrieve new results by submitting the timestamp or ID of their "
+"last request. With `page`, users need to determine which results are new or "
+"old."
+msgstr ""
+"Es más difícil para los usuarios sincronizar con la API. Con el método seek,"
+" los usuarios pueden obtener nuevos resultados al enviar la marca de tiempo "
+"o el ID de su última solicitud. Con `page`, los usuarios deben determinar "
+"qué resultados son nuevos o antiguos."
+
+#: ../../docs/guidance/build/hosting.md:143
+msgid "Monitoring"
+msgstr "Monitoreo"
+
+#: ../../docs/guidance/build/hosting.md:145
+msgid ""
+"Set up error monitoring, so that if a request causes an HTTP 500 Internal "
+"Server Error, you can investigate."
+msgstr ""
+"Configure el monitoreo de errores, de modo que si una solicitud provoca un "
+"error interno del servidor HTTP 500, pueda investigar."
+
+#: ../../docs/guidance/build/hosting.md:147
+msgid "CSV and spreadsheet serializations"
+msgstr "CSV y serializaciones de hojas de cálculo"
+
+#: ../../docs/guidance/build/hosting.md:149
 msgid ""
 "The [serialization](serialization) page provides details of how to generate "
 "'flat' versions of OCDS data for use in spreadsheet software."
 msgstr ""
 "La página [serialización](serialization) proporciona detalles sobre cómo "
-"generar 'flat' versiones de datos OCDS para su uso en un software de hoja de"
+"generar versiones 'flat' de datos OCDS para su uso en un software de hoja de"
 " cálculo."
 
-#: ../../docs/guidance/build/hosting.md:69
+#: ../../docs/guidance/build/hosting.md:151
 msgid ""
 "The same principles discussed for bulk files above ought to be applied to "
 "CSV or Excel downloads of data."

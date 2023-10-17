@@ -21,7 +21,6 @@ import lxml.html
 import requests
 from babel.messages.pofile import read_po
 from docutils.utils import relative_path
-from jsonref import JsonRef, JsonRefError
 from lxml import etree
 from ocdskit.schema import add_validation_properties
 
@@ -117,12 +116,12 @@ keywords_to_remove = (
 )
 
 
-def json_load(filename, library=json):
+def json_load(filename, library=json, **kwargs):
     """
     Loads JSON data from the given filename.
     """
     with (schemadir / filename).open() as f:
-        return library.load(f)
+        return library.load(f, **kwargs)
 
 
 def json_dump(filename, data):
@@ -357,36 +356,13 @@ def remove_metadata_and_extended_keywords(schema):
             remove_metadata_and_extended_keywords(value)
 
 
-def get_dereferenced_release_schema(schema, output=None):
-    """
-    Returns the dereferenced release schema.
-    """
-    # Without a deepcopy, changes to referenced objects are copied across referring objects. However, the deepcopy does
-    # not retain the `__reference__` property.
-    if not output:
-        output = deepcopy(schema)
-
-    if isinstance(schema, list):
-        for index, item in enumerate(schema):
-            get_dereferenced_release_schema(item, output[index])
-    elif isinstance(schema, dict):
-        for key, value in schema.items():
-            get_dereferenced_release_schema(value, output[key])
-        if hasattr(schema, '__reference__'):
-            for prop in schema.__reference__:
-                if prop != '$ref':
-                    output[prop] = schema.__reference__[prop]
-
-    return output
-
-
 def get_versioned_release_schema(schema):
     """
     Returns the versioned release schema.
     """
     # Update schema metadata.
     release_with_underscores = release.replace('.', '__')
-    schema['id'] = f'https://standard.open-contracting.org/schema/{release_with_underscores}/versioned-release-validation-schema.json'  # noqa
+    schema['id'] = f'https://standard.open-contracting.org/schema/{release_with_underscores}/versioned-release-validation-schema.json'  # noqa: E501
     schema['title'] = 'Schema for a compiled, versioned Open Contracting Release.'
 
     # Release IDs, dates and tags appear alongside values in the versioned release schema.
@@ -398,7 +374,7 @@ def get_versioned_release_schema(schema):
 
     # Determine which `id` fields occur on objects in arrays.
     unversioned_pointers = set()
-    get_unversioned_pointers(JsonRef.replace_refs(schema), unversioned_pointers)
+    get_unversioned_pointers(jsonref.replace_refs(schema), unversioned_pointers)
 
     # Omit `ocid` from versioning.
     ocid = schema['properties'].pop('ocid')
@@ -415,11 +391,10 @@ def get_versioned_release_schema(schema):
 
     # Add missing definitions.
     while True:
-        ref = JsonRef.replace_refs(schema)
         try:
-            repr(ref)
+            jsonref.replace_refs(schema, lazy_load=False)
             break
-        except JsonRefError as e:
+        except jsonref.JsonRefError as e:
             name = e.cause.args[0]
 
             if name.endswith('VersionedId'):
@@ -625,12 +600,12 @@ def pre_commit():
     release_schema = json_load('release-schema.json')
     release_package_schema = json_load('release-package-schema.json')
     record_package_schema = json_load('record-package-schema.json')
-    jsonref_release_schema = json_load('release-schema.json', jsonref)
+    jsonref_release_schema = json_load('release-schema.json', jsonref, merge_props=True)
 
     strict_release_schema = get_strict_schema(deepcopy(release_schema))
 
     json_dump('meta-schema.json', get_metaschema())
-    json_dump('dereferenced-release-schema.json', get_dereferenced_release_schema(jsonref_release_schema))
+    json_dump('dereferenced-release-schema.json', jsonref_release_schema)
     json_dump('versioned-release-validation-schema.json', get_versioned_release_schema(release_schema))
 
     json_dump('strict/release-schema.json', strict_release_schema)
@@ -694,9 +669,8 @@ def update_currency():
     url = 'https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/lists/list_one.xml'  # noqa: E501
     tree = etree.fromstring(get(url).content)
     for node in tree.xpath('//CcyNtry'):
-        match = node.xpath('./Ccy')
         # Entries like Antarctica have no universal currency.
-        if match:
+        if node.xpath('./Ccy'):
             code = node.xpath('./Ccy')[0].text
             title = node.xpath('./CcyNm')[0].text.strip()
             if code not in current_codes:
@@ -913,7 +887,7 @@ def add_translation_notes():
     the updates are released. The documentation will clearly display when the English documentation is 'ahead' of
     translations for a particular version."
 
-    https://standard.open-contracting.org/1.1/en/governance/#translation-and-localization-policy
+    https://standard.open-contracting.org/latest/en/governance/translation/
     """
     excluded = ('.doctrees', '_downloads', '_images', '_sources', '_static', 'codelists', 'genindex', 'search')
 

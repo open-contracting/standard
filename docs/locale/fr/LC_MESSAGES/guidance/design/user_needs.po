@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-13 09:12-0300\n"
+"POT-Creation-Date: 2023-01-10 13:45-0500\n"
 "PO-Revision-Date: 2021-07-31 18:31+0000\n"
 "Last-Translator: James McKinney, 2021\n"
 "Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/guidance/design/user_needs.md:1
 msgid "User needs"
@@ -47,15 +47,21 @@ msgstr ""
 
 #: ../../docs/guidance/design/user_needs.md:7
 msgid ""
-"We focused on four main groups of user need, described below in greater "
+"We focused on five main groups of user need, described below in greater "
 "detail:"
 msgstr ""
 
 #: ../../docs/guidance/design/user_needs.md:9
+msgid ""
+"Generating market opportunities for the private sector to fairly compete for"
+" public contracts"
+msgstr ""
+
+#: ../../docs/guidance/design/user_needs.md:10
 msgid "Achieving value for money for government"
 msgstr "Obtenir un bon rapport qualité-prix pour les acteurs publics"
 
-#: ../../docs/guidance/design/user_needs.md:10
+#: ../../docs/guidance/design/user_needs.md:11
 msgid ""
 "Strengthening the transparency, accountability and integrity of public "
 "contracting"
@@ -63,29 +69,22 @@ msgstr ""
 "Renforcer la transparence, la capacité à rendre des comptes et l'intégrité "
 "de la commande publique"
 
-#: ../../docs/guidance/design/user_needs.md:11
-msgid "Enabling the private sector to fairly compete for public contracts"
-msgstr ""
-"Permettre au secteur privé de concourir équitablement aux marchés publics"
-
 #: ../../docs/guidance/design/user_needs.md:12
 msgid "Monitoring the effectiveness of service delivery"
 msgstr "Contrôler l'efficacité des services rendus"
 
-#: ../../docs/guidance/design/user_needs.md:14
-msgid ""
-"Some user needs are served by direct access to bulk data. Other user needs "
-"are served by tools built on top of OCDS data that provide interfaces, "
-"visualizations, and links to spaces where users can engage with contracting "
-"bodies and data publishers."
+#: ../../docs/guidance/design/user_needs.md:13
+#: ../../docs/guidance/design/user_needs.md:59
+msgid "Improving internal efficiency"
 msgstr ""
-"L'accès direct aux données brutes répond aux besoins de certains usagers. "
-"D'autres auront besoin d'outils qui s'appuient sur les données OCDS pour "
-"fournir des interfaces, de la visualisation et des liens vers des espaces où"
-" les usagers peuvent échanger avec les acteurs des marchés publics et les "
-"producteurs de données.  "
 
-#: ../../docs/guidance/design/user_needs.md:16
+#: ../../docs/guidance/design/user_needs.md:15
+msgid ""
+"These needs intersect. For example, increasing transparency can increase "
+"competition (market opportunities) and lower prices (value for money)."
+msgstr ""
+
+#: ../../docs/guidance/design/user_needs.md:17
 msgid ""
 "You can read more about how people around the world are using OCDS, and "
 "other contracting data, on the [Open Contracting Partnership "
@@ -95,7 +94,7 @@ msgstr ""
 "le monde et d'autres données sur les marchés publics, rendez-vous sur le "
 "site de l'[Open Contracting Partnership](https://www.open-contracting.org). "
 
-#: ../../docs/guidance/design/user_needs.md:18
+#: ../../docs/guidance/design/user_needs.md:19
 msgid ""
 "As you start implementing OCDS, consider how you will engage with data "
 "users, and how you will ensure the data and documents you make available "
@@ -106,131 +105,188 @@ msgstr ""
 "vous assurer que les données et les documents que vous allez mettre à "
 "disposition répondront à leurs besoins. "
 
-#: ../../docs/guidance/design/user_needs.md:20
+#: ../../docs/guidance/design/user_needs.md:21
+msgid "Market opportunity"
+msgstr ""
+
+#: ../../docs/guidance/design/user_needs.md:23
+msgid ""
+"Generating market opportunities in public procurement means giving suppliers"
+" fair and equal access to procurement opportunities in order to improve "
+"competition, allow for more vendor diversity and enable innovation. Open "
+"contracting data – from the planning process and all stages of the "
+"contracting process (tender, award, contract, and implementation) – can be "
+"used to understand and describe the procurement market, analyze competition,"
+" and evaluate supplier performance."
+msgstr ""
+
+#: ../../docs/guidance/design/user_needs.md:25
+msgid ""
+"The private sector can use open contracting data to understand the potential"
+" pipeline of procurement opportunities and identify the most competitive "
+"markets.  A government agency can use open contracting data to understand "
+"trends in past purchases to better plan for future procedures, analyze "
+"particular sectors to evaluate competition and identify potential market "
+"concentration. Moreover, authorities can use contracting data to understand "
+"their supplier base in order to design and implement strategies to increase "
+"vendor diversity, such as [increasing the participation of women-owned "
+"businesses](https://www.open-contracting.org/what-is-open-"
+"contracting/gender/), small and medium enterprises, minority-owned firms or "
+"firms committed to sustainability."
+msgstr ""
+
+#: ../../docs/guidance/design/user_needs.md:27
+msgid ""
+"**Key data fields**: The procurement method used, the awarded suppliers, the"
+" other companies that submitted bids, the tender and award values, and item "
+"details."
+msgstr ""
+
+#: ../../docs/guidance/design/user_needs.md:29
 msgid "Value for money in procurement"
 msgstr "Rapport qualité-prix de la commande publique"
 
-#: ../../docs/guidance/design/user_needs.md:22
+#: ../../docs/guidance/design/user_needs.md:31
 msgid ""
-"Open contracting data can help officials to get good value for money on the "
-"goods and services in the procurement process, and can also help in "
-"identifying whether value for money has been achieved in concluded "
-"contracts."
+"Value for money refers to the effective, efficient and economic use of "
+"resources in public procurement across the different stages of the process. "
+"This means value for money might not be achieved considering only the price,"
+" but also assessing other non-price attributes such as the quality of the "
+"items procured and the efficiency of the process."
 msgstr ""
 
-#: ../../docs/guidance/design/user_needs.md:24
+#: ../../docs/guidance/design/user_needs.md:33
 msgid ""
-"These users want to analyze trends in prices and supplier performance, "
-"including in terms of quality and duration."
-msgstr ""
-"Ces utilisateurs veulent analyser les tendances des prix et la performance "
-"des fournisseurs, en particulier en termes de qualité et de durée. "
-
-#: ../../docs/guidance/design/user_needs.md:26
-msgid ""
-"Comparable data using common codelists and the availability of unit prices "
-"are particularly important for value for money use cases."
-msgstr ""
-"L'utilisation de listes de codes communes et la disponibilité des prix "
-"unitaires sont particulièrement importantes afin de rendre les données "
-"comparables pour les cas d'usages liés au rapport qualité/prix. "
-
-#: ../../docs/guidance/design/user_needs.md:28
-msgid "Detecting fraud and corruption"
-msgstr "Détecter les cas de fraudes et de corruption"
-
-#: ../../docs/guidance/design/user_needs.md:30
-msgid ""
-"All stakeholders (civil society, the private sector, government and donors) "
-"have an interest in identifying and combating corruption in public "
-"contracting. Open contracting data can be used to scrutinize procurement "
-"documents and data for ‘red flags’ that might indicate public monies are "
-"being mis-used."
+"In public procurement, value for money can be achieved, for example, when a "
+"contract is implemented competently (in a quality manner and following "
+"specifications), timely (achieving milestones by specified dates), and "
+"competitively (at or below the estimated price)."
 msgstr ""
 
-#: ../../docs/guidance/design/user_needs.md:32
+#: ../../docs/guidance/design/user_needs.md:35
+msgid ""
+"Open contracting data can help public officials get better value for money "
+"on goods, services and works, and can help in determining whether value for "
+"money has been achieved in concluded contracts. The private sector can "
+"analyze trends in prices and supplier performance, in order to identify "
+"opportunities. Civil society (NGOs, journalists, community organizations, "
+"etc.) can analyze this data to monitor government overspending."
+msgstr ""
+
+#: ../../docs/guidance/design/user_needs.md:37
+msgid ""
+"**Key data fields**: The values at different stages of the process, unit "
+"prices, and item details."
+msgstr ""
+
+#: ../../docs/guidance/design/user_needs.md:39
+msgid "Promoting public integrity"
+msgstr ""
+
+#: ../../docs/guidance/design/user_needs.md:41
+msgid ""
+"Integrity in public procurement is about identifying, preventing and "
+"combating corruption, fraud, and other types of illicit behavior. "
+"Proactively calculating red flag indicators and applying risk detection "
+"methods, using open contracting data, can potentially detect corruption and "
+"fraud before it happens and deter illicit behavior. This changes the anti-"
+"corruption approach from punitive to preventive. Monitoring anomalous "
+"procurement behavior, even when that behavior isn’t actually the result of a"
+" corrupt or illicit process, can help governments identify and resolve "
+"overarching inefficiencies in public procurement."
+msgstr ""
+
+#: ../../docs/guidance/design/user_needs.md:43
 msgid ""
 "There are two main approaches to fraud and corruption monitoring. A ‘micro’ "
-"approach closely scrutinizes individual procurements."
+"approach closely scrutinizes individual procurements: for example, flagging "
+"a competitive procedure that received a single bid. A ‘macro’ approach looks"
+" for suspicious patterns in the whole market and makes links across datasets"
+" to map out networks of funding, ownership and interests: for example, "
+"calculating collusion risk in a particular market."
 msgstr ""
-"Il y a deux approches pour surveiller la corruption et les fraudes. "
-"L'approche \"micro\" consiste à analyser scrupuleusement chaque marché."
 
-#: ../../docs/guidance/design/user_needs.md:34
+#: ../../docs/guidance/design/user_needs.md:45
 msgid ""
-"A ‘systemic’ approach looks for suspicious patterns, and makes links between"
-" datasets to map out networks of funding, ownership and interests."
+"All stakeholders from civil society, the private sector, government, and "
+"donors have an interest in identifying and combating corruption in public "
+"procurement."
 msgstr ""
-"L'approche \"systémique\" consiste à déceler des tendances suspectes et à "
-"créer des liens entre des jeux de données pour relier des réseaux de "
-"financement, de propriété et d'intérêt. "
 
-#: ../../docs/guidance/design/user_needs.md:36
+#: ../../docs/guidance/design/user_needs.md:47
 msgid ""
-"Data that can be linked up using globally unique identifiers for companies "
-"is particularly important for fraud and corruption detection use cases."
+"**Key data fields**: The procurement method used, bid details (including the"
+" bidders and bid values), the values at different stages of the process, key"
+" dates, key documents, and item details."
 msgstr ""
-"Les données qui peuvent être liées en utilisant des identifiants mondiaux "
-"d'entreprises et uniques sont particulièrement importantes dans les cas de "
-"détection de la fraude et de la corruption.  "
 
-#: ../../docs/guidance/design/user_needs.md:38
-msgid "Competing for public contracts"
-msgstr "Candidater à des marchés publics"
-
-#: ../../docs/guidance/design/user_needs.md:40
+#: ../../docs/guidance/design/user_needs.md:49
 msgid ""
-"Open contracting data can be used by private firms to understand the "
-"potential pipeline of procurement opportunities. It is a core principle of "
-"open contracting that information ought to be made available at the early "
-"stages of a contracting process, including information on planned "
-"procurement, and invitations for tenders."
+"**Resource**: [Red Flags for Integrity Guide](https://www.open-"
+"contracting.org/resources/red-flags-integrity-giving-green-light-open-data-"
+"solutions/)"
 msgstr ""
 
-#: ../../docs/guidance/design/user_needs.md:42
-msgid ""
-"Information on past contracts can allow firms to identify upcoming "
-"opportunities for re-contracting, and can support a more competitive "
-"marketplace, as transparency creates a level playing field with information "
-"on pricing, contract dates and key deliverables."
-msgstr ""
-"Les informations sur les contrats passés peuvent aider les entreprises à "
-"identifier les opportunités de renouvellement de contrats. Elles peuvent "
-"également renforcer la concurrence des marchés car la transparence réduit "
-"les barrières à l'entrée en fournissant un accès universel aux prix, aux "
-"dates et aux principaux livrables. "
-
-#: ../../docs/guidance/design/user_needs.md:44
-msgid ""
-"Forward looking and timely information is particularly important for private"
-" sector users, as well as being able to uniquely identify procuring "
-"entities, geographic locations, sectors, and the kinds of items which are "
-"being procured."
-msgstr ""
-"Des informations prospectives et publiées en temps voulu sont "
-"particulièrement importantes pour les usagers du secteur privé, tout comme "
-"la possibilité de disposer d'identifiants uniques sur les pouvoirs "
-"adjudicateurs, les lieux concernés et les types de biens et services "
-"achetés. "
-
-#: ../../docs/guidance/design/user_needs.md:46
+#: ../../docs/guidance/design/user_needs.md:51
 msgid "Monitoring service delivery"
 msgstr ""
 
-#: ../../docs/guidance/design/user_needs.md:48
+#: ../../docs/guidance/design/user_needs.md:53
 msgid ""
-"Monitoring groups want to ensure that public contracting delivers value to "
-"citizens in terms of quality of goods, works, and services provided. To "
-"monitor contracting effectively involves being able to link budgets and "
-"donor data to the contracts and results. It also involves being able to "
-"verify whether results are being delivered on the ground."
+"Monitoring service delivery looks at how public procurement delivers value "
+"to citizens in terms of quality of goods, services and works provided. This "
+"involves analyzing in detail the implementation stage of the contracting "
+"process, to verify whether the goods, services and works procured are being "
+"delivered in a timely manner, with good quality and at the agreed price. It "
+"is also important to assess the transactions, contract amendments and "
+"subcontracting arrangements."
 msgstr ""
 
-#: ../../docs/guidance/design/user_needs.md:50
+#: ../../docs/guidance/design/user_needs.md:55
 msgid ""
-"Data concerning budgets, delivery location and subcontracting arrangements "
-"are particularly useful for those involved in contract monitoring."
+"Open contracting data for the implementation stage can help civil society "
+"and citizens to monitor service delivery in their communities and give "
+"feedback to the government. For governments, having timely information on "
+"the delivery of contracts can be useful to identify inefficiencies, ensure "
+"contracts are running efficiently, and detect issues."
 msgstr ""
-"Les données concernant les budgets, les lieux d'exécution et les accords de "
-"sous-traitance sont particulièrement utiles pour celles et ceux chargés de "
-"surveiller les marchés publics. "
+
+#: ../../docs/guidance/design/user_needs.md:57
+msgid ""
+"**Key data fields**: Fields related to contracts, implementation, "
+"amendments, milestones and transactions."
+msgstr ""
+
+#: ../../docs/guidance/design/user_needs.md:61
+msgid ""
+"Internal efficiency refers to ensuring that the investments of money, time, "
+"and human resources in public procurement ultimately result in high-quality "
+"service delivery and value for money. It helps governments to promote better"
+" practices and procurement systems, while reducing the resources needed."
+msgstr ""
+
+#: ../../docs/guidance/design/user_needs.md:63
+msgid ""
+"Inefficiencies might arise due to inadequate systems or institutional "
+"arrangements that cause delays, carry high transactional costs, involve "
+"complex technical processes, create silos of information, or lack award and "
+"contract management systems."
+msgstr ""
+
+#: ../../docs/guidance/design/user_needs.md:65
+msgid ""
+"Public procurement agencies are particularly interested in identifying areas"
+" for efficiency improvements. Interventions might include, for example: "
+"analyzing delays; analyzing the duration of different stages of the process;"
+" structuring procurement information to improve internal coordination; "
+"streamlining internal processes without duplicating effort across different "
+"stages of the contracting process; developing market engagement strategies "
+"to prepare better tender specifications; or promoting the use of "
+"e-procurement systems."
+msgstr ""
+
+#: ../../docs/guidance/design/user_needs.md:67
+msgid ""
+"**Key data fields**: The dates for the different stages of the process, and "
+"the status of the tender, awards and contracts."
+msgstr ""

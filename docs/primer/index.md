@@ -17,10 +17,10 @@ Beyond the Primer, you can use the following resources contained in the OCDS doc
 
 * [Guidance](../guidance/index): Step-by-step instructions on how to design and implement an OCDS publication, including helpful tools and examples
 * [Reference](../schema/index): Describing the specific rules that need to be followed to publish OCDS data
-* [Getting help](../support/index): Outlining how you can get Helpdesk support and how you can participate in the OCDS community
+* [Getting help](../support/index): Outlining how you can get free support and how you can participate in the OCDS community
 * [Governance](../governance/index): Details about the stewardships, development, and revisions process for the OCDS
 * [History](../history/index): Information about the changes in each version of the OCDS
-* [Data Review Tool](https://standard.open-contracting.org/review/): A tool to help check whether your data is following the OCDS correctly
+* [Data Review Tool](https://review.standard.open-contracting.org/): A tool to help check whether your data is following the OCDS correctly
 
 ```{note}
 **To learn more about the OCDS,** go to the next page in the primer: [What is the OCDS and why use it?](what) To learn more about open contracting in general, go to:

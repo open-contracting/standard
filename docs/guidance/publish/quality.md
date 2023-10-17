@@ -4,24 +4,25 @@ The Open Contracting Data Standard enables publication of detailed information a
 
 The limits of what can be published using the OCDS are usually defined by (1) absence of a legal mandate for publication and (2) challenges with data collection.
 
-The OCDS was also designed to maximize the utility of contracting information for:
+The OCDS was also designed to maximize the utility of contracting information for performing analysis on:
 
-* Value for money analysis
-* Fairness and ease of doing business
-* Deterring corruption and monitoring the integrity of the procurement system
-* Boosting the efficiency and effectiveness of public contracts.
+* Generating market opportunities for the private sector to fairly compete for public contracts 
+* Achieving value for money for government
+* Strengthening the transparency, accountability and integrity of public contracting
+* Monitoring the effectiveness of service delivery
+* Improving internal efficiency
 
 However, the less information you publish, and the more incomplete the information, the less useful it will be for these objectives.
 
 For example, if your stakeholders are interested to monitor the integrity of the public procurement system, or its competitiveness, you will need data about bidders to be published. If your stakeholders want to monitor late payments to contractors, you will need to publish information about the dates that invoices are received and paid.
 
-We have prepared a [Usability spreadsheet](https://docs.google.com/spreadsheets/d/1nG7e52E1CXOXoUjz6pimW4Z7er9u3DJSs98QKdJJioE/edit#gid=110864222) that indicates which OCDS fields are needed for some of the most common goals.
+We have prepared a [list of procurement indicators related to key use cases](http://bit.ly/UsingIt-indicators) that indicates which OCDS fields are needed for some of the most common goals.
 
 Regulations or policies might need to be changed to enable publication of additional information to increase the scope and coverage of your OCDS publication.
 
 In addition, you might have challenges collecting complete and accurate information. This challenge might have a variety of causes (poor compliance rates, lack of access to the internet, lack of incentives). If you are experiencing these challenges, OCP can help you think through approaches to improving the quality and completeness of the information you collect.
 
-Finally, you might have challenges transforming that information into the OCDS format and publishing it in a manner that is accessible and user friendly. For this, you can reach out to our [OCDS Helpdesk](../../support/index) for support.
+Finally, you might have challenges transforming that information into the OCDS format and publishing it in a manner that is accessible and user friendly. For this, you can reach out to our [Data Support Team](../../support/index).
 
 Understanding all of the challenges above, we understand that increasing the transparency, efficiency and effectiveness of public contracting is a process of constant improvement. Therefore, we describe an iterative framework for assessing the quality and completeness of OCDS publications below.
 
@@ -32,12 +33,12 @@ All OCDS publications ought to meet the following criteria:
 1. **Registered**: The data uses a [registered OCID prefix](../../schema/identifiers.md#open-contracting-process-identifier-ocid).
 1. **Discoverable**: It is possible to discover the data by navigating a website whose homepage is indexed by popular web search engines.
 1. **Retrievable**: It is possible to automate the download of all the data, either using an HTML page listing bulk download URLs, or using only machine-readable data as input.
-1. **Reviewable**: The [OCDS Data Review Tool](https://standard.open-contracting.org/review/) is able to report results on the data.
+1. **Reviewable**: The [OCDS Data Review Tool](https://review.standard.open-contracting.org/) is able to report results on the data.
 1. **Appropriate**: Concepts are published in semantic accordance with the rules of the OCDS (or registered extensions) rather than using a non-OCDS field or code.
 1. **Active**: For each publisher, there is an OCDS release with a top-level `date` field value within the last 12 months.
 1. **Parity**: For each publisher, for the _time period_ and _contracting authorities_ covered by the data, there isn’t another dataset by the same publisher that covers more than 25% more contracting (or planning) processes.
 
-The OCDS Helpdesk is happy to review draft and newly published OCDS data and can work with publishers with advice to meet the above criteria. A publication that does not meet this minimum threshold will not be listed as a publisher by OCP as part of [OCP’s regular reporting](https://www.open-contracting.org/why-open-contracting/learning/).
+The Data Support Team is happy to review draft and newly published OCDS data and can work with publishers with advice to meet the above criteria. A publication that does not meet this minimum threshold will not be listed as a publisher by OCP as part of [OCP’s regular reporting](https://www.open-contracting.org/why-open-contracting/learning/).
 
 ## Continuous improvement
 
@@ -67,11 +68,12 @@ Improvement on the below indicators demonstrates that the concepts are being pub
 
 Improvements on the below indicators demonstrate that it is becoming easier for users to access the published information.
 
-11. Publish record packages containing compiled releases
-12. Decrease the number of HTTP errors
-13. Increase the number of access methods (API endpoints, bulk downloads)
+1. Publish record packages containing compiled releases
+1. Decrease the number of HTTP errors
+1. Increase the number of access methods (API endpoints, bulk downloads)
+1. Decrease the number of license restrictions
 
-As publishers improve, the OCDS Helpdesk can work with them to identify how they can improve on the above criteria. OCP will note whether a publisher has improved in [OCP’s regular reporting](https://www.open-contracting.org/why-open-contracting/learning/).
+As publishers improve, the Data Support Team can work with them to identify how they can improve on the above criteria. OCP will note whether a publisher has improved in [OCP’s regular reporting](https://www.open-contracting.org/why-open-contracting/learning/).
 
 ## Advanced criteria
 

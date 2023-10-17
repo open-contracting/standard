@@ -10,7 +10,6 @@ But, many jurisdictions also use multi-stage procedures. Such procedures follow 
 
 ```{csv-table}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/pre-qualification/multi-stage.csv
 ```
 
@@ -103,7 +102,6 @@ The `tender` section is also used to disclose information about the procedure us
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../../build/current_lang/codelists/method.csv
 ```
 
@@ -123,7 +121,7 @@ Any potential supplier can submit a request to take part in the first stage, but
 ```{note}
 OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [GitHub](https://github.com/open-contracting/standard/issues/440).
 
-Contact the [helpdesk](../../support/index.md) if you want to disclose this type of information.
+Contact the [Data Support Team](../../support/index) if you want to disclose this type of information.
 ```
 
 ## Example: Pre-selection
@@ -132,7 +130,7 @@ The National Nuclear Laboratory issues a [restricted procedure contract notice](
 
 The notice represents the initiation of the contracting process, so it is modelled using the `tender` section in OCDS.
 
-The procuring entitiy will invite a maximum of 5 qualified potential suppliers to submit a bid at the next stage, so `tender/procurementMethod` is set to ‘selective’. The [selectionCriteria extension](https://extensions.open-contracting.org/en/extensions/selectionCriteria/master/) is used to disclose the criteria for choosing which potential suppliers to invite proposals from.
+The procuring entity will invite a maximum of 5 qualified potential suppliers to submit a bid at the next stage, so `tender/procurementMethod` is set to ‘selective’. The [selectionCriteria extension](https://extensions.open-contracting.org/en/extensions/selectionCriteria/master/) is used to disclose the criteria for choosing which potential suppliers to invite proposals from.
 
 ```{jsoninclude} ../../examples/pre-qualification/pre-selection_tender.json
 :jsonpointer: /releases/0/tender
@@ -141,7 +139,7 @@ The procuring entitiy will invite a maximum of 5 qualified potential suppliers t
 
 ## Example: Pre-qualification in Paraguay
 
-The Ministry of Public Works and Communications issues an [invitation for potential suppliers to pre-qualify for two tenders for road construction in different neighbourhoods](https://contrataciones.gov.py/licitaciones/convocatoria/338229-servicios-consultoria-estudios-factibilidad-diseno-final-ingenieria-tramos-caminos-1/precalificacion.html). Each tender will re-use the list of pre-qualified potential suppliers established as a result of this first procedure.
+The Ministry of Public Works and Communications issues an [invitation for potential suppliers to pre-qualify for two tenders for road construction in different neighbourhoods](https://contrataciones.gov.py/licitaciones/convocatoria/338229-servicios-consultoria-estudios-factibilidad-diseno-final-ingenieria-tramos-caminos-1/precalificacion.html). Each tender will reuse the list of pre-qualified potential suppliers established as a result of this first procedure.
 
 The invitation represents the initiation of a contracting process to establish a list of pre-qualified potential suppliers, so it is modelled using the `tender` section in OCDS.
 
@@ -155,5 +153,5 @@ Only qualified potential suppliers will be invited to bid in subsequent tenders 
 ```{note}
 OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [GitHub issue](https://github.com/open-contracting/standard/issues/440).
 
-Contact the [helpdesk](../../support/index.md) if you want to disclose this type of information.
+Contact the [Data Support Team](../../support/index) if you want to disclose this type of information.
 ```

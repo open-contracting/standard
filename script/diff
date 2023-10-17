@@ -4,7 +4,7 @@ set -uo pipefail
 
 curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/docs/conf.py | diff -u - docs/conf.py
 
-for f in .github/workflows/ci.yml .github/workflows/js.yml include/config.mk; do
+for f in .github/workflows/ci.yml .github/workflows/js.yml .github/workflows/spellcheck.yml include/config.mk; do
     curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/$f | diff -u - $f
 done
 

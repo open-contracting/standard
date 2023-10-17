@@ -8,17 +8,14 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: true
-      - uses: actions/setup-python@v3
+      - uses: actions/setup-python@v4
         with:
-          python-version: 3.8
+          python-version: '3.10'
           cache: pip
           cache-dependency-path: '**/requirements*.txt'
       # Don't install editable projects in the current working directory.
       # https://pip.pypa.io/en/latest/reference/pip_install/#install-src
       - run: pip install --src $GITHUB_WORKSPACE/../src -r requirements.txt
-      # Google Chrome and ChromeDriver are already included.
-      # https://help.github.com/en/actions/reference/software-installed-on-github-hosted-runners
-      # https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-Readme.md
       - if: github.repository == 'open-contracting/standard_profile_template'
         run: make update extract
       - run: make
@@ -26,15 +23,16 @@ jobs:
       # - run: |
       #     make linkcheck
       #     rm -f output.json output.txt
-      - run: pytest -W error
+      # "ResourceWarning: unclosed file <_io.BufferedWriter name='/dev/null'>"
+      - run: pytest -W error -W ignore::ResourceWarning
       # Deploy the built documentation to the staging directory.
       - if: github.event_name == 'push'
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.PRIVATE_KEY }}
-          known_hosts: standard.open-contracting.org ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWLziEiV46d9iInFXAR/PxPvotcpmMtbwO8GkTF2/AFUkyiSd8/Yg5HXUoWBz7hbRwg2O+q5F1QfD57vevBV7c+JKyBbKVOi/mXaf7uACxer419RTgKcpaMhNRi708XWhNlWiKp3Afs/MDMvMdWSrU+Ht7biNb1OMGjfNMDdlsJxPycxMQ7Fu7i+kdyMkKLYDIHNeEw0aW9PtMTReUE0y/Ghn44PDR2u9/oZsEhC0ELDQUfsjtCcoM91FH1tjRBZkOW/j5940nMoJpbVhFHTC3YY9Mh2kV+N6Whht5nghJ7Jl2vN5W0Uer+TNMVRV4QMu8xK5HXbjKFMpaK+j4gBs9
+          known_hosts: standard.open-contracting.org ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGveFGTJ9yyObNGDUCUyzyFkm6Kzh3YqIt1qB7B/KU6E
       - if: github.event_name == 'push'
-        uses: little-core-labs/netrc-creds@v2.1.0
+        uses: bcomnes/netrc-creds@v2
         with:
           machine: standard.open-contracting.org
           login: manage
@@ -45,4 +43,5 @@ jobs:
           PRODUCTION: ${{ startsWith(github.ref, 'refs/tags') || github.ref == 'refs/heads/latest' || github.ref == 'refs/heads/1.0' || github.ref == 'refs/heads/1.1' }}
           RELEASE: ${{ startsWith(github.ref, 'refs/tags') }}
           VERSION: "1.1"
+        shell: bash
         run: curl -sS https://raw.githubusercontent.com/open-contracting/deploy/main/deploy-docs.sh | bash -

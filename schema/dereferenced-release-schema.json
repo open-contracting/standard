@@ -267,7 +267,7 @@
               },
               "country": {
                 "title": "Country code",
-                "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+                "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                 "type": [
                   "string",
                   "null"
@@ -628,7 +628,7 @@
               "object",
               "null"
             ],
-            "description": "Additional classification information about organizations can be provided using organization details extensions that define particular fields and classification schemes.",
+            "description": "Additional information about the organization.",
             "title": "Details",
             "properties": {
               "scale": {
@@ -775,7 +775,7 @@
             },
             "country": {
               "title": "Country code",
-              "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+              "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
               "type": [
                 "string",
                 "null"
@@ -1236,7 +1236,7 @@
             },
             "amount": {
               "title": "Amount",
-              "description": "The value reserved for the future contract(s), within the budget. A negative value indicates income to the budget as a result of the future contract(s), rather than expenditure. If the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line that will fund the future contract(s).",
+              "description": "The value reserved for the future contract(s), within the budget. A negative value indicates income to the budget as a result of the future contract(s), rather than expenditure. This field should not be used to report the total value of the budget line that will fund the future contract(s).",
               "type": "object",
               "properties": {
                 "amount": {
@@ -1768,7 +1768,7 @@
         },
         "milestones": {
           "title": "Planning milestones",
-          "description": "A list of milestones associated with the planning process.",
+          "description": "Milestones associated with the planning process.",
           "type": "array",
           "items": {
             "title": "Milestone",
@@ -2405,7 +2405,7 @@
             "properties": {
               "scheme": {
                 "title": "Scheme",
-                "description": "The list, register or system from which the identifier is taken.",
+                "description": "The list, register or system from which the identifier is taken. If the scope of the list, register or system from which the identifier is drawn is national, it is suggested to follow the pattern {ISO 3166-1 alpha-2}-{system}. If it is subnational, it is suggested to follow the pattern {ISO 3166-2}-{system}.",
                 "type": [
                   "string",
                   "null"
@@ -2435,7 +2435,7 @@
         },
         "description": {
           "title": "Tender description",
-          "description": "A summary description of the tender. This complements any structured information provided using the items array. Descriptions should be short and easy to read. Avoid using ALL CAPS.",
+          "description": "A summary description of the tender. Descriptions should be short and easy to read. Avoid using ALL CAPS.",
           "type": [
             "string",
             "null"
@@ -2580,7 +2580,7 @@
                 },
                 "country": {
                   "title": "Country code",
-                  "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+                  "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                   "type": [
                     "string",
                     "null"
@@ -3078,7 +3078,7 @@
               },
               "additionalClassifications": {
                 "title": "Additional classifications",
-                "description": "An array of additional classifications for the item.",
+                "description": "Additional classifications for the item.",
                 "type": "array",
                 "items": {
                   "title": "Classification",
@@ -4623,7 +4623,7 @@
         },
         "submissionMethodDetails": {
           "title": "Submission method details",
-          "description": "Information about the methods by which bids are submitted. This can include the address, e-mail address or online service to which bids are submitted, and any special requirements to be followed for submissions. More structured information can be provided using the submission terms extension.",
+          "description": "Information about how to submit bids. This can include the address, e-mail address or online service to which bids are submitted, and any special requirements to be followed for submissions.",
           "type": [
             "string",
             "null"
@@ -4682,7 +4682,7 @@
         },
         "enquiryPeriod": {
           "title": "Enquiry period",
-          "description": "The period during which potential bidders may submit questions and requests for clarification to the buyer or the procuring entity. Details of how to submit enquiries should be provided in attached notices, or in submissionMethodDetails. Structured dates for when responses to questions will be made can be provided using tender milestones.",
+          "description": "The period during which potential bidders may submit questions and requests for clarification to the buyer or the procuring entity.",
           "type": "object",
           "properties": {
             "startDate": {
@@ -4724,7 +4724,7 @@
         },
         "hasEnquiries": {
           "title": "Has enquiries?",
-          "description": "A true/false field to indicate whether any enquiries were received during the tender stage. Structured information on enquiries that were received, and responses to them, can be provided using the enquiries extension.",
+          "description": "Whether any enquiries were received.",
           "type": [
             "boolean",
             "null"
@@ -4752,7 +4752,7 @@
         },
         "selectionCriteria": {
           "title": "Selection criteria",
-          "description": "The minimum requirements for potential suppliers to participate in the contracting process. Selection criteria ensure that a potential supplier has the legal and financial capacities and the technical and professional abilities to perform the contract. More structured information can be provided using the selection criteria extension.",
+          "description": "The minimum requirements for potential suppliers to participate in the contracting process. Selection criteria ensure that a potential supplier has the legal and financial capacities and the technical and professional abilities to perform the contract.",
           "type": [
             "string",
             "null"
@@ -4894,7 +4894,7 @@
         },
         "tenderers": {
           "title": "Tenderers",
-          "description": "All organizations that submit a bid. More detailed information on bids and the bidding organization can be provided using the bid extension.",
+          "description": "All organizations that submit a bid.",
           "type": "array",
           "items": {
             "properties": {
@@ -5007,7 +5007,7 @@
                   },
                   "country": {
                     "title": "Country code",
-                    "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+                    "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                     "type": [
                       "string",
                       "null"
@@ -5568,7 +5568,7 @@
         },
         "milestones": {
           "title": "Milestones",
-          "description": "A list of milestones associated with the tender.",
+          "description": "Milestones associated with the tender: for example, the date on which responses to enquiries are published.",
           "type": "array",
           "items": {
             "title": "Milestone",
@@ -6210,7 +6210,7 @@
                 "title": "Description"
               },
               "amendsReleaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
+                "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -6218,7 +6218,7 @@
                 "title": "Amended release (identifier)"
               },
               "releaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
+                "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -6306,7 +6306,7 @@
               "title": "Description"
             },
             "amendsReleaseID": {
-              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
+              "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
               "type": [
                 "string",
                 "null"
@@ -6314,7 +6314,7 @@
               "title": "Amended release (identifier)"
             },
             "releaseID": {
-              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
+              "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
               "type": [
                 "string",
                 "null"
@@ -7597,7 +7597,7 @@
                     },
                     "country": {
                       "title": "Country code",
-                      "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+                      "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                       "type": [
                         "string",
                         "null"
@@ -8098,7 +8098,7 @@
                 },
                 "additionalClassifications": {
                   "title": "Additional classifications",
-                  "description": "An array of additional classifications for the item.",
+                  "description": "Additional classifications for the item.",
                   "type": "array",
                   "items": {
                     "title": "Classification",
@@ -8781,7 +8781,7 @@
                   "title": "Description"
                 },
                 "amendsReleaseID": {
-                  "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
+                  "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
                   "type": [
                     "string",
                     "null"
@@ -8789,7 +8789,7 @@
                   "title": "Amended release (identifier)"
                 },
                 "releaseID": {
-                  "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
+                  "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
                   "type": [
                     "string",
                     "null"
@@ -8877,7 +8877,7 @@
                 "title": "Description"
               },
               "amendsReleaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
+                "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -8885,7 +8885,7 @@
                 "title": "Amended release (identifier)"
               },
               "releaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
+                "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -8988,7 +8988,7 @@
               "properties": {
                 "scheme": {
                   "title": "Scheme",
-                  "description": "The list, register or system from which the identifier is taken.",
+                  "description": "The list, register or system from which the identifier is taken. If the scope of the list, register or system from which the identifier is drawn is national, it is suggested to follow the pattern {ISO 3166-1 alpha-2}-{system}. If it is subnational, it is suggested to follow the pattern {ISO 3166-2}-{system}.",
                   "type": [
                     "string",
                     "null"
@@ -10061,7 +10061,7 @@
           },
           "items": {
             "title": "Items contracted",
-            "description": "The goods, services or works in this contract. If the items contracted are identical to the items awarded, this field should be omitted.",
+            "description": "The goods, services or works in this contract. If the items contracted are identical to the items awarded and/or the items tendered, this field should be omitted.",
             "type": "array",
             "minItems": 1,
             "items": {
@@ -10142,7 +10142,7 @@
                 },
                 "additionalClassifications": {
                   "title": "Additional classifications",
-                  "description": "An array of additional classifications for the item.",
+                  "description": "Additional classifications for the item.",
                   "type": "array",
                   "items": {
                     "title": "Classification",
@@ -10789,7 +10789,7 @@
             "properties": {
               "transactions": {
                 "title": "Transactions",
-                "description": "A list of the spending transactions made against this contract",
+                "description": "The spending transactions made against this contract.",
                 "type": "array",
                 "items": {
                   "type": "object",
@@ -11267,7 +11267,7 @@
                             },
                             "country": {
                               "title": "Country code",
-                              "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+                              "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                               "type": [
                                 "string",
                                 "null"
@@ -11794,7 +11794,7 @@
                             },
                             "country": {
                               "title": "Country code",
-                              "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+                              "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                               "type": [
                                 "string",
                                 "null"
@@ -13477,7 +13477,7 @@
           },
           "milestones": {
             "title": "Contract milestones",
-            "description": "A list of milestones associated with the finalization of this contract.",
+            "description": "Milestones associated with the finalization of this contract.",
             "type": "array",
             "items": {
               "title": "Milestone",
@@ -14119,7 +14119,7 @@
                   "title": "Description"
                 },
                 "amendsReleaseID": {
-                  "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
+                  "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
                   "type": [
                     "string",
                     "null"
@@ -14127,7 +14127,7 @@
                   "title": "Amended release (identifier)"
                 },
                 "releaseID": {
-                  "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
+                  "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
                   "type": [
                     "string",
                     "null"
@@ -14215,7 +14215,7 @@
                 "title": "Description"
               },
               "amendsReleaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
+                "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -14223,7 +14223,7 @@
                 "title": "Amended release (identifier)"
               },
               "releaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
+                "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -14450,7 +14450,7 @@
             },
             "amount": {
               "title": "Amount",
-              "description": "The value reserved for the future contract(s), within the budget. A negative value indicates income to the budget as a result of the future contract(s), rather than expenditure. If the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line that will fund the future contract(s).",
+              "description": "The value reserved for the future contract(s), within the budget. A negative value indicates income to the budget as a result of the future contract(s), rather than expenditure. This field should not be used to report the total value of the budget line that will fund the future contract(s).",
               "type": "object",
               "properties": {
                 "amount": {
@@ -14982,7 +14982,7 @@
         },
         "milestones": {
           "title": "Planning milestones",
-          "description": "A list of milestones associated with the planning process.",
+          "description": "Milestones associated with the planning process.",
           "type": "array",
           "items": {
             "title": "Milestone",
@@ -15619,7 +15619,7 @@
             "properties": {
               "scheme": {
                 "title": "Scheme",
-                "description": "The list, register or system from which the identifier is taken.",
+                "description": "The list, register or system from which the identifier is taken. If the scope of the list, register or system from which the identifier is drawn is national, it is suggested to follow the pattern {ISO 3166-1 alpha-2}-{system}. If it is subnational, it is suggested to follow the pattern {ISO 3166-2}-{system}.",
                 "type": [
                   "string",
                   "null"
@@ -15649,7 +15649,7 @@
         },
         "description": {
           "title": "Tender description",
-          "description": "A summary description of the tender. This complements any structured information provided using the items array. Descriptions should be short and easy to read. Avoid using ALL CAPS.",
+          "description": "A summary description of the tender. Descriptions should be short and easy to read. Avoid using ALL CAPS.",
           "type": [
             "string",
             "null"
@@ -15794,7 +15794,7 @@
                 },
                 "country": {
                   "title": "Country code",
-                  "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+                  "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                   "type": [
                     "string",
                     "null"
@@ -16292,7 +16292,7 @@
               },
               "additionalClassifications": {
                 "title": "Additional classifications",
-                "description": "An array of additional classifications for the item.",
+                "description": "Additional classifications for the item.",
                 "type": "array",
                 "items": {
                   "title": "Classification",
@@ -17837,7 +17837,7 @@
         },
         "submissionMethodDetails": {
           "title": "Submission method details",
-          "description": "Information about the methods by which bids are submitted. This can include the address, e-mail address or online service to which bids are submitted, and any special requirements to be followed for submissions. More structured information can be provided using the submission terms extension.",
+          "description": "Information about how to submit bids. This can include the address, e-mail address or online service to which bids are submitted, and any special requirements to be followed for submissions.",
           "type": [
             "string",
             "null"
@@ -17896,7 +17896,7 @@
         },
         "enquiryPeriod": {
           "title": "Enquiry period",
-          "description": "The period during which potential bidders may submit questions and requests for clarification to the buyer or the procuring entity. Details of how to submit enquiries should be provided in attached notices, or in submissionMethodDetails. Structured dates for when responses to questions will be made can be provided using tender milestones.",
+          "description": "The period during which potential bidders may submit questions and requests for clarification to the buyer or the procuring entity.",
           "type": "object",
           "properties": {
             "startDate": {
@@ -17938,7 +17938,7 @@
         },
         "hasEnquiries": {
           "title": "Has enquiries?",
-          "description": "A true/false field to indicate whether any enquiries were received during the tender stage. Structured information on enquiries that were received, and responses to them, can be provided using the enquiries extension.",
+          "description": "Whether any enquiries were received.",
           "type": [
             "boolean",
             "null"
@@ -17966,7 +17966,7 @@
         },
         "selectionCriteria": {
           "title": "Selection criteria",
-          "description": "The minimum requirements for potential suppliers to participate in the contracting process. Selection criteria ensure that a potential supplier has the legal and financial capacities and the technical and professional abilities to perform the contract. More structured information can be provided using the selection criteria extension.",
+          "description": "The minimum requirements for potential suppliers to participate in the contracting process. Selection criteria ensure that a potential supplier has the legal and financial capacities and the technical and professional abilities to perform the contract.",
           "type": [
             "string",
             "null"
@@ -18108,7 +18108,7 @@
         },
         "tenderers": {
           "title": "Tenderers",
-          "description": "All organizations that submit a bid. More detailed information on bids and the bidding organization can be provided using the bid extension.",
+          "description": "All organizations that submit a bid.",
           "type": "array",
           "items": {
             "properties": {
@@ -18221,7 +18221,7 @@
                   },
                   "country": {
                     "title": "Country code",
-                    "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+                    "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                     "type": [
                       "string",
                       "null"
@@ -18782,7 +18782,7 @@
         },
         "milestones": {
           "title": "Milestones",
-          "description": "A list of milestones associated with the tender.",
+          "description": "Milestones associated with the tender: for example, the date on which responses to enquiries are published.",
           "type": "array",
           "items": {
             "title": "Milestone",
@@ -19424,7 +19424,7 @@
                 "title": "Description"
               },
               "amendsReleaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
+                "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -19432,7 +19432,7 @@
                 "title": "Amended release (identifier)"
               },
               "releaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
+                "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -19520,7 +19520,7 @@
               "title": "Description"
             },
             "amendsReleaseID": {
-              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
+              "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
               "type": [
                 "string",
                 "null"
@@ -19528,7 +19528,7 @@
               "title": "Amended release (identifier)"
             },
             "releaseID": {
-              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
+              "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
               "type": [
                 "string",
                 "null"
@@ -20807,7 +20807,7 @@
                   },
                   "country": {
                     "title": "Country code",
-                    "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+                    "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                     "type": [
                       "string",
                       "null"
@@ -21308,7 +21308,7 @@
               },
               "additionalClassifications": {
                 "title": "Additional classifications",
-                "description": "An array of additional classifications for the item.",
+                "description": "Additional classifications for the item.",
                 "type": "array",
                 "items": {
                   "title": "Classification",
@@ -21991,7 +21991,7 @@
                 "title": "Description"
               },
               "amendsReleaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
+                "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -21999,7 +21999,7 @@
                 "title": "Amended release (identifier)"
               },
               "releaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
+                "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -22087,7 +22087,7 @@
               "title": "Description"
             },
             "amendsReleaseID": {
-              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
+              "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
               "type": [
                 "string",
                 "null"
@@ -22095,7 +22095,7 @@
               "title": "Amended release (identifier)"
             },
             "releaseID": {
-              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
+              "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
               "type": [
                 "string",
                 "null"
@@ -22192,7 +22192,7 @@
             "properties": {
               "scheme": {
                 "title": "Scheme",
-                "description": "The list, register or system from which the identifier is taken.",
+                "description": "The list, register or system from which the identifier is taken. If the scope of the list, register or system from which the identifier is drawn is national, it is suggested to follow the pattern {ISO 3166-1 alpha-2}-{system}. If it is subnational, it is suggested to follow the pattern {ISO 3166-2}-{system}.",
                 "type": [
                   "string",
                   "null"
@@ -23265,7 +23265,7 @@
         },
         "items": {
           "title": "Items contracted",
-          "description": "The goods, services or works in this contract. If the items contracted are identical to the items awarded, this field should be omitted.",
+          "description": "The goods, services or works in this contract. If the items contracted are identical to the items awarded and/or the items tendered, this field should be omitted.",
           "type": "array",
           "minItems": 1,
           "items": {
@@ -23346,7 +23346,7 @@
               },
               "additionalClassifications": {
                 "title": "Additional classifications",
-                "description": "An array of additional classifications for the item.",
+                "description": "Additional classifications for the item.",
                 "type": "array",
                 "items": {
                   "title": "Classification",
@@ -23993,7 +23993,7 @@
           "properties": {
             "transactions": {
               "title": "Transactions",
-              "description": "A list of the spending transactions made against this contract",
+              "description": "The spending transactions made against this contract.",
               "type": "array",
               "items": {
                 "type": "object",
@@ -24471,7 +24471,7 @@
                           },
                           "country": {
                             "title": "Country code",
-                            "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+                            "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                             "type": [
                               "string",
                               "null"
@@ -24998,7 +24998,7 @@
                           },
                           "country": {
                             "title": "Country code",
-                            "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+                            "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                             "type": [
                               "string",
                               "null"
@@ -26681,7 +26681,7 @@
         },
         "milestones": {
           "title": "Contract milestones",
-          "description": "A list of milestones associated with the finalization of this contract.",
+          "description": "Milestones associated with the finalization of this contract.",
           "type": "array",
           "items": {
             "title": "Milestone",
@@ -27323,7 +27323,7 @@
                 "title": "Description"
               },
               "amendsReleaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
+                "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -27331,7 +27331,7 @@
                 "title": "Amended release (identifier)"
               },
               "releaseID": {
-                "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
+                "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
                 "type": [
                   "string",
                   "null"
@@ -27419,7 +27419,7 @@
               "title": "Description"
             },
             "amendsReleaseID": {
-              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
+              "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
               "type": [
                 "string",
                 "null"
@@ -27427,7 +27427,7 @@
               "title": "Amended release (identifier)"
             },
             "releaseID": {
-              "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
+              "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
               "type": [
                 "string",
                 "null"
@@ -27502,7 +27502,7 @@
       "properties": {
         "transactions": {
           "title": "Transactions",
-          "description": "A list of the spending transactions made against this contract",
+          "description": "The spending transactions made against this contract.",
           "type": "array",
           "items": {
             "type": "object",
@@ -27980,7 +27980,7 @@
                       },
                       "country": {
                         "title": "Country code",
-                        "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+                        "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                         "type": [
                           "string",
                           "null"
@@ -28507,7 +28507,7 @@
                       },
                       "country": {
                         "title": "Country code",
-                        "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+                        "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                         "type": [
                           "string",
                           "null"
@@ -30878,7 +30878,7 @@
         },
         "amount": {
           "title": "Amount",
-          "description": "The value reserved for the future contract(s), within the budget. A negative value indicates income to the budget as a result of the future contract(s), rather than expenditure. If the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line that will fund the future contract(s).",
+          "description": "The value reserved for the future contract(s), within the budget. A negative value indicates income to the budget as a result of the future contract(s), rather than expenditure. This field should not be used to report the total value of the budget line that will fund the future contract(s).",
           "type": "object",
           "properties": {
             "amount": {
@@ -31743,7 +31743,7 @@
                 },
                 "country": {
                   "title": "Country code",
-                  "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+                  "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                   "type": [
                     "string",
                     "null"
@@ -32270,7 +32270,7 @@
                 },
                 "country": {
                   "title": "Country code",
-                  "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+                  "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
                   "type": [
                     "string",
                     "null"
@@ -33248,7 +33248,7 @@
             },
             "country": {
               "title": "Country code",
-              "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+              "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
               "type": [
                 "string",
                 "null"
@@ -33826,7 +33826,7 @@
             },
             "country": {
               "title": "Country code",
-              "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+              "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
               "type": [
                 "string",
                 "null"
@@ -34187,7 +34187,7 @@
             "object",
             "null"
           ],
-          "description": "Additional classification information about organizations can be provided using organization details extensions that define particular fields and classification schemes.",
+          "description": "Additional information about the organization.",
           "title": "Details",
           "properties": {
             "scale": {
@@ -34299,7 +34299,7 @@
         },
         "additionalClassifications": {
           "title": "Additional classifications",
-          "description": "An array of additional classifications for the item.",
+          "description": "Additional classifications for the item.",
           "type": "array",
           "items": {
             "title": "Classification",
@@ -34792,7 +34792,7 @@
           "title": "Description"
         },
         "amendsReleaseID": {
-          "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
+          "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
           "type": [
             "string",
             "null"
@@ -34800,7 +34800,7 @@
           "title": "Amended release (identifier)"
         },
         "releaseID": {
-          "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
+          "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
           "type": [
             "string",
             "null"
@@ -34987,7 +34987,7 @@
         },
         "country": {
           "title": "Country code",
-          "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+          "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
           "type": [
             "string",
             "null"
@@ -36501,7 +36501,7 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "The list, register or system from which the identifier is taken.",
+          "description": "The list, register or system from which the identifier is taken. If the scope of the list, register or system from which the identifier is drawn is national, it is suggested to follow the pattern {ISO 3166-1 alpha-2}-{system}. If it is subnational, it is suggested to follow the pattern {ISO 3166-2}-{system}.",
           "type": [
             "string",
             "null"

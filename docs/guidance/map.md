@@ -11,21 +11,21 @@
 </div>
 ```
 
-This phase is about documenting your sources of contracting data, and documenting how that data "maps" to OCDS – that is, identifying which [data elements](https://en.wikipedia.org/wiki/Data_element) within your data sources match which OCDS [fields](../../schema/reference) and [codes](../../schema/codelists). The mapping phase is one of the longest and most important steps in the implementation process. 
+This phase is about documenting your sources of contracting data, and documenting how that data "maps" to OCDS – that is, identifying which [data elements](https://en.wikipedia.org/wiki/Data_element) within your data sources match which OCDS [fields](../../schema/reference) and [codes](../../schema/codelists). The Map phase is one of the longest and most important steps in the implementation process.
 
-When starting out, consider working in parallel on the map and build phases, because the choices you make at the build stage might affect how you need to map your data. For example, your choice of architecture might determine whether you are able to publish a change history using releases and records.
+When starting out, consider working in parallel on the Map and [Build](build) phases, because the choices you make at the Build phase might affect how you need to map your data. For example, your choice of architecture might determine whether you are able to publish a change history using releases and records.
 
-If your contracting (or planning) processes are managed on paper, using local spreadsheets or via unstructured electronic documents, and you’re reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools), then please [get in touch with the OCDS Helpdesk](../support/index.md#ocds-helpdesk) for guidance on how to identify which OCDS fields match your local concepts.
+If your contracting (or planning) processes are managed on paper, using local spreadsheets or via unstructured electronic documents, and you’re reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools), then please [get in touch with the Data Support Team](../support/index) for guidance on how to identify which OCDS fields match your local concepts.
 
 Mapping data to OCDS is not always easy. Before writing any software, this phase is an opportunity to:
 
 * Catch errors early on
 * Identify [hard cases](#deal-with-the-hard-cases) that need more attention
-* Get input from the [OCDS Helpdesk](../../support/index)
+* Get input from the [Data Support Team](../../support/index)
 
 The documentation you produce can also later be included in your [Data User Guide](publish.md#finalize-your-publication-policy).
 
-As you make progress through this phase, we encourage you to maintain a project plan, in order to help set priorities and ease communication within your team, with your stakeholders, and with the OCDS Helpdesk.
+As you make progress through this phase, we encourage you to maintain a project plan, in order to help set priorities and ease communication within your team, with your stakeholders, and with the Data Support Team.
 
 ## Involve the right people
 
@@ -43,7 +43,7 @@ If your contracting (or planning) processes are managed on paper, using local sp
 
 Once complete, you can:
 
-* Ask the [OCDS Helpdesk](../../support/index) to review your Technical Assessment.
+* Ask the [Data Support Team](../../support/index) to review your Technical Assessment.
 * Fill in the _Systems_ sheet of your Field-Level Mapping (introduced below).
 
 ## Localize OCDS to your context
@@ -69,7 +69,7 @@ To make the mapping easier we provide templates to list the data elements within
 
 If your contracting data is managed on paper or in unstructured electronic documents, you should use the templates to list the data elements in those data sources and map them to OCDS.
 
-You can [contact the OCDS Helpdesk](../support/index.md#ocds-helpdesk) for support and guidance on using the mapping templates.
+You can [contact the Data Support Team](../support/index) for guidance on using the mapping templates.
 
 ## Complete the mapping
 
@@ -82,7 +82,7 @@ You can complete the mapping in parts. For example, you might choose to split yo
 
 The preferred approach is to eventually list *all* the data elements within your data sources in your Field-Level Mapping, decide whether to publish each, and then map each. The decision to publish a data element is up to you; it isn't necessary to map all your contracting data.
 
-It is also important to focus on the data elements whose disclosure was prioritized by users during the [design](design) phase. If you have not determined which data elements are a priority, you ought to do this now, based on your user needs.
+It is also important to focus on the data elements whose disclosure was prioritized by users during the [Design](design) phase. If you have not determined which data elements are a priority, you ought to do this now, based on your user needs.
 
 Whichever approach you take, it's important that your eventual OCDS publication contain at least as much information as your other public datasets of contracting data; otherwise, users are less likely to use your OCDS publication.
 
@@ -131,7 +131,7 @@ For example, you have created an extension to add a new field to indicate whethe
 
 **Resource** [OCDS Glossary](https://github.com/open-contracting/glossary)
 
-**Action:** [Contact the OCDS Helpdesk](../../support/index) to get help with mapping data or authoring extensions.
+**Action:** [Contact the Data Support Team](../../support/index) to get help with mapping data or authoring extensions.
 
 **Action:** If you are stuck on a particular concept and are concerned about how it is modelled in OCDS, search the issues in our [GitHub tracker](https://github.com/open-contracting/standard/issues) to see what others in the community are saying about the topic. If you do not see your issue, create a new one!
 
@@ -157,6 +157,6 @@ map/linked_standards
 
 Once complete, you can:
 
-* Ask the [OCDS Helpdesk](../../support/index) to review your Field-Level Mapping and Technical Assessment Template.
+* Ask the [Data Support Team](../../support/index) to review your Field-Level Mapping and Technical Assessment Template.
 
 [Next phase: Build](build)

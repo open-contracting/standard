@@ -6,7 +6,7 @@
 
 This phase is about creating a new IT system, or updating an existing IT system, to implement your [mapping](map) and publish OCDS data.
 
-Alternatively, if you don't have the capacity to create or update an IT system, you can consider reusing an existing [data collection tool](build/data_collection_tools). If you're reusing an existing tool, this phase is about customizing that tool to meet your needs and working out how to combine and publish your data. The [OCDS Helpdesk](../support/index.md#ocds-helpdesk) can help you to consider options for collecting, combining and publishing data.
+Alternatively, if you don't have the capacity to create or update an IT system, you can consider reusing an existing [data collection tool](build/data_collection_tools). If you're reusing an existing tool, this phase is about customizing that tool to meet your needs and working out how to combine and publish your data. The [Data Support Team](../support/index) can help you to consider options for collecting, combining and publishing data.
 
 ```{toctree}
 :hidden:
@@ -29,14 +29,14 @@ To ensure that your `ocid`s do not conflict with those of another publisher, you
 **Resource**: To learn more about the `ocid` and its prefixes, refer to the [identifiers](../../schema/identifiers) reference.
 
 ```{note}
-All registered OCID prefixes are accessible as a [web page](https://docs.google.com/spreadsheets/d/1Am3gq0B77xN034-8hDjhb45wOuq-8qW6kGOdp40rN4M/pubhtml?gid=506986894&single=true&widget=true) or [CSV file](https://docs.google.com/spreadsheets/d/1Am3gq0B77xN034-8hDjhb45wOuq-8qW6kGOdp40rN4M/pub?gid=506986894&single=true&output=csv).
+All registered OCID prefixes are accessible as a [web page](https://docs.google.com/spreadsheets/d/1E5ZVhc8VhGOakCq4GegvkyFYT974QQb-sSjvOfaxH7s/pubhtml?gid=506986894&single=true&widget=true) or [CSV file](https://docs.google.com/spreadsheets/d/e/2PACX-1vQP8EwbUhsfxN7Fx7vX3mTA6Y8CXyGi04bHUepdcfxvM6VRVP9f5BWAYEG6MPbnJjWJp-La81DgG8wx/pub?gid=506986894&single=true&output=csv).
 ```
 
 ## Determine your system architecture
 
 There are many ways to extract data from data sources, combine it, map it to OCDS, and publish it. The [system architectures](build/system_architectures) guidance page describes some possible approaches.
 
-Your choice of architecture can determine how frequently your data is updated, whether you can publish a change history and the access methods available to your users. **Remember to check that your chosen architecture meets the needs you identified in the design stage.**
+Your choice of architecture can determine how frequently your data is updated, whether you can publish a [change history](../../primer/releases_and_records) and the access methods available to your users. **Remember to check that your chosen architecture meets the needs you identified in the [Design](design) phase.**
 
 ```{toctree}
 :hidden:
@@ -72,9 +72,9 @@ OCDS data can be published in different formats and accessed using different met
 
 It is best practice to provide data in multiple formats, so that as many users as possible can use the data without first having to transform it to their preferred format. In OCDS terms, this means [publishing both structured JSON data and tabular CSV or spreadsheet data](build/serialization).
 
-Where resources allow, it is also best practice to provide multiple access methods for your data, so that both humans and machines can access it easily. In OCDS terms, this means [providing both bulk downloads and an API](build/hosting). The [OCDS pagination extension](https://extensions.open-contracting.org/en/extensions/pagination/master/) describes how to paginate OCDS data via an API.
+Where resources allow, it is also best practice to provide multiple access methods for your data, so that both humans and machines can access it easily. In OCDS terms, this means [providing both bulk downloads and an API](build/hosting). For information on how to paginate OCDS data via an API, see [Pagination](build/hosting.md#pagination).
 
-**Remember to check that your chosen publication formats and access methods meet the needs you identified at the design stage.**
+**Remember to check that your chosen publication formats and access methods meet the needs you identified at the [Design](design) phase.**
 
 **Tool:** [Flatten-tool](https://flatten-tool.readthedocs.io/en/latest/usage-ocds/) can be used to convert OCDS data between JSON and CSV/spreadsheet formats.
 
@@ -92,7 +92,7 @@ Having determined your system architecture, it's time to implement it. This is o
 Whether your current infrastructure is low tech or high tech, we have tools and resources to help you publish OCDS. Depending on your [data sources](map.md#identify-your-data-sources) and system architecture, you might be able to reuse some of these OCDS tools:
 
 ```{note}
-If you have any issues using OCDS tools, contact the [OCDS Helpdesk](../../support/index).
+If you have any issues using OCDS tools, contact the [Data Support Team](../../support/index).
 ```
 
 * If you are creating (or upgrading) an **electronic government procurement (e-GP) system** or open contracting data portal, refer to our [Guide to Defining OCDS Functional Requirements for e-GP Systems](https://www.open-contracting.org/resources/guide-defining-open-contracting-data-standard-functional-requirements-electronic-government-procurement-systems/).
@@ -108,16 +108,14 @@ If you aren't creating or updating an IT system, but are instead reusing an exis
 * The [data collection spreadsheet](https://www.open-contracting.org/resources/data-collection-spreadsheet/) includes instructions describing how to add fields and how to add and reformat sheets.
 * The [data collection form](https://www.open-contracting.org/resources/ocds-data-collection-form/) includes instructions describing how to add fields and how to customize descriptions and guidance.
 
-Contact the [OCDS Helpdesk](../support/index.md#ocds-helpdesk) for support and guidance on customizing a tool to meet your needs.
+Contact the [Data Support Team](../support/index) for guidance on customizing a tool to meet your needs.
 
 **Resource:** [Using tabular versions of OCDS to generate JSON data](https://www.open-contracting.org/2020/03/06/using-tabular-versions-of-ocds-to-generate-json-data/) details the approach used in Paraguay.
 
 **Resource:** To learn about how to create a spreadsheet input template for OCDS, check out our blog series on prototyping OCDS data using spreadsheets ([Part 1](https://www.open-contracting.org/2020/04/24/prototyping-ocds-data-using-spreadsheets/), [Part 2](https://www.open-contracting.org/2020/05/11/prototyping-ocds-data-using-spreadsheets-part-ii/), [Part 3](https://www.open-contracting.org/2020/05/28/prototyping-ocds-data-using-spreadsheets-part-iii/)).
 
 ```{note}
-If you want to use OCDS Kit or Flatten Tool, but don't have access to the command line or can't install new software on your computer, you can use [OCDS Toucan](https://toucan.open-contracting.org/), which gives access to these tools through a web browser.
-
-Re-using tools isn't always easy. [Tool Re-Use in Open Contracting: A Primer](https://www.open-contracting.org/resources/tool-re-use-in-open-contracting-a-primer/) is a step-by-step guide to help you determine what you need, evaluate which tool is the right fit, and evaluate whether the right conditions are in place for successful re-use of a tool.
+Re-using tools isn't always easy. [Tool Reuse in Open Contracting: A Primer](https://www.open-contracting.org/resources/tool-re-use-in-open-contracting-a-primer/) is a step-by-step guide to help you determine what you need, evaluate which tool is the right fit, and evaluate whether the right conditions are in place for successful reuse of a tool.
 ```
 
 ## Build your extensions
@@ -126,9 +124,11 @@ If your [mapping](map) identified data elements which don't map to OCDS or an ex
 
 **Action:** Read the guidance on [developing new extensions](map/extensions.md#developing-new-extensions), which includes links to useful tools and resources.
 
-**Action:** Request support from the [OCDS Helpdesk](../../support/index) to model your extensions.
+**Action:** Request assistance from the [Data Support Team](../../support/index) to model your extensions.
 
 **Action:** Share your extensions with the OCDS community on [GitHub](https://github.com/open-contracting/standard/issues).
+
+**Resource:** [Webinar: Creating OCDS Extensions](https://youtu.be/1uTik92PWfo) ([presentation](https://docs.google.com/presentation/d/16poTfulCN1oYctfWnMJ9YDRrX1GJMi1MuOmFlOJMC5w/edit))
 
 ## Keep users in mind as you build
 
@@ -140,7 +140,7 @@ As covered in the [Design](design) phase, different users will need information 
 
 ## Check your data
 
-Throughout the build phase you ought to regularly use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check the structure and format of your data. This ensures that your data is compatible with OCDS tools and is comparable with other OCDS data.
+Throughout the Build phase you ought to regularly use the [OCDS Data Review Tool](https://review.standard.open-contracting.org/) to check the structure and format of your data. This ensures that your data is compatible with OCDS tools and is comparable with other OCDS data.
 
 OCDS data needs to be published as part of a release package or a record package. You can use [OCDS Kit](https://pypi.org/project/ocdskit/) to reformat your data before submitting it to the review tool, but any data you publish needs to be correctly packaged.
 
@@ -157,12 +157,14 @@ If you can't collect enough real data for testing, then you ought to create real
 * avoid using placeholder values
 * avoid setting multiple data elements to the same value.
 
-**Action:** Upload some data to the [OCDS Data Review Tool](https://standard.open-contracting.org/review/).
+**Action:** Upload some data to the [OCDS Data Review Tool](https://review.standard.open-contracting.org/).
 
-**Action:** Request feedback on your draft data from the [OCDS Helpdesk](../../support/index).
+**Action:** Request feedback on your draft data from the [Data Support Team](../../support/index).
 
 **Tool:** The [jOCDS Validator](https://developmentgateway.org/blog/your-data-ocds-compliant-introducing-jocds-validator) can be used for bulk checking of the structure and format of OCDS data
 
 **Resource:** [How to check your OCDS data validates](https://www.open-contracting.org/2018/05/09/check-ocds-data-validates/)
+
+**Resource:** [OCDS Data Quality Checklist](https://www.open-contracting.org/resources/ocds-data-quality-checklist/)
 
 [Next phase: Publish](publish)
