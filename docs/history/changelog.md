@@ -196,6 +196,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1455](https://github.com/open-contracting/standard/pull/1455) `Milestone.dueAfterDate`
   * [#1434](https://github.com/open-contracting/standard/pull/1434) `Milestone.value`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `tender.identifiers` and `contracts.identifiers`
+  * [#1654](https://github.com/open-contracting/standard/pull/1654) `tender.submissionTerms.electronicCatalogPolicy`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
