@@ -457,6 +457,46 @@
         "submissionMethodDetails": {
           "$ref": "#/definitions/StringNullVersioned"
         },
+        "submissionTerms": {
+          "type": "object",
+          "properties": {
+            "electronicCataloguePolicy": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "releaseDate": {
+                    "format": "date-time",
+                    "type": "string"
+                  },
+                  "releaseID": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "codelist": "permission.csv",
+                    "openCodelist": false,
+                    "enum": [
+                      "required",
+                      "allowed",
+                      "notAllowed",
+                      null
+                    ]
+                  },
+                  "releaseTag": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "datePublished": {
           "$ref": "#/definitions/StringNullDateTimeVersioned"
         },
