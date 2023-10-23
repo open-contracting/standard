@@ -6,46 +6,6 @@ Consistent identifiers are essential to help join up open contracting data.
 * Organization identifiers are important to know who is involved in each contract;
 * Release, award and contract identifiers are important to help cross-reference information.
 
-## Types of identifiers
-
-In OCDS there are two kinds of identifiers: globally unique and local.
-
-### Globally unique identifiers
-
-Across the whole universe of OCDS publishers these identifiers refer to one specific process or organization.
-
-We create globally unique process identifiers by adding a prefix to the internal identifiers held by publishers.
-
-```{admonition} Worked Example
-:class: hint
-
-Two government publishers (Town A and Town B) number their contracting processes from 0 upwards.
-
-Town A publishes information on a contracting process to build a new road. Internally they know this as contract 0005.
-
-Town B publishes information on a contracting process to buy textbooks for a school. Internally they also know this as contract 0005.
-
-When they publish their OCDS data, each government adds a unique prefix onto their internal identifiers.
-
-Now Town A's contracting process has the `ocid` of 'ocds-fh349f-0005' and Town B's contracting process has the `ocid` of 'ocds-twb234-0005'.
-
-There is now no chance of these getting mixed up in a system which imports data from both towns.
-
-And, if an independent civil society contract monitoring group want to publish a report about implementation of Town A's road project, or Town B's text-book procurement, they have distinct identifiers they can use in their own data to refer to these.
-```
-
-You can read more about the OCDS approach to identify organizations below.
-
-### Local identifiers
-
-Not all the identifiers in OCDS need to be globally unique. Most only need to be unique among the identifiers used for the same type of object within the same scope. For example:
-
-* A release ID must be unique within the scope of the process of which it is a part;
-* Award and contract identifiers must be unique within the scope of the process of which they are a part;
-* An item, milestone or document ID must be unique within the array it is part of.
-
-Local identifiers must be used consistently. For example, if the `id` of an award is "22" in one release, then the `id` of the same award in another release must also be "22".
-
 ## Open contracting process identifier (ocid)
 
 <img src="../../_static/svg/green_compilation.svg" width="150" align="right"/>
@@ -69,6 +29,49 @@ It is encouraged to separate the OCID prefix and the internal identifier with a 
 The `ocid` is case-sensitive; in other words, the letter case of an ocid must be consistent.
 
 To assign an `ocid` to a contracting (or planning) process, you need to register an OCID prefix and choose an internal identifier.
+
+````{admonition} Worked Example
+:class: hint
+
+Two publishers, the UK Atomic Energy Authority and Health Canada, use sequential numbers as internal identifiers for their contracting processes.
+
+The UK Atomic Energy Authority initiates a contracting process to purchase productivity software and assigns it the internal identifier '0005'. Health Canada initiates a contracting process to purchase office furniture and also assigns it the internal identifier '0005'.
+
+To create a globally unique `ocid`, each publisher prepends their internal identifier with their OCID prefix: 'ocds-fh349f' for the UK Atomic Energy Authority and 'ocds-twb234 for Health Canada.
+
+The UK Atomic Energy Authority assigns the `ocid` 'ocds-fh349f-0005'.
+
+```json
+{
+  "ocid": "ocds-fh349f-0005",
+  "publisher": {
+    "name": "UK Atomic Energy Authority"
+  },
+  "tender": {
+    "id": "0005",
+    "title": "Productivity software"
+  }
+}
+```
+
+Health Canada assigns the `ocid` 'ocds-twb234-0005'.
+
+```json
+{
+  "ocid": "ocds-twb234-0005",
+  "publisher": {
+    "name": "Health Canada"
+  },
+  "tender": {
+    "id": "0005",
+    "title": "Office furniture"
+  }
+}
+```
+
+As a result, users and tools that work with data from both publishers are less likely to confuse the two contracting processes. If another publisher, such as an independent monitor, wants to publish more data about one of the contracting processes, they can reference it using its unique `ocid`.
+
+````
 
 ### OCID prefix
 
@@ -118,22 +121,28 @@ There are two parts to expressing an **organization identifier** in open contrac
 * A prefix for the organization list (also known as registry or register) from which the identifier is drawn: for example, a company register.
 * The existing identifier for the organization within that list.
 
+In OCDS, the list's prefix is disclosed via the `scheme` field of an identifier object, with the existing identifier in the `id` field. If there is a recognized public URL that uniquely identifies the organization, this can be disclosed via the `uri` field.
+
 ````{admonition} Worked Example
 :class: hint
 
-The prefix for the UK's Companies House is "GB-COH". The organization Development Initiatives has been assigned the company number ‘06368740’ by Companies House. The globally unique organization identifier for Development Initiatives can be expressed as below:
+Companies in the UK are assigned identifiers by [Companies House](https://www.gov.uk/government/organisations/companies-house). MICROSOFT LIMITED's identifier is '01624297' and the prefix for Companies House is "GB-COH". Therefore, MICROSOFT LIMITED's organization identifier can be expressed as follows:
 
 ```json
 {
-  "scheme": "GB-COH",
-  "id": "06368740",
-  "uri": "http://data.companieshouse.gov.uk/doc/company/06368740",
-  "legalName": "Development Initiatives Poverty Research Limited"
+  "parties": [
+    {
+      "identifier": {
+        "scheme": "GB-COH",
+        "id": "01624297",
+        "legalName": "MICROSOFT LIMITED",
+        "uri": "http://data.companieshouse.gov.uk/doc/company/01624297"
+      } 
+    }
+  ]
 }
 ```
 ````
-
-In OCDS, the list's prefix is disclosed via the `scheme` field of an identifier object, with the existing identifier in the `id` field. If there is a recognized public URL that uniquely identifies the organization (like in the above example), this can be disclosed via the `uri` field.
 
 ### Organization lists
 
