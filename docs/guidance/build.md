@@ -28,10 +28,6 @@ To ensure that your `ocid`s do not conflict with those of another publisher, you
 
 **Resource**: To learn more about the `ocid` and its prefixes, refer to the [identifiers](../../schema/identifiers) reference.
 
-```{note}
-All registered OCID prefixes are accessible as a [web page](https://docs.google.com/spreadsheets/d/1E5ZVhc8VhGOakCq4GegvkyFYT974QQb-sSjvOfaxH7s/pubhtml?gid=506986894&single=true&widget=true) or [CSV file](https://docs.google.com/spreadsheets/d/e/2PACX-1vQP8EwbUhsfxN7Fx7vX3mTA6Y8CXyGi04bHUepdcfxvM6VRVP9f5BWAYEG6MPbnJjWJp-La81DgG8wx/pub?gid=506986894&single=true&output=csv).
-```
-
 ## Determine your system architecture
 
 There are many ways to extract data from data sources, combine it, map it to OCDS, and publish it. The [system architectures](build/system_architectures) guidance page describes some possible approaches.
