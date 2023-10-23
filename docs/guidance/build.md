@@ -32,7 +32,7 @@ To ensure that your `ocid`s do not conflict with those of another publisher, you
 
 There are many ways to extract data from data sources, combine it, map it to OCDS, and publish it. The [system architectures](build/system_architectures) guidance page describes some possible approaches.
 
-Your choice of architecture can determine how frequently your data is updated, whether you can publish a [change history](../../primer/releases_and_records) and the access methods available to your users. **Remember to check that your chosen architecture meets the needs you identified in the design stage.**
+Your choice of architecture can determine how frequently your data is updated, whether you can publish a [change history](../../primer/releases_and_records) and the access methods available to your users. **Remember to check that your chosen architecture meets the needs you identified in the [Design](design) phase.**
 
 ```{toctree}
 :hidden:
@@ -70,7 +70,7 @@ It is best practice to provide data in multiple formats, so that as many users a
 
 Where resources allow, it is also best practice to provide multiple access methods for your data, so that both humans and machines can access it easily. In OCDS terms, this means [providing both bulk downloads and an API](build/hosting). For information on how to paginate OCDS data via an API, see [Pagination](build/hosting.md#pagination).
 
-**Remember to check that your chosen publication formats and access methods meet the needs you identified at the design stage.**
+**Remember to check that your chosen publication formats and access methods meet the needs you identified at the [Design](design) phase.**
 
 **Tool:** [Flatten-tool](https://flatten-tool.readthedocs.io/en/latest/usage-ocds/) can be used to convert OCDS data between JSON and CSV/spreadsheet formats.
 
@@ -111,7 +111,7 @@ Contact the [Data Support Team](../support/index) for guidance on customizing a 
 **Resource:** To learn about how to create a spreadsheet input template for OCDS, check out our blog series on prototyping OCDS data using spreadsheets ([Part 1](https://www.open-contracting.org/2020/04/24/prototyping-ocds-data-using-spreadsheets/), [Part 2](https://www.open-contracting.org/2020/05/11/prototyping-ocds-data-using-spreadsheets-part-ii/), [Part 3](https://www.open-contracting.org/2020/05/28/prototyping-ocds-data-using-spreadsheets-part-iii/)).
 
 ```{note}
-Re-using tools isn't always easy. [Tool Re-Use in Open Contracting: A Primer](https://www.open-contracting.org/resources/tool-re-use-in-open-contracting-a-primer/) is a step-by-step guide to help you determine what you need, evaluate which tool is the right fit, and evaluate whether the right conditions are in place for successful re-use of a tool.
+Re-using tools isn't always easy. [Tool Reuse in Open Contracting: A Primer](https://www.open-contracting.org/resources/tool-re-use-in-open-contracting-a-primer/) is a step-by-step guide to help you determine what you need, evaluate which tool is the right fit, and evaluate whether the right conditions are in place for successful reuse of a tool.
 ```
 
 ## Build your extensions
@@ -136,7 +136,7 @@ As covered in the [Design](design) phase, different users will need information 
 
 ## Check your data
 
-Throughout the build phase you ought to regularly use the [OCDS Data Review Tool](https://review.standard.open-contracting.org/) to check the structure and format of your data. This ensures that your data is compatible with OCDS tools and is comparable with other OCDS data.
+Throughout the Build phase you ought to regularly use the [OCDS Data Review Tool](https://review.standard.open-contracting.org/) to check the structure and format of your data. This ensures that your data is compatible with OCDS tools and is comparable with other OCDS data.
 
 OCDS data needs to be published as part of a release package or a record package. You can use [OCDS Kit](https://pypi.org/project/ocdskit/) to reformat your data before submitting it to the review tool, but any data you publish needs to be correctly packaged.
 

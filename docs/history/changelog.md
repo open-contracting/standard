@@ -86,8 +86,10 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1637](https://github.com/open-contracting/standard/pull/1637) Add 'sdg' and 'sdgTarget'.
 
 * `documentType.csv`:
-  * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'.
-  * [#1453](https://github.com/open-contracting/standard/pull/1453) Add 'marketEngagementNotice'.
+  * Add codes:
+    * [#1336](https://github.com/open-contracting/standard/pull/1336) 'unsuccessfulDetails'
+    * [#1453](https://github.com/open-contracting/standard/pull/1453) 'marketEngagementNotice'
+    * [#1647](https://github.com/open-contracting/standard/pull/1647) 'noObjectionCertificate'
   * [#1419](https://github.com/open-contracting/standard/pull/1419) Add codes for document types described in the [UNCITRAL Model Law on Public Procurement](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement):
     * 'otherParticipationRequirements'
     * 'procurementMethodRationale'
@@ -120,10 +122,13 @@ Per the [normative and non-normative content and changes policy](../governance/n
     * 'procurement'
     * 'contractClose'
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "tender submissions" with "bid submissions".
+  * [#1644](https://github.com/open-contracting/standard/pull/1644) Replace "pre-procurement phase" with "planning process".
 
 * `partyRole.csv`:
-  * [#1187](https://github.com/open-contracting/standard/pull/1187) Add 'contractImplementationManager'
-  * [#1474](https://github.com/open-contracting/standard/pull/1474) Add 'notifiedPotentialSupplier'
+  * Add codes:
+    * [#1187](https://github.com/open-contracting/standard/pull/1187) 'contractImplementationManager'
+    * [#1474](https://github.com/open-contracting/standard/pull/1474) 'notifiedPotentialSupplier'
+    * [#1652](https://github.com/open-contracting/standard/pull/1652) 'wholesaleBuyer'
   * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
     * 'informationService'
     * 'mediationBody'
@@ -135,9 +140,12 @@ Per the [normative and non-normative content and changes policy](../governance/n
     * 'lender'
     * 'equityInvestor'
   * [#1182](https://github.com/open-contracting/standard/pull/1182) Deprecate 'funder'
-  * [#1163](https://github.com/open-contracting/standard/pull/1163) Clarify the description of 'procuringEntity'.
-  * [#1182](https://github.com/open-contracting/standard/pull/1182) Clarify the description of 'buyer'.
-  * [#1232](https://github.com/open-contracting/standard/pull/1232) Clarify the description of 'supplier'.
+  * Clarify the descriptions of:
+    * [#1182](https://github.com/open-contracting/standard/pull/1182) 'buyer'
+    * [#1644](https://github.com/open-contracting/standard/pull/1182) 'enquirer'
+    * [#1644](https://github.com/open-contracting/standard/pull/1644) 'interestedParty'
+    * [#1163](https://github.com/open-contracting/standard/pull/1163) 'procuringEntity'
+    * [#1232](https://github.com/open-contracting/standard/pull/1232) 'supplier'
   * [#1352](https://github.com/open-contracting/standard/pull/1352) Replace "party", "entity", etc. with "organization".
   * [#1353](https://github.com/open-contracting/standard/pull/1353) Replace "submit a tender" with "submit a bid".
 
@@ -188,6 +196,8 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1439](https://github.com/open-contracting/standard/pull/1439) `Document.relatedItems`
   * [#1455](https://github.com/open-contracting/standard/pull/1455) `Milestone.dueAfterDate`
   * [#1434](https://github.com/open-contracting/standard/pull/1434) `Milestone.value`
+  * [#1490](https://github.com/open-contracting/standard/pull/1490) `SimpleIdentifier`
+  * [#1519](https://github.com/open-contracting/standard/pull/1519) `Value.amountNet` and `Value.amountGross`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `tender.identifiers` and `contracts.identifiers`
 
 * Deprecate some fields:
@@ -209,6 +219,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1335](https://github.com/open-contracting/standard/pull/1335) Standardize the descriptions of `planning`, `planning.rationale`, `planning.budget`, `planning.documents`, and `planning.milestones`.
   * [#1530](https://github.com/open-contracting/standard/pull/1530) `Buyer`, `tender.items`, `awards.items`, `contracts.items`, `Item`, `Item.description`, `Item.unit`, `Unit`, `transaction.providerOrganization`, `transaction.receiverOrganization` to use consistent wording for "goods, services and/or works".
   * [#1528](https://github.com/open-contracting/standard/pull/1528) `tender.id`, `tender.hasEnquiries`, to reduce ambiguity and use consistent wording in the description of procurement stages.
+  * [#1519](https://github.com/open-contracting/standard/pull/1519) `value.amount`, to clarify amount taken from system or document.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) `tender.enquiryPeriod`, to remove the suggestion to use `tender.submissionMethodDetails` for information about how to submit enquiries.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) Normalize field descriptions according to a style guide.
 
@@ -274,6 +285,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * [#1618](https://github.com/open-contracting/standard/pull/1618) Add conformance rule about normative statements.
 * [#1618](https://github.com/open-contracting/standard/pull/1618) Remove validator and application conformance rules.
 * [#1618](https://github.com/open-contracting/standard/pull/1618) Move governance policies from Google Docs, updating references for OCDS 1.1.5 and OCDS 1.2.0, and removing references to GitHub issues.
+* [#1643](https://github.com/open-contracting/standard/pull/1643) Update identifier section in release reference.
 
 ## [1.1.5] - 2020-08-20
 
