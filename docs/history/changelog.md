@@ -222,6 +222,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1519](https://github.com/open-contracting/standard/pull/1519) `value.amount`, to clarify amount taken from system or document.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) `tender.enquiryPeriod`, to remove the suggestion to use `tender.submissionMethodDetails` for information about how to submit enquiries.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) Normalize field descriptions according to a style guide.
+  * [#1656](https://github.com/open-contracting/standard/pull/1656) `Award.value` and `Contract.value`, to clarify with respect to changes in contract values.
 
 * Remove confusing terminology:
   * [#1487](https://github.com/open-contracting/standard/pull/1487) `planning.budget.project`, to remove sentence about translation options.
