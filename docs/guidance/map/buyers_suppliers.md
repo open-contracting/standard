@@ -42,9 +42,25 @@ Siemens and Microsoft bid as a consortium for a contract to develop a new medica
 
 The contract is awarded to the consortium; however, the legal entity for the consortium is not created until after the contract award.
 
-Both Siemens and Microsoft are listed as suppliers on the contract award in OCDS, with the respective legal entity identifiers for each organization:
+Both Siemens and Microsoft are listed as suppliers on the contract award in OCDS, with the respective ids for each organization that match their id in the `Parties` array:
 
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../examples/organizations/consortia_simple.csv
+```json
+{
+  "awards": [
+    {
+      "id": "DHSC-2019-A18074",
+      "title": "Medical imaging device development",
+      "suppliers": [
+        {
+          "name": "SIEMENS PUBLIC LIMITED COMPANY",
+          "id": "GB-COH-727817"
+        },
+        {
+          "name": "MICROSOFT LIMITED",
+          "id":"GB-COH-1624297"
+        }
+      ]
+    }
+  ]
+}
 ```
