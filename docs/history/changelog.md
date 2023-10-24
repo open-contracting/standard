@@ -151,9 +151,11 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * `releaseTag.csv`:
   * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
-  * [#1415](https://github.com/open-contracting/standard/pull/1415) Align descriptions of 'planning', 'tender', 'award' and 'contract' with the corresponding schema fields.
+  * [#1415](https://github.com/open-contracting/standard/pull/1415), [#1509](https://github.com/open-contracting/standard/pull/1509) Align descriptions of 'planning', 'tender', 'award' and 'contract' with the corresponding schema fields.
 
-* [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
+* `tenderStatus`, `awardStatus` and `contractStatus`:
+  * [#1509](https://github.com/open-contracting/standard/pull/1509) Clarify semantics and deprecate codes.
+
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `submissionMethod` codelist, because its codes were either not submission methods, or not supported by use cases.
 * [#1389](https://github.com/open-contracting/standard/pull/1389) Deprecate the `initiationType` codelist, because the approach to data modelling that it supports was not pursued.
 * [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
@@ -206,6 +208,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.countryName` in favor of the new `Address.country` field, to promote standardized country codes instead of non-standardized country names.
   * [#1389](https://github.com/open-contracting/standard/pull/1389) `initiationType`, because the approach to data modelling that it supports was not pursued.
   * [#1380](https://github.com/open-contracting/standard/pull/1380) `Document.language` in favor of the new `Document.languages` field, to support documents in which multiple languages are used.
+  * [#1509](https://github.com/open-contracting/standard/pull/1509) `tender.status`, `Award.status`, `Contract.status`, because the same information can be provided by filling in the relevant date fields.
 
 * Update and clarify field descriptions:
   * [#1113](https://github.com/open-contracting/standard/pull/1113) `ocid`, to recommend a hyphen after the ocid prefix.
@@ -222,6 +225,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1519](https://github.com/open-contracting/standard/pull/1519) `value.amount`, to clarify amount taken from system or document.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) `tender.enquiryPeriod`, to remove the suggestion to use `tender.submissionMethodDetails` for information about how to submit enquiries.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) Normalize field descriptions according to a style guide.
+  * [#1509](https://github.com/open-contracting/standard/pull/1509) `planning`, `Planning`, `tender` and `Tender` to clarify relationships with the availability of documents.
 
 * Remove confusing terminology:
   * [#1487](https://github.com/open-contracting/standard/pull/1487) `planning.budget.project`, to remove sentence about translation options.
