@@ -154,7 +154,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1415](https://github.com/open-contracting/standard/pull/1415), [#1509](https://github.com/open-contracting/standard/pull/1509) Align descriptions of 'planning', 'tender', 'award' and 'contract' with the corresponding schema fields.
 
 * `tenderStatus`, `awardStatus` and `contractStatus`:
-  * [#1509](https://github.com/open-contracting/standard/pull/1509) Clarify semantics and deprecate codes.
+  * [#1509](https://github.com/open-contracting/standard/pull/1509) [#1658](https://github.com/open-contracting/standard/pull/1658) Clarify semantics and deprecate codes.
 
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `submissionMethod` codelist, because its codes were either not submission methods, or not supported by use cases.
 * [#1389](https://github.com/open-contracting/standard/pull/1389) Deprecate the `initiationType` codelist, because the approach to data modelling that it supports was not pursued.
