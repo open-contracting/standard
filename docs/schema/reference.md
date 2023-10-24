@@ -654,7 +654,14 @@ For delivery milestones, if there is a time frame for delivery, use `.dueAfterDa
 
 ### Value
 
-Financial values should be published with a currency attached. 
+`currency`, `amountNet` and `amountGross` should be provided, wherever possible.
+
+`amount` is defined as:
+
+```{field-description} ../../build/current_lang/release-schema.json /definitions/Value/properties/amount
+```
+
+If both the `amountNet` and the `amountGross` match this definition, enter the `amountNet` as the `amount`.
 
 ````{admonition} Example
 :class: hint
@@ -669,7 +676,7 @@ Financial values should be published with a currency attached.
 :pointer: /definitions/Value
 ```
 
-Support for exchange rates, and tax information, can be provided using extensions.
+Support for exchange rates can be provided using extensions.
 
 ### RelatedProcess
 

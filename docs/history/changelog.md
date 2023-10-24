@@ -86,8 +86,10 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1637](https://github.com/open-contracting/standard/pull/1637) Add 'sdg' and 'sdgTarget'.
 
 * `documentType.csv`:
-  * [#1336](https://github.com/open-contracting/standard/pull/1336) Add 'unsuccessfulDetails'.
-  * [#1453](https://github.com/open-contracting/standard/pull/1453) Add 'marketEngagementNotice'.
+  * Add codes:
+    * [#1336](https://github.com/open-contracting/standard/pull/1336) 'unsuccessfulDetails'
+    * [#1453](https://github.com/open-contracting/standard/pull/1453) 'marketEngagementNotice'
+    * [#1647](https://github.com/open-contracting/standard/pull/1647) 'noObjectionCertificate'
   * [#1419](https://github.com/open-contracting/standard/pull/1419) Add codes for document types described in the [UNCITRAL Model Law on Public Procurement](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement):
     * 'otherParticipationRequirements'
     * 'procurementMethodRationale'
@@ -123,8 +125,10 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1644](https://github.com/open-contracting/standard/pull/1644) Replace "pre-procurement phase" with "planning process".
 
 * `partyRole.csv`:
-  * [#1187](https://github.com/open-contracting/standard/pull/1187) Add 'contractImplementationManager'
-  * [#1474](https://github.com/open-contracting/standard/pull/1474) Add 'notifiedPotentialSupplier'
+  * Add codes:
+    * [#1187](https://github.com/open-contracting/standard/pull/1187) 'contractImplementationManager'
+    * [#1474](https://github.com/open-contracting/standard/pull/1474) 'notifiedPotentialSupplier'
+    * [#1652](https://github.com/open-contracting/standard/pull/1652) 'wholesaleBuyer'
   * [#1225](https://github.com/open-contracting/standard/pull/1225) Add codes from the EU extension:
     * 'informationService'
     * 'mediationBody'
@@ -147,9 +151,11 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * `releaseTag.csv`:
   * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
-  * [#1415](https://github.com/open-contracting/standard/pull/1415) Align descriptions of 'planning', 'tender', 'award' and 'contract' with the corresponding schema fields.
+  * [#1415](https://github.com/open-contracting/standard/pull/1415), [#1509](https://github.com/open-contracting/standard/pull/1509) Align descriptions of 'planning', 'tender', 'award' and 'contract' with the corresponding schema fields.
 
-* [#1201](https://github.com/open-contracting/standard/pull/1201) Add 'terminatedEarly' and 'terminatedSuccessfully' codes to the `contractStatus` codelist, to distinguish between successful completion and early termination of the contract.
+* `tenderStatus`, `awardStatus` and `contractStatus`:
+  * [#1509](https://github.com/open-contracting/standard/pull/1509) Clarify semantics and deprecate codes.
+
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `submissionMethod` codelist, because its codes were either not submission methods, or not supported by use cases.
 * [#1389](https://github.com/open-contracting/standard/pull/1389) Deprecate the `initiationType` codelist, because the approach to data modelling that it supports was not pursued.
 * [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
@@ -193,6 +199,8 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1439](https://github.com/open-contracting/standard/pull/1439) `Document.relatedItems`
   * [#1455](https://github.com/open-contracting/standard/pull/1455) `Milestone.dueAfterDate`
   * [#1434](https://github.com/open-contracting/standard/pull/1434) `Milestone.value`
+  * [#1490](https://github.com/open-contracting/standard/pull/1490) `SimpleIdentifier`
+  * [#1519](https://github.com/open-contracting/standard/pull/1519) `Value.amountNet` and `Value.amountGross`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `tender.identifiers` and `contracts.identifiers`
 
 * Deprecate some fields:
@@ -201,6 +209,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.countryName` in favor of the new `Address.country` field, to promote standardized country codes instead of non-standardized country names.
   * [#1389](https://github.com/open-contracting/standard/pull/1389) `initiationType`, because the approach to data modelling that it supports was not pursued.
   * [#1380](https://github.com/open-contracting/standard/pull/1380) `Document.language` in favor of the new `Document.languages` field, to support documents in which multiple languages are used.
+  * [#1509](https://github.com/open-contracting/standard/pull/1509) `tender.status`, `Award.status`, `Contract.status`, because the same information can be provided by filling in the relevant date fields.
 
 * Update and clarify field descriptions:
   * [#1113](https://github.com/open-contracting/standard/pull/1113) `ocid`, to recommend a hyphen after the ocid prefix.
@@ -214,9 +223,11 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1335](https://github.com/open-contracting/standard/pull/1335) Standardize the descriptions of `planning`, `planning.rationale`, `planning.budget`, `planning.documents`, and `planning.milestones`.
   * [#1530](https://github.com/open-contracting/standard/pull/1530) `Buyer`, `tender.items`, `awards.items`, `contracts.items`, `Item`, `Item.description`, `Item.unit`, `Unit`, `transaction.providerOrganization`, `transaction.receiverOrganization` to use consistent wording for "goods, services and/or works".
   * [#1528](https://github.com/open-contracting/standard/pull/1528) `tender.id`, `tender.hasEnquiries`, to reduce ambiguity and use consistent wording in the description of procurement stages.
+  * [#1519](https://github.com/open-contracting/standard/pull/1519) `value.amount`, to clarify amount taken from system or document.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) `tender.enquiryPeriod`, to remove the suggestion to use `tender.submissionMethodDetails` for information about how to submit enquiries.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) Normalize field descriptions according to a style guide.
-  * [#1648](https://github.com/open-contracting/standard/pull/1648) `tender.datePublished`, to clarify its relation to bidding documents.
+  * [#1648](https://github.com/open-contracting/standard/pull/1648) `tender.datePublished`, to clarify its relation to procurement documents.
+  * [#1509](https://github.com/open-contracting/standard/pull/1509) `planning`, `Planning`, `tender` and `Tender` to clarify relationships with the availability of documents.
 
 * Remove confusing terminology:
   * [#1487](https://github.com/open-contracting/standard/pull/1487) `planning.budget.project`, to remove sentence about translation options.
