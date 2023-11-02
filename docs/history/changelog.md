@@ -153,7 +153,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * [#1550](https://github.com/open-contracting/standard/pull/1550) Align and improve code descriptions in `extendedProcurementCategory` and `procurementCategory`.
 * [#1645](https://github.com/open-contracting/standard/pull/1645) `relatedProcess.csv`:
   * Add 'successfulProcess' and deprecate 'prior', 'replacementProcess' and 'renewalProcess'
-  * Deprecate 'subContract', in favour of 'parent'
+  * Deprecate 'subContract', in favor of 'parent'
   * Update descriptions: 'prior', 'framework', 'unsuccessfulProcess'
 
 ### Schema
@@ -539,7 +539,7 @@ See the changelogs for:
 
 * [#355](https://github.com/open-contracting/standard/issues/355) **[Deprecating milestone documents](../schema/reference.md#milestone)** - We have deprecated milestone documents from core, and added a milestone documents extension for those who wish to continue to use documents at the milestone level.
 * [#368](https://github.com/open-contracting/standard/issues/368) **[Updates to organization handling in OCDS](../schema/reference.md#parties)** - We have deprecated use of the full organization block at points other than the parties array.
-* [#372](https://github.com/open-contracting/standard/issues/372) **[Updates to transactions terminology](../schema/reference.md#transaction)** - receiverOrganization, providerOrganization and amount properties have been deprecated in favour or other terms.
+* [#372](https://github.com/open-contracting/standard/issues/372) **[Updates to transactions terminology](../schema/reference.md#transaction)** - receiverOrganization, providerOrganization and amount properties have been deprecated in favor or other terms.
 
 ## [1.0.3] - 2017-07-31
 
