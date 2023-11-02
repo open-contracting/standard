@@ -1,6 +1,6 @@
 # Packaging
 
-In this section you will find the schema for [release packages](release_package.md) and [record packages](record_package.md), which act as envelopes for releases and records, respectively.
+This section describes the schema for [release packages](release_package) and [record packages](record_package), which act as envelopes for releases and records, respectively.
 
 ```{toctree}
 :hidden:

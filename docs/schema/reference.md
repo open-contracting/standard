@@ -66,7 +66,7 @@ A contract for ‘Software consultancy services’ is published in a release wit
 
 ## Release structure
 
-The majority of OCDS data is held within a release structure. One or more releases can be published within a [release package](packaging/release_package.md). Releases are made up of a number of sections, arranged in the following structure.
+The majority of OCDS data is held within a release structure. One or more releases can be published within a [release package](packaging/release_package). Releases are made up of a number of sections, arranged in the following structure.
 
 * [release](#release)
   * [parties](#parties) 
