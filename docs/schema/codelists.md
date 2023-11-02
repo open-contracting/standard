@@ -125,7 +125,7 @@ The submission method codelist is used to identify the mechanism through which a
 Added 'successfulProcess'. Deprecated 'prior', 'subContract', 'replacementProcess' and 'renewalProcess'.
 ```
 
-```{field-description} ../../../build/current_lang/release-schema.json /definitions/RelatedProcess
+```{field-description} ../../build/current_lang/release-schema.json /definitions/RelatedProcess
 ```
 
 ```{seealso}
