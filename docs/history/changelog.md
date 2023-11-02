@@ -152,12 +152,9 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * [#1530](https://github.com/open-contracting/standard/pull/1530) Use consistent wording for "goods, services and/or works" in the `classificationScheme`, `extendedProcurementCategory`, `partyRole` and `procurementCategory` codelists.
 * [#1550](https://github.com/open-contracting/standard/pull/1550) Align and improve code descriptions in `extendedProcurementCategory` and `procurementCategory`.
 * [#1645](https://github.com/open-contracting/standard/pull/1645) `relatedProcess.csv`:
-  * Add 'prior.replacement' and deprecate 'replacementProcess'
-  * Add 'prior.renewal' and deprecate 'renewalProcess'
-  * Add 'prior.additional'
-  * Add 'prior.repetition'
+  * Add 'successfulProcess' and deprecate 'prior', 'replacementProcess' and 'renewalProcess'
   * Deprecate 'subContract', in favour of 'parent'
-  * Update descriptions: 'prior', 'framework'.
+  * Update descriptions: 'prior', 'framework', 'unsuccessfulProcess'
 
 ### Schema
 
