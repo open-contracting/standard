@@ -4,19 +4,19 @@
 
 # Connecting releases from different publications
 
-Different OCDS publications can contain releases describing the same contracting process. In OCDS, each contracting or planning process is assigned a globally unique identifier, the [ocid](../../schema/identifiers.md#open-contracting-process-identifier-ocid). Ideally, releases describing the same contracting or planning process in different publications would reuse the same ocid so that users can [merge releases](../../schema/merging.md).
+Different OCDS publications can contain releases describing the same contracting process. In OCDS, each contracting or planning process is assigned a globally unique identifier, the [OCID](../../schema/identifiers.md#open-contracting-process-identifier-ocid). Ideally, releases describing the same contracting or planning process in different publications would reuse the same OCID so that users can [merge releases](../../schema/merging.md).
 
-This page describes the problems that can occur when reusing ocids across publications, how to connect releases from different publications without reusing ocids, and how to reuse ocids across publications.
+This page describes the problems that can occur when reusing OCIDs across publications, how to connect releases from different publications without reusing OCIDs, and how to reuse OCIDs across publications.
 
 The examples on this page are based on Scotland's Public Contracts Scotland (PCS) publication and the UK's Find a Tender Service (FTS) publication, both of which include releases about the same contracting processes, covering the same contracting process stages and having many fields in common.
 
-## Problems with reusing ocids across publications
+## Problems with reusing OCIDs across publications
 
-Unless publications have disjoint coverage of OCDS fields or implement consistent mappings, reusing the ocids across publications can result in unpredictable and nonsensical results when releases are merged to create a compiled release. For example, unless publications use an identical approach to assigning [local identifiers](../../schema/identifiers.md#local-identifiers) to objects in arrays, then awards, contracts and other objects in arrays can overwrite and/or duplicate each other in nonsensical ways.
+Unless publications have disjoint coverage of OCDS fields or implement consistent mappings, reusing the OCIDs across publications can result in unpredictable and nonsensical results when releases are merged to create a compiled release. For example, unless publications use an identical approach to assigning [local identifiers](../../schema/identifiers.md#local-identifiers) to objects in arrays, then awards, contracts and other objects in arrays can overwrite and/or duplicate each other in nonsensical ways.
 
-### Example: Reusing ocids across Public Contracts Scotland and Find a Tender Service
+### Example: Reusing OCIDs across Public Contracts Scotland and Find a Tender Service
 
-The PCS and FTS publications have many overlapping fields, but implement slightly different mappings. Therefore, if FTS were to reuse the ocids minted by PCS, merging releases would result in nonsensical data
+The PCS and FTS publications have many overlapping fields, but implement slightly different mappings. Therefore, if FTS were to reuse the OCIDs minted by PCS, merging releases would result in nonsensical data
 
 For example, the publications implement inconsistent mappings for the `.id` of the buyer in the `.parties` array so merging releases would result in duplicate buyers:
 
@@ -100,11 +100,11 @@ For example, the publications implement inconsistent mappings for the `.id` of t
 ````
 `````
 
-## How to connect releases from different publications without reusing ocids
+## How to connect releases from different publications without reusing OCIDs
 
 If publications have overlapping fields and inconsistent mappings, then you ought to use [links](../../schema/reference.md#link) to connect releases across the publications. If, like FTS, a publication's releases are derived from another publication's data, the derivative publication ought to use the 'canonical' [link relation type](../../schema/codelists.md#link-relation-type) to refer to the releases in the authoritative publication. If a publication's releases follow another publication's releases, the subsequent publication ought to use the 'prev' link relation type to refer to the earlier releases.
 
-Building on the PCS and FTS example, the publishers agreed that PCS is the canonical publication. Therefore, when re-publishing releases from PCS, FTS mints a new ocid using its own [ocid prefix](../../schema/identifiers.md#registered-prefixes) and links back to the PCS release using the 'canonical' link relation type:
+Building on the PCS and FTS example, the publishers agreed that PCS is the canonical publication. Therefore, when re-publishing releases from PCS, FTS mints a new OCID using its own [OCID prefix](../../schema/identifiers.md#registered-prefixes) and links back to the PCS release using the 'canonical' link relation type:
 
 `````{tab-set}
 ````{tab-item}  PCS release
@@ -163,17 +163,17 @@ Building on the PCS and FTS example, the publishers agreed that PCS is the canon
 ````
 `````
 
-### How to reuse ocids across publications
+### How to reuse OCIDs across publications
 
-There are two scenarios in which reusing ocids across publications might be possible: publications with distinct coverage of OCDS fields and publications that implement consistent OCDS mappings.
+There are two scenarios in which reusing OCIDs across publications might be possible: publications with distinct coverage of OCDS fields and publications that implement consistent OCDS mappings.
 
 ### Publications with distinct coverage
 
-If two publications cover disjoint sets of OCDS fields, with the exception of the release-level required fields (`ocid`, `id`, `date` and `tag`), then the publications can reuse ocids so that users can merge releases.
+If two publications cover disjoint sets of OCDS fields, with the exception of the release-level required fields (`ocid`, `id`, `date` and `tag`), then the publications can reuse OCIDs so that users can merge releases.
 
-The publishers would need to agree the process and responsibilities for minting ocids. For example: who can mint ocids; if an ocid cannot be calculated deterministically from the input data, then how to lookup whether an ocid for a given process already exists, and how to share the new ocid for others to find. They would also need to implement the agreed approach, whether this means reporting a new ocid to a central registry, or requesting the ocid for a given procedure from a shared "ocid issuer" service, etc.
+The publishers would need to agree the process and responsibilities for minting OCIDs. For example: who can mint OCIDs; if an OCID cannot be calculated deterministically from the input data, then how to lookup whether an OCID for a given process already exists, and how to share the new OCID for others to find. They would also need to implement the agreed approach, whether this means reporting a new OCID to a central registry, or requesting the OCID for a given procedure from a shared "OCID issuer" service, etc.
 
-Building on the PCS and FTS example above, if PCS were to publish only the `parties` array and `tender` object and FTS were to publish only the `awards` array, then it would be possible for FTS to reuse the ocids minted by PCS:
+Building on the PCS and FTS example above, if PCS were to publish only the `parties` array and `tender` object and FTS were to publish only the `awards` array, then it would be possible for FTS to reuse the OCIDs minted by PCS:
 
 `````{tab-set}
 ````{tab-item}  PCS release
@@ -273,9 +273,9 @@ However, this scenario is unlikely to occur since a publication that includes th
 
 ### Publications with consistent OCDS mappings
 
-If two publications implement consistent OCDS mappings, in particular the approach to assigning local identifiers to objects in arrays, then the publications can reuse ocids so that users can merge releases.
+If two publications implement consistent OCDS mappings, in particular the approach to assigning local identifiers to objects in arrays, then the publications can reuse OCIDs so that users can merge releases.
 
-As in the distinct coverage example, the publishers would need to agree on and implement the governance and technical aspects of minting and sharing ocids. They would also need to:
+As in the distinct coverage example, the publishers would need to agree on and implement the governance and technical aspects of minting and sharing OCIDs. They would also need to:
 
 * agree on a single deterministic mapping of shared fields;
 * consistently implement the mappings;
