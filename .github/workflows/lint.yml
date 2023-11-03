@@ -4,6 +4,7 @@ env:
   BASEDIR: https://raw.githubusercontent.com/open-contracting/standard-maintenance-scripts/main
 jobs:
   build:
+    if: github.event_name == 'pull_request' || startsWith(github.event.ref, 'refs/tags/') || startsWith(github.event.ref, 'refs/heads/1.1') || startsWith(github.event.ref, 'refs/heads/1.2')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
