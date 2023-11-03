@@ -40,7 +40,7 @@
       "type": "string",
       "format": "date-time",
       "deprecated": {
-        "description": "This field is deprecated for consistency with a planned future JSONL bulk data format.",
+        "description": "This field repeats the maximum `date` among the releases it contains.",
         "deprecatedVersion": "1.2"
       }
     },
@@ -89,7 +89,7 @@
         }
       },
       "deprecated": {
-        "description": "This field is deprecated in favour of the `publisher` field at release level.",
+        "description": "This field is deprecated in favor of the `publisher` field in the release schema.",
         "deprecatedVersion": "1.2"
       }
     },
@@ -102,7 +102,7 @@
       ],
       "format": "uri",
       "deprecated": {
-        "description": "This field is deprecated, because it isn't critical to distribute the license as data. However, the license can be expressed in the machine-readable description of the OCDS data in a data registry.",
+        "description": "It is not critical to distribute the license URL as data. The page linking to the data can express the license.",
         "deprecatedVersion": "1.2"
       }
     },
@@ -115,7 +115,7 @@
       ],
       "format": "uri",
       "deprecated": {
-        "description": "This field is deprecated, because it isn't critical to distribute the publication policy as data. However, the publication policy can be expressed in the machine-readable description of the OCDS data in a data registry.",
+        "description": "It is not critical to distribute the publication policy URL as data. The page linking to the data can express the publication policy.",
         "deprecatedVersion": "1.2"
       }
     }
