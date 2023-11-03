@@ -1,6 +1,6 @@
 # Release Package Reference
 
-The release package schema describes the structure of the container for publishing releases. The package contains important metadata.
+The release package schema describes a container for releases.
 
 ````{admonition} Example
 :class: hint
@@ -13,12 +13,12 @@ The release package schema describes the structure of the container for publishi
 
 For this version of OCDS, the canonical URL of the release package schema is: <https://standard.open-contracting.org/schema/1__1__5/release-package-schema.json>. Using the canonical URL guarantees that your software, documentation or other resources will always refer to the specific version of the schema with which they were authored and tested.
 
-In addition to publishing the structured metadata described by the release package schema, you ought to license your data and provide guidance for data users. For more information, see the [licensing guidance](../../guidance/publish.md#license-your-data) and [publication policy guidance](../../guidance/publish.md#finalize-your-publication-policy).
+In addition to publishing the metadata described by the release package schema, you ought to license your data and guide data users. For more information, see the [licensing](../../guidance/publish.md#license-your-data) and [publication policy](../../guidance/publish.md#finalize-your-publication-policy) guidance.
 
 ```{admonition} Browsing the schema
 :class: note
 
-This page presents the release package schema in an interactive browser and in a table, with additional information in paragraphs. You can also download the canonical version of the release package schema as [JSON Schema](../../../build/current_lang/release-package-schema.json).
+This page presents the release package schema in an interactive browser and in a table. You can also download the canonical version of the release package schema as [JSON Schema](../../../build/current_lang/release-package-schema.json).
 ```
 
 ## Schema browser
