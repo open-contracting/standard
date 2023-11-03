@@ -163,7 +163,7 @@ Building on the PCS and FTS example, the publishers agreed that PCS is the canon
 ````
 `````
 
-### How to reuse OCIDs across publications
+## How to reuse OCIDs across publications
 
 There are two scenarios in which reusing OCIDs across publications might be possible: publications with distinct coverage of OCDS fields and publications that implement consistent OCDS mappings.
 
