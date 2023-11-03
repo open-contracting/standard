@@ -246,10 +246,26 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1339](https://github.com/open-contracting/standard/pull/1339) Deprecate `packages`.
   * [#1374](https://github.com/open-contracting/standard/pull/1374) Remove `records.minItems` requirement.
   * [#1393](https://github.com/open-contracting/standard/pull/1393) Remove `releases` as a required field of the `Record` object.
-  * [#1640](https://github.com/open-contracting/standard/pull/1640) Refactor to move the `Record` definition to its own schema.
+  * [#1640](https://github.com/open-contracting/standard/pull/1640):
+    * Refactor to move the `Record` definition to its own schema.
+    * Records are no longer required to be unique.
+    * Deprecate fields and objects:
+      * `uri`
+      * `publisher`
+      * `license`
+      * `publicationPolicy`
+      * `publishedDate`
  
 * Release package schema:
   * [#1374](https://github.com/open-contracting/standard/pull/1374) Remove `releases.minItems` requirement.
+  * [#1640](https://github.com/open-contracting/standard/pull/1640):
+    * Releases are no longer required to be unique.
+    * Deprecate fields and objects:
+      * `uri`
+      * `publisher`
+      * `license`
+      * `publicationPolicy`
+      * `publishedDate`
 
 * Improve the clarity of field descriptions in the release package schema and record package schema:
   * [#1067](https://github.com/open-contracting/standard/pull/1067) `Publisher.name`, to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
