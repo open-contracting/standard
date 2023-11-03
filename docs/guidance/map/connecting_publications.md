@@ -16,7 +16,7 @@ Unless publications have disjoint coverage of OCDS fields or implement consisten
 
 ### Example: Reusing OCIDs across Public Contracts Scotland and Find a Tender Service
 
-The PCS and FTS publications have many overlapping fields, but implement slightly different mappings. Therefore, if FTS were to reuse the OCIDs minted by PCS, merging releases would result in nonsensical data
+The PCS and FTS publications have many overlapping fields, but implement slightly different mappings. Therefore, if FTS were to reuse the OCIDs assigned by PCS, merging releases would result in nonsensical data
 
 For example, the publications implement inconsistent mappings for the `.id` of the buyer in the `.parties` array so merging releases would result in duplicate buyers:
 
@@ -173,7 +173,7 @@ If two publications cover disjoint sets of OCDS fields, with the exception of th
 
 The publishers would need to agree the process and responsibilities for minting OCIDs. For example: who can mint OCIDs; if an OCID cannot be calculated deterministically from the input data, then how to lookup whether an OCID for a given process already exists, and how to share the new OCID for others to find. They would also need to implement the agreed approach, whether this means reporting a new OCID to a central registry, or requesting the OCID for a given procedure from a shared "OCID issuer" service, etc.
 
-Building on the PCS and FTS example above, if PCS were to publish only the `parties` array and `tender` object and FTS were to publish only the `awards` array, then it would be possible for FTS to reuse the OCIDs minted by PCS:
+Building on the PCS and FTS example above, if PCS were to publish only the `parties` array and `tender` object and FTS were to publish only the `awards` array, then it would be possible for FTS to reuse the OCIDs assigned by PCS:
 
 `````{tab-set}
 ````{tab-item}  PCS release
