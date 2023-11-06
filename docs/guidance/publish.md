@@ -45,7 +45,7 @@ We encourage the use of either a public domain dedication/certification, or an a
 
 When using custom licenses, publishers are encouraged to check that they are [compliant with the Open Definition](https://opendefinition.org/licenses/).
 
-Publishers ought to ensure that a clear statement is provided alongside files where they are provided for download linking to, and explaining, the license terms they are published under. Particular attention ought to be paid to ensuring license information on any data catalogues where open contracting data is listed are accurate.
+Where data is provided for download, publishers ought to clearly link to, and explain, the terms of the license under which the data is published. In any listing of the dataset (for example, in a data catalog), publishers ought to ensure that license information is provided and accurate.
 
 ## Publish and share your data
 
