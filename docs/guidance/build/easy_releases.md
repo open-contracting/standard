@@ -21,7 +21,7 @@ These approaches can be useful for most situations but they are not meant to be 
 
 ### Packaging
 
-Releases in OCDS need to be packaged using a [release package](../../schema/release_package). This is to provide consistency and important metadata.
+Releases in OCDS need to be packaged using a [release package](../../schema/packaging/release_package). This is to provide consistency and important metadata.
 
 In an 'Easy' releases scenario it is still necessary to package data. Therefore the release needs to be wrapped in a *release package*. It is *not* appropriate to use an OCDS record to contain the release because `record.releases` is a list of all the releases and not just the latest one.
 
