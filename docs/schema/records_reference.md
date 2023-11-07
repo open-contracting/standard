@@ -4,9 +4,9 @@ A record aggregates releases with the same [open contracting process identifier 
 
 There should be a single record per ocid per [distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution), where a distribution might be a specific API endpoint or a specific bulk download file.
 
-**Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
-
 Records must be published within a [record package](packaging/record_package). 
+
+**Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 
 ```{admonition} Browsing the schema
 :class: note
