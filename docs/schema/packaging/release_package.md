@@ -1,4 +1,4 @@
-# Release Package Reference
+# Release Package Schema
 
 The release package schema describes a container for releases.
 
