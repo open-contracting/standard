@@ -248,6 +248,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1393](https://github.com/open-contracting/standard/pull/1393) Remove `releases` as a required field of the `Record` object.
   * [#1640](https://github.com/open-contracting/standard/pull/1640):
     * Refactor to move the `Record` definition to its own schema.
+    * Disallow use of `null` in the required `url` field of a `LinkedRelease` object.
     * Records are no longer required to be unique.
     * Deprecate fields and objects:
       * `uri`
