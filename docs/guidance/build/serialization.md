@@ -95,9 +95,3 @@ Multiple tables can be packaged together as the tabs of an Excel spreadsheet, or
 An example multi-table template can be found [in the sample data repository](https://github.com/open-contracting/sample-data/tree/main/flat-template).
 
 For further information on multi-table serializations please see the [flatten tool documentation](https://flatten-tool.readthedocs.io/en/latest/).
-
-## Packaging files with metadata
-
-Whatever serialization is used for Open Contracting Data, a single file can contain one or more release and records.
-
-The release package and record package schemas describe the key metadata that ought to be supplied for any file providing Open Contracting Data. This includes the `publishedDate`, `publisher`, `uri` for accessing the file, and the licensing details for the file.
