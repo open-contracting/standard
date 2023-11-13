@@ -28,7 +28,7 @@ It is encouraged to separate the OCID prefix and the internal identifier with a 
 
 The `ocid` is case-sensitive; in other words, the letter case of an ocid must be consistent.
 
-To assign an `ocid` to a contracting (or planning) process, you need to register an OCID prefix and choose an internal identifier.
+To assign an `ocid` to a contracting (or planning) process, you need to [register an OCID prefix](../guidance/build.md#register-an-ocid-prefix) and choose an internal identifier.
 
 ````{admonition} Worked Example
 :class: hint
