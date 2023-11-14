@@ -30,16 +30,16 @@ The `ocid` is case-sensitive; in other words, the letter case of an ocid must be
 
 To assign an `ocid` to a contracting (or planning) process, you need to [register an OCID prefix](../guidance/build.md#register-an-ocid-prefix) and choose an internal identifier.
 
-````{admonition} Worked Example
+````{admonition} Example
 :class: hint
 
 Two publishers, the UK Atomic Energy Authority and Health Canada, use sequential numbers as internal identifiers for their contracting processes.
 
-The UK Atomic Energy Authority initiates a contracting process to purchase productivity software and assigns it the internal identifier '0005'. Health Canada initiates a contracting process to purchase office furniture and also assigns it the internal identifier '0005'.
+The UK Atomic Energy Authority initiates a contracting process to purchase productivity software and assigns it the internal identifier "0005". Health Canada initiates a contracting process to purchase office furniture and also assigns it the internal identifier "0005".
 
-To create a globally unique `ocid`, each publisher prepends their internal identifier with their OCID prefix: 'ocds-fh349f' for the UK Atomic Energy Authority and 'ocds-twb234 for Health Canada.
+To create a globally unique `ocid`, each publisher prepends their internal identifier with their OCID prefix: "ocds-fh349f" for the UK Atomic Energy Authority and "ocds-twb234" for Health Canada.
 
-The UK Atomic Energy Authority assigns the `ocid` 'ocds-fh349f-0005'.
+The UK Atomic Energy Authority assigns the `ocid` "ocds-fh349f-0005".
 
 ```json
 {
@@ -54,7 +54,7 @@ The UK Atomic Energy Authority assigns the `ocid` 'ocds-fh349f-0005'.
 }
 ```
 
-Health Canada assigns the `ocid` 'ocds-twb234-0005'.
+Health Canada assigns the `ocid` "ocds-twb234-0005".
 
 ```json
 {
@@ -123,10 +123,10 @@ There are two parts to expressing an **organization identifier** in open contrac
 
 In OCDS, the list's prefix is disclosed via the `scheme` field of an identifier object, with the existing identifier in the `id` field. If there is a recognized public URL that uniquely identifies the organization, this can be disclosed via the `uri` field.
 
-````{admonition} Worked Example
+````{admonition} Example
 :class: hint
 
-[Companies House](https://www.gov.uk/government/organisations/companies-house) registers company information in the United Kingdom. The prefix for Companies House is "GB-COH”. Companies House registered a company with the name "MICROSOFT LIMITED" and the number “01624297”. The company's organization identifier can be expressed as:
+[Companies House](https://www.gov.uk/government/organisations/companies-house) registers company information in the United Kingdom. The prefix for Companies House is "GB-COH". Companies House registered a company with the name "MICROSOFT LIMITED" and the number "01624297". The company's organization identifier can be expressed as:
 
 ```json
 {
