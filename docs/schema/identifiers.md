@@ -69,7 +69,7 @@ Health Canada assigns the `ocid` 'ocds-twb234-0005'.
 }
 ```
 
-As a result, users and tools that work with data from both publishers are less likely to confuse the two contracting processes. If another publisher, such as an independent monitor, wants to publish more data about one of the contracting processes, they can reference it using its unique `ocid`.
+As such, users and tools that work with both publishers' data will not confuse the two contracting processes.
 
 ````
 
@@ -126,7 +126,7 @@ In OCDS, the list's prefix is disclosed via the `scheme` field of an identifier 
 ````{admonition} Worked Example
 :class: hint
 
-Companies in the UK are assigned identifiers by [Companies House](https://www.gov.uk/government/organisations/companies-house). MICROSOFT LIMITED's identifier is '01624297' and the prefix for Companies House is "GB-COH". Therefore, MICROSOFT LIMITED's organization identifier can be expressed as follows:
+[Companies House](https://www.gov.uk/government/organisations/companies-house) registers company information in the United Kingdom. The prefix for Companies House is "GB-COH”. Companies House registered a company with the name "MICROSOFT LIMITED" and the number “01624297”. The company's organization identifier can be expressed as:
 
 ```json
 {
@@ -136,7 +136,7 @@ Companies in the UK are assigned identifiers by [Companies House](https://www.go
         "scheme": "GB-COH",
         "id": "01624297",
         "legalName": "MICROSOFT LIMITED",
-        "uri": "http://data.companieshouse.gov.uk/doc/company/01624297"
+        "uri": "https://data.companieshouse.gov.uk/doc/company/01624297"
       } 
     }
   ]
