@@ -13,11 +13,11 @@
     "releases": {
       "title": "Releases",
       "description": "All the releases about the contracting (or planning) process at the time of the record's publication. The releases must be sorted in date order, from oldest to newest.",
+      "type": "array",
       "oneOf": [
         {
           "title": "Linked releases",
           "description": "A list of references to releases.",
-          "type": "array",
           "items": {
             "$ref": "#/definitions/LinkedRelease"
           },
@@ -26,7 +26,6 @@
         {
           "title": "Embedded releases",
           "description": "A list of releases, with all the data.",
-          "type": "array",
           "items": {
             "$ref": "https://standard.open-contracting.org/schema/1__1__5/release-schema.json"
           },

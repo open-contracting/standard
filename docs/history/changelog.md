@@ -225,6 +225,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1519](https://github.com/open-contracting/standard/pull/1519) `value.amount`, to clarify amount taken from system or document.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) `tender.enquiryPeriod`, to remove the suggestion to use `tender.submissionMethodDetails` for information about how to submit enquiries.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) Normalize field descriptions according to a style guide.
+  * [#1656](https://github.com/open-contracting/standard/pull/1656) `Award.value` and `Contract.value`, to clarify with respect to changes in contract values.
   * [#1509](https://github.com/open-contracting/standard/pull/1509) `planning`, `Planning`, `tender` and `Tender` to clarify relationships with the availability of documents.
 
 * Remove confusing terminology:
@@ -271,6 +272,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
       * `license`
       * `publicationPolicy`
       * `publishedDate`
+  * [#1659](https://github.com/open-contracting/standard/pull/1659) Move `type` from `Record.releases.oneOf` to `Record.releases`.
  
 * Release package schema:
   * [#1374](https://github.com/open-contracting/standard/pull/1374) Remove `releases.minItems` requirement.
@@ -307,6 +309,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * [#1618](https://github.com/open-contracting/standard/pull/1618) Move governance policies from Google Docs, updating references for OCDS 1.1.5 and OCDS 1.2.0, and removing references to GitHub issues.
 * [#1643](https://github.com/open-contracting/standard/pull/1643) Update identifier section in release reference.
 * [#1655](https://github.com/open-contracting/standard/pull/1655) Rewrite identifiers reference and examples for clarity.
+* [#1659](https://github.com/open-contracting/standard/pull/1659) Add `Record` definition schema table to record reference.
 
 ## [1.1.5] - 2020-08-20
 
