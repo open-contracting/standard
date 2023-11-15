@@ -37,13 +37,13 @@ Two publishers, the UK Atomic Energy Authority and Health Canada, use sequential
 
 The UK Atomic Energy Authority initiates a contracting process to purchase productivity software and assigns it the internal identifier "0005". Health Canada initiates a contracting process to purchase office furniture and also assigns it the internal identifier "0005".
 
-To create a globally unique `ocid`, each publisher prepends their internal identifier with their OCID prefix: "ocds-fh349f" for the UK Atomic Energy Authority and "ocds-twb234" for Health Canada.
+To create a globally unique `ocid`, each publisher prepends their internal identifier with their OCID prefix: "ocds-def456" for the UK Atomic Energy Authority and "ocds-ghi789" for Health Canada.
 
-The UK Atomic Energy Authority assigns the `ocid` "ocds-fh349f-0005".
+The UK Atomic Energy Authority assigns the `ocid` "ocds-def456-0005".
 
 ```json
 {
-  "ocid": "ocds-fh349f-0005",
+  "ocid": "ocds-def456-0005",
   "publisher": {
     "name": "UK Atomic Energy Authority"
   },
@@ -54,11 +54,11 @@ The UK Atomic Energy Authority assigns the `ocid` "ocds-fh349f-0005".
 }
 ```
 
-Health Canada assigns the `ocid` "ocds-twb234-0005".
+Health Canada assigns the `ocid` "ocds-ghi789-0005".
 
 ```json
 {
-  "ocid": "ocds-twb234-0005",
+  "ocid": "ocds-ghi789-0005",
   "publisher": {
     "name": "Health Canada"
   },
