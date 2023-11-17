@@ -381,7 +381,7 @@ Structured information on the former value of specific fields may be provided in
 See the [amendment implementation guidance](../guidance/map/amendments) for more details.
 ```
 
-## Sub-schema reference
+## Object reference
 
 The following sub-schema are commonly re-used throughout the standard.
 
