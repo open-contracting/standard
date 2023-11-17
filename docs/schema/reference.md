@@ -78,7 +78,7 @@ The majority of OCDS data is held within a release structure. One or more releas
 
 A release has a [tag](codelists.md#release-tag) to indicate whether it is about a planning process or a contracting process and, if it is about the latter, to indicate the stage of the contracting process to which it relates. However, there are no formal restrictions on when information about a stage of the process can be provided.
 
-For example, a publisher announcing the signing of a contract with a 'contract' tag might also include information in the award and tender blocks in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed. 
+For example, a publisher announcing the signing of a contract with a 'contract' tag might also include information in the award and tender objects in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed. 
 
 ### Release
 
@@ -174,7 +174,7 @@ The planning section is used in a planning process. This includes information ab
 
 #### Budget 
 
-Apart from documents, the majority of planning information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting (or planning) process to existing projects and budgets even where linked data is not available.
+Apart from documents, the majority of planning information is held within the budget object. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting (or planning) process to existing projects and budgets even where linked data is not available.
 
 ````{admonition} Example
 :class: hint
@@ -228,7 +228,7 @@ The [Bid statistics and details](https://extensions.open-contracting.org/en/exte
 
 ### Award
 
-The award section is used to announce any awards issued for this tender. There can be multiple awards made. Releases can contain all, or a subset, of these awards. A related award block is required for every contract block, as the award contains information on the suppliers. In particular cases there can be multiple suppliers for a single award: for example, in the case of [consortia](../guidance/map/buyers_suppliers.md#consortia-suppliers) and in [framework agreements](../guidance/map/framework_agreements).
+The award section is used to announce any awards issued for this tender. There can be multiple awards made. Releases can contain all, or a subset, of these awards. A related award object is required for every contract object, as the award contains information on the suppliers. In particular cases there can be multiple suppliers for a single award: for example, in the case of [consortia](../guidance/map/buyers_suppliers.md#consortia-suppliers) and in [framework agreements](../guidance/map/framework_agreements).
 
 ````{admonition} Example
 :class: hint
@@ -280,7 +280,7 @@ The contract section is used to provide details of contracts that have been ente
 
 ### Implementation
 
-Implementation information can be updated over the course of a contract. It belongs nested within the contract it relates to. Implementation blocks include the following elements:
+Implementation information can be updated over the course of a contract. It belongs nested within the contract it relates to. Implementation objects include the following elements:
 
 ````{admonition} Example
 :class: hint
@@ -322,7 +322,7 @@ Information on subcontracts is not currently included in the core OCDS schema, b
 :collapse: providerOrganization,receiverOrganization,amount,payer,payee,value
 ```
 
-The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this can be used to cross-reference to a third party `source` of data, and ought to reuse identifiers from that source.
+The transaction object is modelled on the [International Aid Transparency Initiative (IATI) transaction element](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) object, this can be used to cross-reference to a third party `source` of data, and ought to reuse identifiers from that source.
 
 ```{note}
 To represent planned payments, use [Milestones](#milestones) instead.
@@ -350,7 +350,7 @@ See [document](#document) reference below.
 
 A release may amend values from a previous release. Whilst the release & record model of OCDS offers the opportunity to keep a full versioned history of changes, in many cases it is important for changes to a tender, award or contract to be explicitly declared.
 
-The amendment array in a tender, award or contract block provides the ability to detail the amendments that have taken place with dates, rationale and free-text descriptions of the change, as well as to point to the releases that contain information from before and after the amendment.
+The amendment array in a tender, award or contract objects provides the ability to detail the amendments that have taken place with dates, rationale and free-text descriptions of the change, as well as to point to the releases that contain information from before and after the amendment.
 
 ````{admonition} Example
 :class: hint
@@ -381,9 +381,9 @@ Structured information on the former value of specific fields may be provided in
 See the [amendment implementation guidance](../guidance/map/amendments) for more details.
 ```
 
-## Building block reference
+## Sub-schema reference
 
-The following building blocks are commonly re-used throughout the standard.
+The following sub-schema are commonly re-used throughout the standard.
 
 ### OrganizationReference
 
@@ -415,7 +415,7 @@ See the [parties](#parties) section.
 
 #### Identifier
 
-The identifier block provides a way to [identify the legal entities](identifiers.md#organization-identifiers) involved in a contracting (or planning) process.
+The identifier object provides a way to [identify the legal entities](identifiers.md#organization-identifiers) involved in a contracting (or planning) process.
 
 When describing an organizational unit (for example, a department or branch of an organization), the `identifier` field should identify the main organization. The other fields should describe the organizational unit. For more information, see [organizational units](../guidance/map/organizational_units.md).
 
@@ -467,7 +467,7 @@ When describing an organizational unit (for example, a department or branch of a
 
 ### Document
 
-Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](codelists.md#document-type) codelist.
+Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document object can consist of multiple documents, classified using the [documentType](codelists.md#document-type) codelist.
 
 Documents related to contracting (or planning) processes should be public by default. For more information, see the Open Contracting Partnership's report [Mythbusting Confidentiality in Public Contracting](https://www.open-contracting.org/resources/mythbusting-confidentiality-public-contracting/) and the Center for Global Development's [Principles on Commercial Transparency in Public Contracts](https://www.cgdev.org/publication/principles-commercial-transparency-public-contracts).
 
@@ -539,7 +539,7 @@ In the event that a date field is not bound to a specific time at all, publisher
 
 ### Item
 
-The items block is used to list the line-items associated with a tender, award or contract. 
+The items object is used to list the line-items associated with a tender, award or contract. 
 
 ````{admonition} Example
 :class: hint
@@ -561,7 +561,7 @@ The items block is used to list the line-items associated with a tender, award o
 
 #### Unit
 
-The `unit` block allows detailed specification of the parameters and price of units that make up a line-item.
+The `unit` object allows detailed specification of the parameters and price of units that make up a line-item.
 
 If the [Quantities, Units, Dimensions and Data Types Ontologies](https://www.qudt.org) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
 
@@ -599,7 +599,7 @@ Other unit classification schemes can be used, including those in the [unitClass
 
 ### Milestone
 
-Milestone information can be included in the [planning](#planning), [tender](#tender), [contract](#contract) and [contract implementation](#implementation) blocks.
+Milestone information can be included in the [planning](#planning), [tender](#tender), [contract](#contract) and [contract implementation](#implementation) objects.
 
 The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed. 
 
@@ -666,7 +666,7 @@ In OCDS each contracting process can have only one tender stage. There are a num
 * When a contract results in the award of sub-contracts - and those sub-contracts are also tracked using OCDS;
 * When a contract is coming up for renewal or replacement, and there is a contracting process to award  the renewal/replacement contract;
 
-In all these cases, the `relatedProcess` block should be used to cross-reference between the relevant contracting processes using their `ocid`.
+In all these cases, the `relatedProcess` object should be used to cross-reference between the relevant contracting processes using their `ocid`.
 
 ````{admonition} Example
 :class: hint
@@ -687,7 +687,7 @@ A related process can be declared at two points in an OCDS release.
 
 **(2) At the contract level** - used to point onward to sub-contracts, renewal or replacement processes that relate solely to the particular contract the field appears in.
 
-As well as providing this machine-readable link between processes, publishers may also provide links to human-readable documentation in the relevant `documents` blocks. For example:
+As well as providing this machine-readable link between processes, publishers may also provide links to human-readable documentation in the relevant `documents` objects. For example:
 
 * When recording a `release/relatedProcess` pointing to the ocid of the planning process that resulted in a tender, a `tender/documents` entry with a `documentType` of 'procurementPlan' and a link to web pages about the procurement plan could be provided;
 * When recording a `contract/relatedProcess` pointing to the ocid of a  sub-contracting process, a `contract/documents` entry with a `documentType` of 'subContract' and a title that describes it as the subcontracting process, could be provided;

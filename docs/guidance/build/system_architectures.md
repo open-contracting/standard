@@ -74,7 +74,7 @@ This approach puts the burden of data conversion on data sources. Yet it might b
 
 This approach might also be suitable to combine data from many data sources. Each source becomes an OCDS publisher. The middleware becomes less complex since it only ingests data in a single format.
 
-The [OpenProcurement](http://openprocurement.org/en/) system adopted a similar approach. This system was developed in Ukraine and it's the base for the [Prozorro](https://prozorro.gov.ua/en/) platform. Prozorro uses OCDS building blocks as the foundation for data sources' data models.
+The [OpenProcurement](http://openprocurement.org/en/) system adopted a similar approach. This system was developed in Ukraine and it's the base for the [Prozorro](https://prozorro.gov.ua/en/) platform. Prozorro uses OCDS sub-schema as the foundation for data sources' data models.
 
 A variant in this scenario is to store files in a web-accessible file system, as shown below. A periodical invocation of the conversion module updates the file system.
 

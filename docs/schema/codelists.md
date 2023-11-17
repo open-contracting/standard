@@ -121,7 +121,7 @@ The submission method codelist is used to identify the mechanism through which a
 ```{versionadded} 1.1
 ```
 
-The related process block is used at the release level to point backwards to prior processes, such as planning or framework establishment, and at the contract level to point onwards to subcontracts or to renewal or replacement processes. The related process codelist determines the kind of relationship that is being described.
+The related process object is used at the release level to point backwards to prior processes, such as planning or framework establishment, and at the contract level to point onwards to subcontracts or to renewal or replacement processes. The related process codelist determines the kind of relationship that is being described.
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -145,7 +145,7 @@ The related process scheme describes the kind of identifier used to cross-refere
 ```{versionadded} 1.1
 ```
 
-The milestone block can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process. The milestone type codelist is used to indicate the nature of each milestone.
+The milestone object can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process. The milestone type codelist is used to indicate the nature of each milestone.
 
 ```{csv-table-no-translate}
 :header-rows: 1

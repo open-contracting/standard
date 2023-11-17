@@ -11,7 +11,7 @@ Details of natural persons can be disclosed using the `parties` section in OCDS 
 * The natural person is a tenderer or supplier; and
 * The laws in your jurisdiction permit the publication of such details
 
-Subject to the above, you can disclose identifiers for natural persons using the `Identifier` building block.
+Subject to the above, you can disclose identifiers for natural persons using the `Identifier` sub-schema.
 
 There are two components to an identifier in OCDS:
 
