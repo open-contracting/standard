@@ -1193,7 +1193,7 @@
     },
     "planning": {
       "title": "Planning",
-      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before the publication of procurement documents.",
+      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before contracting documents (for example, procurement documents) are available to potential suppliers.",
       "type": "object",
       "properties": {
         "id": {
@@ -2411,7 +2411,7 @@
     },
     "tender": {
       "title": "Tender",
-      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with the publication of procurement documents and ending with the bid submission deadline. For a planning process, this information typically concerns the period before the publication of procurement documents.",
+      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with contracting documents (for example, procurement documents) being available to potential suppliers and ending with the bid submission deadline. For a planning process, this information typically concerns the period before contracting documents are available to potential suppliers.",
       "type": "object",
       "required": [
         "id"
@@ -2486,12 +2486,16 @@
             "planning",
             "planned",
             "active",
+            "complete",
             "cancelled",
             "unsuccessful",
-            "complete",
             "withdrawn",
             null
-          ]
+          ],
+          "deprecated": {
+            "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "statusDetails": {
           "title": "Status details",
@@ -6576,7 +6580,11 @@
               null
             ],
             "codelist": "awardStatus.csv",
-            "openCodelist": false
+            "openCodelist": false,
+            "deprecated": {
+              "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+              "deprecatedVersion": "1.2"
+            }
           },
           "statusDetails": {
             "title": "Status details",
@@ -6606,7 +6614,7 @@
           },
           "value": {
             "title": "Value",
-            "description": "The value of this award. There may be more than one award per procurement. A negative value indicates that the contract(s) resulting from this award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+            "description": "The value of the award. Typically, this is the value of the bid being awarded. There may be more than one award per procurement. A negative value indicates that the contract(s) resulting from this award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
             "type": "object",
             "properties": {
               "amount": {
@@ -9219,14 +9227,16 @@
             "enum": [
               "pending",
               "active",
-              "cancelled",
               "terminated",
-              "terminatedEarly",
-              "terminatedSuccessfully",
+              "cancelled",
               null
             ],
             "codelist": "contractStatus.csv",
-            "openCodelist": false
+            "openCodelist": false,
+            "deprecated": {
+              "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+              "deprecatedVersion": "1.2"
+            }
           },
           "statusDetails": {
             "title": "Status details",
@@ -9247,7 +9257,7 @@
           },
           "value": {
             "title": "Value",
-            "description": "The value of this contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+            "description": "The value of the contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts). The value may be updated during implementation (for example, to reflect an amendment). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
             "type": "object",
             "properties": {
               "amount": {
@@ -14711,7 +14721,7 @@
   "definitions": {
     "Planning": {
       "title": "Planning",
-      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before the publication of procurement documents.",
+      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before contracting documents (for example, procurement documents) are available to potential suppliers.",
       "type": "object",
       "properties": {
         "id": {
@@ -15929,7 +15939,7 @@
     },
     "Tender": {
       "title": "Tender",
-      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with the publication of procurement documents and ending with the bid submission deadline. For a planning process, this information typically concerns the period before the publication of procurement documents.",
+      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with contracting documents (for example, procurement documents) being available to potential suppliers and ending with the bid submission deadline. For a planning process, this information typically concerns the period before contracting documents are available to potential suppliers.",
       "type": "object",
       "required": [
         "id"
@@ -16004,12 +16014,16 @@
             "planning",
             "planned",
             "active",
+            "complete",
             "cancelled",
             "unsuccessful",
-            "complete",
             "withdrawn",
             null
-          ]
+          ],
+          "deprecated": {
+            "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "statusDetails": {
           "title": "Status details",
@@ -20090,7 +20104,11 @@
             null
           ],
           "codelist": "awardStatus.csv",
-          "openCodelist": false
+          "openCodelist": false,
+          "deprecated": {
+            "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "statusDetails": {
           "title": "Status details",
@@ -20120,7 +20138,7 @@
         },
         "value": {
           "title": "Value",
-          "description": "The value of this award. There may be more than one award per procurement. A negative value indicates that the contract(s) resulting from this award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+          "description": "The value of the award. Typically, this is the value of the bid being awarded. There may be more than one award per procurement. A negative value indicates that the contract(s) resulting from this award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
           "type": "object",
           "properties": {
             "amount": {
@@ -22727,14 +22745,16 @@
           "enum": [
             "pending",
             "active",
-            "cancelled",
             "terminated",
-            "terminatedEarly",
-            "terminatedSuccessfully",
+            "cancelled",
             null
           ],
           "codelist": "contractStatus.csv",
-          "openCodelist": false
+          "openCodelist": false,
+          "deprecated": {
+            "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "statusDetails": {
           "title": "Status details",
@@ -22755,7 +22775,7 @@
         },
         "value": {
           "title": "Value",
-          "description": "The value of this contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+          "description": "The value of the contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts). The value may be updated during implementation (for example, to reflect an amendment). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
           "type": "object",
           "properties": {
             "amount": {

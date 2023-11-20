@@ -26,7 +26,7 @@ The publisher collects an additional identifier, which is disclosed using the `a
 
 ## Local IDs
 
-Each of the organizations in the [parties section](../../schema/reference.md#parties) ought to have a [local ID](../../schema/identifiers.md#local-identifiers) (`id`), which is used to reference the organization from elsewhere in the data.
+Each of the organizations in the [parties section](../../schema/reference.md#parties) ought to have a [local ID](../../schema/identifiers.md#local-organization-ids) (`id`), which is used to reference the organization from elsewhere in the data.
 
 For organizations with an organization identifier, you ought to construct the local `id` following the pattern `{identifier.scheme}-{identifier.id}`.
 
