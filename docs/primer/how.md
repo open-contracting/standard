@@ -123,7 +123,7 @@ The following example does not contain all existing fields, and not all of the i
 
 **JSON**
 
-```{jsoninclude} ../../examples/primer/primer.json
+```{jsoninclude} ../examples/primer/primer.json
 :jsonpointer:
 :expand: releases, items
 ```
@@ -134,62 +134,63 @@ The following example does not contain all existing fields, and not all of the i
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../examples/primer/releases.csv
+:file: ../examples/primer/releases.csv
 ```
 
 ***parties***
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../examples/primer/parties.csv
+:file: ../examples/primer/parties.csv
 ```
 
 ***tender_items***
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../examples/primer/tender_items.csv
+:file: ../examples/primer/tender_items.csv
 ```
 
 ***documents***
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../examples/primer/documents.csv
+:file: ../examples/primer/documents.csv
 ```
 
 ***awards***
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../examples/primer/awards.csv
+:file: ../examples/primer/awards.csv
 ```
 
 ***award_suppliers***
 
 ```{csv-table-no-translate}
 :header-rows: 1
+:file: ../examples/primer/award_suppliers.csv
 ```
 
 ***award_items***
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../examples/primer/award_items.csv
+:file: ../examples/primer/award_items.csv
 ```
 
 ***contracts***
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../examples/primer/contracts.csv
+:file: ../examples/primer/contracts.csv
 ```
 
 ***contract_implementation***
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../examples/primer/contract_implementation.csv
+:file: ../examples/primer/contract_implementation.csv
 ```
 ````
 
