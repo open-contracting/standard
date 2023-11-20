@@ -12,50 +12,38 @@ The following examples show how updates and deletions are reflected in compiled 
 
 ## Example 1: Updates
 
-A public procurement agency publishes a release to announce an opportunity on January 1, 2016 in which the estimated value of the procurement is $1,000. On January 31, it publishes a release to expand the description of the procurement. On February 5, it publishes a release to amend the opportunity, in which the estimated value is increased to $2,000.
+A government agency in Ghana publishes a release to announce an opportunity on October 21, 2020 with an estimated value of 13,000 GHS. On November 5, 2020 they publish an update containing the details of 2 parties that have submitted bids and the publication date of the bidding documents.
 
-The agency decides to award the opportunity to two of the bidders. On March 1, the agency publishes a release to announce that Company A is awarded a contract of $750. On March 3, the agency publishes a release to announce that Company B is awarded a contract of $750.
+The agency then decides to cancel the tender. On December 19, 2020 it publishes a third release announcing that the tender has been cancelled.
 
 Through these individual releases, the agency provides real-time data about the contracting (or planning) process.
 
 In each release, the agency also updates the record, which combines all the releases to date. In the final record:
 
-* The compiled release contains all the information about the opportunity and awards, using the same schema as a release.
-* The versioned release makes it easy to see how the description and estimated value changed over time.
+* The compiled release contains all the information about the opportunity and the tenderers, using the same schema as a release.
+* The versioned release makes it easy to see how the provided changed over time.
 
-```{jsoninclude} ../../examples/merging/updates/tender1.json
+```{jsoninclude} ../../examples/merging/updates/ghana_tender1.json
 :jsonpointer:
 :expand: releases, tag, tender
 :title: tender
 ```
 
-```{jsoninclude} ../../examples/merging/updates/tender2.json
+```{jsoninclude} ../../examples/merging/updates/ghana_tender2.json
 :jsonpointer:
 :expand: releases, tag, tender
 :title: tenderUpdate
 ```
 
-```{jsoninclude} ../../examples/merging/updates/tender3.json
+```{jsoninclude} ../../examples/merging/updates/ghana_tender3.json
 :jsonpointer:
 :expand: releases, tag, tender
-:title: tenderAmendment
+:title: tenderCancellation
 ```
 
-```{jsoninclude} ../../examples/merging/updates/award1.json
+```{jsoninclude} ../../examples/merging/updates/ghana_versioned.json
 :jsonpointer:
-:expand: releases, tag, awards
-:title: awardOne
-```
-
-```{jsoninclude} ../../examples/merging/updates/award2.json
-:jsonpointer:
-:expand: releases, tag, awards
-:title: awardTwo
-```
-
-```{jsoninclude} ../../examples/merging/updates/versioned.json
-:jsonpointer:
-:expand: records, compiledRelease, versionedRelease, tag, tender, awards
+:expand: records, compiledRelease, versionedRelease, tag, tender
 :title: record
 ```
 
