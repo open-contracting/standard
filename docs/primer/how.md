@@ -108,13 +108,82 @@ Some schema fields refer to [codelists](../schema/codelists), to limit and stand
 
 In addition to the default format of JSON, you can convert and publish your OCDS data as Excel and CSV (comma-separated values) files.
 
-```{admonition} Publication formats: JSON and Excel/CSV
+````{admonition} Publication formats: JSON and Excel/CSV
 :class: hint
 
 While the OCDS schema is described using JSON Schema, OCDS data can be converted from its JSON format to tabular formats such as CSV files or spreadsheets. JSON is favored by developers because it uses human-readable text to exchange complex information, such as nested objects. It can contain large volumes of information and is particularly good at handling one-to-many relationships (such as multiple bids per tender notice).
 
 Tabular formats, such as CSV (or comma separated values) are commonly used in spreadsheets applications and other analysis tools. Many people are comfortable working with spreadsheets using tools like Excel. While JSON is the default format, a good publication will publish tabular formats as well both so that more users’ needs can be satisfied.
+
+## Example
+
+Ebonyi State in Nigeria publish OCDS data in JSON and tabular format. The JSON data is flattened into a series of CSV files which are combined into a single Excel spreadsheet. 
+
+The following example does not contain all existing fields, and not all of the included fields are required. It has been edited for length and consistency, and is not identical to the data available on the Ebonyi State e-Procurement platform.
+
+**JSON**
+
+```{jsoninclude} ../../examples/primer/primer.json
+:jsonpointer:
+:expand: releases, items
 ```
+
+**CSV**
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../examples/primer/releases.csv
+:title: releases
+```
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../examples/primer/parties.csv
+:title: parties
+```
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../examples/primer/tender_items.csv
+:title: tender_items
+```
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../examples/primer/documents.csv
+:title: documents
+```
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../examples/primer/awards.csv
+:title: awards
+```
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../examples/primer/award_suppliers.csv
+:title: award_suppliers
+```
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../examples/primer/award_items.csv
+:title: award_items
+```
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../examples/primer/contracts.csv
+:title: contracts
+```
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../examples/primer/contract_implementation.csv
+:title: contract_implementation
+```
+````
 
 No matter what type of contracting data you are working with or format you publish in, following OCDS rules and guidance will help you and your users to:
 
