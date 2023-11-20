@@ -115,7 +115,7 @@ While the OCDS schema is described using JSON Schema, OCDS data can be converted
 
 Tabular formats, such as CSV (or comma separated values) are commonly used in spreadsheets applications and other analysis tools. Many people are comfortable working with spreadsheets using tools like Excel. While JSON is the default format, a good publication will publish tabular formats as well both so that more users’ needs can be satisfied.
 
-## Example
+**Example**
 
 Ebonyi State in Nigeria publish OCDS data in JSON and tabular format. The JSON data is flattened into a series of CSV files which are combined into a single Excel spreadsheet. 
 
