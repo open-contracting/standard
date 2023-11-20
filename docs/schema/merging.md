@@ -43,30 +43,30 @@ To convert a field's value in a release to a **versioned value**, you must:
 
 A **versioned value** thus describes a field's value in a specific release.
 
-For example, in the above worked example, the estimated value of the procurement was $1,000 in a release (`tender/value/amount` was `1000`). Following the steps above, the versioned value is:
+For example, in the above worked example, the estimated value of the procurement was 13,000 GHS in a release (`tender/value/amount` was `13000`). Following the steps above, the versioned value is:
 
 ```json
 {
-  "releaseID": "ocds-213czf-000-00002-01-tender",
-  "releaseDate": "2016-01-01T09:30:00Z",
+  "releaseID": "ocds-uhveoc-144560-1601380494627-tender",
+  "releaseDate": "2020-10-21T13:02:26Z",
   "releaseTag": [
     "tender"
   ],
-  "value": 1000
+  "value": 13000
 }
 ```
 
 In a **versioned release**, with a few exceptions, a field's value is replaced with an array of versioned values, which should be in chronological order by `releaseDate`.
 
-For example, in the above worked example, the estimated value was $1,000 in a release published January 1, 2016 and then $2,000 in a release published February 5, 2016. In a versioned release, this is serialized as below:
+For example, in the above worked example, the number of tenderers was 0 in a release published October 21, 2020 and then 2 in a release published November 5, 2020. In a versioned release, this is serialized as below:
 
-```{jsoninclude} ../examples/merging/updates/versioned.json
-:jsonpointer: /records/0/versionedRelease/tender/value
-:expand: value, amount
+```{jsoninclude} ../examples/merging/updates/ghana_versioned.json
+:jsonpointer: /records/0/versionedRelease/tender
+:expand: numberOfTenderers,releaseTag
 :title: Versioned_values
 ```
 
-```{jsoninclude} ../examples/merging/updates/versioned.json
+```{jsoninclude} ../examples/merging/updates/ghana_versioned.json
 :jsonpointer:
 :expand: records, versionedRelease
 :title: Versioned_release

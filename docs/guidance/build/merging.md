@@ -21,7 +21,7 @@ Through these individual releases, the agency provides real-time data about the 
 In each release, the agency also updates the record, which combines all the releases to date. In the final record:
 
 * The compiled release contains all the information about the opportunity and the tenderers, using the same schema as a release.
-* The versioned release makes it easy to see how the provided changed over time.
+* The versioned release makes it easy to see how the amount of information provided changed over time.
 
 ```{jsoninclude} ../../examples/merging/updates/ghana_tender1.json
 :jsonpointer:
