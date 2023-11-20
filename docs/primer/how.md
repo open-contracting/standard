@@ -130,58 +130,66 @@ The following example does not contain all existing fields, and not all of the i
 
 **CSV**
 
+***releases***
+
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../examples/primer/releases.csv
-:title: releases
 ```
+
+***parties***
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../examples/primer/parties.csv
-:title: parties
 ```
+
+***tender_items***
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../examples/primer/tender_items.csv
-:title: tender_items
 ```
+
+***documents***
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../examples/primer/documents.csv
-:title: documents
 ```
+
+***awards***
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../examples/primer/awards.csv
-:title: awards
 ```
+
+***award_suppliers***
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../examples/primer/award_suppliers.csv
-:title: award_suppliers
 ```
+
+***award_items***
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../examples/primer/award_items.csv
-:title: award_items
 ```
+
+***contracts***
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../examples/primer/contracts.csv
-:title: contracts
 ```
+
+***contract_implementation***
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../examples/primer/contract_implementation.csv
-:title: contract_implementation
 ```
 ````
 
