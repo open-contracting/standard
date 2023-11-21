@@ -239,12 +239,16 @@
                   "planning",
                   "planned",
                   "active",
+                  "complete",
                   "cancelled",
                   "unsuccessful",
-                  "complete",
                   "withdrawn",
                   null
-                ]
+                ],
+                "deprecated": {
+                  "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+                  "deprecatedVersion": "1.2"
+                }
               },
               "releaseTag": {
                 "type": "array",
@@ -728,7 +732,11 @@
                   null
                 ],
                 "codelist": "awardStatus.csv",
-                "openCodelist": false
+                "openCodelist": false,
+                "deprecated": {
+                  "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+                  "deprecatedVersion": "1.2"
+                }
               },
               "releaseTag": {
                 "type": "array",
@@ -907,14 +915,16 @@
                 "enum": [
                   "pending",
                   "active",
-                  "cancelled",
                   "terminated",
-                  "terminatedEarly",
-                  "terminatedSuccessfully",
+                  "cancelled",
                   null
                 ],
                 "codelist": "contractStatus.csv",
-                "openCodelist": false
+                "openCodelist": false,
+                "deprecated": {
+                  "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+                  "deprecatedVersion": "1.2"
+                }
               },
               "releaseTag": {
                 "type": "array",
@@ -2408,6 +2418,60 @@
       "type": "object",
       "properties": {
         "amount": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "amountNet": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "amountGross": {
           "type": "array",
           "items": {
             "type": "object",
