@@ -12,7 +12,7 @@ The examples on this page are based on Scotland's Public Contracts Scotland (PCS
 
 ## Problems with reusing OCIDs across publications
 
-Unless publications have disjoint coverage of OCDS fields or implement consistent mappings, reusing the OCIDs across publications can result in unpredictable and nonsensical results when releases are merged to create a compiled release. For example, unless publications use an identical approach to assigning [local identifiers](../../schema/identifiers.md#local-identifiers) to objects in arrays, then awards, contracts and other objects in arrays can overwrite and/or duplicate each other in nonsensical ways.
+Unless publications have disjoint coverage of OCDS fields or implement consistent mappings, reusing the OCIDs across publications can result in unpredictable and nonsensical results when releases are merged to create a compiled release. For example, unless publications use an identical approach to assigning local [identifiers](../../schema/identifiers.md) to objects in arrays, then awards, contracts and other objects in arrays can overwrite and/or duplicate each other in nonsensical ways.
 
 ### Example: Reusing OCIDs across Public Contracts Scotland and Find a Tender Service
 
@@ -104,7 +104,7 @@ For example, the publications implement inconsistent mappings for the `.id` of t
 
 If publications have overlapping fields and inconsistent mappings, then you ought to use [links](../../schema/reference.md#link) to connect releases across the publications. If, like FTS, a publication's releases are derived from another publication's data, the derivative publication ought to use the 'canonical' [link relation type](../../schema/codelists.md#link-relation-type) to refer to the releases in the authoritative publication. If a publication's releases follow another publication's releases, the subsequent publication ought to use the 'prev' link relation type to refer to the earlier releases.
 
-Building on the PCS and FTS example, the publishers agreed that PCS is the canonical publication. Therefore, when re-publishing releases from PCS, FTS mints a new OCID using its own [OCID prefix](../../schema/identifiers.md#registered-prefixes) and links back to the PCS release using the 'canonical' link relation type:
+Building on the PCS and FTS example, the publishers agreed that PCS is the canonical publication. Therefore, when re-publishing releases from PCS, FTS mints a new OCID using its own [OCID prefix](../../schema/identifiers.md#ocid-prefix) and links back to the PCS release using the 'canonical' link relation type:
 
 `````{tab-set}
 ````{tab-item}  PCS release
