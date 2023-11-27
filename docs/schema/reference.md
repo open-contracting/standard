@@ -4,6 +4,8 @@ The [Release Schema](release) provides a detailed specification of the fields an
 
 Releases are immutable – presenting information about a particular event in the lifetime of a contracting (or planning) process. Publishers must not edit a release after publication; a new release can be created by changing the release's `id` and `date`.
 
+Releases must be published within a [release package](packaging/release_package).
+
 **Note: If any conflicts are found between this text, and the text within the schema, the schema takes precedence.**
 
 ```{admonition} Browsing the schema
@@ -64,42 +66,19 @@ A contract for ‘Software consultancy services’ is published in a release wit
 
 ## Release structure
 
-The majority of OCDS data is held within a release structure. One or more releases can be published within a release package. Releases are made up of a number of sections, arranged in the following structure.
+The majority of OCDS data is held within a release structure. One or more releases can be published within a [release package](packaging/release_package). Releases are made up of a number of sections, arranged in the following structure.
 
-* [package](#package-metadata)
-  * [release](#release)
-    * [parties](#parties) 
-    * [planning](#planning)
-    * [tender](#tender) 
-    * [award](#award)
-    * [contract](#contract)
-      * [implementation](#implementation)
+* [release](#release)
+  * [parties](#parties) 
+  * [planning](#planning)
+  * [tender](#tender) 
+  * [award](#award)
+  * [contract](#contract)
+    * [implementation](#implementation)
 
 A release has a [tag](codelists.md#release-tag) to indicate whether it is about a planning process or a contracting process and, if it is about the latter, to indicate the stage of the contracting process to which it relates. However, there are no formal restrictions on when information about a stage of the process can be provided.
 
 For example, a publisher announcing the signing of a contract with a 'contract' tag might also include information in the award and tender blocks in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed. 
-
-### Package Metadata
-
-Releases must be published within a [release package](release_package). The release package provides metadata about the release(s) that it contains.
-
-````{admonition} Example
-:class: hint
-
-```{jsoninclude} ../examples/release_schema_reference/release_package.json
-:jsonpointer:
-:expand: publisher
-:title: package
-```
-````
-
-```{jsonschema} ../../build/current_lang/release-package-schema.json
-:collapse: releases,publisher
-```
-
-See the [licensing guidance](../guidance/publish.md#license-your-data) for more details on selecting a license, and publishing license information.
-
-See the [publication policy](../guidance/publish.md#finalize-your-publication-policy) guidance for more details on what to include in a publication policy.
 
 ### Release
 
@@ -438,7 +417,7 @@ See the [parties](#parties) section.
 
 The identifier block provides a way to [identify the legal entities](identifiers.md#organization-identifiers) involved in a contracting (or planning) process.
 
-If a contracting process represents a contract arranged by the department or branch of a larger organization, the legal entity (usually the registered organization) should be described in the [identifier](#identifier) section, with details of the branch or department given in the name, [address](#address) and [contact point](#contactpoint) as relevant. 
+When describing an organizational unit (for example, a department or branch of an organization), the `identifier` field should identify the main organization. The other fields should describe the organizational unit. For more information, see [organizational units](../guidance/map/organizational_units.md).
 
 ````{admonition} Example
 :class: hint
@@ -654,7 +633,14 @@ For delivery milestones, if there is a time frame for delivery, use `.dueAfterDa
 
 ### Value
 
-Financial values should be published with a currency attached. 
+`currency`, `amountNet` and `amountGross` should be provided, wherever possible.
+
+`amount` is defined as:
+
+```{field-description} ../../build/current_lang/release-schema.json /definitions/Value/properties/amount
+```
+
+If both the `amountNet` and the `amountGross` match this definition, enter the `amountNet` as the `amount`.
 
 ````{admonition} Example
 :class: hint
@@ -669,7 +655,7 @@ Financial values should be published with a currency attached.
 :pointer: /definitions/Value
 ```
 
-Support for exchange rates, and tax information, can be provided using extensions.
+Support for exchange rates can be provided using extensions.
 
 ### RelatedProcess
 
@@ -710,23 +696,6 @@ As well as providing this machine-readable link between processes, publishers ma
 ### Location
 
 The [Location](https://extensions.open-contracting.org/en/extensions/location/v1.1.4/) extension can be used to provide location information.
-
-### Publisher
-
-The publisher block is used in release and record packages to identify the source of a dataset. 
-
-````{admonition} Example
-:class: hint
-
-```{jsoninclude} ../examples/release_schema_reference/release_package.json
-:jsonpointer: /publisher
-:title: publisher
-```
-````
-
-```{jsonschema} ../../build/current_lang/release-package-schema.json
-:include: publisher
-```
 
 ### Link
 

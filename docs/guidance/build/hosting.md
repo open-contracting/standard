@@ -19,7 +19,7 @@ To meet the [basic criteria for data quality](../publish/quality.md#basic-criter
 
 ## Bulk downloads
 
-The [release package](../../schema/release_package) and [record package](../../schema/record_package) can provide **bulk access** to releases and records, respectively.
+The [release package](../../schema/packaging/release_package) and [record package](../../schema/packaging/record_package) can provide **bulk access** to releases and records, respectively.
 
 However, very large files can be difficult for users to download and process. The following section suggests good practices to assist users in accessing data. These are not requirements of the standard, but are based on experiences of maximizing the number of users able to work with datasets with their existing hardware and software.
 
