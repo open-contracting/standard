@@ -169,9 +169,11 @@ There are two scenarios in which reusing OCIDs across publications might be poss
 
 ### Publications with distinct coverage
 
-If two publications cover disjoint sets of OCDS fields, with the exception of the release-level required fields (`ocid`, `id`, `date` and `tag`), then the publications can reuse OCIDs so that users can merge releases.
+```{note}
+This scenario is unlikely to occur since most publications are likely to include some common fields, for example, the `parties` array. In which case, in order to avoid the risk of clashing identifiers, publishers would need to implement consistent OCDS mappings. For more information, see [publications with consistent OCDS mappings](#publications-with-consistent-ocds-mappings).
+```
 
-The publishers would need to agree the process and responsibilities for minting OCIDs. For example: who can mint OCIDs; if an OCID cannot be calculated deterministically from the input data, then how to lookup whether an OCID for a given process already exists, and how to share the new OCID for others to find. They would also need to implement the agreed approach, whether this means reporting a new OCID to a central registry, or requesting the OCID for a given procedure from a shared "OCID issuer" service, etc.
+If two publications cover disjoint sets of OCDS fields, with the exception of the release-level required fields (`ocid`, `id`, `date` and `tag`), then the publications can reuse OCIDs so that users can merge releases.
 
 Building on the PCS and FTS example above, if PCS were to publish only the `parties` array and `tender` object and FTS were to publish only the `awards` array, then it would be possible for FTS to reuse the OCIDs assigned by PCS:
 
@@ -268,8 +270,6 @@ Building on the PCS and FTS example above, if PCS were to publish only the `part
 ```
 ````
 `````
-
-However, this scenario is unlikely to occur since a publication that includes the `awards` array ought to also include details of the suppliers in the `parties` array. In which case, in order to avoid the risk of clashing identifiers, the publications would need to coordinate their approaches to assigning local identifiers to objects in the `parties` array.
 
 ### Publications with consistent OCDS mappings
 
