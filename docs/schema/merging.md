@@ -43,7 +43,7 @@ To convert a field's value in a release to a **versioned value**, you must:
 
 A **versioned value** thus describes a field's value in a specific release.
 
-For example, in the above worked example, the estimated value of the procurement was 13,000 GHS in a release (`tender/value/amount` was `13000`). Following the steps above, the versioned value is:
+For example, in worked example 1 in [Updates and deletions](../guidance/build/merging), the estimated value of the procurement was 13,000 GHS (in the first release `tender/value/amount` was `13000`). Following the steps above, the versioned value is:
 
 ```json
 {
@@ -58,7 +58,7 @@ For example, in the above worked example, the estimated value of the procurement
 
 In a **versioned release**, with a few exceptions, a field's value is replaced with an array of versioned values, which should be in chronological order by `releaseDate`.
 
-For example, in the above worked example, the number of tenderers was 0 in a release published October 21, 2020 and then 2 in a release published November 5, 2020. In a versioned release, this is serialized as below:
+For example, in the worked example referenced above, the number of tenderers was 0 in the release published October 21, 2020 and then 2 in the release published November 5, 2020. In a versioned release, this is serialized as below:
 
 ```{jsoninclude} ../examples/merging/updates/ghana_versioned.json
 :jsonpointer: /records/0/versionedRelease/tender
