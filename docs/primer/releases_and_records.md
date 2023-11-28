@@ -38,7 +38,7 @@ Each time a new release is published it is added to the index, the compiled rele
 
 ![A contracting (or planning) process is described by many releases, which are aggregated into a single record](../_static/png/change_history_process_record.png)
 
-Records and releases each contain several fields which can be used in different sections. The OCDS schema sets out the fields that ought to be included in each section (where applicable), aiming to reuse simple structures to represent information. For example, a release may contain information about items being procured. OCDS’ schema sets out standard sub-schema for items across releases, including the name of the item, a description, each item’s value, and the currency used.
+Records and releases each contain several fields which can be used in different sections. The OCDS schema sets out the fields that ought to be included in each section (where applicable), aiming to reuse simple structures to represent information. For example, a release may contain information about items being procured. OCDS’ schema sets out a standard sub-schema for items across releases, including the name of the item, a description, each item’s value, and the currency used.
 
 When you publish OCDS releases and records, you are encouraged to:
 

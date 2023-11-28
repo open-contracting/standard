@@ -16,7 +16,7 @@ In the example below:
 
 * An Organization is declared in the `parties` array with the `id` *GB-COH-09506232* and `name` *Open Data Services*. Information related to its legal `identifier` and `contactPoint` is also disclosed here.
 * An OrganizationReference object is used in the `tenderers` and `suppliers` array to reference *Open Data Services*, **without** duplicating the organization's detailed information.
-* If a user looks at the `tenderers` object and wants to contact *Open Data Services*, then the user has to search for the `id` *GB-COH-09506232* in the `parties` array.
+* If a user looks at the `tenderers` array and wants to contact *Open Data Services*, then the user has to search for the `id` *GB-COH-09506232* in the `parties` array.
 * The same needs to be applied to each `OrganizationReference` instance.
 
 ```{jsoninclude} ../../examples/organizations/organization_reference.json

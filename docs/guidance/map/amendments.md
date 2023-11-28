@@ -18,7 +18,7 @@ The nature of a change can be made explicit using:
 
 * **The release tag** (`tag`). For example, for a release with a new contract, use 'contract'. For an update to the contract, use 'contractUpdate', and for an amendment to the contract, use 'contractAmendment'.
 
-* **The amendments** object. This can contain an array of amendment explanations, and clearly identify the releases that contain before and after values.
+* **The amendments** array. Each item in the array is an `Amendment` object, including a rationale, a description, and references to the releases that contain before and after values.
 
 ## Worked examples
 
@@ -48,7 +48,7 @@ Weeks later, the publisher expands the `description` of the tender to provide mo
 
 #### Tender Amendment
 
-A few days later, the publisher increases the value of the tender and extends the deadline for bid submissions. These changes are considered as an 'amendment' by the publisher (depending on jurisdiction, certain changes can need to be disclosed as amendments), and so the new release has the `tag` 'tenderAmendment' and an `amendments` object under `tender`. The release reflects the updated value (USD 2000 instead of USD 1000) and the updated closing date for bid submissions (`2012-02-20` instead of `2012-02-15`). See the JSON example below.
+A few days later, the publisher increases the value of the tender and extends the deadline for bid submissions. These changes are considered as an 'amendment' by the publisher (depending on jurisdiction, certain changes can need to be disclosed as amendments), and so the new release has the `tag` 'tenderAmendment' and an `amendments` array under `tender`. The release reflects the updated value (USD 2000 instead of USD 1000) and the updated closing date for bid submissions (`2012-02-20` instead of `2012-02-15`). See the JSON example below.
 
 ```{jsoninclude} ../../examples/amendments/tender.json
 :jsonpointer: /records/0/releases/2
@@ -72,7 +72,7 @@ It is encouraged to [download](../../examples/amendments/tender.json) the record
 
 Note in this example that:
 
-* **The amendments object does not contain data on what was changed**. Changes are recorded by updating the fields of the `tender` object a new release.
+* **The amendments array does not contain data on what was changed**. Changes are recorded by updating the fields of the `tender` object in a new release.
 
 * **The publisher chooses in the 'tenderAmendment' release to repeat a fragment of the original 'tender' release**. This is not necessary when a full archive of releases is made accessible, but a publisher might want to provide the latest data available in each release.
 
@@ -96,7 +96,7 @@ See the JSON release below.
 
 #### Contract Amendment
 
-A few days after the contract release, its scope is increased to include the purchase of one additional appliance. A new 'contractAmendment' release is built, where a single item is added in the `contracts/items` object and the value of the contract is increased. A `amendments` object is included to explain the rationale of the changes.
+A few days after the contract release, its scope is increased to include the purchase of one additional appliance. A new 'contractAmendment' release is built, where a single item is added in the `contracts/items` array and the value of the contract is increased. A `amendments` array is included to explain the rationale of the changes.
 
 See the example release below.
 

@@ -15,7 +15,7 @@ There is more than one approach to model organizational units in OCDS:
     * The `address` and `contactPoint` objects can be filled with the unit information. 
     * Unit identifiers can also be appended to `parties/id`.
 
-2. When the first option is not enough to model the publisher's case, **use or create an extension**. Any additional fields can be placed in the `details` section of the Organization sub-schema.
+2. When the first option is not enough to model the publisher's case, **use or create an extension**. Any additional fields can be placed in the `details` section of the `Organization` sub-schema.
 
 Some publishers use the [memberOf](https://github.com/open-contracting-extensions/ocds_memberOf_extension) extension to represent organization hierarchies, including organizational units. This is strongly discouraged unless there is a clear use case to support it, because OCDS is not designed to disclose hierarchical organization information. Ideally, organizational hierarchies would be represented in separate, non-OCDS datasets, and organizational units would be modelled using one of the alternatives described above. 
 
