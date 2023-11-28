@@ -12,8 +12,7 @@ Planning milestones describe:
  * Key events in the planning process, for example, the preparation of an environmental impact assessment, the approval to proceed with a project, or the date of a public consultation. 
  * Anticipated milestones during the contract implementation stage, for example, the date by which goods delivery of the goods is required.
 
-If during the planning process you have information about tender process milestones, then you
-ought to publish it as a tender milestone.
+If during the planning process you have information about tender process milestones, then you ought to publish it as a tender milestone.
 
 ## Tender
 

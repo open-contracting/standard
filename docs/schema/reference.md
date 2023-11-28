@@ -78,11 +78,11 @@ The majority of OCDS data is held within a release structure. One or more releas
 
 A release has a [tag](codelists.md#release-tag) to indicate whether it is about a planning process or a contracting process and, if it is about the latter, to indicate the stage of the contracting process to which it relates. However, there are no formal restrictions on when information about a stage of the process can be provided.
 
-For example, a publisher announcing the signing of a contract with a 'contract' tag might also include information in the awards array and tender object in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed. 
+For example, a publisher announcing the signing of a contract with a 'contract' tag might also include information in the awards array and tender object in order to provide a comprehensive picture of the contracting process to date which led to that contract being signed.
 
 ### Release
 
-All new information about a contracting (or planning) process is described within a release. 
+All new information about a contracting (or planning) process is described within a release.
 
 ````{admonition} Example
 :class: hint
@@ -107,7 +107,7 @@ All new information about a contracting (or planning) process is described withi
 
 ### Parties
 
-Each of the organizations referenced in a release must be included in the parties section. 
+Each of the organizations referenced in a release must be included in the parties section.
 
 ```{versionadded} 1.1
 In OCDS 1.0, the details (address, contact point, etc.) of the organizations involved in a contracting process were repeated across many fields (`tenderers`, `suppliers`, etc.). In OCDS 1.1, these details are instead collected under a top-level `parties` array, with the other fields referencing entries in this array, using [organization references](#organizationreference). This reduces repetition and supports publication of information about additional organizations: for example, multiple buyers.
@@ -172,7 +172,7 @@ The planning section is used in a planning process. This includes information ab
 :tag: planning
 ```
 
-#### Budget 
+#### Budget
 
 Apart from documents, the majority of planning information is held within the budget object. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting (or planning) process to existing projects and budgets even where linked data is not available.
 
@@ -198,7 +198,7 @@ Apart from documents, the majority of planning information is held within the bu
 
 The tender section includes details of the announcement that an organization intends to source some particular goods, services or works and to establish one or more contract(s) for these.
 
-It can contain details of a forthcoming process to receive and evaluate proposals to supply these goods, services or works and can also be used to record details of a completed tender stage, including details of bids received. 
+It can contain details of a forthcoming process to receive and evaluate proposals to supply these goods, services or works and can also be used to record details of a completed tender stage, including details of bids received.
 
 ````{admonition} Example
 :class: hint
@@ -254,7 +254,7 @@ The award section is used to announce any awards issued for this tender. There c
 
 ### Contract
 
-The contract section is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'. 
+The contract section is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'.
 
 ````{admonition} Example
 :class: hint
@@ -328,7 +328,7 @@ The `Transaction` sub-schema is modelled on the [International Aid Transparency 
 To represent planned payments, use [Milestones](#milestones) instead.
 ```
 
-In most circumstances, the `payer` identifier will match that of the `buyer`, and the `payee` identifier will match that of the `supplier`. 
+In most circumstances, the `payer` identifier will match that of the `buyer`, and the `payee` identifier will match that of the `supplier`.
 
 ```{extensionlist} The following extensions are available for transactions
 :list: transaction
@@ -338,13 +338,13 @@ In most circumstances, the `payer` identifier will match that of the `buyer`, an
 
 See [milestone](#milestone) reference below.
 
-The implementation milestones should be updated to reflect when they are met. 
+The implementation milestones should be updated to reflect when they are met.
 
 #### Documents
 
 Documents related to contract implementation are stored here. This can include subcontracts.
 
-See [document](#document) reference below. 
+See [document](#document) reference below.
 
 ### Amendment
 
@@ -539,7 +539,7 @@ In the event that a date field is not bound to a specific time at all, publisher
 
 ### Item
 
-The `Item` sub-schema is used to describe the line-items associated with a tender, award or contract. 
+The `Item` sub-schema is used to describe the line-items associated with a tender, award or contract.
 
 ````{admonition} Example
 :class: hint
@@ -601,7 +601,7 @@ Other unit classification schemes can be used, including those in the [unitClass
 
 Milestone information can be included in the [planning](#planning), [tender](#tender), [contract](#contract) and [contract implementation](#implementation) objects.
 
-The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed. 
+The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed.
 
 ```{seealso}
 [How to represent planned payments](../guidance/map/milestones.md#delivery-and-payment-data)
