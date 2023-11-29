@@ -291,6 +291,8 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * [#1450](https://github.com/open-contracting/standard/pull/1450) Replace a repeated example in schema/merging/ with a link to guidance/build/merging/.
 
+* [#1665](https://github.com/open-contracting/standard/pull/1665) Abandon in-file translations.
+
 ### Documentation
 
 * [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier.
@@ -311,6 +313,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * [#1643](https://github.com/open-contracting/standard/pull/1643) Update identifier section in release reference.
 * [#1655](https://github.com/open-contracting/standard/pull/1655) Rewrite identifiers reference and examples for clarity.
 * [#1659](https://github.com/open-contracting/standard/pull/1659) Add `Record` definition schema table to record reference.
+* [#1665](https://github.com/open-contracting/standard/pull/1665) Add translations worked example.
 
 ## [1.1.5] - 2020-08-20
 
