@@ -141,6 +141,10 @@ For example, you have created an extension to add a new field to indicate whethe
 map/extensions
 ```
 
+## Link OCDS with alternative representations
+
+The data contained in an OCDS release is often available via alternative representations, such as the HTML or PDF version of a notice. You ought to link to alternative representations from your OCDS data so that users can follow up on contracting processes that they are interested in, for example to submit a bid, or to subscribe to notifications. For more information on linking to alternative representations, refer to the [`Document` reference](../schema/reference.md#document).
+
 ## Link OCDS with other standards
 
 Not all information that is related to a contracting (or planning) process belongs in OCDS. For example, a company's annual filings and incorporation status are typically managed in a company registry, outside the lifecycle of a contracting process.
