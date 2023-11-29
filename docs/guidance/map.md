@@ -110,6 +110,7 @@ map/organization_personal_identifiers
 map/organizational_units
 map/organization_classifications
 map/beneficial_ownership
+map/translations
 ```
 
 ## Consider using extensions

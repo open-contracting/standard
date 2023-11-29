@@ -34,6 +34,10 @@ There can be cases where a publisher needs to remove, rather than update, a valu
 
 ## Language
 
+```{deprecated} 1.2
+  Use [full-file translations](../guidance/map/translations.md) instead.
+```
+
 Many publishers need to be able to share key data in multiple languages. All free-text title and description fields in the Open Contracting Data Standard can be given in one or more languages.
 
 Language variations are included by a copy of multi-lingual fields, suffixed with a language code.

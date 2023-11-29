@@ -22,6 +22,7 @@ import requests
 from babel.messages.pofile import read_po
 from docutils.utils import relative_path
 from lxml import etree
+from ocdskit.mapping_sheet import mapping_sheet
 
 basedir = Path(__file__).resolve().parent
 schemadir = basedir / 'schema'
@@ -508,7 +509,7 @@ def missing_changelog(ignore_base):
 @cli.command()
 def pre_commit():
     """
-    Update derivative schema files.
+    Generate a CSV file of fields that can be translated and update derivative schema files.
 
     \b
     - meta-schema.json
@@ -516,6 +517,27 @@ def pre_commit():
     - versioned-release-validation-schema.json
     """
     release_schema = json_load('release-schema.json')
+
+    _, rows = mapping_sheet(release_schema, include_codelist=True, include_deprecated=False)
+
+    with (basedir / 'docs' / '_static' / 'i18n.csv').open('w') as f:
+        fieldnames = ['path', 'title']
+
+        writer = csv.DictWriter(f, fieldnames=fieldnames, lineterminator='\n', extrasaction='ignore')
+        writer.writeheader()
+
+        for row in rows:
+            if row['type'] == 'string' and not row['values'] and not row['codelist'] and \
+                    row['path'].split('/')[-1] not in [
+                        'id',
+                        'ocid',
+                        'scheme',
+                        'amendsReleaseID',
+                        'releaseID',
+                        'identifier'
+                      ]:
+                writer.writerow(row)
+
     jsonref_release_schema = json_load('release-schema.json', jsonref, merge_props=True)
 
     json_dump('meta-schema.json', get_metaschema())
