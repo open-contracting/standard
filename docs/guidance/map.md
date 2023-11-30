@@ -143,7 +143,7 @@ map/extensions
 
 ## Link OCDS with alternative representations
 
-The data contained in an OCDS release is often available via alternative representations, such as the HTML or PDF version of a notice. You ought to link to alternative representations from your OCDS data so that users can follow up on contracting processes that they are interested in, for example to submit a bid, or to subscribe to notifications. For more information on linking to alternative representations, refer to the [`Document` reference](../schema/reference.md#document).
+The data contained in an OCDS release is often available in other formats, such as the HTML or PDF version of a notice. You ought to link to these alternative representations from your OCDS data, so that users can follow up on contracting processes that they are interested in: for example, to submit a bid, or to subscribe to notifications. For more information on linking to alternative representations, refer to the [`Document` reference](../schema/reference.md#document).
 
 ## Link OCDS with other standards
 
