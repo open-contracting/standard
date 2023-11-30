@@ -229,6 +229,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1618](https://github.com/open-contracting/standard/pull/1618) Normalize field descriptions according to a style guide.
   * [#1656](https://github.com/open-contracting/standard/pull/1656) `Award.value` and `Contract.value`, to clarify with respect to changes in contract values.
   * [#1509](https://github.com/open-contracting/standard/pull/1509) `planning`, `Planning`, `tender` and `Tender` to clarify relationships with the availability of documents.
+  * [#1663](https://github.com/open-contracting/standard/pull/1663) `tender.amendments`, `awards.amendments`, `contracts.amendments` to avoid restating field titles.
 
 * Remove confusing terminology:
   * [#1487](https://github.com/open-contracting/standard/pull/1487) `planning.budget.project`, to remove sentence about translation options.
