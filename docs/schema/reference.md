@@ -477,6 +477,8 @@ OCDS allows summarizing information in the document's `description` field. Provi
 
 If a document contains multiple languages, use the `languages` field to list the languages used in the document. If there are multiple versions of a document, each in a different language, add a separate `Document` object for each version of the document.
 
+If an alternative representation of the data in an OCDS release exists, a link should be provided in the relevant `.documents` array. For example, if the data in an OCDS award release is also available as an HTML page, a link to the HTML page should be provided in `awards.documents`. Links to alternative representations of an entire contracting process should be provided in `tender.documents`.
+
 ````{admonition} Example
 :class: hint
 

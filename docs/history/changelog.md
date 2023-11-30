@@ -312,6 +312,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * [#1643](https://github.com/open-contracting/standard/pull/1643) Update identifier section in release reference.
 * [#1655](https://github.com/open-contracting/standard/pull/1655) Rewrite identifiers reference and examples for clarity.
 * [#1659](https://github.com/open-contracting/standard/pull/1659) Add `Record` definition schema table to record reference.
+* [#1664](https://github.com/open-contracting/standard/pull/1664) Recommend linking to alternative representations using `documents`.
 
 ## [1.1.5] - 2020-08-20
 
