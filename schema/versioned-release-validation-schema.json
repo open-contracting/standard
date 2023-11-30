@@ -1506,7 +1506,36 @@
           "minLength": 1
         },
         "source": {
-          "$ref": "#/definitions/StringNullUriVersioned"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "uri",
+                "deprecated": {
+                  "description": "This field is deprecated, because its value would be potentially identical across every transaction.",
+                  "deprecatedVersion": "1.2"
+                }
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
         },
         "date": {
           "$ref": "#/definitions/StringNullDateTimeVersioned"
