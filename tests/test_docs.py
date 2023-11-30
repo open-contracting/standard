@@ -13,11 +13,11 @@ def test_examples(browser, server, lang):
     examples = browser.find_element(By.ID, 'updates-and-deletions')
     select = Select(examples.find_element(By.TAG_NAME, 'select'))
 
-    assert '"date": "2016-01-01T09:30:00Z"' in examples.text
+    assert '"date": "2020-10-21T13:02:26Z"' in examples.text
 
-    select.select_by_visible_text('tenderAmendment')
-    assert '"date": "2016-02-05T10:30:00Z"' in examples.text
-    assert '"date": "2016-01-01T09:30:00Z"' not in examples.text
+    select.select_by_visible_text('tenderUpdate')
+    assert '"date": "2020-11-05T14:36:54Z"' in examples.text
+    assert '"date": "2020-10-21T13:02:26Z"' not in examples.text
 
     # test collapse expand
     # xs = examples.find_element(By.LINK_TEXT, '⊖')
