@@ -119,8 +119,6 @@ Tabular formats, such as CSV (or comma separated values) are commonly used in sp
 
 Nigeria's Ebonyi State publishes OCDS data in JSON and tabular formats.
 
-The following example does not contain all existing fields, and not all of the included fields are required. It has been edited for length and consistency, and is not identical to the data available on the Ebonyi State e-Procurement platform.
-
 **JSON**
 
 ```{jsoninclude} ../examples/primer/primer.json
