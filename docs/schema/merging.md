@@ -48,7 +48,7 @@ For example, in worked example 1 in [Updates and deletions](../guidance/build/me
 ```{jsoninclude} ../examples/merging/updates/ghana_versioned.json
 :jsonpointer: /records/0/versionedRelease/tender
 :include_only: id,date,tag,tender/value/amount
-:expand: tender/value/amount
+:expand: id,value,amount,currency
 :title: Versioned_values
 ```
 
@@ -59,13 +59,13 @@ For example, in the worked example referenced above, the number of tenderers was
 ```{jsoninclude} ../examples/merging/updates/ghana_versioned.json
 :jsonpointer: /records/0/versionedRelease/tender
 :include_only: id,date,tag,tender/numberOfTenderers
-:expand: numberOfTenderers,releaseTag
+:expand: id,numberOfTenderers,releaseTag
 :title: Versioned_values
 ```
 
 ```{jsoninclude} ../examples/merging/updates/ghana_versioned.json
 :jsonpointer: /records/0/versionedRelease
-:expand: tender/numberOfTenderers
+:expand: tender,numberOfTenderers
 :title: Versioned_release
 ```
 

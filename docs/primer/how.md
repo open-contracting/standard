@@ -124,7 +124,7 @@ The following example does not contain all existing fields, and not all of the i
 **JSON**
 
 ```{jsoninclude} ../examples/primer/primer.json
-:jsonpointer: releases
+:jsonpointer: /releases
 :expand: tender
 ```
 
