@@ -24,26 +24,26 @@ In each release, the agency also updates the record, which combines all the rele
 * The versioned release makes it easy to see how the contracting process changed over time.
 
 ```{jsoninclude} ../../examples/merging/updates/ghana_tender1.json
-:jsonpointer:
-:expand: releases, tag, tender
+:jsonpointer: releases
+:expand: tag, tender
 :title: tender
 ```
 
 ```{jsoninclude} ../../examples/merging/updates/ghana_tender2.json
-:jsonpointer:
-:expand: releases, tag, tender
+:jsonpointer: releases
+:expand: tag, tender
 :title: tenderUpdate
 ```
 
 ```{jsoninclude} ../../examples/merging/updates/ghana_tender3.json
-:jsonpointer:
-:expand: releases, tag, tender
+:jsonpointer: releases
+:expand: tag, tender
 :title: tenderCancellation
 ```
 
 ```{jsoninclude} ../../examples/merging/updates/ghana_versioned.json
-:jsonpointer:
-:expand: records, compiledRelease, versionedRelease, tag, tender
+:jsonpointer: records
+:expand: compiledRelease, versionedRelease, tag, tender
 :title: record
 ```
 

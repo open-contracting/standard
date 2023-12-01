@@ -45,15 +45,11 @@ A **versioned value** thus describes a field's value in a specific release.
 
 For example, in worked example 1 in [Updates and deletions](../guidance/build/merging), the estimated value of the procurement was 13,000 GHS (in the first release `tender/value/amount` was `13000`). Following the steps above, the versioned value is:
 
-```json
-{
-  "releaseID": "ocds-uhveoc-144560-1601380494627-tender",
-  "releaseDate": "2020-10-21T13:02:26Z",
-  "releaseTag": [
-    "tender"
-  ],
-  "value": 13000
-}
+```{jsoninclude} ../examples/merging/updates/ghana_versioned.json
+:jsonpointer: /records/0/versionedRelease/tender
+:include_only: id,date,tag,tender/value/amount
+:expand: tender/value/amount
+:title: Versioned_values
 ```
 
 In a **versioned release**, with a few exceptions, a field's value is replaced with an array of versioned values, which should be in chronological order by `releaseDate`.
@@ -62,13 +58,14 @@ For example, in the worked example referenced above, the number of tenderers was
 
 ```{jsoninclude} ../examples/merging/updates/ghana_versioned.json
 :jsonpointer: /records/0/versionedRelease/tender
+:include_only: id,date,tag,tender/numberOfTenderers
 :expand: numberOfTenderers,releaseTag
 :title: Versioned_values
 ```
 
 ```{jsoninclude} ../examples/merging/updates/ghana_versioned.json
-:jsonpointer:
-:expand: records, versionedRelease
+:jsonpointer: /records/0/versionedRelease
+:expand: tender/numberOfTenderers
 :title: Versioned_release
 ```
 
