@@ -46,7 +46,7 @@ When you publish OCDS releases and records, you are encouraged to:
 * Produce bulk packages of releases and records for users to download
 
 ```{note}
-For guidance on how to generate releases and records see the worked examples in [merging](../schema/merging.md) and [change history](../guidance/build/change_history.md).
+To see what releases and records look like, refer to the worked examples in [merging](../schema/merging.md) and [change history](../guidance/build/change_history.md).
 ```
 
 ```{note}

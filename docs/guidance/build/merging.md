@@ -12,16 +12,16 @@ The following examples show how updates and deletions are reflected in compiled 
 
 ## Example 1: Updates
 
-A government agency in Ghana publishes a release to announce an opportunity on October 21, 2020 with an estimated value of 13,000 GHS. On November 5, 2020 they publish an update containing the details of 2 parties that have submitted bids and the publication date of the bidding documents.
+The Ghana Public Procurement Authority publishes a release to announce an opportunity on October 21, 2020 with an estimated value of 13,000 GHS. On November 5, 2020 it publishes an update containing the details of two tenderers and the publication date of the bidding documents.
 
-The agency then decides to cancel the tender. On December 19, 2020 it publishes a third release announcing that the tender has been cancelled.
+On December 19, 2020 it publishes a third release announcing that the tender is cancelled.
 
 Through these individual releases, the agency provides real-time data about the contracting (or planning) process.
 
 In each release, the agency also updates the record, which combines all the releases to date. In the final record:
 
 * The compiled release contains all the information about the opportunity and the tenderers, using the same schema as a release.
-* The versioned release makes it easy to see how the amount of information provided changed over time.
+* The versioned release makes it easy to see how the contracting process changed over time.
 
 ```{jsoninclude} ../../examples/merging/updates/ghana_tender1.json
 :jsonpointer:
