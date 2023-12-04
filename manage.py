@@ -22,7 +22,7 @@ import requests
 from babel.messages.pofile import read_po
 from docutils.utils import relative_path
 from lxml import etree
-from ocdskit.mapping_sheet import mapping_sheet
+from ocdskit.schema import get_schema_fields
 
 basedir = Path(__file__).resolve().parent
 schemadir = basedir / 'schema'
@@ -509,36 +509,47 @@ def missing_changelog(ignore_base):
 @cli.command()
 def pre_commit():
     """
-    Generate a CSV file of fields that can be translated and update derivative schema files.
+    Update derivative schema files, and generate a CSV file of translatable fields.
 
     \b
     - meta-schema.json
     - dereferenced-release-schema.json
     - versioned-release-validation-schema.json
     """
+    nontranslatable = {
+        # Identifiers.
+        'amendsReleaseID', 'id', 'identifier', 'ocid', 'relatedItems', 'releaseID',
+        # Missing format properties. https://github.com/open-contracting/standard/issues/881
+        'email',
+        # Published-defined formats.
+        'faxNumber', 'postalCode', 'telephone',
+        # Published-defined codelists.
+        'code', 'scheme',
+    }
+
     release_schema = json_load('release-schema.json')
 
-    _, rows = mapping_sheet(release_schema, include_codelist=True, include_deprecated=False)
+    jsonref_release_schema = json_load('release-schema.json', jsonref, merge_props=True)
 
     with (basedir / 'docs' / '_static' / 'i18n.csv').open('w') as f:
-        fieldnames = ['path', 'title']
-
-        writer = csv.DictWriter(f, fieldnames=fieldnames, lineterminator='\n', extrasaction='ignore')
-        writer.writeheader()
-
-        for row in rows:
-            if row['type'] == 'string' and not row['values'] and not row['codelist'] and \
-                    row['path'].split('/')[-1] not in [
-                        'id',
-                        'ocid',
-                        'scheme',
-                        'amendsReleaseID',
-                        'releaseID',
-                        'identifier'
-                      ]:
-                writer.writerow(row)
-
-    jsonref_release_schema = json_load('release-schema.json', jsonref, merge_props=True)
+        writer = csv.writer(f, lineterminator='\n')
+        writer.writerow(['path', 'title'])
+        for field in get_schema_fields(jsonref_release_schema):
+            if (
+                # Output dereferenced properties, not definitions.
+                not field.definition_pointer_components
+                # Skip deprecated fields.
+                and not field.deprecated
+                # If a field can be a non-string, it is not translatable.
+                and not any(t in field.schema['type'] for t in ('boolean', 'integer', 'number', 'object'))
+                # If a field's value is constrained to a codelist or format, it is not translatable.
+                and not any(prop in field.schema for prop in ('codelist', 'format'))
+                # If an array can contain non-strings, it is not translatable.
+                and not ('array' in field.schema['type'] and 'object' in field.schema['items']['type'])
+                # Specific exceptions.
+                and not field.path_components[-1] in nontranslatable
+            ):
+                writer.writerow([field.path.replace('.', '/'), field.schema['title']])
 
     json_dump('meta-schema.json', get_metaschema())
     json_dump('dereferenced-release-schema.json', jsonref_release_schema)
