@@ -517,7 +517,7 @@
           }
         },
         "amendments": {
-          "description": "A tender amendment is a formal change to the tender, and generally involves the publication of a new tender notice/release. The rationale and a description of the changes made can be provided here.",
+          "description": "The formal changes to the tender, which generally involve the publication of a new notice/release.",
           "type": "array",
           "title": "Amendments",
           "items": {
@@ -664,7 +664,7 @@
           "uniqueItems": true
         },
         "amendments": {
-          "description": "An award amendment is a formal change to the details of the award, and generally involves the publication of a new award notice/release. The rationale and a description of the changes made can be provided here.",
+          "description": "The formal changes to the award, which generally involve the publication of a new notice/release.",
           "type": "array",
           "title": "Amendments",
           "items": {
@@ -835,7 +835,7 @@
           }
         },
         "amendments": {
-          "description": "A contract amendment is a formal change to, or extension of, a contract, and generally involves the publication of a new contract signature notice/release, or some other documents detailing the change. The rationale and a description of the changes made can be provided here.",
+          "description": "The formal changes or extensions to the contract, which generally involve the publication of a new notice/release.",
           "type": "array",
           "title": "Amendments",
           "items": {
@@ -1225,7 +1225,11 @@
             "string",
             "null"
           ],
-          "format": "uri"
+          "format": "uri",
+          "deprecated": {
+            "description": "This field is deprecated, because its value would be potentially identical across every transaction.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "date": {
           "title": "Date",
