@@ -201,6 +201,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `SimpleIdentifier`
   * [#1519](https://github.com/open-contracting/standard/pull/1519) `Value.amountNet` and `Value.amountGross`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `tender.identifiers` and `contracts.identifiers`
+  * [#1654](https://github.com/open-contracting/standard/pull/1654) `tender.submissionTerms.electronicSubmissionPolicy`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
@@ -209,6 +210,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1389](https://github.com/open-contracting/standard/pull/1389) `initiationType`, because the approach to data modelling that it supports was not pursued.
   * [#1380](https://github.com/open-contracting/standard/pull/1380) `Document.language` in favor of the new `Document.languages` field, to support documents in which multiple languages are used.
   * [#1509](https://github.com/open-contracting/standard/pull/1509) `tender.status`, `Award.status`, `Contract.status`, because the same information can be provided by filling in the relevant date fields.
+  * [#1662](https://github.com/open-contracting/standard/pull/1662) `Transaction.source`, because its value would be potentially identical across every transaction.
 
 * Update and clarify field descriptions:
   * [#1113](https://github.com/open-contracting/standard/pull/1113) `ocid`, to recommend a hyphen after the ocid prefix.
@@ -227,6 +229,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1618](https://github.com/open-contracting/standard/pull/1618) Normalize field descriptions according to a style guide.
   * [#1656](https://github.com/open-contracting/standard/pull/1656) `Award.value` and `Contract.value`, to clarify with respect to changes in contract values.
   * [#1509](https://github.com/open-contracting/standard/pull/1509) `planning`, `Planning`, `tender` and `Tender` to clarify relationships with the availability of documents.
+  * [#1663](https://github.com/open-contracting/standard/pull/1663) `tender.amendments`, `awards.amendments`, `contracts.amendments` to avoid restating field titles.
 
 * Remove confusing terminology:
   * [#1487](https://github.com/open-contracting/standard/pull/1487) `planning.budget.project`, to remove sentence about translation options.
@@ -311,6 +314,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * [#1655](https://github.com/open-contracting/standard/pull/1655) Rewrite identifiers reference and examples for clarity.
 * [#1659](https://github.com/open-contracting/standard/pull/1659) Add `Record` definition schema table to record reference.
 * [#1660](https://github.com/open-contracting/standard/pull/1660) Remove all references to "building blocks" and "blocks".
+* [#1664](https://github.com/open-contracting/standard/pull/1664) Recommend linking to alternative representations using `documents`.
 
 ## [1.1.5] - 2020-08-20
 

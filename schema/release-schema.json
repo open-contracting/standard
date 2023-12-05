@@ -398,6 +398,29 @@
             "null"
           ]
         },
+        "submissionTerms": {
+          "title": "Submission terms",
+          "description": "Information about how, when and where tenderers need to submit their bids.",
+          "type": "object",
+          "properties": {
+            "electronicSubmissionPolicy": {
+              "title": "Electronic submission policy",
+              "description": "Whether tenderers are required, allowed or not allowed to submit bids electronically.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "codelist": "permission.csv",
+              "openCodelist": false,
+              "enum": [
+                "required",
+                "allowed",
+                "notAllowed",
+                null
+              ]
+            }
+          }
+        },
         "datePublished": {
           "description": "The date on which the tender was published.",
           "format": "date-time",
@@ -502,7 +525,7 @@
           }
         },
         "amendments": {
-          "description": "A tender amendment is a formal change to the tender, and generally involves the publication of a new tender notice/release. The rationale and a description of the changes made can be provided here.",
+          "description": "The formal changes to the tender, which generally involve the publication of a new notice/release.",
           "type": "array",
           "title": "Amendments",
           "items": {
@@ -693,7 +716,7 @@
           "uniqueItems": true
         },
         "amendments": {
-          "description": "An award amendment is a formal change to the details of the award, and generally involves the publication of a new award notice/release. The rationale and a description of the changes made can be provided here.",
+          "description": "The formal changes to the award, which generally involve the publication of a new notice/release.",
           "type": "array",
           "title": "Amendments",
           "items": {
@@ -878,7 +901,7 @@
           }
         },
         "amendments": {
-          "description": "A contract amendment is a formal change to, or extension of, a contract, and generally involves the publication of a new contract signature notice/release, or some other documents detailing the change. The rationale and a description of the changes made can be provided here.",
+          "description": "The formal changes or extensions to the contract, which generally involve the publication of a new notice/release.",
           "type": "array",
           "title": "Amendments",
           "items": {
@@ -1330,7 +1353,11 @@
             "string",
             "null"
           ],
-          "format": "uri"
+          "format": "uri",
+          "deprecated": {
+            "description": "This field is deprecated, because its value would be potentially identical across every transaction.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "date": {
           "title": "Date",
