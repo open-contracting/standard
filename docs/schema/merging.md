@@ -54,7 +54,7 @@ For example, in worked example 1 in [Updates and deletions](../guidance/build/me
 
 In a **versioned release**, with a few exceptions, a field's value is replaced with an array of versioned values, which should be in chronological order by `releaseDate`.
 
-For example, in the worked example referenced above, the number of tenderers was 0 in the release published October 21, 2020 and then 2 in the release published November 5, 2020. In a versioned release, this is serialized as below:
+For example, in the worked example referenced above, the number of tenderers was 0 in the release published October 21, 2020 and then 1 in the release published November 5, 2020. In a versioned release, this is serialized as below:
 
 ```{jsoninclude} ../examples/merging/updates/ghana_versioned.json
 :jsonpointer: /records/0/versionedRelease/tender

@@ -12,7 +12,7 @@ The following examples show how updates and deletions are reflected in compiled 
 
 ## Example 1: Updates
 
-The Ghana Public Procurement Authority publishes a release to announce an opportunity on October 21, 2020 with an estimated value of 13,000 GHS. On November 5, 2020 it publishes an update containing the details of two tenderers.
+The Ghana Public Procurement Authority publishes a release to announce an opportunity on October 21, 2020 with an estimated value of 13,000 GHS. On November 5, 2020 it publishes an update containing the details of one tenderer.
 
 On December 19, 2020 it publishes a third release announcing that the tender is cancelled.
 
@@ -20,31 +20,31 @@ Through these individual releases, the agency provides real-time data about the 
 
 In each release, the agency also updates the record, which combines all the releases to date. In the final record:
 
-* The compiled release contains all the information about the opportunity and the tenderers, using the same schema as a release.
+* The compiled release contains all the information about the opportunity and the tenderer, using the same schema as a release.
 * The versioned release makes it easy to see how the contracting process changed over time.
 
 ```{jsoninclude} ../../examples/merging/updates/ghana_tender1.json
 :jsonpointer: /releases
 :expand: tag, tender, parties
-:title: Tender release
+:title: tender
 ```
 
 ```{jsoninclude} ../../examples/merging/updates/ghana_tender2.json
 :jsonpointer: /releases
 :expand: tag, tender, parties
-:title: Tender update release
+:title: tenderUpdate
 ```
 
 ```{jsoninclude} ../../examples/merging/updates/ghana_tender3.json
 :jsonpointer: /releases
-:expand: tag, tender, parties
-:title: Tender cancellation release
+:expand: tag, tender
+:title: tenderCancellation
 ```
 
 ```{jsoninclude} ../../examples/merging/updates/ghana_versioned.json
 :jsonpointer: /records
 :expand: compiledRelease, versionedRelease, tag, tender, parties
-:title: Record
+:title: record
 ```
 
 ## Example 2: Deletion of fields and objects
