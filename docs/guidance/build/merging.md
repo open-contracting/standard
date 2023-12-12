@@ -12,11 +12,11 @@ The following examples show how updates and deletions are reflected in compiled 
 
 ## Example 1: Updates
 
-The Ghana Public Procurement Authority publishes a release to announce an opportunity on October 21, 2020 with an estimated value of 13,000 GHS. On November 5, 2020 it publishes an update containing the details of two tenderers and the publication date of the bidding documents.
+The Ghana Public Procurement Authority publishes a release to announce an opportunity on October 21, 2020 with an estimated value of 13,000 GHS. On November 5, 2020 it publishes an update containing the details of two tenderers.
 
 On December 19, 2020 it publishes a third release announcing that the tender is cancelled.
 
-Through these individual releases, the agency provides real-time data about the contracting (or planning) process.
+Through these individual releases, the agency provides real-time data about the contracting process.
 
 In each release, the agency also updates the record, which combines all the releases to date. In the final record:
 
@@ -26,25 +26,25 @@ In each release, the agency also updates the record, which combines all the rele
 ```{jsoninclude} ../../examples/merging/updates/ghana_tender1.json
 :jsonpointer: /releases
 :expand: tag, tender, parties
-:title: tender
+:title: Tender release
 ```
 
 ```{jsoninclude} ../../examples/merging/updates/ghana_tender2.json
 :jsonpointer: /releases
 :expand: tag, tender, parties
-:title: tenderUpdate
+:title: Tender update release
 ```
 
 ```{jsoninclude} ../../examples/merging/updates/ghana_tender3.json
 :jsonpointer: /releases
 :expand: tag, tender, parties
-:title: tenderCancellation
+:title: Tender cancellation release
 ```
 
 ```{jsoninclude} ../../examples/merging/updates/ghana_versioned.json
 :jsonpointer: /records
 :expand: compiledRelease, versionedRelease, tag, tender, parties
-:title: record
+:title: Record
 ```
 
 ## Example 2: Deletion of fields and objects
