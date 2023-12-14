@@ -1193,7 +1193,7 @@
     },
     "planning": {
       "title": "Planning",
-      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before the publication of procurement documents.",
+      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before contracting documents (for example, procurement documents) are available to potential suppliers.",
       "type": "object",
       "properties": {
         "id": {
@@ -1241,7 +1241,23 @@
               "properties": {
                 "amount": {
                   "title": "Amount",
-                  "description": "Amount as a number.",
+                  "description": "The amount as entered into a system or published in a document.",
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "amountNet": {
+                  "title": "Net amount",
+                  "description": "The amount excluding all taxes.",
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "amountGross": {
+                  "title": "Gross amount",
+                  "description": "The amount including all taxes.",
                   "type": [
                     "number",
                     "null"
@@ -2027,7 +2043,23 @@
                 "properties": {
                   "amount": {
                     "title": "Amount",
-                    "description": "Amount as a number.",
+                    "description": "The amount as entered into a system or published in a document.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "amountNet": {
+                    "title": "Net amount",
+                    "description": "The amount excluding all taxes.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "amountGross": {
+                    "title": "Gross amount",
+                    "description": "The amount including all taxes.",
                     "type": [
                       "number",
                       "null"
@@ -2379,7 +2411,7 @@
     },
     "tender": {
       "title": "Tender",
-      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with the publication of procurement documents and ending with the bid submission deadline. For a planning process, this information typically concerns the period before the publication of procurement documents.",
+      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with contracting documents (for example, procurement documents) being available to potential suppliers and ending with the bid submission deadline. For a planning process, this information typically concerns the period before contracting documents are available to potential suppliers.",
       "type": "object",
       "required": [
         "id"
@@ -2454,12 +2486,16 @@
             "planning",
             "planned",
             "active",
+            "complete",
             "cancelled",
             "unsuccessful",
-            "complete",
             "withdrawn",
             null
-          ]
+          ],
+          "deprecated": {
+            "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "statusDetails": {
           "title": "Status details",
@@ -3180,7 +3216,23 @@
                     "properties": {
                       "amount": {
                         "title": "Amount",
-                        "description": "Amount as a number.",
+                        "description": "The amount as entered into a system or published in a document.",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "amountNet": {
+                        "title": "Net amount",
+                        "description": "The amount excluding all taxes.",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "amountGross": {
+                        "title": "Gross amount",
+                        "description": "The amount including all taxes.",
                         "type": [
                           "number",
                           "null"
@@ -3541,7 +3593,23 @@
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"
@@ -3871,7 +3939,23 @@
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"
@@ -4201,7 +4285,23 @@
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"
@@ -4628,6 +4728,29 @@
             "string",
             "null"
           ]
+        },
+        "submissionTerms": {
+          "title": "Submission terms",
+          "description": "Information about how, when and where tenderers need to submit their bids.",
+          "type": "object",
+          "properties": {
+            "electronicSubmissionPolicy": {
+              "title": "Electronic submission policy",
+              "description": "Whether tenderers are required, allowed or not allowed to submit bids electronically.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "codelist": "permission.csv",
+              "openCodelist": false,
+              "enum": [
+                "required",
+                "allowed",
+                "notAllowed",
+                null
+              ]
+            }
+          }
         },
         "datePublished": {
           "description": "The date on which the tender was published.",
@@ -5827,7 +5950,23 @@
                 "properties": {
                   "amount": {
                     "title": "Amount",
-                    "description": "Amount as a number.",
+                    "description": "The amount as entered into a system or published in a document.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "amountNet": {
+                    "title": "Net amount",
+                    "description": "The amount excluding all taxes.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "amountGross": {
+                    "title": "Gross amount",
+                    "description": "The amount including all taxes.",
                     "type": [
                       "number",
                       "null"
@@ -6168,7 +6307,7 @@
           }
         },
         "amendments": {
-          "description": "A tender amendment is a formal change to the tender, and generally involves the publication of a new tender notice/release. The rationale and a description of the changes made can be provided here.",
+          "description": "The formal changes to the tender, which generally involve the publication of a new notice/release.",
           "type": "array",
           "title": "Amendments",
           "items": {
@@ -6464,7 +6603,11 @@
               null
             ],
             "codelist": "awardStatus.csv",
-            "openCodelist": false
+            "openCodelist": false,
+            "deprecated": {
+              "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+              "deprecatedVersion": "1.2"
+            }
           },
           "statusDetails": {
             "title": "Status details",
@@ -6494,12 +6637,28 @@
           },
           "value": {
             "title": "Value",
-            "description": "The value of this award. There may be more than one award per procurement. A negative value indicates that the contract(s) resulting from this award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+            "description": "The value of the award. Typically, this is the value of the bid being awarded. There may be more than one award per procurement. A negative value indicates that the contract(s) resulting from this award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
             "type": "object",
             "properties": {
               "amount": {
                 "title": "Amount",
-                "description": "Amount as a number.",
+                "description": "The amount as entered into a system or published in a document.",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "amountNet": {
+                "title": "Net amount",
+                "description": "The amount excluding all taxes.",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "amountGross": {
+                "title": "Gross amount",
+                "description": "The amount including all taxes.",
                 "type": [
                   "number",
                   "null"
@@ -6829,7 +6988,23 @@
             "properties": {
               "amount": {
                 "title": "Amount",
-                "description": "Amount as a number.",
+                "description": "The amount as entered into a system or published in a document.",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "amountNet": {
+                "title": "Net amount",
+                "description": "The amount excluding all taxes.",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "amountGross": {
+                "title": "Gross amount",
+                "description": "The amount including all taxes.",
                 "type": [
                   "number",
                   "null"
@@ -7159,7 +7334,23 @@
             "properties": {
               "amount": {
                 "title": "Amount",
-                "description": "Amount as a number.",
+                "description": "The amount as entered into a system or published in a document.",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "amountNet": {
+                "title": "Net amount",
+                "description": "The amount excluding all taxes.",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "amountGross": {
+                "title": "Gross amount",
+                "description": "The amount including all taxes.",
                 "type": [
                   "number",
                   "null"
@@ -8200,7 +8391,23 @@
                       "properties": {
                         "amount": {
                           "title": "Amount",
-                          "description": "Amount as a number.",
+                          "description": "The amount as entered into a system or published in a document.",
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "amountNet": {
+                          "title": "Net amount",
+                          "description": "The amount excluding all taxes.",
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "amountGross": {
+                          "title": "Gross amount",
+                          "description": "The amount including all taxes.",
                           "type": [
                             "number",
                             "null"
@@ -8739,7 +8946,7 @@
             "uniqueItems": true
           },
           "amendments": {
-            "description": "An award amendment is a formal change to the details of the award, and generally involves the publication of a new award notice/release. The rationale and a description of the changes made can be provided here.",
+            "description": "The formal changes to the award, which generally involve the publication of a new notice/release.",
             "type": "array",
             "title": "Amendments",
             "items": {
@@ -9043,14 +9250,16 @@
             "enum": [
               "pending",
               "active",
-              "cancelled",
               "terminated",
-              "terminatedEarly",
-              "terminatedSuccessfully",
+              "cancelled",
               null
             ],
             "codelist": "contractStatus.csv",
-            "openCodelist": false
+            "openCodelist": false,
+            "deprecated": {
+              "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+              "deprecatedVersion": "1.2"
+            }
           },
           "statusDetails": {
             "title": "Status details",
@@ -9071,12 +9280,28 @@
           },
           "value": {
             "title": "Value",
-            "description": "The value of this contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+            "description": "The value of the contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts). The value may be updated during implementation (for example, to reflect an amendment). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
             "type": "object",
             "properties": {
               "amount": {
                 "title": "Amount",
-                "description": "Amount as a number.",
+                "description": "The amount as entered into a system or published in a document.",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "amountNet": {
+                "title": "Net amount",
+                "description": "The amount excluding all taxes.",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "amountGross": {
+                "title": "Gross amount",
+                "description": "The amount including all taxes.",
                 "type": [
                   "number",
                   "null"
@@ -9406,7 +9631,23 @@
             "properties": {
               "amount": {
                 "title": "Amount",
-                "description": "Amount as a number.",
+                "description": "The amount as entered into a system or published in a document.",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "amountNet": {
+                "title": "Net amount",
+                "description": "The amount excluding all taxes.",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "amountGross": {
+                "title": "Gross amount",
+                "description": "The amount including all taxes.",
                 "type": [
                   "number",
                   "null"
@@ -9736,7 +9977,23 @@
             "properties": {
               "amount": {
                 "title": "Amount",
-                "description": "Amount as a number.",
+                "description": "The amount as entered into a system or published in a document.",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "amountNet": {
+                "title": "Net amount",
+                "description": "The amount excluding all taxes.",
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "amountGross": {
+                "title": "Gross amount",
+                "description": "The amount including all taxes.",
                 "type": [
                   "number",
                   "null"
@@ -10244,7 +10501,23 @@
                       "properties": {
                         "amount": {
                           "title": "Amount",
-                          "description": "Amount as a number.",
+                          "description": "The amount as entered into a system or published in a document.",
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "amountNet": {
+                          "title": "Net amount",
+                          "description": "The amount excluding all taxes.",
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "amountGross": {
+                          "title": "Gross amount",
+                          "description": "The amount including all taxes.",
                           "type": [
                             "number",
                             "null"
@@ -10815,7 +11088,11 @@
                         "string",
                         "null"
                       ],
-                      "format": "uri"
+                      "format": "uri",
+                      "deprecated": {
+                        "description": "This field is deprecated, because its value would be potentially identical across every transaction.",
+                        "deprecatedVersion": "1.2"
+                      }
                     },
                     "date": {
                       "title": "Date",
@@ -10833,7 +11110,23 @@
                       "properties": {
                         "amount": {
                           "title": "Amount",
-                          "description": "Amount as a number.",
+                          "description": "The amount as entered into a system or published in a document.",
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "amountNet": {
+                          "title": "Net amount",
+                          "description": "The amount excluding all taxes.",
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "amountGross": {
+                          "title": "Gross amount",
+                          "description": "The amount including all taxes.",
                           "type": [
                             "number",
                             "null"
@@ -12226,7 +12519,23 @@
                       "properties": {
                         "amount": {
                           "title": "Amount",
-                          "description": "Amount as a number.",
+                          "description": "The amount as entered into a system or published in a document.",
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "amountNet": {
+                          "title": "Net amount",
+                          "description": "The amount excluding all taxes.",
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "amountGross": {
+                          "title": "Gross amount",
+                          "description": "The amount including all taxes.",
                           "type": [
                             "number",
                             "null"
@@ -12924,7 +13233,23 @@
                       "properties": {
                         "amount": {
                           "title": "Amount",
-                          "description": "Amount as a number.",
+                          "description": "The amount as entered into a system or published in a document.",
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "amountNet": {
+                          "title": "Net amount",
+                          "description": "The amount excluding all taxes.",
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        },
+                        "amountGross": {
+                          "title": "Gross amount",
+                          "description": "The amount including all taxes.",
                           "type": [
                             "number",
                             "null"
@@ -13736,7 +14061,23 @@
                   "properties": {
                     "amount": {
                       "title": "Amount",
-                      "description": "Amount as a number.",
+                      "description": "The amount as entered into a system or published in a document.",
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "amountNet": {
+                      "title": "Net amount",
+                      "description": "The amount excluding all taxes.",
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "amountGross": {
+                      "title": "Gross amount",
+                      "description": "The amount including all taxes.",
                       "type": [
                         "number",
                         "null"
@@ -14077,7 +14418,7 @@
             }
           },
           "amendments": {
-            "description": "A contract amendment is a formal change to, or extension of, a contract, and generally involves the publication of a new contract signature notice/release, or some other documents detailing the change. The rationale and a description of the changes made can be provided here.",
+            "description": "The formal changes or extensions to the contract, which generally involve the publication of a new notice/release.",
             "type": "array",
             "title": "Amendments",
             "items": {
@@ -14407,7 +14748,7 @@
   "definitions": {
     "Planning": {
       "title": "Planning",
-      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before the publication of procurement documents.",
+      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before contracting documents (for example, procurement documents) are available to potential suppliers.",
       "type": "object",
       "properties": {
         "id": {
@@ -14455,7 +14796,23 @@
               "properties": {
                 "amount": {
                   "title": "Amount",
-                  "description": "Amount as a number.",
+                  "description": "The amount as entered into a system or published in a document.",
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "amountNet": {
+                  "title": "Net amount",
+                  "description": "The amount excluding all taxes.",
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "amountGross": {
+                  "title": "Gross amount",
+                  "description": "The amount including all taxes.",
                   "type": [
                     "number",
                     "null"
@@ -15241,7 +15598,23 @@
                 "properties": {
                   "amount": {
                     "title": "Amount",
-                    "description": "Amount as a number.",
+                    "description": "The amount as entered into a system or published in a document.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "amountNet": {
+                    "title": "Net amount",
+                    "description": "The amount excluding all taxes.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "amountGross": {
+                    "title": "Gross amount",
+                    "description": "The amount including all taxes.",
                     "type": [
                       "number",
                       "null"
@@ -15593,7 +15966,7 @@
     },
     "Tender": {
       "title": "Tender",
-      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with the publication of procurement documents and ending with the bid submission deadline. For a planning process, this information typically concerns the period before the publication of procurement documents.",
+      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with contracting documents (for example, procurement documents) being available to potential suppliers and ending with the bid submission deadline. For a planning process, this information typically concerns the period before contracting documents are available to potential suppliers.",
       "type": "object",
       "required": [
         "id"
@@ -15668,12 +16041,16 @@
             "planning",
             "planned",
             "active",
+            "complete",
             "cancelled",
             "unsuccessful",
-            "complete",
             "withdrawn",
             null
-          ]
+          ],
+          "deprecated": {
+            "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "statusDetails": {
           "title": "Status details",
@@ -16394,7 +16771,23 @@
                     "properties": {
                       "amount": {
                         "title": "Amount",
-                        "description": "Amount as a number.",
+                        "description": "The amount as entered into a system or published in a document.",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "amountNet": {
+                        "title": "Net amount",
+                        "description": "The amount excluding all taxes.",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "amountGross": {
+                        "title": "Gross amount",
+                        "description": "The amount including all taxes.",
                         "type": [
                           "number",
                           "null"
@@ -16755,7 +17148,23 @@
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"
@@ -17085,7 +17494,23 @@
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"
@@ -17415,7 +17840,23 @@
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"
@@ -17842,6 +18283,29 @@
             "string",
             "null"
           ]
+        },
+        "submissionTerms": {
+          "title": "Submission terms",
+          "description": "Information about how, when and where tenderers need to submit their bids.",
+          "type": "object",
+          "properties": {
+            "electronicSubmissionPolicy": {
+              "title": "Electronic submission policy",
+              "description": "Whether tenderers are required, allowed or not allowed to submit bids electronically.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "codelist": "permission.csv",
+              "openCodelist": false,
+              "enum": [
+                "required",
+                "allowed",
+                "notAllowed",
+                null
+              ]
+            }
+          }
         },
         "datePublished": {
           "description": "The date on which the tender was published.",
@@ -19041,7 +19505,23 @@
                 "properties": {
                   "amount": {
                     "title": "Amount",
-                    "description": "Amount as a number.",
+                    "description": "The amount as entered into a system or published in a document.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "amountNet": {
+                    "title": "Net amount",
+                    "description": "The amount excluding all taxes.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "amountGross": {
+                    "title": "Gross amount",
+                    "description": "The amount including all taxes.",
                     "type": [
                       "number",
                       "null"
@@ -19382,7 +19862,7 @@
           }
         },
         "amendments": {
-          "description": "A tender amendment is a formal change to the tender, and generally involves the publication of a new tender notice/release. The rationale and a description of the changes made can be provided here.",
+          "description": "The formal changes to the tender, which generally involve the publication of a new notice/release.",
           "type": "array",
           "title": "Amendments",
           "items": {
@@ -19674,7 +20154,11 @@
             null
           ],
           "codelist": "awardStatus.csv",
-          "openCodelist": false
+          "openCodelist": false,
+          "deprecated": {
+            "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "statusDetails": {
           "title": "Status details",
@@ -19704,12 +20188,28 @@
         },
         "value": {
           "title": "Value",
-          "description": "The value of this award. There may be more than one award per procurement. A negative value indicates that the contract(s) resulting from this award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+          "description": "The value of the award. Typically, this is the value of the bid being awarded. There may be more than one award per procurement. A negative value indicates that the contract(s) resulting from this award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
           "type": "object",
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"
@@ -20039,7 +20539,23 @@
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"
@@ -20369,7 +20885,23 @@
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"
@@ -21410,7 +21942,23 @@
                     "properties": {
                       "amount": {
                         "title": "Amount",
-                        "description": "Amount as a number.",
+                        "description": "The amount as entered into a system or published in a document.",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "amountNet": {
+                        "title": "Net amount",
+                        "description": "The amount excluding all taxes.",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "amountGross": {
+                        "title": "Gross amount",
+                        "description": "The amount including all taxes.",
                         "type": [
                           "number",
                           "null"
@@ -21949,7 +22497,7 @@
           "uniqueItems": true
         },
         "amendments": {
-          "description": "An award amendment is a formal change to the details of the award, and generally involves the publication of a new award notice/release. The rationale and a description of the changes made can be provided here.",
+          "description": "The formal changes to the award, which generally involve the publication of a new notice/release.",
           "type": "array",
           "title": "Amendments",
           "items": {
@@ -22247,14 +22795,16 @@
           "enum": [
             "pending",
             "active",
-            "cancelled",
             "terminated",
-            "terminatedEarly",
-            "terminatedSuccessfully",
+            "cancelled",
             null
           ],
           "codelist": "contractStatus.csv",
-          "openCodelist": false
+          "openCodelist": false,
+          "deprecated": {
+            "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "statusDetails": {
           "title": "Status details",
@@ -22275,12 +22825,28 @@
         },
         "value": {
           "title": "Value",
-          "description": "The value of this contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+          "description": "The value of the contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts). The value may be updated during implementation (for example, to reflect an amendment). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
           "type": "object",
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"
@@ -22610,7 +23176,23 @@
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"
@@ -22940,7 +23522,23 @@
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"
@@ -23448,7 +24046,23 @@
                     "properties": {
                       "amount": {
                         "title": "Amount",
-                        "description": "Amount as a number.",
+                        "description": "The amount as entered into a system or published in a document.",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "amountNet": {
+                        "title": "Net amount",
+                        "description": "The amount excluding all taxes.",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "amountGross": {
+                        "title": "Gross amount",
+                        "description": "The amount including all taxes.",
                         "type": [
                           "number",
                           "null"
@@ -24019,7 +24633,11 @@
                       "string",
                       "null"
                     ],
-                    "format": "uri"
+                    "format": "uri",
+                    "deprecated": {
+                      "description": "This field is deprecated, because its value would be potentially identical across every transaction.",
+                      "deprecatedVersion": "1.2"
+                    }
                   },
                   "date": {
                     "title": "Date",
@@ -24037,7 +24655,23 @@
                     "properties": {
                       "amount": {
                         "title": "Amount",
-                        "description": "Amount as a number.",
+                        "description": "The amount as entered into a system or published in a document.",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "amountNet": {
+                        "title": "Net amount",
+                        "description": "The amount excluding all taxes.",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "amountGross": {
+                        "title": "Gross amount",
+                        "description": "The amount including all taxes.",
                         "type": [
                           "number",
                           "null"
@@ -25430,7 +26064,23 @@
                     "properties": {
                       "amount": {
                         "title": "Amount",
-                        "description": "Amount as a number.",
+                        "description": "The amount as entered into a system or published in a document.",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "amountNet": {
+                        "title": "Net amount",
+                        "description": "The amount excluding all taxes.",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "amountGross": {
+                        "title": "Gross amount",
+                        "description": "The amount including all taxes.",
                         "type": [
                           "number",
                           "null"
@@ -26128,7 +26778,23 @@
                     "properties": {
                       "amount": {
                         "title": "Amount",
-                        "description": "Amount as a number.",
+                        "description": "The amount as entered into a system or published in a document.",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "amountNet": {
+                        "title": "Net amount",
+                        "description": "The amount excluding all taxes.",
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "amountGross": {
+                        "title": "Gross amount",
+                        "description": "The amount including all taxes.",
                         "type": [
                           "number",
                           "null"
@@ -26940,7 +27606,23 @@
                 "properties": {
                   "amount": {
                     "title": "Amount",
-                    "description": "Amount as a number.",
+                    "description": "The amount as entered into a system or published in a document.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "amountNet": {
+                    "title": "Net amount",
+                    "description": "The amount excluding all taxes.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "amountGross": {
+                    "title": "Gross amount",
+                    "description": "The amount including all taxes.",
                     "type": [
                       "number",
                       "null"
@@ -27281,7 +27963,7 @@
           }
         },
         "amendments": {
-          "description": "A contract amendment is a formal change to, or extension of, a contract, and generally involves the publication of a new contract signature notice/release, or some other documents detailing the change. The rationale and a description of the changes made can be provided here.",
+          "description": "The formal changes or extensions to the contract, which generally involve the publication of a new notice/release.",
           "type": "array",
           "title": "Amendments",
           "items": {
@@ -27528,7 +28210,11 @@
                   "string",
                   "null"
                 ],
-                "format": "uri"
+                "format": "uri",
+                "deprecated": {
+                  "description": "This field is deprecated, because its value would be potentially identical across every transaction.",
+                  "deprecatedVersion": "1.2"
+                }
               },
               "date": {
                 "title": "Date",
@@ -27546,7 +28232,23 @@
                 "properties": {
                   "amount": {
                     "title": "Amount",
-                    "description": "Amount as a number.",
+                    "description": "The amount as entered into a system or published in a document.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "amountNet": {
+                    "title": "Net amount",
+                    "description": "The amount excluding all taxes.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "amountGross": {
+                    "title": "Gross amount",
+                    "description": "The amount including all taxes.",
                     "type": [
                       "number",
                       "null"
@@ -28939,7 +29641,23 @@
                 "properties": {
                   "amount": {
                     "title": "Amount",
-                    "description": "Amount as a number.",
+                    "description": "The amount as entered into a system or published in a document.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "amountNet": {
+                    "title": "Net amount",
+                    "description": "The amount excluding all taxes.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "amountGross": {
+                    "title": "Gross amount",
+                    "description": "The amount including all taxes.",
                     "type": [
                       "number",
                       "null"
@@ -29637,7 +30355,23 @@
                 "properties": {
                   "amount": {
                     "title": "Amount",
-                    "description": "Amount as a number.",
+                    "description": "The amount as entered into a system or published in a document.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "amountNet": {
+                    "title": "Net amount",
+                    "description": "The amount excluding all taxes.",
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "amountGross": {
+                    "title": "Gross amount",
+                    "description": "The amount including all taxes.",
                     "type": [
                       "number",
                       "null"
@@ -30379,7 +31113,23 @@
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"
@@ -30883,7 +31633,23 @@
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"
@@ -31291,7 +32057,11 @@
             "string",
             "null"
           ],
-          "format": "uri"
+          "format": "uri",
+          "deprecated": {
+            "description": "This field is deprecated, because its value would be potentially identical across every transaction.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "date": {
           "title": "Date",
@@ -31309,7 +32079,23 @@
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"
@@ -32702,7 +33488,23 @@
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"
@@ -34401,7 +35203,23 @@
               "properties": {
                 "amount": {
                   "title": "Amount",
-                  "description": "Amount as a number.",
+                  "description": "The amount as entered into a system or published in a document.",
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "amountNet": {
+                  "title": "Net amount",
+                  "description": "The amount excluding all taxes.",
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "amountGross": {
+                  "title": "Gross amount",
+                  "description": "The amount including all taxes.",
                   "type": [
                     "number",
                     "null"
@@ -35337,7 +36155,23 @@
       "properties": {
         "amount": {
           "title": "Amount",
-          "description": "Amount as a number.",
+          "description": "The amount as entered into a system or published in a document.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "amountNet": {
+          "title": "Net amount",
+          "description": "The amount excluding all taxes.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "amountGross": {
+          "title": "Gross amount",
+          "description": "The amount including all taxes.",
           "type": [
             "number",
             "null"
@@ -35800,7 +36634,23 @@
           "properties": {
             "amount": {
               "title": "Amount",
-              "description": "Amount as a number.",
+              "description": "The amount as entered into a system or published in a document.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountNet": {
+              "title": "Net amount",
+              "description": "The amount excluding all taxes.",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "amountGross": {
+              "title": "Gross amount",
+              "description": "The amount including all taxes.",
               "type": [
                 "number",
                 "null"

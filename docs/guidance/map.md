@@ -11,9 +11,9 @@
 </div>
 ```
 
-This phase is about documenting your sources of contracting data, and documenting how that data "maps" to OCDS – that is, identifying which [data elements](https://en.wikipedia.org/wiki/Data_element) within your data sources match which OCDS [fields](../../schema/reference) and [codes](../../schema/codelists). The mapping phase is one of the longest and most important steps in the implementation process. 
+This phase is about documenting your sources of contracting data, and documenting how that data "maps" to OCDS – that is, identifying which [data elements](https://en.wikipedia.org/wiki/Data_element) within your data sources match which OCDS [fields](../../schema/reference) and [codes](../../schema/codelists). The Map phase is one of the longest and most important steps in the implementation process.
 
-When starting out, consider working in parallel on the map and build phases, because the choices you make at the build stage might affect how you need to map your data. For example, your choice of architecture might determine whether you are able to publish a change history using releases and records.
+When starting out, consider working in parallel on the Map and [Build](build) phases, because the choices you make at the Build phase might affect how you need to map your data. For example, your choice of architecture might determine whether you are able to publish a change history using releases and records.
 
 If your contracting (or planning) processes are managed on paper, using local spreadsheets or via unstructured electronic documents, and you’re reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools), then please [get in touch with the Data Support Team](../support/index) for guidance on how to identify which OCDS fields match your local concepts.
 
@@ -82,7 +82,7 @@ You can complete the mapping in parts. For example, you might choose to split yo
 
 The preferred approach is to eventually list *all* the data elements within your data sources in your Field-Level Mapping, decide whether to publish each, and then map each. The decision to publish a data element is up to you; it isn't necessary to map all your contracting data.
 
-It is also important to focus on the data elements whose disclosure was prioritized by users during the [design](design) phase. If you have not determined which data elements are a priority, you ought to do this now, based on your user needs.
+It is also important to focus on the data elements whose disclosure was prioritized by users during the [Design](design) phase. If you have not determined which data elements are a priority, you ought to do this now, based on your user needs.
 
 Whichever approach you take, it's important that your eventual OCDS publication contain at least as much information as your other public datasets of contracting data; otherwise, users are less likely to use your OCDS publication.
 
@@ -140,6 +140,10 @@ For example, you have created an extension to add a new field to indicate whethe
 
 map/extensions
 ```
+
+## Link OCDS with alternative representations
+
+The data contained in an OCDS release is often available in other formats, such as the HTML or PDF version of a notice. You ought to link to these alternative representations from your OCDS data, so that users can follow up on contracting processes that they are interested in: for example, to submit a bid, or to subscribe to notifications. For more information on linking to alternative representations, refer to the [`Document` reference](../schema/reference.md#document).
 
 ## Link OCDS with other standards
 
