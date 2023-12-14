@@ -50,10 +50,13 @@ Once complete, you can:
 
 Before mapping individual fields and codes, consider whether to first [localize OCDS](map/localization) to your context. Localization can be useful when you need to map several different systems, or when multiple organizations will work on implementing OCDS in your country.
 
+For guidance on how to publish data in multiple languages, see [translations](map/translations).
+
 ```{toctree}
 :hidden:
 
 map/localization
+map/translations
 ```
 
 ## Download the mapping templates
