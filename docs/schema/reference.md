@@ -35,7 +35,7 @@ There can be cases where a publisher needs to remove, rather than update, a valu
 ## Language
 
 ```{deprecated} 1.2
-  Use [full-file translations](../guidance/map/translations.md) instead.
+OCDS 1.1 allowed data to be published in multiple languages by suffixing a language code to a field name: for example, `title` for the default language and `title_es` for Spanish. OCDS 1.2 uses [full-file translations](../guidance/map/translations), instead.
 ```
 
 Many publishers need to be able to publish data in multiple languages. Free-text title and description fields in OCDS can be published in one or more languages. For more information, see [translations](../guidance/map/translations.md).
