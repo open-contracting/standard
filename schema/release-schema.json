@@ -114,7 +114,7 @@
       "items": {
         "$ref": "#/definitions/RelatedProcess"
       },
-      "description": "The details of related processes: for example, if this process follows on from one or more other processes, represented under a separate ocid. This is commonly used to relate mini-competitions to their parent frameworks or individual tenders to a broader planning process.",
+      "description": "References to related, preceding contracting (or planning) processes. This information concerns the contracting process. For example, the contracting process may refer to its planning process(es). In multi-stage procedures (e.g. framework agreements with reopening of competition), the contracting process for a later stage may refer to the contracting process for the first stage.",
       "title": "Related processes",
       "type": "array"
     },
@@ -2422,7 +2422,7 @@
       }
     },
     "RelatedProcess": {
-      "description": "A reference to a related contracting (or planning) process: generally one preceding or following on from the current process.",
+      "description": "A reference to a related, preceding contracting (or planning) process. For example, the contracting process may refer to its planning process(es). In multi-stage procedures (e.g. framework agreements with reopening of competition), the contracting process for a later stage may refer to the contracting process for the first stage.",
       "type": "object",
       "title": "Related Process",
       "properties": {
