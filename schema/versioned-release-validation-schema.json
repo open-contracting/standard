@@ -454,44 +454,7 @@
           "$ref": "#/definitions/StringNullVersioned"
         },
         "submissionTerms": {
-          "type": "object",
-          "properties": {
-            "electronicSubmissionPolicy": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "releaseDate": {
-                    "format": "date-time",
-                    "type": "string"
-                  },
-                  "releaseID": {
-                    "type": "string"
-                  },
-                  "value": {
-                    "type": [
-                      "string",
-                      "null"
-                    ],
-                    "codelist": "permission.csv",
-                    "openCodelist": false,
-                    "enum": [
-                      "required",
-                      "allowed",
-                      "notAllowed",
-                      null
-                    ]
-                  },
-                  "releaseTag": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          }
+          "$ref": "#/definitions/SubmissionTerms"
         },
         "datePublished": {
           "$ref": "#/definitions/StringNullDateTimeVersioned"
@@ -2920,6 +2883,46 @@
                   "null"
                 ],
                 "versionId": true
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "SubmissionTerms": {
+      "type": "object",
+      "properties": {
+        "electronicSubmissionPolicy": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "permission.csv",
+                "openCodelist": false,
+                "enum": [
+                  "required",
+                  "allowed",
+                  "notAllowed",
+                  null
+                ]
               },
               "releaseTag": {
                 "type": "array",

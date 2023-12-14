@@ -35259,6 +35259,29 @@
           "versionId": true
         }
       }
+    },
+    "SubmissionTerms": {
+      "title": "Submission terms",
+      "description": "Information about how, when and where tenderers need to submit their bids.",
+      "type": "object",
+      "properties": {
+        "electronicSubmissionPolicy": {
+          "title": "Electronic submission policy",
+          "description": "Whether tenderers are required, allowed or not allowed to submit bids electronically.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "permission.csv",
+          "openCodelist": false,
+          "enum": [
+            "required",
+            "allowed",
+            "notAllowed",
+            null
+          ]
+        }
+      }
     }
   }
 }

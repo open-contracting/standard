@@ -393,25 +393,7 @@
         "submissionTerms": {
           "title": "Submission terms",
           "description": "Information about how, when and where tenderers need to submit their bids.",
-          "type": "object",
-          "properties": {
-            "electronicSubmissionPolicy": {
-              "title": "Electronic submission policy",
-              "description": "Whether tenderers are required, allowed or not allowed to submit bids electronically.",
-              "type": [
-                "string",
-                "null"
-              ],
-              "codelist": "permission.csv",
-              "openCodelist": false,
-              "enum": [
-                "required",
-                "allowed",
-                "notAllowed",
-                null
-              ]
-            }
-          }
+          "$ref": "#/definitions/SubmissionTerms"
         },
         "datePublished": {
           "description": "The date on which the tender was published.",
@@ -2569,6 +2551,29 @@
             "null"
           ],
           "versionId": true
+        }
+      }
+    },
+    "SubmissionTerms": {
+      "title": "Submission terms",
+      "description": "Information about how, when and where tenderers need to submit their bids.",
+      "type": "object",
+      "properties": {
+        "electronicSubmissionPolicy": {
+          "title": "Electronic submission policy",
+          "description": "Whether tenderers are required, allowed or not allowed to submit bids electronically.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "permission.csv",
+          "openCodelist": false,
+          "enum": [
+            "required",
+            "allowed",
+            "notAllowed",
+            null
+          ]
         }
       }
     }
