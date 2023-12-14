@@ -34,34 +34,8 @@ There can be cases where a publisher needs to remove, rather than update, a valu
 
 ## Language
 
-Many publishers need to be able to share key data in multiple languages. All free-text title and description fields in the Open Contracting Data Standard can be given in one or more languages.
-
-Language variations are included by a copy of multi-lingual fields, suffixed with a language code.
-
-E.g. `title` and `title_es`
-
-In order to allow users to identify the language used in non-suffixed fields, OCDS release and records should declare the default language in the `language` field.
-
-Languages must be identified using language tags taken from [BCP47](https://tools.ietf.org/html/bcp47). The specification allows BCP47 values in order to accommodate variations in dialect where this is important. However, publishers **should** use the lowercase two-letter [ISO639-1 language tags](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in the vast majority of circumstances, to avoid users having to distinguish between sub-tag variations (for example, OCDS publishers should use 'en' instead of 'en_US' or 'en_GB').
-
-To include a language variation of a field, the field name must be suffixed with _ and the appropriate language tag. For example: `title_es` for Spanish.
-
-### Worked example
-
-A contract for ‘Software consultancy services’ is published in a release with the default language sent to ‘en’ (the ISO639-1 code for English). The following examples give the description of an item as English, French and Spanish.
-
-**json**
-
-```{jsoninclude} ../examples/language_localization/language.json
-:jsonpointer:
-:expand: tender,item
-```
-
-**csv**
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../examples/language_localization/language.csv
+```{deprecated} 1.2
+OCDS 1.1 allowed data to be published in multiple languages by suffixing a language code to a field name: for example, `title` for the default language and `title_es` for Spanish. OCDS 1.2 uses [full-file translations](../guidance/map/translations), instead.
 ```
 
 ## Release structure

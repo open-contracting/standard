@@ -293,27 +293,37 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * [#1450](https://github.com/open-contracting/standard/pull/1450) Replace a repeated example in schema/merging/ with a link to guidance/build/merging/.
 
+* [#1665](https://github.com/open-contracting/standard/pull/1665) Abandon in-file translations.
+
 ### Documentation
 
-* [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier.
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Add guidance on when having multiple suppliers per award.
 * [#1161](https://github.com/open-contracting/standard/pull/1161) Change recommendation for unknown time component.
-* [#1189](https://github.com/open-contracting/standard/pull/1189) Add recommendations about publishing and referencing documents in the document reference section.
 * [#1208](https://github.com/open-contracting/standard/pull/1208) Update guidance with new field definitions.
 * [#1216](https://github.com/open-contracting/standard/pull/1216) Update definitions of contracting process, record, and ocid. Introduce definition of planning process.
-* [#1307](https://github.com/open-contracting/standard/pull/1307) Clarify uniqueness rules for records.
-* [#1315](https://github.com/open-contracting/standard/pull/1315) Add rules on setting `id` and `date` for compiled releases to the merging specification.
-* [#1344](https://github.com/open-contracting/standard/pull/1344) Add contract suspension worked example.
-* [#1375](https://github.com/open-contracting/standard/pull/1375) Update guidance for empty fields in the merging documentation.
-* [#1466](https://github.com/open-contracting/standard/pull/1466) Reference worked examples in release and record reference documentation.
-* [#1466](https://github.com/open-contracting/standard/pull/1482) Add examples in release reference documentation.
-* [#1618](https://github.com/open-contracting/standard/pull/1618) Add conformance rule about normative statements.
-* [#1618](https://github.com/open-contracting/standard/pull/1618) Remove validator and application conformance rules.
 * [#1618](https://github.com/open-contracting/standard/pull/1618) Move governance policies from Google Docs, updating references for OCDS 1.1.5 and OCDS 1.2.0, and removing references to GitHub issues.
-* [#1643](https://github.com/open-contracting/standard/pull/1643) Update identifier section in release reference.
-* [#1655](https://github.com/open-contracting/standard/pull/1655) Rewrite identifiers reference and examples for clarity.
-* [#1659](https://github.com/open-contracting/standard/pull/1659) Add `Record` definition schema table to record reference.
-* [#1664](https://github.com/open-contracting/standard/pull/1664) Recommend linking to alternative representations using `documents`.
+* Records
+  * [#1307](https://github.com/open-contracting/standard/pull/1307) Clarify uniqueness rules for records.
+  * [#1659](https://github.com/open-contracting/standard/pull/1659) Add `Record` definition schema table to record reference.
+* Merging
+  * [#1315](https://github.com/open-contracting/standard/pull/1315) Add rules on setting `id` and `date` for compiled releases to the merging specification.
+  * [#1375](https://github.com/open-contracting/standard/pull/1375) Update guidance for empty fields in the merging documentation.
+* Identifiers
+  * [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `Organization.id` for parties without an organization identifier.
+  * [#1643](https://github.com/open-contracting/standard/pull/1643) Update identifier section in release reference.
+  * [#1655](https://github.com/open-contracting/standard/pull/1655) Rewrite identifiers reference and examples for clarity.
+* Documents
+  * [#1189](https://github.com/open-contracting/standard/pull/1189) Add recommendations about publishing and referencing documents in the document reference section.
+  * [#1664](https://github.com/open-contracting/standard/pull/1664) Recommend linking to alternative representations using `documents`.
+* Conformance
+  * [#1618](https://github.com/open-contracting/standard/pull/1618) Add conformance rule about normative statements.
+  * [#1618](https://github.com/open-contracting/standard/pull/1618) Remove validator and application conformance rules.
+* Examples
+  * Add examples:
+    * [#1344](https://github.com/open-contracting/standard/pull/1344) Contract suspension
+    * [#1665](https://github.com/open-contracting/standard/pull/1665) Translations
+  * [#1466](https://github.com/open-contracting/standard/pull/1466) Reference examples in release and record reference documentation.
+  * [#1466](https://github.com/open-contracting/standard/pull/1482) Add examples in release reference documentation.
 
 ## [1.1.5] - 2020-08-20
 
