@@ -12,7 +12,7 @@ The following examples show how updates and deletions are reflected in compiled 
 
 ## Example 1: Updates
 
-The Ghana Public Procurement Authority publishes a release to announce an opportunity on October 21, 2020 with an estimated value of 13,000 GHS. On November 5, 2020 it publishes an update containing the details of one tenderer.
+The Ghana Public Procurement Authority publishes a release to announce an opportunity on October 21, 2020 with an estimated value of 13,000 GHS. On November 5, 2020 it publishes an update containing the details of one tenderer and an amended tender value of 12,000 GHS.
 
 On December 19, 2020 it publishes a third release announcing that the tender is cancelled.
 
