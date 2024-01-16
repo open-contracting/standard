@@ -116,7 +116,7 @@ The notice represents the initiation of the contracting process, so it is modell
 :title: Tender section
 ```
 
-Any potential supplier can submit a request to take part in the first stage, but only qualified potential suppliers will be invited to submit a bid for the contract. Therefore, `tender/procurementMethod` is set to ‘selective’.
+Any potential supplier can submit a request to take part in the first stage, but only qualified potential suppliers will be invited to submit a bid for the contract. Therefore, `tender.procurementMethod` is set to ‘selective’. The deadline for potential suppliers to pre-qualify is disclosed in `tender.expressionOfInterestDeadline`. The deadline for bids from qualified potential suppliers is disclosed in `tender.tenderPeriod.endDate`.
 
 ```{note}
 OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [GitHub](https://github.com/open-contracting/standard/issues/440).
@@ -130,7 +130,7 @@ The National Nuclear Laboratory issues a [restricted procedure contract notice](
 
 The notice represents the initiation of the contracting process, so it is modelled using the `tender` section in OCDS.
 
-The procuring entity will invite a maximum of 5 qualified potential suppliers to submit a bid at the next stage, so `tender/procurementMethod` is set to ‘selective’. The [selectionCriteria extension](https://extensions.open-contracting.org/en/extensions/selectionCriteria/master/) is used to disclose the criteria for choosing which potential suppliers to invite proposals from.
+The procuring entity will invite a maximum of 5 qualified potential suppliers to submit a bid at the next stage, so `tender.procurementMethod` is set to ‘selective’. The [selectionCriteria extension](https://extensions.open-contracting.org/en/extensions/selectionCriteria/master/) is used to disclose the criteria for choosing which potential suppliers to invite proposals from. The deadline for potential suppliers to pre-qualify is disclosed in `tender.expressionOfInterestDeadline`. The deadline for bids from qualified potential suppliers is disclosed in `tender.tenderPeriod.endDate`.
 
 ```{jsoninclude} ../../examples/pre-qualification/pre-selection_tender.json
 :jsonpointer: /releases/0/tender
@@ -143,7 +143,7 @@ The Ministry of Public Works and Communications issues an [invitation for potent
 
 The invitation represents the initiation of a contracting process to establish a list of pre-qualified potential suppliers, so it is modelled using the `tender` section in OCDS.
 
-Only qualified potential suppliers will be invited to bid in subsequent tenders that use the list, so `tender.procurementMethod` is set to ‘selective’.
+Only qualified potential suppliers will be invited to bid in subsequent tenders that use the list, so `tender.procurementMethod` is set to ‘selective’. The deadline for potential suppliers to pre-qualify is disclosed in `tender.expressionOfInterestDeadline`. The deadline for bids from qualified potential suppliers is disclosed in `tender.tenderPeriod.endDate`.
 
 ```{jsoninclude} ../../examples/pre-qualification/pre-qualification_paraguay.json
 :jsonpointer: /releases/0/tender

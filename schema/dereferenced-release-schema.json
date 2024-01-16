@@ -4537,7 +4537,7 @@
         },
         "tenderPeriod": {
           "title": "Tender period",
-          "description": "The period when the tender is open for submissions. The end date is the closing date for bid submissions.",
+          "description": "The submission period for bids. Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation, but not an expression of interest or request to participate.",
           "type": "object",
           "properties": {
             "startDate": {
@@ -4576,6 +4576,15 @@
               ]
             }
           }
+        },
+        "expressionOfInterestDeadline": {
+          "title": "Expression of interest deadline",
+          "description": "The submission deadline for expressions of interest. This submission is also called a request to participate.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
         },
         "enquiryPeriod": {
           "title": "Enquiry period",
@@ -17470,7 +17479,7 @@
         },
         "tenderPeriod": {
           "title": "Tender period",
-          "description": "The period when the tender is open for submissions. The end date is the closing date for bid submissions.",
+          "description": "The submission period for bids. Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation, but not an expression of interest or request to participate.",
           "type": "object",
           "properties": {
             "startDate": {
@@ -17509,6 +17518,15 @@
               ]
             }
           }
+        },
+        "expressionOfInterestDeadline": {
+          "title": "Expression of interest deadline",
+          "description": "The submission deadline for expressions of interest. This submission is also called a request to participate.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
         },
         "enquiryPeriod": {
           "title": "Enquiry period",
