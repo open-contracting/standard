@@ -206,6 +206,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1519](https://github.com/open-contracting/standard/pull/1519) `Value.amountNet` and `Value.amountGross`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `tender.identifiers` and `contracts.identifiers`
   * [#1654](https://github.com/open-contracting/standard/pull/1654) `tender.submissionTerms.electronicSubmissionPolicy`
+  * [#1669](https://github.com/open-contracting/standard/pull/1669) `tender.expressionOfInterestDeadline`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
