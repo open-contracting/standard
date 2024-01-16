@@ -873,7 +873,11 @@
           "items": {
             "$ref": "#/definitions/RelatedProcess"
           },
-          "type": "array"
+          "type": "array",
+          "deprecated": {
+            "description": "This field is deprecated in favor of `Tender.relatedProcesses`, `Award.relatedProcesses` and the Subcontracting extension, to reflect the updated modelling that removes the 'parent refers to child' approach to linking related processes, and records subcontracts as part of the main contract in the original contracting process.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "milestones": {
           "type": "array",

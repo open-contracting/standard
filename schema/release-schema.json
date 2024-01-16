@@ -806,7 +806,11 @@
           },
           "description": "The details of related processes: for example, if this process is followed by one or more contracting processes, represented under a separate ocid. This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
           "title": "Related processes",
-          "type": "array"
+          "type": "array",
+          "deprecated": {
+            "description": "This field is deprecated in favor of `Tender.relatedProcesses`, `Award.relatedProcesses` and the Subcontracting extension, to reflect the updated modelling that removes the 'parent refers to child' approach to linking related processes, and records subcontracts as part of the main contract in the original contracting process.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "milestones": {
           "title": "Contract milestones",
