@@ -165,6 +165,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * Deprecate "parent-to-child" codes: 'subContract', 'replacementProcess' and 'renewalProcess'
   * Add child-to-parent code: 'parent' (the reverse of 'subContract')
   * Update descriptions: 'prior', 'framework', 'unsuccessfulProcess'
+* [#1670](https://github.com/open-contracting/standard/pull/1670) `relatedProcess.csv` deprecate 'parent'.
 
 ### Schema
 
@@ -215,6 +216,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1380](https://github.com/open-contracting/standard/pull/1380) `Document.language` in favor of the new `Document.languages` field, to support documents in which multiple languages are used.
   * [#1509](https://github.com/open-contracting/standard/pull/1509) `tender.status`, `Award.status`, `Contract.status`, because the same information can be provided by filling in the relevant date fields.
   * [#1662](https://github.com/open-contracting/standard/pull/1662) `Transaction.source`, because its value would be potentially identical across every transaction.
+  * [#1670](https://github.com/open-contracting/standard/pull/1670) `Contract.relatedProcesses`, because parent to child relationships are no longer supported and subcontracts are recorded as part of main contract in original contracting process.
 
 * Update and clarify field descriptions:
   * [#1113](https://github.com/open-contracting/standard/pull/1113) `ocid`, to recommend a hyphen after the ocid prefix.
