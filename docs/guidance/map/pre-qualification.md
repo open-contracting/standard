@@ -17,7 +17,7 @@ This worked example describes 3 types of multi-stage procedure and explains how 
 
 ## Definitions
 
-The term ‘pre-qualification’ describes different types of multi-stage procedure:
+The term "pre-qualification" describes different types of multi-stage procedure:
 
 ### Pre-qualification with no limit on the number of qualified potential suppliers
 
@@ -30,7 +30,7 @@ The model law obliges buyers and procuring entities to publish an invitation to 
 The buyer or procuring entity assesses the qualifications of the potential suppliers based on their responses. Only pre-qualified potential suppliers can take part in the later proceedings.
 
 ```{note}
-The European Union’s restricted procedure, competitive procedure with negotiation, competitive dialogue and innovation partnership use pre-qualification (see Articles 28-31, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)).
+The European Union's restricted procedure, competitive procedure with negotiation, competitive dialogue and innovation partnership use pre-qualification (see Articles 28-31, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)).
 ```
 
 ### Pre-qualification with a limit on the number of qualified potential suppliers (pre-selection)
@@ -42,7 +42,7 @@ The UNCITRAL model law defines pre-selection as a procedure to:
 Pre-selection follows the same process as pre-qualification, with some additional requirements. The invitation to pre-qualify needs to specify how many potential suppliers the buyer or procuring entity will later request proposals from. The invitation also needs to specify how the procuring entity will select the potential suppliers to request proposals from.
 
 ```{note}
-The European Union’s restricted procedure, competitive procedure with negotiation, competitive dialogue procedure and innovation partnership all permit the use of pre-selection (see Article 65, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)).
+The European Union's restricted procedure, competitive procedure with negotiation, competitive dialogue procedure and innovation partnership all permit the use of pre-selection (see Article 65, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)).
 ```
 
 ### Pre-qualification in Paraguay

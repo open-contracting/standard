@@ -24,7 +24,7 @@ The first data disclosed is about the planning process. Planning data includes a
 
 Next, the contracting process is disclosed, using a new `ocid`, 'ocds-03ad3f-331547-1'. The `relatedProcess` block links the planning process and the contracting process, with the relationship set to 'planning'.
 
-The tender was unsuccessful, so the tender's `status` is set to ‘unsuccessful’.
+The tender was unsuccessful, so the tender's `status` is set to 'unsuccessful'.
 
 ```{jsoninclude} ../../examples/unsuccessful_tender/tender.json
 :jsonpointer:
@@ -40,7 +40,7 @@ To construct an `ocid` for the second contracting process, Paraguay adds a conse
 
 Paraguay could also have used the identifier for the second tender as the `ocid` for the second contracting process.
 
-The `relatedProcesses` block links to the unsuccessful contracting process with the relationship set to ‘unsuccessfulProcess’, and to the initial planning process with the relationship set to ‘planning’.
+The `relatedProcesses` block links to the unsuccessful contracting process with the relationship set to 'unsuccessfulProcess', and to the initial planning process with the relationship set to 'planning'.
 
 ```{jsoninclude} ../../examples/unsuccessful_tender/related_process.json
 :jsonpointer:
