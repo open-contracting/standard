@@ -396,18 +396,13 @@
           "$ref": "#/definitions/SubmissionTerms"
         },
         "datePublished": {
-          "description": "The date on which the tender was published.",
-          "format": "date-time",
           "title": "Date published",
+          "description": "The date on which the tender was published.",
           "type": [
             "string",
             "null"
-          ]
-        },
-        "tenderPeriod": {
-          "title": "Tender period",
-          "description": "The submission period for bids. Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation, but not an expression of interest or request to participate.",
-          "$ref": "#/definitions/Period"
+          ],
+          "format": "date-time"
         },
         "expressionOfInterestDeadline": {
           "title": "Expression of interest deadline",
@@ -417,6 +412,11 @@
             "null"
           ],
           "format": "date-time"
+        },
+        "tenderPeriod": {
+          "title": "Tender period",
+          "description": "The submission period for bids. Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation, but not an expression of interest or request to participate.",
+          "$ref": "#/definitions/Period"
         },
         "enquiryPeriod": {
           "title": "Enquiry period",
