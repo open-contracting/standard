@@ -161,11 +161,10 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * [#1209](https://github.com/open-contracting/standard/pull/1209) Replace "electronic goods" with "digital goods" in the description of 'goods' from the `procurementCategory` codelist, to align with the description in the World Trade Organization's Agreement on Government Procurement, and to avoid confusion between electronic goods like computers and digital goods like software.
 * [#1530](https://github.com/open-contracting/standard/pull/1530) Use consistent wording for "goods, services and/or works" in the `classificationScheme`, `extendedProcurementCategory`, `partyRole` and `procurementCategory` codelists.
 * [#1550](https://github.com/open-contracting/standard/pull/1550) Align and improve code descriptions in `extendedProcurementCategory` and `procurementCategory`.
-* [#1645](https://github.com/open-contracting/standard/pull/1645) `relatedProcess.csv`:
-  * Deprecate "parent-to-child" codes: 'subContract', 'replacementProcess' and 'renewalProcess'
-  * Add child-to-parent code: 'parent' (the reverse of 'subContract')
-  * Update descriptions: 'prior', 'framework', 'unsuccessfulProcess'
-* [#1670](https://github.com/open-contracting/standard/pull/1670) `relatedProcess.csv` deprecate 'parent'.
+* `relatedProcess.csv`:
+  * [#1645](https://github.com/open-contracting/standard/pull/1645) Deprecate "parent-to-child" codes: 'subContract', 'replacementProcess' and 'renewalProcess'
+  * [#1670](https://github.com/open-contracting/standard/pull/1670) Deprecate 'parent' code, because a subcontract needs to be described within its main contract, not within a separate contracting process
+  * [#1645](https://github.com/open-contracting/standard/pull/1645) Update descriptions: 'prior', 'framework', 'unsuccessfulProcess'
 
 ### Schema
 
@@ -216,7 +215,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1380](https://github.com/open-contracting/standard/pull/1380) `Document.language` in favor of the new `Document.languages` field, to support documents in which multiple languages are used.
   * [#1509](https://github.com/open-contracting/standard/pull/1509) `tender.status`, `Award.status`, `Contract.status`, because the same information can be provided by filling in the relevant date fields.
   * [#1662](https://github.com/open-contracting/standard/pull/1662) `Transaction.source`, because its value would be potentially identical across every transaction.
-  * [#1670](https://github.com/open-contracting/standard/pull/1670) `Contract.relatedProcesses`, because parent to child relationships are no longer supported and subcontracts are recorded as part of main contract in original contracting process.
+  * [#1670](https://github.com/open-contracting/standard/pull/1670) `Contract.relatedProcesses`, because all relevant codes from the relatedProcess codelist are deprecated.
 
 * Update and clarify field descriptions:
   * [#1113](https://github.com/open-contracting/standard/pull/1113) `ocid`, to recommend a hyphen after the ocid prefix.
