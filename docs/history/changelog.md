@@ -185,6 +185,9 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * Add new fields:
   * [#1335](https://github.com/open-contracting/standard/pull/1335) `planning.id`
   * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
+  * [#1669](https://github.com/open-contracting/standard/pull/1669) `tender.expressionOfInterestDeadline`
+  * [#1490](https://github.com/open-contracting/standard/pull/1490) `tender.identifiers`
+  * [#1654](https://github.com/open-contracting/standard/pull/1654) `tender.submissionTerms.electronicSubmissionPolicy`
   * [#1421](https://github.com/open-contracting/standard/pull/1421) `tender.standstillPeriod`
   * [#1492](https://github.com/open-contracting/standard/pull/1492) `awards.datePublished`
   * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
@@ -204,9 +207,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1434](https://github.com/open-contracting/standard/pull/1434) `Milestone.value`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `SimpleIdentifier`
   * [#1519](https://github.com/open-contracting/standard/pull/1519) `Value.amountNet` and `Value.amountGross`
-  * [#1490](https://github.com/open-contracting/standard/pull/1490) `tender.identifiers` and `contracts.identifiers`
-  * [#1654](https://github.com/open-contracting/standard/pull/1654) `tender.submissionTerms.electronicSubmissionPolicy`
-  * [#1669](https://github.com/open-contracting/standard/pull/1669) `tender.expressionOfInterestDeadline`
+  * [#1490](https://github.com/open-contracting/standard/pull/1490) `contracts.identifiers`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.

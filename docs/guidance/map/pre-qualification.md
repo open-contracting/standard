@@ -98,7 +98,11 @@ In OCDS, a contracting process has a single competitive stage, the `tender` sect
 </div>
 <br clear="all"/>
 
-The `tender` section is also used to disclose information about the procedure used by the contracting process. In particular, the `tender.procurementMethod` field classifies the procedure using the following codelist:
+The `tender` section is also used to disclose information about the procedure used by the contracting process. In particular:
+
+- The `tender.expressionOfInterestDeadline` field discloses the submission deadline for expressions of interest from potential suppliers.
+- The `tender.tenderPeriod.endDate` field discloses the submission deadline for bids from qualified potential suppliers.
+- The `tender.procurementMethod` field classifies the procedure using the following codelist:
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -116,7 +120,7 @@ The notice represents the initiation of the contracting process, so it is modell
 :title: Tender section
 ```
 
-Any potential supplier can submit a request to take part in the first stage, but only qualified potential suppliers will be invited to submit a bid for the contract. Therefore, `tender.procurementMethod` is set to ‘selective’. The deadline for potential suppliers to pre-qualify is disclosed in `tender.expressionOfInterestDeadline`. The deadline for bids from qualified potential suppliers is disclosed in `tender.tenderPeriod.endDate`.
+Any potential supplier can submit a request to take part in the first stage, but only qualified potential suppliers will be invited to submit a bid for the contract. Therefore, `tender.procurementMethod` is set to 'selective'.
 
 ```{note}
 OCDS does not currently provide a way to disclose information on the second stage of multi-stage procedures. The approach to modelling multi-stage procedures is under discussion on [GitHub](https://github.com/open-contracting/standard/issues/440).
@@ -130,7 +134,7 @@ The National Nuclear Laboratory issues a [restricted procedure contract notice](
 
 The notice represents the initiation of the contracting process, so it is modelled using the `tender` section in OCDS.
 
-The procuring entity will invite a maximum of 5 qualified potential suppliers to submit a bid at the next stage, so `tender.procurementMethod` is set to ‘selective’. The [selectionCriteria extension](https://extensions.open-contracting.org/en/extensions/selectionCriteria/master/) is used to disclose the criteria for choosing which potential suppliers to invite proposals from. The deadline for potential suppliers to pre-qualify is disclosed in `tender.expressionOfInterestDeadline`. The deadline for bids from qualified potential suppliers is disclosed in `tender.tenderPeriod.endDate`.
+The procuring entity will invite a maximum of 5 qualified potential suppliers to submit a bid at the next stage, so `tender.procurementMethod` is set to 'selective'. The [selectionCriteria extension](https://extensions.open-contracting.org/en/extensions/selectionCriteria/master/) is used to disclose the criteria for choosing which potential suppliers to invite proposals from.
 
 ```{jsoninclude} ../../examples/pre-qualification/pre-selection_tender.json
 :jsonpointer: /releases/0/tender
@@ -143,7 +147,7 @@ The Ministry of Public Works and Communications issues an [invitation for potent
 
 The invitation represents the initiation of a contracting process to establish a list of pre-qualified potential suppliers, so it is modelled using the `tender` section in OCDS.
 
-Only qualified potential suppliers will be invited to bid in subsequent tenders that use the list, so `tender.procurementMethod` is set to ‘selective’. The deadline for potential suppliers to pre-qualify is disclosed in `tender.expressionOfInterestDeadline`. The deadline for bids from qualified potential suppliers is disclosed in `tender.tenderPeriod.endDate`.
+Only qualified potential suppliers will be invited to bid in subsequent tenders that use the list, so `tender.procurementMethod` is set to 'selective'.
 
 ```{jsoninclude} ../../examples/pre-qualification/pre-qualification_paraguay.json
 :jsonpointer: /releases/0/tender

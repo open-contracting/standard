@@ -99,7 +99,7 @@ The following guidance describes how to model the different stages of a framewor
   * `tender.techniques.hasFrameworkAgreement` to `true`.
   * `tender.contractPeriod` to the duration of the framework agreement.
   * `tender.maximumValue` to the maximum value of the framework agreement and/or `tender.value` to the estimated value of the framework agreement (the values can be different e.g. if the budget for the framework agreement contains a reserve in case of an unforeseen situation, but the situation is unlikely to occur).
-  * If the framework agreement is closed, set `tender.expressionOfInterestDeadline` to the deadline for responses to the invitation.
+  * If the framework agreement is closed, set `tender.expressionOfInterestDeadline` to the deadline for responses to the invitation to participate.
   * If the framework agreement is open, set `tender.expressionOfInterestDeadline` to the last date that new suppliers can be added.
 
 ### First-stage selection and addition of suppliers to the framework agreement
@@ -232,7 +232,7 @@ The notice is modelled as an OCDS release with a `tag` of 'tender' and the follo
 * The techniques extension is declared in the package metadata.
 * Since this contracting process is for the set-up of a framework agreement, `tender.techniques.hasFrameworkAgreement` is set to `true`.
 * Since any supplier is able to submit a response to the invitation to participate, `tender.procurementMethod` is set to 'selective'.
-* Since the framework agreement is open, `tender.expressionOfInterestDeadline` is set to the end of the framework agreement.
+* Since the framework agreement is open, `tender.expressionOfInterestDeadline` is set to the last date that new suppliers can be added, which in this case matches the last date of the framework agreement.
 * Since there are two buyers, the 'buyer' object is not set, and the buyers are declared in the `parties` array.
 * Since Chile Compra is the organization that manages the contracting process, `tender.procuringEntity` is set to reference Chile Compra's object in the `parties` array.
 
