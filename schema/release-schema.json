@@ -244,7 +244,7 @@
             null
           ],
           "deprecated": {
-            "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+            "description": "This field is deprecated, because the same information can be provided by filling in the relevant date fields.",
             "deprecatedVersion": "1.2"
           }
         },
@@ -576,7 +576,7 @@
           "codelist": "awardStatus.csv",
           "openCodelist": false,
           "deprecated": {
-            "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+            "description": "This field is deprecated, because the same information can be provided by filling in the relevant date fields.",
             "deprecatedVersion": "1.2"
           }
         },
@@ -743,7 +743,7 @@
           "codelist": "contractStatus.csv",
           "openCodelist": false,
           "deprecated": {
-            "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+            "description": "This field is deprecated, because the same information can be provided by filling in the relevant date fields.",
             "deprecatedVersion": "1.2"
           }
         },
@@ -815,7 +815,11 @@
           },
           "description": "The details of related processes: for example, if this process is followed by one or more contracting processes, represented under a separate ocid. This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
           "title": "Related processes",
-          "type": "array"
+          "type": "array",
+          "deprecated": {
+            "description": "This field is deprecated, because all relevant codes from the relatedProcess codelist are deprecated.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "milestones": {
           "title": "Contract milestones",

@@ -238,7 +238,7 @@
                   null
                 ],
                 "deprecated": {
-                  "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+                  "description": "This field is deprecated, because the same information can be provided by filling in the relevant date fields.",
                   "deprecatedVersion": "1.2"
                 }
               },
@@ -648,7 +648,7 @@
                 "codelist": "awardStatus.csv",
                 "openCodelist": false,
                 "deprecated": {
-                  "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+                  "description": "This field is deprecated, because the same information can be provided by filling in the relevant date fields.",
                   "deprecatedVersion": "1.2"
                 }
               },
@@ -822,7 +822,7 @@
                 "codelist": "contractStatus.csv",
                 "openCodelist": false,
                 "deprecated": {
-                  "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+                  "description": "This field is deprecated, because the same information can be provided by filling in the relevant date fields.",
                   "deprecatedVersion": "1.2"
                 }
               },
@@ -876,7 +876,11 @@
           "items": {
             "$ref": "#/definitions/RelatedProcess"
           },
-          "type": "array"
+          "type": "array",
+          "deprecated": {
+            "description": "This field is deprecated, because all relevant codes from the relatedProcess codelist are deprecated.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "milestones": {
           "type": "array",
