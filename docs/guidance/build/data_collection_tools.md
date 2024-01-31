@@ -4,7 +4,7 @@ Where contracting data is managed using IT systems, implementing OCDS involves i
 
 Where contracting data is managed on paper or using unstructured electronic documents, implementing OCDS typically involves creating a bespoke IT system to collect data in a structured form.
 
-If you need to collect structured data, but you don’t have the capacity to create an IT system, you can consider reusing an existing data collection tool. These tools offer fewer opportunities for customization than a bespoke IT system, but can provide a quick route to collecting and publishing data in OCDS format.
+If you need to collect structured data, but you don't have the capacity to create an IT system, you can consider reusing an existing data collection tool. These tools offer fewer opportunities for customization than a bespoke IT system, but can provide a quick route to collecting and publishing data in OCDS format.
 
 ## Data collection form
 
@@ -16,12 +16,12 @@ Data entered using the form can be checked and converted using the [OCDS Data Re
 
 Consider using the form if:
 
-* You don’t have the capacity to develop or install a software tool
+* You don't have the capacity to develop or install a software tool
 * Your users have access to **reliable internet connections**
 * Your users are **unfamiliar** with spreadsheets
 * Data entry will be done by **many** different users
 * You want to minimize the work required to collate data
-* You **don’t need to update** the data about a contracting (or planning) process after it is first entered
+* You **don't need to update** the data about a contracting (or planning) process after it is first entered
 
 The form includes a subset of fields from the **tender** and **buyer** sections of OCDS. The Data Support Team can help you extend and adapt the form to suit your needs.
 
@@ -37,7 +37,7 @@ Data entered the template can be checked and converted using the [OCDS Data Revi
 
 Consider using the spreadsheet template to collect data if:
 
-* You don’t have the capacity to develop or install a software tool
+* You don't have the capacity to develop or install a software tool
 * You need to collect data **without** access to an internet connection
 * Your users are **familiar** with using spreadsheets
 * Data entry will be done by a **small number of** users
@@ -71,7 +71,7 @@ Consider using OpenContractR if:
 * You want users to be able to **edit or update** already entered data
 * You want an online **search** interface for your data
 
-Read more about OpenContractR in its [introduction](https://drive.google.com/file/d/18WHnQcnA6oESZtcZgS4rgaBLjd8BKvbM/view). If you’re interested in using OpenContractR please get in touch with the Data Support Team.
+Read more about OpenContractR in its [introduction](https://drive.google.com/file/d/18WHnQcnA6oESZtcZgS4rgaBLjd8BKvbM/view). If you're interested in using OpenContractR please get in touch with the Data Support Team.
 
 ## Contrataciones Abiertas tool
 
@@ -99,4 +99,4 @@ If you're collecting data using spreadsheets, then you need to [decide how to co
 
 However you choose to collect and structure your data, you need to [establish your publication formats and access methods](../build.md#establish-your-publication-formats-and-access-methods), and [publish your data](../publish).
 
-Consider how you will make it easy for users to discover the data you have published. For example, by publishing it on an existing procurement portal, on your organization’s website, or an open data portal.
+Consider how you will make it easy for users to discover the data you have published. For example, by publishing it on an existing procurement portal, on your organization's website, or an open data portal.

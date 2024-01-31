@@ -11,7 +11,7 @@ This worked example describes how to:
 
 The Beneficial Ownership Data Standard (BODS) [defines](https://standard.openownership.org/en/0.2.0/primer/whatisbo.html) “beneficial ownership” as:
 
-> The right to some share of a legal entity’s income or assets (ownership) or the right to direct or influence the entity’s activities (control).
+> The right to some share of a legal entity's income or assets (ownership) or the right to direct or influence the entity's activities (control).
 
 Publishing the beneficial owners of tenderers and suppliers can help users to:
 
@@ -24,7 +24,7 @@ Publishing the beneficial owners of tenderers and suppliers can help users to:
 For more information on the uses of beneficial ownership data in the context of procurement, see [Beneficial ownership data in procurement](https://www.openownership.org/uploads/OO%20BO%20Data%20in%20Procurement.pdf). 
 ```
 
-Some procurement systems collect beneficial ownership data, usually when companies submit bids. This data is true at the time of collection. But, procurement systems don’t track later changes to the ownership and control of suppliers. This limitation is especially challenging for users interested in long-standing contracts, in which there may have been many changes.
+Some procurement systems collect beneficial ownership data, usually when companies submit bids. This data is true at the time of collection. But, procurement systems don't track later changes to the ownership and control of suppliers. This limitation is especially challenging for users interested in long-standing contracts, in which there may have been many changes.
 
 Therefore, the preferred approach is to **publish separate contracting and beneficial ownership datasets**:
 
@@ -49,7 +49,7 @@ The UK publishes separate contracting and beneficial ownership datasets. Both da
 
 The UK publishes OCDS data from [Contracts Finder](https://www.contractsfinder.service.gov.uk/). 
 
-This example shows a contract award to T.M. ENGINEERS (MIDLANDS) LIMITED. `parties.identifier.id` is set to the supplier’s company number (00507062) and `parties.identifier.scheme` is set to ‘GB-COH’ to identify the register the number is drawn from. 
+This example shows a contract award to T.M. ENGINEERS (MIDLANDS) LIMITED. `parties.identifier.id` is set to the supplier's company number (00507062) and `parties.identifier.scheme` is set to "GB-COH" to identify the register the number is drawn from.
 
 ```{note}
 For more information on publishing organization identifiers in OCDS, see [Organization identifiers](../../schema/identifiers.md#organization-identifiers).

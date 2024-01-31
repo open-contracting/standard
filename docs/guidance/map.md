@@ -15,7 +15,7 @@ This phase is about documenting your sources of contracting data, and documentin
 
 When starting out, consider working in parallel on the Map and [Build](build) phases, because the choices you make at the Build phase might affect how you need to map your data. For example, your choice of architecture might determine whether you are able to publish a change history using releases and records.
 
-If your contracting (or planning) processes are managed on paper, using local spreadsheets or via unstructured electronic documents, and you’re reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools), then please [get in touch with the Data Support Team](../support/index) for guidance on how to identify which OCDS fields match your local concepts.
+If your contracting (or planning) processes are managed on paper, using local spreadsheets or via unstructured electronic documents, and you're reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools), then please [get in touch with the Data Support Team](../support/index) for guidance on how to identify which OCDS fields match your local concepts.
 
 Mapping data to OCDS is not always easy. Before writing any software, this phase is an opportunity to:
 
