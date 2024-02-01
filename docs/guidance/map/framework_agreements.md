@@ -168,7 +168,7 @@ The notice is modelled as an OCDS release with a `tag` of 'tender' and the follo
 
 * The techniques extension is declared in the package metadata.
 * Since this contracting process is for the set-up of a framework agreement, `tender.techniques.hasFrameworkAgreement` is set to `true`.
-* Since any supplier is able to submit a response to the invitation to participate, `tender.procurementMethod` is set to 'selective'.
+* Since any supplier is able to submit a response to the invitation to participate, `tender.procurementMethod` is set to 'open'.
 * Since the framework agreement is closed, `tender.expressionOfInterestDeadline` is set to the deadline for responses to the invitation to participate.
 * Since there is only one buyer, `buyer` is set to reference the buyer's object in the `parties` array.
 
