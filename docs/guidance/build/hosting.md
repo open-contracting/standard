@@ -62,7 +62,7 @@ Also, publishers ought to ensure that the data export is completed successfully,
 
 Each release and record can be made accessible at a permanent URL. This can be achieved by:
 
-* Archiving a ‘single-release’ release package for each release to a web accessible file system as it is created, and then regularly merging these releases into records in the same file system. One approach might be to have a directory for each ocid and to put the releases and the record related to that process in that directory.
+* Archiving a "single-release" release package for each release to a web accessible file system as it is created, and then regularly merging these releases into records in the same file system. One approach might be to have a directory for each ocid and to put the releases and the record related to that process in that directory.
 * Providing access to each release and the merged records via an API.
 
 Publishers ought to consider how to [ensure that URLs remain stable](https://www.w3.org/Provider/Style/URI.html), even across a change of systems.

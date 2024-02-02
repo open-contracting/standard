@@ -244,7 +244,7 @@
             null
           ],
           "deprecated": {
-            "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+            "description": "This field is deprecated, because the same information can be provided by filling in the relevant date fields.",
             "deprecatedVersion": "1.2"
           }
         },
@@ -393,38 +393,29 @@
         "submissionTerms": {
           "title": "Submission terms",
           "description": "Information about how, when and where tenderers need to submit their bids.",
-          "type": "object",
-          "properties": {
-            "electronicSubmissionPolicy": {
-              "title": "Electronic submission policy",
-              "description": "Whether tenderers are required, allowed or not allowed to submit bids electronically.",
-              "type": [
-                "string",
-                "null"
-              ],
-              "codelist": "permission.csv",
-              "openCodelist": false,
-              "enum": [
-                "required",
-                "allowed",
-                "notAllowed",
-                null
-              ]
-            }
-          }
+          "$ref": "#/definitions/SubmissionTerms"
         },
         "datePublished": {
-          "description": "The date on which the tender was published.",
-          "format": "date-time",
           "title": "Date published",
+          "description": "The date on which the tender was published.",
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "format": "date-time"
+        },
+        "expressionOfInterestDeadline": {
+          "title": "Expression of interest deadline",
+          "description": "The submission deadline for expressions of interest. This submission is also called a request to participate.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
         },
         "tenderPeriod": {
           "title": "Tender period",
-          "description": "The period when the tender is open for submissions. The end date is the closing date for bid submissions.",
+          "description": "The submission period for bids. Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation, but not an expression of interest or request to participate.",
           "$ref": "#/definitions/Period"
         },
         "enquiryPeriod": {
@@ -585,7 +576,7 @@
           "codelist": "awardStatus.csv",
           "openCodelist": false,
           "deprecated": {
-            "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+            "description": "This field is deprecated, because the same information can be provided by filling in the relevant date fields.",
             "deprecatedVersion": "1.2"
           }
         },
@@ -752,7 +743,7 @@
           "codelist": "contractStatus.csv",
           "openCodelist": false,
           "deprecated": {
-            "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
+            "description": "This field is deprecated, because the same information can be provided by filling in the relevant date fields.",
             "deprecatedVersion": "1.2"
           }
         },
@@ -824,7 +815,11 @@
           },
           "description": "The details of related processes: for example, if this process is followed by one or more contracting processes, represented under a separate ocid. This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
           "title": "Related processes",
-          "type": "array"
+          "type": "array",
+          "deprecated": {
+            "description": "This field is deprecated, because all relevant codes from the relatedProcess codelist are deprecated.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "milestones": {
           "title": "Contract milestones",
@@ -2569,6 +2564,29 @@
             "null"
           ],
           "versionId": true
+        }
+      }
+    },
+    "SubmissionTerms": {
+      "title": "Submission terms",
+      "description": "Information about how, when and where tenderers need to submit their bids.",
+      "type": "object",
+      "properties": {
+        "electronicSubmissionPolicy": {
+          "title": "Electronic submission policy",
+          "description": "Whether tenderers are required, allowed or not allowed to submit bids electronically.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "permission.csv",
+          "openCodelist": false,
+          "enum": [
+            "required",
+            "allowed",
+            "notAllowed",
+            null
+          ]
         }
       }
     }

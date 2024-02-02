@@ -99,8 +99,8 @@ The following guidance describes how to model the different stages of a framewor
   * `tender.techniques.hasFrameworkAgreement` to `true`.
   * `tender.contractPeriod` to the duration of the framework agreement.
   * `tender.maximumValue` to the maximum value of the framework agreement and/or `tender.value` to the estimated value of the framework agreement (the values can be different e.g. if the budget for the framework agreement contains a reserve in case of an unforeseen situation, but the situation is unlikely to occur).
-  * If the framework agreement is closed, set `tender.tenderPeriod.endDate` to the deadline for responses to the invitation.
-  * If the framework agreement is open, set `tender.tenderPeriod.endDate` to the last date that new suppliers can be added.
+  * If the framework agreement is closed, set `tender.expressionOfInterestDeadline` to the deadline for responses to the invitation to participate.
+  * If the framework agreement is open, set `tender.expressionOfInterestDeadline` to the last date that new suppliers can be added.
 
 ### First-stage selection and addition of suppliers to the framework agreement
 
@@ -136,7 +136,7 @@ The following guidance describes how to model the different stages of a framewor
 
 #### Relate the second stage to the first stage
 
-* Add a `RelatedProcess` object to the `relatedProcesses` array, set its `.id` (to '1', for example), add 'framework' to its `.relationship` array, set its `.scheme` to 'ocid' and set its `.identifier` to the `ocid` of the invitation to participate in the framework agreement.
+* Add a `RelatedProcess` object to the `relatedProcesses` array, set its `.id` (to '1', for example), add 'framework' to its `.relationship` array, set its `.scheme` to 'ocid' and set its `.identifier` to the `ocid` of the invitation to participate in the framework agreement. If the second stage relates to specific lots from the first stage, add the relevant `tender.lots.id` values from the first stage to its `.relatedLots` array.
 
 #### Add a buyer
 
@@ -169,7 +169,7 @@ The notice is modelled as an OCDS release with a `tag` of 'tender' and the follo
 * The techniques extension is declared in the package metadata.
 * Since this contracting process is for the set-up of a framework agreement, `tender.techniques.hasFrameworkAgreement` is set to `true`.
 * Since any supplier is able to submit a response to the invitation to participate, `tender.procurementMethod` is set to 'selective'.
-* Since the framework agreement is closed, `tender.tenderPeriod` is set to the deadline for responses to the invitation to participate.
+* Since the framework agreement is closed, `tender.expressionOfInterestDeadline` is set to the deadline for responses to the invitation to participate.
 * Since there is only one buyer, `buyer` is set to reference the buyer's object in the `parties` array.
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_first_stage.json
@@ -225,14 +225,14 @@ The National Procurement Agency in Chile (Chile Compra) wants to establish a fra
 
 #### Invitation to participate in the first stage of a framework agreement procedure
 
-Chile Compra publishes a [tender notice](https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?qs=TLr0Si6+0YXBLbyobaRgPQ==) inviting suppliers to participate in the framework agreement. The tender notice specifies that multiple suppliers can join the framework agreement. The framework agreement is open, since all the framework agreements in Chile involve the setting up of a dynamic purchasing system. The framework agreement is for multiple buyers, since the tender notice specifies two contracting authorities.
+Chile Compra publishes a tender notice inviting suppliers to participate in the framework agreement. The tender notice specifies that multiple suppliers can join the framework agreement. The framework agreement is open, since all the framework agreements in Chile involve the setting up of a dynamic purchasing system. The framework agreement is for multiple buyers, since the tender notice specifies two contracting authorities. The tender notice describes two lots.
 
 The notice is modelled as an OCDS release with a `tag` of 'tender' and the following properties:
 
 * The techniques extension is declared in the package metadata.
 * Since this contracting process is for the set-up of a framework agreement, `tender.techniques.hasFrameworkAgreement` is set to `true`.
 * Since any supplier is able to submit a response to the invitation to participate, `tender.procurementMethod` is set to 'selective'.
-* Since the framework agreement is open, `tender.tenderPeriod` is set to the end of the framework agreement.
+* Since the framework agreement is open, `tender.expressionOfInterestDeadline` is set to the last date that new suppliers can be added, which in this case matches the last date of the framework agreement.
 * Since there are two buyers, the 'buyer' object is not set, and the buyers are declared in the `parties` array.
 * Since Chile Compra is the organization that manages the contracting process, `tender.procuringEntity` is set to reference Chile Compra's object in the `parties` array.
 
@@ -244,7 +244,7 @@ The notice is modelled as an OCDS release with a `tag` of 'tender' and the follo
 
 #### First-stage selection and addition of suppliers to the framework agreement
 
-Chile Compra issues an [award notice](https://www.mercadopublico.cl/Procurement/Modules/RFB/StepsProcessAward/PreviewAwardAct.aspx?qs=TLr0Si6+0YXBLbyobaRgPQ==) to announce that the framework agreement has been awarded to two suppliers: Rodrigo Alejandro Vidal Campos and Comercializadora e Importadora Grupo RAVC SPA.
+Chile Compra issues an award notice to announce that the framework agreement has been awarded to two suppliers: Rodrigo Alejandro Vidal Campos and Comercializadora e Importadora Grupo RAVC SPA.
 
 The notice is modelled as an OCDS release with the same `ocid` as the previous release, a `tag` of 'award', and the following properties:
 
@@ -263,12 +263,12 @@ The framework is now established, and both buyers can now purchase items from th
 
 #### Invitation to participate in a second-stage competition
 
-Servicio Local de Educación Pública Puerto Cordillera publishes a [tender notice](https://www.mercadopublico.cl/CMII/Tienda/frm_GCV2_Ficha.aspx?IURL=uPteMZpbYBeM$07gdm9g$08EFecMSuZM0euS4Z$07cbeFMX_05ohEOMPbeteMZpbYBeM), inviting suppliers on the framework agreement to bid to supply 200 pencils. This represents an invitation to participate in a second-stage competition.
+Servicio Local de Educación Pública Puerto Cordillera publishes a tender notice, inviting suppliers on the framework agreement to bid to supply 200 pencils. This represents an invitation to participate in a second-stage competition, related to a lot described in the first-stage tender notice.
 
 The release has the following properties:
 
 * A new `ocid` is used.
-* The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
+* The `relatedProcesses` section is populated with a reference to the contracting process for the first stage, including the relevant lot in `.relatedLots`.
 * The `tag` is set to 'tender'.
 * The tender section includes details about the competition, and `tender.competitive` is set to `true`.
 * Since this new contracting process has a single buyer, the `buyer` is set to Servicio Local de Educación Pública Puerto Cordillera.
@@ -286,7 +286,7 @@ Following the invitation to participate in the second-stage competition, Servici
 The release has the following properties:
 
 * The same `ocid` as the invitation to participate in the second-stage competition is used.
-* The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
+* The `relatedProcesses` section is populated with a reference to the contracting process for the first stage, including the relevant lot in `.relatedLots`.
 * The `tag` is set to 'award'.
 * The `tender.status` is updated to 'complete'.
 * The `awards` section is populated with the award value, period and items.
