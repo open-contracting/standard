@@ -8,20 +8,20 @@ For some use cases, publishers might need to disclose the organizational units i
 
 There is more than one approach to model organizational units in OCDS:
 
-1. **Use the fields available in the Organization sub-schema**. This is the preferred approach, when possible. 
+1. **Use the fields available in the Organization subschema**. This is the preferred approach, when possible. 
 
     * Unit names can be included in the `name` field alongside the organization name. 
     * The `additionalIdentifiers` array can be used to provide any unit identifiers. It is important to note that `identifier` and `additionalIdentifiers` need to point toward the *same legal entity*. The main `identifier` ought to belong to the organization and the `legalName` field can be used to provide the organization name alone. 
     * The `address` and `contactPoint` objects can be filled with the unit information. 
     * Unit identifiers can also be appended to `parties/id`.
 
-2. When the first option is not enough to model the publisher's case, **use or create an extension**. Any additional fields can be placed under the `details` field of the `Organization` sub-schema.
+2. When the first option is not enough to model the publisher's case, **use or create an extension**. Any additional fields can be placed under the `details` field of the `Organization` subschema.
 
 Some publishers use the [memberOf](https://github.com/open-contracting-extensions/ocds_memberOf_extension) extension to represent organization hierarchies, including organizational units. This is strongly discouraged unless there is a clear use case to support it, because OCDS is not designed to disclose hierarchical organization information. Ideally, organizational hierarchies would be represented in separate, non-OCDS datasets, and organizational units would be modelled using one of the alternatives described above. 
 
 ## Worked examples
 
-### 1. Using the Organization sub-schema
+### 1. Using the Organization subschema
 
 In Honduras, the Ministry of Health is planning the procurement of food supplies for the San Felipe Hospital. For the purposes of the example, San Felipe Hospital is considered to be a unit belonging to the Ministry of Health, and it is not a legal entity of its own.
 
@@ -63,7 +63,7 @@ The branch name (*Chişinău Branch*) is appended at the end of the name of the 
 
 The `extension.json` and `release-schema.json` files for the Division code extension can be displayed using the combo box above the JSON example. Instructions on how to create an OCDS extension can be found [here](https://github.com/open-contracting/standard_extension_template).
 
-### 3. Using the Organization sub-schema with an organizational hierarchy
+### 3. Using the Organization subschema with an organizational hierarchy
 
 The *Hospital de Clínicas* is planning to procure supplies for their Blood Center. The Hospital is part of the Medical School in the National University of Asuncion. Since the hospital is key in the provision of healthcare for low income groups in the community, it is in the interest of many to clearly identify the procurement of the Hospital only. It is also important for the publisher that users can group the data following organizational hierarchies.
 

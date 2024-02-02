@@ -40,14 +40,14 @@ OCDS 1.1 allowed data to be published in multiple languages by suffixing a langu
 
 ## Release structure
 
-The majority of OCDS data is held within a release structure. One or more releases can be published within a [release package](packaging/release_package). Releases are made up of a number of sections, arranged in the following structure.
+The majority of OCDS data is held within a release structure. One or more releases can be published within a [release package](packaging/release_package). Releases are made up of a number of objects and arrays that represent the stages in a contracting (or planning) process, arranged in the following structure.
 
 * [release](#release)
-  * [parties](#parties) 
+  * [parties](#parties)
   * [planning](#planning)
-  * [tender](#tender) 
-  * [award](#award)
-  * [contract](#contract)
+  * [tender](#tender)
+  * [awards](#award)
+  * [contracts](#contract)
     * [implementation](#implementation)
 
 A release has a [tag](codelists.md#release-tag) to indicate whether it is about a planning process or a contracting process and, if it is about the latter, to indicate the stage of the contracting process to which it relates. However, there are no formal restrictions on when information about a stage of the process can be provided.
@@ -81,7 +81,7 @@ All new information about a contracting (or planning) process is described withi
 
 ### Parties
 
-Each of the organizations referenced in a release must be included in the parties section.
+Each of the organizations referenced in a release must be included in the `parties` array, using the `Organization` subschema.
 
 ```{versionadded} 1.1
 In OCDS 1.0, the details (address, contact point, etc.) of the organizations involved in a contracting process were repeated across many fields (`tenderers`, `suppliers`, etc.). In OCDS 1.1, these details are instead collected under a top-level `parties` array, with the other fields referencing entries in this array, using [organization references](#organizationreference). This reduces repetition and supports publication of information about additional organizations: for example, multiple buyers.
@@ -122,7 +122,7 @@ Each organization has a `details` object. Through extensions, this can be used t
 
 ### Planning
 
-The planning section is used in a planning process. This includes information about, for example, needs identification, budget planning and market research. Background documents such as feasibility studies and project plans can also be included in this section.
+The `planning` object is used in a planning process. This includes information about, for example, needs identification, budget planning and market research. Background documents such as feasibility studies and project plans can also be included in this object.
 
 ````{admonition} Example
 :class: hint
@@ -148,7 +148,7 @@ The planning section is used in a planning process. This includes information ab
 
 #### Budget
 
-Apart from documents, the majority of planning information is held within the budget object. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting (or planning) process to existing projects and budgets even where linked data is not available.
+Apart from documents, the majority of planning information is held within the `budget` object. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting (or planning) process to existing projects and budgets even where linked data is not available.
 
 ````{admonition} Example
 :class: hint
@@ -170,7 +170,7 @@ Apart from documents, the majority of planning information is held within the bu
 
 ### Tender
 
-The tender section includes details of the announcement that an organization intends to source some particular goods, services or works and to establish one or more contract(s) for these.
+The `tender` object includes details of the announcement that an organization intends to source some particular goods, services or works and to establish one or more contract(s) for these.
 
 It can contain details of a forthcoming process to receive and evaluate proposals to supply these goods, services or works and can also be used to record details of a completed tender stage, including details of bids received.
 
@@ -202,7 +202,7 @@ The [Bid statistics and details](https://extensions.open-contracting.org/en/exte
 
 ### Award
 
-The award section is used to announce any awards issued for this tender. There can be multiple awards made. Releases can contain all, or a subset, of these awards. Awards contain information about suppliers. In particular cases there can be multiple suppliers for a single award: for example, in the case of [consortia](../guidance/map/buyers_suppliers.md#consortia-suppliers) and in [framework agreements](../guidance/map/framework_agreements).
+The `awards` array is used to announce any awards issued for this tender. There can be multiple awards made, each of which must be detailed using the `Award` subschema. Releases can contain all, or a subset, of these awards. Awards contain information about suppliers. In particular cases there can be multiple suppliers for a single award: for example, in the case of [consortia](../guidance/map/buyers_suppliers.md#consortia-suppliers) and in [framework agreements](../guidance/map/framework_agreements).
 
 ````{admonition} Example
 :class: hint
@@ -228,7 +228,7 @@ The award section is used to announce any awards issued for this tender. There c
 
 ### Contract
 
-The contract section is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'.
+The `contracts` array is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'. Each contract is detailed using the `Contract` subschema.
 
 ````{admonition} Example
 :class: hint
@@ -254,7 +254,7 @@ The contract section is used to provide details of contracts that have been ente
 
 ### Implementation
 
-Implementation information can be updated over the course of a contract. It belongs nested within the contract it relates to. The implementation sub-schema includes the following fields:
+Implementation information can be updated over the course of a contract. The `implementation` array belongs nested within the contract it relates to. The `Implementation` subschema includes the following fields:
 
 ````{admonition} Example
 :class: hint
@@ -296,7 +296,7 @@ Information on subcontracts is not currently included in the core OCDS schema, b
 :collapse: providerOrganization,receiverOrganization,amount,payer,payee,value
 ```
 
-The `Transaction` sub-schema is modelled on the [International Aid Transparency Initiative (IATI) transaction element](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) object, this can be used to cross-reference to a third party `source` of data, and ought to reuse identifiers from that source.
+The `Transaction` subschema is modelled on the [International Aid Transparency Initiative (IATI) transaction element](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) object, this can be used to cross-reference to a third party `source` of data, and ought to reuse identifiers from that source.
 
 ```{note}
 To represent planned payments, use [Milestones](#milestones) instead.
@@ -324,7 +324,7 @@ See [document](#document) reference below.
 
 A release may amend values from a previous release. Whilst the release & record model of OCDS offers the opportunity to keep a full versioned history of changes, in many cases it is important for changes to a tender, award or contract to be explicitly declared.
 
-The amendment array in a tender, award or contract objects provides the ability to detail the amendments that have taken place with dates, rationale and free-text descriptions of the change, as well as to point to the releases that contain information from before and after the amendment.
+The `amendments` array in a `tender`, `Award` or `Contract` object provides the ability to detail the amendments that have taken place with dates, rationale and free-text descriptions of the change, as well as to point to the releases that contain information from before and after the amendment. Each amendment is detailed using the `Amendment` subschema.
 
 ````{admonition} Example
 :class: hint
@@ -355,9 +355,9 @@ Structured information on the former value of specific fields may be provided in
 See the [amendment implementation guidance](../guidance/map/amendments) for more details.
 ```
 
-## Sub-schema reference
+## Subschema reference
 
-The following sub-schemas are commonly re-used throughout the standard.
+The following subschemas are commonly re-used throughout the standard.
 
 ### OrganizationReference
 
@@ -367,8 +367,8 @@ See the [parties](#parties) section.
 
 An organization reference consists of two main components:
 
-* An `id` used to cross-reference the entry in the [parties](#parties) section that contains full information on this organization;
-* A `name` field that repeats the name given in the [parties](#parties) section, provided for the convenience of users viewing the data, and to support detection of mistakes in cross-referencing. 
+* An `id` used to cross-reference the entry in the [parties](#parties) array that contains full information on this organization;
+* A `name` field that repeats the name given in the [parties](#parties) array, provided for the convenience of users viewing the data, and to support detection of mistakes in cross-referencing.
 
 ````{admonition} Example
 :class: hint
@@ -385,11 +385,11 @@ An organization reference consists of two main components:
 
 ### Organization
 
-See the [parties](#parties) section.
+See the [Parties](#parties) section.
 
 #### Identifier
 
-The identifier sub-schema provides a way to [identify the legal entities](identifiers.md#organization-identifiers) involved in a contracting (or planning) process.
+The identifier subschema provides a way to [identify the legal entities](identifiers.md#organization-identifiers) involved in a contracting (or planning) process.
 
 When describing an organizational unit (for example, a department or branch of an organization), the `identifier` field should identify the main organization. The other fields should describe the organizational unit. For more information, see [organizational units](../guidance/map/organizational_units.md).
 
@@ -441,7 +441,7 @@ When describing an organizational unit (for example, a department or branch of a
 
 ### Document
 
-Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each documents array can consist of multiple documents, classified using the [documentType](codelists.md#document-type) codelist.
+Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each `documents` array can consist of multiple documents, classified using the [documentType](codelists.md#document-type) codelist.
 
 Documents related to contracting (or planning) processes should be public by default. For more information, see the Open Contracting Partnership's report [Mythbusting Confidentiality in Public Contracting](https://www.open-contracting.org/resources/mythbusting-confidentiality-public-contracting/) and the Center for Global Development's [Principles on Commercial Transparency in Public Contracts](https://www.cgdev.org/publication/principles-commercial-transparency-public-contracts).
 
@@ -451,7 +451,7 @@ OCDS allows summarizing information in the document's `description` field. Provi
 
 If a document contains multiple languages, use the `languages` field to list the languages used in the document. If there are multiple versions of a document, each in a different language, add a separate `Document` object for each version of the document.
 
-If an alternative representation of the data in an OCDS release exists, a link should be provided in the relevant `.documents` array. For example, if the data in an OCDS award release is also available as an HTML page, a link to the HTML page should be provided in `awards.documents`. Links to alternative representations of an entire contracting process should be provided in `tender.documents`.
+If an alternative representation of the data in an OCDS release exists, a link should be provided in the relevant `documents` array. For example, if the data in an OCDS award release is also available as an HTML page, a link to the HTML page should be provided in `awards.documents`. Links to alternative representations of an entire contracting process should be provided in `tender.documents`.
 
 ````{admonition} Example
 :class: hint
@@ -472,7 +472,7 @@ If an alternative representation of the data in an OCDS release exists, a link s
 
 ### Period
 
-A period has a start date, end date, and/or duration. Start and end dates are represented using date-times. Durations are represented as a number of days. 
+A period has a start date, end date, and/or duration. Start and end dates are represented using date-times. Durations are represented as a number of days.
 
 Periods can also include a `maxExtentDate` which indicates the latest possible end date of this period, or the latest date up until which the period could be extended without an amendment.
 
@@ -515,7 +515,7 @@ In the event that a date field is not bound to a specific time at all, publisher
 
 ### Item
 
-The `Item` sub-schema is used to describe the line-items associated with a tender, award or contract.
+The `Item` subschema is used to describe the line-items associated with a tender, award or contract.
 
 ````{admonition} Example
 :class: hint
@@ -537,7 +537,7 @@ The `Item` sub-schema is used to describe the line-items associated with a tende
 
 #### Unit
 
-The `unit` sub-schema allows detailed specification of the parameters and price of units that make up a line-item.
+The `unit` subschema allows detailed specification of the parameters and price of units that make up a line-item.
 
 If the [Quantities, Units, Dimensions and Data Types Ontologies](https://www.qudt.org) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
 
@@ -577,13 +577,13 @@ Other unit classification schemes can be used, including those in the [unitClass
 
 Milestone information can be included in the [planning](#planning), [tender](#tender), [contract](#contract) and [contract implementation](#implementation) objects.
 
-The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed.
+The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` field either updated, or re-confirmed.
 
 ```{seealso}
 [How to represent planned payments](../guidance/map/milestones.md#delivery-and-payment-data)
 ```
 
-For delivery milestones, if there is a time frame for delivery, use `.dueAfterDate` for the start date and `.dueDate` for the end date.
+For delivery milestones, if there is a time frame for delivery, use `dueAfterDate` for the start date and `dueDate` for the end date.
 
 ````{admonition} Example
 :class: hint
@@ -639,10 +639,10 @@ In OCDS each contracting process can have only one tender stage. There are a num
 
 * When one planning process results in many tenders;
 * When a contract is awarded following two distinct, but related, tender processes, such as in national frameworks with locally run mini-competitions;
-* When a contract results in the award of sub-contracts - and those sub-contracts are also tracked using OCDS;
+* When a contract results in the award of subcontracts - and those subcontracts are also tracked using OCDS;
 * When a contract is coming up for renewal or replacement, and there is a contracting process to award  the renewal/replacement contract;
 
-In all these cases, the `relatedProcess` sub-schema should be used to cross-reference between the relevant contracting processes using their `ocid`.
+In all these cases, the `relatedProcess` subschema should be used to cross-reference between the relevant contracting processes using their `ocid`.
 
 ````{admonition} Example
 :class: hint
@@ -661,13 +661,13 @@ A related process can be declared at two points in an OCDS release.
 
 **(1) At the release level** - used to point backwards to prior processes, such as planning or framework establishment.
 
-**(2) At the contract level** - used to point onward to sub-contracts, renewal or replacement processes that relate solely to the particular contract the field appears in.
+**(2) At the contract level** - used to point onward to subcontracts, renewal or replacement processes that relate solely to the particular contract the field appears in.
 
 As well as providing this machine-readable link between processes, publishers may also provide links to human-readable documentation in the relevant `documents` arrays. For example:
 
-* When recording a `release/relatedProcess` pointing to the ocid of the planning process that resulted in a tender, a `tender/documents` entry with a `documentType` of 'procurementPlan' and a link to web pages about the procurement plan could be provided;
-* When recording a `contract/relatedProcess` pointing to the ocid of a  sub-contracting process, a `contract/documents` entry with a `documentType` of 'subContract' and a title that describes it as the subcontracting process, could be provided;
-* When recording a `contract/relatedProcess` pointing to the ocid of a contracting process to renew a given contract, a `contract/documents` entry with a `documentType` of 'tenderNotice' and a title that describes it as the successor process, could be provided;
+* When recording a `release.relatedProcess` pointing to the ocid of the planning process that resulted in a tender, a `tender.documents` entry with a `documentType` of 'procurementPlan' and a link to web pages about the procurement plan could be provided;
+* When recording a `contract.relatedProcess` pointing to the ocid of a  sub-contracting process, a `contract.documents` entry with a `documentType` of 'subContract' and a title that describes it as the subcontracting process, could be provided;
+* When recording a `contract.relatedProcess` pointing to the ocid of a contracting process to renew a given contract, a `contract.documents` entry with a `documentType` of 'tenderNotice' and a title that describes it as the successor process, could be provided;
 
 ### Location
 
@@ -675,7 +675,7 @@ The [Location](https://extensions.open-contracting.org/en/extensions/location/v1
 
 ### Link
 
-The entries of the top-level `links` array are `Link` objects:
+The entries of the `links` array are `Link` objects:
 
 ```{field-description} ../../build/current_lang/release-schema.json /properties/links
 ```

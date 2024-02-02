@@ -80,11 +80,11 @@ The `organizationIdentifierRegistrationAgency_iati.csv` file was removed. This l
 
 ### Document Type
 
-The following list describes documents and documentation recommended for publication as part of an open contracting implementation. The codelist indicates the section of an OCDS release they are most likely to be applicable within. 
+The following list describes documents and documentation recommended for publication as part of an open contracting implementation. The codelist indicates the section of an OCDS release they are most likely to be applicable within.
 
-The code descriptions are necessarily broad, to cover their usage in a range of contracting (or planning) processes, including for goods, services and works, and in other contexts, such as public private partnerships, infrastructure or concession contracts. 
+The code descriptions are necessarily broad, to cover their usage in a range of contracting (or planning) processes, including for goods, services and works, and in other contexts, such as public private partnerships, infrastructure or concession contracts.
 
-Publishers must map their existing document codes to this list, where possible. If using this list within a user interface, publishers can re-write the codelist titles and descriptions appropriately for the context they are being used in. 
+Publishers must map their existing document codes to this list, where possible. If using this list within a user interface, publishers can re-write the codelist titles and descriptions appropriately for the context they are being used in.
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -143,7 +143,7 @@ Added 'parent'. Deprecated 'subContract', 'replacementProcess' and 'renewalProce
 ```{versionadded} 1.1
 ```
 
-The related process scheme describes the kind of identifier used to cross-reference another process. 
+The related process scheme describes the kind of identifier used to cross-reference another process.
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -155,7 +155,7 @@ The related process scheme describes the kind of identifier used to cross-refere
 ```{versionadded} 1.1
 ```
 
-The `Milestone` sub-schema can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process. The milestone type codelist is used to indicate the nature of each milestone.
+The `Milestone` subschema can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process. The milestone type codelist is used to indicate the nature of each milestone.
 
 ```{csv-table-no-translate}
 :header-rows: 1

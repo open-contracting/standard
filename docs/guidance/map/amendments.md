@@ -96,7 +96,7 @@ See the JSON release below.
 
 #### Contract Amendment
 
-A few days after the contract release, its scope is increased to include the purchase of one additional appliance. A new 'contractAmendment' release is built, where a single item is added in the `contracts/items` array and the value of the contract is increased. A `amendments` array is included to explain the rationale of the changes.
+A few days after the contract release, its scope is increased to include the purchase of one additional appliance. A new 'contractAmendment' release is built, where a single item is added in the `contracts.items` array and the value of the contract is increased. An `amendments` array is included to explain the rationale of the changes.
 
 See the example release below.
 
@@ -149,7 +149,7 @@ This can be modelled as the separate releases in OCDS as shown below. The origin
 :title: ContractAmendment
 ```
 
-Note that the mapping of the fields remains the same for the contract amendments, except for the `description` column. When a row in the contract signature notices table is identified as an original contract, the description is included in the `contracts/description` field, and when the row represents a contract amendment, it is mapped to the `contracts/amendments/description` field. This aligns with the use of the `description` column, because for contract amendments it is used to include an explanation of the change.
+Note that the mapping of the fields remains the same for the contract amendments, except for the `description` column. When a row in the contract signature notices table is identified as an original contract, the description is included in the `contracts.description` field, and when the row represents a contract amendment, it is mapped to the `contracts.amendments.description` field. This aligns with the use of the `description` column, because for contract amendments it is used to include an explanation of the change.
 
 The advantage of this approach, in contrast with the Easy releases proposal, is that the users have access to the details of each amendment instead of the latest values only without any additional effort of their end.
 
