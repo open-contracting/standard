@@ -208,6 +208,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `SimpleIdentifier`
   * [#1519](https://github.com/open-contracting/standard/pull/1519) `Value.amountNet` and `Value.amountGross`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `contracts.identifiers`
+  * [#1674](https://github.com/open-contracting/standard/pull/1674) `tender.exclusionGrounds.description` and `tender.selectionCriteria.description`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
