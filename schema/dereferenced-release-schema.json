@@ -4651,18 +4651,36 @@
         "exclusionGrounds": {
           "title": "Exclusion grounds",
           "description": "The criteria regarding the situation of a tenderer that can lead to its exclusion from the contracting process. For example: criminal convictions, bankruptcy, presence on a blacklist or failure to pay taxes.",
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": "object",
+          "properties": {
+            "description": {
+              "title": "Description",
+              "description": "The description of the criteria.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 1
+            }
+          },
+          "minProperties": 1
         },
         "selectionCriteria": {
           "title": "Selection criteria",
           "description": "The minimum requirements for potential suppliers to participate in the contracting process. Selection criteria ensure that a potential supplier has the legal and financial capacities and the technical and professional abilities to perform the contract.",
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": "object",
+          "properties": {
+            "description": {
+              "title": "Description",
+              "description": "The description of the criteria.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 1
+            }
+          },
+          "minProperties": 1
         },
         "awardPeriod": {
           "title": "Evaluation and award period",
@@ -17597,18 +17615,36 @@
         "exclusionGrounds": {
           "title": "Exclusion grounds",
           "description": "The criteria regarding the situation of a tenderer that can lead to its exclusion from the contracting process. For example: criminal convictions, bankruptcy, presence on a blacklist or failure to pay taxes.",
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": "object",
+          "properties": {
+            "description": {
+              "title": "Description",
+              "description": "The description of the criteria.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 1
+            }
+          },
+          "minProperties": 1
         },
         "selectionCriteria": {
           "title": "Selection criteria",
           "description": "The minimum requirements for potential suppliers to participate in the contracting process. Selection criteria ensure that a potential supplier has the legal and financial capacities and the technical and professional abilities to perform the contract.",
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": "object",
+          "properties": {
+            "description": {
+              "title": "Description",
+              "description": "The description of the criteria.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 1
+            }
+          },
+          "minProperties": 1
         },
         "awardPeriod": {
           "title": "Evaluation and award period",
