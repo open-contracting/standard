@@ -185,8 +185,10 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * Add new fields:
   * [#1335](https://github.com/open-contracting/standard/pull/1335) `planning.id`
   * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
+  * [#1296](https://github.com/open-contracting/standard/pull/1296) [#1674](https://github.com/open-contracting/standard/pull/1674) `tender.exclusionGrounds`
   * [#1669](https://github.com/open-contracting/standard/pull/1669) `tender.expressionOfInterestDeadline`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `tender.identifiers`
+  * [#1237](https://github.com/open-contracting/standard/pull/1237) [#1674](https://github.com/open-contracting/standard/pull/1674) `tender.selectionCriteria`
   * [#1654](https://github.com/open-contracting/standard/pull/1654) `tender.submissionTerms.electronicSubmissionPolicy`
   * [#1421](https://github.com/open-contracting/standard/pull/1421) `tender.standstillPeriod`
   * [#1492](https://github.com/open-contracting/standard/pull/1492) `awards.datePublished`
@@ -208,7 +210,6 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `SimpleIdentifier`
   * [#1519](https://github.com/open-contracting/standard/pull/1519) `Value.amountNet` and `Value.amountGross`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `contracts.identifiers`
-  * [#1674](https://github.com/open-contracting/standard/pull/1674) `tender.exclusionGrounds.description` and `tender.selectionCriteria.description`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
@@ -352,7 +353,6 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * [#969](https://github.com/open-contracting/standard/pull/969) Clarify the instruction for setting the `Unit.id` field.
 * [#995](https://github.com/open-contracting/standard/pull/995) Clarify the instruction for setting the `Release.date` field.
 * [#996](https://github.com/open-contracting/standard/pull/996) Fix a typo in the `versionedRelease` field.
-* [#1237](https://github.com/open-contracting/standard/pull/1237) Add `Tender.selectionCriteria`.
 
 ### Documentation
 
