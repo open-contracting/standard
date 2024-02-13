@@ -122,7 +122,7 @@ The following guidance describes how to model the different stages of a framewor
 
 ### Invitation to participate in a second-stage competition
 
-* Create a release with a **new** `ocid` and add 'tender' to the `.tag` array. 
+* Create a release with a **new** `ocid` and add 'tender' to the `.tag` array.
 * [Relate the second stage to the first stage](#relate-the-second-stage-to-the-first-stage).
 * [Add a buyer](#add-a-buyer).
 * Populate the `tender` section, setting `tender.procurementMethod` to the same value as in the first stage, and `tender.competitive` to `true`.
@@ -168,7 +168,7 @@ The notice is modelled as an OCDS release with a `tag` of 'tender' and the follo
 
 * The techniques extension is declared in the package metadata.
 * Since this contracting process is for the set-up of a framework agreement, `tender.techniques.hasFrameworkAgreement` is set to `true`.
-* Since any supplier is able to submit a response to the invitation to participate, `tender.procurementMethod` is set to 'open'.
+* Since any supplier is able to submit a response to the invitation to participate, `tender.procurementMethod` is set to 'selective'.
 * Since the framework agreement is closed, `tender.expressionOfInterestDeadline` is set to the deadline for responses to the invitation to participate.
 * Since there is only one buyer, `buyer` is set to reference the buyer's object in the `parties` array.
 
