@@ -22,10 +22,8 @@ You can publish the values of these fields in any language:
 - `parties/address/streetAddress`
 - `planning/budget/project`
 - `tender/awardCriteriaDetails`
-- `tender/exclusionGrounds`
 - `tender/procurementMethodDetails`
 - `tender/procurementMethodRationale`
-- `tender/selectionCriteria`
 - `tender/submissionMethodDetails`
 % ENDLIST
 

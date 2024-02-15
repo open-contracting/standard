@@ -527,10 +527,10 @@
           }
         },
         "exclusionGrounds": {
-          "$ref": "#/definitions/StringNullVersioned"
+          "$ref": "#/definitions/ExclusionGrounds"
         },
         "selectionCriteria": {
-          "$ref": "#/definitions/StringNullVersioned"
+          "$ref": "#/definitions/SelectionCriteria"
         },
         "awardPeriod": {
           "$ref": "#/definitions/Period"
@@ -2941,6 +2941,74 @@
           }
         }
       }
+    },
+    "ExclusionGrounds": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "minProperties": 1
+    },
+    "SelectionCriteria": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "minProperties": 1
     },
     "StringNullUriVersioned": {
       "type": "array",
