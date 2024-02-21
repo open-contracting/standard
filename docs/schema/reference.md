@@ -228,7 +228,7 @@ Information on subcontracts is not currently included in the core OCDS schema, b
 :collapse: providerOrganization,receiverOrganization,amount,payer,payee,value
 ```
 
-The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this can be used to cross-reference to a third party `source` of data, and ought to re-use identifiers from that source.
+The transaction block is modelled on the [International Aid Transparency Initiative (IATI) transaction element](https://iatistandard.org/en/iati-standard/203/activity-standard/iati-activities/iati-activity/transaction/), and can be used to represent actual flows of money between organizations in relation to this contract. As with the [budget](#budget) block, this can be used to cross-reference to a third party `source` of data, and ought to reuse identifiers from that source.
 
 In most circumstances, the `payer` identifier will match that of the `buyer`, and the `payee` identifier will match that of the `supplier`. 
 
