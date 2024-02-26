@@ -334,7 +334,7 @@ For enterprises without employees, use the 'micro' code.
 :file: ../../build/current_lang/codelists/partyScale.csv
 ```
 
-### Tender final status
+### Tender Final Status
 
 ```{versionadded} 1.2
 ```
@@ -344,7 +344,7 @@ For enterprises without employees, use the 'micro' code.
 :file: ../../build/current_lang/codelists/tenderFinalStatus.csv
 ```
 
-### Award final status
+### Award Final Status
 
 ```{versionadded} 1.2
 ```
@@ -354,7 +354,7 @@ For enterprises without employees, use the 'micro' code.
 :file: ../../build/current_lang/codelists/awardFinalStatus.csv
 ```
 
-### Contract final status
+### Contract Final Status
 
 ```{versionadded} 1.2
 ```
