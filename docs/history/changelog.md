@@ -183,8 +183,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
   * [#1421](https://github.com/open-contracting/standard/pull/1421) `tender.standstillPeriod`
   * [#1492](https://github.com/open-contracting/standard/pull/1492) `awards.datePublished`
-  * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
-  * [#1648](https://github.com/open-contracting/standard/pull/1648) `finalStatus` to `Tender`, `Award` and `Contract`
+  * [#1648](https://github.com/open-contracting/standard/pull/1648) `finalStatus` and `finalStatusDetails` to `Tender`, `Award` and `Contract`
   * [#1208](https://github.com/open-contracting/standard/pull/1326) The estimated and maximum values of framework agreeemnts:
     * `tender.maximumValue`. Previously, `tender.value` was used for the maximum value. However, this led to double-counting.
     * `awards.maximumValue`. Previously, `awards.value` was used for the maximum value. However, this led to double-counting.

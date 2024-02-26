@@ -256,14 +256,6 @@
             "deprecatedVersion": "1.2"
           }
         },
-        "statusDetails": {
-          "title": "Status details",
-          "description": "Additional details on the status of the tender. This field can be used to provide the local name of the status.",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
         "procuringEntity": {
           "title": "Procuring entity",
           "description": "The organization managing the contracting (or planning) process. If an organization is both a buyer and a procuring entity (as can be the case in simple contracting processes), it should be disclosed using the buyer field, but not this field.",
@@ -532,6 +524,14 @@
             "unsuccessful",
             null
           ]
+        },
+        "finalStatusDetails": {
+          "title": "Final status details",
+          "description": "Additional details on the final status of the tender. This field can be used to provide the local name of the final status.",
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "patternProperties": {
@@ -633,14 +633,6 @@
             "deprecatedVersion": "1.2"
           }
         },
-        "statusDetails": {
-          "title": "Status details",
-          "description": "Additional details on the status of the award. This field can be used to provide the local name of the status.",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
         "date": {
           "title": "Award date",
           "description": "The date of the contract award. This is usually the date on which a decision to award was made.",
@@ -739,6 +731,14 @@
             "unsuccessful",
             null
           ]
+        },
+        "finalStatusDetails": {
+          "title": "Final status details",
+          "description": "Additional details on the final status of the award. This field can be used to provide the local name of the final status.",
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "patternProperties": {
@@ -829,14 +829,6 @@
             "description": "Deprecated because the same information can be provided by filling in the relevant date fields.",
             "deprecatedVersion": "1.2"
           }
-        },
-        "statusDetails": {
-          "title": "Status details",
-          "description": "Additional details on the status of the contract. This field can be used to provide the local name of the status.",
-          "type": [
-            "string",
-            "null"
-          ]
         },
         "dateSigned": {
           "title": "Date concluded",
@@ -940,6 +932,14 @@
             "cancelled",
             "unsuccessful",
             null
+          ]
+        },
+        "finalStatusDetails": {
+          "title": "Final status details",
+          "description": "Additional details on the final status of the contract. This field can be used to provide the local name of the final status.",
+          "type": [
+            "string",
+            "null"
           ]
         }
       },
