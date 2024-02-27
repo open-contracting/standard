@@ -259,9 +259,6 @@
             }
           }
         },
-        "statusDetails": {
-          "$ref": "#/definitions/StringNullVersioned"
-        },
         "procuringEntity": {
           "$ref": "#/definitions/OrganizationReferenceVersionedId"
         },
@@ -635,6 +632,9 @@
               }
             }
           }
+        },
+        "finalStatusDetails": {
+          "$ref": "#/definitions/StringNullVersioned"
         }
       },
       "patternProperties": {
@@ -741,9 +741,6 @@
             }
           }
         },
-        "statusDetails": {
-          "$ref": "#/definitions/StringNullVersioned"
-        },
         "date": {
           "$ref": "#/definitions/StringNullDateTimeVersioned"
         },
@@ -831,6 +828,9 @@
               }
             }
           }
+        },
+        "finalStatusDetails": {
+          "$ref": "#/definitions/StringNullVersioned"
         }
       },
       "patternProperties": {
@@ -964,9 +964,6 @@
             }
           }
         },
-        "statusDetails": {
-          "$ref": "#/definitions/StringNullVersioned"
-        },
         "dateSigned": {
           "$ref": "#/definitions/StringNullDateTimeVersioned"
         },
@@ -1046,8 +1043,8 @@
                 "codelist": "contractFinalStatus.csv",
                 "openCodelist": false,
                 "enum": [
-                  "terminatedSuccessfully",
-                  "terminatedEarly",
+                  "complete",
+                  "incomplete",
                   "cancelled",
                   "unsuccessful",
                   null
@@ -1061,6 +1058,9 @@
               }
             }
           }
+        },
+        "finalStatusDetails": {
+          "$ref": "#/definitions/StringNullVersioned"
         }
       },
       "patternProperties": {
