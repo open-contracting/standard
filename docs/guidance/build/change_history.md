@@ -66,7 +66,7 @@ The publisher creates a new OCDS release for the award. The record has the relev
 
 The `parties` array has a new entry with the supplier's information. The complete `tender` section is repeated. Previous releases remain unchanged.
 
-The publisher adds the new release to the record. They also update the compiled and versioned releases. The compiled release reflects the changes to the `awards` and `parties` sections.
+The publisher adds the new release to the record. They also update the compiled and versioned releases. The compiled release reflects the changes to the `tender`, `awards` and `parties` sections. The versioned release includes a new change for the `tender.finalStatus` field.
 
 ```{jsoninclude} ../../examples/change_history/award.json
 :jsonpointer: /releases
