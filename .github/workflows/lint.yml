@@ -4,11 +4,11 @@ env:
   BASEDIR: https://raw.githubusercontent.com/open-contracting/standard-maintenance-scripts/main
 jobs:
   build:
-    if: github.event_name == 'pull_request' || startsWith(github.event.ref, 'refs/tags/') || startsWith(github.event.ref, 'refs/heads/1.1') || startsWith(github.event.ref, 'refs/heads/1.2')
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name != github.repository
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
           cache: pip

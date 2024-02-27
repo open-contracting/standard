@@ -36,6 +36,10 @@ A record **may** contain a [versionedRelease](#versioned-release) object, which 
 ```
 ````
 
+```{jsonschema} ../../build/current_lang/record-schema.json
+:nocrossref:
+```
+
 ### Releases
 
 Each release in a record can be provided as either a linked release or an embedded release.

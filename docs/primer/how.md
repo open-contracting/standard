@@ -113,14 +113,14 @@ In addition to the default format of JSON, you can convert and publish your OCDS
 
 While the OCDS schema is described using JSON Schema, OCDS data can be converted from its JSON format to tabular formats such as CSV files or spreadsheets. JSON is favored by developers because it uses human-readable text to exchange complex information, such as nested objects. It can contain large volumes of information and is particularly good at handling one-to-many relationships (such as multiple bids per tender notice).
 
-Tabular formats, such as CSV (or comma separated values) are commonly used in spreadsheets applications and other analysis tools. Many people are comfortable working with spreadsheets using tools like Excel. While JSON is the default format, a good publication will publish tabular formats as well both so that more users’ needs can be satisfied.
+Tabular formats, such as CSV (or comma separated values) are commonly used in spreadsheets applications and other analysis tools. Many people are comfortable working with spreadsheets using tools like Excel. While JSON is the default format, a good publication will publish tabular formats as well both so that more users' needs can be satisfied.
 ```
 
 No matter what type of contracting data you are working with or format you publish in, following OCDS rules and guidance will help you and your users to:
 
 * Access clear definitions for the meaning, structure and format of your data
 * Access a growing ecosystem of reusable tools and methodologies for working with OCDS data
-* Compare your data with other publishers’ data to examine value for money and other types of analysis
+* Compare your data with other publishers' data to examine value for money and other types of analysis
 * Check the structure, format and quality of your data against the OCDS schema
 
 ```{note}

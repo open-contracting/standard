@@ -40,7 +40,7 @@ To construct an `ocid` for the second contracting process, Paraguay adds a conse
 
 Paraguay could also have used the identifier for the second tender as the `ocid` for the second contracting process.
 
-The `relatedProcesses` block links to the unsuccessful contracting process with the relationship set to ‘unsuccessfulProcess’, and to the initial planning process with the relationship set to ‘planning’.
+The `relatedProcesses` block links to the unsuccessful contracting process with the relationship set to 'unsuccessfulProcess', and to the initial planning process with the relationship set to 'planning'.
 
 ```{jsoninclude} ../../examples/unsuccessful_tender/related_process.json
 :jsonpointer:

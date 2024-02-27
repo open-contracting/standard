@@ -142,7 +142,7 @@ The publisher updates their procurement system with the new contract value and p
 
 Note that contract amendments in OCDS involves more modelling considerations. Refer to the amendments worked example for guidance on the topic.
 
-The publisher updates the record for the contracting process with the new release. The compiled release has the new values. The versioned release shows new entries for the contract’s value and end date.
+The publisher updates the record for the contracting process with the new release. The compiled release has the new values. The versioned release shows new entries for the contract's value and end date.
 
 ```{jsoninclude} ../../examples/change_history/contractAmendment.json
 :jsonpointer: /releases

@@ -54,7 +54,7 @@ The revision process is designed to ensure:
 
 Changes to the OCDS schema will be made periodically, with the version number of the standard incremented to indicate that changes have been made, and a changelog maintained.
 
-This documentation website is composed of normative content (the prescriptive part of OCDS) and non-normative content (the non-prescriptive, or ‘descriptive’, part of OCDS) as defined and described in the [Normative and non-normative content and changes policy](normative). This policy establishes which changes to which parts of the documentation must involve the revision process described below (e.g. adding new fields to the release schema), and which changes may be made without the revision process (e.g. correcting typos in field descriptions, or updating implementation guidance).
+This documentation website is composed of normative content (the prescriptive part of OCDS) and non-normative content (the non-prescriptive, or "descriptive", part of OCDS) as defined and described in the [Normative and non-normative content and changes policy](normative). This policy establishes which changes to which parts of the documentation must involve the revision process described below (e.g. adding new fields to the release schema), and which changes may be made without the revision process (e.g. correcting typos in field descriptions, or updating implementation guidance).
 
 ### Versions
 
@@ -110,7 +110,7 @@ Changes can be proposed as:
 
 * **Changes** - such as updated field definitions or codelist entries. 
 
-If there are at least two parties interested in using an extension, and following discussion of the extension draft, then it may be displayed in the current version of the documentation as an ‘experimental feature’. 
+If there are at least two parties interested in using an extension, and following discussion of the extension draft, then it may be displayed in the current version of the documentation as an "experimental feature".
 
 ### Prioritization
 

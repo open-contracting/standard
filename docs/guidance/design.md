@@ -36,7 +36,7 @@ The answers to these questions will help you to develop a robust publication pla
 
 **Resource**: [Methodology for Open Contracting Scoping Studies](https://www.open-contracting.org/resources/methodology-open-contracting-scoping-studies/)
 
-If your contracting data is mostly on paper, in local spreadsheets or in unstructured electronic documents, and you don’t have the capacity to create a new IT system to collect data, consider reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools).
+If your contracting data is mostly on paper, in local spreadsheets or in unstructured electronic documents, and you don't have the capacity to create a new IT system to collect data, consider reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools).
 
 ## Set your goals and priorities
 
