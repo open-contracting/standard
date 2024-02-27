@@ -110,7 +110,6 @@ The following guidance describes how to model the different stages of a framewor
 * For each supplier:
   * Add an `Organization` object to the `parties` array, add 'supplier' to its `.roles` and populate its other fields.
   * Add an `OrganizationReference` object to the award's `.suppliers` array, and set its `.id` and `.name` to match the supplier's object in the `parties` array.
-* If no further suppliers will be added to the framework agreement, set `tender.status` to 'complete'.
 
 ### Award of a procurement contract without second-stage competition
 
@@ -184,7 +183,6 @@ NSS issues a [contract award notice](https://ted.europa.eu/udl?uri=TED:NOTICE:26
 
 The notice is modelled as an OCDS release with the same `ocid` as the previous release, a `tag` of 'award', and the following properties:
 
-* Since no further suppliers will be added to the framework agreement, `tender.status` is set to 'complete'.
 * An `Award` object is added to the `awards` array.
 * An `Organization` object is added to the `parties` array with the supplier's details.
 * An `OrganizationReference` object is added to award's `.suppliers` array to reference the supplier's object in the `parties` array.
@@ -248,7 +246,6 @@ Chile Compra issues an [award notice](https://www.mercadopublico.cl/Procurement/
 
 The notice is modelled as an OCDS release with the same `ocid` as the previous release, a `tag` of 'award', and the following properties:
 
-* Since other suppliers are still able to submit a request to participate in the framework agreement, no change is made to `tender.status`.
 * An `Award` object is added to the `awards` array.
 * An `Organization` object is added to the `parties` array for each supplier with its details.
 * An `OrganizationReference` object is added to the award's `.suppliers` array for each supplier to reference its object in the `parties` array.
@@ -288,7 +285,6 @@ The release has the following properties:
 * The same `ocid` as the invitation to participate in the second-stage competition is used.
 * The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
 * The `tag` is set to 'award'.
-* The `tender.status` is updated to 'complete'.
 * The `awards` section is populated with the award value, period and items.
 * The `awards.suppliers` and `parties` fields are populated with the details of the supplier.
 

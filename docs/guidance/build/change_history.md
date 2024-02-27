@@ -64,9 +64,9 @@ The procuring entity makes the decision to award the contract to Balfour Beatty.
 
 The publisher creates a new OCDS release for the award. The record has the relevant information in the award section and uses the 'award' tag. 
 
-The `parties` array has a new entry with the supplier's information. The complete `tender` section is repeated, with the `status` field set to 'complete'. Previous releases remain unchanged.
+The `parties` array has a new entry with the supplier's information. The complete `tender` section is repeated. Previous releases remain unchanged.
 
-The publisher adds the new release to the record. They also update the compiled and versioned releases. The compiled release reflects the changes to the `awards`, `tender` and `parties` sections. The versioned release includes a new change for the `tender.status` field.
+The publisher adds the new release to the record. They also update the compiled and versioned releases. The compiled release reflects the changes to the `awards` and `parties` sections.
 
 ```{jsoninclude} ../../examples/change_history/award.json
 :jsonpointer: /releases
