@@ -277,8 +277,6 @@ The `awardStatus` field and codelist is used to indicate when a tender did not r
 
 Contracts can move through multiple states. Releases over time can update the status of a contract.
 
-To disclose that a contract is suspended, set the contract's `status` field to 'active' and use its `statusDetails` field to record that the contract is suspended. For more information, see the [contract suspension](../../guidance/map/contract_suspension) worked example.
-
 ```{versionchanged} 1.2
 Added the 'terminatedEarly' and 'terminatedSuccessfully' codes.
 ```
