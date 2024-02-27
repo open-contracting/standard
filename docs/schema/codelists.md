@@ -226,7 +226,8 @@ The country codelist is used to provide the country component of an address, usi
 
 ### Tender Status
 
-The `tender.status` field is used to indicate the current status of a tender process. The following options are available:
+```{deprecated} 1.2
+```
 
 ```{versionchanged} 1.1
 Added the 'planning' and 'withdrawn' codes.
@@ -264,9 +265,8 @@ The procurement category codelist is used to indicate the **primary** focus of a
 
 ### Award Status
 
-An award moves through multiple states. Releases over time can update the status of an award. 
-
-The `awardStatus` field and codelist is used to indicate when a tender did not result in an award (through the `"awardStatus":"unsuccessful"` value).
+```{deprecated} 1.2
+```
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -275,7 +275,8 @@ The `awardStatus` field and codelist is used to indicate when a tender did not r
 
 ### Contract Status
 
-Contracts can move through multiple states. Releases over time can update the status of a contract.
+```{deprecated} 1.2
+```
 
 ```{versionchanged} 1.2
 Added the 'terminatedEarly' and 'terminatedSuccessfully' codes.
