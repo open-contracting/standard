@@ -38,7 +38,9 @@ A buyer publishes a tender for the purchase of office supplies.
 
 #### Tender update release
 
-The buyer adds a main procurement category to the tender. The new information is not a formal amendment to the tender so the publisher uses the 'tenderUpdate' tag and omits the `tender.amendments` field. The publisher chooses to repeat fields whose values are unchanged from the previous release. Such fields can be omitted when a publication provides access to historic releases.
+The buyer adds a main procurement category to the tender. The new information is not a formal amendment to the tender so the publisher uses the 'tenderUpdate' tag and omits the `tender.amendments` field.
+
+The publisher chooses to repeat fields whose values are unchanged from the previous release. Such fields can be omitted when a publication provides access to historic releases.
 
 ```{jsoninclude} ../../examples/amendments/tender.json
 :jsonpointer: /records/0/releases/1
@@ -48,7 +50,9 @@ The buyer adds a main procurement category to the tender. The new information is
 
 #### Tender amendment release
 
-The buyer increases the estimated value of the tender. This change is a formal amendment to the tender so the publisher uses the 'tenderAmendment' tag and populates the `tender.amendments` field. Note that `tender.amendments` does not include the changed values. Rather, the `tender.value.amount` field itself is updated. 
+The buyer increases the estimated value of the tender. This change is a formal amendment to the tender so the publisher uses the 'tenderAmendment' tag and populates the `tender.amendments` field.
+
+Note that `tender.amendments` does not include the changed values. Rather, the `tender.value.amount` field itself is updated. 
 
 ```{jsoninclude} ../../examples/amendments/tender.json
 :jsonpointer: /records/0/releases/2
@@ -58,7 +62,9 @@ The buyer increases the estimated value of the tender. This change is a formal a
 
 #### Record
 
-`releases` contains the above releases, `compiledRelease` contains the latest value of each field and, `versionedRelease` contains a history of changes to each field. The `releaseID` and `amendsReleaseID` fields in the `amendments` array of the compiled release can be looked up in `releases` and `versionedRelease` to identify what changed.
+`releases` contains the above releases, `compiledRelease` contains the latest value of each field and, `versionedRelease` contains a history of changes to each field.
+
+The `releaseID` and `amendsReleaseID` fields in the `amendments` array of the compiled release can be looked up in `releases` and `versionedRelease` to identify what changed.
 
 ```{jsoninclude} ../../examples/amendments/tender.json
 :jsonpointer: /records/0
