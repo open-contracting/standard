@@ -147,7 +147,7 @@ No matter what type of contracting data you are working with or format you publi
 
 * Access clear definitions for the meaning, structure and format of your data
 * Access a growing ecosystem of reusable tools and methodologies for working with OCDS data
-* Compare your data with other publishers’ data to examine value for money and other types of analysis
+* Compare your data with other publishers' data to examine value for money and other types of analysis
 * Check the structure, format and quality of your data against the OCDS schema
 
 ```{note}

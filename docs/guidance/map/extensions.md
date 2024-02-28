@@ -35,7 +35,7 @@ Groups of extensions can be combined into **profiles**. OCDS provides a common c
 
 ### OCDS for Public-Private Partnerships
 
-[OCDS for Public-Private Partnerships](https://standard.open-contracting.org/profiles/ppp/latest/en/) (PPPs) describes how to use OCDS to publish information about PPPs. The profile extends OCDS to offer a data format that follows the World Bank Group’s [Framework for Disclosure in Public-Private Partnership Projects](https://www.worldbank.org/en/topic/publicprivatepartnerships/brief/ppp-tools#T1).
+[OCDS for Public-Private Partnerships](https://standard.open-contracting.org/profiles/ppp/latest/en/) (PPPs) describes how to use OCDS to publish information about PPPs. The profile extends OCDS to offer a data format that follows the World Bank Group's [Framework for Disclosure in Public-Private Partnership Projects](https://www.worldbank.org/en/topic/publicprivatepartnerships/brief/ppp-tools#T1).
 
 ### OCDS for the European Union
 
@@ -43,4 +43,4 @@ Groups of extensions can be combined into **profiles**. OCDS provides a common c
 
 ### OCDS for the Agreement on Government Procurement
 
-[OCDS for the Agreement on Government Procurement](https://standard.open-contracting.org/profiles/gpa/latest/en/) (GPA) describes how to use OCDS to publish information as obliged by the World Trade Organization’s [Agreement on Government Procurement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm).
+[OCDS for the Agreement on Government Procurement](https://standard.open-contracting.org/profiles/gpa/latest/en/) (GPA) describes how to use OCDS to publish information as obliged by the World Trade Organization's [Agreement on Government Procurement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm).

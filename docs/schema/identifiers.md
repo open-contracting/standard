@@ -166,7 +166,7 @@ Each of the organizations involved in a contracting (or planning) process is dec
 
 Each organization has a local identifier (`id`) used to reference it from elsewhere in the data. For example, `buyer/id` references the buyer's entry in the parties section at `parties/id`.
 
-An organization's `id` is distinct from its organization identifier and need only be unique within the scope of the (contracting or planning) process in which it is involved. An organization’s `id` must be consistent across all releases with the same `ocid` value.
+An organization's `id` is distinct from its organization identifier and need only be unique within the scope of the (contracting or planning) process in which it is involved. An organization's `id` must be consistent across all releases with the same `ocid` value.
 
 See the [guidance](../guidance/map/organization_identifiers.md#organization-identifiers) for more information on organization identifiers and local IDs.
 

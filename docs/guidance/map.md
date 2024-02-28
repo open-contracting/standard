@@ -15,7 +15,7 @@ This phase is about documenting your sources of contracting data, and documentin
 
 When starting out, consider working in parallel on the Map and [Build](build) phases, because the choices you make at the Build phase might affect how you need to map your data. For example, your choice of architecture might determine whether you are able to publish a change history using releases and records.
 
-If your contracting (or planning) processes are managed on paper, using local spreadsheets or via unstructured electronic documents, and you’re reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools), then please [get in touch with the Data Support Team](../support/index) for guidance on how to identify which OCDS fields match your local concepts.
+If your contracting (or planning) processes are managed on paper, using local spreadsheets or via unstructured electronic documents, and you're reusing one of the existing [tools for collecting OCDS data](build/data_collection_tools), then please [get in touch with the Data Support Team](../support/index) for guidance on how to identify which OCDS fields match your local concepts.
 
 Mapping data to OCDS is not always easy. Before writing any software, this phase is an opportunity to:
 
@@ -50,10 +50,13 @@ Once complete, you can:
 
 Before mapping individual fields and codes, consider whether to first [localize OCDS](map/localization) to your context. Localization can be useful when you need to map several different systems, or when multiple organizations will work on implementing OCDS in your country.
 
+For guidance on how to publish data in multiple languages, see [translations](map/translations).
+
 ```{toctree}
 :hidden:
 
 map/localization
+map/translations
 ```
 
 ## Download the mapping templates
@@ -140,6 +143,10 @@ For example, you have created an extension to add a new field to indicate whethe
 
 map/extensions
 ```
+
+## Link OCDS with alternative representations
+
+The data contained in an OCDS release is often available in other formats, such as the HTML or PDF version of a notice. You ought to link to these alternative representations from your OCDS data, so that users can follow up on contracting processes that they are interested in: for example, to submit a bid, or to subscribe to notifications. For more information on linking to alternative representations, refer to the [`Document` reference](../schema/reference.md#document).
 
 ## Link OCDS with other standards
 

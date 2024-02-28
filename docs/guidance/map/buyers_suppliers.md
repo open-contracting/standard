@@ -6,7 +6,7 @@
 
 ## Definitions
 
-In order to understand the modelling examples, it’s important to first clarify the definitions of some key concepts.
+In order to understand the modelling examples, it's important to first clarify the definitions of some key concepts.
 
 ### Buyer
 
