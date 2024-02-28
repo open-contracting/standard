@@ -24,11 +24,11 @@ The nature of a change can be made explicit using:
 
 ### Example 1: Tender updates and amendments
 
-This example goes through updates during the **tender** stage in a contracting process.
+This example illustrates how updates and amendments are modelled in OCDS.
 
-#### Tender
+#### Tender release
 
-A publisher issues a tender for a "Data merge tool". A new release with the `tag` 'tender' is built, see the JSON example below.
+A buyer publishes a tender for the purchase of office supplies.
 
 ```{jsoninclude} ../../examples/amendments/tender.json
 :jsonpointer: /records/0/releases/0
@@ -36,9 +36,9 @@ A publisher issues a tender for a "Data merge tool". A new release with the `tag
 :title: Tender
 ```
 
-#### Tender Update
+#### Tender update release
 
-Weeks later, the publisher expands the `description` of the tender to provide more details about the tool being procured. A new release with the `tag` 'tenderUpdate' is built. The publisher does not consider this to be a formal 'amendment' to the tender, so does not publish any amendment information. See the JSON release below.
+The buyer adds a main procurement category to the tender. The new information is not a formal amendment to the tender so the publisher uses the 'tenderUpdate' tag and omits the `tender.amendments` field. The publisher chooses to repeat fields whose values are unchanged from the previous release. Such fields can be omitted when a publication provides access to historic releases.
 
 ```{jsoninclude} ../../examples/amendments/tender.json
 :jsonpointer: /records/0/releases/1
@@ -46,9 +46,9 @@ Weeks later, the publisher expands the `description` of the tender to provide mo
 :title: TenderUpdate
 ```
 
-#### Tender Amendment
+#### Tender amendment release
 
-A few days later, the publisher increases the value of the tender and extends the deadline for bid submissions. These changes are considered as an 'amendment' by the publisher (depending on jurisdiction, certain changes can need to be disclosed as amendments), and so the new release has the `tag` 'tenderAmendment' and an `amendments` block under `tender`. The release reflects the updated value (USD 2000 instead of USD 1000) and the updated closing date for bid submissions (`2012-02-20` instead of `2012-02-15`). See the JSON example below.
+The buyer increases the estimated value of the tender. This change is a formal amendment to the tender so the publisher uses the 'tenderAmendment' tag and populates the `tender.amendments` field. Note that `tender.amendments` does not include the changed values. Rather, the `tender.value.amount` field itself is updated. 
 
 ```{jsoninclude} ../../examples/amendments/tender.json
 :jsonpointer: /records/0/releases/2
@@ -58,25 +58,17 @@ A few days later, the publisher increases the value of the tender and extends th
 
 #### Record
 
-A full record is provided below, with all the releases for the process and a `compiledRelease` and `versionedRelease`. The `versionedRelease` block reflects all the changes made in the tender.
+`releases` contains the above releases, `compiledRelease` contains the latest value of each field and, `versionedRelease` contains a history of changes to each field. The `releaseID` and `amendsReleaseID` fields in the `amendments` array of the compiled release can be looked up in `releases` and `versionedRelease` to identify what changed.
 
 ```{jsoninclude} ../../examples/amendments/tender.json
-:jsonpointer:
-:expand: records, releases
+:jsonpointer: /records/0
+:expand: compiledRelease, versionedRelease, value, amount
 :title: FullRecord
 ```
 
 ```{hint}
 It is encouraged to [download](../../examples/amendments/tender.json) the record example and use the [Data Review Tool](https://review.standard.open-contracting.org/) to explore the changes in the contracting process.
 ```
-
-Note in this example that:
-
-* **The amendments block does not contain data on what was changed**. Changes are recorded by updating the fields of the `tender` block a new release.
-
-* **The publisher chooses in the 'tenderAmendment' release to repeat a fragment of the original 'tender' release**. This is not necessary when a full archive of releases is made accessible, but a publisher might want to provide the latest data available in each release.
-
-* **In the record**, the `releaseID` and `amendsReleaseID` fields from the `amendments` array can be used to look up information in the `versionedRelease` object or `releases` array, to see where changes are explained by an amendment `rationale`.
 
 ### Example 2: Contract amendment
 
