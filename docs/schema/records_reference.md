@@ -30,7 +30,7 @@ A record **may** contain a [versionedRelease](#versioned-release) object, which 
 ````{admonition} Example
 :class: hint
 
-```{jsoninclude} ../examples/merging/updates/versioned.json
+```{jsoninclude} ../examples/amendments/tender.json
 :jsonpointer: /records/0
 :title: record
 ```
@@ -56,15 +56,17 @@ For each `url` value, it must be possible for a consuming application to retriev
 
 The following example demonstrates the use of linked releases.
 
-```{jsoninclude} ../examples/merging/updates/versioned.json
+```{jsoninclude} ../examples/record_reference/linked_releases.json
 :jsonpointer: /records/0
 :expand: releases, tag
-:title: releases
 ```
 
-Above, the first linked release has a `url` value of `https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json#ocds-213czf-000-00002-01-award1`. The first part (`https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json`) is the URL of the release package, and the fragment identifier (`ocds-213czf-000-00002-01-award1`) is the `id` of the release.
+Each release's `url` consists of two parts:
 
-Release `id` values are only required to be unique within the scope of a (contracting or planning) process: that is, within the scope of an `ocid` value. As such, a consuming application needs to use that fragment identifier in combination with the `ocid` of the record in order to identify the matching release within the release package.
+* The URL of the release package that contains the release: `http://example.com/release_package.json`
+* A fragment identifier (introduced by a hash mark #) whose value is the `id` of the release: `1` or `2`
+
+Release `id` values are only required to be unique within the scope of a (contracting or planning) process: that is, within the scope of an `ocid` value. As such, a consuming application needs to use the fragment identifier in combination with the `ocid` of the record in order to identify the matching release within the release package.
 
 #### Embedded releases
 
@@ -72,7 +74,7 @@ An embedded release follows the [release schema](reference). In other words, ins
 
 The following example demonstrates the use of embedded releases.
 
-```{jsoninclude} ../examples/merging/embedded_releases.json
+```{jsoninclude} ../examples/amendments/tender.json
 :jsonpointer: /records/0
 :expand: releases,tag
 :title: releases
@@ -106,8 +108,8 @@ A separate, auto-generated [versioned release schema](../../build/current_lang/v
 
 The following example displays a single field's [versioned values](merging.md#versioned-values). This shows that the amount changed between the tender stage and a tender amendment, while the currency did not.
 
-```{jsoninclude} ../examples/merging/updates/versioned.json
+```{jsoninclude} ../examples/amendments/tender.json
 :jsonpointer: /records/0/versionedRelease/tender/value
-:expand: amount, releaseTag
+:expand: amount, currency, releaseTag
 :title: versioned
 ```
