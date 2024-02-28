@@ -210,6 +210,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `SimpleIdentifier`
   * [#1519](https://github.com/open-contracting/standard/pull/1519) `Value.amountNet` and `Value.amountGross`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `contracts.identifiers`
+  * [#1679](https://github.com/open-contracting/standard/pull/1679) `Organization.details.classifications` merged from Organization classifications extension
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
