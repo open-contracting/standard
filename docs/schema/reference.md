@@ -373,15 +373,12 @@ An organization reference consists of two main components:
 ````{admonition} Example
 :class: hint
 
-```{jsoninclude} ../examples/release_schema_reference/release_package.json
-:jsonpointer: /releases/0/buyer
-:title: organizationReference
+```{jsoninclude} ../examples/release_schema_reference/organization_reference.json
+:jsonpointer: /releases/0
+:include_only: buyer, parties
+:expand: buyer, parties
 ```
 ````
-
-```{workedexamplelist} The following worked examples are available for organization reference
-:tag: organization_reference
-```
 
 ### Organization
 
