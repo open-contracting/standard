@@ -76,51 +76,11 @@ The `releaseID` and `amendsReleaseID` fields in the `amendments` array of the co
 [Download](../../examples/amendments/tender.json) the record example and use the [Data Review Tool](https://review.standard.open-contracting.org/) to explore the changes in the contracting process.
 ```
 
-### Example 2: Contract amendment
-
-This example shows an update to the value and scope of a contract.
-
-#### Contract
-
-A contract signature notice is published for the purchase of domestic appliances. The publisher builds a release and uses the 'contract' `tag`.
-
-See the JSON release below.
-
-```{jsoninclude} ../../examples/amendments/contract.json
-:jsonpointer: /records/0/releases/0
-:expand: tag, contracts, items
-:title: Contract
+```{admonition} Contract updates and amendments
+Contract updates and amendments are modelled in the same way: the 'contract', 'contractUpdate' and 'contractAmendment' release tags distinguish the type of change and amendments are listed in the `contract.amendments` field.
 ```
 
-#### Contract Amendment
-
-A few days after the contract release, its scope is increased to include the purchase of one additional appliance. A new 'contractAmendment' release is built, where a single item is added in the `contracts/items` block and the value of the contract is increased. A `amendments` block is included to explain the rationale of the changes.
-
-See the example release below.
-
-```{jsoninclude} ../../examples/amendments/contract.json
-:jsonpointer: /records/0/releases/1
-:expand: tag, contracts, items, amendments
-:title: ContractAmendment
-```
-
-Note that amendments can cover more than values or duration. Also, note that the publisher chose to not repeat the contract items, but add a new one with a new ID value.
-
-In certain scenarios there might not be a valid `amendsReleaseID` and so it can be omitted, e.g. when historical data is being published in a single release.
-
-#### Record
-
-An example record for the whole process is shown below. Consider downloading the [record example](../../examples/amendments/contract.json) and use the [Data Review Tool](https://review.standard.open-contracting.org/) to explore the changes in the contracting process.
-
-Note that the `compiledRelease` contains all the items, included the latest one added in the contract amendment.
-
-```{jsoninclude} ../../examples/amendments/contract.json
-:jsonpointer:
-:expand: records, releases
-:title: Record
-```
-
-### Example 3: Amendments in a Easy Releases scenario
+### Example 2: Amendments in a Easy Releases scenario
 
 The [Easy releases guidance](../build/easy_releases) explains how to publish releases without storing or publishing a full change history. Depending on the source system, it might still be possible to publish a history of amendments when using this model.
 
