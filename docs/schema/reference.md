@@ -580,7 +580,7 @@ Milestone information can be included in the [planning](#planning), [tender](#te
 The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed. 
 
 ```{seealso}
-[How to represent planned payments](../guidance/map/milestones.md#delivery-and-payment-data)
+[How to represent planned payments](../guidance/map/milestones.md#payment-milestones)
 ```
 
 For delivery milestones, if there is a time frame for delivery, use `.dueAfterDate` for the start date and `.dueDate` for the end date.

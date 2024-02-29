@@ -12,7 +12,7 @@ The planning milestones block is used for two types of milestones:
  * Key events in the planning process, for example, the preparation of an environmental impact assessment, the approval to proceed with a project, or the date of a public consultation. 
  * Anticipated milestones during the contract implementation stage, for example, the date by which goods delivery of the goods is required.
 
-If during the planning process you have information about tender process milestones, then you
+If during the planning process you have information about tender process milestones, then you ought to
 populate the tender milestones block instead.
 
 ## Tender
@@ -31,7 +31,7 @@ The contract milestones block is used to describe:
 The contract implementation milestones block is used to describe:
   * Any events related to the delivery of the contract, for example, the agreed date by which goods will be delivered.
 
-The nature of the milestone is indicated by the [milestone type codelist](../../schema/codelists.md#milestone-type), for example, to distinguish between milestones that relate to bid submission and others that relate to contract implementation.
+The nature of a milestone is indicated by the [milestone type codelist](../../schema/codelists.md#milestone-type), for example, a milestone representing a draft bid submission deadline would use the 'procurement' code, whilst a milestone representing the date by which goods are to be provided would use the 'delivery' code. 
 
 At the point of contract signature, a comparison between `tender/milestones` and `contract/implementation/milestones` with a `milestone/type` of 'delivery' or 'reporting' should reveal how the negotiated contract differs from what was set out at tender time.
 
@@ -41,102 +41,71 @@ To represent a planned payment, add a `Milestone`, set its `.type` to 'payment' 
 
 ## Worked examples
 
-The following worked examples show how to use milestones in different scenarios.
+The following worked examples show how milestones are modelled.
 
 ### Planning milestones
 
-The example below includes a planning release with details of a planned procurement, including the date the budget plan is expected to be ready.
+A buyer publishes information about a new planning process, including the date the budget is expected to be approved.
 
-The date the budget plan is expected to be ready is represented using a milestone in `planning/milestones` with `.type` is set to 'preProcurement' because the milestone relates to the planning process. `.dueDate` is set to the date and `.status` is set to 'scheduled'.
+Because the approval relates to a planning process, it is modelled as a milestone in `planning.milestones` with `.type` set to 'preProcurement'. `.dueDate` is set to the expected date of the approval and `.status` is set to 'scheduled' because the approval has not yet occurred.
 
-```{jsoninclude} ../../examples/milestones/planning_milestone.json
-:jsonpointer:
-:expand: releases, planning, milestones
-:title: planning
+```{jsoninclude} ../../examples/milestones/planning_milestones.json
+:jsonpointer: /releases/0
+:expand: planning, milestones
 ```
 
-### Contract implementation milestones
+### Delivery milestones
 
-The following worked examples show how to use milestones in contract implementation releases
+This worked example shows how delivery milestones are modelled.
 
-#### Project data
+#### Implementation release
 
-This worked example shows how to use milestones to model the planned and actual start and finish dates for a construction project.
+A buyer publishes the expected completion date of a construction project.
 
-The example below includes three OCDS releases:
+Because the completion date relates to contract delivery, it is modelled as a milestone in `contracts.implementation.milestones` with `.type` set to 'delivery'. `.dueDate` is set to the expected completion date and `.status` is set to 'scheduled' because the project is not yet complete.
 
-* An implementation release which includes the scheduled start and end dates for the project.
-* An implementation update release with the actual start date of the project
-* An implementation update release with the actual end date of the project
+The publisher defines their own value for the milestone's `.code` so that they can filter and compare completion dates across different contracts.
 
-In the award release:
-
-* The scheduled start and end dates for the project are represented using milestones in `contracts/implementation/milestones` with `.type` set to 'delivery' because they relate to the delivery of the contract. The dates are provided in `.dueDate` and `.status` is set to 'scheduled'.
-* The publisher has defined their own values for the `.code` field so they can filter and compare start and end date milestones across different contracts.
-
-In the first implementation update release, which is published after the project starts but before it completes:
-* In the project commencement milestone, `.dateMet` is set to the actual start date and `.status` is set to 'met'. `.dateModified` is set to the date the milestone was updated.
-* In the project completion milestone, `.status` is set to 'notMet' since the project is not yet complete and `.dateModified` is set to the date the milestone was updated.
-
-Users can compare the project commencement milestone's `.dueDate` and `.dateMet` fields to determine if the project started on time. Users can also compare the project completion milestone's `.dueDate` and `.dateModified` fields to determine whether the `.status` has been updated since the scheduled completion date.
-
-In the second implementation update release, which is published after the project completes:
-* In the project completion milestone, `.dateMet` is set to the actual completion date for the project and `.status` is set to 'met'.
-
-```{jsoninclude} ../../examples/milestones/implementation_milestones_scheduled.json
-:jsonpointer:
-:expand: releases, contracts, implementation, milestones
-:title: implementation
+```{jsoninclude} ../../examples/milestones/delivery_milestones.json
+:jsonpointer: /releases/0
+:expand: tag, contracts, implementation, milestones
 ```
 
-```{jsoninclude} ../../examples/milestones/implementation_milestones_partially_met.json
-:jsonpointer:
-:expand: releases, contracts, implementation, milestones
-:title: implementation-update-1
+#### Implementation update release
+
+The buyer publishes the actual completion date of the construction project.
+
+The milestone's `.dateMet` is set to the actual completion date, `.status` is set to 'met' and `.dateModified` is set to the date the milestone was updated.
+
+Users can compare the milestone's `.dueDate` and `.dateMet` to determine whether the project was completed on time.
+
+```{jsoninclude} ../../examples/milestones/delivery_milestones.json
+:jsonpointer: /releases/1
+:expand: tag, contracts, implementation, milestones
 ```
 
-```{jsoninclude} ../../examples/milestones/implementation_milestones_met.json
-:jsonpointer:
-:expand: releases, contracts, implementation, milestones
-:title: implementation-update-2
+### Payment milestones
+
+This example shows how payment milestones are modelled.
+
+#### Implementation release
+
+A buyer publishes the expected date and value of the payment for the completion of a construction project.
+
+```{jsoninclude} ../../examples/milestones/payment_milestones.json
+:jsonpointer: /releases/0
+:expand: tag, contracts, implementation, milestones
 ```
 
-#### Delivery and payment data
+#### Implementation update release
 
-This example shows how milestones can be used to keep track of delivery and payment data in a contracting process.
+The buyer publishes the actual date and value of the payment for completion of the project.
 
-The example below includes three OCDS releases:
+The milestone is updated to reflect that the payment has been made: it's `.status` is set to `.met` and the `.dateMet` and `.dateModified` fields are populated. A transaction is added to `contracts.implementation.transactions` with the actual date and value of the payment. The [transaction-related milestones extension](https://extensions.open-contracting.org/en/extensions/transaction_milestones/master/) is used to link the transaction to the milestone.
 
-* An implementation release with contract information including scheduled implementation milestones and planned payments.
-* An implementation update release with the actual date the milestone was reached.
-* An implementation update release with payment information
+Users can compare the milestone's `.dueDate` and `.value` to the transaction's `.date` and `.value` to determine whether the payment was made on time and for the expected amount.
 
-In the implementation release:
-
-* Milestones have been set for the delivery and payment of goods, services and works related to the project. Contract information is released along with the implementation milestones.
-
-In the first implementation update release:
-
-* The milestone ("Finish the exterior and interior walls") has been met, so the `status` field is set to 'met' and the relevant dates are added to the `dateMet` and `dateModified` fields.
-
-In the second implementation update release:
-
-* The construction company has received payment for the work done so far, so the milestone for the wall restoration with type 'payment' is updated. A new `transaction` is disclosed, with the amount paid to the company. The [transaction-related milestones extension](https://extensions.open-contracting.org/en/extensions/transaction_milestones/master/) is used to link the transaction to the milestone.
-
-```{jsoninclude} ../../examples/milestones/implementation_financial_milestones_not_met.json
-:jsonpointer:
-:expand: releases, contracts, implementation, milestones
-:title: implementation
-```
-
-```{jsoninclude} ../../examples/milestones/implementation_financial_milestones_partially_met.json
-:jsonpointer:
-:expand: releases, contracts, implementation, milestones
-:title: implementation-update-1
-```
-
-```{jsoninclude} ../../examples/milestones/implementation_financial_milestones_transaction.json
-:jsonpointer:
-:expand: releases, contracts, implementation, milestones, transactions
-:title: implementation-update-2
+```{jsoninclude} ../../examples/milestones/payment_milestones.json
+:jsonpointer: /releases/1
+:expand: tag, contracts, implementation, milestones, transactions
 ```
