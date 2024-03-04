@@ -38,29 +38,16 @@ In such cases, the `Award` object in OCDS can have multiple suppliers associated
 
 ### Example: Consortia suppliers
 
-Siemens and Microsoft bid as a consortium for a contract to develop a new medical imaging device for the Department of Health and Social Care.
+Siemens and Microsoft bid as a consortium for a contract.
 
 The contract is awarded to the consortium; however, the legal entity for the consortium is not created until after the contract award.
 
-Both Siemens and Microsoft are listed as suppliers on the contract award in OCDS, with `id`s constructed according to [`Organization.id`](../../schema/identifiers.md#organization-identifiers).
+Both Siemens and Microsoft are listed as suppliers on the contract award in OCDS, with `id`s constructed according to [`Organization.id`](../../schema/identifiers.md#organization-identifiers):
 
-```json
-{
-  "awards": [
-    {
-      "id": "DHSC-2019-A18074",
-      "title": "Medical imaging device development",
-      "suppliers": [
-        {
-          "name": "SIEMENS PUBLIC LIMITED COMPANY",
-          "id": "GB-COH-727817"
-        },
-        {
-          "name": "MICROSOFT LIMITED",
-          "id":"GB-COH-1624297"
-        }
-      ]
-    }
-  ]
-}
+```{field-description} ../../../build/current_lang/release-schema.json /definitions/Organization/properties/id
+```
+
+```{jsoninclude} ../../examples/buyers_suppliers/consortia.json
+:jsonpointer: /releases
+:expand: awards, suppliers, parties, identifier
 ```
