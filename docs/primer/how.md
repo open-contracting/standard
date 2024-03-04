@@ -115,32 +115,18 @@ While the OCDS schema is described using JSON Schema, OCDS data can be converted
 
 Tabular formats, such as CSV (or comma separated values) are commonly used in spreadsheet applications and other analysis tools. Many people are comfortable working with spreadsheets using tools like Excel. While JSON is the default format, a good publication will publish tabular formats both so that more users’ needs can be satisfied.
 
-**Example**
-
-Nigeria's Ebonyi State publishes OCDS data in JSON and tabular formats.
-
-**JSON**
+The following examples show the same data in JSON and tabular format:
 
 ```{jsoninclude} ../examples/primer/primer.json
 :jsonpointer: /releases
-:expand: tender
+:expand: tag, tender
 ```
-
-**CSV**
-
-***releases***
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../examples/primer/releases.csv
+:file: ../examples/primer/primer.csv
 ```
 
-***parties***
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../examples/primer/parties.csv
-```
 ````
 
 No matter what type of contracting data you are working with or format you publish in, following OCDS rules and guidance will help you and your users to:
