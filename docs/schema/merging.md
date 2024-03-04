@@ -43,49 +43,36 @@ To convert a field's value in a release to a **versioned value**, you must:
 
 A **versioned value** thus describes a field's value in a specific release.
 
-For example, in worked example 1 in [Updates and deletions](../guidance/build/merging), the method by which the procurement is taking place is stated as limited (in the first release `tender/procurementMethod` was `limited`). In the initial release this looks like:
+For example, a tender release sets the value of `tender.value.amount`.
 
-```{jsoninclude} ../examples/merging/updates/ghana_tender1.json
-:jsonpointer: /releases/0/tender
-:include_only: procurementMethod
-:expand: procurementMethod
-:title: Value
+```{jsoninclude} ../examples/amendments/tender.json
+:jsonpointer: /records/0/releases/0
+:expand: tag, tender, value
 ```
 
-Following the steps above, the versioned value is:
+Following the steps above, the versioned value of `tender.value.amount` is:
 
-```{jsoninclude} ../examples/merging/updates/ghana_versioned.json
-:jsonpointer: /records/0/versionedRelease/tender
-:include_only: procurementMethod
-:expand: procurementMethod
-:title: Versioned_values
+```{jsoninclude} ../examples/amendments/tender.json
+:jsonpointer: /records/0/versionedRelease/tender/value/amount/0
+:expand: releaseTag
 ```
 
 In a **versioned release**, with a few exceptions, a field's value is replaced with an array of versioned values, which should be in chronological order by `releaseDate`.
 
-For example, in the worked example referenced above, the value of the tender was $13,000 in the release published October 21, 2020 and then $12,000 in the release published November 5, 2020.
+Following on from the example above, a later release updates the value of `tender.value.amount`.
 
-```{jsoninclude} ../examples/merging/updates/ghana_tender1.json
-:jsonpointer: /releases/0/tender
-:include_only: tender/value
-:expand: value
-:title: initial_value
+```{jsoninclude} ../examples/amendments/tender.json
+:jsonpointer: /records/0/releases/2
+:expand: tag, tender, value
 ```
 
-```{jsoninclude} ../examples/merging/updates/ghana_tender2.json
-:jsonpointer: /releases/0/tender
-:include_only: tender/value
-:expand: value
-:title: updated_value
-```
+In the versioned release, `tender.value.amount` is replaced with an array of versioned values:
 
-In a versioned release, this is serialized as below:
+```{jsoninclude} ../examples/amendments/tender.json
+:jsonpointer: /records/0/versionedRelease/tender/value
+:expand: amount, releaseTag
 
-```{jsoninclude} ../examples/merging/updates/ghana_versioned.json
-:jsonpointer: /records/0/versionedRelease/tender
-:include_only: tender/value
-:expand: value,amount,releaseTag
-:title: Versioned_values
+
 ```
 
 The structure of the versioned release is described by the [versioned release schema](../../build/current_lang/versioned-release-validation-schema.json); note that the `ocid` field's value is not versioned.
