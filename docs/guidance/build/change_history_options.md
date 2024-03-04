@@ -18,7 +18,7 @@ Incremental updates are smaller than full updates. Smaller releases reduce the O
 
 If you choose to publish incremental updates, the preferred approach is to also publish [compiled releases](../../schema/records_reference.md#compiled-release), so that users can easily access the latest state of the contracting process.
 
-Read about how to [publish incremental updates](incremental_updates) or [publish full updates](full_updates).
+Read about how to [publish a change history](change_history).
 
 ## Individual releases or compiled releases
 
