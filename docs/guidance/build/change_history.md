@@ -6,7 +6,7 @@
 
 To publish a change history for a contracting (or planning) process, you ought to publish a [record](../../schema/records_reference.md) for the process and, each time there is a change, publish a [release](../../schema/reference.md) and update the record.
 
-The following example illustrates how to publish a change history for a contracting process, using both [incremental and full updates](change_history_options.md#incremental-or-full-updates).
+The following example illustrates how to publish a change history for a contracting process, using both [incremental and full updates](change_history_options.md#change-history-incremental-or-full-updates).
 
 ```{note}
 For an introduction to the concept of a change history, see the [releases and records](../../primer/releases_and_records) primer.

@@ -17,7 +17,7 @@ The examples on this page illustrate two possible approaches to setting and upda
 
 ### Packaging
 
-Releases in OCDS need to be packaged using a . When publishing individual releases with no change history, releases need to be packaged in a [release package](../../schema/release_package). It is *not* appropriate to package releases in an OCDS record, because `record.releases` needs to contain all the releases, not only the latest one.
+Releases in OCDS need to be packaged using a . When publishing individual releases with no change history, releases need to be packaged in a [release package](../../schema/packaging/release_package.md). It is *not* appropriate to package releases in an OCDS record, because `record.releases` needs to contain all the releases, not only the latest one.
 
 ### Release tags
 
