@@ -4,9 +4,9 @@
 
 # Compiled releases with no change history
 
-If you cannot publish a change history as described in the [change history implementation options guidance](change_history_options.md) and you cannot publish [individual releases](change_history_options.md#no-change-history-individual-or-compiled-releases), you ought to publish the current state of each contracting process using compiled releases.
+If you cannot publish a change history as described in the [change history implementation options guidance](change_history_options.md) and you cannot identify what changed and when (in order to publish [individual releases](change_history_options.md#no-change-history-individual-or-compiled-releases)), you ought to publish the current state of each contracting process using compiled releases.
 
-Compiled releases need to be published as part of an [record](../../schema/records_reference.md) and packaged in a [record package](../../schema/record_package.md). Compiled releases need to conform to the [merging specification](../../schema/merging.md#merging-specification), which defines rules for omitting or setting the value of certain fields.
+Compiled releases need to be published as part of an [record](../../schema/records_reference.md) and packaged in a [record package](../../schema/record_package.md). Compiled releases also need to conform to the [merging specification](../../schema/merging.md#merging-specification), which defines rules for omitting or setting the value of certain fields.
 
 ```{note}
 For an introduction to the concept of a change history, see the [releases and records](../../primer/releases_and_records) primer.

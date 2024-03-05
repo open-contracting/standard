@@ -4,26 +4,28 @@
 
 # Individual releases with no change history
 
-OCDS encourages publishers to use the [releases and records](../../primer/releases_and_records) to publish both a change history and the current state of each contracting (or planning) process. However, sometimes publishers can't publish a change history because their [system architecture](../build/system_architectures) does not store historic releases. In such cases, publishers can make a single release per process available and update the release `id` and `date` each time there is a change. Updating the release `.id` for each change means that users can periodically download the data and use release identifiers to identify changes.
+This page explains how to publish individual releases in the case that you cannot publish a change history as described in the [change history implementation options](change_history_options.md).
+
+To publish individual releases, you need to be able to determine what changed and when within your data sources so that you can update the release `id` each time there is a change to a process. Updating the release `.id` for each change means that users can periodically download the data and use the release `id` to identify changes.
 
 The examples on this page illustrate two possible approaches to setting and updating release `id` in the absence of a change history:
 
 * **Last modified dates** - When a data source stores a last modified date, use it to create a unique release `id`. For example, by appending the last modified date to the `ocid`.
-* **Hashing** - When a data source does not store a last modified date, use a hash of all the data elements to create a unique release `id`. A hash is guaranteed to change when the data changes and is almost guaranteed not to collide with a previous identifiers from the same contracting (or planning) process.
+* **Hashing** - When a data source does not store a last modified date, use a hash of all the data elements to create a unique release `id`. A hash is guaranteed to change when the data changes and is (almost) guaranteed not to collide with a previous identifiers from the same contracting (or planning) process.
 
 ## Additional Considerations
 
 ### Packaging
 
-Releases in OCDS need to be packaged using a [release package](../../schema/release_package). When publishing individual releases with no change history, releases need to be packaged using a release package. It is *not* appropriate to package releases as part of an OCDS record because `record.releases` needs to contain all the releases, not only the latest one.
+Releases in OCDS need to be packaged using a . When publishing individual releases with no change history, releases need to be packaged in a [release package](../../schema/release_package). It is *not* appropriate to package releases in an OCDS record, because `record.releases` needs to contain all the releases, not only the latest one.
 
 ### Release tags
 
-[Release tags](../../schema/codelists.md#release-tag) indicate whether a release describes a planning process or a contracting process and, for contracting processes, indicates the stage of the process to which it relates.
+[Release tags](../../schema/codelists.md#release-tag) indicate whether a release describes a planning process or a contracting process and, for contracting processes, indicate the stage of the process to which the release relates.
 
-Some release tags rely on the availability of prior releases. For example, e.g. the 'tenderUpdate' tag indicates that a release updates an existing 'tender' release. Such tags cannot be used when publishing individual releases with no change history, because previous releases are inaccessible. 
+Some release tags rely on the availability of prior releases. For example, the 'tenderUpdate' tag indicates that a release updates an existing 'tender' release. Such tags cannot be used when publishing individual releases with no change history, because the previous releases are inaccessible. 
 
-Instead, the release `tag` indicates the sections of the schema which are populated. For example, if a release includes fields in the `tender`, `award`, and `contract` sections, `tag` ought to be populated as follows:
+Instead, you ought to use the release `tag` to indicate the sections of the schema which are populated. For example, if a release includes fields in the `tender`, `award`, and `contract` sections, `tag` ought to be populated as follows:
 
 ```json
 {
@@ -35,7 +37,7 @@ Instead, the release `tag` indicates the sections of the schema which are popula
 }
 ```
 
-When publishing individual releases with no change history, from a user's perspective, each release is always the first (available) release for a given contracting (or planning) process. Therefore, all of the populated sections in the release contain 'new' data as indicated by the 'planning', 'tender', 'award', 'contract' and 'implementation' release tags.
+When publishing individual releases with no change history, from a user's perspective, each release is always the first (available) release for a given contracting (or planning) process. Therefore, all of the populated sections in the release contain 'new' data, in line with the meaning of the 'planning', 'tender', 'award', 'contract' and 'implementation' release tags.
 
 ## Worked examples
 

@@ -4,16 +4,12 @@
 
 # Change history
 
-The following example shows how to publish a change history data using the releases and records model: publish a release for each event in the process and update the record each time you publish a release.
+To publish a change history for a contracting (or planning) process, you ought to publish a [record](../../schema/records_reference.md) for the process and, each time there is a change, publish a [release](../../schema/reference.md) and update the record.
 
-Each subsection refers to a stage or event in a contracting process. The example illustrates both [incremental and full updates](change_history_options.md#incremental-or-full-updates).
+The following example illustrates how to publish a change history for a contracting process, using both [incremental and full updates](change_history_options.md#incremental-or-full-updates).
 
 ```{note}
 For an introduction to the concept of a change history, see the [releases and records](../../primer/releases_and_records) primer.
-```
-
-```{note}
-For guidance on how to set the `id` field on each release, see the [individual releases](individual releases) worked example.
 ```
 
 ## Tender
