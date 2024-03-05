@@ -122,20 +122,20 @@ Note that the `compiledRelease` contains all the items, included the latest one 
 :title: Record
 ```
 
-### Example 3: Amendments in full updates
+### Example 3: Amendments without a change history
 
 The [change history options guidance](../build/change_history_options.md) explains how to publish releases without storing or publishing a full change history. Depending on the source system, it might still be possible to publish a history of amendments when using this model.
 
-Where the source system stores a history of contract amendments, either as separate notices or as properties of the original contract signature notice, contract amendments can be published as separate releases in OCDS. For example, Australia's AusTender platform [stores contract amendments as separate notices, related to the original contract signature notice](https://www.tenders.gov.au/Cn/Show/03a3c53e-b3bd-eac1-558a-4c659e44a516).
+Where the source system stores a history of amendments, they can be published as separate amendment releases in OCDS. For example, Australia's AusTender platform [stores contract amendments as separate notices, related to the original contract signature notice](https://www.tenders.gov.au/Cn/Show/03a3c53e-b3bd-eac1-558a-4c659e44a516).
 
-The table below shows an example of a contract signature notices table from a procurement system, with an original contract in the first row and an amendment of the same contract in the second. The amendment increases the value of the original contract and changes the contract period.
+A procurement system stores tenders and amendments in the same table. A buyer publishes an opportunity and subsequently amends its value.
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../examples/amendments/contract_notice.csv
+:file: ../../examples/amendments/tender_amendment.csv
 ```
 
-This can be modelled as the separate releases in OCDS as shown below. The original `contract` release includes all the fields from the first entry in the contract signature notices table. A `contractAmendment` release is built for each contract amendment identified in the table (by verifying that the `amendmentId` column in the contract signature notices table is not empty).
+Each row can be modelled as a separate OCDS release. The first row is represented as a tender release.
 
 ```{jsoninclude} ../../examples/amendments/full_update.json
 :jsonpointer: /records/0/releases/1
@@ -143,14 +143,12 @@ This can be modelled as the separate releases in OCDS as shown below. The origin
 :title: Contract
 ```
 
+The second row is represented as a tender amendment release.
+
 ```{jsoninclude} ../../examples/amendments/full_update.json
 :jsonpointer: /records/0/releases/2
 :expand: tag, contracts, amendments
 :title: ContractAmendment
 ```
 
-Note that the mapping of the fields remains the same for the contract amendments, except for the `description` column. When a row in the contract signature notices table is identified as an original contract, the description is included in the `contracts/description` field, and when the row represents a contract amendment, it is mapped to the `contracts/amendments/description` field. This aligns with the use of the `description` column, because for contract amendments it is used to include an explanation of the change.
-
-The advantage of this approach, in contrast with the Easy releases proposal, is that the users have access to the details of each amendment instead of the latest values only without any additional effort of their end.
-
-As in the previous examples, you can download a [record](../../examples/amendments/easy_releases.json) file for the example and use the [Data Review Tool](https://review.standard.open-contracting.org/) to explore the changes in the contracting process.
+The advantage of this approach, in contrast with publishing compiled releases only, is that the users have access to the details of each amendment instead of the only the latest values.
