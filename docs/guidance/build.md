@@ -45,7 +45,7 @@ build/system_architectures
 build/change_history_options
 build/change_history
 build/individual_releases
-build/no_change_history
+build/compiled_releases
 build/merging
 ```
 
