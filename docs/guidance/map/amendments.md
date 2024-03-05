@@ -124,7 +124,7 @@ Note that the `compiledRelease` contains all the items, included the latest one 
 
 ### Example 3: Amendments in full updates
 
-The [Full updates guidance](../build/full_updates) explains how to publish releases without storing or publishing a full change history. Depending on the source system, it might still be possible to publish a history of amendments when using this model.
+The [change history options guidance](../build/change_history_options.md) explains how to publish releases without storing or publishing a full change history. Depending on the source system, it might still be possible to publish a history of amendments when using this model.
 
 Where the source system stores a history of contract amendments, either as separate notices or as properties of the original contract signature notice, contract amendments can be published as separate releases in OCDS. For example, Australia's AusTender platform [stores contract amendments as separate notices, related to the original contract signature notice](https://www.tenders.gov.au/Cn/Show/03a3c53e-b3bd-eac1-558a-4c659e44a516).
 

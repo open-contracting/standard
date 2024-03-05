@@ -44,7 +44,7 @@ Your choice of architecture can determine how frequently your data is updated, w
 build/system_architectures
 build/change_history_options
 build/change_history
-build/full_updates
+build/individual_releases
 build/no_change_history
 build/merging
 ```
