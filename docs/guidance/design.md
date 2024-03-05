@@ -77,7 +77,7 @@ Each of the goals above have different data needs. These needs ought to inform y
 
 * Which fields to publish
 * How often to publish or update data
-* Whether to publish a change history
+* Whether to publish a [change history](build/change_history_options.md)
 * What data formats and access methods to provide
 
 **Resource:** [Red flags for integrity methodology guide](https://www.open-contracting.org/resources/red-flags-integrity-giving-green-light-open-data-solutions/) ([red flags to OCDS mapping spreadsheet](https://docs.google.com/spreadsheets/d/12PFkUlQH09jQvcnORjcbh9-8d-NnIuk4mAQwdGiXeSM/edit#gid=0))
