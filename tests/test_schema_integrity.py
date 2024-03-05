@@ -10,7 +10,7 @@ import jsonref
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
-from manage import get_dereferenced_release_schema, get_metaschema, get_versioned_release_schema  # noqa isort:skip
+from manage import get_metaschema, get_versioned_release_schema  # noqa isort:skip
 
 
 def test_versioned_release_schema_is_in_sync():
@@ -28,7 +28,7 @@ def test_dereferenced_release_schema_is_in_sync():
         actual = json.load(f)
 
     with open('schema/release-schema.json') as f:
-        expected = get_dereferenced_release_schema(jsonref.load(f))
+        expected = jsonref.load(f, merge_props=True)
 
     assert actual == expected, 'Run: python manage.py pre-commit'
 

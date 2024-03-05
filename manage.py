@@ -7,6 +7,7 @@ import os
 import re
 import sys
 import warnings
+from collections import defaultdict
 from contextlib import contextmanager
 from copy import deepcopy
 from glob import glob
@@ -21,8 +22,8 @@ import lxml.html
 import requests
 from babel.messages.pofile import read_po
 from docutils.utils import relative_path
-from jsonref import JsonRef, JsonRefError
 from lxml import etree
+from ocdskit.schema import get_schema_fields
 
 basedir = Path(__file__).resolve().parent
 schemadir = basedir / 'schema'
@@ -116,12 +117,12 @@ keywords_to_remove = (
 )
 
 
-def json_load(filename, library=json):
+def json_load(filename, library=json, **kwargs):
     """
     Loads JSON data from the given filename.
     """
     with (schemadir / filename).open() as f:
-        return library.load(f)
+        return library.load(f, **kwargs)
 
 
 def json_dump(filename, data):
@@ -356,36 +357,13 @@ def remove_metadata_and_extended_keywords(schema):
             remove_metadata_and_extended_keywords(value)
 
 
-def get_dereferenced_release_schema(schema, output=None):
-    """
-    Returns the dereferenced release schema.
-    """
-    # Without a deepcopy, changes to referenced objects are copied across referring objects. However, the deepcopy does
-    # not retain the `__reference__` property.
-    if not output:
-        output = deepcopy(schema)
-
-    if isinstance(schema, list):
-        for index, item in enumerate(schema):
-            get_dereferenced_release_schema(item, output[index])
-    elif isinstance(schema, dict):
-        for key, value in schema.items():
-            get_dereferenced_release_schema(value, output[key])
-        if hasattr(schema, '__reference__'):
-            for prop in schema.__reference__:
-                if prop != '$ref':
-                    output[prop] = schema.__reference__[prop]
-
-    return output
-
-
 def get_versioned_release_schema(schema):
     """
     Returns the versioned release schema.
     """
     # Update schema metadata.
     release_with_underscores = release.replace('.', '__')
-    schema['id'] = f'https://standard.open-contracting.org/schema/{release_with_underscores}/versioned-release-validation-schema.json'  # noqa
+    schema['id'] = f'https://standard.open-contracting.org/schema/{release_with_underscores}/versioned-release-validation-schema.json'  # noqa: E501
     schema['title'] = 'Schema for a compiled, versioned Open Contracting Release.'
 
     # Release IDs, dates and tags appear alongside values in the versioned release schema.
@@ -397,7 +375,7 @@ def get_versioned_release_schema(schema):
 
     # Determine which `id` fields occur on objects in arrays.
     unversioned_pointers = set()
-    get_unversioned_pointers(JsonRef.replace_refs(schema), unversioned_pointers)
+    get_unversioned_pointers(jsonref.replace_refs(schema), unversioned_pointers)
 
     # Omit `ocid` from versioning.
     ocid = schema['properties'].pop('ocid')
@@ -414,11 +392,10 @@ def get_versioned_release_schema(schema):
 
     # Add missing definitions.
     while True:
-        ref = JsonRef.replace_refs(schema)
         try:
-            repr(ref)
+            jsonref.replace_refs(schema, lazy_load=False)
             break
-        except JsonRefError as e:
+        except jsonref.JsonRefError as e:
             name = e.cause.args[0]
 
             if name.endswith('VersionedId'):
@@ -533,18 +510,69 @@ def missing_changelog(ignore_base):
 @cli.command()
 def pre_commit():
     """
-    Update derivative schema files.
+    Update derivative schema files, and generate a CSV file of multilingual fields.
 
     \b
     - meta-schema.json
     - dereferenced-release-schema.json
     - versioned-release-validation-schema.json
     """
+    nonmultilingual = {
+        # Identifiers.
+        'amendsReleaseID', 'id', 'identifier', 'ocid', 'relatedItems', 'releaseID',
+        # Missing format properties. https://github.com/open-contracting/standard/issues/881
+        'email',
+        # Published-defined formats.
+        'faxNumber', 'postalCode', 'telephone',
+        # Published-defined codelists.
+        'code', 'scheme',
+    }
+
     release_schema = json_load('release-schema.json')
-    jsonref_release_schema = json_load('release-schema.json', jsonref)
+    jsonref_release_schema = json_load('release-schema.json', jsonref, merge_props=True)
+
+    counts = defaultdict(list)
+    for field in get_schema_fields(jsonref_release_schema):
+        name = field.path_components[-1]
+        # Skip definitions (output dereferenced properties only). Skip deprecated fields.
+        if field.definition_pointer_components or field.deprecated:
+            continue
+        multilingual = (
+            # If a field can be a non-string, it is not multilingual.
+            not any(t in field.schema['type'] for t in ('boolean', 'integer', 'number', 'object'))
+            # If a field's value is constrained to a codelist or format, it is not multilingual.
+            and not any(prop in field.schema for prop in ('codelist', 'format'))
+            # If an array can contain non-strings, it is not multilingual.
+            and not ('array' in field.schema['type'] and 'object' in field.schema['items']['type'])
+            # Specific exceptions.
+            and name not in nonmultilingual
+        )
+        field.sep = '/'
+        if name in counts and bool(counts[name]) ^ multilingual:
+            if multilingual:
+                raise Exception(f'{name} is multilingual at {field.path}, but not elsewhere')
+            else:
+                raise Exception(f'{name} is multilingual at {" & ".join(counts[name])}, but not at {field.path}')
+        if multilingual:
+            counts[name].append(field.path)
+        else:
+            counts[name] = []
+
+    bulletlist = [
+        '% STARTLIST',
+        *sorted([f'- `{name}`, in any location' for name, paths in counts.items() if len(paths) > 1]),
+        *sorted([f'- `{paths[0]}`' for _, paths in counts.items() if len(paths) == 1]),
+        '% ENDLIST',
+    ]
+
+    path = basedir / 'docs' / 'guidance' / 'map' / 'translations.md'
+    with path.open() as f:
+        contents = f.read()
+    with path.open('w') as f:
+        f.write(re.sub(r'% STARTLIST.+% ENDLIST', '\n'.join(bulletlist), contents, flags=re.DOTALL))
 
     json_dump('meta-schema.json', get_metaschema())
-    json_dump('dereferenced-release-schema.json', get_dereferenced_release_schema(jsonref_release_schema))
+    json_dump('dereferenced-release-schema.json', jsonref_release_schema)
     json_dump('versioned-release-validation-schema.json', get_versioned_release_schema(release_schema))
 
 
@@ -600,9 +628,8 @@ def update_currency():
     url = 'https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/lists/list_one.xml'  # noqa: E501
     tree = etree.fromstring(get(url).content)
     for node in tree.xpath('//CcyNtry'):
-        match = node.xpath('./Ccy')
         # Entries like Antarctica have no universal currency.
-        if match:
+        if node.xpath('./Ccy'):
             code = node.xpath('./Ccy')[0].text
             title = node.xpath('./CcyNm')[0].text.strip()
             if code not in current_codes:
@@ -819,7 +846,7 @@ def add_translation_notes():
     the updates are released. The documentation will clearly display when the English documentation is 'ahead' of
     translations for a particular version."
 
-    https://standard.open-contracting.org/1.1/en/governance/#translation-and-localization-policy
+    https://standard.open-contracting.org/latest/en/governance/translation/
     """
     excluded = ('.doctrees', '_downloads', '_images', '_sources', '_static', 'codelists', 'genindex', 'search')
 

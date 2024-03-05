@@ -1,5 +1,9 @@
 # Data files and APIs
 
+```{tip}
+Did you arrive at this page looking to [download OCDS data](https://data.open-contracting.org)? Check out the [OCP Data Registry](https://data.open-contracting.org).
+```
+
 Different users have different needs when it comes to accessing OCDS data. A common need is to automate the download of all the OCDS data, in some form.
 
 The W3C [Data on the Web Best Practices](https://www.w3.org/TR/dwbp/#MultipleFormats) describe ways to increase the number of users, tools and applications that can access and make effective use of a given dataset.
@@ -15,7 +19,7 @@ To meet the [basic criteria for data quality](../publish/quality.md#basic-criter
 
 ## Bulk downloads
 
-The [release package](../../schema/release_package) and [record package](../../schema/record_package) can provide **bulk access** to releases and records, respectively.
+The [release package](../../schema/packaging/release_package) and [record package](../../schema/packaging/record_package) can provide **bulk access** to releases and records, respectively.
 
 However, very large files can be difficult for users to download and process. The following section suggests good practices to assist users in accessing data. These are not requirements of the standard, but are based on experiences of maximizing the number of users able to work with datasets with their existing hardware and software.
 
@@ -58,7 +62,7 @@ Also, publishers ought to ensure that the data export is completed successfully,
 
 Each release and record can be made accessible at a permanent URL. This can be achieved by:
 
-* Archiving a ‘single-release’ release package for each release to a web accessible file system as it is created, and then regularly merging these releases into records in the same file system. One approach might be to have a directory for each ocid and to put the releases and the record related to that process in that directory.
+* Archiving a "single-release" release package for each release to a web accessible file system as it is created, and then regularly merging these releases into records in the same file system. One approach might be to have a directory for each ocid and to put the releases and the record related to that process in that directory.
 * Providing access to each release and the merged records via an API.
 
 Publishers ought to consider how to [ensure that URLs remain stable](https://www.w3.org/Provider/Style/URI.html), even across a change of systems.
@@ -84,7 +88,7 @@ If access controls are necessary, do not use access tokens that need to be refre
 If the API implements rate limits (throttling):
 
 * Document the rate limits in the API documentation ([example](https://developer.twitter.com/en/docs/twitter-api/rate-limits)).
-* When a user exceeds a rate limit, return a [HTTP 429 “Too Many Requests” response status code, ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)and set the [Retry-After](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) HTTP header to indicate how long to wait before making a new request.
+* When a user exceeds a rate limit, return a [HTTP 429 “Too Many Requests” response status code,](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) and set the [Retry-After](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) HTTP header to indicate how long to wait before making a new request.
 
 ### Completeness
 

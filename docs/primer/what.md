@@ -21,7 +21,7 @@ This page will:
 </div>
 ```
 
-The Open Contracting Data Standard (OCDS) is a free, non-proprietary open data standard for public contracting, implemented by over 30 governments around the world. It describes how to publish data and documents about contracting processes for goods, works and services.
+The Open Contracting Data Standard (OCDS) is a free, non-proprietary open data standard for public contracting, implemented by over 30 governments around the world. It describes how to publish data and documents about contracting processes for goods, services and works.
 
 There are three concepts behind the Open Contracting Data Standard:
 
@@ -29,7 +29,7 @@ There are three concepts behind the Open Contracting Data Standard:
 * **Open Data** is data that can be freely used, modified, and shared by anyone for any purpose. This requires data to be accessible and machine-readable, and for permission to be granted for reuse.
 * A **Data Standard** defines the structure and meaning of data in order to resolve ambiguity and help systems and people interpret it.
 
-The OCDS builds on all three of these concepts, and the ultimate goal of the OCDS is to **help deliver** open contracting using standardized open data. The OCDS describes how to publish data and documents for the procurement of goods, works, and services. It makes contracting data available for anyone to use, modify, and share, for any purpose.
+The OCDS builds on all three of these concepts, and the ultimate goal of the OCDS is to **help deliver** open contracting using standardized open data. The OCDS describes how to publish data and documents for the procurement of goods, services and works. It makes contracting data available for anyone to use, modify, and share, for any purpose.
 
 The OCDS can be adapted to meet your needs. Whether purchasing medicines, running a municipal recycling program or building an airport, the OCDS helps you organize and publish all relevant data and documents during the process.
 
@@ -42,14 +42,15 @@ To facilitate publication of contracting data to meet a variety of needs, the OC
 * A common structured [data model](../schema/index), including a schema, codelists, and common rules and definitions for data fields and contracting processes;
 * [Guidance and tools](../guidance/index) to support implementation and data use;
 * An [extension](../guidance/map/extensions) mechanism to add additional key information to your OCDS data; and
-* A free global [helpdesk](../support/index.md#ocds-helpdesk).
+* Free global support from the [Data Support Team](../support/index).
 
 ```{note}
 **To learn more,** go to the next page in the Primer: [How does the OCDS work?](how) You can also review the further resources below to go deeper into the subjects introduced on this page.
 
 * [Implement Open Contracting](https://www.open-contracting.org/implement/)
 * [Impact of Open Contracting](https://www.open-contracting.org/impact/)
-* [Why implement OCDS](https://www.open-contracting.org/data-standard/)
+* [Why implement OCDS?](https://www.open-contracting.org/data-standard/)
+* [Open Contracting Data Use Cases](https://www.open-contracting.org/resources/open-contracting-data-use-cases/)
 * [Video Learning Guide to the OCDS](https://www.youtube.com/playlist?list=PL7sSifLpWd8hLOVrNMiwNApXAsOr06E1Q)
 * [What is open data?](https://opendatahandbook.org/guide/en/what-is-open-data/)
 * [What are data standards?](https://standards.theodi.org/introduction/what-are-open-standards-for-data/)

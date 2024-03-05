@@ -1,0 +1,13 @@
+name: Spell-check
+on: [push, pull_request]
+jobs:
+  build:
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name != github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - run: pip install codespell
+      - run: codespell -S .git,docson,locale,examples,country.csv,currency.csv,language.csv,mediaType.csv -L fo,zar .

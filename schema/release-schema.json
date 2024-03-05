@@ -68,17 +68,17 @@
     },
     "buyer": {
       "title": "Buyer",
-      "description": "The organization aiming to conclude a contract with a supplier or to use the goods, works or services resulting from the contract.",
+      "description": "The organization aiming to conclude a contract with a supplier or to use the goods, services or works resulting from the contract.",
       "$ref": "#/definitions/OrganizationReference"
     },
     "planning": {
       "title": "Planning",
-      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before the publication of procurement documents.",
+      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before contracting documents (for example, procurement documents) are available to potential suppliers.",
       "$ref": "#/definitions/Planning"
     },
     "tender": {
       "title": "Tender",
-      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with the publication of procurement documents and ending with the bid submission deadline. For a planning process, this information typically concerns the period before the publication of procurement documents.",
+      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with contracting documents (for example, procurement documents) being available to potential suppliers and ending with the bid submission deadline. For a planning process, this information typically concerns the period before contracting documents are available to potential suppliers.",
       "$ref": "#/definitions/Tender"
     },
     "awards": {
@@ -114,7 +114,7 @@
       "items": {
         "$ref": "#/definitions/RelatedProcess"
       },
-      "description": "The details of related processes: for example, if this process follows on from one or more other processes, represented under a separate ocid. This is commonly used to relate mini-competitions to their parent frameworks or individual tenders to a broader planning process.",
+      "description": "References to related, preceding contracting (or planning) processes. This information concerns the contracting process. For example, the contracting process may refer to its planning process(es). In multi-stage procedures (e.g. framework agreements with reopening of competition), the contracting process for a later stage may refer to the contracting process for the first stage.",
       "title": "Related processes",
       "type": "array"
     },
@@ -139,7 +139,7 @@
   "definitions": {
     "Planning": {
       "title": "Planning",
-      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before the publication of procurement documents.",
+      "description": "Information about, for example, needs identification, budget planning and market research. This information concerns the planning process. This information typically concerns the period before contracting documents (for example, procurement documents) are available to potential suppliers.",
       "type": "object",
       "properties": {
         "id": {
@@ -173,25 +173,17 @@
         },
         "milestones": {
           "title": "Planning milestones",
-          "description": "A list of milestones associated with the planning process.",
+          "description": "Milestones associated with the planning process.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
           }
         }
-      },
-      "patternProperties": {
-        "^(rationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
       }
     },
     "Tender": {
       "title": "Tender",
-      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with the publication of procurement documents and ending with the bid submission deadline. For a planning process, this information typically concerns the period before the publication of procurement documents.",
+      "description": "Information about, for example, the needed items and their estimated value, procurement method, award criteria, and various deadlines. This information concerns either the contracting process or the planning process. For a contracting process, this information typically concerns the period starting with contracting documents (for example, procurement documents) being available to potential suppliers and ending with the bid submission deadline. For a planning process, this information typically concerns the period before contracting documents are available to potential suppliers.",
       "type": "object",
       "required": [
         "id"
@@ -226,7 +218,7 @@
         },
         "description": {
           "title": "Tender description",
-          "description": "A summary description of the tender. This complements any structured information provided using the items array. Descriptions should be short and easy to read. Avoid using ALL CAPS.",
+          "description": "A summary description of the tender. Descriptions should be short and easy to read. Avoid using ALL CAPS.",
           "type": [
             "string",
             "null"
@@ -245,12 +237,16 @@
             "planning",
             "planned",
             "active",
+            "complete",
             "cancelled",
             "unsuccessful",
-            "complete",
             "withdrawn",
             null
-          ]
+          ],
+          "deprecated": {
+            "description": "This field is deprecated, because the same information can be provided by filling in the relevant date fields.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "statusDetails": {
           "title": "Status details",
@@ -267,7 +263,7 @@
         },
         "items": {
           "title": "Items to be procured",
-          "description": "The goods and services to be purchased, broken into line items wherever possible. Items should not be duplicated, but the quantity specified instead.",
+          "description": "The goods, services or works to be purchased, broken into line items wherever possible. Items should not be duplicated, but the quantity specified instead.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Item"
@@ -333,8 +329,8 @@
           "openCodelist": false,
           "enum": [
             "goods",
-            "works",
             "services",
+            "works",
             null
           ]
         },
@@ -388,34 +384,48 @@
         },
         "submissionMethodDetails": {
           "title": "Submission method details",
-          "description": "Information about the methods by which bids are submitted. This can include the address, e-mail address or online service to which bids are submitted, and any special requirements to be followed for submissions. More structured information can be provided using the submission terms extension.",
+          "description": "Information about how to submit bids. This can include the address, e-mail address or online service to which bids are submitted, and any special requirements to be followed for submissions.",
           "type": [
             "string",
             "null"
           ]
         },
+        "submissionTerms": {
+          "title": "Submission terms",
+          "description": "Information about how, when and where tenderers need to submit their bids.",
+          "$ref": "#/definitions/SubmissionTerms"
+        },
         "datePublished": {
-          "description": "The date on which the tender was published.",
-          "format": "date-time",
           "title": "Date published",
+          "description": "The date on which the tender was published.",
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "format": "date-time"
+        },
+        "expressionOfInterestDeadline": {
+          "title": "Expression of interest deadline",
+          "description": "The submission deadline for expressions of interest. This submission is also called a request to participate.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
         },
         "tenderPeriod": {
           "title": "Tender period",
-          "description": "The period when the tender is open for submissions. The end date is the closing date for bid submissions.",
+          "description": "The submission period for bids. Depending on the procedure, a bid can be an estimate, offer, proposal, quote or quotation, but not an expression of interest or request to participate.",
           "$ref": "#/definitions/Period"
         },
         "enquiryPeriod": {
           "title": "Enquiry period",
-          "description": "The period during which potential bidders may submit questions and requests for clarification to the buyer or the procuring entity. Details of how to submit enquiries should be provided in attached notices, or in submissionMethodDetails. Structured dates for when responses to questions will be made can be provided using tender milestones.",
+          "description": "The period during which potential bidders may submit questions and requests for clarification to the buyer or the procuring entity.",
           "$ref": "#/definitions/Period"
         },
         "hasEnquiries": {
           "title": "Has enquiries?",
-          "description": "A true/false field to indicate whether any enquiries were received during the tender stage. Structured information on enquiries that were received, and responses to them, can be provided using the enquiries extension.",
+          "description": "Whether any enquiries were received.",
           "type": [
             "boolean",
             "null"
@@ -436,18 +446,12 @@
         "exclusionGrounds": {
           "title": "Exclusion grounds",
           "description": "The criteria regarding the situation of a tenderer that can lead to its exclusion from the contracting process. For example: criminal convictions, bankruptcy, presence on a blacklist or failure to pay taxes.",
-          "type": [
-            "string",
-            "null"
-          ]
+          "$ref": "#/definitions/ExclusionGrounds"
         },
         "selectionCriteria": {
           "title": "Selection criteria",
-          "description": "The minimum requirements for potential suppliers to participate in the contracting process. Selection criteria ensure that a potential supplier has the legal and financial capacities and the technical and professional abilities to perform the contract. More structured information can be provided using the selection criteria extension.",
-          "type": [
-            "string",
-            "null"
-          ]
+          "description": "The minimum requirements for potential suppliers to participate in the contracting process. Selection criteria ensure that a potential supplier has the legal and financial capacities and the technical and professional abilities to perform the contract.",
+          "$ref": "#/definitions/SelectionCriteria"
         },
         "awardPeriod": {
           "title": "Evaluation and award period",
@@ -474,7 +478,7 @@
         },
         "tenderers": {
           "title": "Tenderers",
-          "description": "All organizations that submit a bid. More detailed information on bids and the bidding organization can be provided using the bid extension.",
+          "description": "All organizations that submit a bid.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
@@ -491,14 +495,14 @@
         },
         "milestones": {
           "title": "Milestones",
-          "description": "A list of milestones associated with the tender.",
+          "description": "Milestones associated with the tender: for example, the date on which responses to enquiries are published.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
           }
         },
         "amendments": {
-          "description": "A tender amendment is a formal change to the tender, and generally involves the publication of a new tender notice/release. The rationale and a description of the changes made can be provided here.",
+          "description": "The formal changes to the tender, which generally involve the publication of a new notice/release.",
           "type": "array",
           "title": "Amendments",
           "items": {
@@ -513,50 +517,6 @@
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
-        }
-      },
-      "patternProperties": {
-        "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "^(procurementMethodRationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "^(awardCriteriaDetails_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "^(submissionMethodDetails_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "^(eligibilityCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "^(selectionCriteria_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
         }
       }
     },
@@ -608,7 +568,11 @@
             null
           ],
           "codelist": "awardStatus.csv",
-          "openCodelist": false
+          "openCodelist": false,
+          "deprecated": {
+            "description": "This field is deprecated, because the same information can be provided by filling in the relevant date fields.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "statusDetails": {
           "title": "Status details",
@@ -638,7 +602,7 @@
         },
         "value": {
           "title": "Value",
-          "description": "The value of this award. There may be more than one award per procurement. A negative value indicates that the contract(s) resulting from this award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+          "description": "The value of the award. Typically, this is the value of the bid being awarded. There may be more than one award per procurement. A negative value indicates that the contract(s) resulting from this award may involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
           "$ref": "#/definitions/Value"
         },
         "maximumValue": {
@@ -662,7 +626,7 @@
         },
         "items": {
           "title": "Items awarded",
-          "description": "The goods and services awarded in this award, broken into line items wherever possible. Items should not be duplicated, but the quantity specified instead.",
+          "description": "The goods, services or works awarded in this award, broken into line items wherever possible. Items should not be duplicated, but the quantity specified instead.",
           "type": "array",
           "minItems": 1,
           "items": {
@@ -685,7 +649,7 @@
           "uniqueItems": true
         },
         "amendments": {
-          "description": "An award amendment is a formal change to the details of the award, and generally involves the publication of a new award notice/release. The rationale and a description of the changes made can be provided here.",
+          "description": "The formal changes to the award, which generally involve the publication of a new notice/release.",
           "type": "array",
           "title": "Amendments",
           "items": {
@@ -700,20 +664,6 @@
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
-        }
-      },
-      "patternProperties": {
-        "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
         }
       }
     },
@@ -780,14 +730,16 @@
           "enum": [
             "pending",
             "active",
-            "cancelled",
             "terminated",
-            "terminatedEarly",
-            "terminatedSuccessfully",
+            "cancelled",
             null
           ],
           "codelist": "contractStatus.csv",
-          "openCodelist": false
+          "openCodelist": false,
+          "deprecated": {
+            "description": "This field is deprecated, because the same information can be provided by filling in the relevant date fields.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "statusDetails": {
           "title": "Status details",
@@ -808,7 +760,7 @@
         },
         "value": {
           "title": "Value",
-          "description": "The value of this contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
+          "description": "The value of the contract. A negative value indicates that the contract will involve payments from the supplier to the buyer (commonly used in concession contracts). The value may be updated during implementation (for example, to reflect an amendment). This field should not contain the value of a framework agreement; those should be given in estimatedValue or maximumValue instead.",
           "$ref": "#/definitions/Value"
         },
         "maximumValue": {
@@ -823,7 +775,7 @@
         },
         "items": {
           "title": "Items contracted",
-          "description": "The goods, services, and any intangible outcomes in this contract. If the items contracted are identical to the items awarded, this field should be omitted.",
+          "description": "The goods, services or works in this contract. If the items contracted are identical to the items awarded and/or the items tendered, this field should be omitted.",
           "type": "array",
           "minItems": 1,
           "items": {
@@ -857,18 +809,22 @@
           },
           "description": "The details of related processes: for example, if this process is followed by one or more contracting processes, represented under a separate ocid. This is commonly used to refer to subcontracts and to renewal or replacement processes for this contract.",
           "title": "Related processes",
-          "type": "array"
+          "type": "array",
+          "deprecated": {
+            "description": "This field is deprecated, because all relevant codes from the relatedProcess codelist are deprecated.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "milestones": {
           "title": "Contract milestones",
-          "description": "A list of milestones associated with the finalization of this contract.",
+          "description": "Milestones associated with the finalization of this contract.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
           }
         },
         "amendments": {
-          "description": "A contract amendment is a formal change to, or extension of, a contract, and generally involves the publication of a new contract signature notice/release, or some other documents detailing the change. The rationale and a description of the changes made can be provided here.",
+          "description": "The formal changes or extensions to the contract, which generally involve the publication of a new notice/release.",
           "type": "array",
           "title": "Amendments",
           "items": {
@@ -884,20 +840,6 @@
             "deprecatedVersion": "1.1"
           }
         }
-      },
-      "patternProperties": {
-        "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
       }
     },
     "Implementation": {
@@ -907,7 +849,7 @@
       "properties": {
         "transactions": {
           "title": "Transactions",
-          "description": "A list of the spending transactions made against this contract",
+          "description": "The spending transactions made against this contract.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Transaction"
@@ -1056,20 +998,6 @@
           "description": "The payment's value, if the milestone represents a planned payment.",
           "$ref": "#/definitions/Value"
         }
-      },
-      "patternProperties": {
-        "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
       }
     },
     "Document": {
@@ -1192,20 +1120,6 @@
             ]
           }
         }
-      },
-      "patternProperties": {
-        "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
       }
     },
     "Budget": {
@@ -1232,7 +1146,7 @@
         },
         "amount": {
           "title": "Amount",
-          "description": "The value reserved for the future contract(s), within the budget. A negative value indicates income to the budget as a result of the future contract(s), rather than expenditure. If the budget is drawn from multiple sources or extends over multiple years, the budget breakdown extension can be used. This field should not be used to report the total value of the budget line that will fund the future contract(s).",
+          "description": "The value reserved for the future contract(s), within the budget. A negative value indicates income to the budget as a result of the future contract(s), rather than expenditure. This field should not be used to report the total value of the budget line that will fund the future contract(s).",
           "$ref": "#/definitions/Value"
         },
         "project": {
@@ -1274,26 +1188,6 @@
           },
           "format": "uri"
         }
-      },
-      "patternProperties": {
-        "^(source_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "^(project_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
       }
     },
     "Transaction": {
@@ -1320,7 +1214,11 @@
             "string",
             "null"
           ],
-          "format": "uri"
+          "format": "uri",
+          "deprecated": {
+            "description": "This field is deprecated, because its value would be potentially identical across every transaction.",
+            "deprecatedVersion": "1.2"
+          }
         },
         "date": {
           "title": "Date",
@@ -1369,7 +1267,7 @@
           "description": "(Deprecated in 1.1. Use transaction.payer instead.) The Organization Identifier for the organization from which the funds in this transaction originate. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
           "$ref": "#/definitions/Identifier",
           "deprecated": {
-            "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+            "description": "This field has been replaced by the `transaction.payer` field to resolve ambiguity arising from 'provider' being interpreted as relating to the goods, services or works procured rather than the flow of funds between the parties.",
             "deprecatedVersion": "1.1"
           }
         },
@@ -1378,7 +1276,7 @@
           "description": "(Deprecated in 1.1. Use transaction.payee instead). The Organization Identifier for the organization which receives the funds in this transaction. Expressed following the Organizational Identifier standard - consult the documentation and the codelist.",
           "$ref": "#/definitions/Identifier",
           "deprecated": {
-            "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods or services procured rather than the flow of funds between the parties.",
+            "description": "This field has been replaced by the `transaction.payee` field to resolve ambiguity arising from 'receiver' being interpreted as relating to the goods, services or works procured rather than the flow of funds between the parties.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -1510,7 +1408,7 @@
             "object",
             "null"
           ],
-          "description": "Additional classification information about organizations can be provided using organization details extensions that define particular fields and classification schemes.",
+          "description": "Additional information about the organization.",
           "title": "Details",
           "properties": {
             "scale": {
@@ -1534,20 +1432,12 @@
             }
           }
         }
-      },
-      "patternProperties": {
-        "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
       }
     },
     "Item": {
       "title": "Item",
       "type": "object",
-      "description": "A good, service, or work to be contracted.",
+      "description": "A line-item of the goods, services, or works to be contracted.",
       "required": [
         "id"
       ],
@@ -1563,7 +1453,7 @@
         },
         "description": {
           "title": "Description",
-          "description": "A description of the goods, services to be provided.",
+          "description": "A description of the goods, services or works to be provided.",
           "type": [
             "string",
             "null"
@@ -1576,7 +1466,7 @@
         },
         "additionalClassifications": {
           "title": "Additional classifications",
-          "description": "An array of additional classifications for the item.",
+          "description": "Additional classifications for the item.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Classification"
@@ -1594,16 +1484,8 @@
         },
         "unit": {
           "title": "Unit",
-          "description": "A description of the unit in which the supplies, services or works are provided (e.g. hours, kilograms) and the unit-price.",
+          "description": "A description of the unit in which the goods, services or works are provided (e.g. hours, kilograms) and the unit-price.",
           "$ref": "#/definitions/Unit"
-        }
-      },
-      "patternProperties": {
-        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
         }
       }
     },
@@ -1646,7 +1528,7 @@
           "title": "Description"
         },
         "amendsReleaseID": {
-          "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
+          "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **before** the amendment was made.",
           "type": [
             "string",
             "null"
@@ -1654,7 +1536,7 @@
           "title": "Amended release (identifier)"
         },
         "releaseID": {
-          "description": "Provide the identifier (release.id) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
+          "description": "Provide the identifier (`release.id`) of the OCDS release (from this contracting or planning process) that provides the values for this contracting (or planning) process **after** the amendment was made.",
           "type": [
             "string",
             "null"
@@ -1691,14 +1573,6 @@
             "description": "A free-text or semi-structured string describing the changes made in each amendment can be provided in the amendment.description field. To provide structured information on the fields that have changed, publishers should provide releases indicating the state of the contracting process before and after the amendment.  ",
             "deprecatedVersion": "1.1"
           }
-        }
-      },
-      "patternProperties": {
-        "^(rationale_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
         }
       }
     },
@@ -1743,14 +1617,6 @@
           ],
           "format": "uri"
         }
-      },
-      "patternProperties": {
-        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
       }
     },
     "Identifier": {
@@ -1791,14 +1657,6 @@
             "null"
           ],
           "format": "uri"
-        }
-      },
-      "patternProperties": {
-        "^(legalName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
         }
       }
     },
@@ -1841,7 +1699,7 @@
         },
         "country": {
           "title": "Country code",
-          "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#language) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
+          "description": "The country, from the closed [country](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#country) codelist. If a country is missing, [create an issue](https://github.com/open-contracting/standard/issues) to discuss the addition of a user-assigned code to the country codelist.",
           "type": [
             "string",
             "null"
@@ -2114,18 +1972,6 @@
             "deprecatedVersion": "1.2"
           }
         }
-      },
-      "patternProperties": {
-        "^(countryName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "deprecated": {
-            "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
-            "deprecatedVersion": "1.2"
-          }
-        }
       }
     },
     "ContactPoint": {
@@ -2174,14 +2020,6 @@
           "description": "A web address for the contact point/person.",
           "format": "uri"
         }
-      },
-      "patternProperties": {
-        "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
       }
     },
     "Value": {
@@ -2191,7 +2029,23 @@
       "properties": {
         "amount": {
           "title": "Amount",
-          "description": "Amount as a number.",
+          "description": "The amount as entered into a system or published in a document.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "amountNet": {
+          "title": "Net amount",
+          "description": "The amount excluding all taxes.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "amountGross": {
+          "title": "Gross amount",
+          "description": "The amount including all taxes.",
           "type": [
             "number",
             "null"
@@ -2557,7 +2411,7 @@
       }
     },
     "RelatedProcess": {
-      "description": "A reference to a related contracting (or planning) process: generally one preceding or following on from the current process.",
+      "description": "A reference to a related, preceding contracting (or planning) process. For example, the contracting process may refer to its planning process(es). In multi-stage procedures (e.g. framework agreements with reopening of competition), the contracting process for a later stage may refer to the contracting process for the first stage.",
       "type": "object",
       "title": "Related Process",
       "properties": {
@@ -2618,7 +2472,7 @@
     },
     "Unit": {
       "title": "Unit",
-      "description": "A description of the unit in which the supplies, services or works are provided (e.g. hours, kilograms) and the unit-price.",
+      "description": "A description of the unit in which the goods, services or works are provided (e.g. hours, kilograms) and the unit-price.",
       "type": "object",
       "properties": {
         "scheme": {
@@ -2661,14 +2515,6 @@
             "null"
           ]
         }
-      },
-      "patternProperties": {
-        "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
       }
     },
     "Link": {
@@ -2698,7 +2544,7 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "The list, register or system from which the identifier is taken.",
+          "description": "The list, register or system from which the identifier is taken. If the scope of the list, register or system from which the identifier is drawn is national, it is suggested to follow the pattern {ISO 3166-1 alpha-2}-{system}. If it is subnational, it is suggested to follow the pattern {ISO 3166-2}-{system}.",
           "type": [
             "string",
             "null"
@@ -2714,6 +2560,63 @@
           "versionId": true
         }
       }
+    },
+    "SubmissionTerms": {
+      "title": "Submission terms",
+      "description": "Information about how, when and where tenderers need to submit their bids.",
+      "type": "object",
+      "properties": {
+        "electronicSubmissionPolicy": {
+          "title": "Electronic submission policy",
+          "description": "Whether tenderers are required, allowed or not allowed to submit bids electronically.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "permission.csv",
+          "openCodelist": false,
+          "enum": [
+            "required",
+            "allowed",
+            "notAllowed",
+            null
+          ]
+        }
+      }
+    },
+    "ExclusionGrounds": {
+      "title": "Exclusion grounds",
+      "description": "The criteria regarding the situation of a tenderer that can lead to its exclusion from the contracting process. For example: criminal convictions, bankruptcy, presence on a blacklist or failure to pay taxes.",
+      "type": "object",
+      "properties": {
+        "description": {
+          "title": "Description",
+          "description": "The description of the criteria.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "SelectionCriteria": {
+      "title": "Selection criteria",
+      "description": "The minimum requirements for potential suppliers to participate in the contracting process. Selection criteria ensure that a potential supplier has the legal and financial capacities and the technical and professional abilities to perform the contract.",
+      "type": "object",
+      "properties": {
+        "description": {
+          "title": "Description",
+          "description": "The description of the criteria.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
     }
   }
 }

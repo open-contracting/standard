@@ -10,22 +10,22 @@
 # samgoeta <samgoeta@gmail.com>, 2020
 # Colin Maudry <colin@maudry.com>, 2021
 # Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2021
-# James McKinney, 2021
+# James McKinney, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-13 09:12-0300\n"
+"POT-Creation-Date: 2023-01-10 13:45-0500\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
-"Last-Translator: James McKinney, 2021\n"
+"Last-Translator: James McKinney, 2023\n"
 "Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/schema/reference.md:1
 msgid "Release Reference"
@@ -69,27 +69,24 @@ msgstr ""
 msgid "Browsing the schema"
 msgstr "Parcourir le schéma"
 
-#: ../../docs/schema/reference.md:1
+#: ../../docs/schema/reference.md:12
 msgid ""
 "This page presents the release schema in tables, with additional information"
 " in paragraphs. You can also download the canonical version of the release "
-"schema as {download}`JSON Schema <../../build/current_lang/release-"
-"schema.json>`, download it as a [CSV spreadsheet](https://toucan.open-"
-"contracting.org/mapping-sheet/?source=https://standard.open-"
-"contracting.org/1.1/en/release-schema.json), view it in an [interactive "
-"browser](release), or access it through the [Field-Level Mapping "
-"Template](https://www.open-contracting.org/resources/ocds-field-level-"
-"mapping-template/)."
+"schema as [JSON Schema](../../build/current_lang/release-schema.json), "
+"download it as a [CSV spreadsheet](../../build/current_lang/release-"
+"schema.csv), view it in an [interactive browser](release), or access it "
+"through the [Field-Level Mapping Template](https://www.open-"
+"contracting.org/resources/ocds-field-level-mapping-template/)."
 msgstr ""
 "Cette page présente le schéma d'instance sous forme de tableaux, avec des "
 "informations supplémentaires dans les paragraphes. Vous pouvez également "
-"télécharger la version canonique du schéma d'instance au format "
-"{download}`JSON Schema <../../build/current_lang/release-schema.json>`, le "
-"télécharger au format [CSV](https://toucan.open-contracting.org/mapping-"
-"sheet/?source=https://standard.open-contracting.org/1.1/fr/release-"
-"schema.json), le consulter dans un [outil interactif](release), ou y accéder"
-" via le [*Field-Level Mapping Template*](https://www.open-"
-"contracting.org/resources/ocds-field-level-mapping-template/)."
+"télécharger la version canonique du schéma d'instance au format [JSON "
+"Schema](../../build/current_lang/release-schema.json), le télécharger au "
+"format [CSV](../../build/current_lang/release-schema.csv), le consulter dans"
+" un [outil interactif](release), ou y accéder via le [*Field-Level Mapping "
+"Template*](https://www.open-contracting.org/resources/ocds-field-level-"
+"mapping-template/)."
 
 #: ../../docs/schema/reference.md:15
 msgid "Release handling"
@@ -342,77 +339,22 @@ msgstr ""
 "d'instance](release_package). Le paquet d'instance fournit des métadonnées à"
 " propos de la ou des instance(s) qu'il contient."
 
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
 #: ../../sphinxcontrib-jsonschema:1
 msgid "Title"
 msgstr "Titre"
 
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
 #: ../../sphinxcontrib-jsonschema:1
 msgid "Description"
 msgstr "Description"
 
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
 #: ../../sphinxcontrib-jsonschema:1
 msgid "Type"
 msgstr "Type"
 
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
 #: ../../sphinxcontrib-jsonschema:1
 msgid "Format"
 msgstr "Format"
 
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
 #: ../../sphinxcontrib-jsonschema:1
 msgid "Required"
 msgstr "Nécessaire"
@@ -459,13 +401,13 @@ msgstr ""
 " souvent pour donner un résumé en texte libre du processus de passation de "
 "marchés dans son ensemble."
 
-#: ../../extension_list_release:2 ../../extension_list_parties:2
+#: ../../extension_list_award:2 ../../extension_list_budget:2
+#: ../../extension_list_contract:2 ../../extension_list_document:2
+#: ../../extension_list_implementation:2 ../../extension_list_item:2
+#: ../../extension_list_milestones:2 ../../extension_list_parties:2
 #: ../../extension_list_partyDetail:2 ../../extension_list_planning:2
-#: ../../extension_list_budget:2 ../../extension_list_tender:2
-#: ../../extension_list_award:2 ../../extension_list_contract:2
-#: ../../extension_list_implementation:2 ../../extension_list_transaction:2
-#: ../../extension_list_document:2 ../../extension_list_item:2
-#: ../../extension_list_milestones:2
+#: ../../extension_list_release:2 ../../extension_list_tender:2
+#: ../../extension_list_transaction:2
 msgid ""
 "The following are community extensions and are not maintained by Open "
 "Contracting Partnership."
@@ -485,7 +427,7 @@ msgstr ""
 "Chacune des parties (organisations ou autres participants) référencées dans "
 "une instance doit être incluse dans la section des parties."
 
-#: ../../docs/schema/reference.md:1
+#: ../../docs/schema/reference.md:114
 msgid ""
 "Version 1.1 of OCDS introduces a new approach to describing the buyers,  "
 "suppliers, economic operators, and other participants in a contracting "
@@ -503,7 +445,7 @@ msgstr ""
 "l'instance (`parties`). Ces parties sont ensuite référencées dans les autres"
 " sections de l'instance grâce à leur `id`."
 
-#: ../../docs/schema/reference.md:3
+#: ../../docs/schema/reference.md:116
 msgid ""
 "This reduces repetition of information on parties who appear at multiple "
 "points in the contracting process, and supports publication of information "
@@ -516,7 +458,7 @@ msgstr ""
 "telles que des auditeurs, des acheteurs multiples et les partenaires d'une "
 "offre gagnante."
 
-#: ../../docs/schema/reference.md:5
+#: ../../docs/schema/reference.md:118
 msgid ""
 "The old, embedded data, approach to organization data is deprecated in OCDS "
 "1.1, and will be removed in version 2.0."
@@ -911,7 +853,7 @@ msgstr "OrganizationReference"
 msgid "Organizations"
 msgstr "Organisations"
 
-#: ../../docs/schema/reference.md:1
+#: ../../docs/schema/reference.md:280
 msgid ""
 "The approach to including organizations information has changed in OCDS 1.1."
 " Instead of embedding all the details of an organization, publishers should "
@@ -1168,7 +1110,7 @@ msgstr ""
 msgid "These are extensions related to Items."
 msgstr "Voici les extensions liées aux biens et services achetés."
 
-#: ../../extension_list_item:1 ../../docs/schema/reference.md:446
+#: ../../docs/schema/reference.md:446 ../../extension_list_item:1
 msgid "Location"
 msgstr "Localisation"
 
@@ -1200,7 +1142,7 @@ msgstr ""
 #: ../../docs/schema/reference.md:383
 msgid ""
 "If the [Quantities, Units, Dimensions and Data Types "
-"Ontologies](https://www.qudt.org/qudt/owl/1.0.0/unit/) unit classification "
+"Ontologies](https://www.qudt.org) unit classification "
 "scheme is used, then publishers can use its CamelCase unit names, such as "
 "\"SquareMile\", in the `unit.name` field."
 msgstr ""

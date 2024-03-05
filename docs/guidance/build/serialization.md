@@ -49,7 +49,6 @@ In each case, fields are identified in CSV headers by their [JSON Pointer](https
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/serialization/flat.csv
 ```
 
@@ -67,7 +66,6 @@ For example, to represent a tender release with two items, the CSV file would in
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/serialization/flat_two_items.csv
 ```
 
@@ -97,9 +95,3 @@ Multiple tables can be packaged together as the tabs of an Excel spreadsheet, or
 An example multi-table template can be found [in the sample data repository](https://github.com/open-contracting/sample-data/tree/main/flat-template).
 
 For further information on multi-table serializations please see the [flatten tool documentation](https://flatten-tool.readthedocs.io/en/latest/).
-
-## Packaging files with metadata
-
-Whatever serialization is used for Open Contracting Data, a single file can contain one or more release and records.
-
-The release package and record package schemas describe the key metadata that ought to be supplied for any file providing Open Contracting Data. This includes the `publishedDate`, `publisher`, `uri` for accessing the file, and the licensing details for the file.

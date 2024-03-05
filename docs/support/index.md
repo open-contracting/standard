@@ -1,21 +1,19 @@
 # Getting Help
 
-## OCDS Helpdesk
+## Data Support Team
 
-The Open Contracting Data Standard (OCDS) Helpdesk is available to support you in publishing or using OCDS data, and to assist in the ongoing development of the standard.
+The Open Contracting Partnership's Data Support Team is available to support you in publishing or using OCDS data, and to assist in the ongoing development of the standard.
 
-If you are planning to publish or use OCDS data, then the OCDS Helpdesk is on-hand to offer advice and input, by:
+If you are planning to publish or use OCDS data, then the Data Support Team is on-hand to offer advice and input, by:
 
 * Helping you identify approaches for converting data from your existing systems to OCDS
 * Suggesting existing tools and services that can help you publish or use OCDS data
 * Providing guidance on mapping your data structures to OCDS
 * Giving you feedback on draft data files, and checking the structure of your data
 
-Helpdesk support is available in English and Spanish and delivered through collaboration with the [Open Data Services Cooperative](https://opendataservices.coop) in the United Kingdom and [Centro de Desarrollo Sostenible](http://www.cds.com.py) in Paraguay.
+Support is provided free of charge and is available in English, Spanish and Russian.
 
-Through funding from the Open Contracting Partnership, this support is provided free of charge.
-
-Please e-mail [data@open-contracting.org](mailto:data@open-contracting.org) with your questions, and a member of the OCDS Helpdesk will be in touch with you soon.
+Please e-mail [data@open-contracting.org](mailto:data@open-contracting.org) with your questions, and a member of the Data Support Team will be in touch with you soon.
 
 ## OCDS Community
 

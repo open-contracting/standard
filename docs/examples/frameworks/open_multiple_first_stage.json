@@ -1,10 +1,5 @@
 {
-  "uri": "https://apis.mercadopublico.cl/OCDS/data/tender/2239-4-LP14",
   "version": "1.1",
-  "publishedDate": "2020-02-04T16:30:52Z",
-  "publisher": {
-    "name": "Dirección de Compras y Contratación Pública"
-  },
   "extensions": [
     "https://raw.githubusercontent.com/open-contracting-extensions/ocds_techniques_extension/master/extension.json"
   ],
@@ -66,14 +61,21 @@
           "id": "CL-MP-749218"
         },
         "procurementMethod": "selective",
-        "tenderPeriod": {
-          "startDate": "2014-08-27T16:32:25Z",
-          "endDate": "2020-08-27T15:00:00Z"
-        },
+        "expressionOfInterestDeadline": "2020-08-27T15:00:00Z",
         "contractPeriod": {
           "startDate": "2005-01-19T15:30:00Z",
           "endDate": "2020-08-27T15:00:00Z"
-        }
+        },
+        "lots": [
+          {
+            "id": "1",
+            "title": "Lápiz pasta"
+          },
+          {
+            "id": "2",
+            "title": "Papel de impresora"
+          }
+        ]
       }
     }
   ]

@@ -10,7 +10,7 @@ OCDS defines a common model for disclosing structured data on public contracting
 
 ## Definitions
 
-In order to understand the modelling examples, it’s important to first clarify the definitions of some key concepts.
+In order to understand the modelling examples, it's important to first clarify the definitions of some key concepts.
 
 ### Award
 
@@ -20,7 +20,7 @@ OCDS defines an award as:
 ```
 
 ```{note}
-In OCDS 1.2 and earlier, a single contract cannot be linked to more than one award. Consequently, in cases where real-world awards are more detailed than the resulting real-world contract (for example, two lots are awarded to a single supplier and only a single contract is signed), this cannot be represented fully accurately in OCDS. There are two possible workarounds: (1) summarizing the multiple real-world awards into a single OCDS award (that is, summing the values of the lots, choosing a common award date, etc.), (2) splitting the single real-world contract into multiple OCDS contracts. If you want to disclose this type of information, we recommend using approach (1) or contacting the [helpdesk](../../support/index).
+In OCDS 1.2 and earlier, a single contract cannot be linked to more than one award. Consequently, in cases where real-world awards are more detailed than the resulting real-world contract (for example, two lots are awarded to a single supplier and only a single contract is signed), this cannot be represented fully accurately in OCDS. There are two possible workarounds: (1) summarizing the multiple real-world awards into a single OCDS award (that is, summing the values of the lots, choosing a common award date, etc.), (2) splitting the single real-world contract into multiple OCDS contracts. If you want to disclose this type of information, we recommend using approach (1) or contacting the [Data Support Team](../../support/index).
 ```
 
 ### Contract
@@ -123,7 +123,6 @@ Using a single award object to model such a notice in OCDS would make it impossi
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/award_decisions/single_award.csv
 ```
 
@@ -131,7 +130,6 @@ For the award object in OCDS to communicate a direct relationship between items,
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/award_decisions/multi_award.csv
 ```
 
@@ -139,18 +137,17 @@ There are no identifiers for the individual supplier/value pairings on the origi
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/award_decisions/identifiers.csv
 ```
 
 ```{admonition} View the example in JSON
 :class: tip
 
-[View the example in Paraguay’s API](https://contrataciones.gov.py/datos/api/v3/doc/ocds/record/ocds-03ad3f-340885-1)
+[View the example in Paraguay's API](https://contrataciones.gov.py/datos/api/v3/doc/ocds/record/ocds-03ad3f-340885-1)
 ```
 ## Purchase orders
 
-A purchase order is a specific type of contract, an official document issued by a buyer committing to pay a supplier for the supply of specific goods, works or services to be delivered in the future.
+A purchase order is a specific type of contract, an official document issued by a buyer committing to pay a supplier for the supply of specific goods, services or works to be delivered in the future.
 
 Purchase orders can be issued against an existing contract, or if no prior contract exists then acceptance of a purchase order by a supplier forms a contract between buyer and supplier.
 
@@ -162,7 +159,6 @@ The UK's Department for Transport awards a £1.2m, 12-month contract to KPMG to 
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/purchase_orders/parent_contract.csv
 ```
 
@@ -174,7 +170,6 @@ If purchase orders were also disclosed in the `contracts` section of OCDS, by th
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/purchase_orders/contracts_pos.csv
 ```
 

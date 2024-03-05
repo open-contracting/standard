@@ -10,23 +10,23 @@
 # samgoeta <samgoeta@gmail.com>, 2020
 # Emeline Vandeven <emeline@datactivist.coop>, 2020
 # Colin Maudry <colin@maudry.com>, 2021
-# James McKinney, 2021
 # Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2022
+# James McKinney, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting Data Standard 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-13 09:12-0300\n"
+"POT-Creation-Date: 2023-01-10 13:45-0500\n"
 "PO-Revision-Date: 2017-04-24 10:48+0000\n"
-"Last-Translator: Yohanna Lisnichuk <ylisnichuk@open-contracting.org>, 2022\n"
+"Last-Translator: James McKinney, 2023\n"
 "Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/schema/codelists.md:1
 msgid "Codelists"
@@ -75,7 +75,7 @@ msgstr ""
 msgid "Extending open codelists"
 msgstr "Extension des listes de codes ouvertes"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:12
 msgid ""
 "If you use new codes outside those in an open codelist, please document the "
 "codes in an [OCDS extension](../guidance/map/extensions) and in your "
@@ -87,18 +87,18 @@ msgstr ""
 
 #: ../../docs/schema/codelists.md:15
 msgid ""
-"The release schema, in {download}`JSON Schema "
-"<../../build/current_lang/release-schema.json>`, has a `codelist` property "
-"to indicate the <a href=\"../../codelists/\">CSV File</a> that defines the "
-"codes in the codelist (shown as tables below). It also has an `openCodelist`"
-" property, to indicate whether the codelist is open or closed."
+"The release schema, in [JSON Schema](../../build/current_lang/release-"
+"schema.json), has a `codelist` property to indicate the <a "
+"href=\"../../codelists/\">CSV File</a> that defines the codes in the "
+"codelist (shown as tables below). It also has an `openCodelist` property, to"
+" indicate whether the codelist is open or closed."
 msgstr ""
-"Le schéma d'instance, dans {download}`JSON Schema "
-"<../../build/current_lang/release-schema.json>`,  a une propriété de la "
-"`liste de codes` pour indiquer le <a href=\"../../codelists/\">fichier "
-"CSV</a> qui définit les codes dans la liste de codes (présentée dans les "
-"tableaux ci-dessous). Cela concerne également la propriété d'une liste de "
-"codes ouverte, afin d'indiquer si la liste de codes est ouverte ou fermée."
+"Le schéma d'instance, dans [JSON Schema](../../build/current_lang/release-"
+"schema.json),  a une propriété de la `liste de codes` pour indiquer le <a "
+"href=\"../../codelists/\">fichier CSV</a> qui définit les codes dans la "
+"liste de codes (présentée dans les tableaux ci-dessous). Cela concerne "
+"également la propriété d'une liste de codes ouverte, afin d'indiquer si la "
+"liste de codes est ouverte ou fermée."
 
 #: ../../docs/schema/codelists.md:17
 msgid ""
@@ -176,6 +176,10 @@ msgstr "Schéma d'identification des organisations"
 msgid "![org-id.guide](../_static/png/org-id_logo.png)"
 msgstr "![org-id.guide](../_static/png/org-id_logo.png)"
 
+#: ../../docs/schema/codelists.md:55
+msgid "org-id.guide"
+msgstr ""
+
 #: ../../docs/schema/codelists.md:57
 msgid ""
 "The Organization Identifier Scheme uses the codes from [org-"
@@ -186,13 +190,11 @@ msgstr ""
 
 #: ../../docs/schema/codelists.md:59
 msgid ""
-"To add new codes to the codelist, contact the [OCDS "
-"Helpdesk](../../support/index)."
+"To add new codes to the codelist, contact the [Data Support "
+"Team](../../support/index)."
 msgstr ""
-"Pour ajouter de nouveaux codes dans les listes de codes, contacter "
-"l'[Assistance OCDS](../../support/index)."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:62
 msgid ""
 "This list was formerly maintained by the International Aid Transparency "
 "Initiative and contained in OCDS documentation as "
@@ -260,7 +262,7 @@ msgstr ""
 "La liste de codes des critères d'attribution décrit les fondements sur "
 "lesquels les marchés sont attribués."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:84
 msgid ""
 "This codelist was revised in OCDS 1.1, deprecating earlier codes and "
 "introducing a new set of codelist entries. Publishers ought to review the "
@@ -362,27 +364,27 @@ msgstr ""
 "indiquer l'étape de processus de passation des marchés à laquelle elles se "
 "rapportent."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Code"
 msgstr "Code"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Title"
 msgstr "Titre"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Description"
 msgstr "Description"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "planning"
 msgstr "planning"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Planning"
 msgstr "Planification"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid ""
 "A contracting process is proposed or planned. Information in the tender "
 "section describes the proposed process. The tender.status field should be "
@@ -395,15 +397,15 @@ msgstr ""
 "trouve à un stade précoce du processus ou s'il existe des plans détaillés "
 "pour le développement de l'appel d'offres."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "planningUpdate"
 msgstr "planningUpdate"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Planning update"
 msgstr "Mise à jour du planning"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid ""
 "Details of a proposed or planned contracting process are being updated. This"
 " might include addition of information and documents from consultation "
@@ -417,15 +419,15 @@ msgstr ""
 " un processus de passation de marché proposé ou une mise à jour du champ "
 "`tender.status` pour indiquer qu'une proposition a été retirée."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "tender"
 msgstr "tender"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Tender"
 msgstr "Appel d'offre"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid ""
 "Providing information about a new tender (call for proposals) process. "
 "Tender release should contain details of the goods or services being sought."
@@ -434,15 +436,15 @@ msgstr ""
 "propositions). L'instance sur l'appel d'offres devrait contenir des détails "
 "sur les produits ou services recherchés."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "tenderAmendment"
 msgstr "tenderAmendment"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Tender amendment"
 msgstr "Modification d'un appel d'offres"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid ""
 "An amendment to an existing tender release. There should be at least one "
 "tender release with the same ocid, but an earlier release date, before a "
@@ -455,15 +457,15 @@ msgstr ""
 "ne soit publiée. Le terme \"modification\" a une signification juridique "
 "dans de nombreux systèmes juridiques."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "tenderUpdate"
 msgstr "tenderUpdate"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Tender update"
 msgstr "Mise à jour de l'appel d'offre"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid ""
 "An update to an existing tender release. There should be at least one tender"
 " release with the same ocid, but an earlier release date, before a "
@@ -480,15 +482,15 @@ msgstr ""
 "devrait pas être utilisé pour des modifications légales formelles à un appel"
 " d'offres, pour lequel le tag tenderAmendment doit être utilisé."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "tenderCancellation"
 msgstr "tenderCancellation"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Tender cancellation"
 msgstr "Annulation de l'appel d'offre"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid ""
 "The cancellation of an existing tender. There should be at least one release"
 " with the same ocid, but an earlier release date, which provides details of "
@@ -498,15 +500,15 @@ msgstr ""
 "instance avec le même ocid, mais à une date d'instance antérieure, qui "
 "fournit des détails sur l'appel d'offres annulé."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "award"
 msgstr "award"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Award"
 msgstr "Attribution"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid ""
 "Providing information about the award of a contract. One or more award "
 "sections will be present, and the tender section might be populated with "
@@ -516,15 +518,15 @@ msgstr ""
 "sections `awards` peuvent être présentes, et la section `tender` peut "
 "contenir des détails sur le processus menant à l’attribution."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "awardUpdate"
 msgstr "awardUpdate"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Award update"
 msgstr "Mise à jour de l'attribution"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid ""
 "An update to an existing award release. There should be at least one award "
 "release with the same ocid, but an earlier release date before an "
@@ -536,27 +538,27 @@ msgstr ""
 "d'instance antérieure avant la publication d'un awardUpdate. Une mise à jour"
 " peut ajouter de nouvelles informations ou apporter des corrections."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "awardCancellation"
 msgstr "awardCancellation"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Award cancellation"
 msgstr "Annulation de l'attribution du marché"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Providing information about the cancellation of an award."
 msgstr "Fournit des informations sur l'annulation d'une attribution."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "contract"
 msgstr "contract"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Contract"
 msgstr "Contrat"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid ""
 "Providing information about the details of a contract that has been, or will"
 " be, entered into. The tender section might be populated with details of the"
@@ -568,15 +570,15 @@ msgstr ""
 " le processus menant au contrat et la section d'attribution peut contenir "
 "des détails sur l'attribution sur la base de laquelle ce contrat sera signé."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "contractUpdate"
 msgstr "contractUpdate"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Contract update"
 msgstr "Mise à jour du contrat"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid ""
 "Providing information about updates to a contract. There should be at least "
 "one contract release with the same ocid, but an earlier release date, before"
@@ -593,15 +595,15 @@ msgstr ""
 "pour des modifications légales formelles à un contrat, pour lequel le tag "
 "`contractAmendment` doit être utilisé."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "contractAmendment"
 msgstr "contractAmendment"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Contract amendment"
 msgstr "Modifications du contrat"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid ""
 "An amendment to an existing contract release. There should be at least one "
 "contract release with the same ocid, but an earlier release date, before a "
@@ -614,30 +616,30 @@ msgstr ""
 "publiée. Le terme modification a une signification juridique dans de "
 "nombreux systèmes juridiques."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "implementation"
 msgstr "implementation"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Implementation"
 msgstr "Exécution"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid ""
 "Providing new information on the implementation of a contracting process."
 msgstr ""
 "Fournit de nouvelles informations sur la phase d'exécution d'un processus de"
 " passation de marchés."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "implementationUpdate"
 msgstr "implementationUpdate"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Implementation update"
 msgstr "Mise à jour de l'exécution"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid ""
 "Updating existing information provided about the implementation of a "
 "contracting process."
@@ -645,27 +647,27 @@ msgstr ""
 "Met à jour des informations existantes fournies sur l'exécution d'un "
 "processus de passation de marchés."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "contractTermination"
 msgstr "contractTermination"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Contract termination"
 msgstr "Fin d'un contrat"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Providing information at the end of a contracting process."
 msgstr "Fournit des informations sur la fin d'un contrat."
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "compiled"
 msgstr "compiled"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid "Compiled record"
 msgstr "Archive compilée"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:153
 msgid ""
 "This tag is used only in compiled records, which have merged together "
 "multiple releases to provide a snapshot view of the contract, and a version "
@@ -707,7 +709,7 @@ msgstr ""
 "Le champ `tender.status` sert à indiquer l'état actuel d'un processus "
 "d'appel d'offres. Les options suivantes sont disponibles :"
 
-#: ../../docs/schema/codelists.md:1
+#: ../../docs/schema/codelists.md:176
 msgid "The 'planning' status was introduced in version 1.1."
 msgstr "Le statut \"planning\" a été introduit dans la version 1.1. "
 

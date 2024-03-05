@@ -1,15 +1,15 @@
 # See https://github.com/datamade/data-making-guidelines
 
-# See http://clarkgrubb.com/makefile-style-guide#phony-target-arg
+# See https://clarkgrubb.com/makefile-style-guide#phony-target-arg
 FORCE:
 
-# http://blog.jgc.org/2007/06/escaping-comma-and-space-in-gnu-make.html
+# https://blog.jgc.org/2007/06/escaping-comma-and-space-in-gnu-make.html
 COMMA := ,
 SPACE :=
 SPACE +=
 COMMA_SEPARATED_TRANSLATIONS=$(subst $(SPACE),$(COMMA),$(TRANSLATIONS:.%=%))
 
-# See http://clarkgrubb.com/makefile-style-guide#phony-targets
+# See https://clarkgrubb.com/makefile-style-guide#phony-targets
 .PHONY: clean
 clean:
 	rm -rf $(BUILD_DIR)
@@ -45,13 +45,23 @@ extract_schema: $(POT_DIR)
 
 # The codelist CSV files and JSON Schema files must be present for the `csv-table-no-translate` and `jsonschema`
 # directives to succeed, but the contents of the files have no effect on the generated .pot files.
-# See http://www.sphinx-doc.org/en/stable/builders.html#sphinx.builders.gettext.MessageCatalogBuilder
+# See https://www.sphinx-doc.org/en/master/usage/builders/index.html#sphinx.builders.gettext.MessageCatalogBuilder
 .PHONY: extract_markdown
 extract_markdown: current_lang.en
 	sphinx-build -nW --keep-going -q -b gettext $(DOCS_DIR) $(POT_DIR)
 
 .PHONY: extract
 extract: extract_theme extract_codelists extract_schema $(EXTRACT_TARGETS) extract_markdown clean_current_lang
+
+$(TRANSLATIONS:.%=docs/locale/%): docs/locale/%: FORCE
+	sphinx-intl update -p $(POT_DIR) -d $(LOCALE_DIR) -l "$*"
+
+.PHONY: docs/locale
+docs/locale: $(TRANSLATIONS:.%=docs/locale/%)
+
+.PHONY: pocount
+pocount:
+	find $(LOCALE_DIR) -name LC_MESSAGES -exec pocount --incomplete --short "{}" +
 
 ### Transifex
 
@@ -62,7 +72,7 @@ clean_txconfig:
 
 .PHONY: update_txconfig
 update_txconfig:
-	sphinx-intl update-txconfig-resources --transifex-project-name $(TRANSIFEX_PROJECT) --pot-dir $(POT_DIR) --locale-dir $(LOCALE_DIR)
+	sphinx-intl update-txconfig-resources --transifex-organization-name $(TRANSIFEX_ORGANIZATION) --transifex-project-name $(TRANSIFEX_PROJECT) --pot-dir $(POT_DIR) --locale-dir $(LOCALE_DIR)
 
 # Builds and pushes the .pot files (`source_file` in .tx/config) to Transifex.
 .PHONY: push
@@ -70,12 +80,12 @@ push: extract
 	tx push -s
 
 force_push.%: extract
-	tx push -s -t -f --no-interactive -l $*
+	tx push -f -s -t -l $*
 
 # Also pushes the translation .po files (`file_filter` in .tx/config) to Transifex.
 .PHONY: force_push
 force_push: extract
-	tx push -s -t -f --no-interactive -l $(COMMA_SEPARATED_TRANSLATIONS)
+	tx push -f -s -t -l $(COMMA_SEPARATED_TRANSLATIONS)
 
 pull.%: FORCE
 	tx pull -f -l $*
@@ -100,7 +110,7 @@ clean_current_lang:
 ### Build
 
 # Build the source documentation.
-# See http://www.sphinx-doc.org/en/stable/builders.html#sphinx.builders.html.DirectoryHTMLBuilder
+# See https://www.sphinx-doc.org/en/master/usage/builders/index.html#sphinx.builders.html.DirectoryHTMLBuilder
 .PHONY: build_source
 build_source: current_lang.en
 	sphinx-build -nW --keep-going -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
@@ -121,7 +131,7 @@ all: build_source compile $(TRANSLATIONS:.%=build.%) clean_current_lang
 
 .PHONY: autobuild
 autobuild: current_lang.en
-	sphinx-autobuild -nW -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
+	sphinx-autobuild $(SPHINX_AUTOBUILD_EXTRA_ARGS) -nW -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
 
 .PHONY: update
 update: clean_dist

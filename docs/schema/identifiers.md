@@ -6,105 +6,107 @@ Consistent identifiers are essential to help join up open contracting data.
 * Organization identifiers are important to know who is involved in each contract;
 * Release, award and contract identifiers are important to help cross-reference information.
 
-## Types of identifiers
-
-In OCDS there are two kinds of identifiers: globally unique and local.
-
-### Globally unique identifiers
-
-Across the whole universe of OCDS publishers these identifiers refer to one specific process or organization.
-
-We create globally unique process identifiers by adding a prefix to the internal identifiers held by publishers.
-
-```{admonition} Worked Example
-:class: hint
-
-Two government publishers (Town A and Town B) number their contracting processes from 0 upwards.
-
-Town A publishes information on a contracting process to build a new road. Internally they know this as contract 0005.
-
-Town B publishes information on a contracting process to buy textbooks for a school. Internally they also know this as contract 0005.
-
-When they publish their OCDS data, each government adds a unique prefix onto their internal identifiers.
-
-Now Town A's contracting process has the `ocid` of 'ocds-fh349f-0005' and Town B's contracting process has the `ocid` of 'ocds-twb234-0005'.
-
-There is now no chance of these getting mixed up in a system which imports data from both towns.
-
-And, if an independent civil society contract monitoring group want to publish a report about implementation of Town A's road project, or Town B's text-book procurement, they have distinct identifiers they can use in their own data to refer to these.
-```
-
-You can read more about the OCDS approach to identify organizations below.
-
-### Local identifiers
-
-Not all the identifiers in OCDS need to be globally unique. Most only need to be unique among the identifiers used for the same type of object within the same scope. For example:
-
-* A release ID must be unique within the scope of the process of which it is a part;
-* Award and contract identifiers must be unique within the scope of the process of which they are a part;
-* An item, milestone or document ID must be unique within the array it is part of.
-
-Local identifiers must be used consistently. For example, if the `id` of an award is "22" in one release, then the `id` of the same award in another release must also be "22".
-
 ## Open contracting process identifier (ocid)
 
 <img src="../../_static/svg/green_compilation.svg" width="150" align="right"/>
 
-An open contracting process identifier (ocid) is a **globally unique identifier**. Every release has an `ocid`. OCDS defines an `ocid` as:
+OCDS defines a release's `ocid` field as:
 
 ```{field-description} ../../build/current_lang/release-schema.json /properties/ocid
 ```
 
-It can be used to join up information published at different times and in different places.
+(The definition of a record's `ocid` field replaces "release" with "record".)
 
-Setting the `ocid` is usually a simple two step process:
+Since the `ocid` field is a required field and is globally unique, it can be used to join up data that is published at different times or from different systems.
 
-1. Identify the best **internal identifier** recorded against the processes being disclosed;
-2. Register an `ocid` prefix to prepend to this internal identifier.
+An `ocid` is composed of two parts:
 
-In some cases, you might need to consider changes to existing systems to ensure that different systems handling information about your contracting and planning processes have a common internal identifier to draw upon.
+1. An [OCID prefix](#ocid-prefix), which identifies the series of identifiers to which the `ocid` belongs
+1. An internal identifier for the contracting (or planning) process, which is unique within the series
 
-```{admonition} Worked Example
+It is encouraged to separate the OCID prefix and the internal identifier with a hyphen (`-`).
+
+The `ocid` is case-sensitive; in other words, the letter case of an ocid must be consistent.
+
+To assign an `ocid` to a contracting (or planning) process, you need to [register an OCID prefix](../guidance/build.md#register-an-ocid-prefix) and choose an internal identifier.
+
+````{admonition} Example
 :class: hint
 
-In Mexico City, each time a tender or direct contract award process is initiated, the department responsible assigns an identifier.
+Two publishers, the UK Atomic Energy Authority and Health Canada, use sequential numbers as internal identifiers for their contracting processes.
 
-These are made up of an identifier for the department responsible for the procurement, a tender number, and the year.
+The UK Atomic Energy Authority initiates a contracting process to purchase productivity software and assigns it the internal identifier "0005". Health Canada initiates a contracting process to purchase office furniture and also assigns it the internal identifier "0005".
 
-For example:
+To create a globally unique `ocid`, each publisher prepends their internal identifier with their OCID prefix: "ocds-def456" for the UK Atomic Energy Authority and "ocds-ghi789" for Health Canada.
 
-> OM-DGRMSG-004-13
+The UK Atomic Energy Authority assigns the `ocid` "ocds-def456-0005".
 
-This internal identifier can be exchanged with, and recorded in, any other systems which process information about this contracting process. For example, systems for reporting or recording spending transactions to suppliers.
-
-Mexico City then registered a prefix with the OCDS helpdesk. They have been given the prefix ‘ocds-87sd3t’ which can be added to their unique process identifiers to give a globally unique `ocid`. E.g.
-
-> ocds-87sd3t-OM-DGRMSG-004-13
+```json
+{
+  "ocid": "ocds-def456-0005",
+  "publisher": {
+    "name": "UK Atomic Energy Authority"
+  },
+  "tender": {
+    "id": "0005",
+    "title": "Productivity software"
+  }
+}
 ```
 
-The ocid prefix itself is made up of two parts: a prefix agency identifier (currently only 'ocds' is used), and a random six-character alphanumeric string generated for each publisher of data.
+Health Canada assigns the `ocid` "ocds-ghi789-0005".
 
-The ocid is case-sensitive; in other words, the letter case of an ocid must be consistent.
+```json
+{
+  "ocid": "ocds-ghi789-0005",
+  "publisher": {
+    "name": "Health Canada"
+  },
+  "tender": {
+    "id": "0005",
+    "title": "Office furniture"
+  }
+}
+```
 
-It is encouraged to separate the ocds prefix and the internal identifier with a hyphen (`-`).
+As such, users and tools that work with both publishers' data will not confuse the two contracting processes.
 
-### Registered prefixes
+````
 
-Publishers must register an ocid prefix. See the [registration pages](../guidance/build) for details of how to obtain your ocid prefix.
+### OCID prefix
 
-Prefix are randomly generated lowercase alpha-numeric strings. A prefix is assigned to each organization that holds the existing internal identifier for a Contracting Processes.
+The only purpose of the OCID prefix is to turn *locally* unique identifiers into *globally* unique identifiers, without coordination between publishers.
 
-Currently, only the Open Contracting Partnership issues valid prefixes. In future, other organizations might be able to issue prefixes, each with their own prefix agency identifiers.
+To ensure that your `ocid`s do not conflict with those of another publisher, you must [register an OCID prefix](../guidance/build.md#register-an-ocid-prefix).
 
-You can find a [list of registered prefixes here along with a registration form for creating new prefixes](../guidance/build).
+Only the publisher that registered an OCID prefix is authorized to assign new `ocid`s with that OCID prefix, or to delegate this responsibility.
 
-The registered prefixes are dumb identifiers. They are not intended to carry any semantics, and their sole purpose is to turn internal identifiers into globally unique identifiers which can be cross-referenced between systems.
+```{note}
+All registered OCID prefixes are accessible as a [web page](https://docs.google.com/spreadsheets/d/1E5ZVhc8VhGOakCq4GegvkyFYT974QQb-sSjvOfaxH7s/pubhtml?gid=506986894&single=true&widget=true) or [CSV file](https://docs.google.com/spreadsheets/d/e/2PACX-1vQP8EwbUhsfxN7Fx7vX3mTA6Y8CXyGi04bHUepdcfxvM6VRVP9f5BWAYEG6MPbnJjWJp-La81DgG8wx/pub?gid=506986894&single=true&output=csv).
+```
 
-### Publisher namespace
+An *OCID prefix* is composed of two parts, separated by a hyphen (`-`):
 
-Earlier versions of this documentation imposed a stricter pattern on how internal identifiers ought to be combined with the ocid prefix, including a requirement for local namespaces. This requirement has been relaxed in practice and can be considered deprecated.
+1. The identifier of the issuer of the OCID prefix
+2. Six randomly generated lowercase alphanumeric characters
 
-However, publishers are encouraged to consider whether there are any risks of clashes in local identifiers (e.g. the possibility that two parts of the publishing body might use the same identifier for different contracting or planning processes) and to plan to mitigate this when establishing their own patterns to generate their `ocid`
+OCID prefixes have no meaning, deliberately (they are "dumb" identifiers).
+
+```{admonition} Who can issue OCID prefixes?
+:class: hint
+
+Currently, only the [Open Contracting Partnership](https://www.open-contracting.org) can issue OCID prefixes, with the `ocds` issuer identifier. In the future, other organizations might be able to issue OCID prefixes, with their own issuer identifier.
+```
+
+### Internal identifier
+
+You must choose a single, unique internal identifier for each contracting (or planning) process.
+
+If such an identifier doesn't already exist, you need to develop a method to create one. You might need to:
+
+* Reconcile different identifiers across different systems (for example, across tender management and contract management)
+* Concatenate non-unique values to construct a unique identifier (for example, the year, the buyer, and a sequential number)
+* Change existing systems to use a common, unique identifier
 
 ## Organization identifiers
 
@@ -119,22 +121,28 @@ There are two parts to expressing an **organization identifier** in open contrac
 * A prefix for the organization list (also known as registry or register) from which the identifier is drawn: for example, a company register.
 * The existing identifier for the organization within that list.
 
-````{admonition} Worked Example
+In OCDS, the list's prefix is disclosed via the `scheme` field of an identifier object, with the existing identifier in the `id` field. If there is a recognized public URL that uniquely identifies the organization, this can be disclosed via the `uri` field.
+
+````{admonition} Example
 :class: hint
 
-The prefix for the UK's Companies House is "GB-COH". The organization Development Initiatives has been assigned the company number ‘06368740’ by Companies House. The globally unique organization identifier for Development Initiatives can be expressed as below:
+[Companies House](https://www.gov.uk/government/organisations/companies-house) registers company information in the United Kingdom. The prefix for Companies House is "GB-COH". Companies House registered a company with the name "MICROSOFT LIMITED" and the number "01624297". The company's organization identifier can be expressed as:
 
 ```json
 {
-  "scheme": "GB-COH",
-  "id": "06368740",
-  "uri": "http://data.companieshouse.gov.uk/doc/company/06368740",
-  "legalName": "Development Initiatives Poverty Research Limited"
+  "parties": [
+    {
+      "identifier": {
+        "scheme": "GB-COH",
+        "id": "01624297",
+        "legalName": "MICROSOFT LIMITED",
+        "uri": "https://data.companieshouse.gov.uk/doc/company/01624297"
+      } 
+    }
+  ]
 }
 ```
 ````
-
-In OCDS, the list's prefix is disclosed via the `scheme` field of an identifier object, with the existing identifier in the `id` field. If there is a recognized public URL that uniquely identifies the organization (like in the above example), this can be disclosed via the `uri` field.
 
 ### Organization lists
 
@@ -158,7 +166,7 @@ Each of the organizations involved in a contracting (or planning) process is dec
 
 Each organization has a local identifier (`id`) used to reference it from elsewhere in the data. For example, `buyer/id` references the buyer's entry in the parties section at `parties/id`.
 
-An organization's `id` is distinct from its organization identifier and need only be unique within the scope of the (contracting or planning) process in which it is involved. An organization’s `id` must be consistent across all releases with the same `ocid` value.
+An organization's `id` is distinct from its organization identifier and need only be unique within the scope of the (contracting or planning) process in which it is involved. An organization's `id` must be consistent across all releases with the same `ocid` value.
 
 See the [guidance](../guidance/map/organization_identifiers.md#organization-identifiers) for more information on organization identifiers and local IDs.
 

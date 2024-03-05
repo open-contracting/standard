@@ -67,7 +67,7 @@ A full record is provided below, with all the releases for the process and a `co
 ```
 
 ```{hint}
-It is encouraged to {download}`download <../../examples/amendments/tender.json>` the record example and use the [Data Review Tool](https://standard.open-contracting.org/review/) to explore the changes in the contracting process.
+It is encouraged to [download](../../examples/amendments/tender.json) the record example and use the [Data Review Tool](https://review.standard.open-contracting.org/) to explore the changes in the contracting process.
 ```
 
 Note in this example that:
@@ -112,7 +112,7 @@ In certain scenarios there might not be a valid `amendsReleaseID` and so it can 
 
 #### Record
 
-An example record for the whole process is shown below. Consider downloading the {download}`record example <../../examples/amendments/contract.json>` and use the [Data Review Tool](https://standard.open-contracting.org/review/) to explore the changes in the contracting process.
+An example record for the whole process is shown below. Consider downloading the [record example](../../examples/amendments/contract.json) and use the [Data Review Tool](https://review.standard.open-contracting.org/) to explore the changes in the contracting process.
 
 Note that the `compiledRelease` contains all the items, included the latest one added in the contract amendment.
 
@@ -132,7 +132,6 @@ The table below shows an example of a contract signature notices table from a pr
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../examples/amendments/contract_notice.csv
 ```
 
@@ -154,4 +153,4 @@ Note that the mapping of the fields remains the same for the contract amendments
 
 The advantage of this approach, in contrast with the Easy releases proposal, is that the users have access to the details of each amendment instead of the latest values only without any additional effort of their end.
 
-As in the previous examples, you can download a {download}`record <../../examples/amendments/full_update.json>` file for the example and use the [Data Review Tool](https://standard.open-contracting.org/review/) to explore the changes in the contracting process.
+As in the previous examples, you can download a [record](../../examples/amendments/easy_releases.json) file for the example and use the [Data Review Tool](https://review.standard.open-contracting.org/) to explore the changes in the contracting process.
