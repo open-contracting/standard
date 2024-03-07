@@ -14,9 +14,9 @@ For an introduction to the concept of a change history, see the [releases and re
 
 ## Worked Example
 
-A publisher periodically collects procurement data from different non-OCDS data sources and transforms it into OCDS format. The publisher cannot detect changes in the data because the data sources do not provide access to historical data and because the publisher does not store previous versions of the data it collects or publishes. Therefore, the publisher uses compiled releases to publish the current state of each contracting process.
+A publisher periodically collects procurement data from a non-OCDS data source and transforms it into OCDS format. The publisher cannot detect changes in the data because the data source does not provide access to historical data and because the publisher does not store previous versions. Therefore, the publisher uses compiled releases to publish the current state of each contracting process.
 
-The compiled releases are published as part of an OCDS record, contained within a record package. No change history is available so only the `ocid` and `compiledRelease` are published. The list of `releases` and the `versionedRelease` are omitted.
+The non-OCDS data source includes a the details of an opportunity so the publisher publishes a compiled release as part of an OCDS record, contained within a record package. No change history is available so only the `ocid` and `compiledRelease` are published. The list of `releases` and the `versionedRelease` are omitted.
 
 The `id`, `date` and `tag` fields in the compiled release are set according to the merging specification.
 

@@ -4,7 +4,7 @@
 
 # Change history
 
-To publish a change history for a contracting (or planning) process, you ought to publish a [record](../../schema/records_reference.md) for the process and, each time there is a change, publish a [release](../../schema/reference.md) and update the record.
+To publish a change history for a contracting (or planning) process, you ought to publish a [record](../../schema/records_reference.md) for the process and, for each change, publish a [release](../../schema/reference.md) and update the record.
 
 The following example illustrates how to publish a change history for a contracting process, using both [incremental and full updates](change_history_options.md#change-history-incremental-or-full-updates).
 
@@ -14,37 +14,16 @@ For an introduction to the concept of a change history, see the [releases and re
 
 ## Tender
 
-A buyer publishes an opportunity for the purchase of office supplies.
+A buyer announces an opportunity for the purchase of office supplies.
 
 An OCDS publisher creates a release that describes the opportunity. The 'tender' code in `.tag` indicates that the release contains information about the needed items and their estimated value.
 
-Since this is the first release of information about the opportunity, it makes no difference whether the publisher implements incremental updates or full updates.
-
-`````{tab-set}
-
-````{tab-item} Incremental updates
-:sync: incremental
+Since this is the first release related to the contracting process, it makes no difference whether the publisher implements incremental updates or full updates.
 
 ```{jsoninclude} ../../examples/change_history/incremental/tender.json
 :jsonpointer: /records/0/releases/0
 :expand: releases, tag, tender, value
 ```
-
-````
-
-````{tab-item} Full updates
-:sync: full
-
-The release contains new, changed and required fields, and repeats unchanged fields.
-
-```{jsoninclude} ../../examples/change_history/full/tender.json
-:jsonpointer: /records/0/releases/0
-:expand: releases, tag, tender, value
-```
-
-````
-
-`````
 
 The publisher also creates a record that describes the new contracting process. The record consists of:
 
@@ -52,29 +31,12 @@ The publisher also creates a record that describes the new contracting process. 
 * `compiledRelease`: The latest value of each field describing the contracting process.
 * `versionedRelease`: A history of changes to each field.
 
-At this stage, there is only one release. Therefore, the only differences between the release and the compiled release are the values of the `id` and `tag` fields. Likewise, the versioned release contains only one value for each field.
-
-`````{tab-set}
-
-````{tab-item} Incremental updates
-:sync: incremental
+At this stage, there is only one release. Therefore, the only fields that differ in the compiled release are `id` and `tag`, which are set according to the [merging specification](../../schema/merging.md#merging-specification). Likewise, the versioned release contains only one value for each field.
 
 ```{jsoninclude} ../../examples/change_history/incremental/tender.json
 :jsonpointer: /records/0
+:expand: releases, tag, tender, compiledRelease, versionedRelease
 ```
-
-````
-
-````{tab-item} Full updates
-:sync: full
-
-```{jsoninclude} ../../examples/change_history/full/tender.json
-:jsonpointer: /records/0
-```
-
-````
-
-`````
 
 ## Tender update
 
@@ -110,11 +72,7 @@ The release contains new, changed and required fields, and repeats unchanged fie
 
 `````
 
-The publisher also updates the OCDS record for the contracting process:
-
-* The new release is added to the `releases` list
-* The compiled release is updated with the new `mainProcurementCategory` field
-* The versioned release is updated with the new `mainProcurementCategory` field
+The publisher also updates the OCDS record for the contracting process: They add the new release to the `releases` list and update the `compiledRelease` and `versionedRelease` with the new `mainProcurementCategory` field.
 
 With the exception of the fields contained in the new release, the publisher's choice of incremental or full updates makes no difference to the record.
 
@@ -125,6 +83,7 @@ With the exception of the fields contained in the new release, the publisher's c
 
 ```{jsoninclude} ../../examples/change_history/incremental/tenderUpdate.json
 :jsonpointer: /records/0
+:expand: releases, tag, tender, compiledRelease, versionedRelease
 ```
 
 ````
@@ -134,6 +93,7 @@ With the exception of the fields contained in the new release, the publisher's c
 
 ```{jsoninclude} ../../examples/change_history/full/tenderUpdate.json
 :jsonpointer: /records/0
+:expand: releases, tag, tender, compiledRelease, versionedRelease
 ```
 
 ````
