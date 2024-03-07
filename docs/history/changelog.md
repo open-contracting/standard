@@ -84,6 +84,11 @@ Per the [normative and non-normative content and changes policy](../governance/n
     * 'COFOG'
   * [#1452](https://github.com/open-contracting/standard/pull/1452) Add 'proClass'.
   * [#1637](https://github.com/open-contracting/standard/pull/1637) Add 'sdg' and 'sdgTarget'.
+  * [#1679](https://github.com/open-contracting/standard/pull/1679) Add codes from the organization classification extension:
+    * 'TED_CA_TYPE'
+    * 'TED_CE_ACTIVITY'
+    * 'eu-buyer-contracting-type'
+    * 'eu-main-activity'
 
 * `documentType.csv`:
   * Add codes:
