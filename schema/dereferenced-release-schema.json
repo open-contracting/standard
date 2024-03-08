@@ -605,6 +605,57 @@
                 ],
                 "codelist": "partyScale.csv",
                 "openCodelist": false
+              },
+              "classifications": {
+                "title": "Organization classifications",
+                "description": "The classifications that categorize the organization.",
+                "type": "array",
+                "items": {
+                  "title": "Classification",
+                  "description": "A classification consists of at least two parts: an identifier for the list (scheme) from which the classification is taken, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification.",
+                  "type": "object",
+                  "properties": {
+                    "scheme": {
+                      "title": "Scheme",
+                      "description": "The scheme or codelist from which the classification code is taken, using the open [classificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#classification-scheme) codelist.",
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "codelist": "classificationScheme.csv",
+                      "openCodelist": true
+                    },
+                    "id": {
+                      "title": "ID",
+                      "description": "The classification code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+                      "type": [
+                        "string",
+                        "integer",
+                        "null"
+                      ]
+                    },
+                    "description": {
+                      "title": "Description",
+                      "description": "A textual description or title for the classification code.",
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "uri": {
+                      "title": "URI",
+                      "description": "A URI to uniquely identify the classification code.",
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "format": "uri"
+                    }
+                  }
+                },
+                "uniqueItems": true,
+                "wholeListMerge": true,
+                "minItems": 1
               }
             }
           }
@@ -33388,6 +33439,57 @@
               ],
               "codelist": "partyScale.csv",
               "openCodelist": false
+            },
+            "classifications": {
+              "title": "Organization classifications",
+              "description": "The classifications that categorize the organization.",
+              "type": "array",
+              "items": {
+                "title": "Classification",
+                "description": "A classification consists of at least two parts: an identifier for the list (scheme) from which the classification is taken, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification.",
+                "type": "object",
+                "properties": {
+                  "scheme": {
+                    "title": "Scheme",
+                    "description": "The scheme or codelist from which the classification code is taken, using the open [classificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#classification-scheme) codelist.",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "codelist": "classificationScheme.csv",
+                    "openCodelist": true
+                  },
+                  "id": {
+                    "title": "ID",
+                    "description": "The classification code taken from the scheme. Although an integer is allowed, it is recommended to use a string.",
+                    "type": [
+                      "string",
+                      "integer",
+                      "null"
+                    ]
+                  },
+                  "description": {
+                    "title": "Description",
+                    "description": "A textual description or title for the classification code.",
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "uri": {
+                    "title": "URI",
+                    "description": "A URI to uniquely identify the classification code.",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "format": "uri"
+                  }
+                }
+              },
+              "uniqueItems": true,
+              "wholeListMerge": true,
+              "minItems": 1
             }
           }
         }

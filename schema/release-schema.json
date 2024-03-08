@@ -1429,6 +1429,17 @@
               ],
               "codelist": "partyScale.csv",
               "openCodelist": false
+            },
+            "classifications": {
+              "title": "Organization classifications",
+              "description": "The classifications that categorize the organization.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Classification"
+              },
+              "uniqueItems": true,
+              "wholeListMerge": true,
+              "minItems": 1
             }
           }
         }
