@@ -137,7 +137,7 @@ WHERE
   tender_processes.tender_id = 1;
 ```
 
-The result of the hash calculation is `69a19ab9713d08bc7c54793144997d3a`. As in the previous example, this is appended to the `ocid` to create a globally unique release `.id`. Without a last modified date, the `date` field is set to the date that the release was generated.
+The result of the hash calculation is `69a19ab9713d08bc7c54793144997d3a`. As in the previous example, this is appended to the `ocid` to create a globally unique release `.id`. In the absence of a last modified date, the `date` field is set to the date that the release was generated.
 
 ```{jsoninclude} ../../examples/no_change_history/individual_releases/hashing/tender.json
 :jsonpointer: /releases/0
