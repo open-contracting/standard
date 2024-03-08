@@ -80,15 +80,14 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1210](https://github.com/open-contracting/standard/pull/1210) Add codes from the legal basis extension:
     * 'CELEX'
     * 'LEXML'
-  * [#1218](https://github.com/open-contracting/standard/pull/1218) Add codes from the organization classification extension:
+  * [#1218](https://github.com/open-contracting/standard/pull/1218) [#1679](https://github.com/open-contracting/standard/pull/1679) Add codes from the organization classification extension:
     * 'COFOG'
-  * [#1452](https://github.com/open-contracting/standard/pull/1452) Add 'proClass'.
-  * [#1637](https://github.com/open-contracting/standard/pull/1637) Add 'sdg' and 'sdgTarget'.
-  * [#1679](https://github.com/open-contracting/standard/pull/1679) Add codes from the organization classification extension:
     * 'TED_CA_TYPE'
     * 'TED_CE_ACTIVITY'
     * 'eu-buyer-contracting-type'
     * 'eu-main-activity'
+  * [#1452](https://github.com/open-contracting/standard/pull/1452) Add 'proClass'.
+  * [#1637](https://github.com/open-contracting/standard/pull/1637) Add 'sdg' and 'sdgTarget'.
 
 * `documentType.csv`:
   * Add codes:
