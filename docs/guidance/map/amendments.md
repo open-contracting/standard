@@ -24,7 +24,7 @@ The nature of a change can be made explicit using:
 
 ### Example 1: Tender updates and amendments
 
-This example illustrates how new information, updates and amendments are modelled in OCDS.
+This example illustrates how new information, updates and amendments are modelled in OCDS when publishing a change history using releases and records.
 
 #### Tender release
 
@@ -82,31 +82,29 @@ Contract updates and amendments are modelled in the same way: the 'contract', 'c
 
 ### Example 2: Amendments without a change history
 
-The [change history options guidance](../build/change_history_options.md) explains how to publish releases without storing or publishing a full change history. Depending on the source system, it might still be possible to publish a history of amendments when using this model.
+If you cannot publish a full change history as described in [change history options](../build/change_history_options.md), you might still be able to publish the details of amendments using [individual releases](../build/individual_releases.md).
 
-Where the source system stores a history of amendments, they can be published as separate amendment releases in OCDS. For example, Australia's AusTender platform [stores contract amendments as separate notices, related to the original contract signature notice](https://www.tenders.gov.au/Cn/Show/03a3c53e-b3bd-eac1-558a-4c659e44a516).
+Where the source system stores a history of amendments, a separate release can be published for each amendment, in addition to the release that represents the tender or contract that is amended.
 
-A procurement system stores tenders and amendments in the same table. A buyer publishes an opportunity and subsequently amends its value.
+A procurement system stores tenders and amendments in the same table. `tender_id` is a unique identifier for each contracting process and `amendment_id` is a unique identifier for each amendment. `last_modified` stores the date and time of the last modification to the row.
+
+A buyer publishes an opportunity and subsequently amends its value.
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../examples/amendments/tender_amendment.csv
+:file: ../../examples/amendments/no_change_history.csv
 ```
 
-Each row can be modelled as a separate OCDS release. The first row is represented as a tender release.
+Each row is modelled as a separate OCDS release. The first row is represented as a tender release. `id` is [set to the last modified date](../build/individual_releases.md#last-modified-date) of the tender.
 
-```{jsoninclude} ../../examples/amendments/full_update.json
-:jsonpointer: /records/0/releases/1
-:expand: tag, contracts
-:title: Contract
+```{jsoninclude} ../../examples/amendments/no_change_history.json
+:jsonpointer: /releases/0
+:expand: tag, tender
 ```
 
-The second row is represented as a tender amendment release.
+The second row is represented as a tender amendment release. `id` is again set to the last modified date of the amendment.
 
-```{jsoninclude} ../../examples/amendments/full_update.json
-:jsonpointer: /records/0/releases/2
-:expand: tag, contracts, amendments
-:title: ContractAmendment
+```{jsoninclude} ../../examples/amendments/no_change_history.json
+:jsonpointer: /releases/1
+:expand: tag, tender, amendments
 ```
-
-The advantage of this approach, in contrast with publishing compiled releases only, is that the users have access to the details of each amendment instead of the only the latest values.
