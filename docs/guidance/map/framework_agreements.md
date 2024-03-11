@@ -158,66 +158,65 @@ The following examples show how to model two framework agreements, covering a ra
 
 ### Example 1: Closed framework agreement with single buyer, single supplier and without second-stage competition
 
-NHS National Services Scotland (NSS) wants to establish a framework agreement for the receipt, storage and distribution of seasonal influenza vaccines to general practitioner practices, social care premises, vaccine holding centres and community pharmacies across NHS Scotland.
+NHS National Services Scotland establishes a closed, single-buyer, single-supplier framework agreement for storage and distribution of a seasonal influenza vaccine.
 
 #### Invitation to participate in the first stage of a framework agreement procedure
 
-NSS issues a [contract notice](https://ted.europa.eu/udl?uri=TED:NOTICE:478648-2019:TEXT:EN:HTML) (tender notice), inviting potential suppliers to participate in the framework agreement. The tender notice specifies that the framework agreement is with a single operator. The framework agreement is not open, since the tender notice does not specify that the procurement involves the setting up of a dynamic purchasing system. The framework agreement is for a single buyer, since the tender notice specifies only one contracting authority.
+The buyer invites potential suppliers to participate in the framework agreement.
 
-The notice is modelled as an OCDS release with a `tag` of 'tender' and the following properties:
+An OCDS release describes the opportunity:
 
-* The techniques extension is declared in the package metadata.
-* Since this contracting process is for the set-up of a framework agreement, `tender.techniques.hasFrameworkAgreement` is set to `true`.
-* Since any supplier is able to submit a response to the invitation to participate, `tender.procurementMethod` is set to 'selective'.
-* Since the framework agreement is closed, `tender.expressionOfInterestDeadline` is set to the deadline for responses to the invitation to participate.
-* Since there is only one buyer, `buyer` is set to reference the buyer's object in the `parties` array.
+* `tag` is set to `["tender"]` because this is the first release about the opportunity
+* The release describes the set up of a framework agreement so the techniques extension is declared in the package metadata and `tender.techniques.hasFrameworkAgreement` is set to `true`
+* Only qualified suppliers can respond to the invitation so `tender.procurementMethod` is set to 'selective'
+* The framework agreement is closed so `tender.expressionOfInterestDeadline` is set to the deadline for responses to the invitation
+* There is only one buyer so `buyer` is set to reference the buyer's object in the `parties` array
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_first_stage.json
 :jsonpointer:
-:expand: extensions, releases, tender, buyer, parties, roles
-:title: First Stage
+:expand: extensions, releases, buyer, tender
 ```
 
 #### First-stage selection and addition of a supplier to the framework agreement
 
-NSS issues a [contract award notice](https://ted.europa.eu/udl?uri=TED:NOTICE:268595-2020:TEXT:EN:HTML&src=0) to announce that the framework agreement has been concluded with a single supplier, Movianto UK.
+The buyer concludes the framework agreement with a single supplier.
 
-The notice is modelled as an OCDS release with the same `ocid` as the previous release, a `tag` of 'award', and the following properties:
+An OCDS release describes the selection and addition of the supplier to the framework agreement:
 
-* Since no further suppliers will be added to the framework agreement, `tender.status` is set to 'complete'.
-* An `Award` object is added to the `awards` array.
+* `ocid` is set to the same value as the previous release because the release describes the first stage of the framework agreement
+* `tag` is set `["award"]` because this the first release about the award
+* `tender.status` is set to 'complete' because no further suppliers will be added to the framework agreement
 * An `Organization` object is added to the `parties` array with the supplier's details.
-* An `OrganizationReference` object is added to award's `.suppliers` array to reference the supplier's object in the `parties` array.
+* An `Award` object is added to the `awards` array with a reference to the supplier in `.suppliers`
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_supplier.json
 :jsonpointer:
-:expand: releases, tender, awards, suppliers, parties, roles
-:title: Adding a supplier
+:expand: releases, tag, tender, awards, suppliers
 ```
 
-The first stage of the framework agreement procedure is complete and NSS can now purchase services from the supplier.
+The first stage of the framework agreement procedure is complete and the buyer can now purchase services from the supplier.
 
 #### Award of a procurement contract without second-stage competition
 
-NSS uses the framework agreement to place an order for the supplier to receive and store ten pallets of seasonal flu vaccine. Under the terms of the agreement the cost for this service is £10,000.
+The buyer uses the framework agreement to place an order for the supplier to receive and store ten pallets of seasonal flu vaccine. The order represents the award of a procurement contract at the second stage of the framework agreement procedure.
 
-The order represents the award of a procurement contract at the second stage of the framework agreement procedure.
+An OCDS release describes the order:
 
-Because there was no competition at the second stage, the new contracting process has only one release, with a `tag` of 'award'. The release has the following properties:
-
-* A new `ocid` is used.
-* The `relatedProcesses` section is populated with a reference to the contracting process for the first stage.
-* A minimal `tender` section sets `tender.id` and sets `tender.competitive` to `false`.
-* The `awards` section is populated with the award value, period and items.
-* The `buyer`, `tender.procuringEntity`, `awards.suppliers` and `parties` fields are populated with the details of the buyer, procuring entity and supplier.
+* `ocid` differs from releases describing the first stage of the procedure
+* `tag` is set to `["award"]` because this is the first release describing the award. There is no 'tender' release because there is no competition at the second stage.
+* `relatedProcesses` links to the contracting process for the first stage of the procedure
+* `tender.competitive` is set to `false` because there is no competition at the second stage and the [Competitive](https://extensions.open-contracting.org/en/extensions/competitive/master/) extension is declared in the package metadata
+* `tender.id` is set to the same value as `awards.id`
+* The `awards` section is populated with the details of the order
+* The `buyer`, `awards.suppliers` and `parties` fields are populated with the details of the buyer and and supplier
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_award.json
 :jsonpointer:
-:expand: releases, tender, buyer, procuringEntity, awards, suppliers, parties, roles, relatedProcesses, relationship
+:expand: extension, releases, buyer, tender, awards, suppliers, relatedProcesses, relationship
 :title: Award of a procurement contract
 ```
 
-Each additional purchase made under the framework agreement is represented by a new contracting process with a new `ocid`.
+Each subsequent purchase made under the framework agreement would be represented by a new contracting process with a new `ocid`.
 
 ### Example 2: Open framework agreement with multiple buyers, with multiple suppliers and with second-stage competition
 
