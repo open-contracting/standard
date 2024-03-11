@@ -251,7 +251,7 @@ An OCDS release describes the selection and addition of the supplier to the fram
 * `tag` is set `["award"]` because this the first release about the award
 * `tender.status` remains 'active' because further suppliers can be added to the framework agreement
 * An `Organization` object is added to the `parties` array for each supplier
-* An `Award` object is added to the `awards` array with references to the suppliers in `.suppliers`
+* An `Award` object is added to the `awards` array for each supplier with a reference to the supplier in `.suppliers`
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_supplier.json
 :jsonpointer:
