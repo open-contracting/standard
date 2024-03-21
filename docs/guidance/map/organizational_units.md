@@ -4,35 +4,38 @@
 
 # Organizational units
 
-For some use cases, publishers might need to disclose the organizational units involved in the contracting (or planning) process, e.g agency branches or divisions.
+Publishers sometimes need to disclose an organizational unit that is involved in a contracting (or planning) process, like a branch or division of a government agency.
 
-There is more than one approach to model organizational units in OCDS:
+The preferred approach to modelling organization units in OCDS is to use the fields in the [`Organization` object](../../schema/reference.md#organization):
 
-1. **Use the fields and blocks available in the Organization building block**. This is the preferred approach, when possible. 
+* Set `.name` to `{organization name}-{unit name}`.
+* Set `.identifier` to the organization's identifier. That is, the identifier of the legal entity of which the unit is a part.
+* If the unit has a separate identifier to the organization:
+  * Set `.id` to `{identifier.scheme}-{identifier.id}-{unit identifier}`.
+  * Add the unit's identifier to `additionalIdentifiers`. Note that `.additionalIdentifiers` need to reference the same legal entity as `.identifier`.
+* Set `address` and `contactPoint` to the unit's address and contact point, respectively.
 
-    * Unit names can be included in the `name` field alongside the organization name. 
-    * The `additionalIdentifiers` array can be used to provide any unit identifiers. It is important to note that `identifier` and `additionalIdentifiers` need to point toward the *same legal entity*. The main `identifier` ought to belong to the organization and the `legalName` field can be used to provide the organization name alone. 
-    * The `address` and `contactPoint` blocks can be filled with the unit information. 
-    * Unit identifiers can also be appended to `parties/id`.
+If the fields in the `Organization` object are not sufficient to express your data, you can use or create an extension to add fields to the `parties.details` object.
 
-2. When the first option is not enough to model the publisher's case, **use or create an extension**. Any additional fields can be placed in the `details` section of the Organization building block.
-
-Some publishers use the [memberOf](https://github.com/open-contracting-extensions/ocds_memberOf_extension) extension to represent organization hierarchies, including organizational units. This is strongly discouraged unless there is a clear use case to support it, because OCDS is not designed to disclose hierarchical organization information. Ideally, organizational hierarchies would be represented in separate, non-OCDS datasets, and organizational units would be modelled using one of the alternatives described above. 
+Disclosing organizational hierarchies in OCDS is strongly discouraged unless there is a clear use case to support it. Ideally, organizational hierarchies ought to be represented in separate, non-OCDS datasets that use the same organization and unit identifiers. To design a hierarchy-oriented dataset, refer to the [W3C Organization Ontology](https://www.w3.org/TR/vocab-org/). However, if you need to represent organizational hierarchies in OCDS, you can use the [memberOf extension](https://github.com/open-contracting-extensions/ocds_memberOf_extension).
 
 ## Worked examples
 
-### 1. Using the Organization building block
+### 1. Using the Organization object
 
-In Honduras, the Ministry of Health is planning the procurement of food supplies for the San Felipe Hospital. For the purposes of the example, San Felipe Hospital is considered to be a unit belonging to the Ministry of Health, and it is not a legal entity of its own.
+In Honduras, San Felipe Hospital announces a planning process for the purchase of food supplies. The hospital is a unit of the Ministry of Health (Secretaría de Salud Pública) and is not a separate legal entity.
 
-In the release below, the publisher adds the hospital name at the end of the procuring entity name. The main identifier for the organization (*Secretaría de Salud Pública*) is extracted from a local list in the "HonduCompras" platform, used to publish procurement information in the country.
+The hospital is listed in the `parties` section with:
 
-An identifier for the hospital has been added using the "HN-ONCAE-UNIT" list code. The `address` and `contactPoint` information belongs to the hospital only.
+* `.id` is set to `{identifier.scheme}-{identifier.id}-{unit identifier}`: HN-ONCAE-H1-10001-102
+* `.name` set to `{organization name}-{unit name}`: Secretaría de Salud Pública - Hospital San Felipe
+* `.identifier` set to the identifier for the legal entity to which the organizational unit belongs, the Ministry of Health.
+* the identifier for the organizational unit is listed in `.additionalIdentifiers`.
+* `address` and `contactPoint` are set to the address and contact point of the hospital.
 
 ```{jsoninclude} ../../examples/organizations/organizational_units/honduras_organization_identifier_scheme.json
-:jsonpointer:
-:expand: releases, parties, identifier, additionalIdentifiers
-:title: release
+:jsonpointer: /releases/0/parties/0
+:expand: parties, identifier, additionalIdentifiers
 ```
 
 ### 2. Defining a new Extension
@@ -63,24 +66,30 @@ The branch name (*Chişinău Branch*) is appended at the end of the name of the 
 
 The `extension.json` and `release-schema.json` files for the Division code extension can be displayed using the combo box above the JSON example. Instructions on how to create an OCDS extension can be found [here](https://github.com/open-contracting/standard_extension_template).
 
-### 3. Using the Organization building block with an organizational hierarchy
+### 3. Publishing a separate organizational hierarchy dataset
 
-The *Hospital de Clínicas* is planning to procure supplies for their Blood Center. The Hospital is part of the Medical School in the National University of Asuncion. Since the hospital is key in the provision of healthcare for low income groups in the community, it is in the interest of many to clearly identify the procurement of the Hospital only. It is also important for the publisher that users can group the data following organizational hierarchies.
+In Paraguay, the Hospital Clinic (Hospital de Clínicas) is an organizational unit of the Faculty of Medical Sciences (Facultad de Ciencias Médicas) at the National University of Asuncion (Universidad Nacional de Asunción). The hospital is part of the same legal entity as the faculty, but the faculty is a separate legal entity from the university.
 
-It is important to note that OCDS ought to not be used to publish organizational hierarchies unless there is a strong case to support it. Organizational hierarchies can be disclosed in additional datasets. Publishers can refer to the [W3C Organization Ontology](https://www.w3.org/TR/vocab-org/) to design a hierarchy-oriented dataset.
+Users need to analyse procurement at hospital, faculty and university level. To serve that needs, Paraguay publishes an OCDS dataset and a separate organizational hierarchy dataset.
 
-The release below shows how the publisher chooses to model the hospital as an organizational unit of the Medical School (*Facultad de Ciencias Médicas*). The source systems collect the name of the organizational unit only, and this is appended to the organization name.
+In the OCDS dataset, the hospital is listed in `parties` section with:
+
+* `.name` set to `{organization name}-{unit name}`: Facultad de Ciencias Médicas - Hospital de Clínicas
+* `.identifier` set to the Faculty of Medical Sciences' identifier
+
+Users can group by `.name` to identify the hospital's contracting processes and by `.identifier` to identify the faculty's contracting processes.
 
 ```{jsoninclude} ../../examples/organizations/organizational_units/paraguay_organization_name.json
-:jsonpointer:
-:expand: releases, tag, parties, identifier
+:jsonpointer: /releases/0/parties/0
+:expand: identifier
 :title: release
 ```
 
-In a separate dataset, the publisher discloses the organizational hierarchy. This dataset, in combination with the OCDS publication,  would allow users to summarize contracting information. The table below shows an extract of the dataset.
+The organizational hierarchy dataset describes the relationship between the faculty and the university. It uses the same organization identifiers as the OCDS dataset.
+
+Users can use the organization identifiers to join the dataset and identify the university's contracting processes.
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../examples/organizations/organizational_units/paraguay_organizations.csv
 ```
-
