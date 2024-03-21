@@ -17,11 +17,11 @@ If you choose not to register an organization list with org-id.guide, you ought 
 
 A publisher in the United Kingdom collects [Companies House](https://www.gov.uk/government/organisations/companies-house) numbers as its primary organization identifiers for suppliers.
 
-A buyer awards a contract to IBM. In IBM's entry in the `parties` array, `.identifier.scheme` is set to the org-id scheme prefix for Companies House ([GB-COH](http://org-id.guide/list/GB-COH)) and `.identifier.id` is set to IBM's Companies House number (04336774).
+A buyer awards a contract to IBM. The supplier is listed in the `parties` array with 'supplier' in `.roles`. `.identifier.scheme` is set to the org-id scheme prefix for Companies House ([GB-COH](http://org-id.guide/list/GB-COH)) and `.identifier.id` is set to IBM's Companies House number (04336774).
 
 ```{jsoninclude} ../../examples/organizations/identifiers.json
 :jsonpointer: /releases/0/parties/0
-:expand: identifier
+:expand: identifier, roles
 ```
 
 The publisher also collects an additional identifier: A VAT identification number.
