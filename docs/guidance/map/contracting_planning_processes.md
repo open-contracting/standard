@@ -33,3 +33,25 @@ We recommend publishing data about planning and contracting processes under sepa
 ```{note}
 In OCDS 1.2 and earlier, it is not possible to publish all information about multi-stage procedures under a single `ocid`. There is guidance on how to deal with this for [framework agreements](framework_agreements) and for [pre-qualification and pre-selection](pre-qualification). If you want to disclose this type of information (including other types of multi-stage procedures, such as competitive dialogues and innovation partnerships), [contact the Data Support Team](../../support/index). The approach to modelling multi-stage procedures in a future, backwards-incompatible version of the standard is under discussion on [GitHub](https://github.com/open-contracting/standard/issues/440).
 ```
+
+## Example
+
+This example illustrates how to model planning and contracting processes.
+
+A buyer announces a planning process for the purchase of office supplies.
+
+The process is assigned an `ocid` of "ocds-213czf-0000" and `.tag` is set to `["planning"]` to indicate that the release concerns a planning process. The `planning` object contains information about budget planning and the `tender` object contains information about the needed items.
+
+```{jsoninclude} ../../examples/contracting_planning_processes/planning.json
+:jsonpointer: /releases/0
+:expand: releases, planning, tender
+```
+
+Following the completion of the planning process, the buyer initiates a contracting process to purchase the office supplies.
+
+The new process is assigned a new `ocid` of "ocds-213czf-0001" and `.tag` is set to `["tender"]` to indicate that the release concerns a contracting process. The `tender` object contains information about the needed items. The planning process is referenced in `relatedProcesses`.
+
+```{jsoninclude} ../../examples/contracting_planning_processes/contracting.json
+:jsonpointer: /releases/0
+:expand: releases, tender, relatedProcesses
+```
