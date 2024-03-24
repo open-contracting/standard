@@ -168,7 +168,7 @@ An OCDS release describes the opportunity:
 
 * `tag` is set to `["tender"]` because this is the first release about the opportunity
 * The release describes the set up of a framework agreement so the techniques extension is declared in the package metadata and `tender.techniques.hasFrameworkAgreement` is set to `true`
-* Only qualified suppliers can respond to the invitation so `tender.procurementMethod` is set to 'selective'
+* Whilst any supplier can submit a request to participate, only qualified suppliers can submit a proposal, so `tender.procurementMethod` is set to 'selective'
 * The framework agreement is closed so `tender.expressionOfInterestDeadline` is set to the deadline for responses to the invitation
 * There is only one buyer so `buyer` is set to reference the buyer's object in the `parties` array
 
@@ -230,7 +230,7 @@ An OCDS release describes the opportunity:
 
 * `tag` is set to `["tender"]` because this is the first release about the opportunity
 * The release describes the set up of a framework agreement so the techniques extension is declared in the package metadata and `tender.techniques.hasFrameworkAgreement` is set to `true`
-* Only qualified suppliers can respond to the invitation so `tender.procurementMethod` is set to 'selective'
+* Whilst any supplier can submit a request to participate, only qualified suppliers can submit a proposal, so `tender.procurementMethod` is set to 'selective'
 * The framework agreement is open (a dynamic purchasing system) so `tender.expressionOfInterestDeadline` is set to the last date that new suppliers can be added
 * There are two buyers so `buyer` is omitted and both buyers are listed in `parties`
 * `tender.procuringEntity` is set to the organization that manages the contracting process: Chile Compra
