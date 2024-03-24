@@ -16,7 +16,7 @@ To link a new process to the previous attempt at procuring the same items, you o
 
 This example illustrates how to model failed and restarted contracting processes in OCDS.
 
-A buyer attempts to purchase office supplies by announcing an opportunity. The contracting process is assigned an `ocid` of 'ocds-213czf-0001'.
+A buyer attempts to purchase office supplies by announcing an opportunity. The contracting process is assigned an `ocid` of 'ocds-213czf-0000'.
 
 ```{jsoninclude} ../../examples/unsuccessful_tender/tender.json
 :jsonpointer: /releases/0
@@ -30,7 +30,7 @@ The attempt is unsuccessful so the buyer sets `tender.status` to 'unsuccessful'.
 :expand: releases, tender
 ```
 
-The buyer announces a second opportunity to purchase the same item. The new contracting process is assigned an `ocid` of 'ocds-213czf-0002'. The failed attempt is recorded in `.relatedProcesses`.
+The buyer announces a second opportunity to purchase the same item. The new contracting process is assigned a new `ocid` of 'ocds-213czf-0001'. The failed attempt is recorded in `.relatedProcesses`.
 
 ```{jsoninclude} ../../examples/unsuccessful_tender/new_tender.json
 :jsonpointer: /releases/0
