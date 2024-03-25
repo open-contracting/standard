@@ -288,10 +288,6 @@ The procurement category codelist is used to indicate the **primary** focus of a
 ```{deprecated} 1.2
 ```
 
-```{versionchanged} 1.2
-Added the 'terminatedEarly' and 'terminatedSuccessfully' codes.
-```
-
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../build/current_lang/codelists/contractStatus.csv
