@@ -44,7 +44,7 @@ The publisher creates a new OCDS release with the 'tenderUpdate' tag.
 
 The previous release is not changed. In the new release, the publisher adds a link to the new document in the `tender.documents` section. The `tender.hasEnquiries` field is also set to true. The publisher has decided to keep unchanged fields from the previous releases in the new one.
 
-The record now has two immutable releases, and updated compiled and versioned releases. Note that the compiled release includes the enquiries document in the tender section. The versioned release has a new entry for the `tender.hasEnquiries` field.
+The record now has two immutable releases, and updated compiled and versioned releases. The compiled release now includes the enquiries document in the tender section. The versioned release has a new entry for the `tender.hasEnquiries` field.
 
 ```{jsoninclude} ../../examples/change_history/tenderUpdate.json
 :jsonpointer: /releases
@@ -140,7 +140,9 @@ Unexpected complications causes delays in the construction work. Because of them
 
 The publisher updates their procurement system with the new contract value and period. They issue a modification notice through the system. They also create a new OCDS with the 'contractAmendment' tag to represent the notice.
 
-Note that contract amendments in OCDS involves more modelling considerations. Refer to the amendments worked example for guidance on the topic.
+```{note}
+Contract amendments in OCDS involves more modelling considerations. See the [amendments example](../map/amendments).
+```
 
 The publisher updates the record for the contracting process with the new release. The compiled release has the new values. The versioned release has new entries for the contract's value and end date.
 
