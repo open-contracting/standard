@@ -4,7 +4,7 @@
 
 # Connecting releases from different publications
 
-Different OCDS publications can contain releases describing the same contracting (or planning) process. In OCDS, each contracting or planning process is assigned a globally unique identifier, the [OCID](../../schema/identifiers.md#open-contracting-process-identifier-ocid). Ideally, releases describing the same contracting or planning process in different publications would reuse the same OCID so that users can [merge releases](../../schema/merging.md).
+Different OCDS publications can contain releases describing the same contracting (or planning) process. In OCDS, each contracting (or planning) process is assigned a globally unique identifier, the [OCID](../../schema/identifiers.md#open-contracting-process-identifier-ocid). Ideally, releases describing the same contracting (or planning) process in different publications would reuse the same OCID so that users can [merge releases](../../schema/merging.md).
 
 This page describes the problems that can occur when reusing OCIDs across publications, how to connect releases from different publications without reusing OCIDs, and how to reuse OCIDs across publications.
 
