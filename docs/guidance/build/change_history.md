@@ -44,7 +44,7 @@ The publisher creates a new OCDS release with the 'tenderUpdate' tag.
 
 The previous release is not changed. In the new release, the publisher adds a link to the new document in the `tender.documents` section. The `tender.hasEnquiries` field is also set to true. The publisher has decided to keep unchanged fields from the previous releases in the new one.
 
-The record now has two immutable releases, and updated compiled and versioned releases. Note that the compiled release includes the enquiries document in the tender section. Also, the field `tender.hasEnquiries` has more than one entry in the versioned release.
+The record now has two immutable releases, and updated compiled and versioned releases. Note that the compiled release includes the enquiries document in the tender section. The versioned release has a new entry for the `tender.hasEnquiries` field.
 
 ```{jsoninclude} ../../examples/change_history/tenderUpdate.json
 :jsonpointer: /releases
@@ -86,7 +86,7 @@ By law, the procuring entity has to wait for complaints for a given period of ti
 
 The publisher creates a new OCDS release using the 'contract' tag. They include all the relevant information in the `contracts` section.
 
-The record gets updated to include the new release. The compiled and versioned release now have the new `contract` section. There are no updates to other sections.
+The record gets updated to include the new release. The compiled and versioned releases now set the `contracts` section. There are no updates to other sections.
 
 ```{jsoninclude} ../../examples/change_history/contract.json
 :jsonpointer: /releases
@@ -120,7 +120,7 @@ Because the new release uses the same `ocid`, it is possible to update the recor
 OCDS can be used to combine data from different systems. For more information refer to the guidance on system architectures.
 ```
 
-The publisher adds the new release from the finance system to the releases list in the OCDS record. The compiled and versioned releases get updated to include the new transaction.
+The publisher adds the new release from the finance system to the releases list in the OCDS record. The compiled and versioned releases now set the transaction.
 
 ```{jsoninclude} ../../examples/change_history/implementation.json
 :jsonpointer: /releases
@@ -142,7 +142,7 @@ The publisher updates their procurement system with the new contract value and p
 
 Note that contract amendments in OCDS involves more modelling considerations. Refer to the amendments worked example for guidance on the topic.
 
-The publisher updates the record for the contracting process with the new release. The compiled release has the new values. The versioned release shows new entries for the contract's value and end date.
+The publisher updates the record for the contracting process with the new release. The compiled release has the new values. The versioned release has new entries for the contract's value and end date.
 
 ```{jsoninclude} ../../examples/change_history/contractAmendment.json
 :jsonpointer: /releases
