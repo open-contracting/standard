@@ -102,7 +102,6 @@ map/unsuccessful_processes
 map/framework_agreements
 map/pre-qualification
 map/awards_contracts
-map/contract_suspension
 map/electronic_catalogues
 map/amendments
 map/milestones

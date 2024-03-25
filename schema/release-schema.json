@@ -248,9 +248,25 @@
             "deprecatedVersion": "1.2"
           }
         },
-        "statusDetails": {
-          "title": "Status details",
-          "description": "Additional details on the status of the tender. This field can be used to provide the local name of the status.",
+        "finalStatus": {
+          "title": "Final status",
+          "description": "The final status of the tender, using the closed [tenderFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#tender-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "tenderFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "complete",
+            "cancelled",
+            "unsuccessful",
+            null
+          ]
+        },
+        "finalStatusDetails": {
+          "title": "Final status details",
+          "description": "Additional details on the final status of the tender. This field can be used to provide the local name of the final status.",
           "type": [
             "string",
             "null"
@@ -397,7 +413,7 @@
         },
         "datePublished": {
           "title": "Date published",
-          "description": "The date on which the tender was published.",
+          "description": "The date on which the contracting documents (for example, procurement documents) were published.",
           "type": [
             "string",
             "null"
@@ -514,7 +530,7 @@
           "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favor of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -574,9 +590,25 @@
             "deprecatedVersion": "1.2"
           }
         },
-        "statusDetails": {
-          "title": "Status details",
-          "description": "Additional details on the status of the award. This field can be used to provide the local name of the status.",
+        "finalStatus": {
+          "title": "Final status",
+          "description": "The final status of the award, using the closed [awardFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#award-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "awardFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "complete",
+            "cancelled",
+            "unsuccessful",
+            null
+          ]
+        },
+        "finalStatusDetails": {
+          "title": "Final status details",
+          "description": "Additional details on the final status of the award. This field can be used to provide the local name of the final status.",
           "type": [
             "string",
             "null"
@@ -661,7 +693,7 @@
           "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favor of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -741,9 +773,26 @@
             "deprecatedVersion": "1.2"
           }
         },
-        "statusDetails": {
-          "title": "Status details",
-          "description": "Additional details on the status of the contract. This field can be used to provide the local name of the status.",
+        "finalStatus": {
+          "title": "Final status",
+          "description": "The final status of the contract, using the closed [contractFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#contract-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "contractFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "complete",
+            "incomplete",
+            "cancelled",
+            "unsuccessful",
+            null
+          ]
+        },
+        "finalStatusDetails": {
+          "title": "Final status details",
+          "description": "Additional details on the final status of the contract. This field can be used to provide the local name of the final status.",
           "type": [
             "string",
             "null"
@@ -836,7 +885,7 @@
           "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favor of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
