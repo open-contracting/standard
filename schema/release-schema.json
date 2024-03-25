@@ -248,9 +248,25 @@
             "deprecatedVersion": "1.2"
           }
         },
-        "statusDetails": {
-          "title": "Status details",
-          "description": "Additional details on the status of the tender. This field can be used to provide the local name of the status.",
+        "finalStatus": {
+          "title": "Final status",
+          "description": "The final status of the tender, using the closed [tenderFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#tender-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "tenderFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "complete",
+            "cancelled",
+            "unsuccessful",
+            null
+          ]
+        },
+        "finalStatusDetails": {
+          "title": "Final status details",
+          "description": "Additional details on the final status of the tender. This field can be used to provide the local name of the final status.",
           "type": [
             "string",
             "null"
@@ -397,7 +413,7 @@
         },
         "datePublished": {
           "title": "Date published",
-          "description": "The date on which the tender was published.",
+          "description": "The date on which the contracting documents (for example, procurement documents) were published.",
           "type": [
             "string",
             "null"
@@ -446,18 +462,12 @@
         "exclusionGrounds": {
           "title": "Exclusion grounds",
           "description": "The criteria regarding the situation of a tenderer that can lead to its exclusion from the contracting process. For example: criminal convictions, bankruptcy, presence on a blacklist or failure to pay taxes.",
-          "type": [
-            "string",
-            "null"
-          ]
+          "$ref": "#/definitions/ExclusionGrounds"
         },
         "selectionCriteria": {
           "title": "Selection criteria",
           "description": "The minimum requirements for potential suppliers to participate in the contracting process. Selection criteria ensure that a potential supplier has the legal and financial capacities and the technical and professional abilities to perform the contract.",
-          "type": [
-            "string",
-            "null"
-          ]
+          "$ref": "#/definitions/SelectionCriteria"
         },
         "awardPeriod": {
           "title": "Evaluation and award period",
@@ -520,7 +530,7 @@
           "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favor of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -580,9 +590,25 @@
             "deprecatedVersion": "1.2"
           }
         },
-        "statusDetails": {
-          "title": "Status details",
-          "description": "Additional details on the status of the award. This field can be used to provide the local name of the status.",
+        "finalStatus": {
+          "title": "Final status",
+          "description": "The final status of the award, using the closed [awardFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#award-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "awardFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "complete",
+            "cancelled",
+            "unsuccessful",
+            null
+          ]
+        },
+        "finalStatusDetails": {
+          "title": "Final status details",
+          "description": "Additional details on the final status of the award. This field can be used to provide the local name of the final status.",
           "type": [
             "string",
             "null"
@@ -667,7 +693,7 @@
           "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favor of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -747,9 +773,26 @@
             "deprecatedVersion": "1.2"
           }
         },
-        "statusDetails": {
-          "title": "Status details",
-          "description": "Additional details on the status of the contract. This field can be used to provide the local name of the status.",
+        "finalStatus": {
+          "title": "Final status",
+          "description": "The final status of the contract, using the closed [contractFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#contract-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "contractFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "complete",
+            "incomplete",
+            "cancelled",
+            "unsuccessful",
+            null
+          ]
+        },
+        "finalStatusDetails": {
+          "title": "Final status details",
+          "description": "Additional details on the final status of the contract. This field can be used to provide the local name of the final status.",
           "type": [
             "string",
             "null"
@@ -842,7 +885,7 @@
           "description": "The use of individual amendment objects has been deprecated. From OCDS 1.1 information should be provided in the amendments array.",
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favor of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -1435,6 +1478,17 @@
               ],
               "codelist": "partyScale.csv",
               "openCodelist": false
+            },
+            "classifications": {
+              "title": "Organization classifications",
+              "description": "The classifications that categorize the organization.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Classification"
+              },
+              "uniqueItems": true,
+              "wholeListMerge": true,
+              "minItems": 1
             }
           }
         }
@@ -2589,6 +2643,40 @@
           ]
         }
       }
+    },
+    "ExclusionGrounds": {
+      "title": "Exclusion grounds",
+      "description": "The criteria regarding the situation of a tenderer that can lead to its exclusion from the contracting process. For example: criminal convictions, bankruptcy, presence on a blacklist or failure to pay taxes.",
+      "type": "object",
+      "properties": {
+        "description": {
+          "title": "Description",
+          "description": "The description of the criteria.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "SelectionCriteria": {
+      "title": "Selection criteria",
+      "description": "The minimum requirements for potential suppliers to participate in the contracting process. Selection criteria ensure that a potential supplier has the legal and financial capacities and the technical and professional abilities to perform the contract.",
+      "type": "object",
+      "properties": {
+        "description": {
+          "title": "Description",
+          "description": "The description of the criteria.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
     }
   }
 }

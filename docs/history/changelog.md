@@ -80,8 +80,12 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1210](https://github.com/open-contracting/standard/pull/1210) Add codes from the legal basis extension:
     * 'CELEX'
     * 'LEXML'
-  * [#1218](https://github.com/open-contracting/standard/pull/1218) Add codes from the organization classification extension:
+  * [#1218](https://github.com/open-contracting/standard/pull/1218) [#1679](https://github.com/open-contracting/standard/pull/1679) Add codes from the organization classification extension:
     * 'COFOG'
+    * 'TED_CA_TYPE'
+    * 'TED_CE_ACTIVITY'
+    * 'eu-buyer-contracting-type'
+    * 'eu-main-activity'
   * [#1452](https://github.com/open-contracting/standard/pull/1452) Add 'proClass'.
   * [#1637](https://github.com/open-contracting/standard/pull/1637) Add 'sdg' and 'sdgTarget'.
 
@@ -185,12 +189,14 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * Add new fields:
   * [#1335](https://github.com/open-contracting/standard/pull/1335) `planning.id`
   * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
+  * [#1296](https://github.com/open-contracting/standard/pull/1296) [#1674](https://github.com/open-contracting/standard/pull/1674) `tender.exclusionGrounds`
   * [#1669](https://github.com/open-contracting/standard/pull/1669) `tender.expressionOfInterestDeadline`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `tender.identifiers`
+  * [#1237](https://github.com/open-contracting/standard/pull/1237) [#1674](https://github.com/open-contracting/standard/pull/1674) `tender.selectionCriteria`
   * [#1654](https://github.com/open-contracting/standard/pull/1654) `tender.submissionTerms.electronicSubmissionPolicy`
   * [#1421](https://github.com/open-contracting/standard/pull/1421) `tender.standstillPeriod`
   * [#1492](https://github.com/open-contracting/standard/pull/1492) `awards.datePublished`
-  * [#1165](https://github.com/open-contracting/standard/pull/1165) `statusDetails` to `Tender`, `Award` and `Contract`
+  * [#1648](https://github.com/open-contracting/standard/pull/1648) `finalStatus` and `finalStatusDetails` to `Tender`, `Award` and `Contract`
   * [#1208](https://github.com/open-contracting/standard/pull/1326) The estimated and maximum values of framework agreeemnts:
     * `tender.maximumValue`. Previously, `tender.value` was used for the maximum value. However, this led to double-counting.
     * `awards.maximumValue`. Previously, `awards.value` was used for the maximum value. However, this led to double-counting.
@@ -208,6 +214,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `SimpleIdentifier`
   * [#1519](https://github.com/open-contracting/standard/pull/1519) `Value.amountNet` and `Value.amountGross`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `contracts.identifiers`
+  * [#1679](https://github.com/open-contracting/standard/pull/1679) `Organization.details.classifications`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
@@ -327,11 +334,9 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1618](https://github.com/open-contracting/standard/pull/1618) Add conformance rule about normative statements.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) Remove validator and application conformance rules.
 * Examples
-  * Add examples:
-    * [#1344](https://github.com/open-contracting/standard/pull/1344) Contract suspension
-    * [#1665](https://github.com/open-contracting/standard/pull/1665) Translations
-  * [#1466](https://github.com/open-contracting/standard/pull/1466) Reference examples in release and record reference documentation.
+  * [#1665](https://github.com/open-contracting/standard/pull/1665) Add translations example.
   * [#1466](https://github.com/open-contracting/standard/pull/1482) Add examples in release reference documentation.
+  * [#1466](https://github.com/open-contracting/standard/pull/1466) Reference examples in release and record reference documentation.
 
 ## [1.1.5] - 2020-08-20
 
@@ -351,7 +356,6 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * [#969](https://github.com/open-contracting/standard/pull/969) Clarify the instruction for setting the `Unit.id` field.
 * [#995](https://github.com/open-contracting/standard/pull/995) Clarify the instruction for setting the `Release.date` field.
 * [#996](https://github.com/open-contracting/standard/pull/996) Fix a typo in the `versionedRelease` field.
-* [#1237](https://github.com/open-contracting/standard/pull/1237) Add `Tender.selectionCriteria`.
 
 ### Documentation
 
