@@ -337,11 +337,9 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1618](https://github.com/open-contracting/standard/pull/1618) Add conformance rule about normative statements.
   * [#1618](https://github.com/open-contracting/standard/pull/1618) Remove validator and application conformance rules.
 * Examples
-  * Add examples:
-    * [#1344](https://github.com/open-contracting/standard/pull/1344) Contract suspension
-    * [#1665](https://github.com/open-contracting/standard/pull/1665) Translations
-  * [#1466](https://github.com/open-contracting/standard/pull/1466) Reference examples in release and record reference documentation.
+  * [#1665](https://github.com/open-contracting/standard/pull/1665) Add translations example.
   * [#1466](https://github.com/open-contracting/standard/pull/1482) Add examples in release reference documentation.
+  * [#1466](https://github.com/open-contracting/standard/pull/1466) Reference examples in release and record reference documentation.
 
 ## [1.1.5] - 2020-08-20
 
