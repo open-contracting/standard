@@ -21,7 +21,7 @@ Disclosing organizational hierarchies in OCDS is strongly discouraged unless the
 
 ## Worked examples
 
-### 1. Using the Organization object
+### Using the Organization object
 
 San Felipe Hospital in Honduras announces a planning process for the purchase of food supplies. The hospital is a unit of the Ministry of Health (Secretaría de Salud Pública) and is not a separate legal entity.
 
@@ -38,35 +38,7 @@ The hospital is listed in the `parties` section and:
 :expand: parties, identifier, additionalIdentifiers
 ```
 
-### 2. Defining a new Extension
-
-In Moldova, the national procurement agency needs to include a division code for particular organizations. Since divisions can be separate legal entities in some cases, the publisher chooses to use the `identifier` block to point to the main organization for all cases, and use an additional field to provide the division code that enables data users to locate the departments and branches involved.
-
-In the release below, a branch of the Bank of Moldova announces a contract opportunity for the provision of consumables for electrical appliances.
-
-```{jsoninclude} ../../examples/organizations/organizational_units/moldova_organization_extension.json
-:jsonpointer:
-:expand: releases, parties, identifier, additionalIdentifiers, details
-:title: release
-```
-
-```{jsoninclude} ../../examples/organizations/organizational_units/ocds_divisionCode_extension/extension.json
-:jsonpointer:
-:expand: name, description, schemas, compatibility
-:title: extension
-```
-
-```{jsoninclude} ../../examples/organizations/organizational_units/ocds_divisionCode_extension/release-schema.json
-:jsonpointer:
-:expand: definitions, Organization, properties, details, properties, divisionCode
-:title: release-schema
-```
-
-The branch name (*Chişinău Branch*) is appended at the end of the name of the buyer. A new extension called "Division code" has been defined to add the `divisionCode` field in the `parties/details` section. The branch code in the example is "101".
-
-The `extension.json` and `release-schema.json` files for the Division code extension can be displayed using the combo box above the JSON example. Instructions on how to create an OCDS extension can be found [here](https://github.com/open-contracting/standard_extension_template).
-
-### 3. Publishing a separate organizational hierarchy dataset
+### Publishing a separate organizational hierarchy dataset
 
 The Hospital Clinic (Hospital de Clínicas) in Paraguay is an organizational unit of the Faculty of Medical Sciences (Facultad de Ciencias Médicas) at the National University of Asuncion (Universidad Nacional de Asunción). The hospital is part of the same legal entity as the faculty, but the faculty is a separate legal entity from the university.
 
