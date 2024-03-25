@@ -248,6 +248,30 @@
             "deprecatedVersion": "1.2"
           }
         },
+        "finalStatus": {
+          "title": "Final status",
+          "description": "The final status of the tender, using the closed [tenderFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#tender-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "tenderFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "complete",
+            "cancelled",
+            "unsuccessful",
+            null
+          ]
+        },
+        "finalStatusDetails": {
+          "title": "Final status details",
+          "description": "Additional details on the final status of the tender. This field can be used to provide the local name of the final status.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "procuringEntity": {
           "title": "Procuring entity",
           "description": "The organization managing the contracting (or planning) process. If an organization is both a buyer and a procuring entity (as can be the case in simple contracting processes), it should be disclosed using the buyer field, but not this field.",
@@ -509,30 +533,6 @@
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
-        },
-        "finalStatus": {
-          "title": "Final status",
-          "description": "The final status of the tender, using the closed [tenderFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#tender-final-status) codelist.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "codelist": "tenderFinalStatus.csv",
-          "openCodelist": false,
-          "enum": [
-            "complete",
-            "cancelled",
-            "unsuccessful",
-            null
-          ]
-        },
-        "finalStatusDetails": {
-          "title": "Final status details",
-          "description": "Additional details on the final status of the tender. This field can be used to provide the local name of the final status.",
-          "type": [
-            "string",
-            "null"
-          ]
         }
       }
     },
@@ -589,6 +589,30 @@
             "description": "This field is deprecated, because the same information can be provided by filling in the relevant date fields.",
             "deprecatedVersion": "1.2"
           }
+        },
+        "finalStatus": {
+          "title": "Final status",
+          "description": "The final status of the award, using the closed [awardFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#award-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "awardFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "complete",
+            "cancelled",
+            "unsuccessful",
+            null
+          ]
+        },
+        "finalStatusDetails": {
+          "title": "Final status details",
+          "description": "Additional details on the final status of the award. This field can be used to provide the local name of the final status.",
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "date": {
           "title": "Award date",
@@ -672,30 +696,6 @@
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
-        },
-        "finalStatus": {
-          "title": "Final status",
-          "description": "The final status of the award, using the closed [awardFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#award-final-status) codelist.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "codelist": "awardFinalStatus.csv",
-          "openCodelist": false,
-          "enum": [
-            "complete",
-            "cancelled",
-            "unsuccessful",
-            null
-          ]
-        },
-        "finalStatusDetails": {
-          "title": "Final status details",
-          "description": "Additional details on the final status of the award. This field can be used to provide the local name of the final status.",
-          "type": [
-            "string",
-            "null"
-          ]
         }
       }
     },
@@ -772,6 +772,31 @@
             "description": "This field is deprecated, because the same information can be provided by filling in the relevant date fields.",
             "deprecatedVersion": "1.2"
           }
+        },
+        "finalStatus": {
+          "title": "Final status",
+          "description": "The final status of the contract, using the closed [contractFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#contract-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "contractFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "complete",
+            "incomplete",
+            "cancelled",
+            "unsuccessful",
+            null
+          ]
+        },
+        "finalStatusDetails": {
+          "title": "Final status details",
+          "description": "Additional details on the final status of the contract. This field can be used to provide the local name of the final status.",
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "dateSigned": {
           "title": "Date concluded",
@@ -863,31 +888,6 @@
             "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
-        },
-        "finalStatus": {
-          "title": "Final status",
-          "description": "The final status of the contract, using the closed [contractFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#contract-final-status) codelist.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "codelist": "contractFinalStatus.csv",
-          "openCodelist": false,
-          "enum": [
-            "complete",
-            "incomplete",
-            "cancelled",
-            "unsuccessful",
-            null
-          ]
-        },
-        "finalStatusDetails": {
-          "title": "Final status details",
-          "description": "Additional details on the final status of the contract. This field can be used to provide the local name of the final status.",
-          "type": [
-            "string",
-            "null"
-          ]
         }
       }
     },
