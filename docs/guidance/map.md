@@ -112,6 +112,7 @@ map/organization_personal_identifiers
 map/organizational_units
 map/organization_classifications
 map/beneficial_ownership
+map/connecting_publications
 ```
 
 ## Consider using extensions
