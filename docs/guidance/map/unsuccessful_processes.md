@@ -24,7 +24,7 @@ The first data disclosed is about the planning process. Planning data includes a
 
 Next, the contracting process is disclosed, using a new `ocid`, 'ocds-03ad3f-331547-1'. The `relatedProcess` block links the planning process and the contracting process, with the relationship set to 'planning'.
 
-The tender was unsuccessful, so the tender's `finalStatus` is set to ‘unsuccessful’.
+The tender was unsuccessful, so the tender's `finalStatus` is set to 'unsuccessful'.
 
 ```{jsoninclude} ../../examples/unsuccessful_tender/tender.json
 :jsonpointer:
