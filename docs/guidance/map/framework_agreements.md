@@ -122,7 +122,7 @@ The following guidance describes how to model the different stages of a framewor
 
 ### Invitation to participate in a second-stage competition
 
-* Create a release with a **new** `ocid` and add 'tender' to the `.tag` array. 
+* Create a release with a **new** `ocid` and add 'tender' to the `.tag` array.
 * [Relate the second stage to the first stage](#relate-the-second-stage-to-the-first-stage).
 * [Add a buyer](#add-a-buyer).
 * Populate the `tender` section, setting `tender.procurementMethod` to the same value as in the first stage, and `tender.competitive` to `true`.
