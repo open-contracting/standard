@@ -23,13 +23,13 @@ Disclosing organizational hierarchies in OCDS is strongly discouraged unless the
 
 ### 1. Using the Organization object
 
-In Honduras, San Felipe Hospital announces a planning process for the purchase of food supplies. The hospital is a unit of the Ministry of Health (Secretaría de Salud Pública) and is not a separate legal entity.
+San Felipe Hospital in Honduras announces a planning process for the purchase of food supplies. The hospital is a unit of the Ministry of Health (Secretaría de Salud Pública) and is not a separate legal entity.
 
-The hospital is listed in the `parties` section with:
+The hospital is listed in the `parties` section and:
 
-* `.id` is set to `{identifier.scheme}-{identifier.id}-{unit identifier}`: HN-ONCAE-H1-10001-102
-* `.name` set to `{organization name}-{unit name}`: Secretaría de Salud Pública - Hospital San Felipe
-* `.identifier` set to the identifier for the legal entity to which the organizational unit belongs, the Ministry of Health.
+* `.id` is set to `{identifier.scheme}-{identifier.id}-{unit identifier}`: HN-ONCAE-H1-10001-102.
+* `.name` is set to `{organization name}-{unit name}`: Secretaría de Salud Pública - Hospital San Felipe.
+* `.identifier` is set to the identifier for the legal entity to which the organizational unit belongs, the Ministry of Health.
 * the identifier for the organizational unit is listed in `.additionalIdentifiers`.
 * `address` and `contactPoint` are set to the address and contact point of the hospital.
 
@@ -68,14 +68,14 @@ The `extension.json` and `release-schema.json` files for the Division code exten
 
 ### 3. Publishing a separate organizational hierarchy dataset
 
-In Paraguay, the Hospital Clinic (Hospital de Clínicas) is an organizational unit of the Faculty of Medical Sciences (Facultad de Ciencias Médicas) at the National University of Asuncion (Universidad Nacional de Asunción). The hospital is part of the same legal entity as the faculty, but the faculty is a separate legal entity from the university.
+The Hospital Clinic (Hospital de Clínicas) in Paraguay is an organizational unit of the Faculty of Medical Sciences (Facultad de Ciencias Médicas) at the National University of Asuncion (Universidad Nacional de Asunción). The hospital is part of the same legal entity as the faculty, but the faculty is a separate legal entity from the university.
 
-Users need to analyse procurement at hospital, faculty and university level. To serve that needs, Paraguay publishes an OCDS dataset and a separate organizational hierarchy dataset.
+Users need to analyse procurement at hospital, faculty and university level. To serve that need, Paraguay publishes an OCDS dataset and a separate organizational hierarchy dataset.
 
-In the OCDS dataset, the hospital is listed in `parties` section with:
+In the OCDS dataset, the hospital is listed in `parties` section and:
 
-* `.name` set to `{organization name}-{unit name}`: Facultad de Ciencias Médicas - Hospital de Clínicas
-* `.identifier` set to the Faculty of Medical Sciences' identifier
+* `.name` is set to `{organization name}-{unit name}`: Facultad de Ciencias Médicas - Hospital de Clínicas.
+* `.identifier` is set to the Faculty of Medical Sciences' identifier.
 
 Users can group by `.name` to identify the hospital's contracting processes and by `.identifier` to identify the faculty's contracting processes.
 
@@ -87,7 +87,7 @@ Users can group by `.name` to identify the hospital's contracting processes and 
 
 The organizational hierarchy dataset describes the relationship between the faculty and the university. It uses the same organization identifiers as the OCDS dataset.
 
-Users can use the organization identifiers to join the dataset and identify the university's contracting processes.
+Users can use the organization identifiers to join the datasets and identify the university's contracting processes.
 
 ```{csv-table-no-translate}
 :header-rows: 1
