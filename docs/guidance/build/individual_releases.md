@@ -72,12 +72,8 @@ A buyer adds an opportunity for the purchase of office supplies to the database.
 The OCDS implementation provides access to a release describing the opportunity. It sets:
 
 * `ocid` to the publisher's ocid prefx ('ocds-213czf') plus the `tender_id`, creating a globally unique identifier for the contracting process.
-* `id` to the `ocid` plus the `last_modified` date, creating a release identifier that will change with each update to the contracting process.
+* `id` to the `last_modified` date, creating a release identifier that will change with each update to the contracting process.
 * `date` to the `last_modified` date.
-
-```{admonition} Release id uniqueness
-  The release `id` need only be unique within the scope of the contracting process, so in this example `id` could simply be set to the value of `last_modified`. However, including the `ocid` in the release `id` makes it easier for users to differentiate releases from different contracting processes when releases are published in a package covering multiple contracting processes.
-```
 
 ```{jsoninclude} ../../examples/no_change_history/individual_releases/last_modified_date/tender.json
 :jsonpointer: /releases/0
@@ -96,7 +92,7 @@ The buyer increases the estimated value of the opportunity. The `tender_value` a
 
 The OCDS release describing the contracting process is also updated. The values of the `id`, `date` and `tender.value.amount` fields are updated. Note that the value of the `tag` is not updated, in accordance with the [guidance on release tags](#release-tags).
 
-```{jsoninclude} ../../examples/no_change_history/individual_releases/last_modified_date/tender.json
+```{jsoninclude} ../../examples/no_change_history/individual_releases/last_modified_date/tender_update.json
 :jsonpointer: /releases/0
 :expand: tender, tag, value
 ```
@@ -126,7 +122,7 @@ A buyer adds an opportunity for the purchase of office supplies to the database.
 
 The OCDS implementation provides access to a release describing the opportunity. It sets `ocid` to the publisher's ocid prefx ('ocds-213czf') plus the `tender_id`, creating a globally unique identifier for the contracting process.
 
-In the absence of a last modified date, the implementation generates a release `id` by combining the values of all the data elements in the data source and applying a hash function. For example, in PostgreSQL:
+In the absence of a last modified date, the implementation generates a unique release `id` by combining the values of all the data elements in the data source and applying a hash function. For example, in PostgreSQL:
 
 ```sql
 SELECT
@@ -137,7 +133,7 @@ WHERE
   tender_processes.tender_id = 1;
 ```
 
-The result of the hash calculation is `69a19ab9713d08bc7c54793144997d3a`. As in the previous example, this is appended to the `ocid` to create a globally unique release `.id`. In the absence of a last modified date, the `date` field is set to the date that the release was generated.
+The result of the hash calculation is `69a19ab9713d08bc7c54793144997d3a`. In the absence of a last modified date, the `date` field is set to the date that the release was generated.
 
 ```{jsoninclude} ../../examples/no_change_history/individual_releases/hashing/tender.json
 :jsonpointer: /releases/0
