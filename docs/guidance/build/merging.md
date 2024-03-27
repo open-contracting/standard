@@ -14,7 +14,7 @@ The following examples show how updates and deletions are reflected in compiled 
 
 The [tender updates and amendments example](../map/amendments.md) illustrates how releases are used to update field values and how updates are reflected in compiled and versioned releases.
 
-## Deletions
+## Deletion of fields and objects
 
 ### Fields
 

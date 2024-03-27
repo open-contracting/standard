@@ -42,10 +42,7 @@ Siemens and Microsoft bid as a consortium for a contract.
 
 The contract is awarded to the consortium; however, the legal entity for the consortium is not created until after the contract award.
 
-Both Siemens and Microsoft are listed as suppliers on the contract award in OCDS, with `id`s constructed according to [`Organization.id`](../../schema/identifiers.md#organization-identifiers):
-
-```{field-description} ../../../build/current_lang/release-schema.json /definitions/Organization/properties/id
-```
+Both Siemens and Microsoft are listed as suppliers on the contract award:
 
 ```{jsoninclude} ../../examples/buyers_suppliers/consortia.json
 :jsonpointer: /releases

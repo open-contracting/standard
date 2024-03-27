@@ -43,14 +43,14 @@ To convert a field's value in a release to a **versioned value**, you must:
 
 A **versioned value** thus describes a field's value in a specific release.
 
-For example, a tender release sets the value of `tender.value.amount`.
+For example, a tender release sets the `tender.value.amount`field:
 
 ```{jsoninclude} ../examples/amendments/tender.json
 :jsonpointer: /records/0/releases/0
 :expand: tag, tender, value
 ```
 
-Following the steps above, the versioned value of `tender.value.amount` is:
+Following the steps above, the versioned value of the `tender.value.amount` field is:
 
 ```{jsoninclude} ../examples/amendments/tender.json
 :jsonpointer: /records/0/versionedRelease/tender/value/amount/0
@@ -59,14 +59,14 @@ Following the steps above, the versioned value of `tender.value.amount` is:
 
 In a **versioned release**, with a few exceptions, a field's value is replaced with an array of versioned values, which should be in chronological order by `releaseDate`.
 
-Following on from the example above, a later release updates the value of `tender.value.amount`.
+Following on from the example above, a later release updates the value of the `tender.value.amount` field:
 
 ```{jsoninclude} ../examples/amendments/tender.json
 :jsonpointer: /records/0/releases/2
 :expand: tag, tender, value
 ```
 
-In the versioned release, `tender.value.amount` is replaced with an array of versioned values:
+In the versioned release, the `tender.value.amount` field is an array, that now contains another versioned value:
 
 ```{jsoninclude} ../examples/amendments/tender.json
 :jsonpointer: /records/0/versionedRelease/tender/value
