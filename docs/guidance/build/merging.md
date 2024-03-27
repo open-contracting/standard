@@ -70,7 +70,7 @@ The final record is shown below. Note that the fields in the `contractPeriod` bl
 :title: record
 ```
 
-## Example 3: Deletion of array items
+## Deletion of array items
 
 The public procurement authority in Zambia publishes an award notice, as well as an OCDS release with an 'award' tag. A NGO collects the individual releases published by the procurement authority on a weekly basis to merge into their own records, which they use to display information on their website.
 
