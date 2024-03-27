@@ -18,7 +18,7 @@ populate the tender milestones block instead.
 ## Tender
 
 The tender milestones block is used to describe two types of milestone:
-  * Key dates in the tender and award stages which are not covered by other fields, for example, the date by which buyer or procuring entity will respond to enquiries.
+  * Key dates in the tender and award stages which are not covered by other fields, for example, the date by which the buyer or procuring entity will respond to enquiries.
   * Anticipated milestones during the contract implementation stage, for example, the date by which goods need to be delivered.
 
 ## Contract
