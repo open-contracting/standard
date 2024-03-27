@@ -36,9 +36,9 @@ All OCDS publications ought to meet the following criteria:
 1. **Reviewable**: The [OCDS Data Review Tool](https://review.standard.open-contracting.org/) is able to report results on the data.
 1. **Appropriate**: Concepts are published in semantic accordance with the rules of the OCDS (or registered extensions) rather than using a non-OCDS field or code.
 1. **Active**: For each publisher, there is an OCDS release with a top-level `date` field value within the last 12 months.
-1. **Parity**: For each publisher, for the _time period_ and _contracting authorities_ covered by the data, there isn’t another dataset by the same publisher that covers more than 25% more contracting (or planning) processes.
+1. **Parity**: For each publisher, for the _time period_ and _contracting authorities_ covered by the data, there isn't another dataset by the same publisher that covers more than 25% more contracting (or planning) processes.
 
-The Data Support Team is happy to review draft and newly published OCDS data and can work with publishers with advice to meet the above criteria. A publication that does not meet this minimum threshold will not be listed as a publisher by OCP as part of [OCP’s regular reporting](https://www.open-contracting.org/why-open-contracting/learning/).
+The Data Support Team is happy to review draft and newly published OCDS data and can work with publishers with advice to meet the above criteria. A publication that does not meet this minimum threshold will not be listed as a publisher by OCP as part of [OCP's regular reporting](https://www.open-contracting.org/why-open-contracting/learning/).
 
 ## Continuous improvement
 
@@ -46,7 +46,7 @@ From the minimum threshold above, we want to support publishers to continue to i
 
 ### Completeness
 
-Improvement on the below indicators demonstrate that the published information is becoming more complete about the contracting (or planning) processes within the publisher’s jurisdiction.
+Improvement on the below indicators demonstrate that the published information is becoming more complete about the contracting (or planning) processes within the publisher's jurisdiction.
 
 1. Publish subsequent releases per OCID to show how the contracting (or planning) process is progressing over time
 1. Increase the publication of historical information (based on a minimal set of date fields that appear across all sources, e.g. `tender.tenderPeriod`, `awards.date`, and `contracts.dateSigned`)
@@ -73,7 +73,7 @@ Improvements on the below indicators demonstrate that it is becoming easier for 
 1. Increase the number of access methods (API endpoints, bulk downloads)
 1. Decrease the number of license restrictions
 
-As publishers improve, the Data Support Team can work with them to identify how they can improve on the above criteria. OCP will note whether a publisher has improved in [OCP’s regular reporting](https://www.open-contracting.org/why-open-contracting/learning/).
+As publishers improve, the Data Support Team can work with them to identify how they can improve on the above criteria. OCP will note whether a publisher has improved in [OCP's regular reporting](https://www.open-contracting.org/why-open-contracting/learning/).
 
 ## Advanced criteria
 

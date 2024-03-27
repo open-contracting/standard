@@ -34,9 +34,9 @@ The publication policy ought to also contain information about future plans for 
 
 ## License your data
 
-Publishing data under an open license is an important part of open contracting. Without this, restrictions on re-use can prevent many of the important [use cases](design/user_needs) for open contracting information being realized.
+Publishing data under an open license is an important part of open contracting. Without this, restrictions on reuse can prevent many of the important [use cases](design/user_needs) for open contracting information being realized.
 
-A license statement sets out the permission that users have to access, use and re-use the data. This can take the form of a [Public Domain Dedication or Certification](https://creativecommons.org/publicdomain/) which transfers a dataset into the public domain, or re-asserts that there are no existing copyrights or database rights inherent in the dataset (which is the case for government datasets in some jurisdictions), or the application of a license which sets out the terms under which a dataset can be re-used.
+A license statement sets out the permission that users have to access, use and reuse the data. This can take the form of a [Public Domain Dedication or Certification](https://creativecommons.org/publicdomain/) which transfers a dataset into the public domain, or re-asserts that there are no existing copyrights or database rights inherent in the dataset (which is the case for government datasets in some jurisdictions), or the application of a license which sets out the terms under which a dataset can be re-used.
 
 We encourage the use of either a public domain dedication/certification, or an attribution only license.
 
@@ -45,20 +45,7 @@ We encourage the use of either a public domain dedication/certification, or an a
 
 When using custom licenses, publishers are encouraged to check that they are [compliant with the Open Definition](https://opendefinition.org/licenses/).
 
-In structured data file you ought to embed a link to the license in the `license` field of the release or record package as indicated below:
-
-```{code-block} json
-:emphasize-lines: 4
-
-{
-  "uri": "https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00001-02-tender.json",
-  "publishedDate": "2010-03-01T09:30:00Z",
-  "license": "https://opendatacommons.org/licenses/pddl/1-0/",
-  "...": "..."
-}
-```
-
-In individual CSV files or other models of publishing, it might not be possible to embed the license information. In these cases (and in the structured data case also) publishers ought to ensure that a clear statement is provided alongside files where they are provided for download linking to, and explaining, the license terms they are published under. Particular attention ought to be paid to ensuring license information on any data catalogues where open contracting data is listed are accurate.
+Where data is provided for download, publishers ought to clearly link to, and explain, the terms of the license under which the data is published. In any listing of the dataset (for example, in a data catalog), publishers ought to ensure that license information is provided and accurate.
 
 ## Publish and share your data
 

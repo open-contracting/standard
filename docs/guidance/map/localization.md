@@ -12,7 +12,7 @@ OCDS is a global standard for the publication of the key contracting data that u
 
 OCDS uses terms that make sense across different jurisdictions so that data is interoperable. But, in some cases, it can be useful to maintain a mapping between OCDS terms and local terms. This can help local users understand exactly how to interpret a field in the standard.
 
-For example, the current Spanish translation of OCDS uses the term 'Artículos que se adquirirán' for the 'Line Items'. Whereas in Mexico the equivalent term is ‘Items de la licitación’.
+For example, the current Spanish translation of OCDS uses the term 'Artículos que se adquirirán' for the 'Line Items'. Whereas in Mexico the equivalent term is "Items de la licitación".
 
 You can use the [field-level mapping template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/) to document localized titles and descriptions for OCDS fields. The **OCDS Schema** sheet contains the titles and descriptions used in the mapping sheets.
 
@@ -83,6 +83,6 @@ Contact the [Data Support Team](../../support/index) to get access to Transifex 
 
 ## Document and share your work
 
-Whatever you do to localize the OCDS, it’s important to provide clear documentation. For example, you could set-up a page on your website with links to the main standard documentation, and details of your localization.
+Whatever you do to localize the OCDS, it's important to provide clear documentation. For example, you could set-up a page on your website with links to the main standard documentation, and details of your localization.
 
-It’s also important to share updates with the OCDS community, through the [standard-discuss mailing list](https://groups.google.com/a/open-contracting.org/g/standard-discuss) and the [GitHub issue tracker](https://github.com/open-contracting/standard). Without doing this, there is a chance that you might be duplicating work that others have already undertaken, or missing out on insights from other projects working on similar issues.
+It's also important to share updates with the OCDS community, through the [standard-discuss mailing list](https://groups.google.com/a/open-contracting.org/g/standard-discuss) and the [GitHub issue tracker](https://github.com/open-contracting/standard). Without doing this, there is a chance that you might be duplicating work that others have already undertaken, or missing out on insights from other projects working on similar issues.
