@@ -18,7 +18,7 @@ The nature of a change can be made explicit using:
 
 * **The release tag** (`tag`). For example, for a release with a new contract, use 'contract'. For an update to the contract, use 'contractUpdate', and for an amendment to the contract, use 'contractAmendment'.
 
-* **The amendments** building block. This can contain an array of amendment explanations, and clearly identify the releases that contain before and after values.
+* **The amendments** array. Each item in the array is an `Amendment` object, including a rationale, a description, and references to the releases that contain before and after values.
 
 ## Worked examples
 
@@ -48,7 +48,7 @@ Weeks later, the publisher expands the `description` of the tender to provide mo
 
 #### Tender Amendment
 
-A few days later, the publisher increases the value of the tender and extends the deadline for bid submissions. These changes are considered as an 'amendment' by the publisher (depending on jurisdiction, certain changes can need to be disclosed as amendments), and so the new release has the `tag` 'tenderAmendment' and an `amendments` block under `tender`. The release reflects the updated value (USD 2000 instead of USD 1000) and the updated closing date for bid submissions (`2012-02-20` instead of `2012-02-15`). See the JSON example below.
+A few days later, the publisher increases the value of the tender and extends the deadline for bid submissions. These changes are considered as an 'amendment' by the publisher (depending on jurisdiction, certain changes can need to be disclosed as amendments), and so the new release has the `tag` 'tenderAmendment' and an `amendments` array under `tender`. The release reflects the updated value (USD 2000 instead of USD 1000) and the updated closing date for bid submissions (`2012-02-20` instead of `2012-02-15`). See the JSON example below.
 
 ```{jsoninclude} ../../examples/amendments/tender.json
 :jsonpointer: /records/0/releases/2
@@ -58,7 +58,7 @@ A few days later, the publisher increases the value of the tender and extends th
 
 #### Record
 
-A full record is provided below, with all the releases for the process and a `compiledRelease` and `versionedRelease`. The `versionedRelease` block reflects all the changes made in the tender.
+A full record is provided below, with all the releases for the process and a `compiledRelease` and `versionedRelease`. The `versionedRelease` object reflects all the changes made in the tender.
 
 ```{jsoninclude} ../../examples/amendments/tender.json
 :jsonpointer:
@@ -72,7 +72,7 @@ It is encouraged to [download](../../examples/amendments/tender.json) the record
 
 Note in this example that:
 
-* **The amendments block does not contain data on what was changed**. Changes are recorded by updating the fields of the `tender` block a new release.
+* **The amendments array does not contain data on what was changed**. Changes are recorded by updating the fields of the `tender` object in a new release.
 
 * **The publisher chooses in the 'tenderAmendment' release to repeat a fragment of the original 'tender' release**. This is not necessary when a full archive of releases is made accessible, but a publisher might want to provide the latest data available in each release.
 
@@ -96,7 +96,7 @@ See the JSON release below.
 
 #### Contract Amendment
 
-A few days after the contract release, its scope is increased to include the purchase of one additional appliance. A new 'contractAmendment' release is built, where a single item is added in the `contracts/items` block and the value of the contract is increased. A `amendments` block is included to explain the rationale of the changes.
+A few days after the contract release, its scope is increased to include the purchase of one additional appliance. A new 'contractAmendment' release is built, where a single item is added in the `contracts.items` array and the value of the contract is increased. An `amendments` array is included to explain the rationale of the changes.
 
 See the example release below.
 
@@ -149,7 +149,7 @@ This can be modelled as the separate releases in OCDS as shown below. The origin
 :title: ContractAmendment
 ```
 
-Note that the mapping of the fields remains the same for the contract amendments, except for the `description` column. When a row in the contract signature notices table is identified as an original contract, the description is included in the `contracts/description` field, and when the row represents a contract amendment, it is mapped to the `contracts/amendments/description` field. This aligns with the use of the `description` column, because for contract amendments it is used to include an explanation of the change.
+Note that the mapping of the fields remains the same for the contract amendments, except for the `description` column. When a row in the contract signature notices table is identified as an original contract, the description is included in the `contracts.description` field, and when the row represents a contract amendment, it is mapped to the `contracts.amendments.description` field. This aligns with the use of the `description` column, because for contract amendments it is used to include an explanation of the change.
 
 The advantage of this approach, in contrast with the Easy releases proposal, is that the users have access to the details of each amendment instead of the latest values only without any additional effort of their end.
 

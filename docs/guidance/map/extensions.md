@@ -1,6 +1,6 @@
 # Extensions
 
-OCDS provides a common core of [sections](../../schema/reference.md#release-structure) and [building blocks](../../schema/reference.md#building-block-reference) for describing contracting (or planning) processes.
+OCDS provides a common core of [sections](../../schema/reference.md#release-structure) and [subschemas](../../schema/reference.md#subschema-reference) for describing contracting (or planning) processes.
 
 Many publishers will have additional data that they could publish. Instead of ignoring this data and leaving it unpublished, OCDS encourages publishers to collaborate on the creation of **extensions** to the standard.
 
