@@ -24,7 +24,7 @@ cat docs/examples/merging/deletions/array_award*.json | ocdskit --pretty compile
 Update the examples in `docs/examples/change_history`:
 
 ```shell
-cat docs/examples/change_history/{tender}.json | ocdskit --pretty compile --published-date 2010-03-15T09:30:00Z --uri https://standard.open-contracting.org/examples/records/ocds-213czf-000-00001.json --package --versioned --schema schema/release-schema.json > docs/examples/change_history/records/tender.json
+cat docs/examples/change_history/tender.json | ocdskit --pretty compile --published-date 2010-03-15T09:30:00Z --uri https://standard.open-contracting.org/examples/records/ocds-213czf-000-00001.json --package --versioned --schema schema/release-schema.json > docs/examples/change_history/records/tender.json
 cat docs/examples/change_history/{tender,tenderUpdate}.json | ocdskit --pretty compile --published-date 2010-03-20T09:45:00Z --uri https://standard.open-contracting.org/examples/records/ocds-213czf-000-00001.json --package --versioned --schema schema/release-schema.json > docs/examples/change_history/records/tenderUpdate.json
 cat docs/examples/change_history/{tender,tenderUpdate,award}.json | ocdskit --pretty compile --published-date 2010-05-10T09:30:00Z --uri https://standard.open-contracting.org/examples/records/ocds-213czf-000-00001.json --package --versioned --schema schema/release-schema.json > docs/examples/change_history/records/award.json
 cat docs/examples/change_history/{tender,tenderUpdate,award,contract}.json | ocdskit --pretty compile --published-date 2010-06-10T10:30:00Z --uri https://standard.open-contracting.org/examples/records/ocds-213czf-000-00001.json --package --versioned --schema schema/release-schema.json > docs/examples/change_history/records/contract.json
