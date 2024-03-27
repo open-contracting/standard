@@ -62,7 +62,7 @@ The following example demonstrates the use of linked releases.
 :title: releases
 ```
 
-Above, the first linked release has a `url` value of `https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json#ocds-213czf-000-00002-01-award1`. The first part (`https://standard.open-contracting.org/examples/releases/ocds-213czf-000-00002-01-award1.json`) is the URL of the release package, and the fragment identifier (`ocds-213czf-000-00002-01-award1`) is the `id` of the release.
+Above, the first linked release has a `url` value of `http://example.com/releases/ocds-213czf-000-00002.json#1`. The first part (`http://example.com/releases/ocds-213czf-000-00002.json`) is the URL of the release package, and the fragment identifier (`1`) is the `id` of the release.
 
 Release `id` values are only required to be unique within the scope of a (contracting or planning) process: that is, within the scope of an `ocid` value. As such, a consuming application needs to use that fragment identifier in combination with the `ocid` of the record in order to identify the matching release within the release package.
 
