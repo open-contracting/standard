@@ -47,25 +47,24 @@ The UK publishes separate contracting and beneficial ownership datasets. Both da
 
 ### Contracting data
 
-The UK publishes OCDS data from [Contracts Finder](https://www.contractsfinder.service.gov.uk/). 
+A publisher in the United Kingdom collects [Companies House](https://www.gov.uk/government/organisations/companies-house) numbers as its primary organization identifiers for suppliers.
 
-This example shows a contract award to T.M. ENGINEERS (MIDLANDS) LIMITED. `parties.identifier.id` is set to the supplier's company number (00507062) and `parties.identifier.scheme` is set to "GB-COH" to identify the register the number is drawn from.
+A buyer awards a contract to T.M. ENGINEERS (MIDLANDS) LIMITED. The supplier is listed in the `parties` array with 'supplier' in `.roles`. `.identifier.scheme` is set to the org-id scheme prefix for Companies House ([GB-COH](http://org-id.guide/list/GB-COH)) and `.identifier.id` is set to the supplier's Companies House number (00507062).
 
 ```{note}
 For more information on publishing organization identifiers in OCDS, see [Organization identifiers](../../schema/identifiers.md#organization-identifiers).
 ```
 
 ```{jsoninclude} ../../examples/beneficial_ownership/award.json
-:jsonpointer:
-:expand: releases, parties, identifier, awards, suppliers
-:title: award
+:jsonpointer: /releases/0
+:expand: releases, parties, identifier, roles
 ```
 
 ### Beneficial ownership data
 
-The UK also publishes a separate beneficial ownership dataset: the [People with significant control (PSC) snapshot](http://download.companieshouse.gov.uk/en_pscdata.html). This dataset is updated daily and includes a history of changes. The OpenOwnership Register publishes [the PSC snapshot in BODS format](https://register.openownership.org/data_sources/uk-psc-register).
+The UK government publishes a separate beneficial ownership dataset, the [People with significant control (PSC) snapshot](http://download.companieshouse.gov.uk/en_pscdata.html), which is updated daily and includes a history of changes. Open Ownership publishes [the PSC snapshot in BODS format](https://register.openownership.org/data_sources/uk-psc-register).
 
-This example shows the beneficial ownership data for the supplier from the contract award: T.M. ENGINEERS (MIDLANDS) LIMITED. 
+This example shows the BODS data for the supplier from the contract award: T.M. ENGINEERS (MIDLANDS) LIMITED. 
 
 BODS is based on statements, where each statement describes ownership or control, entities, or natural persons. For more information, see the [BODS documentation](http://standard.openownership.org/). The example includes:
 
@@ -93,19 +92,11 @@ BODS is based on statements, where each statement describes ownership or control
 
 ## Publish beneficial ownership data in OCDS
 
-Moldova [collects the name and nationality](https://tender.gov.md/ro/content/formularul-standard-al-documentului-unic-de-achizi%C8%9Bii-european?fbclid=IwAR14CSxh6bo45cTq-hzVbwhnEkk9OEkY1aF86j1hVIU8kTnvaW3cU4q5loc) of the beneficial owners of bidders in its procurement system. But, Moldova does not maintain a separate beneficial ownership register.
+A publisher in Moldova collects the name and nationality of the beneficial owners of bidders in its procurement system. However, the government of Moldova does not publish a separate beneficial ownership dataset. Therefore, the publisher uses the [beneficial owners extension](https://extensions.open-contracting.org/en/extensions/beneficialOwners) to publish the data in OCDS.
 
-Therefore, Moldova can use the beneficial owners extension to publish the data in OCDS. For more information on using the beneficial ownership extension, see the [extension documentation](https://extensions.open-contracting.org/en/extensions/beneficialOwners/master/).
-
-This example shows a fictional contract award to Microsoft Moldova:
-
-* In the package metadata, the `extensions` array includes the beneficial owners extension.
-* In the `parties` array:
-  * `beneficialOwners.name` is set to the name of the beneficial owner
-  * `beneficialOwners.nationality` is set to the country code for the nationality of the beneficial owner
+A buyer awards a contract to Microsoft Moldova. The publisher declares the beneficial owners extension in the `extensions` array and publishes the name and nationality of the beneficial owner in `parties.beneficialOwners`.
 
 ```{jsoninclude} ../../examples/beneficial_ownership/beneficial_owners_extension.json
 :jsonpointer:
-:expand: extensions, releases, parties, identifier, beneficialOwners
-:title: beneficial-owners-extension
+:expand: extensions, releases, parties, beneficialOwners
 ```
