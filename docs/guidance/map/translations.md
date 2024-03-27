@@ -12,10 +12,10 @@ You can publish the values of these fields in any language:
 
 % STARTLIST
 - `description`, in any location
+- `finalStatusDetails`, in any location
 - `legalName`, in any location
 - `name`, in any location
 - `rationale`, in any location
-- `statusDetails`, in any location
 - `title`, in any location
 - `parties/address/locality`
 - `parties/address/region`

@@ -110,7 +110,7 @@ The following guidance describes how to model the different stages of a framewor
 * For each supplier:
   * Add an `Organization` object to the `parties` array, add 'supplier' to its `.roles` and populate its other fields.
   * Add an `OrganizationReference` object to the award's `.suppliers` array, and set its `.id` and `.name` to match the supplier's object in the `parties` array.
-* If no further suppliers will be added to the framework agreement, set `tender.status` to 'complete'.
+* If no further suppliers will be added to the framework agreement, set `tender.finalStatus` to 'complete'.
 
 ### Award of a procurement contract without second-stage competition
 
@@ -122,7 +122,7 @@ The following guidance describes how to model the different stages of a framewor
 
 ### Invitation to participate in a second-stage competition
 
-* Create a release with a **new** `ocid` and add 'tender' to the `.tag` array. 
+* Create a release with a **new** `ocid` and add 'tender' to the `.tag` array.
 * [Relate the second stage to the first stage](#relate-the-second-stage-to-the-first-stage).
 * [Add a buyer](#add-a-buyer).
 * Populate the `tender` section, setting `tender.procurementMethod` to the same value as in the first stage, and `tender.competitive` to `true`.
@@ -166,11 +166,11 @@ The buyer invites potential suppliers to participate in the framework agreement.
 
 An OCDS release describes the opportunity:
 
-* `tag` is set to `["tender"]` because this is the first release about the opportunity
-* The release describes the set up of a framework agreement so the techniques extension is declared in the package metadata and `tender.techniques.hasFrameworkAgreement` is set to `true`
-* Whilst any supplier can submit a request to participate, only qualified suppliers can submit a proposal, so `tender.procurementMethod` is set to 'selective'
-* The framework agreement is closed so `tender.expressionOfInterestDeadline` is set to the deadline for responses to the invitation
-* There is only one buyer so `buyer` is set to reference the buyer's object in the `parties` array
+* `tag` is set to `["tender"]` because this is the first release about the opportunity.
+* The release describes the set up of a framework agreement so the techniques extension is declared in the package metadata and `tender.techniques.hasFrameworkAgreement` is set to `true`.
+* Whilst any supplier can submit a request to participate, only qualified suppliers can submit a proposal, so `tender.procurementMethod` is set to 'selective'.
+* The framework agreement is closed so `tender.expressionOfInterestDeadline` is set to the deadline for responses to the invitation.
+* There is only one buyer so `buyer` is set to reference the buyer's object in the `parties` array.
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_first_stage.json
 :jsonpointer:
@@ -183,11 +183,11 @@ The buyer concludes the framework agreement with a single supplier.
 
 An OCDS release describes the selection and addition of the supplier to the framework agreement:
 
-* `ocid` is set to the same value as the previous release because both releases relate to the first stage of the framework agreement
-* `tag` is set `["award"]` because this the first release about the award
-* `tender.status` is set to 'complete' because no further suppliers will be added to the framework agreement
+* `ocid` is set to the same value as the previous release because both releases relate to the first stage of the framework agreement.
+* `tag` is set `["award"]` because this the first release about the award.
+* `tender.finalStatus` is set to 'complete', because no further suppliers will be added to the framework agreement.
 * An `Organization` object is added to the `parties` array with the supplier's details.
-* An `Award` object is added to the `awards` array with a reference to the supplier in `.suppliers`
+* An `Award` object is added to the `awards` array with a reference to the supplier in `.suppliers`.
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_supplier.json
 :jsonpointer:
@@ -202,13 +202,13 @@ The buyer uses the framework agreement to place an order for the supplier to rec
 
 An OCDS release describes the order:
 
-* `ocid` differs from releases describing the first stage of the procedure because the second stage of the procedure is modelled as a separate contracting process
+* `ocid` differs from releases describing the first stage of the procedure because the second stage of the procedure is modelled as a separate contracting process.
 * `tag` is set to `["award"]` because this is the first release describing the award. There is no 'tender' release because there is no competition at the second stage.
-* `relatedProcesses` links to the contracting process for the first stage of the procedure
-* `tender.competitive` is set to `false` because there is no competition at the second stage and the [Competitive](https://extensions.open-contracting.org/en/extensions/competitive/master/) extension is declared in the package metadata
-* `tender.id` is set to the same value as `awards.id`
-* The `awards` section is populated with the details of the order
-* The `buyer`, `awards.suppliers` and `parties` fields are populated with the details of the buyer and and supplier
+* `relatedProcesses` links to the contracting process for the first stage of the procedure.
+* `tender.competitive` is set to `false` because there is no competition at the second stage and the [Competitive](https://extensions.open-contracting.org/en/extensions/competitive/master/) extension is declared in the package metadata.
+* `tender.id` is set to the same value as `awards.id`.
+* The `awards` section is populated with the details of the order.
+* The `buyer`, `awards.suppliers` and `parties` fields are populated with the details of the buyer and and supplier.
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_award.json
 :jsonpointer:
@@ -228,13 +228,13 @@ Chile Compra invites suppliers to participate in the framework agreement.
 
 An OCDS release describes the opportunity:
 
-* `tag` is set to `["tender"]` because this is the first release about the opportunity
-* The release describes the set up of a framework agreement so the techniques extension is declared in the package metadata and `tender.techniques.hasFrameworkAgreement` is set to `true`
-* Whilst any supplier can submit a request to participate, only qualified suppliers can submit a proposal, so `tender.procurementMethod` is set to 'selective'
-* The framework agreement is open (a dynamic purchasing system) so `tender.expressionOfInterestDeadline` is set to the last date that new suppliers can be added
-* There are two buyers so `buyer` is omitted and both buyers are listed in `parties`
-* `tender.procuringEntity` is set to the organization that manages the contracting process: Chile Compra
-* The lots are listed in `lots` 
+* `tag` is set to `["tender"]` because this is the first release about the opportunity.
+* The release describes the set up of a framework agreement so the techniques extension is declared in the package metadata and `tender.techniques.hasFrameworkAgreement` is set to `true`.
+* Whilst any supplier can submit a request to participate, only qualified suppliers can submit a proposal, so `tender.procurementMethod` is set to 'selective'.
+* The framework agreement is open (a dynamic purchasing system) so `tender.expressionOfInterestDeadline` is set to the last date that new suppliers can be added.
+* There are two buyers so `buyer` is omitted and both buyers are listed in `parties`.
+* `tender.procuringEntity` is set to the organization that manages the contracting process: Chile Compra.
+* The lots are listed in `lots` .
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_first_stage.json
 :jsonpointer:
@@ -247,11 +247,11 @@ Chile Compra concludes the framework agreement with two suppliers: Rodrigo Aleja
 
 An OCDS release describes the selection and addition of the supplier to the framework agreement:
 
-* `ocid` is set to the same value as the previous release because both releases relate to the first stage of the framework agreement
-* `tag` is set `["award"]` because this the first release about the award
-* `tender.status` remains 'active' because further suppliers can be added to the framework agreement
-* An `Organization` object is added to the `parties` array for each supplier
-* An `Award` object is added to the `awards` array for each supplier with a reference to the supplier in `.suppliers`
+* `ocid` is set to the same value as the previous release because both releases relate to the first stage of the framework agreement.
+* `tag` is set `["award"]` because this the first release about the award.
+* `tender.finalStatus`  is not set, because further suppliers can be added to the framework agreement.
+* An `Organization` object is added to the `parties` array for each supplier.
+* An `Award` object is added to the `awards` array for each supplier with a reference to the supplier in `.suppliers`.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_supplier.json
 :jsonpointer:
@@ -266,11 +266,11 @@ A buyer invites suppliers on the framework agreement to participate in a second-
 
 An OCDS release describes the invitation:
 
-* `ocid` differs from releases describing the first stage of the procedure because the second stage of the procedure is modelled as a separate contracting process
-* `tag` is set to `["tender"]` because this is the first release describing the competition
-* `relatedProcesses` links to the contracting process for the first stage of the procedure and the lot to which the competition is related
-* `tender.competitive` is set to `true` because there is competition at the second stage and the [Competitive](https://extensions.open-contracting.org/en/extensions/competitive/master/) extension is declared in the package metadata
-* Since this new contracting process has a single buyer, `buyer` is populated accordingly
+* `ocid` differs from releases describing the first stage of the procedure because the second stage of the procedure is modelled as a separate contracting process.
+* `tag` is set to `["tender"]` because this is the first release describing the competition.
+* `relatedProcesses` links to the contracting process for the first stage of the procedure and the lot to which the competition is related.
+* `tender.competitive` is set to `true` because there is competition at the second stage and the [Competitive](https://extensions.open-contracting.org/en/extensions/competitive/master/) extension is declared in the package metadata.
+* Since this new contracting process has a single buyer, `buyer` is populated accordingly.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_second_stage.json
 :jsonpointer:
@@ -283,11 +283,11 @@ The buyer awards a contract to a supplier.
 
 An OCDS release describes the award:
 
-* `ocid` is set to the same value as release describing the invitation to participate in the second-stage competition
+* `ocid` is set to the same value as release describing the invitation to participate in the second-stage competition.
 * `tag` is set to `["award"]` because this is the first release describing the award.
-* `tender.status` is set to complete
-* The `awards` section is populated with the details of the award
-* The `awards.suppliers` and `parties` fields are populated with the details of the supplier
+* `tender.finalStatus` is set to 'complete'.
+* The `awards` section is populated with the details of the award.
+* The `awards.suppliers` and `parties` fields are populated with the details of the supplier.
 
 ```{jsoninclude} ../../examples/frameworks/open_multiple_award.json
 :jsonpointer:

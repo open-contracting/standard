@@ -23,7 +23,7 @@ A buyer attempts to purchase office supplies by announcing an opportunity. The c
 :expand: releases, tender
 ```
 
-The attempt is unsuccessful so the buyer sets `tender.status` to 'unsuccessful'.
+The attempt is unsuccessful so the buyer sets `tender.finalStatus` to 'unsuccessful'.
 
 ```{jsoninclude} ../../examples/unsuccessful_tender/tenderUpdate.json
 :jsonpointer: /releases/0

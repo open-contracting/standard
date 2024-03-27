@@ -32,7 +32,7 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           known_hosts: standard.open-contracting.org ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGveFGTJ9yyObNGDUCUyzyFkm6Kzh3YqIt1qB7B/KU6E
       - if: github.event_name == 'push'
-        uses: bcomnes/netrc-creds@v2
+        uses: bcomnes/netrc-creds@v3
         with:
           machine: standard.open-contracting.org
           login: manage
