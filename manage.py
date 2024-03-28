@@ -23,8 +23,7 @@ import requests
 from babel.messages.pofile import read_po
 from docutils.utils import relative_path
 from lxml import etree
-from ocdskit.schema import add_validation_properties
-from ocdskit.schema import get_schema_fields
+from ocdskit.schema import add_validation_properties, get_schema_fields
 
 basedir = Path(__file__).resolve().parent
 schemadir = basedir / 'schema'
