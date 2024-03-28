@@ -8,7 +8,7 @@ Information about a contracting (or planning) process often changes over time.
 
 Each time information changes, a new OCDS release ought to be published. The new release can repeat information that was previously published, in addition to new and changed information.
 
-There are three types of change:
+There are three types of changes:
 
 * **New information**. For example, when information about the award of a contract is first released.
 * **Updates to existing information**. For example, to correct errors in earlier releases, or to make minor adjustments to titles, descriptions or dates.
@@ -17,8 +17,7 @@ There are three types of change:
 The nature of a change can be made explicit using:
 
 * **The release tag** field (`tag`), which is used to identify the type of change. For example, 'contract' identifies information about a new contract, 'contractUpdate' identifies an update to existing information about a contract, and 'contractAmendment' identifies a formal amendment to a contract.
-
-* **The amendments** fields (`tender.amendments` and `contract.amendments`), which are used to list amendments along with their rationales and references to the releases that contain before and after values.
+* **The amendments** fields (`tender.amendments`, `awards.amendments` and `contracts.amendments`), which are used to list amendments along with their rationales and references to the releases that contain "before" and "after" values.
 
 ## Worked examples
 
@@ -38,9 +37,11 @@ A buyer publishes an opportunity for the purchase of office supplies.
 
 #### Tender update release
 
-The buyer now indicates the opportunity's main procurement category. The new information is not a formal amendment so the publisher uses the 'tenderUpdate' tag and omits the `tender.amendments` field.
+The buyer now indicates the opportunity's main procurement category. The new information is not a formal amendment, so the publisher uses the 'tenderUpdate' tag and omits the `tender.amendments` field.
 
+```{note}
 The publisher chooses to repeat fields whose values are unchanged from the previous release. Such fields can be omitted when a publication provides access to historic releases.
+```
 
 ```{jsoninclude} ../../examples/amendments/tender.json
 :jsonpointer: /records/0/releases/1
@@ -50,7 +51,7 @@ The publisher chooses to repeat fields whose values are unchanged from the previ
 
 #### Tender amendment release
 
-The buyer increases the estimated value of the opportunity. This change is a formal amendment so the publisher uses the 'tenderAmendment' tag and populates the `tender.amendments` field.
+The buyer increases the estimated value of the opportunity. This change is a formal amendment, so the publisher uses the 'tenderAmendment' tag and populates the `tender.amendments` field.
 
 Note that `tender.amendments` does not include the changed values. Rather, the `tender.value.amount` field itself is updated. 
 
@@ -64,7 +65,7 @@ Note that `tender.amendments` does not include the changed values. Rather, the `
 
 `releases` contains the above releases, `compiledRelease` contains the latest value of each field, and `versionedRelease` contains a history of changes to each field.
 
-The `releaseID` and `amendsReleaseID` fields in the `amendments` array of the compiled release can be looked up in `releases` and `versionedRelease` to identify what changed.
+The `releaseID` and `amendsReleaseID` fields in the `amendments` array of the compiled release can be looked up in `releases` and `versionedRelease` to determine what changed.
 
 ```{jsoninclude} ../../examples/amendments/tender.json
 :jsonpointer: /records/0
@@ -76,8 +77,8 @@ The `releaseID` and `amendsReleaseID` fields in the `amendments` array of the co
 [Download](../../examples/amendments/tender.json) the record example and use the [Data Review Tool](https://review.standard.open-contracting.org/) to explore the changes in the contracting process.
 ```
 
-```{admonition} Contract updates and amendments
-Contract updates and amendments are modelled in the same way: the 'contract', 'contractUpdate' and 'contractAmendment' release tags distinguish the type of change and amendments are listed in the `contract.amendments` field.
+```{admonition} Award and contract updates and amendments
+Award and contract updates and amendments are modelled in the same way. The 'award', 'contract', 'awardUpdate', 'contractUpdate' and 'contractAmendment' release tags indicate the type of change. Amendments are listed in the `awards.amendments` and `contracts.amendments` fields.
 ```
 
 ### Example 2: Amendments without a change history
