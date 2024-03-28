@@ -106,7 +106,6 @@ map/electronic_catalogues
 map/amendments
 map/milestones
 map/buyers_suppliers
-map/organization_reference
 map/organization_identifiers
 map/organization_personal_identifiers
 map/organizational_units

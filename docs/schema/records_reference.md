@@ -59,12 +59,14 @@ The following example demonstrates the use of linked releases.
 ```{jsoninclude} ../examples/record_reference/linked_releases.json
 :jsonpointer: /records/0
 :expand: releases, tag
-:title: releases
 ```
 
-Above, the first linked release has a `url` value of `https://example.com/releases/ocds-213czf-000-00002.json#1`. The first part (`https://example.com/releases/ocds-213czf-000-00002.json`) is the URL of the release package, and the fragment identifier (`1`) is the `id` of the release.
+Each release's `url` consists of two parts:
 
-Release `id` values are only required to be unique within the scope of a (contracting or planning) process: that is, within the scope of an `ocid` value. As such, a consuming application needs to use that fragment identifier in combination with the `ocid` of the record in order to identify the matching release within the release package.
+* The URL of the release package that contains the release: `https://example.com/release_package.json`
+* A fragment identifier (introduced by the number sign #) that is the `id` of the release: `1`, `2` or `3`
+
+Release `id` values are only required to be unique within the scope of a (contracting or planning) process: that is, within the scope of an `ocid` value. As such, a consuming application needs to use the fragment identifier in combination with the `ocid` of the record in order to identify the matching release within the release package.
 
 #### Embedded releases
 
@@ -108,6 +110,6 @@ The following example displays a single field's [versioned values](merging.md#ve
 
 ```{jsoninclude} ../examples/amendments/tender.json
 :jsonpointer: /records/0/versionedRelease/tender/value
-:expand: amount, releaseTag, currency
+:expand: amount, currency, releaseTag
 :title: versioned
 ```
