@@ -307,7 +307,10 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1067](https://github.com/open-contracting/standard/pull/1067) `Publisher.name`, to indicate that it is the organization or department responsible for publishing the OCDS version of the data.
 
 * [#1450](https://github.com/open-contracting/standard/pull/1450) Replace a repeated example in schema/merging/ with a link to guidance/build/merging/.
+
 * [#1665](https://github.com/open-contracting/standard/pull/1665) Abandon in-file translations.
+
+* [#1480](https://github.com/open-contracting/standard/pull/1480) Add `UnitValue` definition.
 
 ### Documentation
 
