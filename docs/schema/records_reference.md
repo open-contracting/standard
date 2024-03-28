@@ -63,8 +63,8 @@ The following example demonstrates the use of linked releases.
 
 Each release's `url` consists of two parts:
 
-* The URL of the release package that contains the release: `http://example.com/release_package.json`
-* A fragment identifier (introduced by a hash mark #) whose value is the `id` of the release: `1` or `2`
+* The URL of the release package that contains the release: `https://example.com/release_package.json`
+* A fragment identifier (introduced by a hash mark #) whose value is the `id` of the release: `1`, `2` or `3`
 
 Release `id` values are only required to be unique within the scope of a (contracting or planning) process: that is, within the scope of an `ocid` value. As such, a consuming application needs to use the fragment identifier in combination with the `ocid` of the record in order to identify the matching release within the release package.
 

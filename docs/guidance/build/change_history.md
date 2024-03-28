@@ -102,7 +102,7 @@ The record gets updated to include the new release. The compiled and versioned r
 
 ## Implementation
 
-The supplier starts the construction work. After a while, the procuring entity makes the first payment to the supplier. The publisher creates a release to document this update in the process.
+The supplier starts the construction work. After a while, the buyer makes the first payment to the supplier. The publisher creates a release to document this update in the process.
 
 So far, the council used a single procurement system to manage the process. The procurement system published the previous OCDS releases.
 
