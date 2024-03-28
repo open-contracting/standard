@@ -20,7 +20,7 @@ The nature of a change can be made explicit using:
 
 * **The amendments** fields (`tender.amendments`, `awards.amendments` and `contracts.amendments`), which are used to list amendments along with their rationales and references to the releases that contain "before" and "after" values.
 
-## Worked examples
+## Examples
 
 ### Example 1: Tender updates and amendments
 

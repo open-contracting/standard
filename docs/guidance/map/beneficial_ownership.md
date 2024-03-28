@@ -4,7 +4,7 @@
 
 # Beneficial ownership information
 
-This worked example describes how to:
+This example describes how to:
 
 * publish separate contracting and beneficial ownership datasets
 * publish beneficial ownership data using OCDS

@@ -149,7 +149,7 @@ The following guidance describes how to model the different stages of a framewor
 * Add an `Organization` object to the `parties` array, add 'supplier' to its `.roles` and populate its other fields.
 * Add an `OrganizationReference` object to the award's `.suppliers` array and set `.id` and `.name` to match the supplier's object in the `parties` array.
 
-## Worked examples
+## Examples
 
 The following examples show how to model two framework agreements, covering a range of characteristics:
 

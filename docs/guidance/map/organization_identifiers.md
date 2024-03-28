@@ -13,7 +13,7 @@ To disclose an organization identifier, first, use [org-id.guide](http://org-id.
 
 If you choose not to register an organization list with org-id.guide, you ought to describe the list in a [publication policy](../publish.md#finalize-your-publication-policy), and select a prefix that is not in use by another list in org-id.guide, by following the [org-id meta-data guide](http://docs.org-id.guide/en/latest/metadata/#assigning-a-code).
 
-## Worked example
+## Example
 
 A publisher in the United Kingdom collects [Companies House](https://www.gov.uk/government/organisations/companies-house) numbers as its primary organization identifiers for suppliers.
 

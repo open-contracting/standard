@@ -39,9 +39,9 @@ The `dueDate`, `dateMet`, `dateModified` and [`status`](../../schema/codelists.m
 
 To represent a planned payment, add a `Milestone`, set its `.type` to 'payment' and set its `.value` to the payment's value. Once the milestone is met, add a [Transaction](../../schema/reference.md#transaction) to `contracts/implementation/transactions`. For implementation milestones, the transaction can refer back to the milestone using the [transaction-related milestones extension](https://extensions.open-contracting.org/en/extensions/transaction_milestones/master/).
 
-## Worked examples
+## Examples
 
-The following worked examples show how milestones are modelled.
+The following examples show how milestones are modelled.
 
 ### Planning milestones
 
@@ -56,7 +56,7 @@ Because the approval relates to a planning process, it is modelled as a mileston
 
 ### Delivery milestones
 
-This worked example shows how delivery milestones are modelled.
+This example shows how delivery milestones are modelled.
 
 #### Implementation release
 

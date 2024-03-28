@@ -25,7 +25,7 @@ In either case, your [publication policy](../publish.md#finalize-your-publicatio
 Future versions of OCDS might add standardized fields like `parties.details.scale` to disclose classifications. If a new field matches the semantics of a classification that you already publish using the organization classifications extension, in order to preserve backwards compatibility, you can publish both the standardized field and the extension fields.
 ```
 
-## Worked examples
+## Examples
 
 ### Organization scale
 

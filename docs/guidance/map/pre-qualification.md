@@ -13,7 +13,7 @@ But, many jurisdictions also use multi-stage procedures. Such procedures follow 
 :file: ../../examples/pre-qualification/multi-stage.csv
 ```
 
-This worked example describes 3 types of multi-stage procedure and explains how to model them in OCDS.
+This example describes 3 types of multi-stage procedure and explains how to model them in OCDS.
 
 ## Definitions
 

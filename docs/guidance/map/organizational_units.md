@@ -19,7 +19,7 @@ If the fields in the `Organization` object are not sufficient to express your da
 
 Disclosing organizational hierarchies in OCDS is strongly discouraged unless there is a clear use case to support it. Ideally, organizational hierarchies ought to be represented in separate, non-OCDS datasets that use the same organization and unit identifiers. To design a hierarchy-oriented dataset, refer to the [W3C Organization Ontology](https://www.w3.org/TR/vocab-org/). However, if you need to represent organizational hierarchies in OCDS, you can use the [memberOf extension](https://github.com/open-contracting-extensions/ocds_memberOf_extension).
 
-## Worked examples
+## Examples
 
 ### Using the Organization object
 

@@ -22,7 +22,7 @@ To construct a `scheme` value for a personal identifier, follow the [guidance](h
 
 > the scheme should have the pattern {JURISDICTION}-{TYPE} where JURISDICTION is an uppercase ISO 3166-1 alpha-3 country code and TYPE is one of PASSPORT, TAXID or IDCARD
 
-## Worked example
+## Example
 
 A publisher in Colombia collects national ID card numbers as identifiers for natural persons who are tenderers or suppliers.
 
