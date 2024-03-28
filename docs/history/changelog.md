@@ -310,6 +310,8 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * [#1665](https://github.com/open-contracting/standard/pull/1665) Abandon in-file translations.
 
+* [#1480](https://github.com/open-contracting/standard/pull/1480) Add `UnitValue` definition.
+
 ### Documentation
 
 * [#1115](https://github.com/open-contracting/standard/pull/1115) Add guidance on when having multiple suppliers per award.

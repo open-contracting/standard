@@ -23,7 +23,7 @@ import requests
 from babel.messages.pofile import read_po
 from docutils.utils import relative_path
 from lxml import etree
-from ocdskit.schema import get_schema_fields
+from ocdskit.schema import add_validation_properties, get_schema_fields
 
 basedir = Path(__file__).resolve().parent
 schemadir = basedir / 'schema'
@@ -117,19 +117,19 @@ keywords_to_remove = (
 )
 
 
-def json_load(filename, library=json, **kwargs):
+def json_load(basename, library=json, **kwargs):
     """
-    Loads JSON data from the given filename.
+    Loads JSON data from the given basename.
     """
-    with (schemadir / filename).open() as f:
+    with (schemadir / f"{basename}.json").open() as f:
         return library.load(f, **kwargs)
 
 
-def json_dump(filename, data):
+def json_dump(basename, data):
     """
-    Writes JSON data to the given filename.
+    Writes JSON data to the given basename.
     """
-    with (schemadir / filename).open('w') as f:
+    with (schemadir / f"{basename}.json").open('w') as f:
         json.dump(data, f, indent=2)
         f.write('\n')
 
@@ -179,8 +179,8 @@ def get_metaschema():
     """
     Patches and returns the JSON Schema Draft 4 metaschema.
     """
-    return json_merge_patch.merge(json_load('metaschema/json-schema-draft-4.json'),
-                                  json_load('metaschema/meta-schema-patch.json'))
+    return json_merge_patch.merge(json_load('metaschema/json-schema-draft-4'),
+                                  json_load('metaschema/meta-schema-patch'))
 
 
 def get_common_definition_ref(item):
@@ -416,6 +416,82 @@ def get_versioned_release_schema(schema):
     return schema
 
 
+def add_key_based_validation_properties(schema):
+    """
+    Adds:
+    * "format": "email" if the key is "email"
+    * "minimum": 0 to "quantity", "durationInDays" and "numberOfTenderers fields
+    * "required": ["id", "name"] to "Organization" and "OrganizationReference"
+    * "required": ["id"] to "Amendment" and "RelatedProcess"
+    * "$ref": "#/definitions/UnitValue" to "Unit.value"
+
+    Removes "integer" type from "id" and "projectID" fields.
+
+    :param dict schema: a JSON schema
+    """
+    if isinstance(schema, list):
+        for item in schema:
+            add_key_based_validation_properties(item)
+    elif isinstance(schema, dict):
+        for key, value in schema.items():
+            if key == 'email':
+                value['format'] = 'email'
+            elif key in ['quantity', 'durationInDays', 'numberOfTenderers']:
+                value['minimum'] = 0
+            elif key in ['Organization', 'OrganizationReference']:
+                value['required'] = ['id', 'name']
+                value['properties']['name']['type'] = "string"
+                value['properties']['id']['type'] = "string"
+            elif key in ['Amendment', 'RelatedProcess']:
+                value['required'] = ['id']
+                value['properties']['id']['type'] = "string"
+            elif key in ['id', 'projectID']:
+                if 'type' in value:
+                    if 'integer' in value['type']:
+                        value['type'].remove('integer')
+            elif key == 'Unit':
+                value['properties']['value']['$ref'] = '#/definitions/UnitValue'
+
+            add_key_based_validation_properties(value)
+
+
+def get_strict_schema(schema):
+    """
+    Returns the strict version of the schema.
+    """
+    # Update schema metadata.
+    release_with_underscores = release.replace('.', '__')
+    schema['id'] = schema['id'].replace(release_with_underscores,
+                                        f'{release_with_underscores}/strict')
+    schema['title'] = f'Strict {schema["title"][0].lower()}{schema["title"][1:]}'
+    schema['description'] = f'{schema["description"]} The strict schema adds additional validation rules planned for inclusion in OCDS 2.0. Use of the strict schema is a voluntary opportunity to improve data quality.' # noqa
+
+    # Add validation properties
+    add_validation_properties(schema)
+
+    # Add key-based validation properties
+    add_key_based_validation_properties(schema)
+
+    # Remove null types from package schemas
+    if 'package' in schema['id']:
+        remove_nulls(schema)
+
+    return schema
+
+
+def remove_nulls(schema):
+    """
+    Removes null types
+    """
+    if isinstance(schema, dict):
+        for key, value in schema.items():
+            if key == 'type' and isinstance(value, list):
+                if 'null' in value:
+                    value.remove('null')
+
+            remove_nulls(value)
+
+
 @click.group()
 def cli():
     pass
@@ -516,7 +592,13 @@ def pre_commit():
     - meta-schema.json
     - dereferenced-release-schema.json
     - versioned-release-validation-schema.json
+    - strict-release-schema.json
+    - strict-release-package.json
+    - strict-record-package.jso
+    - strict-dereferenced-release-schema.json
+    - strict-versioned-release-validation-schema.json
     """
+
     nonmultilingual = {
         # Identifiers.
         'amendsReleaseID', 'id', 'identifier', 'ocid', 'relatedItems', 'releaseID',
@@ -574,6 +656,18 @@ def pre_commit():
     json_dump('meta-schema.json', get_metaschema())
     json_dump('dereferenced-release-schema.json', jsonref_release_schema)
     json_dump('versioned-release-validation-schema.json', get_versioned_release_schema(release_schema))
+
+    # Strict schemas.
+    directory = Path('strict')
+    strict_release_schema = get_strict_schema(deepcopy(release_schema))
+    json_dump(directory / 'release-schema', strict_release_schema)
+
+    strict_dereferenced_release_schema = json_load(directory / 'release-schema', jsonref, merge_props=True)
+    json_dump(directory / 'dereferenced-release-schema', strict_dereferenced_release_schema)
+    json_dump(directory / 'versioned-release-validation-schema', get_versioned_release_schema(strict_release_schema))
+
+    json_dump(directory / 'release-package-schema', get_strict_schema(json_load('release-package-schema')))
+    json_dump(directory / 'record-package-schema', get_strict_schema(json_load('record-package-schema')))
 
 
 @cli.command()
@@ -661,11 +755,11 @@ def update_currency():
         for code in sorted(historic_codes):
             writer.writerow([code, historic_codes[code]['Title'], historic_codes[code]['Valid Until']])
 
-    release_schema = json_load('release-schema.json')
+    release_schema = json_load('release-schema')
     codes = sorted(list(current_codes) + list(historic_codes))
     release_schema['definitions']['Value']['properties']['currency']['enum'] = codes + [None]
 
-    json_dump('release-schema.json', release_schema)
+    json_dump('release-schema', release_schema)
 
 
 @cli.command()
