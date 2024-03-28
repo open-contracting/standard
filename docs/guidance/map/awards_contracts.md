@@ -131,7 +131,7 @@ In Paraguay, a single award notice is used to disclose many award decisions. Det
 
 Using a single award object to model such a notice in OCDS would make it impossible to determine which items related to which suppliers or how much of the total award value related to each supplier:
 
-```{jsoninclude} ../../examples/award_decisions/single_award.json
+```{jsoninclude} ../../examples/awards_contracts/single_award.json
 :jsonpointer: /releases/0
 :expand: awards, value, suppliers
 ```
@@ -140,7 +140,7 @@ For the award object in OCDS to communicate a direct relationship between items,
 
 There are no identifiers for the individual supplier/value pairings on the original award notice, so it is necessary to create a new identifier for each award object in OCDS. The approach to creating an identifier will depend on the properties of the dataset; for example, using the supplier's `.id`.
 
-```{jsoninclude} ../../examples/award_decisions/multi_award.json
+```{jsoninclude} ../../examples/awards_contracts/multi_award.json
 :jsonpointer: /releases/0
 :expand: awards, value, suppliers
 ```
@@ -159,7 +159,7 @@ The UK's Department for Transport awards a £1.2m, 12-month contract to KPMG to 
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../examples/purchase_orders/parent_contract.csv
+:file: ../../examples/awards_contracts/parent_contract.csv
 ```
 
 Calculating the sum of the contract value in the above example gives the correct result of £1.2m.
@@ -170,7 +170,7 @@ If purchase orders were also disclosed in the `contracts` section of OCDS, by th
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../examples/purchase_orders/contracts_pos.csv
+:file: ../../examples/awards_contracts/contracts_pos.csv
 ```
 
 Calculating the sum of the contract value in the above example gives an incorrect result of £2.4m - double the actual value of the contract.
