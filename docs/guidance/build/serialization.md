@@ -40,16 +40,16 @@ In each case, fields are identified in CSV headers by their [JSON Pointer](https
 
 **JSON**
 
-```{jsoninclude} ../../examples/serialization/flat.json
-:jsonpointer:
-:expand: releases, tender, items
+```{jsoninclude} ../../examples/primer/primer.json
+:jsonpointer: /releases/0
+:expand: tag, tender, value
 ```
 
 **CSV**
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../examples/serialization/flat.csv
+:file: ../../examples/primer/primer.csv
 ```
 
 [Beta open source tooling](https://flatten-tool.readthedocs.io/en/latest/usage-ocds/) exists for generating flat CSV OCDS templates, and converting in both directions between JSON spreadsheets following these templates. The OCDS Data Review Tool incorporates this tooling and will offer to convert files uploaded to it.
