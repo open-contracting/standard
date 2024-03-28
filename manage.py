@@ -7,6 +7,7 @@ import os
 import re
 import sys
 import warnings
+from collections import defaultdict
 from contextlib import contextmanager
 from copy import deepcopy
 from glob import glob
@@ -23,6 +24,7 @@ from babel.messages.pofile import read_po
 from docutils.utils import relative_path
 from lxml import etree
 from ocdskit.schema import add_validation_properties
+from ocdskit.schema import get_schema_fields
 
 basedir = Path(__file__).resolve().parent
 schemadir = basedir / 'schema'
@@ -585,7 +587,7 @@ def missing_changelog(ignore_base):
 @cli.command()
 def pre_commit():
     """
-    Update derivative schema files.
+    Update derivative schema files, and generate a CSV file of multilingual fields.
 
     \b
     - meta-schema.json
@@ -597,12 +599,64 @@ def pre_commit():
     - strict-dereferenced-release-schema.json
     - strict-versioned-release-validation-schema.json
     """
-    json_dump('meta-schema', get_metaschema())
-    release_schema = json_load('release-schema')
 
-    dereferenced_release_schema = json_load('release-schema', jsonref, merge_props=True)
-    json_dump('dereferenced-release-schema', dereferenced_release_schema)
-    json_dump('versioned-release-validation-schema', get_versioned_release_schema(release_schema))
+    nonmultilingual = {
+        # Identifiers.
+        'amendsReleaseID', 'id', 'identifier', 'ocid', 'relatedItems', 'releaseID',
+        # Missing format properties. https://github.com/open-contracting/standard/issues/881
+        'email',
+        # Published-defined formats.
+        'faxNumber', 'postalCode', 'telephone',
+        # Published-defined codelists.
+        'code', 'scheme',
+    }
+
+    release_schema = json_load('release-schema.json')
+    jsonref_release_schema = json_load('release-schema.json', jsonref, merge_props=True)
+
+    counts = defaultdict(list)
+    for field in get_schema_fields(jsonref_release_schema):
+        name = field.path_components[-1]
+        # Skip definitions (output dereferenced properties only). Skip deprecated fields.
+        if field.definition_pointer_components or field.deprecated:
+            continue
+        multilingual = (
+            # If a field can be a non-string, it is not multilingual.
+            not any(t in field.schema['type'] for t in ('boolean', 'integer', 'number', 'object'))
+            # If a field's value is constrained to a codelist or format, it is not multilingual.
+            and not any(prop in field.schema for prop in ('codelist', 'format'))
+            # If an array can contain non-strings, it is not multilingual.
+            and not ('array' in field.schema['type'] and 'object' in field.schema['items']['type'])
+            # Specific exceptions.
+            and name not in nonmultilingual
+        )
+        field.sep = '/'
+        if name in counts and bool(counts[name]) ^ multilingual:
+            if multilingual:
+                raise Exception(f'{name} is multilingual at {field.path}, but not elsewhere')
+            else:
+                raise Exception(f'{name} is multilingual at {" & ".join(counts[name])}, but not at {field.path}')
+        if multilingual:
+            counts[name].append(field.path)
+        else:
+            counts[name] = []
+
+    bulletlist = [
+        '% STARTLIST',
+        *sorted([f'- `{name}`, in any location' for name, paths in counts.items() if len(paths) > 1]),
+        *sorted([f'- `{paths[0]}`' for _, paths in counts.items() if len(paths) == 1]),
+        '% ENDLIST',
+    ]
+
+    path = basedir / 'docs' / 'guidance' / 'map' / 'translations.md'
+    with path.open() as f:
+        contents = f.read()
+    with path.open('w') as f:
+        f.write(re.sub(r'% STARTLIST.+% ENDLIST', '\n'.join(bulletlist), contents, flags=re.DOTALL))
+
+    json_dump('meta-schema.json', get_metaschema())
+    json_dump('dereferenced-release-schema.json', jsonref_release_schema)
+    json_dump('versioned-release-validation-schema.json', get_versioned_release_schema(release_schema))
 
     # Strict schemas.
     directory = Path('strict')

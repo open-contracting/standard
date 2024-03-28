@@ -121,7 +121,17 @@ The submission method codelist is used to identify the mechanism through which a
 ```{versionadded} 1.1
 ```
 
-The related process block is used at the release level to point backwards to prior processes, such as planning or framework establishment, and at the contract level to point onwards to subcontracts or to renewal or replacement processes. The related process codelist determines the kind of relationship that is being described.
+```{versionchanged} 1.2
+Added 'parent'. Deprecated 'subContract', 'replacementProcess' and 'renewalProcess'.
+```
+
+```{field-description} ../../build/current_lang/release-schema.json /definitions/RelatedProcess
+```
+
+```{seealso}
+* [Map: Contracting processes and planning processes](../guidance/map/contracting_planning_processes.md)
+* [Map: Framework agreements](../guidance/map/framework_agreements.md)
+```
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -226,7 +236,8 @@ The country codelist is used to provide the country component of an address, usi
 
 ### Tender Status
 
-The `tender.status` field is used to indicate the current status of a tender process. The following options are available:
+```{deprecated} 1.2
+```
 
 ```{versionchanged} 1.1
 Added the 'planning' and 'withdrawn' codes.
@@ -264,9 +275,8 @@ The procurement category codelist is used to indicate the **primary** focus of a
 
 ### Award Status
 
-An award moves through multiple states. Releases over time can update the status of an award. 
-
-The `awardStatus` field and codelist is used to indicate when a tender did not result in an award (through the `"awardStatus":"unsuccessful"` value).
+```{deprecated} 1.2
+```
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -275,12 +285,7 @@ The `awardStatus` field and codelist is used to indicate when a tender did not r
 
 ### Contract Status
 
-Contracts can move through multiple states. Releases over time can update the status of a contract.
-
-To disclose that a contract is suspended, set the contract's `status` field to 'active' and use its `statusDetails` field to record that the contract is suspended. For more information, see the [contract suspension](../../guidance/map/contract_suspension) worked example.
-
-```{versionchanged} 1.2
-Added the 'terminatedEarly' and 'terminatedSuccessfully' codes.
+```{deprecated} 1.2
 ```
 
 ```{csv-table-no-translate}
@@ -332,4 +337,34 @@ For enterprises without employees, use the 'micro' code.
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../build/current_lang/codelists/partyScale.csv
+```
+
+### Tender Final Status
+
+```{versionadded} 1.2
+```
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/tenderFinalStatus.csv
+```
+
+### Award Final Status
+
+```{versionadded} 1.2
+```
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/awardFinalStatus.csv
+```
+
+### Contract Final Status
+
+```{versionadded} 1.2
+```
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/contractFinalStatus.csv
 ```

@@ -10,7 +10,7 @@ OCDS defines a common model for disclosing structured data on public contracting
 
 ## Definitions
 
-In order to understand the modelling examples, it’s important to first clarify the definitions of some key concepts.
+In order to understand the modelling examples, it's important to first clarify the definitions of some key concepts.
 
 ### Award
 
@@ -143,7 +143,7 @@ There are no identifiers for the individual supplier/value pairings on the origi
 ```{admonition} View the example in JSON
 :class: tip
 
-[View the example in Paraguay’s API](https://contrataciones.gov.py/datos/api/v3/doc/ocds/record/ocds-03ad3f-340885-1)
+[View the example in Paraguay's API](https://contrataciones.gov.py/datos/api/v3/doc/ocds/record/ocds-03ad3f-340885-1)
 ```
 ## Purchase orders
 

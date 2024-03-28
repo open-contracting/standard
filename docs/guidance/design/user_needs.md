@@ -38,9 +38,9 @@ Open contracting data can help public officials get better value for money on go
 
 ## Promoting public integrity
 
-Integrity in public procurement is about identifying, preventing and combating corruption, fraud, and other types of illicit behavior. Proactively calculating red flag indicators and applying risk detection methods, using open contracting data, can potentially detect corruption and fraud before it happens and deter illicit behavior. This changes the anti-corruption approach from punitive to preventive. Monitoring anomalous procurement behavior, even when that behavior isn’t actually the result of a corrupt or illicit process, can help governments identify and resolve overarching inefficiencies in public procurement.
+Integrity in public procurement is about identifying, preventing and combating corruption, fraud, and other types of illicit behavior. Proactively calculating red flag indicators and applying risk detection methods, using open contracting data, can potentially detect corruption and fraud before it happens and deter illicit behavior. This changes the anti-corruption approach from punitive to preventive. Monitoring anomalous procurement behavior, even when that behavior isn't actually the result of a corrupt or illicit process, can help governments identify and resolve overarching inefficiencies in public procurement.
 
-There are two main approaches to fraud and corruption monitoring. A ‘micro’ approach closely scrutinizes individual procurements: for example, flagging a competitive procedure that received a single bid. A ‘macro’ approach looks for suspicious patterns in the whole market and makes links across datasets to map out networks of funding, ownership and interests: for example, calculating collusion risk in a particular market.
+There are two main approaches to fraud and corruption monitoring. A "micro" approach closely scrutinizes individual procurements: for example, flagging a competitive procedure that received a single bid. A "macro" approach looks for suspicious patterns in the whole market and makes links across datasets to map out networks of funding, ownership and interests: for example, calculating collusion risk in a particular market.
 
 All stakeholders from civil society, the private sector, government, and donors have an interest in identifying and combating corruption in public procurement.
 
@@ -64,4 +64,4 @@ Inefficiencies might arise due to inadequate systems or institutional arrangemen
 
 Public procurement agencies are particularly interested in identifying areas for efficiency improvements. Interventions might include, for example: analyzing delays; analyzing the duration of different stages of the contracting process; structuring procurement information to improve internal coordination; streamlining internal processes without duplicating effort across different stages of the contracting process; developing market engagement strategies to prepare better tender specifications; or promoting the use of e-procurement systems.
 
-**Key data fields**: The dates for the different stages of the contracting process, and the status of the tender, awards and contracts.
+**Key data fields**: The dates for the different stages of the contracting process, and the final status of the tender, awards and contracts.
