@@ -27,4 +27,6 @@ Extensions ought to be documented and shared so that other publishers and users 
 
 The [Extension Explorer](../guidance/map/extensions) publishes details of known extensions.
 
-The schema for the standard by default allows for new fields, and does not fail validation of a file which contains unknown fields. 
+The schema for the standard by default allows for new fields, and does not fail validation of a file which contains unknown fields.
+
+It must be possible to access an extension's schema and codelist files by replacing `extension.json` in the extension's URL with a file's path, e.g. `release-schema.json` or `codelists/codelist.csv`. For more information, refer to the Extension Explorer's [guidance on documenting extensions](https://extensions.open-contracting.org/en/publishers/#document).
