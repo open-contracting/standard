@@ -215,6 +215,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1519](https://github.com/open-contracting/standard/pull/1519) `Value.amountNet` and `Value.amountGross`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `contracts.identifiers`
   * [#1679](https://github.com/open-contracting/standard/pull/1679) `Organization.details.classifications`
+  * [#1683](https://github.com/open-contracting/standard/pull/1683) `Tender.finalStatusDate`, `Award.finalStatusDate` and `Contract.finalStatusDate`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
