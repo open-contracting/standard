@@ -74,6 +74,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1316](https://github.com/open-contracting/standard/pull/1316) `language`
   * [#1308](https://github.com/open-contracting/standard/pull/1308) `mediaType`
   * [#1459](https://github.com/open-contracting/standard/pull/1459) `partyScale`
+  * [#1684](https://github.com/open-contracting/standard/pull/1684) `geometryType` and `locationGazetteers`
 
 * `classificationScheme.csv`:
   * [#1319](https://github.com/open-contracting/standard/pull/1319) Rename from `itemClassificationScheme.csv`.
@@ -88,6 +89,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
     * 'eu-main-activity'
   * [#1452](https://github.com/open-contracting/standard/pull/1452) Add 'proClass'.
   * [#1637](https://github.com/open-contracting/standard/pull/1637) Add 'sdg' and 'sdgTarget'.
+  * [#1684](https://github.com/open-contracting/standard/pull/1684) Add 'oc4idsProjectSector' from project extension.
 
 * `documentType.csv`:
   * Add codes:
@@ -215,6 +217,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1519](https://github.com/open-contracting/standard/pull/1519) `Value.amountNet` and `Value.amountGross`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `contracts.identifiers`
   * [#1679](https://github.com/open-contracting/standard/pull/1679) `Organization.details.classifications`
+  * [#1684](https://github.com/open-contracting/standard/pull/1684) `planning.project`, `deliveryLocations` and `deliveryAddresses` to `Tender` and `Item`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
