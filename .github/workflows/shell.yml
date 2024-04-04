@@ -6,10 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install shellcheck
-        run: |
+      - run: |
           sudo apt update
-          sudo apt install shellcheck
-      - run: sudo snap install shfmt
+          sudo apt install shellcheck shfmt
       - run: shellcheck $(shfmt -f .)
       - run: shfmt -d -i 4 -sr $(shfmt -f .)
