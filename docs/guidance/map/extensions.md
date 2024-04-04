@@ -23,11 +23,7 @@ This version of OCDS uses these specific versions of the following extensions:
 
 ## Developing new extensions
 
-If you have additional fields which cannot be mapped to the OCDS schema or an existing extension, you ought to include these in your OCDS data and create a new extension to document their structure and meaning.
-
-### Extension template
-
-You can find the [extension template](https://github.com/open-contracting/standard_extension_template) on GitHub. It contains guidance on creating an extension.
+If you have additional fields which cannot be mapped to the OCDS schema or an existing extension, you ought to include these in your OCDS data and create a new extension to document their structure and meaning. Use the [extension template](https://github.com/open-contracting/standard_extension_template) to create an extension.
 
 ## Profiles
 
