@@ -19,14 +19,8 @@ Whenever using terms from outside the OCDS standard, we encourage the publisher 
 
 ## Extensions
 
-If you have additional fields which cannot be mapped to the OCDS schema or an existing extension, you should include these in your OCDS data and [create a new extension](../guidance/map/extensions) to document their structure and meaning.
+If you have additional fields which cannot be mapped to the OCDS schema or an existing extension, you should include these in your OCDS data and [create a new extension](../guidance/map/extensions) to document their structure and meaning. Extensions ought to be documented and shared so that other publishers and users can draw upon them, and so that extensions can be considered for inclusion in a future version of the standard. The [Extension Explorer](../guidance/map/extensions) publishes details of known extensions.
 
-Extensions to the standard can add new objects and fields to accommodate specific local requirements. An extension must not be created if it is possible to use existing terms from the standard.
-
-Extensions ought to be documented and shared so that other publishers and users can draw upon them, and so that extensions can be considered for inclusion in a future version of the standard.
-
-The [Extension Explorer](../guidance/map/extensions) publishes details of known extensions.
+Extensions to the standard can add new objects and fields to accommodate specific local requirements. An extension must not be created if it is possible to use existing terms from the standard. It must be possible to access an extension's schema and codelist files by replacing `extension.json` in the extension's URL with a file's path, e.g. `release-schema.json` or `codelists/codelist.csv`. For more information, refer to the Extension Explorer's [guidance on documenting extensions](https://extensions.open-contracting.org/en/publishers/#document).
 
 The schema for the standard by default allows for new fields, and does not fail validation of a file which contains unknown fields.
-
-It must be possible to access an extension's schema and codelist files by replacing `extension.json` in the extension's URL with a file's path, e.g. `release-schema.json` or `codelists/codelist.csv`. For more information, refer to the Extension Explorer's [guidance on documenting extensions](https://extensions.open-contracting.org/en/publishers/#document).
