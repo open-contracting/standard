@@ -111,6 +111,7 @@ html_theme_options = {
     'license_url': f'{repository_url}/blob/HEAD/LICENSE',
     'repository_url': repository_url,
 }
+html_short_title = f'{html_theme_options["short_project"]} v{release}'
 
 # List the extension identifiers and versions that should be part of this specification. The extensions must be in
 # the extension registry: https://github.com/open-contracting/extension_registry/blob/main/extension_versions.csv
