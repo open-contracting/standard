@@ -23,11 +23,7 @@ This version of OCDS uses these specific versions of the following extensions:
 
 ## Developing new extensions
 
-If you have additional fields which cannot be mapped to the OCDS schema or an existing extension, you ought to include these in your OCDS data and create a new extension to document their structure and meaning.
-
-### Extension template
-
-You can find the [extension template](https://github.com/open-contracting/standard_extension_template) on GitHub. It contains guidance on creating an extension.
+If you have additional fields which cannot be mapped to the OCDS schema or an existing extension, you ought to include these in your OCDS data and create a new extension to document their structure and meaning. Use the [extension template](https://github.com/open-contracting/standard_extension_template) to create an extension.
 
 ## Profiles
 
@@ -37,9 +33,13 @@ Groups of extensions can be combined into **profiles**. OCDS provides a common c
 
 [OCDS for Public-Private Partnerships](https://standard.open-contracting.org/profiles/ppp/latest/en/) (PPPs) describes how to use OCDS to publish information about PPPs. The profile extends OCDS to offer a data format that follows the World Bank Group's [Framework for Disclosure in Public-Private Partnership Projects](https://www.worldbank.org/en/topic/publicprivatepartnerships/brief/ppp-tools#T1).
 
-### OCDS for the European Union
+### OCDS for eForms
 
-[OCDS for the European Union](https://standard.open-contracting.org/profiles/eu/latest/en/) describes how to express, in OCDS, the information in Tenders Electronic Daily (TED) notices as obliged by law within the EU.
+[OCDS for eForms](https://standard.open-contracting.org/profiles/eforms/latest/en/) describes how to express, in OCDS, European public procurement information collected through [eForms](https://single-market-economy.ec.europa.eu/single-market/public-procurement/digital-procurement/eforms_en).
+
+```{note}
+eForms is established by the [Commission Implementing Regulation (EU) 2019/1780](https://eur-lex.europa.eu/eli/reg_impl/2019/1780/oj), which repeals the [Commission Implementing Regulation (EU) 2015/1986](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015R1986). [OCDS for the European Union](https://standard.open-contracting.org/profiles/eu/latest/en/) is relevant to the repealed regulation.
+```
 
 ### OCDS for the Agreement on Government Procurement
 

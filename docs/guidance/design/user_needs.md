@@ -64,4 +64,4 @@ Inefficiencies might arise due to inadequate systems or institutional arrangemen
 
 Public procurement agencies are particularly interested in identifying areas for efficiency improvements. Interventions might include, for example: analyzing delays; analyzing the duration of different stages of the contracting process; structuring procurement information to improve internal coordination; streamlining internal processes without duplicating effort across different stages of the contracting process; developing market engagement strategies to prepare better tender specifications; or promoting the use of e-procurement systems.
 
-**Key data fields**: The dates for the different stages of the contracting process, and the status of the tender, awards and contracts.
+**Key data fields**: The dates for the different stages of the contracting process, and the final status of the tender, awards and contracts.

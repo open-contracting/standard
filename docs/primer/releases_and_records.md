@@ -46,6 +46,10 @@ When you publish OCDS releases and records, you are encouraged to:
 * Produce bulk packages of releases and records for users to download
 
 ```{note}
+To see what releases and records look like, refer to the worked examples in [merging](../schema/merging.md) and [change history](../guidance/build/change_history.md).
+```
+
+```{note}
 **To learn more,** go to the next page in the Primer: [How can I implement the OCDS?](next) You can also review the further resources below to go deeper into the subjects introduced on this page.
 
 * [OCP Learning: Publishing OCDS Data](https://www.open-contracting.org/learn/publish/)

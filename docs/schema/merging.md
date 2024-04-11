@@ -43,33 +43,36 @@ To convert a field's value in a release to a **versioned value**, you must:
 
 A **versioned value** thus describes a field's value in a specific release.
 
-For example, in the above worked example, the estimated value of the procurement was $1,000 in a release (`tender/value/amount` was `1000`). Following the steps above, the versioned value is:
+For example, a tender release sets the `tender.value.amount`field:
 
-```json
-{
-  "releaseID": "ocds-213czf-000-00002-01-tender",
-  "releaseDate": "2016-01-01T09:30:00Z",
-  "releaseTag": [
-    "tender"
-  ],
-  "value": 1000
-}
+```{jsoninclude} ../examples/amendments/tender.json
+:jsonpointer: /records/0/releases/0
+:expand: tag, tender, value
+```
+
+Following the steps above, the versioned value of the `tender.value.amount` field is:
+
+```{jsoninclude} ../examples/amendments/tender.json
+:jsonpointer: /records/0/versionedRelease/tender/value/amount/0
+:expand: releaseTag
 ```
 
 In a **versioned release**, with a few exceptions, a field's value is replaced with an array of versioned values, which should be in chronological order by `releaseDate`.
 
-For example, in the above worked example, the estimated value was $1,000 in a release published January 1, 2016 and then $2,000 in a release published February 5, 2016. In a versioned release, this is serialized as below:
+Following on from the example above, a later release updates the value of the `tender.value.amount` field:
 
-```{jsoninclude} ../examples/merging/updates/versioned.json
-:jsonpointer: /records/0/versionedRelease/tender/value
-:expand: value, amount
-:title: Versioned_values
+```{jsoninclude} ../examples/amendments/tender.json
+:jsonpointer: /records/0/releases/2
+:expand: tag, tender, value
 ```
 
-```{jsoninclude} ../examples/merging/updates/versioned.json
-:jsonpointer:
-:expand: records, versionedRelease
-:title: Versioned_release
+In the versioned release, the `tender.value.amount` field is an array, that now contains another versioned value:
+
+```{jsoninclude} ../examples/amendments/tender.json
+:jsonpointer: /records/0/versionedRelease/tender/value
+:expand: amount, releaseTag
+
+
 ```
 
 The structure of the versioned release is described by the [versioned release schema](../../build/current_lang/versioned-release-validation-schema.json); note that the `ocid` field's value is not versioned.

@@ -251,7 +251,42 @@
             }
           }
         },
-        "statusDetails": {
+        "finalStatus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "tenderFinalStatus.csv",
+                "openCodelist": false,
+                "enum": [
+                  "complete",
+                  "cancelled",
+                  "unsuccessful",
+                  null
+                ]
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "finalStatusDetails": {
           "$ref": "#/definitions/StringNullVersioned"
         },
         "procuringEntity": {
@@ -527,10 +562,10 @@
           }
         },
         "exclusionGrounds": {
-          "$ref": "#/definitions/StringNullVersioned"
+          "$ref": "#/definitions/ExclusionGrounds"
         },
         "selectionCriteria": {
-          "$ref": "#/definitions/StringNullVersioned"
+          "$ref": "#/definitions/SelectionCriteria"
         },
         "awardPeriod": {
           "$ref": "#/definitions/Period"
@@ -596,7 +631,7 @@
         "amendment": {
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favor of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -661,7 +696,42 @@
             }
           }
         },
-        "statusDetails": {
+        "finalStatus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "awardFinalStatus.csv",
+                "openCodelist": false,
+                "enum": [
+                  "complete",
+                  "cancelled",
+                  "unsuccessful",
+                  null
+                ]
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "finalStatusDetails": {
           "$ref": "#/definitions/StringNullVersioned"
         },
         "date": {
@@ -713,7 +783,7 @@
         "amendment": {
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favor of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -835,7 +905,43 @@
             }
           }
         },
-        "statusDetails": {
+        "finalStatus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "contractFinalStatus.csv",
+                "openCodelist": false,
+                "enum": [
+                  "complete",
+                  "incomplete",
+                  "cancelled",
+                  "unsuccessful",
+                  null
+                ]
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "finalStatusDetails": {
           "$ref": "#/definitions/StringNullVersioned"
         },
         "dateSigned": {
@@ -897,7 +1003,7 @@
         "amendment": {
           "$ref": "#/definitions/Amendment",
           "deprecated": {
-            "description": "The single amendment object has been deprecated in favour of including amendments in an amendments (plural) array.",
+            "description": "The single amendment object has been deprecated in favor of including amendments in an amendments (plural) array.",
             "deprecatedVersion": "1.1"
           }
         }
@@ -1621,6 +1727,14 @@
                     ],
                     "codelist": "partyScale.csv",
                     "openCodelist": false
+                  },
+                  "classifications": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/definitions/Classification"
+                    },
+                    "uniqueItems": true,
+                    "minItems": 1
                   }
                 }
               },
@@ -2941,6 +3055,74 @@
           }
         }
       }
+    },
+    "ExclusionGrounds": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "minProperties": 1
+    },
+    "SelectionCriteria": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "minProperties": 1
     },
     "StringNullUriVersioned": {
       "type": "array",

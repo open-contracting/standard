@@ -10,56 +10,11 @@ The merge routine also allows a publisher to correct a publication error by dele
 
 The following examples show how updates and deletions are reflected in compiled and versioned releases.
 
-## Example 1: Updates
+## Updates
 
-A public procurement agency publishes a release to announce an opportunity on January 1, 2016 in which the estimated value of the procurement is $1,000. On January 31, it publishes a release to expand the description of the procurement. On February 5, it publishes a release to amend the opportunity, in which the estimated value is increased to $2,000.
+The [tender updates and amendments example](../map/amendments.md) illustrates how releases are used to update field values and how updates are reflected in compiled and versioned releases.
 
-The agency decides to award the opportunity to two of the bidders. On March 1, the agency publishes a release to announce that Company A is awarded a contract of $750. On March 3, the agency publishes a release to announce that Company B is awarded a contract of $750.
-
-Through these individual releases, the agency provides real-time data about the contracting (or planning) process.
-
-In each release, the agency also updates the record, which combines all the releases to date. In the final record:
-
-* The compiled release contains all the information about the opportunity and awards, using the same schema as a release.
-* The versioned release makes it easy to see how the description and estimated value changed over time.
-
-```{jsoninclude} ../../examples/merging/updates/tender1.json
-:jsonpointer:
-:expand: releases, tag, tender
-:title: tender
-```
-
-```{jsoninclude} ../../examples/merging/updates/tender2.json
-:jsonpointer:
-:expand: releases, tag, tender
-:title: tenderUpdate
-```
-
-```{jsoninclude} ../../examples/merging/updates/tender3.json
-:jsonpointer:
-:expand: releases, tag, tender
-:title: tenderAmendment
-```
-
-```{jsoninclude} ../../examples/merging/updates/award1.json
-:jsonpointer:
-:expand: releases, tag, awards
-:title: awardOne
-```
-
-```{jsoninclude} ../../examples/merging/updates/award2.json
-:jsonpointer:
-:expand: releases, tag, awards
-:title: awardTwo
-```
-
-```{jsoninclude} ../../examples/merging/updates/versioned.json
-:jsonpointer:
-:expand: records, compiledRelease, versionedRelease, tag, tender, awards
-:title: record
-```
-
-## Example 2: Deletion of fields and objects
+## Deletion of fields and objects
 
 ### Fields
 
@@ -115,7 +70,7 @@ The final record is shown below. Note that the fields in the `contractPeriod` ob
 :title: record
 ```
 
-## Example 3: Deletion of array items
+## Deletion of array items
 
 The public procurement authority in Zambia publishes an award notice, as well as an OCDS release with an 'award' tag. A NGO collects the individual releases published by the procurement authority on a weekly basis to merge into their own records, which they use to display information on their website.
 
