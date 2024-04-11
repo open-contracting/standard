@@ -122,7 +122,7 @@ Each organization has a `details` object. Through extensions, this can be used t
 
 ### Planning
 
-The planning section is used in a planning process. This includes information about, for example, needs identification, budget planning and market research. Background documents such as feasibility studies and project plans can also be included in this section.
+The planning section is used in a planning process. This includes information about, for example, needs identification, budget planning, the parent project and market research. Background documents such as feasibility studies and project plans can also be included in this section.
 
 ````{admonition} Example
 :class: hint
@@ -135,7 +135,7 @@ The planning section is used in a planning process. This includes information ab
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Planning
-:collapse: budget,documents,milestones
+:collapse: budget,project,documents,milestones
 ```
 
 ```{extensionlist} The following extensions are available for planning
@@ -166,6 +166,28 @@ Apart from documents, the majority of planning information is held within the bu
 
 ```{extensionlist} The following extensions are available for budget
 :list: budget
+```
+
+#### Project
+
+The `planning` object includes details of the infrastructure or public-private partnership (PPP) project to which a planning process is related. The identifier of the project ought to be disclosed in `planning.project.id`. This object is designed to allow both machine-readable linkable data about the parent project, cross-referencing to data held in other standards such as the [Open Contracting for Infrastructure Data Standards Toolkit (OC4IDS)](https://standard.open-contracting.org/infrastructure/latest/en/projects/#what-is-a-project) and the [OCDS for PPPs](https://standard.open-contracting.org/profiles/ppp/latest/en/) profile, and human readable description of the parent project, supporting users to understand the relationship of the contracting (or planning) process to their parent project even where linked data is not available.
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/planning/project
+:title: project
+```
+````
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Project
+:collapse: totalValue,additionalClassifications,locations
+```
+
+```{extensionlist} The following extensions are available for project
+:list: 
 ```
 
 ### Tender
@@ -671,7 +693,20 @@ As well as providing this machine-readable link between processes, publishers ma
 
 ### Location
 
-The [Location](https://extensions.open-contracting.org/en/extensions/location/v1.1.4/) extension can be used to provide location information.
+The `Location` subschema can be used to provide the geographic coordinates or standardized location identifiers of the proposed or executed contract delivery in the `Project`, `tender` and `Item` objects.
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/planning/project/locations/0
+:title: location
+```
+````
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Location
+```
 
 ### Link
 
