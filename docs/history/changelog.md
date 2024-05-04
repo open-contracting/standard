@@ -195,7 +195,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * Add new fields:
   * [#1335](https://github.com/open-contracting/standard/pull/1335) `planning.id`
-  * [#1642](https://github.com/open-contracting/standard/pull/1642) `planning.finalStatus` and `planning.finalStatusDate`
+  * [#1642](https://github.com/open-contracting/standard/pull/1642) `planning.finalStatus`, `planning.finalStatusDetails` and `planning.finalStatusDate`
   * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
   * [#1296](https://github.com/open-contracting/standard/pull/1296) [#1674](https://github.com/open-contracting/standard/pull/1674) `tender.exclusionGrounds`
   * [#1669](https://github.com/open-contracting/standard/pull/1669) `tender.expressionOfInterestDeadline`

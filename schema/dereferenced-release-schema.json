@@ -1584,6 +1584,38 @@
             }
           }
         },
+        "finalStatus": {
+          "title": "Final status",
+          "description": "The final status of the planning process, using the closed [planningFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#planning-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "planningFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "cancelled",
+            "unsuccessful",
+            null
+          ]
+        },
+        "finalStatusDetails": {
+          "title": "Final status details",
+          "description": "Additional details on the final status of the planning process. This field can be used to provide the local name of the final status.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "finalStatusDate": {
+          "title": "Final status date",
+          "description": "The date on which the planning process reached its final status.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "documents": {
           "title": "Documents",
           "description": "Documents related to the planning process (for example, notices, needs assessments and market studies).",
@@ -2299,30 +2331,6 @@
               }
             }
           }
-        },
-        "finalStatus": {
-          "title": "Planning final status",
-          "description": "The final status of the planning process, using the closed [planningFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#planning-final-status) codelist.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "codelist": "planningFinalStatus.csv",
-          "openCodelist": false,
-          "enum": [
-            "cancelled",
-            "unsuccessful",
-            null
-          ]
-        },
-        "finalStatusDate": {
-          "title": "Planning final status date",
-          "description": "The date on which the planning process reached its final status.",
-          "format": "date-time",
-          "type": [
-            "string",
-            "null"
-          ]
         }
       }
     },
@@ -14621,6 +14629,38 @@
             }
           }
         },
+        "finalStatus": {
+          "title": "Final status",
+          "description": "The final status of the planning process, using the closed [planningFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#planning-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "planningFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "cancelled",
+            "unsuccessful",
+            null
+          ]
+        },
+        "finalStatusDetails": {
+          "title": "Final status details",
+          "description": "Additional details on the final status of the planning process. This field can be used to provide the local name of the final status.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "finalStatusDate": {
+          "title": "Final status date",
+          "description": "The date on which the planning process reached its final status.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "documents": {
           "title": "Documents",
           "description": "Documents related to the planning process (for example, notices, needs assessments and market studies).",
@@ -15336,30 +15376,6 @@
               }
             }
           }
-        },
-        "finalStatus": {
-          "title": "Planning final status",
-          "description": "The final status of the planning process, using the closed [planningFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#planning-final-status) codelist.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "codelist": "planningFinalStatus.csv",
-          "openCodelist": false,
-          "enum": [
-            "cancelled",
-            "unsuccessful",
-            null
-          ]
-        },
-        "finalStatusDate": {
-          "title": "Planning final status date",
-          "description": "The date on which the planning process reached its final status.",
-          "format": "date-time",
-          "type": [
-            "string",
-            "null"
-          ]
         }
       }
     },

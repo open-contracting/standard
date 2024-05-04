@@ -126,18 +126,6 @@
         "budget": {
           "$ref": "#/definitions/Budget"
         },
-        "documents": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Document"
-          }
-        },
-        "milestones": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Milestone"
-          }
-        },
         "finalStatus": {
           "type": "array",
           "items": {
@@ -172,8 +160,23 @@
             }
           }
         },
+        "finalStatusDetails": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
         "finalStatusDate": {
           "$ref": "#/definitions/StringNullDateTimeVersioned"
+        },
+        "documents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Document"
+          }
+        },
+        "milestones": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Milestone"
+          }
         }
       }
     },
