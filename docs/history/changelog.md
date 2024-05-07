@@ -71,9 +71,16 @@ Per the [normative and non-normative content and changes policy](../governance/n
 ### Codelists
 
 * Add new codelists:
+  * [#1372](https://github.com/open-contracting/standard/pull/1372) `country`
   * [#1316](https://github.com/open-contracting/standard/pull/1316) `language`
+  * [#1326](https://github.com/open-contracting/standard/pull/1326) `linkRelationType`
   * [#1308](https://github.com/open-contracting/standard/pull/1308) `mediaType`
   * [#1459](https://github.com/open-contracting/standard/pull/1459) `partyScale`
+  * [#1654](https://github.com/open-contracting/standard/pull/1654) `permission`
+  * [#1642](https://github.com/open-contracting/standard/pull/1642) `planningFinalStatus`
+  * [#1648](https://github.com/open-contracting/standard/pull/1648) `tenderFinalStatus`
+  * [#1648](https://github.com/open-contracting/standard/pull/1648) `awardFinalStatus`
+  * [#1648](https://github.com/open-contracting/standard/pull/1648) `contractFinalStatus`
 
 * `classificationScheme.csv`:
   * [#1319](https://github.com/open-contracting/standard/pull/1319) Rename from `itemClassificationScheme.csv`.
@@ -155,7 +162,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * `releaseTag.csv`:
   * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
-  * [#1415](https://github.com/open-contracting/standard/pull/1415), [#1509](https://github.com/open-contracting/standard/pull/1509) Align descriptions of 'planning', 'tender', 'award' and 'contract' with the corresponding schema fields.
+  * [#1415](https://github.com/open-contracting/standard/pull/1415) [#1509](https://github.com/open-contracting/standard/pull/1509) Align descriptions of 'planning', 'tender', 'award' and 'contract' with the corresponding schema fields.
 
 * `tenderStatus`, `awardStatus` and `contractStatus`:
   * [#1509](https://github.com/open-contracting/standard/pull/1509) [#1658](https://github.com/open-contracting/standard/pull/1658) Clarify semantics and deprecate codes.
@@ -188,6 +195,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * Add new fields:
   * [#1335](https://github.com/open-contracting/standard/pull/1335) `planning.id`
+  * [#1642](https://github.com/open-contracting/standard/pull/1642) `planning.finalStatus`, `planning.finalStatusDetails` and `planning.finalStatusDate`
   * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
   * [#1296](https://github.com/open-contracting/standard/pull/1296) [#1674](https://github.com/open-contracting/standard/pull/1674) `tender.exclusionGrounds`
   * [#1669](https://github.com/open-contracting/standard/pull/1669) `tender.expressionOfInterestDeadline`
@@ -205,7 +213,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
     * `contracts.estimatedValue`
   * [#1459](https://github.com/open-contracting/standard/pull/1459) `Organization.details.scale`
   * [#1326](https://github.com/open-contracting/standard/pull/1326) [#1431](https://github.com/open-contracting/standard/pull/1431) `links`
-  * [#1376](https://github.com/open-contracting/standard/pull/1376), [#1489](https://github.com/open-contracting/standard/pull/1489) `publisher`
+  * [#1376](https://github.com/open-contracting/standard/pull/1376) [#1489](https://github.com/open-contracting/standard/pull/1489) `publisher`
   * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.country`
   * [#1380](https://github.com/open-contracting/standard/pull/1380) [#1440](https://github.com/open-contracting/standard/pull/1440) `Document.languages`
   * [#1439](https://github.com/open-contracting/standard/pull/1439) `Document.relatedItems`
@@ -478,7 +486,7 @@ See the changelogs for:
 
 ### Schema
 
-* [#603](https://github.com/open-contracting/standard/issues/603), [#645](https://github.com/open-contracting/standard/issues/645) Add definitions to `Release`, `planning.budget`, `Milestone`, `Organization.address`, `Organization.contactPoint`, `Classification`, `Identifier`, `Value` and `Period`.
+* [#603](https://github.com/open-contracting/standard/issues/603) [#645](https://github.com/open-contracting/standard/issues/645) Add definitions to `Release`, `planning.budget`, `Milestone`, `Organization.address`, `Organization.contactPoint`, `Classification`, `Identifier`, `Value` and `Period`.
 * [#578](https://github.com/open-contracting/standard/issues/578) Update the definition of the `buyer` field to cover goods, works and services, and multiple buyers.
 
 ### Documentation
@@ -489,7 +497,7 @@ See the changelogs for:
 
 ### Extensions
 
-* [#40](https://github.com/open-contracting/ocds-extensions/issues/40), [#43](https://github.com/open-contracting/ocds-extensions/issues/43), [#47](https://github.com/open-contracting/ocds-extensions/issues/47) Add missing definitions, codelists and enums to core extensions, correct typos in codelist filenames, disallow use of `null` as an item in arrays, disallow required fields from being set to `null`, allow optional fields to be `null`, use `OrganizationReference` instead of `Organization`.
+* [#40](https://github.com/open-contracting/ocds-extensions/issues/40) [#43](https://github.com/open-contracting/ocds-extensions/issues/43) [#47](https://github.com/open-contracting/ocds-extensions/issues/47) Add missing definitions, codelists and enums to core extensions, correct typos in codelist filenames, disallow use of `null` as an item in arrays, disallow required fields from being set to `null`, allow optional fields to be `null`, use `OrganizationReference` instead of `Organization`.
 
 ## [1.1.2] - 2017-11-10
 

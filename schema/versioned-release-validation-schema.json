@@ -126,6 +126,46 @@
         "budget": {
           "$ref": "#/definitions/Budget"
         },
+        "finalStatus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "planningFinalStatus.csv",
+                "openCodelist": false,
+                "enum": [
+                  "cancelled",
+                  "unsuccessful",
+                  null
+                ]
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "finalStatusDetails": {
+          "$ref": "#/definitions/StringNullVersioned"
+        },
+        "finalStatusDate": {
+          "$ref": "#/definitions/StringNullDateTimeVersioned"
+        },
         "documents": {
           "type": "array",
           "items": {
