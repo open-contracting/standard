@@ -168,6 +168,38 @@
           "description": "Information about the infrastructure or public-private partnership project to which the planning process is related.",
           "$ref": "#/definitions/Project"
         },
+        "finalStatus": {
+          "title": "Final status",
+          "description": "The final status of the planning process, using the closed [planningFinalStatus](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#planning-final-status) codelist.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "planningFinalStatus.csv",
+          "openCodelist": false,
+          "enum": [
+            "cancelled",
+            "unsuccessful",
+            null
+          ]
+        },
+        "finalStatusDetails": {
+          "title": "Final status details",
+          "description": "Additional details on the final status of the planning process. This field can be used to provide the local name of the final status.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "finalStatusDate": {
+          "title": "Final status date",
+          "description": "The date on which the planning process reached its final status.",
+          "format": "date-time",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "documents": {
           "title": "Documents",
           "description": "Documents related to the planning process (for example, notices, needs assessments and market studies).",
@@ -276,6 +308,15 @@
             "string",
             "null"
           ]
+        },
+        "finalStatusDate": {
+          "title": "Final status date",
+          "description": "The date on which the tender reached its final status.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
         },
         "procuringEntity": {
           "title": "Procuring entity",
@@ -639,6 +680,15 @@
             "null"
           ]
         },
+        "finalStatusDate": {
+          "title": "Final status date",
+          "description": "The date on which the award reached its final status.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
         "date": {
           "title": "Award date",
           "description": "The date of the contract award. This is usually the date on which a decision to award was made.",
@@ -822,6 +872,15 @@
             "string",
             "null"
           ]
+        },
+        "finalStatusDate": {
+          "title": "Final status date",
+          "description": "The date on which the contract reached its final status.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
         },
         "dateSigned": {
           "title": "Date concluded",
