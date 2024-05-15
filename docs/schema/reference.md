@@ -537,7 +537,7 @@ The items block is used to list the line-items associated with a tender, award o
 
 #### Unit
 
-The `unit` block allows detailed specification of the parameters and price of units that make up a line-item. It should be used for units of measurement only. For units of presentation it is recommended to use the `ImmediateContainer` subschema.
+The `unit` subschema allows detailed specification of the parameters and price of units that make up a line-item. It should be used for units of measurement only. For units of presentation, use the [`ImmediateContainer` subschema](#immediatecontainer), which is used by the [`Item.immediateContainer` field](#item).
 
 If the [Quantities, Units, Dimensions and Data Types Ontologies](https://www.qudt.org) unit classification scheme is used, then publishers may use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
 
@@ -560,7 +560,7 @@ Other unit classification schemes may be used, including those in the [unitClass
 
 #### ImmediateContainer
 
-The `ImmediateContainer` subschema allows detailed specification of the immediate container of an item. This is also known as the presentation, the presentation form, the package. For units of measurement it is recommended to use the `Unit` subschema.
+The `ImmediateContainer` subschema allows detailed specification of the immediate container of an item. This is also called the presentation, presentation form, or package. For units of measurement, use the [`Unit` subschema](#unit).
 
 ````{admonition} Example
 :class: hint
