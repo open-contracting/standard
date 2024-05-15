@@ -537,11 +537,11 @@ The items block is used to list the line-items associated with a tender, award o
 
 #### Unit
 
-The `unit` block allows detailed specification of the parameters and price of units that make up a line-item.
+The `unit` block allows detailed specification of the parameters and price of units that make up a line-item. It should be used for units of measurement only. For units of presentation it is recommended to use the `ImmediateContainer` subschema.
 
-If the [Quantities, Units, Dimensions and Data Types Ontologies](https://www.qudt.org) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
+If the [Quantities, Units, Dimensions and Data Types Ontologies](https://www.qudt.org) unit classification scheme is used, then publishers may use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
 
-Other unit classification schemes can be used, including those in the [unitClassificationScheme codelist](codelists.md#unit-classification-scheme).
+Other unit classification schemes may be used, including those in the [unitClassificationScheme codelist](codelists.md#unit-classification-scheme).
 
 ````{admonition} Example
 :class: hint
@@ -556,6 +556,25 @@ Other unit classification schemes can be used, including those in the [unitClass
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Item/properties/unit
 :collapse: value
+```
+
+#### ImmediateContainer
+
+The `ImmediateContainer` subschema allows detailed specification of the immediate container of an item. This is also known as the presentation, the presentation form, the package. For units of measurement it is recommended to use the `Unit` subschema.
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/tender/items/1
+:expand: immediateContainer
+:title: immediateContainer
+```
+````
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Item/properties/immediateContainer
+:collapse: capacity
 ```
 
 ### Classification

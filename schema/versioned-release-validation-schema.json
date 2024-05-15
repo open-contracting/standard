@@ -1874,6 +1874,9 @@
         },
         "unit": {
           "$ref": "#/definitions/Unit"
+        },
+        "immediateContainer": {
+          "$ref": "#/definitions/ImmediateContainer"
         }
       }
     },
@@ -2972,6 +2975,146 @@
           "$ref": "#/definitions/StringNullUriVersioned"
         }
       }
+    },
+    "ImmediateContainer": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 1
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "capacity": {
+          "$ref": "#/definitions/Quantity"
+        }
+      },
+      "minProperties": 1
+    },
+    "Quantity": {
+      "type": "object",
+      "properties": {
+        "unit": {
+          "$ref": "#/definitions/SimpleUnit"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "number",
+                  "null"
+                ],
+                "pattern": "^[([\\]][0-9]+,([0-9]+|INF)[)[\\]]$"
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "minProperties": 1
+    },
+    "SimpleUnit": {
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "codelist": "unitClassificationScheme.csv",
+                "openCodelist": true,
+                "minLength": 1
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "id": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "releaseDate": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "releaseID": {
+                "type": "string"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "versionId": true,
+                "minLength": 1
+              },
+              "releaseTag": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "minProperties": 1
     },
     "Link": {
       "type": "object",

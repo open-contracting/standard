@@ -1603,8 +1603,13 @@
         },
         "unit": {
           "title": "Unit",
-          "description": "A description of the unit in which the goods, services or works are provided (e.g. hours, kilograms) and the unit-price.",
+          "description": "A description of the unit of in which the goods, services or works are provided (e.g. hours, kilograms) and the unit-price. This field should be used for units of measurement only. For units of presentation it is recommended to use the `immediateContainer` field.",
           "$ref": "#/definitions/Unit"
+        },
+        "immediateContainer": {
+          "title": "Immediate container",
+          "description": "The immediate container for the item. Also known as: presentation, presentation form, package.",
+          "$ref": "#/definitions/ImmediateContainer"
         }
       }
     },
@@ -2591,7 +2596,7 @@
     },
     "Unit": {
       "title": "Unit",
-      "description": "A description of the unit in which the goods, services or works are provided (e.g. hours, kilograms) and the unit-price.",
+      "description": "A description of the unit in which the goods, services or works are provided (e.g. hours, kilograms) and the unit-price. This object should be used for units of measurement only. For units of presentation it is recommended to use the `ImmediateContainer` object.",
       "type": "object",
       "properties": {
         "scheme": {
@@ -2614,7 +2619,7 @@
         },
         "name": {
           "title": "Name",
-          "description": "Name of the unit.",
+          "description": "The name of the unit.",
           "type": [
             "string",
             "null"
@@ -2627,7 +2632,7 @@
         },
         "uri": {
           "title": "URI",
-          "description": "The machine-readable URI for the unit of measure, provided by the scheme.",
+          "description": "The machine-readable URI for the unit of measure, provided by the `scheme`.",
           "format": "uri",
           "type": [
             "string",
@@ -2635,6 +2640,80 @@
           ]
         }
       }
+    },
+    "ImmediateContainer": {
+      "title": "Immediate container",
+      "description": "The immediate container for the item. Also known as: presentation, presentation form, package.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "description": "The common name of the container. It is recommended to use titles from the immediateContainer codelist in the [Medicine](https://extensions.open-contracting.org/en/extensions/medicine/master/) extension for medicine items, or titles from the [GS1 GDSN PackageTypeCodelist](https://www.gs1.org/standards/gdsn) for other items.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "capacity": {
+          "title": "Capacity",
+          "description": "The storage capacity of the container.",
+          "$ref": "#/definitions/Quantity"
+        }
+      },
+      "minProperties": 1
+    },
+    "Quantity": {
+      "title": "Quantity",
+      "description": "The quantity of a thing.",
+      "type": "object",
+      "properties": {
+        "unit": {
+          "title": "Unit",
+          "description": "The unit of measurement for the quantity.",
+          "$ref": "#/definitions/SimpleUnit"
+        },
+        "value": {
+          "title": "Value",
+          "description": "The quantity, as a multiple of the unit of measurement. The quantity is expressed in interval notation, for example: \"[10,10]\" for 10 units, \"[1,10]\" for 1 to 10 units, or \"[10,INF[\" for 10 or more units.",
+          "type": [
+            "string",
+            "number",
+            "null"
+          ],
+          "pattern": "^[([\\]][0-9]+,([0-9]+|INF)[)[\\]]$"
+        }
+      },
+      "minProperties": 1
+    },
+    "SimpleUnit": {
+      "title": "Simple unit",
+      "description": "A unit of measurement.",
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "title": "Scheme",
+          "description": "The codelist from which the identifier for the unit of measurement is taken, using the open [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist. 'UNCEFACT' is recommended.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "unitClassificationScheme.csv",
+          "openCodelist": true,
+          "minLength": 1
+        },
+        "id": {
+          "title": "ID",
+          "description": "The identifier for the unit of measurement, taken from the codelist referenced by the `scheme` field. Refer to the [unitClassificationScheme](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#unit-classification-scheme) codelist for details of how to find identifiers within schemes.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "versionId": true,
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
     },
     "Link": {
       "title": "Link",
