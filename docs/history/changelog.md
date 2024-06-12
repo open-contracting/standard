@@ -219,6 +219,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.country`
   * [#1380](https://github.com/open-contracting/standard/pull/1380) [#1440](https://github.com/open-contracting/standard/pull/1440) `Document.languages`
   * [#1439](https://github.com/open-contracting/standard/pull/1439) `Document.relatedItems`
+  * [#1689](https://github.com/open-contracting/standard/pull/1689) `Item.immediateContainer`
   * [#1455](https://github.com/open-contracting/standard/pull/1455) `Milestone.dueAfterDate`
   * [#1434](https://github.com/open-contracting/standard/pull/1434) `Milestone.value`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `SimpleIdentifier`
@@ -264,9 +265,10 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * Add or strengthen normative statements in field descriptions:
   * [#1086](https://github.com/open-contracting/standard/pull/1086) Recommend the use of strings rather than integers for identifiers.
-  * [#1112](https://github.com/open-contracting/standard/pull/1112) `parties.id`: "This field need only be unique within the scope of the contracting process, but **should** be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) if the primary identifier for this organization is available" ("may" replaced with "should")
+  * [#1112](https://github.com/open-contracting/standard/pull/1112) `parties.id`: "This field need only be unique within the scope of the contracting process, but **should** be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}) if the primary identifier for this organization is available." ("may" replaced with "should")
   * [#1112](https://github.com/open-contracting/standard/pull/1112) [#1540](https://github.com/open-contracting/standard/pull/1540) `contracts.items`: "If the items contracted are identical to the items awarded and/or the items tendered, this field **should** be omitted." (rephrased)
   * [#1112](https://github.com/open-contracting/standard/pull/1112) `Period.durationInDays`:  "If a startDate and endDate are set, this field, if used, **must** be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, **must** be equal to the difference between startDate and maxExtentDate." ("should" replaced with "must")
+  * [#1689](https://github.com/open-contracting/standard/pull/1689) `Item.unit` and `Unit`: "It is **recommended** to use the unit of measurement in which the goods, services or works are provided (e.g. kilogram, hour), rather than the unit of presentation (e.g. box), because units of measurement are easier to compare and convert than units of presentation."
 
 * Clarify merging behavior:
   * [#1242](https://github.com/open-contracting/standard/pull/1242) Clarify that the releases to merge must use the same version of OCDS.
