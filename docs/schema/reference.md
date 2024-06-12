@@ -537,12 +537,6 @@ The items block is used to list the line-items associated with a tender, award o
 
 #### Unit
 
-The `unit` subschema allows detailed specification of the parameters and price of units that make up a line-item. It should be used for units of measurement only. A unit of measurement is a definite magnitude of a quantity, defined and adopted by convention, that is used as a standard of measurement for the same kind of quantity. For example weight is a physical quantity, and the kilogram can be used as a unit of measurement for weight. For units of presentation, use the [`ImmediateContainer` subschema](#immediatecontainer), which is used by the [`Item.immediateContainer` field](#item).
-
-If the [Quantities, Units, Dimensions and Data Types Ontologies](https://www.qudt.org) unit classification scheme is used, then publishers may use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
-
-Other unit classification schemes may be used, including those in the [unitClassificationScheme codelist](codelists.md#unit-classification-scheme).
-
 ````{admonition} Example
 :class: hint
 
@@ -560,8 +554,6 @@ Other unit classification schemes may be used, including those in the [unitClass
 
 #### ImmediateContainer
 
-The `ImmediateContainer` subschema allows detailed specification of the immediate container of an item. This is also called the presentation, presentation form, or package. For units of measurement, use the [`Unit` subschema](#unit).
-
 ````{admonition} Example
 :class: hint
 
@@ -574,7 +566,6 @@ The `ImmediateContainer` subschema allows detailed specification of the immediat
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Item/properties/immediateContainer
-:collapse: capacity
 ```
 
 ### Classification
@@ -703,6 +694,15 @@ The entries of the top-level `links` array are `Link` objects:
 :pointer: /definitions/Link
 ```
 
+### Quantity
+
+```{field-description} ../../build/current_lang/release-schema.json /definitions/Quantity
+```
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Quantity
+```
+
 ### SimpleIdentifier
 
 ```{field-description} ../../build/current_lang/release-schema.json /definitions/SimpleIdentifier
@@ -710,4 +710,13 @@ The entries of the top-level `links` array are `Link` objects:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/SimpleIdentifier
+```
+
+### SimpleUnit
+
+```{field-description} ../../build/current_lang/release-schema.json /definitions/SimpleUnit
+```
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/SimpleUnit
 ```
