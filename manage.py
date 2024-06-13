@@ -519,7 +519,7 @@ def pre_commit():
     """
     nonmultilingual = {
         # Identifiers.
-        'amendsReleaseID', 'id', 'identifier', 'ocid', 'relatedItems', 'releaseID',
+        'amendsReleaseID', 'id', 'identifier', 'identifiers', 'ocid', 'relatedItems', 'releaseID',
         # Missing format properties. https://github.com/open-contracting/standard/issues/881
         'email',
         # Published-defined formats.
@@ -549,7 +549,9 @@ def pre_commit():
         )
         field.sep = '/'
         if name in counts and bool(counts[name]) ^ multilingual:
-            if multilingual:
+            if not multilingual and field.schema['type'] == 'object':
+                click.secho(f'{field.path} is an object. {" & ".join(counts[name])} is/are multilingual.', fg='yellow')
+            elif multilingual:
                 raise Exception(f'{name} is multilingual at {field.path}, but not elsewhere')
             else:
                 raise Exception(f'{name} is multilingual at {" & ".join(counts[name])}, but not at {field.path}')
