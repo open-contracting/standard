@@ -36,7 +36,8 @@ All OCDS publications ought to meet the following criteria:
 1. **Reviewable**: The [OCDS Data Review Tool](https://standard.open-contracting.org/review/) is able to report results on the data.
 1. **Appropriate**: Concepts are published in semantic accordance with the rules of the OCDS (or registered extensions) rather than using a non-OCDS field or code.
 1. **Active**: For each publisher, there is an OCDS release with a top-level `date` field value within the last 12 months.
-1. **Parity**: For each publisher, for the _time period_ and _buyers_ covered by the data, there isn’t another dataset by the same publisher that covers more than 25% more contracting processes.
+1. **Representative**: It describes all contracting processes within a relevant population. For example: all contracts for a public-private partnership; all above-threshold contracts since 2020 excluding those by state-owned enterprises, etc.
+1. **Relevant**: Whether at least 1 contracting process answers "who bought what from whom, for how much, when, and how".
 
 The Data Support Team is happy to review draft and newly published OCDS data and can work with publishers with advice to meet the above criteria. A publication that does not meet this minimum threshold will not be listed as a publisher by OCP as part of [OCP’s regular reporting](https://www.open-contracting.org/why-open-contracting/learning/).
 
@@ -48,30 +49,42 @@ From the minimum threshold above, we want to support publishers to continue to i
 
 Improvement on the below indicators demonstrate that the published information is becoming more complete about the contracting processes within the publisher’s jurisdiction.
 
+1. Increase the number of indicators covered (volume)
+1. Increase the average coverage of fields per compiled release, for example either new fields not previously published in any release, or an increase in the use of a field across releases (e.g. very little data was published about direct awards and now more is being published about direct awards) (density)
+1. Increase the number of buyers covered in the publication ("who")
+1. Increase the number of methods covered in the publication ("how")
 1. Publish subsequent releases per OCID to show how the contracting process is progressing over time
-1. Increase the publication of historical information (based on a minimal set of date fields that appear across all sources, e.g. `tender.tenderPeriod`, `awards.date`, and `contracts.dateSigned`)
-1. Increase the average coverage of fields per compiled release, for example either new fields not previously published in any release, or an increase in the use of a field across releases (e.g. very little data was published about direct awards and now more is being published about direct awards)
-1. Increase the number of buyers covered in the publication
-1. Increase the number of concepts covered relative to non-OCDS data
+1. Increase the temporal coverage into the past (based on a minimal set of date fields that appear across all sources, e.g. `tender.tenderPeriod`, `awards.date`, and `contracts.dateSigned`) ("when")
+
+### Timeliness
+
+1. Publish multiple updates per contracting process
+1. Decrease the delay between the information’s creation and publication
+
+### Accessibility
+
+Improvements on the below indicators demonstrate that it is becoming easier for users to access the published information.
+
+1. Publish a user guide or publication policy that describes the scope, at minimum
+1. Publish API documentation that describes the endpoints and parameters, at minimum
+1. Increase the number of access methods (API endpoints, bulk downloads)
+1. Increase the number of data formats (JSON, Excel, CSV)
+1. Facilitate indirect data use (e.g. search, dashboards, etc.)
+
+### Retrievability and legal
+
+1. Decrease the number of HTTP errors
+1. Use a data license that conforms to the [Open Definition](https://opendefinition.org)
 
 ### Correctness
 
 Improvement on the below indicators demonstrates that the concepts are being published more correctly, improving usability.
 
 1. Decrease the types and number of structural errors reported by the OCDS Data Review Tool, e.g. moving from 20 types of errors, each occurring more than 100,000 times, to 10 types of errors, each occurring less than 100 times
-1. Decrease the average number of structural errors per release
-1. Decrease the number of instances in which a concept is not published in conformance with OCDS semantics
+1. Decrease the average number of structural errors per contracting process
+1. Decrease the number of conformance issues
 1. Decrease the number of types of quality warnings using OCDS Pelican
 1. Decrease the average number of quality warnings per release using OCDS Pelican
-
-### Access
-
-Improvements on the below indicators demonstrate that it is becoming easier for users to access the published information.
-
-1. Publish record packages containing compiled releases
-1. Decrease the number of HTTP errors
-1. Increase the number of access methods (API endpoints, bulk downloads)
-1. Decrease the number of license restrictions
 
 As publishers improve, the Data Support Team can work with them to identify how they can improve on the above criteria. OCP will note whether a publisher has improved in [OCP’s regular reporting](https://www.open-contracting.org/why-open-contracting/learning/).
 
