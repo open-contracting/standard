@@ -49,6 +49,7 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * [#1414](https://github.com/open-contracting/standard/pull/1414) Remove the planning section from Easy releases and Change history.
     * [#1494](https://github.com/open-contracting/standard/pull/1497) Add guidance on preparing test data to Check your data section.
   * Publish:
+    * [#1697](https://github.com/open-contracting/standard/pull/1697) Update the Basic Criteria and Continuous improvement to match the OCP's new MEL definitions.
     * Merge Publication policy and Licensing pages into Publish page [#986](https://github.com/open-contracting/standard/pull/986) [#1012](https://github.com/open-contracting/standard/pull/1012).
     * Replace guidance on publication levels [#980](https://github.com/open-contracting/standard/pull/980) [#1013](https://github.com/open-contracting/standard/pull/1013) [#1045](https://github.com/open-contracting/standard/pull/1045).
   * [#1427](https://github.com/open-contracting/standard/pull/1427) Add guidance about recommended extensions.
