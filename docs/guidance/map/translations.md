@@ -11,7 +11,6 @@ Two texts have the same content if they describe the same thing: for example, "U
 You can publish the values of these fields in any language:
 
 % STARTLIST
-- `coordinates`, in any location
 - `description`, in any location
 - `finalStatusDetails`, in any location
 - `legalName`, in any location
@@ -21,6 +20,7 @@ You can publish the values of these fields in any language:
 - `region`, in any location
 - `streetAddress`, in any location
 - `title`, in any location
+- `planning/budget/project`
 - `tender/awardCriteriaDetails`
 - `tender/procurementMethodDetails`
 - `tender/procurementMethodRationale`

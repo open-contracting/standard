@@ -72,11 +72,12 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * Add new codelists:
   * [#1372](https://github.com/open-contracting/standard/pull/1372) `country`
+  * [#1684](https://github.com/open-contracting/standard/pull/1684) `geometryType`
   * [#1316](https://github.com/open-contracting/standard/pull/1316) `language`
   * [#1326](https://github.com/open-contracting/standard/pull/1326) `linkRelationType`
+  * [#1684](https://github.com/open-contracting/standard/pull/1684) `locationGazetteers`
   * [#1308](https://github.com/open-contracting/standard/pull/1308) `mediaType`
   * [#1459](https://github.com/open-contracting/standard/pull/1459) `partyScale`
-  * [#1684](https://github.com/open-contracting/standard/pull/1684) `geometryType` and `locationGazetteers`
   * [#1654](https://github.com/open-contracting/standard/pull/1654) `permission`
   * [#1642](https://github.com/open-contracting/standard/pull/1642) `planningFinalStatus`
   * [#1648](https://github.com/open-contracting/standard/pull/1648) `tenderFinalStatus`

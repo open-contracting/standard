@@ -532,6 +532,7 @@ def pre_commit():
     jsonref_release_schema = json_load('release-schema.json', jsonref, merge_props=True)
 
     counts = defaultdict(list)
+    nonstring = ('boolean', 'integer', 'number', 'object')
     for field in get_schema_fields(jsonref_release_schema):
         name = field.path_components[-1]
         # Skip definitions (output dereferenced properties only). Skip deprecated fields.
@@ -539,7 +540,8 @@ def pre_commit():
             continue
         multilingual = (
             # If a field can be a non-string, it is not multilingual.
-            not any(t in field.schema['type'] for t in ('boolean', 'integer', 'number', 'object'))
+            not any(t in field.schema['type'] for t in nonstring)
+            and ('array' not in field.schema['type'] or not any(t in field.schema['items']['type'] for t in nonstring))
             # If a field's value is constrained to a codelist or format, it is not multilingual.
             and not any(prop in field.schema for prop in ('codelist', 'format'))
             # If an array can contain non-strings, it is not multilingual.
@@ -558,7 +560,7 @@ def pre_commit():
         if multilingual:
             counts[name].append(field.path)
         else:
-            counts[name] = []
+            counts[name] = counts[name]
 
     bulletlist = [
         '% STARTLIST',
