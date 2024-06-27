@@ -177,6 +177,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1645](https://github.com/open-contracting/standard/pull/1645) Deprecate "parent-to-child" codes: 'subContract', 'replacementProcess' and 'renewalProcess'
   * [#1670](https://github.com/open-contracting/standard/pull/1670) Deprecate 'parent' code, because a subcontract needs to be described within its main contract, not within a separate contracting process
   * [#1645](https://github.com/open-contracting/standard/pull/1645) Update descriptions: 'prior', 'framework', 'unsuccessfulProcess'
+  * [#1702](https://github.com/open-contracting/standard/pull/1702) Correct broken urls in `classificationScheme` and add Source column to `unitClassificationScheme`
 
 ### Schema
 
