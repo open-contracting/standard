@@ -70,9 +70,9 @@ OCDS models the first and second stages of framework agreement procedures as sep
 The 'framework' code is only used to relate second-stage contracting processes to their first-stage contracting process, never to other second-stage contracting processes.
 ```
 
-The following diagram shows how OCDS models a framework agreement procedure with two second stages: one with competition and one without competition. Grey blocks represent unused sections of the OCDS schema.
+The following diagram shows how OCDS models a framework agreement procedure with two second stages: one with competition and one without competition.
 
-![OCDS framework agreement model](../../_static/png/framework_agreement/model.png)
+![OCDS framework agreement model](../../_static/svg/framework_agreement_diagram.svg)
 
 ### Extensions
 
