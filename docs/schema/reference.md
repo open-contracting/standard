@@ -122,7 +122,7 @@ Each organization has a `details` object. Through extensions, this can be used t
 
 ### Planning
 
-The planning section is used in a planning process. This includes information about, for example, needs identification, budget planning, the parent project and market research. Background documents such as feasibility studies and project plans can also be included in this section.
+The planning section is used in a planning process. This includes information about, for example, needs identification, budget planning and market research. Background documents such as feasibility studies and project plans can also be included in this section.
 
 ````{admonition} Example
 :class: hint
@@ -150,8 +150,6 @@ The planning section is used in a planning process. This includes information ab
 
 Apart from documents, the majority of planning information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting (or planning) process to existing projects and budgets even where linked data is not available.
 
-The `planning.budget.projectID` field should not be used to disclose the identifier of an infrastructure or PPP project. Rather, this field is used to disclose the identifier of a programme of work as it appears in a budget, like a national or state budget. Since such programmes of work can include many infrastructure projects, it is necessary to disclose their identifiers separately. Use the the `planning.project.id` field to disclose the identifier of an infrastructure or PPP project.
-
 ````{admonition} Example
 :class: hint
 
@@ -171,10 +169,6 @@ The `planning.budget.projectID` field should not be used to disclose the identif
 ```
 
 #### Project
-
-The `project` object includes details of the infrastructure or public-private partnership (PPP) project to which a planning process is related. This object is designed to allow both machine-readable linkable data about the parent project, cross-referencing to data held in other standards such as the [Open Contracting for Infrastructure Data Standards Toolkit (OC4IDS)](https://standard.open-contracting.org/infrastructure/latest/en/projects/#what-is-a-project) and the [OCDS for PPPs](https://standard.open-contracting.org/profiles/ppp/latest/en/) profile, and human readable description of the parent project, supporting users to understand the relationship of the contracting (or planning) process to their parent project even where linked data is not available.
-
-Where there is a separate OC4IDS dataset that describes the project the identifier from this dataset should be referenced in `project.id`. Where there is not a separate project dataset an appropriate project identifier will need to be generated. For more information on project identifiers see [OC4IDS Project Identifiers](https://standard.open-contracting.org/infrastructure/latest/en/guidance/identifiers/).
 
 ````{admonition} Example
 :class: hint
@@ -696,8 +690,6 @@ As well as providing this machine-readable link between processes, publishers ma
 * When recording a `contract/relatedProcess` pointing to the ocid of a contracting process to renew a given contract, a `contract/documents` entry with a `documentType` of 'tenderNotice' and a title that describes it as the successor process, could be provided;
 
 ### Location
-
-The `Location` subschema can be used to provide the geographic coordinates or standardized location identifiers of the proposed or executed contract delivery in the `Project`, `tender` and `Item` objects.
 
 ````{admonition} Example
 :class: hint

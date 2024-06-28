@@ -75,7 +75,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1684](https://github.com/open-contracting/standard/pull/1684) `geometryType`
   * [#1316](https://github.com/open-contracting/standard/pull/1316) `language`
   * [#1326](https://github.com/open-contracting/standard/pull/1326) `linkRelationType`
-  * [#1684](https://github.com/open-contracting/standard/pull/1684) `locationGazetteers`
+  * [#1684](https://github.com/open-contracting/standard/pull/1684) `locationGazetteer`
   * [#1308](https://github.com/open-contracting/standard/pull/1308) `mediaType`
   * [#1459](https://github.com/open-contracting/standard/pull/1459) `partyScale`
   * [#1654](https://github.com/open-contracting/standard/pull/1654) `permission`
@@ -200,7 +200,9 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * Add new fields:
   * [#1335](https://github.com/open-contracting/standard/pull/1335) `planning.id`
   * [#1642](https://github.com/open-contracting/standard/pull/1642) `planning.finalStatus`, `planning.finalStatusDetails` and `planning.finalStatusDate`
+  * [#1684](https://github.com/open-contracting/standard/pull/1684) `planning.project`
   * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
+  * [#1684](https://github.com/open-contracting/standard/pull/1684) `tender.deliveryLocations` and `tender.deliveryAddresses`
   * [#1296](https://github.com/open-contracting/standard/pull/1296) [#1674](https://github.com/open-contracting/standard/pull/1674) `tender.exclusionGrounds`
   * [#1669](https://github.com/open-contracting/standard/pull/1669) `tender.expressionOfInterestDeadline`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `tender.identifiers`
@@ -221,13 +223,13 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.country`
   * [#1380](https://github.com/open-contracting/standard/pull/1380) [#1440](https://github.com/open-contracting/standard/pull/1440) `Document.languages`
   * [#1439](https://github.com/open-contracting/standard/pull/1439) `Document.relatedItems`
+  * [#1684](https://github.com/open-contracting/standard/pull/1684) `Item.deliveryLocations` and `Item.deliveryAddresses`
   * [#1455](https://github.com/open-contracting/standard/pull/1455) `Milestone.dueAfterDate`
   * [#1434](https://github.com/open-contracting/standard/pull/1434) `Milestone.value`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `SimpleIdentifier`
   * [#1519](https://github.com/open-contracting/standard/pull/1519) `Value.amountNet` and `Value.amountGross`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `contracts.identifiers`
   * [#1679](https://github.com/open-contracting/standard/pull/1679) `Organization.details.classifications`
-  * [#1684](https://github.com/open-contracting/standard/pull/1684) `planning.project`, `deliveryLocations` and `deliveryAddresses` to `Tender` and `Item`
 
 * Deprecate some fields:
   * [#1200](https://github.com/open-contracting/standard/pull/1200) `tender.submissionMethod`, because all codes from the `submissionMethod` codelist are deprecated.
