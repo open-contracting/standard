@@ -1569,7 +1569,7 @@
             },
             "projectID": {
               "title": "Project identifier",
-              "description": "The identifier of the project of which the future contract(s) will be part or through which it/they will be funded. Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
+              "description": "The identifier of the programme of work as it appears in a budget (for example, a national or state budget), of which the future contract(s) will be part or through which it/they will be funded. Although an integer is allowed, it is recommended to use a string.",
               "type": [
                 "string",
                 "integer",
@@ -1601,13 +1601,13 @@
           }
         },
         "project": {
-          "title": "Project information",
-          "description": "Information about the infrastructure or public-private partnership project to which the planning process is related.",
+          "title": "Project",
+          "description": "Information about the infrastructure or public-private partnership (PPP) project to which the planning process is related.",
           "type": "object",
           "properties": {
             "id": {
               "title": "Identifier",
-              "description": "An externally provided identifier for the project. This can be a URI, an identifier from a projects register or based on the canonical version of the project's name. Project identifiers should be unique within the scope of the publication.",
+              "description": "An externally provided identifier for the project. This can be a URI, an [Open Contracting for Infrastructure Data Standards Toolkit (OC4IDS)](https://standard.open-contracting.org/infrastructure/latest/en/guidance/identifiers/) project identifier, [OCDS for PPPs](https://standard.open-contracting.org/profiles/ppp/latest/en/framework/#i-basic-project-information) project identifier, an identifier from a projects register, or an identifier based on the canonical version of the project's name. Project identifiers should be unique within the scope of the publication.",
               "type": [
                 "string",
                 "null"
@@ -1980,7 +1980,7 @@
             },
             "uri": {
               "title": "URI",
-              "description": "The URI of a resource with additional information about the project.",
+              "description": "The URI of a resource about the project.",
               "type": [
                 "string",
                 "null"
@@ -2083,7 +2083,7 @@
             },
             "locations": {
               "title": "Locations",
-              "description": "Information about the locations where the project is taking place.",
+              "description": "Information about the locations where the project takes place.",
               "type": "array",
               "items": {
                 "title": "Location",
@@ -2092,7 +2092,7 @@
                 "properties": {
                   "description": {
                     "title": "Description",
-                    "description": "A name or description of the location. This might include the name(s) of the location(s), or might provide a human-readable description of the location to be covered.",
+                    "description": "The name or description of the location.",
                     "type": [
                       "string",
                       "null"
@@ -2100,12 +2100,12 @@
                   },
                   "geometry": {
                     "title": "Geometry",
-                    "description": "We follow the [GeoJSON standard](https://www.rfc-editor.org/rfc/rfc7946) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding an address. For concession licenses, or other scenarios covering a polygon location that is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+                    "description": "The spatial extent of the location, as a [GeoJSON Geometry object](https://www.rfc-editor.org/rfc/rfc7946).",
                     "type": "object",
                     "properties": {
                       "type": {
                         "title": "Type",
-                        "description": "The type of [GeoJSON Geometry Objects](https://www.rfc-editor.org/rfc/rfc7946#section-3.1) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
+                        "description": "The type of the GeoJSON Geometry object, from the closed [geometryType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#geometryType) codelist.",
                         "type": [
                           "string",
                           "null"
@@ -2124,7 +2124,7 @@
                       },
                       "coordinates": {
                         "title": "Coordinates",
-                        "description": "The relevant array of points, e.g. [longitude, latitude] or [longitude, latitude, elevation], or a nested array of points, for the GeoJSON geometry being described. The longitude and latitude must be expressed in decimal degrees in the WGS84 (EPSG:4326) projection.",
+                        "description": "The coordinates of the GeoJSON Geometry object. For example, [longitude, latitude] or [longitude, latitude, elevation] for a Point geometry, using the World Geodetic System 1984 (WGS84, EPSG:4326) with longitude and latitude units of decimal degrees.",
                         "type": [
                           "array",
                           "null"
@@ -2140,22 +2140,22 @@
                   },
                   "gazetteer": {
                     "title": "Gazetteer",
-                    "description": "Identifiers from a gazetteer (a geographical index or directory) for the location.",
+                    "description": "Identifiers for the location from a gazetteer (a geographical index or directory).",
                     "type": "object",
                     "properties": {
                       "scheme": {
-                        "title": "Gazetteer scheme",
-                        "description": "The identifier of the gazetteer. The `locationGazetteers.csv` codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+                        "title": "Scheme",
+                        "description": "The identifier of the gazetteer, from the open [locationGazetter](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#locationGazetter) codelist.",
                         "type": [
                           "string",
                           "null"
                         ],
-                        "codelist": "locationGazetteers.csv",
+                        "codelist": "locationGazetteer.csv",
                         "openCodelist": true
                       },
                       "identifiers": {
                         "title": "Identifiers",
-                        "description": "An array of one or more codes drawn from the gazetteer indicated by the `scheme` field.",
+                        "description": "One or more location codes taken from the scheme.",
                         "type": [
                           "array",
                           "null"
@@ -2168,7 +2168,7 @@
                   },
                   "uri": {
                     "title": "URI",
-                    "description": "A URI to a further description of the location. This might be a human-readable document with information on the location, or a machine-readable description of the location.",
+                    "description": "The URI of a resource about the location.",
                     "type": [
                       "string",
                       "null"
@@ -4073,7 +4073,7 @@
                 }
               },
               "deliveryLocations": {
-                "title": "Delivery Locations",
+                "title": "Delivery locations",
                 "description": "The locations where activity related to the opportunity, contract or license will be delivered.",
                 "type": "array",
                 "items": {
@@ -4083,7 +4083,7 @@
                   "properties": {
                     "description": {
                       "title": "Description",
-                      "description": "A name or description of the location. This might include the name(s) of the location(s), or might provide a human-readable description of the location to be covered.",
+                      "description": "The name or description of the location.",
                       "type": [
                         "string",
                         "null"
@@ -4091,12 +4091,12 @@
                     },
                     "geometry": {
                       "title": "Geometry",
-                      "description": "We follow the [GeoJSON standard](https://www.rfc-editor.org/rfc/rfc7946) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding an address. For concession licenses, or other scenarios covering a polygon location that is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+                      "description": "The spatial extent of the location, as a [GeoJSON Geometry object](https://www.rfc-editor.org/rfc/rfc7946).",
                       "type": "object",
                       "properties": {
                         "type": {
                           "title": "Type",
-                          "description": "The type of [GeoJSON Geometry Objects](https://www.rfc-editor.org/rfc/rfc7946#section-3.1) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
+                          "description": "The type of the GeoJSON Geometry object, from the closed [geometryType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#geometryType) codelist.",
                           "type": [
                             "string",
                             "null"
@@ -4115,7 +4115,7 @@
                         },
                         "coordinates": {
                           "title": "Coordinates",
-                          "description": "The relevant array of points, e.g. [longitude, latitude] or [longitude, latitude, elevation], or a nested array of points, for the GeoJSON geometry being described. The longitude and latitude must be expressed in decimal degrees in the WGS84 (EPSG:4326) projection.",
+                          "description": "The coordinates of the GeoJSON Geometry object. For example, [longitude, latitude] or [longitude, latitude, elevation] for a Point geometry, using the World Geodetic System 1984 (WGS84, EPSG:4326) with longitude and latitude units of decimal degrees.",
                           "type": [
                             "array",
                             "null"
@@ -4131,22 +4131,22 @@
                     },
                     "gazetteer": {
                       "title": "Gazetteer",
-                      "description": "Identifiers from a gazetteer (a geographical index or directory) for the location.",
+                      "description": "Identifiers for the location from a gazetteer (a geographical index or directory).",
                       "type": "object",
                       "properties": {
                         "scheme": {
-                          "title": "Gazetteer scheme",
-                          "description": "The identifier of the gazetteer. The `locationGazetteers.csv` codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+                          "title": "Scheme",
+                          "description": "The identifier of the gazetteer, from the open [locationGazetter](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#locationGazetter) codelist.",
                           "type": [
                             "string",
                             "null"
                           ],
-                          "codelist": "locationGazetteers.csv",
+                          "codelist": "locationGazetteer.csv",
                           "openCodelist": true
                         },
                         "identifiers": {
                           "title": "Identifiers",
-                          "description": "An array of one or more codes drawn from the gazetteer indicated by the `scheme` field.",
+                          "description": "One or more location codes taken from the scheme.",
                           "type": [
                             "array",
                             "null"
@@ -4159,7 +4159,7 @@
                     },
                     "uri": {
                       "title": "URI",
-                      "description": "A URI to a further description of the location. This might be a human-readable document with information on the location, or a machine-readable description of the location.",
+                      "description": "The URI of a resource about the location.",
                       "type": [
                         "string",
                         "null"
@@ -4173,8 +4173,8 @@
                 "minItems": 1
               },
               "deliveryAddresses": {
-                "title": "Delivery Addresses",
-                "description": "The addresses to which, or where, goods or services related to the opportunity, contract or license will be delivered.",
+                "title": "Delivery addresses",
+                "description": "The addresses to which goods or services related to the opportunity, contract or license will be delivered.",
                 "type": "array",
                 "items": {
                   "title": "Address",
@@ -5545,7 +5545,7 @@
           }
         },
         "deliveryLocations": {
-          "title": "Delivery Locations",
+          "title": "Delivery locations",
           "description": "The locations where activity related to the opportunity will take place.",
           "type": "array",
           "items": {
@@ -5555,7 +5555,7 @@
             "properties": {
               "description": {
                 "title": "Description",
-                "description": "A name or description of the location. This might include the name(s) of the location(s), or might provide a human-readable description of the location to be covered.",
+                "description": "The name or description of the location.",
                 "type": [
                   "string",
                   "null"
@@ -5563,12 +5563,12 @@
               },
               "geometry": {
                 "title": "Geometry",
-                "description": "We follow the [GeoJSON standard](https://www.rfc-editor.org/rfc/rfc7946) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding an address. For concession licenses, or other scenarios covering a polygon location that is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+                "description": "The spatial extent of the location, as a [GeoJSON Geometry object](https://www.rfc-editor.org/rfc/rfc7946).",
                 "type": "object",
                 "properties": {
                   "type": {
                     "title": "Type",
-                    "description": "The type of [GeoJSON Geometry Objects](https://www.rfc-editor.org/rfc/rfc7946#section-3.1) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
+                    "description": "The type of the GeoJSON Geometry object, from the closed [geometryType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#geometryType) codelist.",
                     "type": [
                       "string",
                       "null"
@@ -5587,7 +5587,7 @@
                   },
                   "coordinates": {
                     "title": "Coordinates",
-                    "description": "The relevant array of points, e.g. [longitude, latitude] or [longitude, latitude, elevation], or a nested array of points, for the GeoJSON geometry being described. The longitude and latitude must be expressed in decimal degrees in the WGS84 (EPSG:4326) projection.",
+                    "description": "The coordinates of the GeoJSON Geometry object. For example, [longitude, latitude] or [longitude, latitude, elevation] for a Point geometry, using the World Geodetic System 1984 (WGS84, EPSG:4326) with longitude and latitude units of decimal degrees.",
                     "type": [
                       "array",
                       "null"
@@ -5603,22 +5603,22 @@
               },
               "gazetteer": {
                 "title": "Gazetteer",
-                "description": "Identifiers from a gazetteer (a geographical index or directory) for the location.",
+                "description": "Identifiers for the location from a gazetteer (a geographical index or directory).",
                 "type": "object",
                 "properties": {
                   "scheme": {
-                    "title": "Gazetteer scheme",
-                    "description": "The identifier of the gazetteer. The `locationGazetteers.csv` codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+                    "title": "Scheme",
+                    "description": "The identifier of the gazetteer, from the open [locationGazetter](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#locationGazetter) codelist.",
                     "type": [
                       "string",
                       "null"
                     ],
-                    "codelist": "locationGazetteers.csv",
+                    "codelist": "locationGazetteer.csv",
                     "openCodelist": true
                   },
                   "identifiers": {
                     "title": "Identifiers",
-                    "description": "An array of one or more codes drawn from the gazetteer indicated by the `scheme` field.",
+                    "description": "One or more location codes taken from the scheme.",
                     "type": [
                       "array",
                       "null"
@@ -5631,7 +5631,7 @@
               },
               "uri": {
                 "title": "URI",
-                "description": "A URI to a further description of the location. This might be a human-readable document with information on the location, or a machine-readable description of the location.",
+                "description": "The URI of a resource about the location.",
                 "type": [
                   "string",
                   "null"
@@ -5644,8 +5644,8 @@
           "uniqueItems": true
         },
         "deliveryAddresses": {
-          "title": "Delivery Addresses",
-          "description": "The addresses to which, or where, goods or services related to the opportunity will be delivered.",
+          "title": "Delivery addresses",
+          "description": "The addresses to which goods or services related to the opportunity will be delivered.",
           "type": "array",
           "items": {
             "title": "Address",
@@ -9968,7 +9968,7 @@
                   }
                 },
                 "deliveryLocations": {
-                  "title": "Delivery Locations",
+                  "title": "Delivery locations",
                   "description": "The locations where activity related to the opportunity, contract or license will be delivered.",
                   "type": "array",
                   "items": {
@@ -9978,7 +9978,7 @@
                     "properties": {
                       "description": {
                         "title": "Description",
-                        "description": "A name or description of the location. This might include the name(s) of the location(s), or might provide a human-readable description of the location to be covered.",
+                        "description": "The name or description of the location.",
                         "type": [
                           "string",
                           "null"
@@ -9986,12 +9986,12 @@
                       },
                       "geometry": {
                         "title": "Geometry",
-                        "description": "We follow the [GeoJSON standard](https://www.rfc-editor.org/rfc/rfc7946) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding an address. For concession licenses, or other scenarios covering a polygon location that is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+                        "description": "The spatial extent of the location, as a [GeoJSON Geometry object](https://www.rfc-editor.org/rfc/rfc7946).",
                         "type": "object",
                         "properties": {
                           "type": {
                             "title": "Type",
-                            "description": "The type of [GeoJSON Geometry Objects](https://www.rfc-editor.org/rfc/rfc7946#section-3.1) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
+                            "description": "The type of the GeoJSON Geometry object, from the closed [geometryType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#geometryType) codelist.",
                             "type": [
                               "string",
                               "null"
@@ -10010,7 +10010,7 @@
                           },
                           "coordinates": {
                             "title": "Coordinates",
-                            "description": "The relevant array of points, e.g. [longitude, latitude] or [longitude, latitude, elevation], or a nested array of points, for the GeoJSON geometry being described. The longitude and latitude must be expressed in decimal degrees in the WGS84 (EPSG:4326) projection.",
+                            "description": "The coordinates of the GeoJSON Geometry object. For example, [longitude, latitude] or [longitude, latitude, elevation] for a Point geometry, using the World Geodetic System 1984 (WGS84, EPSG:4326) with longitude and latitude units of decimal degrees.",
                             "type": [
                               "array",
                               "null"
@@ -10026,22 +10026,22 @@
                       },
                       "gazetteer": {
                         "title": "Gazetteer",
-                        "description": "Identifiers from a gazetteer (a geographical index or directory) for the location.",
+                        "description": "Identifiers for the location from a gazetteer (a geographical index or directory).",
                         "type": "object",
                         "properties": {
                           "scheme": {
-                            "title": "Gazetteer scheme",
-                            "description": "The identifier of the gazetteer. The `locationGazetteers.csv` codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+                            "title": "Scheme",
+                            "description": "The identifier of the gazetteer, from the open [locationGazetter](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#locationGazetter) codelist.",
                             "type": [
                               "string",
                               "null"
                             ],
-                            "codelist": "locationGazetteers.csv",
+                            "codelist": "locationGazetteer.csv",
                             "openCodelist": true
                           },
                           "identifiers": {
                             "title": "Identifiers",
-                            "description": "An array of one or more codes drawn from the gazetteer indicated by the `scheme` field.",
+                            "description": "One or more location codes taken from the scheme.",
                             "type": [
                               "array",
                               "null"
@@ -10054,7 +10054,7 @@
                       },
                       "uri": {
                         "title": "URI",
-                        "description": "A URI to a further description of the location. This might be a human-readable document with information on the location, or a machine-readable description of the location.",
+                        "description": "The URI of a resource about the location.",
                         "type": [
                           "string",
                           "null"
@@ -10068,8 +10068,8 @@
                   "minItems": 1
                 },
                 "deliveryAddresses": {
-                  "title": "Delivery Addresses",
-                  "description": "The addresses to which, or where, goods or services related to the opportunity, contract or license will be delivered.",
+                  "title": "Delivery addresses",
+                  "description": "The addresses to which goods or services related to the opportunity, contract or license will be delivered.",
                   "type": "array",
                   "items": {
                     "title": "Address",
@@ -12458,7 +12458,7 @@
                   }
                 },
                 "deliveryLocations": {
-                  "title": "Delivery Locations",
+                  "title": "Delivery locations",
                   "description": "The locations where activity related to the opportunity, contract or license will be delivered.",
                   "type": "array",
                   "items": {
@@ -12468,7 +12468,7 @@
                     "properties": {
                       "description": {
                         "title": "Description",
-                        "description": "A name or description of the location. This might include the name(s) of the location(s), or might provide a human-readable description of the location to be covered.",
+                        "description": "The name or description of the location.",
                         "type": [
                           "string",
                           "null"
@@ -12476,12 +12476,12 @@
                       },
                       "geometry": {
                         "title": "Geometry",
-                        "description": "We follow the [GeoJSON standard](https://www.rfc-editor.org/rfc/rfc7946) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding an address. For concession licenses, or other scenarios covering a polygon location that is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+                        "description": "The spatial extent of the location, as a [GeoJSON Geometry object](https://www.rfc-editor.org/rfc/rfc7946).",
                         "type": "object",
                         "properties": {
                           "type": {
                             "title": "Type",
-                            "description": "The type of [GeoJSON Geometry Objects](https://www.rfc-editor.org/rfc/rfc7946#section-3.1) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
+                            "description": "The type of the GeoJSON Geometry object, from the closed [geometryType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#geometryType) codelist.",
                             "type": [
                               "string",
                               "null"
@@ -12500,7 +12500,7 @@
                           },
                           "coordinates": {
                             "title": "Coordinates",
-                            "description": "The relevant array of points, e.g. [longitude, latitude] or [longitude, latitude, elevation], or a nested array of points, for the GeoJSON geometry being described. The longitude and latitude must be expressed in decimal degrees in the WGS84 (EPSG:4326) projection.",
+                            "description": "The coordinates of the GeoJSON Geometry object. For example, [longitude, latitude] or [longitude, latitude, elevation] for a Point geometry, using the World Geodetic System 1984 (WGS84, EPSG:4326) with longitude and latitude units of decimal degrees.",
                             "type": [
                               "array",
                               "null"
@@ -12516,22 +12516,22 @@
                       },
                       "gazetteer": {
                         "title": "Gazetteer",
-                        "description": "Identifiers from a gazetteer (a geographical index or directory) for the location.",
+                        "description": "Identifiers for the location from a gazetteer (a geographical index or directory).",
                         "type": "object",
                         "properties": {
                           "scheme": {
-                            "title": "Gazetteer scheme",
-                            "description": "The identifier of the gazetteer. The `locationGazetteers.csv` codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+                            "title": "Scheme",
+                            "description": "The identifier of the gazetteer, from the open [locationGazetter](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#locationGazetter) codelist.",
                             "type": [
                               "string",
                               "null"
                             ],
-                            "codelist": "locationGazetteers.csv",
+                            "codelist": "locationGazetteer.csv",
                             "openCodelist": true
                           },
                           "identifiers": {
                             "title": "Identifiers",
-                            "description": "An array of one or more codes drawn from the gazetteer indicated by the `scheme` field.",
+                            "description": "One or more location codes taken from the scheme.",
                             "type": [
                               "array",
                               "null"
@@ -12544,7 +12544,7 @@
                       },
                       "uri": {
                         "title": "URI",
-                        "description": "A URI to a further description of the location. This might be a human-readable document with information on the location, or a machine-readable description of the location.",
+                        "description": "The URI of a resource about the location.",
                         "type": [
                           "string",
                           "null"
@@ -12558,8 +12558,8 @@
                   "minItems": 1
                 },
                 "deliveryAddresses": {
-                  "title": "Delivery Addresses",
-                  "description": "The addresses to which, or where, goods or services related to the opportunity, contract or license will be delivered.",
+                  "title": "Delivery addresses",
+                  "description": "The addresses to which goods or services related to the opportunity, contract or license will be delivered.",
                   "type": "array",
                   "items": {
                     "title": "Address",
@@ -16983,7 +16983,7 @@
             },
             "projectID": {
               "title": "Project identifier",
-              "description": "The identifier of the project of which the future contract(s) will be part or through which it/they will be funded. Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
+              "description": "The identifier of the programme of work as it appears in a budget (for example, a national or state budget), of which the future contract(s) will be part or through which it/they will be funded. Although an integer is allowed, it is recommended to use a string.",
               "type": [
                 "string",
                 "integer",
@@ -17015,13 +17015,13 @@
           }
         },
         "project": {
-          "title": "Project information",
-          "description": "Information about the infrastructure or public-private partnership project to which the planning process is related.",
+          "title": "Project",
+          "description": "Information about the infrastructure or public-private partnership (PPP) project to which the planning process is related.",
           "type": "object",
           "properties": {
             "id": {
               "title": "Identifier",
-              "description": "An externally provided identifier for the project. This can be a URI, an identifier from a projects register or based on the canonical version of the project's name. Project identifiers should be unique within the scope of the publication.",
+              "description": "An externally provided identifier for the project. This can be a URI, an [Open Contracting for Infrastructure Data Standards Toolkit (OC4IDS)](https://standard.open-contracting.org/infrastructure/latest/en/guidance/identifiers/) project identifier, [OCDS for PPPs](https://standard.open-contracting.org/profiles/ppp/latest/en/framework/#i-basic-project-information) project identifier, an identifier from a projects register, or an identifier based on the canonical version of the project's name. Project identifiers should be unique within the scope of the publication.",
               "type": [
                 "string",
                 "null"
@@ -17394,7 +17394,7 @@
             },
             "uri": {
               "title": "URI",
-              "description": "The URI of a resource with additional information about the project.",
+              "description": "The URI of a resource about the project.",
               "type": [
                 "string",
                 "null"
@@ -17497,7 +17497,7 @@
             },
             "locations": {
               "title": "Locations",
-              "description": "Information about the locations where the project is taking place.",
+              "description": "Information about the locations where the project takes place.",
               "type": "array",
               "items": {
                 "title": "Location",
@@ -17506,7 +17506,7 @@
                 "properties": {
                   "description": {
                     "title": "Description",
-                    "description": "A name or description of the location. This might include the name(s) of the location(s), or might provide a human-readable description of the location to be covered.",
+                    "description": "The name or description of the location.",
                     "type": [
                       "string",
                       "null"
@@ -17514,12 +17514,12 @@
                   },
                   "geometry": {
                     "title": "Geometry",
-                    "description": "We follow the [GeoJSON standard](https://www.rfc-editor.org/rfc/rfc7946) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding an address. For concession licenses, or other scenarios covering a polygon location that is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+                    "description": "The spatial extent of the location, as a [GeoJSON Geometry object](https://www.rfc-editor.org/rfc/rfc7946).",
                     "type": "object",
                     "properties": {
                       "type": {
                         "title": "Type",
-                        "description": "The type of [GeoJSON Geometry Objects](https://www.rfc-editor.org/rfc/rfc7946#section-3.1) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
+                        "description": "The type of the GeoJSON Geometry object, from the closed [geometryType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#geometryType) codelist.",
                         "type": [
                           "string",
                           "null"
@@ -17538,7 +17538,7 @@
                       },
                       "coordinates": {
                         "title": "Coordinates",
-                        "description": "The relevant array of points, e.g. [longitude, latitude] or [longitude, latitude, elevation], or a nested array of points, for the GeoJSON geometry being described. The longitude and latitude must be expressed in decimal degrees in the WGS84 (EPSG:4326) projection.",
+                        "description": "The coordinates of the GeoJSON Geometry object. For example, [longitude, latitude] or [longitude, latitude, elevation] for a Point geometry, using the World Geodetic System 1984 (WGS84, EPSG:4326) with longitude and latitude units of decimal degrees.",
                         "type": [
                           "array",
                           "null"
@@ -17554,22 +17554,22 @@
                   },
                   "gazetteer": {
                     "title": "Gazetteer",
-                    "description": "Identifiers from a gazetteer (a geographical index or directory) for the location.",
+                    "description": "Identifiers for the location from a gazetteer (a geographical index or directory).",
                     "type": "object",
                     "properties": {
                       "scheme": {
-                        "title": "Gazetteer scheme",
-                        "description": "The identifier of the gazetteer. The `locationGazetteers.csv` codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+                        "title": "Scheme",
+                        "description": "The identifier of the gazetteer, from the open [locationGazetter](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#locationGazetter) codelist.",
                         "type": [
                           "string",
                           "null"
                         ],
-                        "codelist": "locationGazetteers.csv",
+                        "codelist": "locationGazetteer.csv",
                         "openCodelist": true
                       },
                       "identifiers": {
                         "title": "Identifiers",
-                        "description": "An array of one or more codes drawn from the gazetteer indicated by the `scheme` field.",
+                        "description": "One or more location codes taken from the scheme.",
                         "type": [
                           "array",
                           "null"
@@ -17582,7 +17582,7 @@
                   },
                   "uri": {
                     "title": "URI",
-                    "description": "A URI to a further description of the location. This might be a human-readable document with information on the location, or a machine-readable description of the location.",
+                    "description": "The URI of a resource about the location.",
                     "type": [
                       "string",
                       "null"
@@ -19487,7 +19487,7 @@
                 }
               },
               "deliveryLocations": {
-                "title": "Delivery Locations",
+                "title": "Delivery locations",
                 "description": "The locations where activity related to the opportunity, contract or license will be delivered.",
                 "type": "array",
                 "items": {
@@ -19497,7 +19497,7 @@
                   "properties": {
                     "description": {
                       "title": "Description",
-                      "description": "A name or description of the location. This might include the name(s) of the location(s), or might provide a human-readable description of the location to be covered.",
+                      "description": "The name or description of the location.",
                       "type": [
                         "string",
                         "null"
@@ -19505,12 +19505,12 @@
                     },
                     "geometry": {
                       "title": "Geometry",
-                      "description": "We follow the [GeoJSON standard](https://www.rfc-editor.org/rfc/rfc7946) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding an address. For concession licenses, or other scenarios covering a polygon location that is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+                      "description": "The spatial extent of the location, as a [GeoJSON Geometry object](https://www.rfc-editor.org/rfc/rfc7946).",
                       "type": "object",
                       "properties": {
                         "type": {
                           "title": "Type",
-                          "description": "The type of [GeoJSON Geometry Objects](https://www.rfc-editor.org/rfc/rfc7946#section-3.1) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
+                          "description": "The type of the GeoJSON Geometry object, from the closed [geometryType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#geometryType) codelist.",
                           "type": [
                             "string",
                             "null"
@@ -19529,7 +19529,7 @@
                         },
                         "coordinates": {
                           "title": "Coordinates",
-                          "description": "The relevant array of points, e.g. [longitude, latitude] or [longitude, latitude, elevation], or a nested array of points, for the GeoJSON geometry being described. The longitude and latitude must be expressed in decimal degrees in the WGS84 (EPSG:4326) projection.",
+                          "description": "The coordinates of the GeoJSON Geometry object. For example, [longitude, latitude] or [longitude, latitude, elevation] for a Point geometry, using the World Geodetic System 1984 (WGS84, EPSG:4326) with longitude and latitude units of decimal degrees.",
                           "type": [
                             "array",
                             "null"
@@ -19545,22 +19545,22 @@
                     },
                     "gazetteer": {
                       "title": "Gazetteer",
-                      "description": "Identifiers from a gazetteer (a geographical index or directory) for the location.",
+                      "description": "Identifiers for the location from a gazetteer (a geographical index or directory).",
                       "type": "object",
                       "properties": {
                         "scheme": {
-                          "title": "Gazetteer scheme",
-                          "description": "The identifier of the gazetteer. The `locationGazetteers.csv` codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+                          "title": "Scheme",
+                          "description": "The identifier of the gazetteer, from the open [locationGazetter](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#locationGazetter) codelist.",
                           "type": [
                             "string",
                             "null"
                           ],
-                          "codelist": "locationGazetteers.csv",
+                          "codelist": "locationGazetteer.csv",
                           "openCodelist": true
                         },
                         "identifiers": {
                           "title": "Identifiers",
-                          "description": "An array of one or more codes drawn from the gazetteer indicated by the `scheme` field.",
+                          "description": "One or more location codes taken from the scheme.",
                           "type": [
                             "array",
                             "null"
@@ -19573,7 +19573,7 @@
                     },
                     "uri": {
                       "title": "URI",
-                      "description": "A URI to a further description of the location. This might be a human-readable document with information on the location, or a machine-readable description of the location.",
+                      "description": "The URI of a resource about the location.",
                       "type": [
                         "string",
                         "null"
@@ -19587,8 +19587,8 @@
                 "minItems": 1
               },
               "deliveryAddresses": {
-                "title": "Delivery Addresses",
-                "description": "The addresses to which, or where, goods or services related to the opportunity, contract or license will be delivered.",
+                "title": "Delivery addresses",
+                "description": "The addresses to which goods or services related to the opportunity, contract or license will be delivered.",
                 "type": "array",
                 "items": {
                   "title": "Address",
@@ -20959,7 +20959,7 @@
           }
         },
         "deliveryLocations": {
-          "title": "Delivery Locations",
+          "title": "Delivery locations",
           "description": "The locations where activity related to the opportunity will take place.",
           "type": "array",
           "items": {
@@ -20969,7 +20969,7 @@
             "properties": {
               "description": {
                 "title": "Description",
-                "description": "A name or description of the location. This might include the name(s) of the location(s), or might provide a human-readable description of the location to be covered.",
+                "description": "The name or description of the location.",
                 "type": [
                   "string",
                   "null"
@@ -20977,12 +20977,12 @@
               },
               "geometry": {
                 "title": "Geometry",
-                "description": "We follow the [GeoJSON standard](https://www.rfc-editor.org/rfc/rfc7946) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding an address. For concession licenses, or other scenarios covering a polygon location that is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+                "description": "The spatial extent of the location, as a [GeoJSON Geometry object](https://www.rfc-editor.org/rfc/rfc7946).",
                 "type": "object",
                 "properties": {
                   "type": {
                     "title": "Type",
-                    "description": "The type of [GeoJSON Geometry Objects](https://www.rfc-editor.org/rfc/rfc7946#section-3.1) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
+                    "description": "The type of the GeoJSON Geometry object, from the closed [geometryType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#geometryType) codelist.",
                     "type": [
                       "string",
                       "null"
@@ -21001,7 +21001,7 @@
                   },
                   "coordinates": {
                     "title": "Coordinates",
-                    "description": "The relevant array of points, e.g. [longitude, latitude] or [longitude, latitude, elevation], or a nested array of points, for the GeoJSON geometry being described. The longitude and latitude must be expressed in decimal degrees in the WGS84 (EPSG:4326) projection.",
+                    "description": "The coordinates of the GeoJSON Geometry object. For example, [longitude, latitude] or [longitude, latitude, elevation] for a Point geometry, using the World Geodetic System 1984 (WGS84, EPSG:4326) with longitude and latitude units of decimal degrees.",
                     "type": [
                       "array",
                       "null"
@@ -21017,22 +21017,22 @@
               },
               "gazetteer": {
                 "title": "Gazetteer",
-                "description": "Identifiers from a gazetteer (a geographical index or directory) for the location.",
+                "description": "Identifiers for the location from a gazetteer (a geographical index or directory).",
                 "type": "object",
                 "properties": {
                   "scheme": {
-                    "title": "Gazetteer scheme",
-                    "description": "The identifier of the gazetteer. The `locationGazetteers.csv` codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+                    "title": "Scheme",
+                    "description": "The identifier of the gazetteer, from the open [locationGazetter](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#locationGazetter) codelist.",
                     "type": [
                       "string",
                       "null"
                     ],
-                    "codelist": "locationGazetteers.csv",
+                    "codelist": "locationGazetteer.csv",
                     "openCodelist": true
                   },
                   "identifiers": {
                     "title": "Identifiers",
-                    "description": "An array of one or more codes drawn from the gazetteer indicated by the `scheme` field.",
+                    "description": "One or more location codes taken from the scheme.",
                     "type": [
                       "array",
                       "null"
@@ -21045,7 +21045,7 @@
               },
               "uri": {
                 "title": "URI",
-                "description": "A URI to a further description of the location. This might be a human-readable document with information on the location, or a machine-readable description of the location.",
+                "description": "The URI of a resource about the location.",
                 "type": [
                   "string",
                   "null"
@@ -21058,8 +21058,8 @@
           "uniqueItems": true
         },
         "deliveryAddresses": {
-          "title": "Delivery Addresses",
-          "description": "The addresses to which, or where, goods or services related to the opportunity will be delivered.",
+          "title": "Delivery addresses",
+          "description": "The addresses to which goods or services related to the opportunity will be delivered.",
           "type": "array",
           "items": {
             "title": "Address",
@@ -25378,7 +25378,7 @@
                 }
               },
               "deliveryLocations": {
-                "title": "Delivery Locations",
+                "title": "Delivery locations",
                 "description": "The locations where activity related to the opportunity, contract or license will be delivered.",
                 "type": "array",
                 "items": {
@@ -25388,7 +25388,7 @@
                   "properties": {
                     "description": {
                       "title": "Description",
-                      "description": "A name or description of the location. This might include the name(s) of the location(s), or might provide a human-readable description of the location to be covered.",
+                      "description": "The name or description of the location.",
                       "type": [
                         "string",
                         "null"
@@ -25396,12 +25396,12 @@
                     },
                     "geometry": {
                       "title": "Geometry",
-                      "description": "We follow the [GeoJSON standard](https://www.rfc-editor.org/rfc/rfc7946) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding an address. For concession licenses, or other scenarios covering a polygon location that is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+                      "description": "The spatial extent of the location, as a [GeoJSON Geometry object](https://www.rfc-editor.org/rfc/rfc7946).",
                       "type": "object",
                       "properties": {
                         "type": {
                           "title": "Type",
-                          "description": "The type of [GeoJSON Geometry Objects](https://www.rfc-editor.org/rfc/rfc7946#section-3.1) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
+                          "description": "The type of the GeoJSON Geometry object, from the closed [geometryType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#geometryType) codelist.",
                           "type": [
                             "string",
                             "null"
@@ -25420,7 +25420,7 @@
                         },
                         "coordinates": {
                           "title": "Coordinates",
-                          "description": "The relevant array of points, e.g. [longitude, latitude] or [longitude, latitude, elevation], or a nested array of points, for the GeoJSON geometry being described. The longitude and latitude must be expressed in decimal degrees in the WGS84 (EPSG:4326) projection.",
+                          "description": "The coordinates of the GeoJSON Geometry object. For example, [longitude, latitude] or [longitude, latitude, elevation] for a Point geometry, using the World Geodetic System 1984 (WGS84, EPSG:4326) with longitude and latitude units of decimal degrees.",
                           "type": [
                             "array",
                             "null"
@@ -25436,22 +25436,22 @@
                     },
                     "gazetteer": {
                       "title": "Gazetteer",
-                      "description": "Identifiers from a gazetteer (a geographical index or directory) for the location.",
+                      "description": "Identifiers for the location from a gazetteer (a geographical index or directory).",
                       "type": "object",
                       "properties": {
                         "scheme": {
-                          "title": "Gazetteer scheme",
-                          "description": "The identifier of the gazetteer. The `locationGazetteers.csv` codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+                          "title": "Scheme",
+                          "description": "The identifier of the gazetteer, from the open [locationGazetter](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#locationGazetter) codelist.",
                           "type": [
                             "string",
                             "null"
                           ],
-                          "codelist": "locationGazetteers.csv",
+                          "codelist": "locationGazetteer.csv",
                           "openCodelist": true
                         },
                         "identifiers": {
                           "title": "Identifiers",
-                          "description": "An array of one or more codes drawn from the gazetteer indicated by the `scheme` field.",
+                          "description": "One or more location codes taken from the scheme.",
                           "type": [
                             "array",
                             "null"
@@ -25464,7 +25464,7 @@
                     },
                     "uri": {
                       "title": "URI",
-                      "description": "A URI to a further description of the location. This might be a human-readable document with information on the location, or a machine-readable description of the location.",
+                      "description": "The URI of a resource about the location.",
                       "type": [
                         "string",
                         "null"
@@ -25478,8 +25478,8 @@
                 "minItems": 1
               },
               "deliveryAddresses": {
-                "title": "Delivery Addresses",
-                "description": "The addresses to which, or where, goods or services related to the opportunity, contract or license will be delivered.",
+                "title": "Delivery addresses",
+                "description": "The addresses to which goods or services related to the opportunity, contract or license will be delivered.",
                 "type": "array",
                 "items": {
                   "title": "Address",
@@ -27862,7 +27862,7 @@
                 }
               },
               "deliveryLocations": {
-                "title": "Delivery Locations",
+                "title": "Delivery locations",
                 "description": "The locations where activity related to the opportunity, contract or license will be delivered.",
                 "type": "array",
                 "items": {
@@ -27872,7 +27872,7 @@
                   "properties": {
                     "description": {
                       "title": "Description",
-                      "description": "A name or description of the location. This might include the name(s) of the location(s), or might provide a human-readable description of the location to be covered.",
+                      "description": "The name or description of the location.",
                       "type": [
                         "string",
                         "null"
@@ -27880,12 +27880,12 @@
                     },
                     "geometry": {
                       "title": "Geometry",
-                      "description": "We follow the [GeoJSON standard](https://www.rfc-editor.org/rfc/rfc7946) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding an address. For concession licenses, or other scenarios covering a polygon location that is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+                      "description": "The spatial extent of the location, as a [GeoJSON Geometry object](https://www.rfc-editor.org/rfc/rfc7946).",
                       "type": "object",
                       "properties": {
                         "type": {
                           "title": "Type",
-                          "description": "The type of [GeoJSON Geometry Objects](https://www.rfc-editor.org/rfc/rfc7946#section-3.1) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
+                          "description": "The type of the GeoJSON Geometry object, from the closed [geometryType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#geometryType) codelist.",
                           "type": [
                             "string",
                             "null"
@@ -27904,7 +27904,7 @@
                         },
                         "coordinates": {
                           "title": "Coordinates",
-                          "description": "The relevant array of points, e.g. [longitude, latitude] or [longitude, latitude, elevation], or a nested array of points, for the GeoJSON geometry being described. The longitude and latitude must be expressed in decimal degrees in the WGS84 (EPSG:4326) projection.",
+                          "description": "The coordinates of the GeoJSON Geometry object. For example, [longitude, latitude] or [longitude, latitude, elevation] for a Point geometry, using the World Geodetic System 1984 (WGS84, EPSG:4326) with longitude and latitude units of decimal degrees.",
                           "type": [
                             "array",
                             "null"
@@ -27920,22 +27920,22 @@
                     },
                     "gazetteer": {
                       "title": "Gazetteer",
-                      "description": "Identifiers from a gazetteer (a geographical index or directory) for the location.",
+                      "description": "Identifiers for the location from a gazetteer (a geographical index or directory).",
                       "type": "object",
                       "properties": {
                         "scheme": {
-                          "title": "Gazetteer scheme",
-                          "description": "The identifier of the gazetteer. The `locationGazetteers.csv` codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+                          "title": "Scheme",
+                          "description": "The identifier of the gazetteer, from the open [locationGazetter](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#locationGazetter) codelist.",
                           "type": [
                             "string",
                             "null"
                           ],
-                          "codelist": "locationGazetteers.csv",
+                          "codelist": "locationGazetteer.csv",
                           "openCodelist": true
                         },
                         "identifiers": {
                           "title": "Identifiers",
-                          "description": "An array of one or more codes drawn from the gazetteer indicated by the `scheme` field.",
+                          "description": "One or more location codes taken from the scheme.",
                           "type": [
                             "array",
                             "null"
@@ -27948,7 +27948,7 @@
                     },
                     "uri": {
                       "title": "URI",
-                      "description": "A URI to a further description of the location. This might be a human-readable document with information on the location, or a machine-readable description of the location.",
+                      "description": "The URI of a resource about the location.",
                       "type": [
                         "string",
                         "null"
@@ -27962,8 +27962,8 @@
                 "minItems": 1
               },
               "deliveryAddresses": {
-                "title": "Delivery Addresses",
-                "description": "The addresses to which, or where, goods or services related to the opportunity, contract or license will be delivered.",
+                "title": "Delivery addresses",
+                "description": "The addresses to which goods or services related to the opportunity, contract or license will be delivered.",
                 "type": "array",
                 "items": {
                   "title": "Address",
@@ -35523,7 +35523,7 @@
         },
         "projectID": {
           "title": "Project identifier",
-          "description": "The identifier of the project of which the future contract(s) will be part or through which it/they will be funded. Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
+          "description": "The identifier of the programme of work as it appears in a budget (for example, a national or state budget), of which the future contract(s) will be part or through which it/they will be funded. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer",
@@ -38974,7 +38974,7 @@
           }
         },
         "deliveryLocations": {
-          "title": "Delivery Locations",
+          "title": "Delivery locations",
           "description": "The locations where activity related to the opportunity, contract or license will be delivered.",
           "type": "array",
           "items": {
@@ -38984,7 +38984,7 @@
             "properties": {
               "description": {
                 "title": "Description",
-                "description": "A name or description of the location. This might include the name(s) of the location(s), or might provide a human-readable description of the location to be covered.",
+                "description": "The name or description of the location.",
                 "type": [
                   "string",
                   "null"
@@ -38992,12 +38992,12 @@
               },
               "geometry": {
                 "title": "Geometry",
-                "description": "We follow the [GeoJSON standard](https://www.rfc-editor.org/rfc/rfc7946) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding an address. For concession licenses, or other scenarios covering a polygon location that is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+                "description": "The spatial extent of the location, as a [GeoJSON Geometry object](https://www.rfc-editor.org/rfc/rfc7946).",
                 "type": "object",
                 "properties": {
                   "type": {
                     "title": "Type",
-                    "description": "The type of [GeoJSON Geometry Objects](https://www.rfc-editor.org/rfc/rfc7946#section-3.1) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
+                    "description": "The type of the GeoJSON Geometry object, from the closed [geometryType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#geometryType) codelist.",
                     "type": [
                       "string",
                       "null"
@@ -39016,7 +39016,7 @@
                   },
                   "coordinates": {
                     "title": "Coordinates",
-                    "description": "The relevant array of points, e.g. [longitude, latitude] or [longitude, latitude, elevation], or a nested array of points, for the GeoJSON geometry being described. The longitude and latitude must be expressed in decimal degrees in the WGS84 (EPSG:4326) projection.",
+                    "description": "The coordinates of the GeoJSON Geometry object. For example, [longitude, latitude] or [longitude, latitude, elevation] for a Point geometry, using the World Geodetic System 1984 (WGS84, EPSG:4326) with longitude and latitude units of decimal degrees.",
                     "type": [
                       "array",
                       "null"
@@ -39032,22 +39032,22 @@
               },
               "gazetteer": {
                 "title": "Gazetteer",
-                "description": "Identifiers from a gazetteer (a geographical index or directory) for the location.",
+                "description": "Identifiers for the location from a gazetteer (a geographical index or directory).",
                 "type": "object",
                 "properties": {
                   "scheme": {
-                    "title": "Gazetteer scheme",
-                    "description": "The identifier of the gazetteer. The `locationGazetteers.csv` codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+                    "title": "Scheme",
+                    "description": "The identifier of the gazetteer, from the open [locationGazetter](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#locationGazetter) codelist.",
                     "type": [
                       "string",
                       "null"
                     ],
-                    "codelist": "locationGazetteers.csv",
+                    "codelist": "locationGazetteer.csv",
                     "openCodelist": true
                   },
                   "identifiers": {
                     "title": "Identifiers",
-                    "description": "An array of one or more codes drawn from the gazetteer indicated by the `scheme` field.",
+                    "description": "One or more location codes taken from the scheme.",
                     "type": [
                       "array",
                       "null"
@@ -39060,7 +39060,7 @@
               },
               "uri": {
                 "title": "URI",
-                "description": "A URI to a further description of the location. This might be a human-readable document with information on the location, or a machine-readable description of the location.",
+                "description": "The URI of a resource about the location.",
                 "type": [
                   "string",
                   "null"
@@ -39074,8 +39074,8 @@
           "minItems": 1
         },
         "deliveryAddresses": {
-          "title": "Delivery Addresses",
-          "description": "The addresses to which, or where, goods or services related to the opportunity, contract or license will be delivered.",
+          "title": "Delivery addresses",
+          "description": "The addresses to which goods or services related to the opportunity, contract or license will be delivered.",
           "type": "array",
           "items": {
             "title": "Address",
@@ -39583,7 +39583,7 @@
       "properties": {
         "description": {
           "title": "Description",
-          "description": "A name or description of the location. This might include the name(s) of the location(s), or might provide a human-readable description of the location to be covered.",
+          "description": "The name or description of the location.",
           "type": [
             "string",
             "null"
@@ -39591,12 +39591,12 @@
         },
         "geometry": {
           "title": "Geometry",
-          "description": "We follow the [GeoJSON standard](https://www.rfc-editor.org/rfc/rfc7946) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding an address. For concession licenses, or other scenarios covering a polygon location that is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+          "description": "The spatial extent of the location, as a [GeoJSON Geometry object](https://www.rfc-editor.org/rfc/rfc7946).",
           "type": "object",
           "properties": {
             "type": {
               "title": "Type",
-              "description": "The type of [GeoJSON Geometry Objects](https://www.rfc-editor.org/rfc/rfc7946#section-3.1) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
+              "description": "The type of the GeoJSON Geometry object, from the closed [geometryType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#geometryType) codelist.",
               "type": [
                 "string",
                 "null"
@@ -39615,7 +39615,7 @@
             },
             "coordinates": {
               "title": "Coordinates",
-              "description": "The relevant array of points, e.g. [longitude, latitude] or [longitude, latitude, elevation], or a nested array of points, for the GeoJSON geometry being described. The longitude and latitude must be expressed in decimal degrees in the WGS84 (EPSG:4326) projection.",
+              "description": "The coordinates of the GeoJSON Geometry object. For example, [longitude, latitude] or [longitude, latitude, elevation] for a Point geometry, using the World Geodetic System 1984 (WGS84, EPSG:4326) with longitude and latitude units of decimal degrees.",
               "type": [
                 "array",
                 "null"
@@ -39631,22 +39631,22 @@
         },
         "gazetteer": {
           "title": "Gazetteer",
-          "description": "Identifiers from a gazetteer (a geographical index or directory) for the location.",
+          "description": "Identifiers for the location from a gazetteer (a geographical index or directory).",
           "type": "object",
           "properties": {
             "scheme": {
-              "title": "Gazetteer scheme",
-              "description": "The identifier of the gazetteer. The `locationGazetteers.csv` codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+              "title": "Scheme",
+              "description": "The identifier of the gazetteer, from the open [locationGazetter](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#locationGazetter) codelist.",
               "type": [
                 "string",
                 "null"
               ],
-              "codelist": "locationGazetteers.csv",
+              "codelist": "locationGazetteer.csv",
               "openCodelist": true
             },
             "identifiers": {
               "title": "Identifiers",
-              "description": "An array of one or more codes drawn from the gazetteer indicated by the `scheme` field.",
+              "description": "One or more location codes taken from the scheme.",
               "type": [
                 "array",
                 "null"
@@ -39659,7 +39659,7 @@
         },
         "uri": {
           "title": "URI",
-          "description": "A URI to a further description of the location. This might be a human-readable document with information on the location, or a machine-readable description of the location.",
+          "description": "The URI of a resource about the location.",
           "type": [
             "string",
             "null"
@@ -40976,13 +40976,13 @@
       "minProperties": 1
     },
     "Project": {
-      "title": "Project information",
-      "description": "Information about the infrastructure or public-private partnership project to which a planning process is related.",
+      "title": "Project",
+      "description": "Information about the infrastructure or public-private partnership (PPP) project to which a planning process is related.",
       "type": "object",
       "properties": {
         "id": {
           "title": "Identifier",
-          "description": "An externally provided identifier for the project. This can be a URI, an identifier from a projects register or based on the canonical version of the project's name. Project identifiers should be unique within the scope of the publication.",
+          "description": "An externally provided identifier for the project. This can be a URI, an [Open Contracting for Infrastructure Data Standards Toolkit (OC4IDS)](https://standard.open-contracting.org/infrastructure/latest/en/guidance/identifiers/) project identifier, [OCDS for PPPs](https://standard.open-contracting.org/profiles/ppp/latest/en/framework/#i-basic-project-information) project identifier, an identifier from a projects register, or an identifier based on the canonical version of the project's name. Project identifiers should be unique within the scope of the publication.",
           "type": [
             "string",
             "null"
@@ -41355,7 +41355,7 @@
         },
         "uri": {
           "title": "URI",
-          "description": "The URI of a resource with additional information about the project.",
+          "description": "The URI of a resource about the project.",
           "type": [
             "string",
             "null"
@@ -41458,7 +41458,7 @@
         },
         "locations": {
           "title": "Locations",
-          "description": "Information about the locations where the project is taking place.",
+          "description": "Information about the locations where the project takes place.",
           "type": "array",
           "items": {
             "title": "Location",
@@ -41467,7 +41467,7 @@
             "properties": {
               "description": {
                 "title": "Description",
-                "description": "A name or description of the location. This might include the name(s) of the location(s), or might provide a human-readable description of the location to be covered.",
+                "description": "The name or description of the location.",
                 "type": [
                   "string",
                   "null"
@@ -41475,12 +41475,12 @@
               },
               "geometry": {
                 "title": "Geometry",
-                "description": "We follow the [GeoJSON standard](https://www.rfc-editor.org/rfc/rfc7946) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding an address. For concession licenses, or other scenarios covering a polygon location that is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+                "description": "The spatial extent of the location, as a [GeoJSON Geometry object](https://www.rfc-editor.org/rfc/rfc7946).",
                 "type": "object",
                 "properties": {
                   "type": {
                     "title": "Type",
-                    "description": "The type of [GeoJSON Geometry Objects](https://www.rfc-editor.org/rfc/rfc7946#section-3.1) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
+                    "description": "The type of the GeoJSON Geometry object, from the closed [geometryType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#geometryType) codelist.",
                     "type": [
                       "string",
                       "null"
@@ -41499,7 +41499,7 @@
                   },
                   "coordinates": {
                     "title": "Coordinates",
-                    "description": "The relevant array of points, e.g. [longitude, latitude] or [longitude, latitude, elevation], or a nested array of points, for the GeoJSON geometry being described. The longitude and latitude must be expressed in decimal degrees in the WGS84 (EPSG:4326) projection.",
+                    "description": "The coordinates of the GeoJSON Geometry object. For example, [longitude, latitude] or [longitude, latitude, elevation] for a Point geometry, using the World Geodetic System 1984 (WGS84, EPSG:4326) with longitude and latitude units of decimal degrees.",
                     "type": [
                       "array",
                       "null"
@@ -41515,22 +41515,22 @@
               },
               "gazetteer": {
                 "title": "Gazetteer",
-                "description": "Identifiers from a gazetteer (a geographical index or directory) for the location.",
+                "description": "Identifiers for the location from a gazetteer (a geographical index or directory).",
                 "type": "object",
                 "properties": {
                   "scheme": {
-                    "title": "Gazetteer scheme",
-                    "description": "The identifier of the gazetteer. The `locationGazetteers.csv` codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+                    "title": "Scheme",
+                    "description": "The identifier of the gazetteer, from the open [locationGazetter](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#locationGazetter) codelist.",
                     "type": [
                       "string",
                       "null"
                     ],
-                    "codelist": "locationGazetteers.csv",
+                    "codelist": "locationGazetteer.csv",
                     "openCodelist": true
                   },
                   "identifiers": {
                     "title": "Identifiers",
-                    "description": "An array of one or more codes drawn from the gazetteer indicated by the `scheme` field.",
+                    "description": "One or more location codes taken from the scheme.",
                     "type": [
                       "array",
                       "null"
@@ -41543,7 +41543,7 @@
               },
               "uri": {
                 "title": "URI",
-                "description": "A URI to a further description of the location. This might be a human-readable document with information on the location, or a machine-readable description of the location.",
+                "description": "The URI of a resource about the location.",
                 "type": [
                   "string",
                   "null"
