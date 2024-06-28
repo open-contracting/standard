@@ -14,12 +14,12 @@ You can publish the values of these fields in any language:
 - `description`, in any location
 - `finalStatusDetails`, in any location
 - `legalName`, in any location
+- `locality`, in any location
 - `name`, in any location
 - `rationale`, in any location
+- `region`, in any location
+- `streetAddress`, in any location
 - `title`, in any location
-- `parties/address/locality`
-- `parties/address/region`
-- `parties/address/streetAddress`
 - `planning/budget/project`
 - `tender/awardCriteriaDetails`
 - `tender/procurementMethodDetails`
