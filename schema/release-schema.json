@@ -165,7 +165,7 @@
         },
         "project": {
           "title": "Project",
-          "description": "Information about the infrastructure or public-private partnership project to which the planning process is related.",
+          "description": "Information about the infrastructure or public-private partnership (PPP) project to which the planning process is related.",
           "$ref": "#/definitions/Project"
         },
         "finalStatus": {
@@ -1292,7 +1292,7 @@
         },
         "projectID": {
           "title": "Project identifier",
-          "description": "The identifier of the programme of work in a budget, of which the future contract(s) will be part or through which it/they will be funded. Although an integer is allowed, it is recommended to use a string.",
+          "description": "The identifier of the programme of work as it appears in a budget (for example, a national or state budget), of which the future contract(s) will be part or through which it/they will be funded. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer",
@@ -1909,7 +1909,7 @@
         },
         "uri": {
           "title": "URI",
-          "description": "A URI for the location.",
+          "description": "The URI of a resource about the location.",
           "type": [
             "string",
             "null"
@@ -2885,7 +2885,7 @@
       "minProperties": 1
     },
     "Project": {
-      "title": "Project information",
+      "title": "Project",
       "description": "Information about the infrastructure or public-private partnership (PPP) project to which a planning process is related.",
       "type": "object",
       "properties": {
@@ -2923,7 +2923,7 @@
         },
         "uri": {
           "title": "URI",
-          "description": "The URI of a resource with additional information about the project.",
+          "description": "The URI of a resource about the project.",
           "type": [
             "string",
             "null"
@@ -2948,7 +2948,7 @@
         },
         "locations": {
           "title": "Locations",
-          "description": "Information about the locations where the project is taking place.",
+          "description": "Information about the locations where the project takes place.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Location"
