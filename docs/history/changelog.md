@@ -72,8 +72,10 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * Add new codelists:
   * [#1372](https://github.com/open-contracting/standard/pull/1372) `country`
+  * [#1684](https://github.com/open-contracting/standard/pull/1684) `geometryType`
   * [#1316](https://github.com/open-contracting/standard/pull/1316) `language`
   * [#1326](https://github.com/open-contracting/standard/pull/1326) `linkRelationType`
+  * [#1684](https://github.com/open-contracting/standard/pull/1684) `locationGazetteer`
   * [#1308](https://github.com/open-contracting/standard/pull/1308) `mediaType`
   * [#1459](https://github.com/open-contracting/standard/pull/1459) `partyScale`
   * [#1654](https://github.com/open-contracting/standard/pull/1654) `permission`
@@ -96,6 +98,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
     * 'eu-buyer-legal-type'
   * [#1452](https://github.com/open-contracting/standard/pull/1452) Add 'proClass'.
   * [#1637](https://github.com/open-contracting/standard/pull/1637) Add 'sdg' and 'sdgTarget'.
+  * [#1684](https://github.com/open-contracting/standard/pull/1684) Add 'oc4idsProjectSector' from project extension.
 
 * `documentType.csv`:
   * Add codes:
@@ -182,9 +185,10 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * Clarify core concepts:
   * [#1216](https://github.com/open-contracting/standard/pull/1216) Define contracting process and planning process in the schema description. Update definition of release, record and ocid. Update references to contracting process so that it takes take the planning process into account.
-  * [#1513](https://github.com/open-contracting/standard/pull/1513) Update fields' use of "contracting process" and "contracting (or planning) process" to reflect the new definition. Align `budget.project` and `budget.projectID`.
+  * [#1513](https://github.com/open-contracting/standard/pull/1513) Update fields' use of "contracting process" and "contracting (or planning) process" to reflect the new definition.
   * [#1443](https://github.com/open-contracting/standard/pull/1443) `date`
   * [#1182](https://github.com/open-contracting/standard/pull/1182) `buyer`
+  * [#1684](https://github.com/open-contracting/standard/pull/1684) `budget.project` and `budget.projectID`
   * [#1163](https://github.com/open-contracting/standard/pull/1163) `tender.procuringEntity`
   * [#1395](https://github.com/open-contracting/standard/pull/1417) `tender.procurementMethod`
   * [#1442](https://github.com/open-contracting/standard/pull/1442) `tender.submissionMethodDetails`
@@ -197,7 +201,9 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * Add new fields:
   * [#1335](https://github.com/open-contracting/standard/pull/1335) `planning.id`
   * [#1642](https://github.com/open-contracting/standard/pull/1642) `planning.finalStatus`, `planning.finalStatusDetails` and `planning.finalStatusDate`
+  * [#1684](https://github.com/open-contracting/standard/pull/1684) `planning.project`
   * [#1324](https://github.com/open-contracting/standard/pull/1324) `tender.datePublished`
+  * [#1684](https://github.com/open-contracting/standard/pull/1684) `tender.deliveryLocations` and `tender.deliveryAddresses`
   * [#1296](https://github.com/open-contracting/standard/pull/1296) [#1674](https://github.com/open-contracting/standard/pull/1674) `tender.exclusionGrounds`
   * [#1669](https://github.com/open-contracting/standard/pull/1669) `tender.expressionOfInterestDeadline`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `tender.identifiers`
@@ -218,6 +224,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1372](https://github.com/open-contracting/standard/pull/1372) `Address.country`
   * [#1380](https://github.com/open-contracting/standard/pull/1380) [#1440](https://github.com/open-contracting/standard/pull/1440) `Document.languages`
   * [#1439](https://github.com/open-contracting/standard/pull/1439) `Document.relatedItems`
+  * [#1684](https://github.com/open-contracting/standard/pull/1684) `Item.deliveryLocations` and `Item.deliveryAddresses`
   * [#1455](https://github.com/open-contracting/standard/pull/1455) `Milestone.dueAfterDate`
   * [#1434](https://github.com/open-contracting/standard/pull/1434) `Milestone.value`
   * [#1490](https://github.com/open-contracting/standard/pull/1490) `SimpleIdentifier`
