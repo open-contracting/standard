@@ -8,7 +8,7 @@ The [Open Contracting for Infrastructure Data Standards](https://standard.open-c
 
 A joint effort by the [Infrastructure Transparency Initiative](https://infrastructuretransparency.org) (CoST) and the Open Contracting Partnership, it builds on best practice in open data and openness of public infrastructure procurement globally.
 
-The [Project](https://extensions.open-contracting.org/en/extensions/project/master/) extension describes how to connect OCDS and OC4IDS datasets.
+OC4IDS datasets ought to be linked from OCDS datasets using the `planning.project` object, by referencing the OC4IDS project identifier in the `planning.project.id` field.
 
 ## Open Fiscal Data Package
 

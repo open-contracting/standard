@@ -144,7 +144,7 @@
       "properties": {
         "id": {
           "title": "Planning ID",
-          "description": "An identifier for this planning process.",
+          "description": "An identifier for the planning process.",
           "type": [
             "string",
             "null"
@@ -162,6 +162,11 @@
           "title": "Budget",
           "description": "Details of the budget that will fund the future contract(s)",
           "$ref": "#/definitions/Budget"
+        },
+        "project": {
+          "title": "Project",
+          "description": "Information about the infrastructure or public-private partnership (PPP) project to which the planning process is related.",
+          "$ref": "#/definitions/Project"
         },
         "finalStatus": {
           "title": "Final status",
@@ -341,6 +346,26 @@
           "title": "Maximum value",
           "description": "The estimated maximum value of the framework agreement, as estimated when publishing the tender information.",
           "$ref": "#/definitions/Value"
+        },
+        "deliveryLocations": {
+          "title": "Delivery locations",
+          "description": "The locations where activity related to the opportunity will take place.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Location"
+          },
+          "wholeListMerge": true,
+          "uniqueItems": true
+        },
+        "deliveryAddresses": {
+          "title": "Delivery addresses",
+          "description": "The addresses to which goods or services related to the opportunity will be delivered.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Address"
+          },
+          "wholeListMerge": true,
+          "uniqueItems": true
         },
         "procurementMethod": {
           "title": "Procurement method",
@@ -1259,7 +1284,7 @@
         },
         "project": {
           "title": "Project title",
-          "description": "The name of the project of which the future contract(s) will be part or through which it/they will be funded. Some organizations maintain a registry of projects, and the data should use the name by which the project is known in that registry.",
+          "description": "The name of the programme of work as it appears in a budget (for example, a national or state budget), of which the future contract(s) will be part or through which it/they will be funded.",
           "type": [
             "string",
             "null"
@@ -1267,7 +1292,7 @@
         },
         "projectID": {
           "title": "Project identifier",
-          "description": "The identifier of the project of which the future contract(s) will be part or through which it/they will be funded. Some organizations maintain a registry of projects, and the data should use the identifier from the relevant registry of projects. Although an integer is allowed, it is recommended to use a string.",
+          "description": "The identifier of the programme of work as it appears in a budget (for example, a national or state budget), of which the future contract(s) will be part or through which it/they will be funded. Although an integer is allowed, it is recommended to use a string.",
           "type": [
             "string",
             "integer",
@@ -1610,6 +1635,28 @@
           "title": "Immediate container",
           "description": "The immediate container for the item. Also known as: presentation, presentation form, package.",
           "$ref": "#/definitions/ImmediateContainer"
+        },
+        "deliveryLocations": {
+          "title": "Delivery locations",
+          "description": "The locations where activity related to the opportunity, contract or license will be delivered.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Location"
+          },
+          "wholeListMerge": true,
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "deliveryAddresses": {
+          "title": "Delivery addresses",
+          "description": "The addresses to which goods or services related to the opportunity, contract or license will be delivered.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Address"
+          },
+          "wholeListMerge": true,
+          "uniqueItems": true,
+          "minItems": 1
         }
       }
     },
@@ -1776,6 +1823,98 @@
         "uri": {
           "title": "URI",
           "description": "A URI to identify the organization, such as those provided by [Open Corporates](https://opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the URL field of the Organization contact point.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        }
+      }
+    },
+    "Location": {
+      "title": "Location",
+      "description": "A physical or virtual location.",
+      "type": "object",
+      "properties": {
+        "description": {
+          "title": "Description",
+          "description": "The name or description of the location.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "geometry": {
+          "title": "Geometry",
+          "description": "The spatial extent of the location, as a [GeoJSON Geometry object](https://www.rfc-editor.org/rfc/rfc7946).",
+          "type": "object",
+          "properties": {
+            "type": {
+              "title": "Type",
+              "description": "The type of the GeoJSON Geometry object, from the closed [geometryType](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#geometryType) codelist.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "codelist": "geometryType.csv",
+              "openCodelist": false,
+              "enum": [
+                "Point",
+                "MultiPoint",
+                "LineString",
+                "MultiLineString",
+                "Polygon",
+                "MultiPolygon",
+                null
+              ]
+            },
+            "coordinates": {
+              "title": "Coordinates",
+              "description": "The coordinates of the GeoJSON Geometry object. For example, [longitude, latitude] or [longitude, latitude, elevation] for a Point geometry, using the World Geodetic System 1984 (WGS84, EPSG:4326) with longitude and latitude units of decimal degrees.",
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "number",
+                  "array"
+                ]
+              }
+            }
+          }
+        },
+        "gazetteer": {
+          "title": "Gazetteer",
+          "description": "Identifiers for the location from a gazetteer (a geographical index or directory).",
+          "type": "object",
+          "properties": {
+            "scheme": {
+              "title": "Scheme",
+              "description": "The identifier of the gazetteer, from the open [locationGazetter](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#locationGazetter) codelist.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "codelist": "locationGazetteer.csv",
+              "openCodelist": true
+            },
+            "identifiers": {
+              "title": "Identifiers",
+              "description": "One or more location codes taken from the scheme.",
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "uri": {
+          "title": "URI",
+          "description": "The URI of a resource about the location.",
           "type": [
             "string",
             "null"
@@ -2095,6 +2234,14 @@
             "description": "This field is deprecated in favor of `country`, to promote standardized country codes instead of non-standardized country names.",
             "deprecatedVersion": "1.2"
           }
+        },
+        "description": {
+          "title": "Description",
+          "description": "The description of the address.",
+          "type": [
+            "string",
+            "null"
+          ]
         }
       }
     },
@@ -2812,6 +2959,82 @@
             "null"
           ],
           "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "Project": {
+      "title": "Project",
+      "description": "Information about the infrastructure or public-private partnership (PPP) project to which a planning process is related.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Identifier",
+          "description": "An externally provided identifier for the project. This can be a URI, an [Open Contracting for Infrastructure Data Standards Toolkit (OC4IDS)](https://standard.open-contracting.org/infrastructure/latest/en/guidance/identifiers/) project identifier, [OCDS for PPPs](https://standard.open-contracting.org/profiles/ppp/latest/en/framework/#i-basic-project-information) project identifier, an identifier from a projects register, or an identifier based on the canonical version of the project's name. Project identifiers should be unique within the scope of the publication.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "title": {
+          "title": "Title",
+          "description": "The name of the project. If a project's register is available, this should be the same as the project's name in that register.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the project.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "totalValue": {
+          "title": "Total value",
+          "description": "The total anticipated value of the project over its lifetime.",
+          "$ref": "#/definitions/Value"
+        },
+        "uri": {
+          "title": "URI",
+          "description": "The URI of a resource about the project.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "sector": {
+          "title": "Sector",
+          "description": "The primary sector to which the project relates. It is recommended to use the scheme 'oc4idsProjectSector' and codes from the [OC4IDS projectSector codelist](https://standard.open-contracting.org/infrastructure/latest/en/reference/codelists/#projectsector).",
+          "$ref": "#/definitions/Classification"
+        },
+        "additionalClassifications": {
+          "title": "Additional classifications",
+          "description": "Additional classifications for the project. For example, a sector or strategic framework classification.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Classification"
+          },
+          "wholeListMerge": true,
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "locations": {
+          "title": "Locations",
+          "description": "Information about the locations where the project takes place.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Location"
+          },
+          "wholeListMerge": true,
+          "uniqueItems": true,
+          "minItems": 1
         }
       },
       "minProperties": 1

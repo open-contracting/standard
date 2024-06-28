@@ -523,7 +523,7 @@ def pre_commit():
     """
     nonmultilingual = {
         # Identifiers.
-        'amendsReleaseID', 'id', 'identifier', 'ocid', 'relatedItems', 'releaseID',
+        'amendsReleaseID', 'id', 'identifier', 'identifiers', 'ocid', 'relatedItems', 'releaseID',
         # Missing format properties. https://github.com/open-contracting/standard/issues/881
         'email',
         # Published-defined formats.
@@ -536,6 +536,7 @@ def pre_commit():
     jsonref_release_schema = json_load('release-schema.json', jsonref, merge_props=True)
 
     counts = defaultdict(list)
+    nonstring = ('boolean', 'integer', 'number', 'object')
     for field in get_schema_fields(jsonref_release_schema):
         name = field.path_components[-1]
         # Skip definitions (output dereferenced properties only). Skip deprecated fields.
@@ -543,7 +544,8 @@ def pre_commit():
             continue
         multilingual = (
             # If a field can be a non-string, it is not multilingual.
-            not any(t in field.schema['type'] for t in ('boolean', 'integer', 'number', 'object'))
+            not any(t in field.schema['type'] for t in nonstring)
+            and ('array' not in field.schema['type'] or not any(t in field.schema['items']['type'] for t in nonstring))
             # If a field's value is constrained to a codelist or format, it is not multilingual.
             and not any(prop in field.schema for prop in ('codelist', 'format'))
             # If an array can contain non-strings, it is not multilingual.
@@ -553,14 +555,16 @@ def pre_commit():
         )
         field.sep = '/'
         if name in counts and bool(counts[name]) ^ multilingual:
-            if multilingual:
+            if not multilingual and field.schema['type'] == 'object':
+                click.secho(f'{field.path} is an object. {" & ".join(counts[name])} is/are multilingual.', fg='yellow')
+            elif multilingual:
                 raise Exception(f'{name} is multilingual at {field.path}, but not elsewhere')
             else:
                 raise Exception(f'{name} is multilingual at {" & ".join(counts[name])}, but not at {field.path}')
         if multilingual:
             counts[name].append(field.path)
         else:
-            counts[name] = []
+            counts[name] = counts[name]
 
     bulletlist = [
         '% STARTLIST',
