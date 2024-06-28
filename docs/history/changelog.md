@@ -185,9 +185,10 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * Clarify core concepts:
   * [#1216](https://github.com/open-contracting/standard/pull/1216) Define contracting process and planning process in the schema description. Update definition of release, record and ocid. Update references to contracting process so that it takes take the planning process into account.
-  * [#1513](https://github.com/open-contracting/standard/pull/1513) Update fields' use of "contracting process" and "contracting (or planning) process" to reflect the new definition. Align `budget.project` and `budget.projectID`.
+  * [#1513](https://github.com/open-contracting/standard/pull/1513) Update fields' use of "contracting process" and "contracting (or planning) process" to reflect the new definition.
   * [#1443](https://github.com/open-contracting/standard/pull/1443) `date`
   * [#1182](https://github.com/open-contracting/standard/pull/1182) `buyer`
+  - [#1684](https://github.com/open-contracting/standard/pull/1684) `budget.project` and `budget.projectID`
   * [#1163](https://github.com/open-contracting/standard/pull/1163) `tender.procuringEntity`
   * [#1395](https://github.com/open-contracting/standard/pull/1417) `tender.procurementMethod`
   * [#1442](https://github.com/open-contracting/standard/pull/1442) `tender.submissionMethodDetails`
