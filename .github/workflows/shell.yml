@@ -8,6 +8,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           sudo apt update
-          sudo apt install shellcheck shfmt
+          sudo apt install devscripts shellcheck shfmt
+      - run: checkbashisms $(shfmt -f .)
       - run: shellcheck $(shfmt -f .)
       - run: shfmt -d -i 4 -sr $(shfmt -f .)

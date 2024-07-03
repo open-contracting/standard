@@ -135,7 +135,7 @@ The `planning` object is used in a planning process. This includes information a
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Planning
-:collapse: budget,documents,milestones
+:collapse: budget,project,documents,milestones
 ```
 
 ```{extensionlist} The following extensions are available for planning
@@ -166,6 +166,26 @@ Apart from documents, the majority of planning information is held within the `b
 
 ```{extensionlist} The following extensions are available for budget
 :list: budget
+```
+
+#### Project
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/planning/project
+:title: project
+```
+````
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Project
+:collapse: totalValue,additionalClassifications,locations
+```
+
+```{extensionlist} The following extensions are available for project
+:list: 
 ```
 
 ### Tender
@@ -558,6 +578,22 @@ Other unit classification schemes can be used, including those in the [unitClass
 :collapse: value
 ```
 
+#### ImmediateContainer
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/tender/items/1
+:expand: immediateContainer
+:title: immediateContainer
+```
+````
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Item/properties/immediateContainer
+```
+
 ### Classification
 
 ````{admonition} Example
@@ -671,7 +707,18 @@ As well as providing this machine-readable link between processes, publishers ma
 
 ### Location
 
-The [Location](https://extensions.open-contracting.org/en/extensions/location/v1.1.4/) extension can be used to provide location information.
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/planning/project/locations/0
+:title: location
+```
+````
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Location
+```
 
 ### Link
 
@@ -684,6 +731,15 @@ The entries of the `links` array are `Link` objects:
 :pointer: /definitions/Link
 ```
 
+### Quantity
+
+```{field-description} ../../build/current_lang/release-schema.json /definitions/Quantity
+```
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Quantity
+```
+
 ### SimpleIdentifier
 
 ```{field-description} ../../build/current_lang/release-schema.json /definitions/SimpleIdentifier
@@ -691,4 +747,13 @@ The entries of the `links` array are `Link` objects:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/SimpleIdentifier
+```
+
+### SimpleUnit
+
+```{field-description} ../../build/current_lang/release-schema.json /definitions/SimpleUnit
+```
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/SimpleUnit
 ```
