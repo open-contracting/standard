@@ -26,7 +26,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
       * Pre-qualification and pre-selection [#999](https://github.com/open-contracting/standard/pull/999) [#1345](https://github.com/open-contracting/standard/pull/1345)
       * Unsuccessful processes [#1007](https://github.com/open-contracting/standard/pull/1007)
       * Milestones [#1048](https://github.com/open-contracting/standard/pull/1048)
-      * Framework agreements [#1123](https://github.com/open-contracting/standard/pull/1123) [#1269](https://github.com/open-contracting/standard/pull/1269) [#1332](https://github.com/open-contracting/standard/pull/1332) [#1461](https://github.com/open-contracting/standard/pull/1461) [#1549](https://github.com/open-contracting/standard/pull/1549) [#1671](https://github.com/open-contracting/standard/pull/1671)
+      * Framework agreements [#1123](https://github.com/open-contracting/standard/pull/1123) [#1269](https://github.com/open-contracting/standard/pull/1269) [#1332](https://github.com/open-contracting/standard/pull/1332) [#1461](https://github.com/open-contracting/standard/pull/1461) [#1549](https://github.com/open-contracting/standard/pull/1549) [#1671](https://github.com/open-contracting/standard/pull/1671) [#1701](https://github.com/open-contracting/standard/pull/1701)
       * Electronic catalogs [#1223](https://github.com/open-contracting/standard/pull/1223)
       * Beneficial ownership information [#1305](https://github.com/open-contracting/standard/pull/1305)
       * [#1414](https://github.com/open-contracting/standard/pull/1414) Rephrase planning stage to planning process in worked examples.
