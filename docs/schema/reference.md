@@ -557,12 +557,6 @@ The items block is used to list the line-items associated with a tender, award o
 
 #### Unit
 
-The `unit` block allows detailed specification of the parameters and price of units that make up a line-item.
-
-If the [Quantities, Units, Dimensions and Data Types Ontologies](https://www.qudt.org) unit classification scheme is used, then publishers can use its CamelCase unit names, such as "SquareMile", in the `unit.name` field.
-
-Other unit classification schemes can be used, including those in the [unitClassificationScheme codelist](codelists.md#unit-classification-scheme).
-
 ````{admonition} Example
 :class: hint
 
@@ -576,6 +570,22 @@ Other unit classification schemes can be used, including those in the [unitClass
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Item/properties/unit
 :collapse: value
+```
+
+#### ImmediateContainer
+
+````{admonition} Example
+:class: hint
+
+```{jsoninclude} ../examples/release_schema_reference/release_package.json
+:jsonpointer: /releases/0/tender/items/1
+:expand: immediateContainer
+:title: immediateContainer
+```
+````
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Item/properties/immediateContainer
 ```
 
 ### Classification
@@ -715,6 +725,15 @@ The entries of the top-level `links` array are `Link` objects:
 :pointer: /definitions/Link
 ```
 
+### Quantity
+
+```{field-description} ../../build/current_lang/release-schema.json /definitions/Quantity
+```
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/Quantity
+```
+
 ### SimpleIdentifier
 
 ```{field-description} ../../build/current_lang/release-schema.json /definitions/SimpleIdentifier
@@ -722,4 +741,13 @@ The entries of the top-level `links` array are `Link` objects:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/SimpleIdentifier
+```
+
+### SimpleUnit
+
+```{field-description} ../../build/current_lang/release-schema.json /definitions/SimpleUnit
+```
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/SimpleUnit
 ```

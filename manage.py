@@ -228,7 +228,11 @@ def _add_versioned(schema, unversioned_pointers, pointer, key, value):
     types = coerce_to_list(value, 'type')
 
     # If a type is unrecognized, we might need to update this script.
-    if '$ref' not in value and types not in recognized_types:
+    if (
+        '$ref' not in value
+        and types not in recognized_types
+        and not (pointer == '/definitions/Quantity/properties/value' and types == ['string', 'number', 'null'])
+    ):
         warnings.warn(f'{pointer} has unrecognized type {types}')
 
     # For example, if $ref is used.
