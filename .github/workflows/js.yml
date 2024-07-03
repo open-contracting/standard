@@ -6,8 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
-      - run: npm install standard eslint-plugin-import@2.26.0
-      - run: npx standard docs/_static/script.js
+      - uses: biomejs/setup-biome@v2
+      - run: biome ci --indent-style=space --line-width=119 docs/_static/script.js
