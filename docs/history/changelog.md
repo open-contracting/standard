@@ -176,15 +176,10 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * `unitClassificationScheme.csv`:
   * [#1689](https://github.com/open-contracting/standard/pull/1689) Update the instructions on how to find identifiers within the QUDT scheme.
+  * [#1702](https://github.com/open-contracting/standard/pull/1702) Add a `Source` column.
 
 * `tenderStatus`, `awardStatus` and `contractStatus`:
   * [#1509](https://github.com/open-contracting/standard/pull/1509) [#1658](https://github.com/open-contracting/standard/pull/1658) Clarify semantics and deprecate codes.
-
-* `relatedProcess.csv`:
-  * [#1645](https://github.com/open-contracting/standard/pull/1645) Deprecate "parent-to-child" codes: 'subContract', 'replacementProcess' and 'renewalProcess'
-  * [#1670](https://github.com/open-contracting/standard/pull/1670) Deprecate 'parent' code, because a subcontract needs to be described within its main contract, not within a separate contracting process
-  * [#1645](https://github.com/open-contracting/standard/pull/1645) Update descriptions: 'prior', 'framework', 'unsuccessfulProcess'
-  * [#1702](https://github.com/open-contracting/standard/pull/1702) Correct broken urls in `classificationScheme` and add Source column to `unitClassificationScheme`
 
 * [#1200](https://github.com/open-contracting/standard/pull/1200) Deprecate the `submissionMethod` codelist, because its codes were either not submission methods, or not supported by use cases.
 * [#1389](https://github.com/open-contracting/standard/pull/1389) Deprecate the `initiationType` codelist, because the approach to data modelling that it supports was not pursued.
