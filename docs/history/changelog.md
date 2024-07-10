@@ -176,6 +176,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * `unitClassificationScheme.csv`:
   * [#1689](https://github.com/open-contracting/standard/pull/1689) Update the instructions on how to find identifiers within the QUDT scheme.
+  * [#1702](https://github.com/open-contracting/standard/pull/1702) Add a `Source` column.
 
 * `tenderStatus`, `awardStatus` and `contractStatus`:
   * [#1509](https://github.com/open-contracting/standard/pull/1509) [#1658](https://github.com/open-contracting/standard/pull/1658) Clarify semantics and deprecate codes.
