@@ -22,7 +22,7 @@ In OCDS we treat “contractors” and “suppliers” as synonyms. One or more 
 
 A procurement contract is defined in UNCITRAL as:
 
-> Contract concluded between the procuring entity and a supplier  (or suppliers) or a contractor (or contractors) at the end of the procurement proceedings.
+> Contract concluded between the procuring entity and a supplier (or suppliers) or a contractor (or contractors) at the end of the procurement proceedings.
 
 ## Types of framework agreement
 
@@ -70,9 +70,9 @@ OCDS models the first and second stages of framework agreement procedures as sep
 The 'framework' code is only used to relate second-stage contracting processes to their first-stage contracting process, never to other second-stage contracting processes.
 ```
 
-The following diagram shows how OCDS models a framework agreement procedure with two second stages: one with competition and one without competition. Grey blocks represent unused sections of the OCDS schema.
+The following diagram shows how OCDS models a framework agreement procedure with two second stages: one with competition and one without competition.
 
-![OCDS framework agreement model](../../_static/png/framework_agreement/model.png)
+![OCDS framework agreement model](../../_static/svg/framework_agreement_diagram.svg)
 
 ### Extensions
 
@@ -167,10 +167,10 @@ The buyer invites potential suppliers to participate in the framework agreement.
 An OCDS release describes the opportunity:
 
 * `tag` is set to `["tender"]` because this is the first release about the opportunity.
-* The release describes the set up of a framework agreement so the techniques extension is declared in the package metadata and `tender.techniques.hasFrameworkAgreement` is set to `true`.
+* The release describes the set up of a framework agreement, so the techniques extension is declared in the package metadata and `tender.techniques.hasFrameworkAgreement` is set to `true`.
 * Whilst any supplier can submit a request to participate, only qualified suppliers can submit a proposal, so `tender.procurementMethod` is set to 'selective'.
-* The framework agreement is closed so `tender.expressionOfInterestDeadline` is set to the deadline for responses to the invitation.
-* There is only one buyer so `buyer` is set to reference the buyer's object in the `parties` array.
+* The framework agreement is closed, so `tender.expressionOfInterestDeadline` is set to the deadline for responses to the invitation.
+* There is only one buyer, so `buyer` is set to reference the buyer's object in the `parties` array.
 
 ```{jsoninclude} ../../examples/frameworks/closed_single_first_stage.json
 :jsonpointer:
@@ -224,15 +224,15 @@ Dirección de Compras y Contratación Pública (Chile Compra) establishes a mult
 
 #### Invitation to participate in the first stage of a framework agreement procedure
 
-Chile Compra invites suppliers to participate in the framework agreement.
+Chile Compra invites potential suppliers to participate in the framework agreement.
 
 An OCDS release describes the opportunity:
 
 * `tag` is set to `["tender"]` because this is the first release about the opportunity.
-* The release describes the set up of a framework agreement so the techniques extension is declared in the package metadata and `tender.techniques.hasFrameworkAgreement` is set to `true`.
+* The release describes the set up of a framework agreement, so the techniques extension is declared in the package metadata and `tender.techniques.hasFrameworkAgreement` is set to `true`.
 * Whilst any supplier can submit a request to participate, only qualified suppliers can submit a proposal, so `tender.procurementMethod` is set to 'selective'.
-* The framework agreement is open (a dynamic purchasing system) so `tender.expressionOfInterestDeadline` is set to the last date that new suppliers can be added.
-* There are two buyers so `buyer` is omitted and both buyers are listed in `parties`.
+* The framework agreement is open (a dynamic purchasing system), so `tender.expressionOfInterestDeadline` is set to the last date that new suppliers can be added.
+* There are two buyers, so `buyer` is omitted and both buyers are listed in `parties`.
 * `tender.procuringEntity` is set to the organization that manages the contracting process: Chile Compra.
 * The lots are listed in `lots` .
 

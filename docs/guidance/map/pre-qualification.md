@@ -8,10 +8,23 @@ In single-stage procedures, buyers or procuring entities invite potential suppli
 
 But, many jurisdictions also use multi-stage procedures. Such procedures follow a process like:
 
-```{csv-table}
-:header-rows: 1
-:file: ../../examples/pre-qualification/multi-stage.csv
+````{grid} 1 2 2 2
+:gutter: 2
+
+```{grid-item-card} First stage
+* The buyer or procuring entity issues an invitation to participate in the process
+* Potential suppliers submit expressions of interest
+* The buyer or procuring entity assesses the expressions of interest
+* The buyer or procuring entity establishes a list of qualified or selected potential suppliers
 ```
+
+```{grid-item-card} Second stage
+* The buyer or procuring entity issues an invitation to bid to the potential suppliers on the list
+* Potential suppliers submit bids
+* The buyer or procuring entity evaluates the bids
+* The buyer or procuring entity awards a contract to the supplier(s)
+```
+````
 
 This example describes 3 types of multi-stage procedure and explains how to model them in OCDS.
 
