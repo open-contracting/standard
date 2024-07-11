@@ -50,7 +50,8 @@ Per the [normative and non-normative content and changes policy](https://docs.go
     * [#1494](https://github.com/open-contracting/standard/pull/1497) Add guidance on preparing test data to Check your data section.
   * Publish:
     * Merge Publication policy and Licensing pages into Publish page [#986](https://github.com/open-contracting/standard/pull/986) [#1012](https://github.com/open-contracting/standard/pull/1012).
-    * Replace guidance on publication levels [#980](https://github.com/open-contracting/standard/pull/980) [#1013](https://github.com/open-contracting/standard/pull/1013) [#1045](https://github.com/open-contracting/standard/pull/1045).
+    * Replace publication levels guidance with data quality guidance [#980](https://github.com/open-contracting/standard/pull/980) [#1013](https://github.com/open-contracting/standard/pull/1013).
+    * Update data quality guidance to match [OCP Strategy 2024-2030](https://www.open-contracting.org/strategy-2024-2030/) [#1045](https://github.com/open-contracting/standard/pull/1045) [#1697](https://github.com/open-contracting/standard/pull/1697).
   * [#1427](https://github.com/open-contracting/standard/pull/1427) Add guidance about recommended extensions.
   * Various minor improvements [#1051](https://github.com/open-contracting/standard/pull/1051) [#1080](https://github.com/open-contracting/standard/pull/1080) [#1083](https://github.com/open-contracting/standard/pull/1083) [#1085](https://github.com/open-contracting/standard/pull/1085) [#1091](https://github.com/open-contracting/standard/pull/1091) [#1130](https://github.com/open-contracting/standard/pull/1130) [#1227](https://github.com/open-contracting/standard/pull/1227) [#1299](https://github.com/open-contracting/standard/pull/1299) [#1337](https://github.com/open-contracting/standard/pull/1337) [#1384](https://github.com/open-contracting/standard/pull/1384).
 
