@@ -38,8 +38,10 @@ Your choice of architecture can determine how frequently your data is updated, w
 :hidden:
 
 build/system_architectures
+build/change_history_options
 build/change_history
-build/easy_releases
+build/individual_releases
+build/compiled_releases
 build/merging
 ```
 
