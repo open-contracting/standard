@@ -8,13 +8,13 @@ from selenium.webdriver.support.ui import Select
 from tests import languages, test_basic_params, test_search_params
 
 
-@pytest.mark.parametrize('lang,text', test_basic_params.items())
+@pytest.mark.parametrize(('lang', 'text'), test_basic_params.items())
 def test_basic(browser, server, lang, text):
     browser.get(f'{server}{lang}')
     assert text in browser.find_element(By.TAG_NAME, 'body').text
 
 
-@pytest.mark.parametrize('lang,regex', test_search_params)
+@pytest.mark.parametrize(('lang', 'regex'), test_search_params)
 def test_search(browser, server, lang, regex):
     browser.get(f'{server}{lang}')
     search_box = browser.find_element(By.ID, 'rtd-search-form').find_element(By.TAG_NAME, 'input')
