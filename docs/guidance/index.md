@@ -6,7 +6,7 @@ The four phases of implementation described in this guide have helped implemente
 
 Read the guidance to understand the main steps to implement OCDS and to find supporting resources. Detailed guidance on specific topics and tasks is provided in sub-pages.
 
-Use the [OCDS Implementation Checklist](https://www.open-contracting.org/resources/ocds-implementation-checklist) to keep track of your progress.
+Use the [OCDS Implementation Checklist](https://www.open-contracting.org/resources/ocds-implementation-checklist/) to keep track of your progress.
 
 ```{toctree}
 :maxdepth: 2

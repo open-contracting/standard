@@ -9,10 +9,7 @@
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+
 import csv
 import json
 import os
@@ -111,6 +108,7 @@ html_theme_options = {
     'license_url': f'{repository_url}/blob/HEAD/LICENSE',
     'repository_url': repository_url,
 }
+html_short_title = f'{html_theme_options["short_project"]} v{release}'
 
 # List the extension identifiers and versions that should be part of this specification. The extensions must be in
 # the extension registry: https://github.com/open-contracting/extension_registry/blob/main/extension_versions.csv

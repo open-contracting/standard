@@ -38,13 +38,13 @@ In such cases, the `Award` object in OCDS can have multiple suppliers associated
 
 ### Example: Consortia suppliers
 
-Siemens and Microsoft bid as a consortium for a contract to develop a new medical imaging device for the Department of Health and Social Care.
+Siemens and Microsoft bid as a consortium for a contract.
 
 The contract is awarded to the consortium; however, the legal entity for the consortium is not created until after the contract award.
 
-Both Siemens and Microsoft are listed as suppliers on the contract award in OCDS, with the respective legal entity identifiers for each organization:
+Both Siemens and Microsoft are listed as suppliers on the contract award:
 
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../examples/organizations/consortia_simple.csv
+```{jsoninclude} ../../examples/buyers_suppliers/consortia.json
+:jsonpointer: /releases
+:expand: awards, suppliers, parties, identifier
 ```

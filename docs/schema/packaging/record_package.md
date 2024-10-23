@@ -5,7 +5,7 @@ The record package schema describes a container for records.
 ````{admonition} Example
 :class: hint
 
-```{jsoninclude} ../../examples/merging/updates/versioned.json
+```{jsoninclude} ../../examples/amendments/tender.json
 :jsonpointer:
 :title: Record package
 ```

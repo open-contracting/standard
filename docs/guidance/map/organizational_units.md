@@ -25,7 +25,7 @@ Some publishers use the [memberOf](https://github.com/open-contracting-extension
 
 In Honduras, the Ministry of Health is planning the procurement of food supplies for the San Felipe Hospital. For the purposes of the example, San Felipe Hospital is considered to be a unit belonging to the Ministry of Health, and it is not a legal entity of its own.
 
-In the release below, the publisher adds the hospital name at the end of the procuring entity name. The main identifier for the organization (*Secretaría de Salud Pública*) is extracted from a local list in the "HonduCompras" platform, used to publish procurement information in the country.
+In the release below, the publisher adds the hospital name at the end of the buyer and procuring entity names. The main identifier for the organization (*Secretaría de Salud Pública*) is extracted from a local list in the "HonduCompras" platform, used to publish procurement information in the country.
 
 An identifier for the hospital has been added using the "HN-ONCAE-UNIT" list code. The `address` and `contactPoint` information belongs to the hospital only.
 

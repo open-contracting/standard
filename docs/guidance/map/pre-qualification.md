@@ -8,10 +8,23 @@ In single-stage procedures, buyers or procuring entities invite potential suppli
 
 But, many jurisdictions also use multi-stage procedures. Such procedures follow a process like:
 
-```{csv-table}
-:header-rows: 1
-:file: ../../examples/pre-qualification/multi-stage.csv
+````{grid} 1 2 2 2
+:gutter: 2
+
+```{grid-item-card} First stage
+* The buyer or procuring entity issues an invitation to participate in the process
+* Potential suppliers submit expressions of interest
+* The buyer or procuring entity assesses the expressions of interest
+* The buyer or procuring entity establishes a list of qualified or selected potential suppliers
 ```
+
+```{grid-item-card} Second stage
+* The buyer or procuring entity issues an invitation to bid to the potential suppliers on the list
+* Potential suppliers submit bids
+* The buyer or procuring entity evaluates the bids
+* The buyer or procuring entity awards a contract to the supplier(s)
+```
+````
 
 This worked example describes 3 types of multi-stage procedure and explains how to model them in OCDS.
 
@@ -39,7 +52,7 @@ The UNCITRAL model law defines pre-selection as a procedure to:
 
 > ...identify, prior to solicitation, a **limited number** of suppliers or contractors that best meet the qualification criteria for the procurement concerned.
 
-Pre-selection follows the same process as pre-qualification, with some additional requirements. The invitation to pre-qualify needs to specify how many potential suppliers the buyer or procuring entity will later request proposals from. The invitation also needs to specify how the procuring entity will select the potential suppliers to request proposals from.
+Pre-selection follows the same process as pre-qualification, with some additional requirements. The invitation to pre-qualify needs to specify how many potential suppliers the buyer or procuring entity will later request proposals from. The invitation also needs to specify how the buyer or procuring entity will select the potential suppliers to request proposals from.
 
 ```{note}
 The European Union's restricted procedure, competitive procedure with negotiation, competitive dialogue procedure and innovation partnership all permit the use of pre-selection (see Article 65, [Directive 2014/24/EU](https://eur-lex.europa.eu/eli/dir/2014/24/oj)).

@@ -94,6 +94,47 @@
           "projectID": "SP001",
           "uri": "https://openspending.org/uk-barnet-budget/entries/6801ad388f3a38b7740dde20108c58b35984ee91"
         },
+        "project": {
+          "id": "oc4ids-bu3kcz-0000",
+          "title": "Central Junction Cycle Lane Construction",
+          "description": "Design, construction and supervision of a new cycle lane for the Central Junction.",
+          "totalValue": {
+            "amount": 1100000,
+            "currency": "GBP"
+          },
+          "uri": "http://example.com/projects/oc4ids-bu3kcz-0000.json",
+          "sector": {
+            "id": "transport.road",
+            "description": "Road transport, including roads, highways, streets, tunnels and bridges.",
+            "scheme": "oc4idsProjectSector"
+          },
+          "additionalClassifications": [
+            {
+              "id": "03.04.05",
+              "description": "Cycle lanes for road transport.",
+              "scheme": "GB-EXAMPLE"
+            }
+          ],
+          "locations": [
+            {
+              "description": "Barnet, London, UK",
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  51.605,
+                  0.2076
+                ]
+              },
+              "gazetteer": {
+                "scheme": "GEONAMES",
+                "identifier": [
+                  "2656295"
+                ]
+              },
+              "uri": "https://www.geonames.org/2656295/barnet.html"
+            }
+          ]
+        },
         "documents": [
           {
             "datePublished": "2009-01-05T00:00:00Z",
@@ -153,6 +194,26 @@
               "value": {
                 "amount": 120000,
                 "currency": "GBP"
+              }
+            }
+          },
+          {
+            "id": "0002",
+            "description": "Paint for road markings",
+            "classification": {
+              "scheme": "CPV",
+              "id": "44811000",
+              "description": "Road paint",
+              "uri": "http://cpv.data.ac.uk/code-44811000"
+            },
+            "immediateContainer": {
+              "name": "Can/Tin",
+              "capacity": {
+                "unit": {
+                  "scheme": "UNCEFACT",
+                  "id": "GLI"
+                },
+                "value": "[100,100]"
               }
             }
           }

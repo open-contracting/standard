@@ -1,6 +1,7 @@
-#!/usr/bin/env bash
-# No -e, because diff fails.
-set -uo pipefail
+#!/bin/sh
+
+# No -e, because diff uses exit status 1 when differences are found.
+set -u
 
 curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/docs/conf.py | diff -u - docs/conf.py
 
