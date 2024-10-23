@@ -642,6 +642,7 @@ def pre_commit():
     # Strict schemas.
     directory = Path('strict')
     json_dump(directory / 'release-schema.json', strict_release_schema)
+    json_dump(directory / 'record-schema.json', get_strict_schema(json_load('record-schema.json')))
 
     strict_dereferenced_release_schema = json_load(directory / 'release-schema.json', jsonref, merge_props=True)
     json_dump(directory / 'dereferenced-release-schema.json', strict_dereferenced_release_schema)
