@@ -1,0 +1,18 @@
+ci:
+  autoupdate_schedule: quarterly
+  skip: [pip-compile]
+default_language_version:
+    python: python3.10
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+      - id: ruff-format
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.4.18
+    hooks:
+      - id: pip-compile
+        name: pip-compile common-requirements.in
+        args: [common-requirements.in, -o, common-requirements.txt]
+        files: ^common-requirements\.(in|txt)$
