@@ -81,7 +81,12 @@ All new information about a contracting (or planning) process is described withi
 
 ### Parties
 
-Each of the organizations referenced in a release must be included in the parties section. 
+Each of the organizations referenced in a release must be included in the parties section.
+
+An organization is defined as:
+
+```{field-description} ../../build/current_lang/release-schema.json /definitions/Organization
+```
 
 ```{versionadded} 1.1
 In OCDS 1.0, the details (address, contact point, etc.) of the organizations involved in a contracting process were repeated across many fields (`tenderers`, `suppliers`, etc.). In OCDS 1.1, these details are instead collected under a top-level `parties` array, with the other fields referencing entries in this array, using [organization references](#organizationreference). This reduces repetition and supports publication of information about additional organizations: for example, multiple buyers.
