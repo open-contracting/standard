@@ -568,7 +568,7 @@ def pre_commit():
     - versioned-release-validation-schema.json
     - strict-release-schema.json
     - strict-release-package.json
-    - strict-record-package.jso
+    - strict-record-package.json
     - strict-dereferenced-release-schema.json
     - strict-versioned-release-validation-schema.json
     """
@@ -584,6 +584,7 @@ def pre_commit():
     }
 
     release_schema = json_load('release-schema.json')
+    strict_release_schema = get_strict_schema(deepcopy(release_schema))
     jsonref_release_schema = json_load('release-schema.json', jsonref, merge_props=True)
 
     counts = defaultdict(list)
@@ -640,15 +641,15 @@ def pre_commit():
 
     # Strict schemas.
     directory = Path('strict')
-    strict_release_schema = get_strict_schema(deepcopy(release_schema))
-    json_dump(directory / 'release-schema', strict_release_schema)
+    json_dump(directory / 'release-schema.json', strict_release_schema)
 
-    strict_dereferenced_release_schema = json_load(directory / 'release-schema', jsonref, merge_props=True)
-    json_dump(directory / 'dereferenced-release-schema', strict_dereferenced_release_schema)
-    json_dump(directory / 'versioned-release-validation-schema', get_versioned_release_schema(strict_release_schema))
+    strict_dereferenced_release_schema = json_load(directory / 'release-schema.json', jsonref, merge_props=True)
+    json_dump(directory / 'dereferenced-release-schema.json', strict_dereferenced_release_schema)
+    json_dump(directory / 'versioned-release-validation-schema.json',
+              get_versioned_release_schema(strict_release_schema))
 
-    json_dump(directory / 'release-package-schema', get_strict_schema(json_load('release-package-schema')))
-    json_dump(directory / 'record-package-schema', get_strict_schema(json_load('record-package-schema')))
+    json_dump(directory / 'release-package-schema.json', get_strict_schema(json_load('release-package-schema.json')))
+    json_dump(directory / 'record-package-schema.json', get_strict_schema(json_load('record-package-schema.json')))
 
 
 @cli.command()
