@@ -348,7 +348,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * Identifiers
   * [#1094](https://github.com/open-contracting/standard/pull/1094) Add guidance on populating `parties.id` for parties without an organization identifier.
   * [#1643](https://github.com/open-contracting/standard/pull/1643) Update identifier section in release reference.
-  * [#1655](https://github.com/open-contracting/standard/pull/1655) Rewrite identifiers reference and examples for clarity.
+  * [#1655](https://github.com/open-contracting/standard/pull/1655), [#1708](https://github.com/open-contracting/standard/pull/1708) Rewrite identifiers reference and examples for clarity.
 * Documents
   * [#1189](https://github.com/open-contracting/standard/pull/1189) Add recommendations about publishing and referencing documents in the document reference section.
   * [#1664](https://github.com/open-contracting/standard/pull/1664) Recommend linking to alternative representations using `documents`.

@@ -31,7 +31,7 @@ localedir = basedir / 'docs' / 'locale'
 
 sys.path.append(str(basedir / 'docs'))
 
-from conf import release  # noqa isort:skip
+from conf import release  # noqa: E402
 
 
 def custom_warning_formatter(message, category, filename, lineno, line=None):
@@ -40,7 +40,7 @@ def custom_warning_formatter(message, category, filename, lineno, line=None):
 
 warnings.formatwarning = custom_warning_formatter
 
-versioned_template = json.loads('''
+versioned_template = json.loads("""
 {
   "type": "array",
   "items": {
@@ -63,7 +63,7 @@ versioned_template = json.loads('''
     }
   }
 }
-''')
+""")
 
 common_versioned_definitions = {
     'StringNullUriVersioned': {
@@ -118,35 +118,26 @@ keywords_to_remove = (
 
 
 def json_load(filename, library=json, **kwargs):
-    """
-    Loads JSON data from the given filename.
-    """
+    """Load JSON data from the given filename."""
     with (schemadir / filename).open() as f:
         return library.load(f, **kwargs)
 
 
 def json_dump(filename, data):
-    """
-    Writes JSON data to the given filename.
-    """
+    """Write JSON data to the given filename."""
     with (schemadir / filename).open('w') as f:
         json.dump(data, f, indent=2)
         f.write('\n')
 
 
 def csv_load(url, delimiter=','):
-    """
-    Loads CSV data into a ``csv.DictReader`` from the given URL.
-    """
-    reader = csv.DictReader(StringIO(get(url).text), delimiter=delimiter)
-    return reader
+    """Load CSV data into a ``csv.DictReader`` from the given URL."""
+    return csv.DictReader(StringIO(get(url).text), delimiter=delimiter)
 
 
 @contextmanager
 def csv_dump(filename, fieldnames):
-    """
-    Writes CSV headers to the given filename, and yields a ``csv.writer``.
-    """
+    """Write CSV headers to the given filename, and yield a ``csv.writer``."""
     f = (schemadir / 'codelists' / filename).open('w')
     writer = csv.writer(f, lineterminator='\n')
     writer.writerow(fieldnames)
@@ -157,18 +148,14 @@ def csv_dump(filename, fieldnames):
 
 
 def get(url):
-    """
-    GETs a URL and returns the response. Raises an exception if the status code is not successful.
-    """
-    response = requests.get(url)
+    """GET a URL and returns the response. Raise an exception if the status code is not successful."""
+    response = requests.get(url, timeout=10)
     response.raise_for_status()
     return response
 
 
 def coerce_to_list(data, key):
-    """
-    Returns the value of the ``key`` key in the ``data`` mapping. If the value is a string, wraps it in an array.
-    """
+    """Return the value of the ``key`` key in the ``data`` mapping. If the value is a string, wrap it in an array."""
     item = data.get(key, [])
     if isinstance(item, str):
         return [item]
@@ -176,16 +163,14 @@ def coerce_to_list(data, key):
 
 
 def get_metaschema():
-    """
-    Patches and returns the JSON Schema Draft 4 metaschema.
-    """
+    """Patches and returns the JSON Schema Draft 4 metaschema."""
     return json_merge_patch.merge(json_load('metaschema/json-schema-draft-4.json'),
                                   json_load('metaschema/meta-schema-patch.json'))
 
 
 def get_common_definition_ref(item):
     """
-    Returns a schema that references the common definition that the ``item`` matches: "StringNullUriVersioned",
+    Return a schema that references the common definition that the ``item`` matches: "StringNullUriVersioned",
     "StringNullDateTimeVersioned" or "StringNullVersioned".
     """
     for name, keywords in common_versioned_definitions.items():
@@ -193,15 +178,14 @@ def get_common_definition_ref(item):
         if any(item.get(keyword) != value for keyword, value in keywords.items()):
             continue
         # And adds no keywords to the definition.
-        if any(keyword not in (*keywords, *keywords_to_remove) for keyword in item):
+        if any(keyword not in {*keywords, *keywords_to_remove} for keyword in item):
             continue
         return {'$ref': f'#/definitions/{name}'}
+    return None
 
 
 def add_versioned(schema, unversioned_pointers, pointer=''):
-    """
-    An outer function that calls ``_add_versioned`` on each field.
-    """
+    """Call ``_add_versioned`` on each field."""
     for key, value in schema['properties'].items():
         new_pointer = f'{pointer}/properties/{key}'
         _add_versioned(schema, unversioned_pointers, new_pointer, key, value)
@@ -213,7 +197,7 @@ def add_versioned(schema, unversioned_pointers, pointer=''):
 
 def _add_versioned(schema, unversioned_pointers, pointer, key, value):
     """
-    An inner function that performs the changes to the schema to refer to versioned/unversioned definitions.
+    Perform the changes to the schema to refer to versioned/unversioned definitions.
 
     :param schema dict: the schema of the object on which the field is defined
     :param unversioned_pointers set: JSON Pointers to ``id`` fields to leave unversioned if the object is in an array
@@ -286,9 +270,7 @@ def _add_versioned(schema, unversioned_pointers, pointer, key, value):
 
 
 def update_refs_to_unversioned_definitions(schema):
-    """
-    Replaces ``$ref`` values with unversioned definitions.
-    """
+    """Replace ``$ref`` values with unversioned definitions."""
     for key, value in schema.items():
         if key == '$ref':
             schema[key] = value + 'Unversioned'
@@ -297,9 +279,7 @@ def update_refs_to_unversioned_definitions(schema):
 
 
 def get_unversioned_pointers(schema, fields, pointer=''):
-    """
-    Returns the JSON Pointers to ``id`` fields that must not be versioned if the object is in an array.
-    """
+    """Return the JSON Pointers to ``id`` fields that must not be versioned if the object is in an array."""
     if isinstance(schema, list):
         for index, item in enumerate(schema):
             get_unversioned_pointers(item, fields, pointer=f'{pointer}/{index}')
@@ -328,9 +308,7 @@ def get_unversioned_pointers(schema, fields, pointer=''):
 
 
 def remove_omit_when_merged(schema):
-    """
-    Removes properties that set ``omitWhenMerged``.
-    """
+    """Remove properties that set ``omitWhenMerged``."""
     if isinstance(schema, list):
         for item in schema:
             remove_omit_when_merged(item)
@@ -346,15 +324,13 @@ def remove_omit_when_merged(schema):
 
 
 def remove_metadata_and_extended_keywords(schema):
-    """
-    Removes metadata and extended keywords from properties and definitions.
-    """
+    """Remove metadata and extended keywords from properties and definitions."""
     if isinstance(schema, list):
         for item in schema:
             remove_metadata_and_extended_keywords(item)
     elif isinstance(schema, dict):
         for key, value in schema.items():
-            if key in ('definitions', 'properties'):
+            if key in {'definitions', 'properties'}:
                 for subschema in value.values():
                     for keyword in keywords_to_remove:
                         subschema.pop(keyword, None)
@@ -362,12 +338,10 @@ def remove_metadata_and_extended_keywords(schema):
 
 
 def get_versioned_release_schema(schema):
-    """
-    Returns the versioned release schema.
-    """
+    """Return the versioned release schema."""
     # Update schema metadata.
     release_with_underscores = release.replace('.', '__')
-    schema['id'] = f'https://standard.open-contracting.org/schema/{release_with_underscores}/versioned-release-validation-schema.json'  # noqa: E501
+    schema['id'] = f'https://standard.open-contracting.org/schema/{release_with_underscores}/versioned-release-validation-schema.json'
     schema['title'] = 'Schema for a compiled, versioned Open Contracting Release.'
 
     # Release IDs, dates and tags appear alongside values in the versioned release schema.
@@ -453,10 +427,7 @@ def unused_terms(filename):
 @cli.command()
 @click.option('--ignore-base', help='A base branch to ignore, e.g. 1.2-dev')
 def missing_changelog(ignore_base):
-    """
-    Print pull requests not mentioned in the changelog.
-    """
-
+    """Print pull requests not mentioned in the changelog."""
     # Ignore PRs to the ppp-extension branch, which became OCDS for PPPs.
     ignore = ['ppp-extension']
     if ignore_base:
@@ -497,7 +468,7 @@ def missing_changelog(ignore_base):
             base_ref = pr['base']['ref']
 
             # Include merged PRs, not in the "Minor:" or "1.0-RC" milestones, not syncing branches, and not ignored.
-            if not merged_at or milestone_number in (26, 27, 28, 29, 2) or pattern.search(title) or base_ref in ignore:
+            if not merged_at or milestone_number in {26, 27, 28, 29, 2} or pattern.search(title) or base_ref in ignore:
                 if number in prs:
                     click.echo(f'WARNING: #{number} should not be in changelog', file=sys.stderr)
                 continue
@@ -558,9 +529,13 @@ def pre_commit():
             if not multilingual and field.schema['type'] == 'object':
                 click.secho(f'{field.path} is an object. {" & ".join(counts[name])} is/are multilingual.', fg='yellow')
             elif multilingual:
-                raise Exception(f'{name} is multilingual at {field.path}, but not elsewhere')
+                raise click.ClickException(
+                    f'{name} is multilingual at {field.path}, but not elsewhere'
+                )
             else:
-                raise Exception(f'{name} is multilingual at {" & ".join(counts[name])}, but not at {field.path}')
+                raise click.ClickException(
+                    f'{name} is multilingual at {" & ".join(counts[name])}, but not at {field.path}'
+                )
         if multilingual:
             counts[name].append(field.path)
         else:
@@ -614,7 +589,8 @@ def update_country(file):
         # Clean "Western Sahara*", "United Arab Emirates (the)", etc.
         codes[d[str(offset + 9)]] = re.sub(r' \(the\)|\*', '', d[str(offset + 13)])
         # The country code appears at offsets 9 and 15. Check that they are always the same.
-        assert d[str(offset + 9)] == d[str(offset + 15)]
+        if d[str(offset + 9)] != d[str(offset + 15)]:
+            raise AssertionError
 
     with open(schemadir / 'codelists' / 'country.csv', 'w') as f:
         writer = csv.writer(f, lineterminator='\n')
@@ -625,16 +601,14 @@ def update_country(file):
 
 @cli.command()
 def update_currency():
-    """
-    Update currency.csv from ISO 4217.
-    """
+    """Update currency.csv from ISO 4217."""
     # https://www.iso.org/iso-4217-currency-codes.html
     # https://www.six-group.com/en/products-services/financial-information/data-standards.html#scrollTo=currency-codes
 
-    # "List One: Current Currency & Funds"
+    # List One: Current Currency & Funds
     current_codes = {}
-    url = 'https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/lists/list_one.xml'  # noqa: E501
-    tree = etree.fromstring(get(url).content)
+    url = 'https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/lists/list_one.xml'
+    tree = etree.fromstring(get(url).content)  # noqa: S320 # trusted external
     for node in tree.xpath('//CcyNtry'):
         # Entries like Antarctica have no universal currency.
         if node.xpath('./Ccy'):
@@ -644,23 +618,23 @@ def update_currency():
                 current_codes[code] = title
             # We should expect currency titles to be consistent across countries.
             elif current_codes[code] != title:
-                raise Exception(f'expected {current_codes[code]}, got {title}')
+                raise click.ClickException(f'expected {current_codes[code]}, got {title}')
 
-    # "List Three: Historic Denominations (Currencies & Funds)"
+    # List Three: Historic Denominations (Currencies & Funds)
     historic_codes = {}
-    url = 'https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/lists/list_three.xml'  # noqa: E501
-    tree = etree.fromstring(get(url).content)
+    url = 'https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/lists/list_three.xml'
+    tree = etree.fromstring(get(url).content)  # noqa: S320 # trusted external
     for node in tree.xpath('//HstrcCcyNtry'):
         code = node.xpath('./Ccy')[0].text
         title = node.xpath('./CcyNm')[0].text.strip()
         valid_until = node.xpath('./WthdrwlDt')[0].text
         # Use ISO8601 interval notation.
         valid_until = re.sub(r'^(\d{4})-(\d{4})$', r'\1/\2', valid_until.replace(' to ', '/'))
-        if code not in current_codes:
-            if code not in historic_codes:
-                historic_codes[code] = {'Title': title, 'Valid Until': valid_until}
-            # If the code is historical, use the most recent title and valid date.
-            elif valid_until > historic_codes[code]['Valid Until']:
+        if (
+            code not in current_codes
+            # Last condition: If the code is historical, use the most recent title and valid date.
+            and (code not in historic_codes or valid_until > historic_codes[code]['Valid Until'])
+        ):
                 historic_codes[code] = {'Title': title, 'Valid Until': valid_until}
 
     with csv_dump('currency.csv', ['Code', 'Title', 'Valid Until']) as writer:
@@ -670,23 +644,20 @@ def update_currency():
             writer.writerow([code, historic_codes[code]['Title'], historic_codes[code]['Valid Until']])
 
     release_schema = json_load('release-schema.json')
-    codes = sorted(list(current_codes) + list(historic_codes))
-    release_schema['definitions']['Value']['properties']['currency']['enum'] = codes + [None]
+    codes = sorted([*current_codes, historic_codes])
+    release_schema['definitions']['Value']['properties']['currency']['enum'] = [*codes, None]
 
     json_dump('release-schema.json', release_schema)
 
 
 @cli.command()
 def update_language():
-    """
-    Update language.csv from ISO 639-1.
-    """
+    """Update language.csv from ISO 639-1."""
     # https://www.iso.org/iso-639-language-codes.html
     # https://id.loc.gov/vocabulary/iso639-1.html
 
     with csv_dump('language.csv', ['Code', 'Title']) as writer:
-        reader = csv_load('https://id.loc.gov/vocabulary/iso639-1.tsv', delimiter='\t')
-        for row in reader:
+        for row in csv_load('https://id.loc.gov/vocabulary/iso639-1.tsv', delimiter='\t'):
             # Remove parentheses, like "Greek, Modern (1453-)", and split alternatives.
             titles = re.split(r' *\| *', re.sub(r' \(.+\)', '', row['Label (English)']))
             # Remove duplication like "Ndebele, North |  North Ndebele" and join alternatives using a comma instead of
@@ -720,8 +691,7 @@ def update_media_type():
     with csv_dump('mediaType.csv', ['Code', 'Title']) as writer:
         for registry in registries:
             # See "Available Formats" under each heading.
-            reader = csv_load(f'https://www.iana.org/assignments/media-types/{registry}.csv')
-            for row in reader:
+            for row in csv_load(f'https://www.iana.org/assignments/media-types/{registry}.csv'):
                 if ' ' in row['Name']:
                     name, message = row['Name'].split(' ', 1)
                 else:
@@ -733,7 +703,7 @@ def update_media_type():
                     logging.warning('%s: %s', message, code)
                 # "x-emf" has "image/emf" in its "Template" value (but it is deprecated).
                 elif template and template != code:
-                    raise Exception(f"expected {code}, got {template}")
+                    raise click.ClickException(f"expected {code}, got {template}")
                 else:
                     writer.writerow([code, name])
 
@@ -743,9 +713,7 @@ def update_media_type():
 @cli.command()
 @click.pass_context
 def update(ctx):
-    """
-    Update codelists except country.csv.
-    """
+    """Update codelists except country.csv."""
     ctx.invoke(update_currency)
     ctx.invoke(update_language)
     ctx.invoke(update_media_type)
@@ -797,9 +765,7 @@ def check_iso_6523(ctx):
 
 
 def add_translation_note(path, language, domain):
-    """
-    Adds a translation note to a file.
-    """
+    """Add a translation note to a file."""
     base_url = 'https://standard.open-contracting.org/1.1'
 
     with open(path) as f:
@@ -809,10 +775,10 @@ def add_translation_note(path, language, domain):
     _ = translator.gettext
 
     pattern = f'{base_url}/{{}}/{domain}/'
-    response = requests.get(pattern.format(language))
+    response = requests.get(pattern.format(language), timeout=10)
 
     # If it's a new page, add the note to the current version of the page.
-    if response.status_code == 404:
+    if response.status_code == requests.codes.not_found:
         message = _('This page was recently added to the <a href="%(url)s">English documentation</a>. '
                     'It has not yet been translated.')
 
@@ -832,11 +798,15 @@ def add_translation_note(path, language, domain):
         element = document.xpath(xpath)[0]
         element.getparent().replace(element, replacement)
 
-        message = _('This page was recently changed in the <a href="%(url)s">English documentation</a>. '
-                    'The changes have not yet been translated.')
+        message = _(
+            'This page was recently changed in the <a href="%(url)s">English documentation</a>. '
+            'The changes have not yet been translated.'
+        )
 
-    template = '<div class="admonition note"><p class="first admonition-title">%(note)s</p><p class="last">' \
-               '%(message)s</p></div>'
+    template = (
+        '<div class="admonition note"><p class="first admonition-title">%(note)s</p><p class="last">'
+        '%(message)s</p></div>'
+    )
 
     document.xpath('//h1')[0].addnext(lxml.etree.XML(template % {
         'note': _('Note'), 'message': message % {'url': pattern.format('en')}}))
