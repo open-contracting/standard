@@ -25,7 +25,17 @@ This page presents the release package schema in an interactive browser and in a
 
 Click on schema elements to expand the tree, or use the '+' icon to expand all elements. Use { } to view the underlying schema for any section. Required fields are indicated in **bold**. [Deprecated fields](../../governance/deprecation) are omitted.
 
-<script src="../../../_static/docson/public/js/widget.js" data-schema="../../../release-package-schema.json"></script>
+````{tab-set}
+
+```{tab-item} Release package schema
+<script src="../../_static/docson/public/js/widget.js" data-schema="../../../release-package-schema.json"></script>
+```
+
+```{tab-item} Strict release package schema
+<script src="../../_static/docson/public/js/widget.js" data-schema="../../../strict/release-package-schema.json"></script>
+```
+
+````
 
 ## Reference table
 
