@@ -4,46 +4,41 @@
 
 # Unsuccessful processes
 
-In most jurisdictions, if a procedure is cancelled or unsuccessful, and a **new procedure** is started to procure the same items, the two procedures are considered two **different** contracting processes. This is in keeping with the OCDS definition of a contracting process.
+Contracting processes are sometimes cancelled or unsuccessful, in which case a buyer might restart a process to purchase the same items.
 
-However, in some jurisdictions, such as Paraguay, planning activity is considered as initiating the contracting process. Furthermore, if a first attempt is unsuccessful in procuring items, the second attempt is considered to be part of the same contracting process. This differs from the OCDS definition of a contracting process. OCDS, instead, records the cancelled procedure in the `relatedProcesses` array of the new procedure, with the 'unsuccessfulProcess' code in the related process' `relationship` array.
+In OCDS, when a buyer restarts a failed contracting process, the restart is modelled as the initiation of a new contracting processes.
+
+To link a new process to the previous attempt at procuring the same items, you ought to add the unsuccessful process to the `relatedProcesses` array of the new process, with a `.relationship` of 'unsuccessfulProcess'.
 
 ![Unsuccessful Tender](../../_static/png/unsuccessful_tender.png)
 
-## Example: Modelling unsuccessful tenders in Paraguay
+## Example
 
-The [Sistema de Información de las Contrataciones Públicas (SICP)](https://contrataciones.gov.py/) discloses information about contracting processes for all public entities in Paraguay. SICP is managed by the National Directorate of Public Procurement (DNCP in Spanish).
+This example illustrates how to model failed and restarted contracting processes in OCDS.
 
-The first data disclosed is about the planning process. Planning data includes an estimate of what an entity is going to buy, when and for how much. SICP assigns an `ocid` when the planning data is first disclosed, before the tender stage. In this example, the ocid is 'ocds-03ad3f-331547'.
-
-```{jsoninclude} ../../examples/unsuccessful_tender/planning.json
-:jsonpointer:
-:expand: releases, planning
-:title: unsuccessful-tender-planning
-```
-
-Next, the contracting process is disclosed, using a new `ocid`, 'ocds-03ad3f-331547-1'. The `relatedProcess` block links the planning process and the contracting process, with the relationship set to 'planning'.
-
-The tender was unsuccessful, so the tender's `finalStatus` is set to 'unsuccessful'.
+A buyer attempts to purchase office supplies by announcing an opportunity. The contracting process is assigned an `ocid` of 'ocds-213czf-0000'.
 
 ```{jsoninclude} ../../examples/unsuccessful_tender/tender.json
-:jsonpointer:
-:expand: releases, relatedProcesses, tender, finalStatus
-:title: unsuccessful-tender-tender
+:jsonpointer: /releases/0
+:expand: releases, tender
 ```
 
-The buyer issues another tender to buy the same item, following from the same planning process.
+The attempt is unsuccessful so the buyer sets `tender.finalStatus` to 'unsuccessful'.
 
-Paraguay considers the two tenders part of the same contracting process. But, in OCDS the two tenders are separate contracting processes.
+```{jsoninclude} ../../examples/unsuccessful_tender/tenderUpdate.json
+:jsonpointer: /releases/0
+:expand: releases, tender
+```
 
-To construct an `ocid` for the second contracting process, Paraguay adds a consecutive number to the `ocid` of the first process. In this example the new `ocid` is 'ocds-03ad3f-331547-2'
+The buyer announces a second opportunity to purchase the same item. The new contracting process is assigned a new `ocid` of 'ocds-213czf-0001'. The failed attempt is recorded in `.relatedProcesses`.
 
-Paraguay could also have used the identifier for the second tender as the `ocid` for the second contracting process.
+```{jsoninclude} ../../examples/unsuccessful_tender/new_tender.json
+:jsonpointer: /releases/0
+:expand: releases, tender, relatedProcesses
+```
 
-The `relatedProcesses` block links to the unsuccessful contracting process with the relationship set to 'unsuccessfulProcess', and to the initial planning process with the relationship set to 'planning'.
-
-```{jsoninclude} ../../examples/unsuccessful_tender/related_process.json
-:jsonpointer:
-:expand: releases, relatedProcesses, relationship
-:title: unsuccessful-tender-related-process
+```{admonition} Unsuccessful and restarted processes with a shared identifier
+  In some jurisdictions, such as Paraguay, if a first attempt is unsuccessful in procuring items, the second attempt is considered to be part of the same contracting process and, as a result, shares its identifier. In OCDS, the two attempts need to be modelled as separate contracting processes with different `ocid`s.
+  
+  If your data sources lack a unique identifier for the second attempt, you can assign its `ocid` by appending an incrementing number to the `ocid` of the first process, e.g. `{first process ocid}-1`.
 ```

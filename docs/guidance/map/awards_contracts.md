@@ -101,11 +101,21 @@ Once an award is published by the e-procurement system, there is a 10-day stands
 
 If an appeal is made and upheld, then the award is cancelled. If no appeals are upheld by the end of the standstill period, then a contract is signed between the buyer and the supplier, outside of the e-procurement system. No OCDS data is published or updated from this stage of the contracting process onward.
 
-In this example, the Ministry of Finance uses the e-procurement system to solicit bids for the development of a new website. A contract is awarded to 360nx Designs for 3,000,000 ZMK, through the e-procurement system.
+The Ministry of Finance uses the e-procurement system to award a contract for website development to to 360nx Designs.
+
+```{jsoninclude} ../../examples/awards_contracts/award_contract_changes.json
+:jsonpointer: /releases/0
+:expand: awards, suppliers
+```
 
 An unsuccessful bidder appeals the award decision and the appeal is upheld, resulting the award being cancelled.
 
-If both the `award` and `contract` sections of OCDS had been populated when the award was made through the e-procurement system, this would have resulted in the presence of a contract in the OCDS data that had never existed in reality.
+```{jsoninclude} ../../examples/awards_contracts/award_contract_changes.json
+:jsonpointer: /releases/1
+:expand: awards
+```
+
+If the `contract` section had been populated when the award was made through the e-procurement system, it would have resulted in the presence of a contract in the OCDS data that had never existed in reality.
 
 ## Awards and award notices
 
@@ -121,30 +131,20 @@ In Paraguay, a single award notice is used to disclose many award decisions. Det
 
 Using a single award object to model such a notice in OCDS would make it impossible to determine which items related to which suppliers or how much of the total award value related to each supplier:
 
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../examples/award_decisions/single_award.csv
+```{jsoninclude} ../../examples/awards_contracts/single_award.json
+:jsonpointer: /releases/0
+:expand: awards, value, suppliers
 ```
 
-For the award object in OCDS to communicate a direct relationship between items, suppliers, and values, Paraguay's award notice is split into multiple award objects, one for each supplier/value pairing on the notice.
+For the award object in OCDS to communicate a direct relationship between items, suppliers, and values, the award notice is split into multiple award objects, one for each supplier/value pairing on the notice.
 
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../examples/award_decisions/multi_award.csv
+There are no identifiers for the individual supplier/value pairings on the original award notice, so it is necessary to create a new identifier for each award object in OCDS. The approach to creating an identifier will depend on the properties of the dataset; for example, using the supplier's `.id`.
+
+```{jsoninclude} ../../examples/awards_contracts/multi_award.json
+:jsonpointer: /releases/0
+:expand: awards, value, suppliers
 ```
 
-There are no identifiers for the individual supplier/value pairings on the original award notice, so it is necessary to create a new identifier for each award object in OCDS. The approach to creating an identifier will depend on the properties of the dataset; for example, in Paraguay a combination of the award notice identifier, supplier name, and a consecutive number is used.
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../examples/award_decisions/identifiers.csv
-```
-
-```{admonition} View the example in JSON
-:class: tip
-
-[View the example in Paraguay's API](https://contrataciones.gov.py/datos/api/v3/doc/ocds/record/ocds-03ad3f-340885-1)
-```
 ## Purchase orders
 
 A purchase order is a specific type of contract, an official document issued by a buyer committing to pay a supplier for the supply of specific goods, services or works to be delivered in the future.
@@ -159,7 +159,7 @@ The UK's Department for Transport awards a £1.2m, 12-month contract to KPMG to 
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../examples/purchase_orders/parent_contract.csv
+:file: ../../examples/awards_contracts/parent_contract.csv
 ```
 
 Calculating the sum of the contract value in the above example gives the correct result of £1.2m.
@@ -170,7 +170,7 @@ If purchase orders were also disclosed in the `contracts` section of OCDS, by th
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../examples/purchase_orders/contracts_pos.csv
+:file: ../../examples/awards_contracts/contracts_pos.csv
 ```
 
 Calculating the sum of the contract value in the above example gives an incorrect result of £2.4m - double the actual value of the contract.

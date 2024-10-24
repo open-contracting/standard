@@ -26,7 +26,7 @@ But, many jurisdictions also use multi-stage procedures. Such procedures follow 
 ```
 ````
 
-This worked example describes 3 types of multi-stage procedure and explains how to model them in OCDS.
+This example describes 3 types of multi-stage procedure and explains how to model them in OCDS.
 
 ## Definitions
 
@@ -124,13 +124,12 @@ The `tender` section is also used to disclose information about the procedure us
 
 ## Example: Pre-qualification
 
-The Bank of England issues a [restricted procedure contract notice](https://ted.europa.eu/udl?uri=TED:NOTICE:90873-2019:TEXT:EN:HTML) to invite potential suppliers to pre-qualify for a tender to provide facilities management services.
+A buyer in the European Union invites potential suppliers to participate in a restricted procedure for the purchase of office supplies.
 
-The notice represents the initiation of the contracting process, so it is modelled using the `tender` section in OCDS:
+The invitation represents the initiation of the contracting process, so it is modelled using the `tender` section in OCDS.
 
 ```{jsoninclude} ../../examples/pre-qualification/pre-qualification_tender.json
 :jsonpointer: /releases/0/tender
-:title: Tender section
 ```
 
 Any potential supplier can submit a request to take part in the first stage, but only qualified potential suppliers will be invited to submit a bid for the contract. Therefore, `tender.procurementMethod` is set to 'selective'.
@@ -143,20 +142,19 @@ Contact the [Data Support Team](../../support/index) if you want to disclose thi
 
 ## Example: Pre-selection
 
-The National Nuclear Laboratory issues a [restricted procedure contract notice](https://ted.europa.eu/udl?uri=TED:NOTICE:28681-2020:TEXT:EN:HTML&src=0) to invite potential suppliers to pre-qualify for a project to update its physical security system arrangements.
+A buyer in the European Union invites potential suppliers to participate in a restricted procedure for the purchase of IT equipment.
 
-The notice represents the initiation of the contracting process, so it is modelled using the `tender` section in OCDS.
+The invitation represents the initiation of the contracting process, so it is modelled using the `tender` section in OCDS.
 
-The procuring entity will invite a maximum of 5 qualified potential suppliers to submit a bid at the next stage, so `tender.procurementMethod` is set to 'selective'. The [selectionCriteria extension](https://extensions.open-contracting.org/en/extensions/selectionCriteria/master/) is used to disclose the criteria for choosing which potential suppliers to invite proposals from.
+The buyer will invite a maximum of 5 qualified potential suppliers to submit a bid at the next stage, so `tender.procurementMethod` is set to 'selective'. The [selectionCriteria extension](https://extensions.open-contracting.org/en/extensions/selectionCriteria/master/) is used to disclose the criteria for choosing which potential suppliers to invite proposals from.
 
 ```{jsoninclude} ../../examples/pre-qualification/pre-selection_tender.json
 :jsonpointer: /releases/0/tender
-:title: Tender section
 ```
 
 ## Example: Pre-qualification in Paraguay
 
-The Ministry of Public Works and Communications issues an [invitation for potential suppliers to pre-qualify for two tenders for road construction in different neighbourhoods](https://contrataciones.gov.py/licitaciones/convocatoria/338229-servicios-consultoria-estudios-factibilidad-diseno-final-ingenieria-tramos-caminos-1/precalificacion.html). Each tender will reuse the list of pre-qualified potential suppliers established as a result of this first procedure.
+The buyer in Paraguay invites potential suppliers to pre-qualify for two road construction tenders. Each tender will reuse the list of pre-qualified potential suppliers established as a result of the pre-qualification procedure.
 
 The invitation represents the initiation of a contracting process to establish a list of pre-qualified potential suppliers, so it is modelled using the `tender` section in OCDS.
 
@@ -164,7 +162,6 @@ Only qualified potential suppliers will be invited to bid in subsequent tenders 
 
 ```{jsoninclude} ../../examples/pre-qualification/pre-qualification_paraguay.json
 :jsonpointer: /releases/0/tender
-:title: Tender section
 ```
 
 ```{note}

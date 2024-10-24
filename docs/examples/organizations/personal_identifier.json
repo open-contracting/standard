@@ -1,88 +1,26 @@
 {
   "version": "1.1",
-  "extensions": [],
   "releases": [
     {
-      "ocid": "ocds-213czf-000-00001",
-      "id": "ocds-213czf-000-00001-02-tender",
+      "ocid": "ocds-213czf-0000",
+      "id": "1",
       "date": "2010-03-15T09:30:00Z",
       "tag": [
-        "tender"
+        "award"
       ],
       "parties": [
         {
           "id": "COL-IDCARD-1234567",
           "name": "VICTOR HUGO GONZALEZ PEREZ",
-          "roles": [
-            "tenderer"
-          ],
           "identifier": {
             "id": "1234567",
-            "scheme": "COL-IDCARD",
-            "legalName": "VICTOR HUGO GONZALEZ PEREZ"
+            "scheme": "COL-IDCARD"
           },
-          "contactPoint": {
-            "name": "VICTOR HUGO GONZALEZ PEREZ"
-          }
+          "roles": [
+            "tenderer"
+          ]
         }
-      ],
-      "tender": {
-        "id": "ocds-213czf-000-00001-01-tender",
-        "title": "Planned cycle lane improvements",
-        "description": "Tenders solicited for work to build new cycle lanes in the centre of town.",
-        "tenderers": [
-          {
-            "id": "COL-IDCARD-1234567",
-            "name": "VICTOR HUGO GONZALEZ PEREZ"
-          }
-        ],
-        "items": [
-          {
-            "id": "0001",
-            "description": "string",
-            "classification": {
-              "scheme": "CPV",
-              "id": "45233130",
-              "description": "Construction work for highways",
-              "uri": "http://cpv.data.ac.uk/code-45233130"
-            },
-            "additionalClassifications": [
-              {
-                "scheme": "CPV",
-                "id": "45233162-2",
-                "description": "Cycle path construction work",
-                "uri": "http://cpv.data.ac.uk/code-45233162.html"
-              }
-            ],
-            "quantity": 8,
-            "unit": {
-              "name": "Miles",
-              "value": {
-                "amount": 120000,
-                "currency": "GBP"
-              }
-            }
-          }
-        ],
-        "minValue": {
-          "amount": 600000,
-          "currency": "GBP"
-        },
-        "value": {
-          "amount": 1100000,
-          "currency": "GBP"
-        },
-        "procurementMethod": "open",
-        "procurementMethodRationale": "An open competitive tender is required by EU Rules",
-        "awardCriteria": "bestProposal",
-        "awardCriteriaDetails": "The best proposal, subject to value for money requirements, will be accepted.",
-        "submissionMethodDetails": "Submit through the online portal at http://example.com/submissions/ocds-213czf-000-00001-01/",
-        "enquiryPeriod": {
-          "startDate": "2010-03-01T09:00:00Z",
-          "endDate": "2010-03-14T17:30:00Z"
-        },
-        "hasEnquiries": false
-      }
+      ]
     }
   ]
 }

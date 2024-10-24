@@ -393,15 +393,12 @@ An organization reference consists of two main components:
 ````{admonition} Example
 :class: hint
 
-```{jsoninclude} ../examples/release_schema_reference/release_package.json
-:jsonpointer: /releases/0/buyer
-:title: organizationReference
+```{jsoninclude} ../examples/release_schema_reference/organization_reference.json
+:jsonpointer: /releases/0
+:include_only: buyer, parties
+:expand: buyer, parties
 ```
 ````
-
-```{workedexamplelist} The following worked examples are available for organization reference
-:tag: organization_reference
-```
 
 ### Organization
 
@@ -610,7 +607,7 @@ Milestone information can be included in the [planning](#planning), [tender](#te
 The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed. 
 
 ```{seealso}
-[How to represent planned payments](../guidance/map/milestones.md#delivery-and-payment-data)
+[How to represent planned payments](../guidance/map/milestones.md#payment-milestones)
 ```
 
 For delivery milestones, if there is a time frame for delivery, use `.dueAfterDate` for the start date and `.dueDate` for the end date.
