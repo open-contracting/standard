@@ -12,4 +12,14 @@ Click on schema elements to expand the tree, or use the '+' icon to expand all e
 This page presents the record schema in an interactive browser. You can also download the canonical version of the record schema as [JSON Schema](../../build/current_lang/record-schema.json) or view it as [tables](records_reference).
 ```
 
+````{tab-set}
+
+```{tab-item} Record schema
 <script src="../../_static/docson/public/js/widget.js" data-schema="../../../record-schema.json"></script>
+```
+
+```{tab-item} Strict record schema
+<script src="../../_static/docson/public/js/widget.js" data-schema="../../../strict/record-schema.json"></script>
+```
+
+````
