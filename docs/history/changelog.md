@@ -338,6 +338,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * [#1161](https://github.com/open-contracting/standard/pull/1161) Change recommendation for unknown time component.
 * [#1208](https://github.com/open-contracting/standard/pull/1208) Update guidance with new field definitions.
 * [#1216](https://github.com/open-contracting/standard/pull/1216) Update definitions of contracting process, record, and ocid. Introduce definition of planning process.
+* [#1660](https://github.com/open-contracting/standard/pull/1660) Remove all references to "building blocks" and "blocks".
 * [#1618](https://github.com/open-contracting/standard/pull/1618) Move governance policies from Google Docs, updating references for OCDS 1.1.5 and OCDS 1.2.0, and removing references to GitHub issues.
 * Records
   * [#1307](https://github.com/open-contracting/standard/pull/1307) Clarify uniqueness rules for records.
@@ -573,8 +574,8 @@ See the changelogs for:
 #### Schema definition updates
 
 * [#372](https://github.com/open-contracting/standard/issues/372) **[Updates to transactions terminology](../schema/reference.md#transaction)** - We have replaced receiverOrganization and providerOrganization with payee and payer, to align with more familiar terminology, and have replaced 'amount' with 'value' for consistency with other areas of the standard.
-* [#378](https://github.com/open-contracting/standard/issues/378) **[Updates to core budget block](../schema/reference.md#budget)** - We have updated references to the Fiscal Data Package in the schema.
-* [#337](https://github.com/open-contracting/standard/issues/337) **[Definition of "tenderer" to enhance clarity](../schema/reference.md#tender)** - We have updated the definition of tenderer in the tenders block, and cross-referenced the bid extension.
+* [#378](https://github.com/open-contracting/standard/issues/378) **[Updates to `Budget` subschema](../schema/reference.md#budget)** - We have updated references to the Fiscal Data Package in the schema.
+* [#337](https://github.com/open-contracting/standard/issues/337) **[Definition of "tenderer" to enhance clarity](../schema/reference.md#tender)** - We have updated the definition of tenderer in the `Tender` subschema, and cross-referenced the bid extension.
 * [#259](https://github.com/open-contracting/standard/issues/259) **[Enquiries](https://extensions.open-contracting.org/en/extensions/enquiries/)** - We have updated the definition of hasEnquiries.
 * [#246](https://github.com/open-contracting/standard/issues/246) **[In what scope must a release ID be unique?](../schema/reference.md#release)** - We have updated the definition of release.id to reflect the scope in which it must be unique
 
@@ -594,8 +595,8 @@ See the changelogs for:
 
 ### Added
 
-* [#371](https://github.com/open-contracting/standard/issues/371) [#439](https://github.com/open-contracting/standard/pull/439) **[Linking related processes](../schema/reference.md#relatedprocess)** - We have introduced a new RelatedProcess block at the release and contract level
-* [#374](https://github.com/open-contracting/standard/issues/374) **[Duration in periods](../schema/reference.md#period)** - We have introduced fields for duration in days, and maximum extent, to the period building block
+* [#371](https://github.com/open-contracting/standard/issues/371) [#439](https://github.com/open-contracting/standard/pull/439) **[Linking related processes](../schema/reference.md#relatedprocess)** - We have introduced a new `relatedProcesses` field at the release and contract level
+* [#374](https://github.com/open-contracting/standard/issues/374) **[Duration in periods](../schema/reference.md#period)** - We have introduced fields for duration in days, and maximum extent, to the `Period` subschema
 * [#374](https://github.com/open-contracting/standard/issues/374) **[Contract and Award Periods in Tender](../schema/reference.md#tender)** - We have introduced contract period in tender and updated the definition of award period.
 * [#376](https://github.com/open-contracting/standard/issues/376) **[Contract type (supplies, works and services)](../schema/codelists.md#procurement-category)** - We have introduced a procurementCategory field to specify whether contracts are for supplies, works, services, consultancyServices or mixed
 * [#373](https://github.com/open-contracting/standard/issues/373) **[Milestone types](../schema/codelists.md#milestone-type)** - We have introduced the milestoneType property and codelist
@@ -606,9 +607,9 @@ See the changelogs for:
 * [#335](https://github.com/open-contracting/standard/issues/335) [#411](https://github.com/open-contracting/standard/pull/411) **[Core and community extensions](../guidance/map/extensions)** - We have introduced widespread use of extensions throughout the standard. An extension provides fields and data structures that are optional, either because   (a) they are only relevant in particular contexts or contracting processes; or   (b) they represent a 'stretch goal' for most data publishers, and so are not currently suitable for inclusion in the main standard.   We divide these extensions into 'core extensions' which have wide enough relevance, and technical maturity to be included in the main standard documentation (and which are versioned along with the standard documentation), and 'community extensions' which may have less technical maturity, or which might be versioned independently of the main standard.
 * [#259](https://github.com/open-contracting/standard/issues/259) **[Enquiries](https://extensions.open-contracting.org/en/extensions/enquiries/)** - We have introduced a core enquiries extension for providing information on enquiries received during the tender stage.
 * [#342](https://github.com/open-contracting/standard/issues/342) **[Overall contracting process description](../schema/reference.md#release)** - We have introduced a new top-level title and description for the contracting process as a core extension.
-* [#274](https://github.com/open-contracting/standard/issues/274) **[New property of contract: extendsContractID](../schema/reference.md#contract)** - We have introduced a new field 'extendsContractID' to the Contract block to support contract cross-referencing between contracts.
+* [#274](https://github.com/open-contracting/standard/issues/274) **[New property of contract: extendsContractID](../schema/reference.md#contract)** - We have introduced a new field 'extendsContractID' to the `Contract` subschema to support contract cross-referencing between contracts.
 * [#381](https://github.com/open-contracting/standard/issues/381) **[Lots](https://extensions.open-contracting.org/en/extensions/lots/)** - We have introduced a core extension to provide a model for contracting processes which are divided into lots.
-* [#379](https://github.com/open-contracting/standard/issues/379) **[Bids and Bid Statistics](https://extensions.open-contracting.org/en/extensions/bids/)** - We have introduced a core extension which provides a top level Bids section, with BidStatistics and Bid building blocks for detailed information on individual bids. This supersedes the current tender/tenderers section.
+* [#379](https://github.com/open-contracting/standard/issues/379) **[Bids and Bid Statistics](https://extensions.open-contracting.org/en/extensions/bids/)** - We have introduced a core extension which provides a top-level Bids section, with BidStatistics and Bid sub-schemas for detailed information on individual bids. This supersedes the current tender/tenderers section.
 * [#250](https://github.com/open-contracting/standard/issues/250) **[Location extension](https://extensions.open-contracting.org/en/extensions/location/)** - We have moved the location extensions to become a core extension
 * [#33](https://github.com/open-contracting/standard/issues/33) **[Participation fees (bid document and submission costs)](https://extensions.open-contracting.org/en/extensions/participation_fee/)** - We have introduced a core extension for declaring the participation fees related to a contracting process.
 * [#249](https://github.com/open-contracting/standard/issues/249) **[Extend contract with a supplier array](https://extensions.open-contracting.org/en/extensions/contract_suppliers/)** - We have introduced a core extension to allow inclusion of supplier information at the contract level.
@@ -616,7 +617,7 @@ See the changelogs for:
 ### Deprecated
 
 * [#355](https://github.com/open-contracting/standard/issues/355) **[Deprecating milestone documents](../schema/reference.md#milestone)** - We have deprecated milestone documents from core, and added a milestone documents extension for those who wish to continue to use documents at the milestone level.
-* [#368](https://github.com/open-contracting/standard/issues/368) **[Updates to organization handling in OCDS](../schema/reference.md#parties)** - We have deprecated use of the full organization block at points other than the parties array.
+* [#368](https://github.com/open-contracting/standard/issues/368) **[Updates to organization handling in OCDS](../schema/reference.md#parties)** - We have deprecated use of the full `Organization` subschema at points other than the parties array.
 * [#372](https://github.com/open-contracting/standard/issues/372) **[Updates to transactions terminology](../schema/reference.md#transaction)** - receiverOrganization, providerOrganization and amount properties have been deprecated in favor or other terms.
 
 ## [1.0.3] - 2017-07-31

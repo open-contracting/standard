@@ -8,28 +8,25 @@ Milestones can be included within the planning, tender, contract and contract im
 
 ## Planning
 
-The planning milestones block is used for two types of milestones:
+Planning milestones describe:
  * Key events in the planning process, for example, the preparation of an environmental impact assessment, the approval to proceed with a project, or the date of a public consultation. 
  * Anticipated milestones during the contract implementation stage, for example, the date by which goods delivery of the goods is required.
 
-If during the planning process you have information about tender process milestones, then you
-populate the tender milestones block instead.
+If during the planning process you have information about tender process milestones, then you ought to publish it as a tender milestone.
 
 ## Tender
 
-The tender milestones block is used to describe two types of milestone:
-  * Key dates in the tender and award stages which are not covered by other fields, for example, the date by which the buyer or procuring entity will respond to enquiries.
+Tender milestones describe:
+  * Key dates in the tender and award stages which are not covered by other fields, for example, the date by which procuring entity will respond to enquiries.
   * Anticipated milestones during the contract implementation stage, for example, the date by which goods need to be delivered.
 
 ## Contract
 
-The contract milestones block is used to describe:
-  * Events related to the signing of the contract, for example, the date of commercial close in a PPP contract.
+Contract milestones describe events related to the signing of the contract, for example, the date of commercial close in a PPP contract.
  
 ## Contract Implementation
 
-The contract implementation milestones block is used to describe:
-  * Any events related to the delivery of the contract, for example, the agreed date by which goods will be delivered.
+Contract implementation milestones describe events related to the delivery of the contract, for example, the agreed date by which goods will be delivered.
 
 The nature of the milestone is indicated by the [milestone type codelist](../../schema/codelists.md#milestone-type), for example, to distinguish between milestones that relate to bid submission and others that relate to contract implementation.
 
