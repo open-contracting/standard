@@ -70,9 +70,9 @@ OCDS models the first and second stages of framework agreement procedures as sep
 The 'framework' code is only used to relate second-stage contracting processes to their first-stage contracting process, never to other second-stage contracting processes.
 ```
 
-The following diagram shows how OCDS models a framework agreement procedure with two second stages: one with competition and one without competition. Grey blocks represent unused sections of the OCDS schema.
+The following diagram shows how OCDS models a framework agreement procedure with two second stages: one with competition and one without competition.
 
-![OCDS framework agreement model](../../_static/png/framework_agreement/model.png)
+![OCDS framework agreement model](../../_static/svg/framework_agreement_diagram.svg)
 
 ### Extensions
 
@@ -225,7 +225,7 @@ The National Procurement Agency in Chile (Chile Compra) wants to establish a fra
 
 #### Invitation to participate in the first stage of a framework agreement procedure
 
-Chile Compra publishes a tender notice inviting suppliers to participate in the framework agreement. The tender notice specifies that multiple suppliers can join the framework agreement. The framework agreement is open, since all the framework agreements in Chile involve the setting up of a dynamic purchasing system. The framework agreement is for multiple buyers, since the tender notice specifies two contracting authorities. The tender notice describes two lots.
+Chile Compra publishes a tender notice inviting suppliers to participate in the framework agreement. The tender notice specifies that multiple suppliers can join the framework agreement. The framework agreement is open, since all the framework agreements in Chile involve the setting up of a dynamic purchasing system. The framework agreement is for multiple buyers, since the tender notice specifies two buyers. The tender notice describes two lots.
 
 The notice is modelled as an OCDS release with a `tag` of 'tender' and the following properties:
 
