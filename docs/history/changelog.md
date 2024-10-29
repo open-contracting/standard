@@ -339,6 +339,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
 * [#1208](https://github.com/open-contracting/standard/pull/1208) Update guidance with new field definitions.
 * [#1216](https://github.com/open-contracting/standard/pull/1216) Update definitions of contracting process, record, and ocid. Introduce definition of planning process.
 * [#1618](https://github.com/open-contracting/standard/pull/1618) Move governance policies from Google Docs, updating references for OCDS 1.1.5 and OCDS 1.2.0, and removing references to GitHub issues.
+* [#1531](https://github.com/open-contracting/standard/pull/1531) Update wording on change history. Add guidance on change history options. Add worked example on no change history.
 * Records
   * [#1307](https://github.com/open-contracting/standard/pull/1307) Clarify uniqueness rules for records.
   * [#1659](https://github.com/open-contracting/standard/pull/1659) Add `Record` definition schema table to record reference.

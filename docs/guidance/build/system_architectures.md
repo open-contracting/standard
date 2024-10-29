@@ -28,7 +28,7 @@ The conversion module produces OCDS releases and/or records wrapped in packages.
 
 This approach does not need extra storage space. But it might not be possible to provide persistent URLs for releases, nor a change history for each process.
 
-The [easy releases guidance](easy_releases) explains how to achieve a conformant OCDS implementation where it is not possible to provide a full change history.
+The [change history implementation options guidance](change_history_options) explains how to achieve a conformant OCDS implementation where it is not possible to provide a full change history.
 
 Bulk downloads can be provided as part of the API. Live queries can stress the data sources if they need to scan large portions of data.
 
