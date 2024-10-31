@@ -13,14 +13,14 @@
     },
     "id": {
       "title": "Release ID",
-      "description": "The identifier of the individual release or compiled release. For an individual release, the release ID must be unique within the scope of the (contracting or planning) process, for a given version of OCDS. In other words, a publisher may publish datasets for different versions of OCDS, and repeat releases within each dataset. The release ID must not contain the number sign (#). For a compiled release, the release ID should be the `ocid` and the maximum `date` among the individual releases used to create the compiled release, separated by a hyphen: {ocid}-{date}.",
+      "description": "The identifier of the individual release or compiled release. For an individual release, the release ID must be unique within the scope of the (contracting or planning) process, for a given version of OCDS. In other words, a publisher may publish datasets for different versions of OCDS, and repeat releases within each dataset. The release ID must not contain the number sign (#).",
       "type": "string",
       "minLength": 1,
       "omitWhenMerged": true
     },
     "date": {
       "title": "Release Date",
-      "description": "The date on which the information contained in the release was first recorded in, or published by, any system. For a compiled release, the maximum `date` among the individual releases used to create the compiled release. The release date should be unique within the scope of the (contracting or planning) process, for a given version of OCDS.",
+      "description": "The date on which the information contained in the release was first recorded in, or published by, any system. The release date should be unique within the scope of the (contracting or planning) process, for a given version of OCDS.",
       "type": "string",
       "format": "date-time",
       "omitWhenMerged": true
