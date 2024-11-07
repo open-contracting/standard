@@ -17,7 +17,7 @@ If during the planning process you have information about tender process milesto
 ## Tender
 
 Tender milestones describe:
-  * Key dates in the tender and award stages which are not covered by other fields, for example, the date by which procuring entity will respond to enquiries.
+  * Key dates in the tender and award stages which are not covered by other fields, for example, the date by which the procuring entity will respond to enquiries.
   * Anticipated milestones during the contract implementation stage, for example, the date by which goods need to be delivered.
 
 ## Contract

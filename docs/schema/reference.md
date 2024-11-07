@@ -274,7 +274,7 @@ The `contracts` array is used to provide details of contracts that have been ent
 
 ### Implementation
 
-Implementation information can be updated over the course of a contract. The `implementation` array belongs nested within the contract it relates to. The `Implementation` subschema includes the following fields:
+Implementation information can be updated over the course of a contract. The `implementation` object belongs nested within the contract it relates to. It includes the following fields:
 
 ````{admonition} Example
 :class: hint
@@ -387,7 +387,7 @@ See the [parties](#parties) section.
 
 An organization reference consists of two main components:
 
-* An `id` used to cross-reference the entry in the [parties](#parties) array that contains full information on this organization;
+* An `id` used to cross-reference the object in the [parties](#parties) array that contains full information on this organization;
 * A `name` field that repeats the name given in the [parties](#parties) array, provided for the convenience of users viewing the data, and to support detection of mistakes in cross-referencing.
 
 ````{admonition} Example
@@ -535,7 +535,7 @@ In the event that a date field is not bound to a specific time at all, publisher
 
 ### Item
 
-The `Item` subschema is used to describe the line-items associated with a tender, award or contract.
+The `Item` subschema is used to represent the line-items associated with a tender, award or contract.
 
 ````{admonition} Example
 :class: hint

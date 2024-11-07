@@ -155,7 +155,7 @@ The related process scheme describes the kind of identifier used to cross-refere
 ```{versionadded} 1.1
 ```
 
-The `Milestone` subschema can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process. The milestone type codelist is used to indicate the nature of each milestone.
+The [`Milestone` subschema](reference.md#milestone) can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process. The milestone type codelist is used to indicate the nature of each milestone.
 
 ```{csv-table-no-translate}
 :header-rows: 1
