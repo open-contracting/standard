@@ -56,13 +56,7 @@ For example, a publisher announcing the signing of a contract with a 'contract' 
 
 ### Release
 
-All new information about a contracting (or planning) process is described within a release.
-
-A release is defined as:
-
-```{jsoninclude-quote} ../../build/current_lang/release-schema.json
-:jsonpointer: /description
-```
+A release describes a single contracting or planning process at a particular point in time. One process may be described by many releases. A release may repeat or update the information provided in previous releases about the process.
 
 ````{admonition} Example
 :class: hint
