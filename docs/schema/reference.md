@@ -70,7 +70,7 @@ A release describes a single contracting or planning process at a particular poi
 Each release has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
-:collapse: planning,tender,awards,contracts,parties,buyer,relatedProcesses
+:collapse: publisher,planning,tender,awards,contracts,parties,buyer,relatedProcesses,links
 ```
 
 ```{extensionlist} The following extensions are available for release
@@ -110,7 +110,7 @@ Each `Organization` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Organization
-:collapse: identifier,additionalIdentifiers,address,contactPoint
+:collapse: identifier,additionalIdentifiers,address,contactPoint,details/classifications
 ```
 
 ```{extensionlist} The following extensions are available for organizations
@@ -209,7 +209,7 @@ The `planning/project` section has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Project
-:collapse: totalValue,additionalClassifications,locations
+:collapse: totalValue,additionalClassifications,locations,sector
 ```
 
 ### Tender
@@ -236,7 +236,7 @@ Each `tender` section has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Tender
-:collapse: items,tenderPeriod,enquiryPeriod,awardPeriod,contractPeriod,tenderers,documents,milestones,amendment,amendments,minValue,value,procuringEntity
+:collapse: items,tenderPeriod,enquiryPeriod,awardPeriod,contractPeriod,tenderers,documents,milestones,amendment,amendments,minValue,value,procuringEntity,identifiers,maximumValue,deliveryLocations,deliveryAddresses,submissionTerms,exclusionGrounds,selectionCriteria
 ```
 
 ```{extensionlist} The following extensions are available for the tender section
@@ -273,7 +273,7 @@ Each `Award` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Award
-:collapse: items,value,suppliers,contractPeriod,documents,amendment,amendments
+:collapse: items,value,suppliers,contractPeriod,documents,amendment,amendments,maximumValue,estimatedValue
 ```
 
 ```{extensionlist} The following extensions are available for award
@@ -306,7 +306,7 @@ Each `Contract` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Contract
-:collapse: period,value,items,documents,implementation,relatedProcesses,milestones,amendment,amendments
+:collapse: period,value,items,documents,implementation,relatedProcesses,milestones,amendment,amendments,identifiers,maximumValue,estimatedValue
 ```
 
 ```{extensionlist} The following extensions are available for contracts
@@ -655,7 +655,7 @@ Each `Item` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Item
-:collapse: classification,additionalClassifications,unit
+:collapse: classification,additionalClassifications,unit,immediateContainer,deliveryLocations,deliveryAddresses
 ```
 
 ```{extensionlist} These are extensions related to Items.
@@ -706,6 +706,7 @@ Each `ImmediateContainer` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Item/properties/immediateContainer
+:collapse: capacity
 ```
 
 ### Classification
@@ -898,6 +899,7 @@ Each `Quantity` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Quantity
+:collapse: unit
 ```
 
 ### SimpleIdentifier
