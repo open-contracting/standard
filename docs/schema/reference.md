@@ -516,9 +516,8 @@ An `Address` is defined as:
 :class: hint
 
 ```{jsoninclude} ../examples/release_schema_reference/release_package.json
-:jsonpointer: /releases/0/parties/0
-:expand: address
-:title: party
+:jsonpointer: /releases/0/parties/0/address
+:title: address
 ```
 ````
 
@@ -539,9 +538,8 @@ A `ContactPoint` is defined as:
 :class: hint
 
 ```{jsoninclude} ../examples/release_schema_reference/release_package.json
-:jsonpointer: /releases/0/parties/0
-:expand: contactPoint
-:title: party
+:jsonpointer: /releases/0/parties/0/contactPoint
+:title: contactPoint
 ```
 ````
 
@@ -675,8 +673,7 @@ A `Unit` is defined as:
 :class: hint
 
 ```{jsoninclude} ../examples/release_schema_reference/release_package.json
-:jsonpointer: /releases/0/tender/items/0
-:expand: unit
+:jsonpointer: /releases/0/tender/items/0/unit
 :title: unit
 ```
 ````
@@ -699,8 +696,8 @@ An `ImmediateContainer` is defined as:
 :class: hint
 
 ```{jsoninclude} ../examples/release_schema_reference/release_package.json
-:jsonpointer: /releases/0/tender/items/1
-:expand: immediateContainer
+:jsonpointer: /releases/0/tender/items/1/immediateContainer
+:expand: capacity
 :title: immediateContainer
 ```
 ````
