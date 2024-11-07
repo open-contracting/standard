@@ -18,10 +18,10 @@ Guidance: [Updates and deletions](../guidance/build/merging)
 
 ### Discarded fields
 
-In the release schema, `"omitWhenMerged": true` is declared on fields that must be discarded during merging. These are presently: `id`, `date` `publisher` and `tag`.
+In the release schema, `"omitWhenMerged": true` is declared on fields that must be discarded during merging. These are presently: `id`, `date`, `publisher` and `tag`.
 
 * For a compiled release:
-  * Both the fields and their values are discarded, because they are metadata about the individual releases; the compiled release replaces these with its own metadata.
+  * Both the fields and their values are discarded, because they are metadata about the individual releases. The compiled release replaces these with its own metadata, as described below.
 * For a versioned release:
   * The fields are discarded, but their values are moved, as described below, in order to indicate from which releases each other field value is taken.
 
@@ -90,8 +90,8 @@ To create a compiled or versioned release, you must:
 1. For a compiled release:
   1. Set `date` to the maximum `date` among the releases.
   1. Set `id` to `{ocid}-{date}`.
-  1. Set `tag` to include all tag values from the individual releases together with "compiled".
-  1. If using set `publisher` to the publisher of the compiled release.
+  1. Set `tag` to all the unique tags from all the releases, plus the 'compiled' tag.
+  1. Optionally, set `publisher` to the publisher of the compiled release.
 1. Merge each release (**input**), in order, into the JSON object (**output**), as follows:
 
 #### Object values

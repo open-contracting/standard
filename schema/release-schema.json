@@ -33,7 +33,7 @@
     },
     "tag": {
       "title": "Release Tag",
-      "description": "A tag labeling the release, using the the open [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. Tags distinguish, for example, planning and contracting processes and the stages of contracting processes. Codes outside the releaseTag codelist might indicate, for example, the notice or form to which the release corresponds, or the event that triggered the publication of the release. Planning processes must not use the 'tender' code, even if they use `tender` fields. For a compiled release all the tags used in the individual releases for the contracting process should be included together with the 'compiled' tag.",
+      "description": "For a release, a tag labeling the release, using the open [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. For a compiled release, all unique tags from all releases for this contracting or planning process, plus the 'compiled' tag. Tags distinguish, for example, planning and contracting processes and the stages of contracting processes. Codes outside the releaseTag codelist might indicate, for example, the notice or form to which the release corresponds, or the event that triggered the publication of the release. Planning processes must not use the 'tender' code, even if they use `tender` fields.",
       "type": "array",
       "items": {
         "type": "string"
