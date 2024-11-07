@@ -38,7 +38,7 @@ Each time a new release is published it is added to the index, the compiled rele
 
 ![A contracting (or planning) process is described by many releases, which are aggregated into a single record](../_static/png/change_history_process_record.png)
 
-Records and releases each contain several fields which can be used in different sections. The OCDS schema sets out the fields that ought to be included in each section (where applicable), aiming to reuse simple structures to represent information. For example, a release may contain information about items being procured. OCDS’ schema sets out a standard subschema for items across releases, including the name of the item, a description, each item’s value, and the currency used.
+Some concepts are common to several stages of the contracting (or planning) process. The OCDS schema provides reusable subschemas to represent common concepts. For example, the [`Item` subschema](../schema/reference.md#item) represents the items to be procured at the tender stage, awarded at the award stage and contracted at the contract stage. It contains fields applicable to any of these stages, such as an item's title, description and value.
 
 When you publish OCDS releases and records, you are encouraged to:
 
