@@ -27,15 +27,6 @@ In the release schema, `"omitWhenMerged": true` is declared on fields that must 
 
 If `omitWhenMerged` is set to `false`, ignore it.
 
-```{note}
-The compiled release uses the same schema as the release schema, which means that the `id`, `date` and `tag` fields are required in a compiled release. 
-
-These fields must be set with values that reflect the compiled release, like in the [reference implementation](#reference-implementation) of the merge routine:
- * `id` should be set to `{ocid}-{date}`
- * `date` should be set to the maximum `date` among the individual releases used to create the compiled release.
- * `tag` should accumulate all `tag` values from the individual releases together with the tag "compiled".
-```
-
 ### Versioned values
 
 To convert a field's value in a release to a **versioned value**, you must:
