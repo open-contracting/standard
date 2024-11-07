@@ -79,6 +79,14 @@ The only purpose of the OCID prefix is to turn *locally* unique identifiers into
 
 To ensure that your `ocid`s do not conflict with those of another publisher, you must [register an OCID prefix](../guidance/build.md#register-an-ocid-prefix).
 
+```{admonition} Who can register an OCID prefix?
+:class: hint
+
+In principle, anyone can register an OCID prefix. In practice, it is primarily governments and public institutions, as well as businesses and civil society organizations.
+
+There can be multiple government publishers in a jurisdiction. For example, if the national government centralizes data about contracting processes, then it might be the only government to publish in that jurisdiction, using a single OCID prefix. On the other hand, if subnational governments have the authority to procure, control procurement systems, and/or collect procurement data, then they might also publish, using their own OCID prefixes.
+```
+
 Only the publisher that registered an OCID prefix is authorized to assign new `ocid`s with that OCID prefix, or to delegate this responsibility.
 
 ```{note}

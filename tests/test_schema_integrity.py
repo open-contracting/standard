@@ -10,7 +10,7 @@ import jsonref
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
-from manage import get_metaschema, get_versioned_release_schema  # noqa isort:skip
+from manage import get_metaschema, get_versioned_release_schema
 
 
 def test_versioned_release_schema_is_in_sync():

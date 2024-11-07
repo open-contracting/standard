@@ -138,7 +138,7 @@ In either case:
 * Use `limit=NUMBER`, to limit the number of results returned on each page.
 * Include the total number of results across all pages.
 
-In addition to performance reasons, the seek method is preferred to the offset method when results are ordered in reverse chronology, because:
+In addition to performance reasons, the seek method is preferred to the offset method when results are ordered in reverse chronology, because, with the offset method:
 
 * A given page won't return the same results over time. `page=1` will return different results today, next week, and next year.
 * Users can receive duplicate results while paginating. For example, if a new release is published to page 1 while users are paginating, then the result at the bottom of each page will be moved to the top of the following page.
