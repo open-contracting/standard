@@ -2,7 +2,7 @@
 
 {bdg-link-secondary}`Open<../../codelists/#codelists>`
 
-![org-id.guide](../_static/png/org-id_logo.png)
+![org-id.guide](../../_static/png/org-id_logo.png)
 
 The Organization Identifier Scheme uses the codes from [org-id.guide](http://org-id.guide). The latest version of the codelist can be [downloaded](http://org-id.guide/download.csv) or [browsed](http://org-id.guide) from its website.
 
