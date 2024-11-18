@@ -16,355 +16,58 @@ The release schema, in [JSON Schema](../../build/current_lang/release-schema.jso
 
 Codes are case-sensitive, and are generally provided as English language camelCase. Codes must not be translated, though the OCDS team will work with publishers to translate code titles and definitions.
 
-## Open Codelists
+## All Codelists
 
-### Release Tag
+### [Award Criteria](codelists/awardCriteria.md)
 
-A contracting (or planning) process can result in a number of releases of information over time. A release must be tagged to indicate whether it is about a planning process or a contracting process and, if it is about the latter, to indicate the stage of the contracting process to which it relates.
+### [Award Final Status](codelists/awardFinalStatus.md)
 
-Additional codes may be used to label releases, based on user needs: for example, to indicate the notice or form to which a release corresponds.
+### [Award Status](codelists/awardStatus.md)
 
-```{versionchanged} 1.1
-Added the 'planningUpdate' code.
-```
+### [Classification Scheme](codelists/classificationScheme.md)
 
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/releaseTag.csv
-```
+### [Contract Final Status](codelists/contractFinalStatus.md)
 
-### Organization Role
+### [Contract Status](codelists/contractStatus.md)
 
-```{versionadded} 1.1
-```
+### [Country](codelists/country.md)
 
-The organizations participating in a contracting (or planning) process are listed in the [parties section](reference.md#parties). In a given process, a single organization can have one or more roles.
+### [Currency](codelists/currency.md)
 
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/partyRole.csv
-```
+### [Document Type](codelists/documentType.md)
 
-### Classification Scheme
+### [Extended Procurement Category](codelists/extendedProcurementCategory.md)
 
-The `classificationScheme` codelist is referenced by the `scheme` field of the `Classification` object, which can be used in multiple contexts. You can find the codes relevant to a given context by filtering the codelist by its `Category` column.
+### [Initiation Type](codelists/initiationType.md)
 
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/classificationScheme.csv
-```
+### [Language](codelists/language.md)
 
-### Unit Classification Scheme
+### [Link Relation Type](codelists/linkRelationType.md)
 
-```{versionadded} 1.1
-```
+### [Media Type](codelists/mediaType.md)
 
-Item quantities can be provided using an established codelist for units of measurement. Codelists might provide human-readable descriptions of units, or symbols for use in input and display interfaces.
+### [Method](codelists/method.md)
 
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/unitClassificationScheme.csv
-```
+### [Milestone Status](codelists/milestoneStatus.md)
 
-### Organization Identifier Scheme
+### [Milestone Type](codelists/milestoneType.md)
 
-![org-id.guide](../_static/png/org-id_logo.png)
+### [Organization Identifier Scheme](codelists/organizationIdentifierScheme.md)
 
-The Organization Identifier Scheme uses the codes from [org-id.guide](http://org-id.guide). The latest version of the codelist can be [downloaded](http://org-id.guide/download.csv) or [browsed](http://org-id.guide) from its website.
+### [Organization Role](codelists/partyRole.md)
 
-To add new codes to the codelist, contact the [Data Support Team](../../support/index).
+### [Party Scale](codelists/partyScale.md)
 
-```{versionchanged} 1.1
-The `organizationIdentifierRegistrationAgency_iati.csv` file was removed. This list was formerly maintained by the International Aid Transparency Initiative.
-```
+### [Procurement Category](codelists/procurementCategory.md)
 
-### Document Type
+### [Release Tag](codelists/releaseTag.md)
 
-The following list describes documents and documentation recommended for publication as part of an open contracting implementation. The codelist indicates the section of an OCDS release they are most likely to be applicable within. 
+### [Related Process](codelists/relatedProcess.md)
 
-The code descriptions are necessarily broad, to cover their usage in a range of contracting (or planning) processes, including for goods, services and works, and in other contexts, such as public private partnerships, infrastructure or concession contracts. 
+### [Related Process](codelists/relatedProcessScheme.md)
 
-Publishers must map their existing document codes to this list, where possible. If using this list within a user interface, publishers can re-write the codelist titles and descriptions appropriately for the context they are being used in. 
+### [Submission Method](codelists/submissionMethod.md)
 
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/documentType.csv
-```
+### [Tender Final Status](codelists/tenderFinalStatus.md)
 
-### Award Criteria
-
-The award criteria codelist describes the basis on which contract awards will be made. 
-
-```{versionchanged} 1.1
-Added all new codes. Deprecated all old codes, which were undefined.
-```
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/awardCriteria.csv
-```
-
-### Submission Method
-
-```{deprecated} 1.2
-```
-
-The submission method codelist is used to identify the mechanism through which a submission can be made. 
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/submissionMethod.csv
-```
-
-### Related Process
-
-```{versionadded} 1.1
-```
-
-```{versionchanged} 1.2
-Added 'parent'. Deprecated 'subContract', 'replacementProcess' and 'renewalProcess'.
-```
-
-```{field-description} ../../build/current_lang/release-schema.json /definitions/RelatedProcess
-```
-
-```{seealso}
-* [Map: Contracting processes and planning processes](../guidance/map/contracting_planning_processes.md)
-* [Map: Framework agreements](../guidance/map/framework_agreements.md)
-```
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/relatedProcess.csv
-```
-
-### Related Process Scheme
-
-```{versionadded} 1.1
-```
-
-The related process scheme describes the kind of identifier used to cross-reference another process. 
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/relatedProcessScheme.csv
-```
-
-### Milestone Type
-
-```{versionadded} 1.1
-```
-
-The milestone block can be used to represent a wide variety of events in the lifetime of a contracting (or planning) process. The milestone type codelist is used to indicate the nature of each milestone.
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/milestoneType.csv
-```
-
-### Extended Procurement Category
-
-```{versionadded} 1.1
-```
-
-The extended procurement category codelist is used to provide additional detail about the focus of a contracting (or planning) process. 
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/extendedProcurementCategory.csv
-```
-
-### Language
-
-```{versionadded} 1.2
-```
-
-The language codelist is used to provide the default language used in text fields and the language of linked documents, using two-letter codes from [ISO639-1](https://id.loc.gov/vocabulary/iso639-1.html).
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/language.csv
-```
-
-### Media Type
-
-```{versionadded} 1.2
-```
-
-The media type codelist is based on the [IANA Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) list. The media type codelist adds an exceptional code for printed documents ('offline/print'), and omits any media type that is marked as deprecated or obsolete by IANA.
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/mediaType.csv
-```
-
-### Link Relation Type
-
-```{versionadded} 1.2
-```
-
-The link relation type codelist is based on a subset of the [IANA Link Relation Types](https://www.iana.org/assignments/link-relations/link-relations.xhtml) list.
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/linkRelationType.csv
-```
-
-## Closed Codelists 
-
-### Country
-
-```{versionadded} 1.2
-```
-
-The country codelist is used to provide the country component of an address, using uppercase two-letter codes from [ISO3166-1](https://www.iso.org/iso-3166-country-codes.html). The country codelist adds a user-assigned code for Kosovo ('XK').
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/country.csv
-```
-
-### Initiation Type
-
-```{deprecated} 1.2
-```
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/initiationType.csv
-```
-
-### Tender Status
-
-```{deprecated} 1.2
-```
-
-```{versionchanged} 1.1
-Added the 'planning' and 'withdrawn' codes.
-```
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/tenderStatus.csv
-```
-
-### Method
-
-The procurement method describes which organizations can submit a bid. The method codelist draws upon [the definitions of open, selective and limited provided by the WTO Government Procurement Agreement](https://www.wto.org/english/docs_e/legal_e/rev-gpr-94_01_e.htm), and adds an additional 'direct' code for awards without competition.
-
-```{versionchanged} 1.1
-Added the 'direct' code.
-```
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/method.csv
-```
-
-### Procurement Category
-
-```{versionadded} 1.1
-```
-
-The procurement category codelist is used to indicate the **primary** focus of a contracting (or planning) process. Where a contracting (or planning) process covers more than one of the options below, publishers should use the `additionalProcurementCategories` field with an array of entries from the open [extendedProcurementCategory](#extended-procurement-category) codelist.
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/procurementCategory.csv
-```
-
-### Award Status
-
-```{deprecated} 1.2
-```
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/awardStatus.csv
-```
-
-### Contract Status
-
-```{deprecated} 1.2
-```
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/contractStatus.csv
-```
-
-### Milestone Status
-
-```{versionchanged} 1.1
-Added the 'scheduled' code.
-```
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/milestoneStatus.csv
-```
-
-### Currency
-
-```{versionadded} 1.1
-```
-
-The currency for each amount must be specified using the uppercase 3-letter currency code from [ISO4217](https://www.iso.org/iso-4217-currency-codes.html).
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/currency.csv
-```
-
-### Party Scale
-
-```{versionadded} 1.2
-```
-
-The party scale codelist is used to indicate the size or scale of an organization, in particular commercial enterprises or economic operators.
-
-The codes in the codelist do not have precise definitions. Instead, they defer to local laws and regulations, for example:
-
-* [OECD: Small and Medium-Sized Enterprises (SMEs) definition](https://stats.oecd.org/glossary/detail.asp?ID=3123)
-* [European Commission: What is an SME?](https://ec.europa.eu/growth/smes/sme-definition_en)
-
-For small and medium-sized enterprises, if you can distinguish between the two sizes, use the 'small' and 'medium' codes. Otherwise, use the 'sme' code.
-
-For self-employed individuals and sole traders, if you can distinguish them from micro enterprises, use the 'selfEmployed' code. Otherwise, use the 'micro' code.
-
-For enterprises without employees, use the 'micro' code.
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/partyScale.csv
-```
-
-### Tender Final Status
-
-```{versionadded} 1.2
-```
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/tenderFinalStatus.csv
-```
-
-### Award Final Status
-
-```{versionadded} 1.2
-```
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/awardFinalStatus.csv
-```
-
-### Contract Final Status
-
-```{versionadded} 1.2
-```
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/contractFinalStatus.csv
-```
+### [Tender Status](codelists/tenderStatus.md)
