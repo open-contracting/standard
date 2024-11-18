@@ -16,7 +16,7 @@ This page presents the release schema in tables, with additional information in 
 
 ## Contracting and planning processes
 
-OCDS recognizes two types of processes: contracting processes and planning processes. In OCDS, a given process is uniquely identified by an [open contracting process identifier](identifiers.md#open-contracting-process-identifier-ocid) (`ocid`).
+OCDS recognizes two types of processes: contracting processes and planning processes.
 
 OCDS defines a contracting process as:
 
@@ -33,6 +33,16 @@ OCDS defines a planning process as:
 > All the actions aimed at planning one or more contracting processes. This covers, for example, need identification, budget planning, and market research.
 >
 > Planning processes are often less structured than contracting processes, so one or more planning processes may lead to one or more contracting processes.
+
+Planning and contracting processes should be linked using the [`relatedProcesses`](#relatedprocess) array.
+
+```{note}
+We recommend publishing data about planning and contracting processes under separate `ocid`s, following the definitions above. That said, publications that combine planning and contracting data under a single `ocid` remain conformant in OCDS 1.2. A required separation can be considered for OCDS 2.0.
+```
+
+```{note}
+In OCDS 1.2 and earlier, it is not possible to publish all information about multi-stage procedures under a single `ocid`. There is guidance on how to deal with this for [framework agreements](../guidance/map/framework_agreements) and for [pre-qualification and pre-selection](../guidance/map/pre-qualification). If you want to disclose this type of information (including other types of multi-stage procedures, such as competitive dialogues and innovation partnerships), [contact the Data Support Team](../../support/index). The approach to modelling multi-stage procedures in a future, backwards-incompatible version of the standard is under discussion on [GitHub](https://github.com/open-contracting/standard/issues/440).
+```
 
 ## Release handling
 
