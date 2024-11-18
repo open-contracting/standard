@@ -222,7 +222,7 @@ The [Bid statistics and details](https://extensions.open-contracting.org/en/exte
 
 ### Award
 
-The `awards` array is used to announce any awards issued for this tender. There can be multiple awards made, each of which must be detailed using the `Award` subschema. Releases can contain all, or a subset, of these awards. Awards contain information about suppliers. In particular cases there can be multiple suppliers for a single award: for example, in the case of [consortia](../guidance/map/buyers_suppliers.md#consortia-suppliers) and in [framework agreements](../guidance/map/framework_agreements).
+The `awards` array is used to announce any awards issued for this tender. Releases can contain all, or a subset, of these awards. Awards contain information about suppliers. In particular cases there can be multiple suppliers for a single award: for example, in the case of [consortia](../guidance/map/buyers_suppliers.md#consortia-suppliers) and in [framework agreements](../guidance/map/framework_agreements).
 
 ````{admonition} Example
 :class: hint
@@ -232,6 +232,8 @@ The `awards` array is used to announce any awards issued for this tender. There 
 :title: award
 ```
 ````
+
+The items in the `awards` array are `Award` objects. Each `Award` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Award
@@ -248,7 +250,7 @@ The `awards` array is used to announce any awards issued for this tender. There 
 
 ### Contract
 
-The `contracts` array is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'. Each contract is detailed using the `Contract` subschema.
+The `contracts` array is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'.
 
 ````{admonition} Example
 :class: hint
@@ -258,6 +260,8 @@ The `contracts` array is used to provide details of contracts that have been ent
 :title: contract
 ```
 ````
+
+The items in the `contracts` array are `Contract` objects. Each `Contract` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Contract
@@ -344,7 +348,7 @@ See [document](#document) reference below.
 
 A release may amend values from a previous release. Whilst the release & record model of OCDS offers the opportunity to keep a full versioned history of changes, in many cases it is important for changes to a tender, award or contract to be explicitly declared.
 
-The `amendments` array in a `tender`, `Award` or `Contract` object provides the ability to detail the amendments that have taken place with dates, rationale and free-text descriptions of the change, as well as to point to the releases that contain information from before and after the amendment. Each amendment is detailed using the `Amendment` subschema.
+The `amendments` array in a `tender`, `Award` or `Contract` object provides the ability to detail the amendments that have taken place with dates, rationale and free-text descriptions of the change, as well as to point to the releases that contain information from before and after the amendment. 
 
 ````{admonition} Example
 :class: hint
@@ -354,6 +358,9 @@ The `amendments` array in a `tender`, `Award` or `Contract` object provides the 
 :title: amendments
 ```
 ````
+
+The items in the `amendments` array are `Amendment` objects. Each `Amendment` has the following fields:
+
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Amendment
