@@ -16,7 +16,7 @@ This page presents the release schema in tables, with additional information in 
 
 ## Contracting and planning processes
 
-OCDS recognizes two types of processes: contracting processes and planning processes.
+OCDS recognizes two types of processes: contracting processes and planning processes. In OCDS, a given process is uniquely identified by an [open contracting process identifier](identifiers.md#open-contracting-process-identifier-ocid) (`ocid`).
 
 OCDS defines a contracting process as:
 
