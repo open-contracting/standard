@@ -27,29 +27,39 @@ The schema for the standard by default allows for new fields, and does not fail 
 
 Conformant extensions should respect the following guidelines:
 
-### Core fields
+### Changes to existing fields
 
-* Extensions *should not* delete fields from the core schema
-* Extensions *should not* change the properties of fields from the core schema. If an extension desires to document further usage of a core standard field, it should do so through documentation, rather than changing the field's `description` property.
+A conformant extension *should not*:
 
-### Structure
+* Delete properties or definitions from the OCDS schema.
+* Change the value of keywords in the OCDS schema. If an extension desires to document further usage of a field in the OCDS, it should do so through documentation, rather than changing the field's `description` keyword.
 
-* All definitions and properties *must* set a `title`, `description` and `type`, unless they are originally defined in the core schema or in another extension in which case they *must* set a `$ref` to the existing object
-* If a field's `type` is "array", `items` *must* be set
-* If using `items`, its `type` *must* only include "array", "number" and/or "string"
-* If an array field's `wholeListMerge` and `omitWhenMerged` properties are not used or are set to `false`, the object fields under it *must* have an `id` field and this `id` field *must* be required
+### New fields
+
+A conformant extension *must*:
+
+* Set the `title`, `description` and `type` keywords for all new definitions and properties
+* Set `$ref` for fields that reuse a definition in the OCDS schema.
+* Set the `items` keyword for properties of `type` "array"
+* Not include types other than "array", "number" and/or "string" in the `types` keyword under an `items` keyword.
+* Ensure that any definition referenced in a property of `type` array, whose `wholeListMerge` and `omitWhenMerged` keywords are unset or set to `false`, has a required `id` property.
 
 ### Codelists
 
-* If `openCodelist` is `true`, `enum` *must not* be set
-* If `openCodelist` is `false`, `enum` *must* be set
-* If a field has an `enum`, this *must* be expressed as a csv codelist
-* If a field has an `enum`, `codelist` and `openCodelist` *must* be set
-* If adding codes to an existing codelist the codelist filename *must* append `+` to the start of the core codelist filename, for example `+documentType.csv`
+A conformant extension *must*:
 
-### Field and code names
+* Set `enum` for properties with `openCodelist` set to `false`
+* Not set `enum` for properties with `openCodelist` set to `true`
+* Set `codelist` and `openCodelist` for properties that set `enum`.
+* Document titles and descriptions for `enum` values as a CSV codelist.
+* Append "+" to the start of the codelist filename when adding codes to an existing codelist, e.g. `+documentType.csv`.
 
-* Definition names *must* be UpperCamelCase
-* Field names *must* be lowerCamelCase
-* Definition and field names *must* contain only ASCII alphabetical letters
-* If an acronym is used within a field or definition name, the acronym *should* be all UPPERCASE, unless it is at the beginning of the name, in which case it *should* be all lowercase.
+### Naming conventions
+
+A conformant extension *must*:
+
+* Use lowerCamelCase for property names, e.g. `tenderPeriod`
+* Use UpperCamelCase for definition names, e.g. `RelatedProcess`
+* Use only ASCII alphabetical letters for property and definition names
+
+A conformant extension *should* use UPPERCASE for acronyms within property or definition names, unless the acronym is at the beginning of the name, in which case it *should* be all lowercase.
