@@ -25,16 +25,16 @@ Extensions to the standard may add new objects and fields to accommodate specifi
 
 The schema for the standard by default allows for new fields, and does not fail validation of a file which contains unknown fields.
 
-Conformant extensions should respect the following guidelines:
+### Extension conformance guidelines
 
-### Changes to existing fields
+#### Changes to existing fields
 
 A conformant extension *should not*:
 
 * Delete properties or definitions from the OCDS schema.
 * Change the value of keywords in the OCDS schema. If an extension desires to document further usage of a field in the OCDS, it should do so through documentation, rather than changing the field's `description` keyword.
 
-### New fields
+#### New fields
 
 A conformant extension *must*:
 
@@ -44,7 +44,7 @@ A conformant extension *must*:
 * Not include types other than "array", "number" and/or "string" in the `types` keyword under an `items` keyword.
 * Ensure that any definition referenced in a property of `type` array, whose `wholeListMerge` and `omitWhenMerged` keywords are unset or set to `false`, has a required `id` property.
 
-### Codelists
+#### Codelists
 
 A conformant extension *must*:
 
@@ -54,7 +54,7 @@ A conformant extension *must*:
 * Document titles and descriptions for `enum` values as a CSV codelist.
 * Append "+" to the start of the codelist filename when adding codes to an existing codelist, e.g. `+documentType.csv`.
 
-### Naming conventions
+#### Naming conventions
 
 A conformant extension *must*:
 
