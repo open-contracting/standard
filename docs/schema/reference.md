@@ -56,6 +56,8 @@ For example, a publisher announcing the signing of a contract with a 'contract' 
 
 ### Release
 
+% Align the sentence with the top-level `description` field of the `release-schema.json` file.
+
 A release describes a single contracting or planning process at a particular point in time. One process may be described by many releases. A release may repeat or update the information provided in previous releases about the process.
 
 ````{admonition} Example
