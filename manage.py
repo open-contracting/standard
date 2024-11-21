@@ -436,12 +436,22 @@ def get_strict_schema(schema):
     Return the strict version of the schema.
     """
     # Update schema metadata.
-    release_with_underscores = release.replace(".", "__")
-    schema["id"] = schema["id"].replace(release_with_underscores, f"{release_with_underscores}/strict")
+    identifier = schema["id"].split("/")
+    identifier[-1] = f"strict/{identifier[-1]}"
+    schema["id"] = "/".join(identifier)
     schema["title"] = f'Strict {schema["title"][0].lower()}{schema["title"][1:]}'
     schema["description"] = (
         f'{schema["description"]} The strict schema adds additional validation rules planned for inclusion in OCDS 2.0. Use of the strict schema is a voluntary opportunity to improve data quality.'  # noqa: E501
     )
+
+    # Update references to other schemas.
+    reference_strict_schemas(schema)
+
+    # Reference compiled release schema.
+    if schema["id"].endswith("record-schema.json"):
+        schema["properties"]["compiledRelease"]["$ref"] = schema["properties"]["compiledRelease"]["$ref"].replace(
+            "release-schema.json", "compiled-release-schema.json"
+        )
 
     # Add validation properties
     add_validation_properties(schema)
@@ -482,6 +492,24 @@ def remove_nulls(schema):
             remove_nulls(value)
 
     return schema
+
+
+def reference_strict_schemas(schema):
+    """
+    Update $refs to reference strict schemas.
+    """
+    if isinstance(schema, dict):
+        for key, value in schema.items():
+            if key == "$ref" and value.startswith("https://standard.open-contracting.org/schema/"):
+                reference = value.split("/")
+                reference[-1] = f"strict/{reference[-1]}"
+                schema[key] = "/".join(reference)
+
+            reference_strict_schemas(value)
+
+    if isinstance(schema, list):
+        for subschema in schema:
+            reference_strict_schemas(subschema)
 
 
 @click.group()
