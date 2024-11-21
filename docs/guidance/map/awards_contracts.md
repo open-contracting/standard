@@ -145,36 +145,48 @@ There are no identifiers for the individual supplier/value pairings on the origi
 
 [View the example in Paraguay's API](https://contrataciones.gov.py/datos/api/v3/doc/ocds/record/ocds-03ad3f-340885-1)
 ```
+
 ## Purchase orders
 
 A purchase order is a specific type of contract, an official document issued by a buyer committing to pay a supplier for the supply of specific goods, services or works to be delivered in the future.
 
 Purchase orders can be issued against an existing contract, or if no prior contract exists then acceptance of a purchase order by a supplier forms a contract between buyer and supplier.
 
-Purchase orders that are made against contracts with a definite quantity or value of items ought to not be disclosed in the `contracts` section of OCDS, due to the risk of double counting items on the purchase order and the contract it relates to.
+Purchase orders that are made against contracts with a definite quantity or value of items ought to not be disclosed in the `contracts` section of OCDS, due to the risk of double counting items on the purchase order and the contract it relates to. Instead they ought to be disclosed in the `implementation.transactions` array of the `Contract`.
 
-### Example: Double counting contracts and purchase orders
+### Example: Purchase orders
 
-The UK's Department for Transport awards a £1.2m, 12-month contract to KPMG to provide the Project Management Office function for a project to construct a new highway bypass. The contract specifies that payment will be made quarterly in arrears in four equal amounts. The contract is represented in the `contracts` section of OCDS as follows:
+The Bureau of Parks and Recreation in Portland, Oregon, USA, awards a 2 year contract worth up to $1m to a local contractor to maintain Mt. Tabor Park. This contract specifies the goods, services and works to be provided along with unit prices and estimates of quantities. The contract is represented in the `contracts` section of OCDS as follows:
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../examples/purchase_orders/parent_contract.csv
 ```
 
-Calculating the sum of the contract value in the above example gives the correct result of £1.2m.
+The contract in this scenario is treated as a type of [framework agreement](framework_agreements.md), with the contract value being disclosed in the `maximumValue` field instead of the `value` field.
 
-The Department for Transport issues a purchase order on the final day of each quarter of the contract term, each for £300k.
+Over the course of the contract the Bureau of Parks and Recreation issues 3 purchase orders for:
 
-If purchase orders were also disclosed in the `contracts` section of OCDS, by the end of the contract term, the `contracts` section of OCDS would be populated as follows:
+1. evacuation, removal and disposal of contaminated or unsuitable soil for the value of $300k.
+2. routine maintenance including mowing of the grass, trimming of hedges and shrubs and weeding of flower beds for the value of $500k.
+3. supply and installation of new hedging within the park for the value of $200k.
+
+Each of the purchase orders is disclosed in the `implementation.transactions` section of the `Contract` as follows:
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../examples/purchase_orders/transactions_pos.csv
+```
+
+The sum of the `transactions.value`s gives the final value of the contract, $1m. This is the same value as the initial `maximumValue` of the contract.
+
+By using the `implementation.transactions` section of the `Contract` the purchase orders are linked to the initial contract, and the potential for double counting has been avoided.
+
+If the purchase orders were disclosed in `contracts`, especially if the initial contract had a fixed value, the final value of the contract could be double counted:
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../examples/purchase_orders/contracts_pos.csv
 ```
 
-Calculating the sum of the contract value in the above example gives an incorrect result of £2.4m - double the actual value of the contract.
-
-```{note}
-The approach for modelling purchase orders in OCDS is under discussion ([GitHub issue](https://github.com/open-contracting/standard/issues/897))
-```
+Calculating the sum of the contract value in the above example gives an incorrect result of £2m - double the actual final value of the contract.
