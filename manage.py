@@ -411,22 +411,22 @@ def add_key_based_validation_properties(schema):
             add_key_based_validation_properties(item)
     elif isinstance(schema, dict):
         for key, value in schema.items():
-            if key == 'email':
-                value['format'] = 'email'
-            elif key in ['quantity', 'durationInDays', 'numberOfTenderers']:
-                value['minimum'] = 0
-            elif key in ['Organization', 'OrganizationReference']:
-                value['required'] = ['id', 'name']
-                value['properties']['name']['type'] = "string"
-                value['properties']['id']['type'] = "string"
-            elif key in ['Amendment', 'RelatedProcess']:
-                value['required'] = ['id']
-                value['properties']['id']['type'] = "string"
-            elif key in ['id', 'projectID']:
-                if 'type' in value and 'integer' in value['type']:
-                    value['type'].remove('integer')
-            elif key == 'Unit':
-                value['properties']['value']['$ref'] = '#/definitions/UnitValue'
+            if key == "email":
+                value["format"] = "email"
+            elif key in ["quantity", "durationInDays", "numberOfTenderers"]:
+                value["minimum"] = 0
+            elif key in ["Organization", "OrganizationReference"]:
+                value["required"] = ["id", "name"]
+                value["properties"]["name"]["type"] = "string"
+                value["properties"]["id"]["type"] = "string"
+            elif key in ["Amendment", "RelatedProcess"]:
+                value["required"] = ["id"]
+                value["properties"]["id"]["type"] = "string"
+            elif key in ["id", "projectID"]:
+                if "type" in value and "integer" in value["type"]:
+                    value["type"].remove("integer")
+            elif key == "Unit":
+                value["properties"]["value"]["$ref"] = "#/definitions/UnitValue"
 
             add_key_based_validation_properties(value)
 
@@ -436,11 +436,12 @@ def get_strict_schema(schema):
     Return the strict version of the schema.
     """
     # Update schema metadata.
-    release_with_underscores = release.replace('.', '__')
-    schema['id'] = schema['id'].replace(release_with_underscores,
-                                        f'{release_with_underscores}/strict')
-    schema['title'] = f'Strict {schema["title"][0].lower()}{schema["title"][1:]}'
-    schema['description'] = f'{schema["description"]} The strict schema adds additional validation rules planned for inclusion in OCDS 2.0. Use of the strict schema is a voluntary opportunity to improve data quality.' # noqa: E501
+    release_with_underscores = release.replace(".", "__")
+    schema["id"] = schema["id"].replace(release_with_underscores, f"{release_with_underscores}/strict")
+    schema["title"] = f'Strict {schema["title"][0].lower()}{schema["title"][1:]}'
+    schema["description"] = (
+        f'{schema["description"]} The strict schema adds additional validation rules planned for inclusion in OCDS 2.0. Use of the strict schema is a voluntary opportunity to improve data quality.'  # noqa: E501
+    )
 
     # Add validation properties
     add_validation_properties(schema)
@@ -449,22 +450,38 @@ def get_strict_schema(schema):
     add_key_based_validation_properties(schema)
 
     # Remove null types from package schemas
-    if 'package' in schema['id']:
-        remove_nulls(schema)
+    if "package" in schema["id"]:
+        return remove_nulls(schema)
 
     return schema
 
 
+def get_compiled_release_schema(schema):
+    """
+    Return the compiled release schema.
+    """
+    # Update schema metadata.
+    schema["id"] = schema["id"].replace("release-schema", "compiled-release-schema")
+    schema["title"] = schema["title"].replace("Open Contracting Release", "Open Contracting Compiled Release")
+
+    # Remove null types and enum values.
+    return remove_nulls(schema)
+
+
 def remove_nulls(schema):
     """
-    Remove null types.
+    Remove null types and enum values.
     """
     if isinstance(schema, dict):
         for key, value in schema.items():
-            if key == 'type' and isinstance(value, list) and 'null' in value:
-                value.remove('null')
+            if key == "type" and isinstance(value, list) and "null" in value:
+                value.remove("null")
+            if key == "enum" and isinstance(value, list) and None in value:
+                value.remove(None)
 
             remove_nulls(value)
+
+    return schema
 
 
 @click.group()
@@ -569,11 +586,12 @@ def pre_commit():
     - meta-schema.json
     - dereferenced-release-schema.json
     - versioned-release-validation-schema.json
-    - strict-release-schema.json
-    - strict-release-package.json
-    - strict-record-package.json
-    - strict-dereferenced-release-schema.json
-    - strict-versioned-release-validation-schema.json
+    - strict/release-schema.json
+    - strict/release-package.json
+    - strict/record-package.json
+    - strict/dereferenced-release-schema.json
+    - strict/versioned-release-validation-schema.json
+    - strict/compiled-release-schema.json
     """
     nonmultilingual = {
         # Identifiers.
@@ -595,9 +613,9 @@ def pre_commit():
         "scheme",
     }
 
-    release_schema = json_load('release-schema.json')
+    release_schema = json_load("release-schema.json")
     strict_release_schema = get_strict_schema(deepcopy(release_schema))
-    jsonref_release_schema = json_load('release-schema.json', jsonref, merge_props=True)
+    jsonref_release_schema = json_load("release-schema.json", jsonref, merge_props=True)
 
     counts = defaultdict(list)
     nonstring = ("boolean", "integer", "number", "object")
@@ -650,17 +668,22 @@ def pre_commit():
     json_dump("versioned-release-validation-schema.json", get_versioned_release_schema(release_schema))
 
     # Strict schemas.
-    directory = Path('strict')
-    json_dump(directory / 'release-schema.json', strict_release_schema)
-    json_dump(directory / 'record-schema.json', get_strict_schema(json_load('record-schema.json')))
+    directory = Path("strict")
+    json_dump(directory / "release-schema.json", strict_release_schema)
+    json_dump(directory / "record-schema.json", get_strict_schema(json_load("record-schema.json")))
 
-    strict_dereferenced_release_schema = json_load(directory / 'release-schema.json', jsonref, merge_props=True)
-    json_dump(directory / 'dereferenced-release-schema.json', strict_dereferenced_release_schema)
-    json_dump(directory / 'versioned-release-validation-schema.json',
-              get_versioned_release_schema(strict_release_schema))
+    strict_dereferenced_release_schema = json_load(directory / "release-schema.json", jsonref, merge_props=True)
+    json_dump(directory / "dereferenced-release-schema.json", strict_dereferenced_release_schema)
+    json_dump(
+        directory / "versioned-release-validation-schema.json", get_versioned_release_schema(strict_release_schema)
+    )
 
-    json_dump(directory / 'release-package-schema.json', get_strict_schema(json_load('release-package-schema.json')))
-    json_dump(directory / 'record-package-schema.json', get_strict_schema(json_load('record-package-schema.json')))
+    json_dump(directory / "release-package-schema.json", get_strict_schema(json_load("release-package-schema.json")))
+    json_dump(directory / "record-package-schema.json", get_strict_schema(json_load("record-package-schema.json")))
+    json_dump(
+        directory / "compiled-release-schema.json",
+        remove_nulls(get_compiled_release_schema(json_load(directory / "release-schema.json"))),
+    )
 
 
 @cli.command()
