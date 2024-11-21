@@ -618,7 +618,7 @@ Other unit classification schemes can be used, including those in the [unitClass
 
 ### Milestone
 
-Milestone information can be included in the [planning](#planning), [tender](#tender), [contract](#contract) and [contract implementation](#implementation) objects.
+Milestone information can be included in [planning](#planning), [tender](#tender), [contract](#contract) and [contract implementation](#implementation) objects.
 
 The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` field either updated, or re-confirmed.
 
