@@ -25,7 +25,16 @@ Extensions to the standard may add new objects and fields to accommodate specifi
 
 The schema for the standard by default allows for new fields, and does not fail validation of a file which contains unknown fields.
 
-### Extension conformance guidelines
+### Extension conformance
+
+This section documents the normative rules that OCDS extensions must conform to. It uses the following terms from JSON Schema to describe the rules for extension schemas:
+
+* [property](https://json-schema.org/understanding-json-schema/reference/object#properties): A key-value pair belonging to an object, defined using the `properties` keyword in the schema or subschema for the object, e.g. `ocid` is a property of an OCDS release and it is defined under the top-level `properties` keyword in the OCDS release schema.
+* [definition](https://json-schema.org/understanding-json-schema/structuring#defs): A subschema defined using the top-level `definitions` keyword, e.g. the `Award` definition contains the subschema for an OCDS award and it is defined under the `definitions` keyword in the OCDS release schema. 
+* [keyword](https://json-schema.org/understanding-json-schema/keywords): A key within a JSON Schema used to define the structure of JSON data , e.g. the `type` keyword specifies the data type for a property.
+
+
+
 
 #### Changes to existing fields
 
