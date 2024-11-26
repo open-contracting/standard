@@ -2,7 +2,10 @@
 
 Some schema fields refer to codelists, to limit and standardize the possible values of the fields, in order to promote data interoperability.
 
-Codelists can either be open or closed. **Closed codelists** are intended to be comprehensive; for example, the [currency](#currency) codelist covers all currencies in the world. **Open codelists** are intended to be representative, but not comprehensive.
+Codelists can either be open or closed;
+
+* **Closed codelists** are intended to be comprehensive; for example, the [currency](#currency) codelist covers all currencies in the world.
+* **Open codelists** are intended to be representative, but not comprehensive.
 
 Publishers must use the codes in the codelists, unless no code is appropriate. If no code is appropriate and the codelist is **open**, then a publisher may use a new code outside those in the codelist. If no code is appropriate and the codelist is **closed**, then a publisher is encouraged to create an issue in the [OCDS GitHub repository](https://github.com/open-contracting/standard/issues) about adding a new code.
 
@@ -16,58 +19,89 @@ The release schema, in [JSON Schema](../../build/current_lang/release-schema.jso
 
 Codes are case-sensitive, and are generally provided as English language camelCase. Codes must not be translated, though the OCDS team will work with publishers to translate code titles and definitions.
 
-## All Codelists
+[Contract Status](codelists/contractStatus.md)
 
-### [Award Criteria](codelists/awardCriteria.md)
+[Award Criteria](codelists/awardCriteria.md)
 
-### [Award Final Status](codelists/awardFinalStatus.md)
+[Award Final Status](codelists/awardFinalStatus.md)
 
-### [Award Status](codelists/awardStatus.md)
+[Award Status](codelists/awardStatus.md)
 
-### [Classification Scheme](codelists/classificationScheme.md)
+[Classification Scheme](codelists/classificationScheme.md)
 
-### [Contract Final Status](codelists/contractFinalStatus.md)
+[Contract Final Status](codelists/contractFinalStatus.md)
 
-### [Contract Status](codelists/contractStatus.md)
+[Country](codelists/country.md)
 
-### [Country](codelists/country.md)
+[Currency](codelists/currency.md)
 
-### [Currency](codelists/currency.md)
+[Document Type](codelists/documentType.md)
 
-### [Document Type](codelists/documentType.md)
+[Extended Procurement Category](codelists/extendedProcurementCategory.md)
 
-### [Extended Procurement Category](codelists/extendedProcurementCategory.md)
+[Initiation Type](codelists/initiationType.md)
 
-### [Initiation Type](codelists/initiationType.md)
+[Language](codelists/language.md)
 
-### [Language](codelists/language.md)
+[Link Relation Type](codelists/linkRelationType.md)
 
-### [Link Relation Type](codelists/linkRelationType.md)
+[Media Type](codelists/mediaType.md)
 
-### [Media Type](codelists/mediaType.md)
+[Method](codelists/method.md)
 
-### [Method](codelists/method.md)
+[Milestone Status](codelists/milestoneStatus.md)
 
-### [Milestone Status](codelists/milestoneStatus.md)
+[Milestone Type](codelists/milestoneType.md)
 
-### [Milestone Type](codelists/milestoneType.md)
+[Organization Identifier Scheme](codelists/organizationIdentifierScheme.md)
 
-### [Organization Identifier Scheme](codelists/organizationIdentifierScheme.md)
+[Organization Role](codelists/partyRole.md)
 
-### [Organization Role](codelists/partyRole.md)
+[Party Scale](codelists/partyScale.md)
 
-### [Party Scale](codelists/partyScale.md)
+[Procurement Category](codelists/procurementCategory.md)
 
-### [Procurement Category](codelists/procurementCategory.md)
+[Release Tag](codelists/releaseTag.md)
 
-### [Release Tag](codelists/releaseTag.md)
+[Related Process](codelists/relatedProcess.md)
 
-### [Related Process](codelists/relatedProcess.md)
+[Related Process](codelists/relatedProcessScheme.md)
 
-### [Related Process](codelists/relatedProcessScheme.md)
+[Submission Method](codelists/submissionMethod.md)
 
-### [Submission Method](codelists/submissionMethod.md)
+[Tender Final Status](codelists/tenderFinalStatus.md)
 
-### [Tender Final Status](codelists/tenderFinalStatus.md)
+[Tender Status](codelists/tenderStatus.md)
 
-### [Tender Status](codelists/tenderStatus.md)
+```{toctree}
+:hidden:
+
+codelists/awardCriteria
+codelists/awardFinalStatus
+codelists/awardStatus
+codelists/classificationScheme
+codelists/contractFinalStatus
+codelists/contractStatus
+codelists/country
+codelists/currency
+codelists/documentType
+codelists/extendedProcurementCategory
+codelists/initiationType
+codelists/language
+codelists/linkRelationType
+codelists/mediaType
+codelists/method
+codelists/milestoneStatus
+codelists/milestoneType
+codelists/organizationIdentifierScheme
+codelists/partyRole
+codelists/partyScale
+codelists/procurementCategory
+codelists/relatedProcess
+codelists/relatedProcessScheme
+codelists/releaseTag
+codelists/submissionMethod
+codelists/tenderFinalStatus
+codelists/tenderStatus
+codelists/unitClassificationScheme
+```
