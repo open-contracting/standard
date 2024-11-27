@@ -154,12 +154,18 @@ def setup(app):
 
     branch = os.getenv("GITHUB_REF_NAME", "latest")
 
-    translate([
-        # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.
-        (glob(str(standard_dir / "*-schema.json")), standard_build_dir, schema_domain),
-        # The glob patterns in `babel_ocds_codelist.cfg` should match these.
-        (glob(str(standard_dir / "codelists" / "*.csv")), standard_build_dir / "codelists", codelists_domain),
-    ], localedir, language, headers, version=branch)
+    translate(
+        [
+            # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.
+            (glob(str(standard_dir / "*-schema.json")), standard_build_dir, schema_domain),
+            # The glob patterns in `babel_ocds_codelist.cfg` should match these.
+            (glob(str(standard_dir / "codelists" / "*.csv")), standard_build_dir / "codelists", codelists_domain),
+        ],
+        localedir,
+        language,
+        headers,
+        version=branch,
+    )
 
     with (standard_build_dir / "release-schema.json").open() as f:
         fieldnames, rows = mapping_sheet(json.load(f), infer_required=True)
