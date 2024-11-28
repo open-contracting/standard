@@ -453,11 +453,6 @@ The following building blocks are commonly re-used throughout the standard.
 See the [parties](#parties) section.
 ```
 
-An organization reference consists of two main components:
-
-* An `id` used to cross-reference the entry in the [parties](#parties) section that contains full information on this organization;
-* A `name` field that repeats the name given in the [parties](#parties) section, provided for the convenience of users viewing the data, and to support detection of mistakes in cross-referencing. 
-
 An `OrganizationReference` is defined as:
 
 ```{field-description} ../../build/current_lang/release-schema.json /definitions/OrganizationReference
@@ -474,6 +469,13 @@ An `OrganizationReference` is defined as:
 
 ```{workedexamplelist} The following worked examples are available for organization references
 :tag: organization_reference
+```
+
+Each `OrganizationReference` has the following fields:
+
+```{jsonschema} ../../build/current_lang/release-schema.json
+:pointer: /definitions/OrganizationReference
+:include: id,name
 ```
 
 ### Organization
