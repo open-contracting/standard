@@ -55,7 +55,7 @@ extract_markdown: current_lang.en
 	sphinx-build -nW --keep-going -q -b gettext $(DOCS_DIR) $(POT_DIR)
 
 .PHONY: extract
-extract: extract_theme extract_codelists extract_schema $(EXTRACT_TARGETS) extract_markdown clean_current_lang
+extract: extract_theme extract_codelists extract_schema extract_metaschema $(EXTRACT_TARGETS) extract_markdown clean_current_lang
 
 $(TRANSLATIONS:.%=docs/locale/%): docs/locale/%: FORCE
 	sphinx-intl update -p $(POT_DIR) -d $(LOCALE_DIR) -l "$*"
