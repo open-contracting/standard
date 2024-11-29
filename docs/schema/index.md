@@ -8,10 +8,6 @@ The [release schema reference](reference) provides guidance on using each of the
 
 OCDS data must follow the I-JSON (Internet JSON) specification in [RFC7493](https://tools.ietf.org/html/rfc7493), according to which JSON text must be encoded using [UTF-8](https://en.wikipedia.org/wiki/UTF-8), and which introduces a number of requirements for numbers, objects and dates.
 
-## Metaschema
-
-The schemas are described by the metaschema, which is an extended version of [JSON Schema Draft 4](https://json-schema.org/specification-links#draft-4). The metaschema adds keywords related to [codelists](codelists), [deprecation](../governance/deprecation) and [merging](merging). You can [download the metaschema in JSON format](../../build/current_lang/meta-schema.json).
-
 ```{toctree}
 :hidden:
 
@@ -25,3 +21,14 @@ identifiers
 codelists
 conformance_and_extensions
 ```
+
+## Metaschema
+
+The schemas are described by the metaschema, which is an extended version of [JSON Schema Draft 4](https://json-schema.org/specification-links#draft-4). The metaschema adds keywords related to [codelists](codelists), [deprecation](../governance/deprecation) and [merging](merging). You can [download the metaschema in JSON format](../../build/current_lang/meta-schema.json).
+
+````{dropdown} View the metaschema
+
+```{jsonschema} ../../build/current_lang/meta-schema-patch.json
+```
+
+````
