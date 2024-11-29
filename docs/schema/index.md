@@ -28,6 +28,8 @@ The schemas are described by the metaschema, which is an extended version of [JS
 
 ````{dropdown} View the metaschema
 
+The metaschema adds the following keywords:
+
 ```{jsonschema} ../../build/current_lang/meta-schema-patch.json
 ```
 
