@@ -670,9 +670,9 @@ A `RelatedProcess` is defined as:
 ```{field-description} ../../build/current_lang/release-schema.json /definitions/RelatedProcess
 ```
 
-The [Related Process](codelists.md#related-process) codelist defines the possible types of relationship. Contracting processes should refer to related processes using the code in the codelist.
+The [Related Process](codelists.md#related-process) codelist defines the possible types of relationship. Contracting processes should refer to related processes using the codes in the codelist.
 
-As well as providing this machine-readable link between processes, publishers may also provide links to human-readable documentation in the relevant `documents` blocks. For example, when a contracting process refers to a planning process, a link to the procurement plan can be provided in `tender/documents`.
+As well as providing a machine-readable link between processes, publishers may also provide links to human-readable documentation in the relevant `documents` array. For example, when a contracting process refers to a planning process, a link to the procurement plan can be provided in `tender/documents`.
 
 ````{admonition} Example
 :class: hint
