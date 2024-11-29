@@ -146,6 +146,8 @@ def setup(app):
     headers = ["Title", "Description", "Extension"]
     # The gettext domain for schema translations. Should match the domain in the `pybabel compile` command.
     schema_domain = f"{gettext_domain_prefix}schema"
+    # The gettext domain for metaschema translations. Should match the domain in the `pybabel compile` command.
+    metaschema_domain = f"{gettext_domain_prefix}metaschema"
     # The gettext domain for codelist translations. Should match the domain in the `pybabel compile` command.
     codelists_domain = f"{gettext_domain_prefix}codelists"
 
@@ -158,6 +160,8 @@ def setup(app):
         [
             # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.
             (glob(str(standard_dir / "*-schema.json")), standard_build_dir, schema_domain),
+            # The glob patterns in `babel_ocds_metaschema.cfg` should match these filenames.
+            (glob(str(standard_dir / "metaschema" / "meta-schema-patch.json")), standard_build_dir, metaschema_domain),
             # The glob patterns in `babel_ocds_codelist.cfg` should match these.
             (glob(str(standard_dir / "codelists" / "*.csv")), standard_build_dir / "codelists", codelists_domain),
         ],

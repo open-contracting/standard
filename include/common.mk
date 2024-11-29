@@ -43,6 +43,10 @@ extract_codelists: $(POT_DIR)
 extract_schema: $(POT_DIR)
 	pybabel extract -F babel_ocds_schema.cfg . -o $(POT_DIR)/$(DOMAIN_PREFIX)schema.pot
 
+.PHONY: extract_metaschema
+extract_metaschema: $(POT_DIR)
+	pybabel extract -F babel_ocds_metaschema.cfg . -o $(POT_DIR)/$(DOMAIN_PREFIX)metaschema.pot
+
 # The codelist CSV files and JSON Schema files must be present for the `csv-table-no-translate` and `jsonschema`
 # directives to succeed, but the contents of the files have no effect on the generated .pot files.
 # See https://www.sphinx-doc.org/en/master/usage/builders/index.html#sphinx.builders.gettext.MessageCatalogBuilder
