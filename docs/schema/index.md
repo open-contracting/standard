@@ -21,3 +21,16 @@ identifiers
 codelists
 conformance_and_extensions
 ```
+
+## Metaschema
+
+The schemas are described by the metaschema, which is an extended version of [JSON Schema Draft 4](https://json-schema.org/specification-links#draft-4). The metaschema adds keywords related to [codelists](codelists), [deprecation](../governance/deprecation) and [merging](merging). You can [download the metaschema in JSON format](../../build/current_lang/meta-schema.json).
+
+````{dropdown} View the metaschema
+
+The metaschema adds the following keywords:
+
+```{jsonschema} ../../build/current_lang/meta-schema-patch.json
+```
+
+````

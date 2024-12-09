@@ -40,6 +40,7 @@ PDF_DELAY=20000
 .PHONY: compile
 compile:
 	pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)schema
+	pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)metaschema
 	pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)codelists
 
 # Put local targets below.

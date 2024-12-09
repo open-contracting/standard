@@ -3,7 +3,7 @@ Ensures that `manage.py pre-commit` has been run.
 """
 
 import json
-import os.path
+import os
 import sys
 
 import jsonref
@@ -38,3 +38,16 @@ def test_meta_schema_is_in_sync():
         actual = json.load(f)
 
     assert actual == get_metaschema(), "Run: python manage.py pre-commit"
+
+
+def test_meta_schema_references():
+    with open("schema/meta-schema.json") as f:
+        metaschema = json.load(f)
+
+    for file_name in os.listdir("schema"):
+        if file_name.endswith("-schema.json") and "meta-schema" not in file_name:
+            file_path = os.path.join("schema", file_name)
+            with open(file_path) as f:
+                schema = json.load(f)
+
+            assert schema["$schema"] == metaschema["id"], f"Incorrect $schema in {file_name}: {schema['$schema']}"

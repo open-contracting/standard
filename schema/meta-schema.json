@@ -1,5 +1,5 @@
 {
-  "id": "http://json-schema.org/draft-04/schema#",
+  "id": "https://standard.open-contracting.org/schema/1__2__0/meta-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "description": "Core schema meta-schema",
   "definitions": {
@@ -210,13 +210,19 @@
       "$ref": "#"
     },
     "$ref": {
+      "title": "URI Reference",
+      "description": "A reference to a statically identified schema.  This keyword must be set to an absolute URI or a relative reference as defined by [RFC 3986](https://www.rfc-editor.org/info/rfc3986), where its fragment (if any) can consist of a JSON Pointer as defined by [RFC 6901](https://datatracker.ietf.org/doc/html/rfc6901).",
       "type": "string"
     },
     "omitWhenMerged": {
+      "title": "Omit when merged",
+      "description": "Whether the field must be discarded during merging.",
       "type": "boolean",
       "default": false
     },
     "deprecated": {
+      "title": "Deprecated",
+      "description": "Information about the deprecation of the field.",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -225,21 +231,31 @@
       ],
       "properties": {
         "deprecatedVersion": {
+          "title": "Deprecated version",
+          "description": "The OCDS version in which the field was first deprecated.",
           "type": "string"
         },
         "description": {
+          "title": "Description",
+          "description": "A description of the reason for the field's deprecation.",
           "type": "string"
         }
       }
     },
     "codelist": {
+      "title": "Codelist",
+      "description": "The CSV file that defines the codes in the codelist that the field refers to.",
       "type": "string"
     },
     "openCodelist": {
+      "title": "Open codelist",
+      "description": "Whether the codelist that the field refers to is an open codelist.",
       "type": "boolean",
       "default": false
     },
     "wholeListMerge": {
+      "title": "Whole list merge",
+      "description": "Whether the field's value must be treated as a literal when merging.",
       "type": "boolean",
       "default": false
     }
