@@ -156,7 +156,7 @@ Purchase orders can be made against contracts with indefinite quantities or maxi
 
 Purchase orders that are made against contracts with a definite quantity or value of items ought to not be disclosed in the `contracts` section of OCDS, due to the risk of double counting items on the purchase order and the contract it relates to.
 
-### Example: Purchase orders
+### Example: Double counting contracts and purchase orders
 
 Paraguay's Dirección Nacional de Ingresos Tributarios awards a contract worth 3,150 million Gs to Carlos Ruben Oviedo Centurion for cleaning services in administrative buildings in Asunción. The contract is represented in the `contracts` section of OCDS as follows:
 
