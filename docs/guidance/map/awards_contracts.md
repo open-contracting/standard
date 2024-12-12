@@ -152,41 +152,32 @@ A purchase order is a specific type of contract, an official document issued by 
 
 Purchase orders can be issued against an existing contract, or if no prior contract exists then acceptance of a purchase order by a supplier forms a contract between buyer and supplier.
 
-Purchase orders that are made against contracts with a definite quantity or value of items ought to not be disclosed in the `contracts` section of OCDS, due to the risk of double counting items on the purchase order and the contract it relates to. Instead they ought to be disclosed in the `implementation.transactions` array of the `Contract`.
+Purchase orders can be made against contracts with indefinite quantities or maximum only values. In these cases the initial contract and resulting purchase orders ought to be modelled as [a closed framework agreement with no second-stage competition](https://standard.open-contracting.org/staging/1.2-dev/en/guidance/map/framework_agreements/).
+
+Purchase orders that are made against contracts with a definite quantity or value of items ought to not be disclosed in the `contracts` section of OCDS, due to the risk of double counting items on the purchase order and the contract it relates to.
 
 ### Example: Purchase orders
 
-The Bureau of Parks and Recreation in Portland, Oregon, USA, awards a 2 year contract worth up to $1m to a local contractor to maintain Mt. Tabor Park. This contract specifies the goods, services and works to be provided along with unit prices and estimates of quantities. The contract is represented in the `contracts` section of OCDS as follows:
+Paraguay's Dirección Nacional de Ingresos Tributarios awards a contract worth 3,150 million Gs to Carlos Ruben Oviedo Centurion for cleaning services in administrative buildings in Asunción. The contract is represented in the `contracts` section of OCDS as follows:
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../examples/purchase_orders/parent_contract.csv
 ```
 
-The contract in this scenario is treated as a type of [framework agreement](framework_agreements.md), with the contract value being disclosed in the `maximumValue` field instead of the `value` field.
+Calculating the sum of the contract value in the above example gives the correct result of Gs 3,150 million.
 
-Over the course of the contract the Bureau of Parks and Recreation issues 3 purchase orders for:
+During the first month of the contract Dirección Nacional de Ingresos Tributarios issues 3 purchase orders for cleaning in 3 different buildings.
 
-1. evacuation, removal and disposal of contaminated or unsuitable soil for the value of $300k.
-2. routine maintenance including mowing of the grass, trimming of hedges and shrubs and weeding of flower beds for the value of $500k.
-3. supply and installation of new hedging within the park for the value of $200k.
-
-Each of the purchase orders is disclosed in the `implementation.transactions` section of the `Contract` as follows:
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../examples/purchase_orders/transactions_pos.csv
-```
-
-The sum of the `transactions.value`s gives the final value of the contract, $1m. This is the same value as the initial `maximumValue` of the contract.
-
-By using the `implementation.transactions` section of the `Contract` the purchase orders are linked to the initial contract, and the potential for double counting has been avoided.
-
-If the purchase orders were disclosed in `contracts`, especially if the initial contract had a fixed value, the final value of the contract could be double counted:
+If purchase orders were also disclosed in the `contracts` section of OCDS, the `contracts` section of OCDS would now be populated as follows:
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../examples/purchase_orders/contracts_pos.csv
 ```
 
-Calculating the sum of the contract value in the above example gives an incorrect result of £2m - double the actual final value of the contract.
+Calculating the sum of the contract value in the above example gives an incorrect result of Gs 3,211 million.
+
+```{note}
+The approach for modelling purchase orders in OCDS has not been standardized. Implementers are encouraged to describe their use of purchase orders in this ([GitHub issue](https://github.com/open-contracting/standard/issues/897)) to help develop a standardized approach.
+```
