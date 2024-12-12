@@ -1,6 +1,6 @@
 # Country
 
-{bdg-link-primary}`Closed<../../codelists/#codelists>`
+{bdg-link-primary}`closed<../../codelists/#codelists>`
 
 ```{versionadded} 1.2
 ```

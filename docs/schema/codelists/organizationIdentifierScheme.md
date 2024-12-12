@@ -1,6 +1,6 @@
 # Organization Identifier Scheme
 
-{bdg-link-secondary}`Open<../../codelists/#codelists>`
+{bdg-link-secondary}`open<../../codelists/#codelists>`
 
 ![org-id.guide](../../_static/png/org-id_logo.png)
 

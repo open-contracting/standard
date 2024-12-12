@@ -1,6 +1,6 @@
 # Link Relation Type
 
-{bdg-link-secondary}`Open<../../codelists/#codelists>`
+{bdg-link-secondary}`open<../../codelists/#codelists>`
 
 ```{versionadded} 1.2
 ```

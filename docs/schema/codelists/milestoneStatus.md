@@ -1,6 +1,6 @@
 # Milestone Status
 
-{bdg-link-primary}`Closed<../../codelists/#codelists>`
+{bdg-link-primary}`closed<../../codelists/#codelists>`
 
 ```{versionchanged} 1.1
 Added the 'scheduled' code.

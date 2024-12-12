@@ -1,6 +1,6 @@
 # Release Tag
 
-{bdg-link-secondary}`Open<../../codelists/#open-codelists>`
+{bdg-link-secondary}`open<../../codelists/#open-codelists>`
 
 A contracting (or planning) process can result in a number of releases of information over time. A release must be tagged to indicate whether it is about a planning process or a contracting process and, if it is about the latter, to indicate the stage of the contracting process to which it relates.
 

@@ -1,6 +1,6 @@
 # Award Criteria
 
-{bdg-link-secondary}`Open<../../codelists/#codelists>`
+{bdg-link-secondary}`open<../../codelists/#codelists>`
 
 The award criteria codelist describes the basis on which contract awards will be made.
 

@@ -1,6 +1,6 @@
 # Contract Status
 
-{bdg-link-primary}`Closed<../../codelists/#codelists>`
+{bdg-link-primary}`closed<../../codelists/#codelists>`
 
 ```{deprecated} 1.2
 ```

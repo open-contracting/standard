@@ -1,6 +1,6 @@
 # Submission Method
 
-{bdg-link-secondary}`Open<../../codelists/#codelists>`
+{bdg-link-secondary}`open<../../codelists/#codelists>`
 
 ```{deprecated} 1.2
 ```

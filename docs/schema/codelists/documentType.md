@@ -1,6 +1,6 @@
 # Document Type
 
-{bdg-link-secondary}`Open<../../codelists/#codelists>`
+{bdg-link-secondary}`open<../../codelists/#codelists>`
 
 The following list describes documents and documentation recommended for publication as part of an open contracting implementation. The codelist indicates the section of an OCDS release they are most likely to be applicable within.
 

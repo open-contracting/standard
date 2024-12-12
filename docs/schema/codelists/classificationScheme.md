@@ -1,6 +1,6 @@
 # Classification Scheme
 
-{bdg-link-secondary}`Open<../../codelists/#codelists>`
+{bdg-link-secondary}`open<../../codelists/#codelists>`
 
 The `classificationScheme` codelist is referenced by the `scheme` field of the `Classification` object, which can be used in multiple contexts. You can find the codes relevant to a given context by filtering the codelist by its `Category` column.
 
