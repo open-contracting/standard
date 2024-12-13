@@ -100,12 +100,14 @@ Per the [normative and non-normative content and changes policy](../governance/n
   * [#1452](https://github.com/open-contracting/standard/pull/1452) Add 'proClass'.
   * [#1637](https://github.com/open-contracting/standard/pull/1637) Add 'sdg' and 'sdgTarget'.
   * [#1684](https://github.com/open-contracting/standard/pull/1684) Add 'oc4idsProjectSector' from project extension.
+  * [#1726](https://github.com/open-contracting/standard/pull/1726) Remove 'CELEX' and 'LEXML'
 
 * `documentType.csv`:
   * Add codes:
     * [#1336](https://github.com/open-contracting/standard/pull/1336) 'unsuccessfulDetails'
     * [#1453](https://github.com/open-contracting/standard/pull/1453) 'marketEngagementNotice'
     * [#1647](https://github.com/open-contracting/standard/pull/1647) 'noObjectionCertificate'
+    * [#1726](https://github.com/open-contracting/standard/pull/1726) 'legislation' from EU extension
   * [#1419](https://github.com/open-contracting/standard/pull/1419) Add codes for document types described in the [UNCITRAL Model Law on Public Procurement](https://uncitral.un.org/en/texts/procurement/modellaw/public_procurement):
     * 'otherParticipationRequirements'
     * 'procurementMethodRationale'
@@ -155,6 +157,11 @@ Per the [normative and non-normative content and changes policy](../governance/n
     * 'leadBank'
     * 'lender'
     * 'equityInvestor'
+  * [#1726](https://github.com/open-contracting/standard/pull/1726) Add codes from the EU extension:
+    * 'leadBuyer'
+    * 'leadTenderer'
+    * 'submissionReceiptBody'
+    * 'evaluationBody'
   * [#1182](https://github.com/open-contracting/standard/pull/1182) Deprecate 'funder'
   * Clarify the descriptions of:
     * [#1182](https://github.com/open-contracting/standard/pull/1182) 'buyer'
