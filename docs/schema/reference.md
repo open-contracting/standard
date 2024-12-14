@@ -402,10 +402,6 @@ Notes:
 
 * The `dateModified` field should be changed whenever the progress towards a milestone is reviewed, and the `status` either updated, or re-confirmed. 
 
-```{extensionlist} The following extensions to milestone are available
-:list: milestones
-```
-
 ### Value
 
 Financial values should be published with a currency attached. 
