@@ -402,7 +402,7 @@ See the changelogs for:
 * [Enquiries](https://extensions.open-contracting.org/en/extensions/enquiries/master/#changelog)
 * [Location](https://extensions.open-contracting.org/en/extensions/location/master/#changelog)
 * [Lots](https://extensions.open-contracting.org/en/extensions/lots/master/#changelog)
-* [Milestone documents](https://extensions.open-contracting.org/en/extensions/milestone_documents/master/#changelog)
+* [Milestone documents](https://github.com/open-contracting-extensions/ocds_milestone_documents_extension#changelog)
 * [Participation fees](https://extensions.open-contracting.org/en/extensions/participation_fee/master/#changelog)
 * [Process level title and description](https://extensions.open-contracting.org/en/extensions/process_title/master/#changelog)
 

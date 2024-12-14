@@ -9,7 +9,6 @@ import sys
 import warnings
 from collections import defaultdict
 from contextlib import contextmanager
-from copy import deepcopy
 from glob import glob
 from io import StringIO
 from pathlib import Path
@@ -23,6 +22,7 @@ import requests
 from babel.messages.pofile import read_po
 from docutils.utils import relative_path
 from lxml import etree
+from ocdsextensionregistry import get_versioned_release_schema
 from ocdskit.schema import get_schema_fields
 
 basedir = Path(__file__).resolve().parent
@@ -39,77 +39,6 @@ def custom_warning_formatter(message, category, filename, lineno, line=None):
 
 
 warnings.formatwarning = custom_warning_formatter
-
-versioned_template = json.loads("""
-{
-  "type": "array",
-  "items": {
-    "type": "object",
-    "properties": {
-      "releaseDate": {
-        "format": "date-time",
-        "type": "string"
-      },
-      "releaseID": {
-        "type": "string"
-      },
-      "value": {},
-      "releaseTag": {
-        "type": "array",
-        "items": {
-          "type": "string"
-        }
-      }
-    }
-  }
-}
-""")
-
-common_versioned_definitions = {
-    "StringNullUriVersioned": {
-        "type": ["string", "null"],
-        "format": "uri",
-    },
-    "StringNullDateTimeVersioned": {
-        "type": ["string", "null"],
-        "format": "date-time",
-    },
-    "StringNullVersioned": {
-        "type": ["string", "null"],
-        "format": None,
-    },
-}
-
-recognized_types = (
-    # Array
-    ["array"],
-    ["array", "null"],  # optional string arrays
-    # Object
-    ["object"],
-    ["object", "null"],  # /Organization/details
-    # String
-    ["string"],
-    ["string", "null"],
-    # Literal
-    ["boolean", "null"],
-    ["integer", "null"],
-    ["number", "null"],
-    # Mixed
-    ["string", "integer"],
-    ["string", "integer", "null"],
-)
-
-keywords_to_remove = (
-    # Metadata keywords
-    # https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-6
-    "title",
-    "description",
-    "default",
-    # Extended keywords
-    # http://os4d.opendataservices.coop/development/schema/#extended-json-schema
-    "omitWhenMerged",
-    "wholeListMerge",
-)
 
 
 def json_load(filename, library=json, **kwargs):
@@ -149,247 +78,11 @@ def get(url):
     return response
 
 
-def coerce_to_list(data, key):
-    """Return the value of the ``key`` key in the ``data`` mapping. If the value is a string, wrap it in an array."""
-    item = data.get(key, [])
-    if isinstance(item, str):
-        return [item]
-    return item
-
-
 def get_metaschema():
     """Patches and returns the JSON Schema Draft 4 metaschema."""
     return json_merge_patch.merge(
         json_load("metaschema/json-schema-draft-4.json"), json_load("metaschema/meta-schema-patch.json")
     )
-
-
-def get_common_definition_ref(item):
-    """
-    Return a schema that references the common definition that the ``item`` matches: "StringNullUriVersioned",
-    "StringNullDateTimeVersioned" or "StringNullVersioned".
-    """
-    for name, keywords in common_versioned_definitions.items():
-        # If the item matches the definition.
-        if any(item.get(keyword) != value for keyword, value in keywords.items()):
-            continue
-        # And adds no keywords to the definition.
-        if any(keyword not in {*keywords, *keywords_to_remove} for keyword in item):
-            continue
-        return {"$ref": f"#/definitions/{name}"}
-    return None
-
-
-def add_versioned(schema, unversioned_pointers, pointer=""):
-    """Call ``_add_versioned`` on each field."""
-    for key, value in schema["properties"].items():
-        new_pointer = f"{pointer}/properties/{key}"
-        _add_versioned(schema, unversioned_pointers, new_pointer, key, value)
-
-    for key, value in schema.get("definitions", {}).items():
-        new_pointer = f"{pointer}/definitions/{key}"
-        add_versioned(value, unversioned_pointers, pointer=new_pointer)
-
-
-def _add_versioned(schema, unversioned_pointers, pointer, key, value):
-    """
-    Perform the changes to the schema to refer to versioned/unversioned definitions.
-
-    :param schema dict: the schema of the object on which the field is defined
-    :param unversioned_pointers set: JSON Pointers to ``id`` fields to leave unversioned if the object is in an array
-    :param pointer str: the field's pointer
-    :param key str: the field's name
-    :param value str: the field's schema
-    """
-    # Skip unversioned fields.
-    if pointer in unversioned_pointers:
-        return
-
-    types = coerce_to_list(value, "type")
-
-    # If a type is unrecognized, we might need to update this script.
-    if (
-        "$ref" not in value
-        and types not in recognized_types
-        and not (pointer == "/definitions/Quantity/properties/value" and types == ["string", "number", "null"])
-    ):
-        warnings.warn(f"{pointer} has unrecognized type {types}")
-
-    # For example, if $ref is used.
-    if not types:
-        # Ignore the `amendment` field, which had no `id` field in OCDS 1.0.
-        if "deprecated" not in value:
-            versioned_pointer = f"{value['$ref'][1:]}/properties/id"
-            # If the `id` field is on an object not in an array, it needs to be versioned (e.g. buyer/properties/id).
-            if versioned_pointer in unversioned_pointers:
-                value["$ref"] = value["$ref"] + "VersionedId"
-        return
-
-    # Reference a common versioned definition if possible, to limit the size of the schema.
-    ref = get_common_definition_ref(value)
-    if ref:
-        schema["properties"][key] = ref
-
-    # Iterate into objects with properties like `Item.unit`. Otherwise, version objects with no properties as a
-    # whole, like `Organization.details`.
-    elif types == ["object"] and "properties" in value:
-        add_versioned(value, unversioned_pointers, pointer=pointer)
-
-    else:
-        new_value = deepcopy(value)
-
-        if types == ["array"]:
-            item_types = coerce_to_list(value["items"], "type")
-
-            # See https://standard.open-contracting.org/latest/en/schema/merging/#whole-list-merge
-            if value.get("wholeListMerge"):
-                # Update `$ref` to the unversioned definition.
-                if "$ref" in value["items"]:
-                    new_value["items"]["$ref"] = value["items"]["$ref"] + "Unversioned"
-                # Otherwise, similarly, don't iterate over item properties.
-            # See https://standard.open-contracting.org/latest/en/schema/merging/#lists
-            elif "$ref" in value["items"]:
-                # Leave `$ref` to the versioned definition.
-                return
-            # Exceptional case for deprecated `Amendment.changes`.
-            elif item_types == ["object"] and pointer == "/definitions/Amendment/properties/changes":
-                return
-            # Warn in case new combinations are added to the release schema.
-            elif item_types != ["string"]:
-                # Note: Versioning the properties of un-$ref'erenced objects in arrays isn't implemented. However,
-                # this combination hasn't occurred, with the exception of `Amendment/changes`.
-                warnings.warn(f"{pointer}/items has unexpected type {item_types}")
-
-        versioned = deepcopy(versioned_template)
-        versioned["items"]["properties"]["value"] = new_value
-        schema["properties"][key] = versioned
-
-
-def update_refs_to_unversioned_definitions(schema):
-    """Replace ``$ref`` values with unversioned definitions."""
-    for key, value in schema.items():
-        if key == "$ref":
-            schema[key] = value + "Unversioned"
-        elif isinstance(value, dict):
-            update_refs_to_unversioned_definitions(value)
-
-
-def get_unversioned_pointers(schema, fields, pointer=""):
-    """Return the JSON Pointers to ``id`` fields that must not be versioned if the object is in an array."""
-    if isinstance(schema, list):
-        for index, item in enumerate(schema):
-            get_unversioned_pointers(item, fields, pointer=f"{pointer}/{index}")
-    elif isinstance(schema, dict):
-        # Follows the logic of _get_merge_rules in merge.py from ocds-merge.
-        types = coerce_to_list(schema, "type")
-
-        # If an array is whole list merge, its items are unversioned.
-        if "array" in types and schema.get("wholeListMerge"):
-            return
-        if "array" in types and "items" in schema:
-            item_types = coerce_to_list(schema["items"], "type")
-            # If an array mixes objects and non-objects, it is whole list merge.
-            if any(item_type != "object" for item_type in item_types):
-                return
-            # If it is an array of objects, any `id` fields are unversioned.
-            if "id" in schema["items"]["properties"]:
-                if hasattr(schema["items"], "__reference__"):
-                    reference = schema["items"].__reference__["$ref"][1:]
-                else:
-                    reference = pointer
-                fields.add(f"{reference}/properties/id")
-
-        for key, value in schema.items():
-            get_unversioned_pointers(value, fields, pointer=f"{pointer}/{key}")
-
-
-def remove_omit_when_merged(schema):
-    """Remove properties that set ``omitWhenMerged``."""
-    if isinstance(schema, list):
-        for item in schema:
-            remove_omit_when_merged(item)
-    elif isinstance(schema, dict):
-        for key, value in schema.items():
-            if key == "properties":
-                for prop in list(value):
-                    if value[prop].get("omitWhenMerged"):
-                        del value[prop]
-                        if prop in schema["required"]:
-                            schema["required"].remove(prop)
-            remove_omit_when_merged(value)
-
-
-def remove_metadata_and_extended_keywords(schema):
-    """Remove metadata and extended keywords from properties and definitions."""
-    if isinstance(schema, list):
-        for item in schema:
-            remove_metadata_and_extended_keywords(item)
-    elif isinstance(schema, dict):
-        for key, value in schema.items():
-            if key in {"definitions", "properties"}:
-                for subschema in value.values():
-                    for keyword in keywords_to_remove:
-                        subschema.pop(keyword, None)
-            remove_metadata_and_extended_keywords(value)
-
-
-def get_versioned_release_schema(schema):
-    """Return the versioned release schema."""
-    # Update schema metadata.
-    release_with_underscores = release.replace(".", "__")
-    schema["id"] = (
-        f"https://standard.open-contracting.org/schema/{release_with_underscores}/versioned-release-validation-schema.json"
-    )
-    schema["title"] = "Schema for a compiled, versioned Open Contracting Release."
-
-    # Release IDs, dates and tags appear alongside values in the versioned release schema.
-    remove_omit_when_merged(schema)
-
-    # Create unversioned copies of all definitions.
-    unversioned_definitions = {k + "Unversioned": deepcopy(v) for k, v in schema["definitions"].items()}
-    update_refs_to_unversioned_definitions(unversioned_definitions)
-
-    # Determine which `id` fields occur on objects in arrays.
-    unversioned_pointers = set()
-    get_unversioned_pointers(jsonref.replace_refs(schema), unversioned_pointers)
-
-    # Omit `ocid` from versioning.
-    ocid = schema["properties"].pop("ocid")
-    add_versioned(schema, unversioned_pointers)
-    schema["properties"]["ocid"] = ocid
-
-    # Add the common versioned definitions.
-    for name, keywords in common_versioned_definitions.items():
-        versioned = deepcopy(versioned_template)
-        for keyword, value in keywords.items():
-            if value:
-                versioned["items"]["properties"]["value"][keyword] = value
-        schema["definitions"][name] = versioned
-
-    # Add missing definitions.
-    while True:
-        try:
-            jsonref.replace_refs(schema, lazy_load=False)
-            break
-        except jsonref.JsonRefError as e:
-            name = e.cause.args[0]
-
-            if name.endswith("VersionedId"):
-                # Add a copy of an definition with a versioned `id` field, using the same logic as before.
-                definition = deepcopy(schema["definitions"][name[:-11]])
-                pointer = f"/definitions/{name[:-11]}/properties/id"
-                pointers = unversioned_pointers - {pointer}
-                _add_versioned(definition, pointers, pointer, "id", definition["properties"]["id"])
-            else:
-                # Add a copy of an definition with no versioned fields.
-                definition = unversioned_definitions[name]
-
-            schema["definitions"][name] = definition
-
-    # Remove all metadata and extended keywords.
-    remove_metadata_and_extended_keywords(schema)
-
-    return schema
 
 
 @click.group()
@@ -566,7 +259,10 @@ def pre_commit():
 
     json_dump("meta-schema.json", get_metaschema())
     json_dump("dereferenced-release-schema.json", jsonref_release_schema)
-    json_dump("versioned-release-validation-schema.json", get_versioned_release_schema(release_schema))
+    json_dump(
+        "versioned-release-validation-schema.json",
+        get_versioned_release_schema(release_schema, release.replace(".", "__")),
+    )
 
 
 @cli.command()

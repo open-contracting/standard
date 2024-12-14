@@ -629,10 +629,6 @@ For delivery milestones, if there is a time frame for delivery, use `.dueAfterDa
 :collapse: documents
 ```
 
-```{extensionlist} The following extensions to milestone are available
-:list: milestones
-```
-
 ```{workedexamplelist} The following worked examples are available for milestones
 :tag: milestone
 ```
