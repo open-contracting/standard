@@ -13,9 +13,9 @@ basedir = Path(__file__).resolve().parent.parent
 
 sys.path.extend([str(basedir), str(basedir / "docs")])
 
-from conf import release
+from conf import release  # noqa: E402
 
-from manage import get_metaschema
+from manage import get_metaschema  # noqa: E402
 
 
 def test_versioned_release_schema_is_in_sync():
