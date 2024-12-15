@@ -14,7 +14,6 @@ from pathlib import Path
 
 import click
 import json_merge_patch
-import jsonref
 import lxml.etree
 import lxml.html
 import requests
