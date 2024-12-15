@@ -22,6 +22,7 @@ from babel.messages.pofile import read_po
 from docutils.utils import relative_path
 from lxml import etree
 from ocdsextensionregistry import get_versioned_release_schema
+from ocdsextensionregistry.util import replace_refs
 
 basedir = Path(__file__).resolve().parent
 schemadir = basedir / "schema"
@@ -39,10 +40,10 @@ def custom_warning_formatter(message, category, filename, lineno, line=None):
 warnings.formatwarning = custom_warning_formatter
 
 
-def json_load(filename, library=json, **kwargs):
+def json_load(filename):
     """Load JSON data from the given filename."""
     with (schemadir / filename).open() as f:
-        return library.load(f, **kwargs)
+        return json.load(f)
 
 
 def json_dump(filename, data):
@@ -187,7 +188,7 @@ def pre_commit():
     - versioned-release-validation-schema.json
     """
     release_schema = json_load("release-schema.json")
-    jsonref_release_schema = json_load("release-schema.json", jsonref, merge_props=True)
+    jsonref_release_schema = replace_refs(json_load("release-schema.json"), keep_defs=True)
 
     json_dump("meta-schema.json", get_metaschema())
     json_dump("dereferenced-release-schema.json", jsonref_release_schema)
