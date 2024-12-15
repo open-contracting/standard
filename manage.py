@@ -23,6 +23,7 @@ from babel.messages.pofile import read_po
 from docutils.utils import relative_path
 from lxml import etree
 from ocdsextensionregistry import get_versioned_release_schema
+from ocdsextensionregistry.util import replace_refs
 from ocdskit.schema import get_schema_fields
 
 basedir = Path(__file__).resolve().parent
@@ -41,10 +42,10 @@ def custom_warning_formatter(message, category, filename, lineno, line=None):
 warnings.formatwarning = custom_warning_formatter
 
 
-def json_load(filename, library=json, **kwargs):
+def json_load(filename):
     """Load JSON data from the given filename."""
     with (schemadir / filename).open() as f:
-        return library.load(f, **kwargs)
+        return json.load(f)
 
 
 def json_dump(filename, data):
@@ -209,14 +210,14 @@ def pre_commit():
     }
 
     release_schema = json_load("release-schema.json")
-    jsonref_release_schema = json_load("release-schema.json", jsonref, merge_props=True)
+    jsonref_release_schema = replace_refs(json_load("release-schema.json"), keep_defs=True)
 
     counts = defaultdict(list)
     nonstring = ("boolean", "integer", "number", "object")
     for field in get_schema_fields(jsonref_release_schema):
         name = field.path_components[-1]
         # Skip definitions (output dereferenced properties only). Skip deprecated fields.
-        if field.definition_pointer_components or field.deprecated:
+        if field.definition or field.deprecated:
             continue
         multilingual = (
             # If a field can be a non-string, it is not multilingual.
