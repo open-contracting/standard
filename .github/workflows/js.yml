@@ -1,10 +1,7 @@
 name: Lint JavaScript
 on: [push, pull_request]
 jobs:
-  build:
-    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name != github.repository
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: biomejs/setup-biome@v2
-      - run: biome ci --indent-style=space --line-width=119 docs/_static/script.js
+  lint:
+    uses: open-contracting/.github/.github/workflows/js.yml@main
+    with:
+      filenames: docs/_static/script.js
