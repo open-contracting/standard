@@ -178,5 +178,5 @@ If the purchase orders were added to the `contracts` array, it would lead to dou
 The correct approach is to add only the 'parent' contract to the `contracts` array.
 
 ```{note}
-The approach to modelling purchase orders in OCDS is not yet standardized. Implementers are encouraged to describe their use of purchase orders in the ([GitHub issue](https://github.com/open-contracting/standard/issues/897)) to help develop a standardized approach.
+The approach to modelling purchase orders in OCDS is not yet standardized. To aid standardization, implementers are encouraged to describe their use of purchase orders in the [GitHub issue](https://github.com/open-contracting/standard/issues/897).
 ```
