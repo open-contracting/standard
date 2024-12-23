@@ -131,12 +131,12 @@ Each organization has a `details` object. Through extensions, this can be used t
 
 ### Planning
 
-The `planning` section is defined as:
+The `planning` object is defined as:
 
 ```{field-description} ../../build/current_lang/release-schema.json /definitions/Planning
 ```
 
-Background documents such as feasibility studies and project plans can also be included in this section.
+Background documents such as feasibility studies and project plans can also be included in `planning`.
 
 ````{admonition} Example
 :class: hint
@@ -164,9 +164,9 @@ Background documents such as feasibility studies and project plans can also be i
 
 #### Budget 
 
-Apart from documents, the majority of planning information is held within the `planning/budget` section. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting (or planning) process to existing projects and budgets even where linked data is not available.
+Apart from documents, the majority of planning information is held within the `planning/budget` object. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting (or planning) process to existing projects and budgets even where linked data is not available.
 
-The `planning/budget` section is defined as:
+The `planning/budget` object is defined as:
 
 ```{field-description} ../../build/current_lang/release-schema.json /definitions/Budget
 ```
@@ -180,7 +180,7 @@ The `planning/budget` section is defined as:
 ```
 ````
 
-The `planning/budget` section has the following fields:
+The `planning/budget` object has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Budget
@@ -193,7 +193,7 @@ The `planning/budget` section has the following fields:
 
 #### Project
 
-The `planning/project` section is defined as:
+The `planning/project` object is defined as:
 
 ```{field-description} ../../build/current_lang/release-schema.json /definitions/Project
 ```
@@ -207,7 +207,7 @@ The `planning/project` section is defined as:
 ```
 ````
 
-The `planning/project` section has the following fields:
+The `planning/project` object has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Project
@@ -220,7 +220,7 @@ The `tender` section includes details of the announcement that an organization i
 
 It can contain details of a forthcoming process to receive and evaluate proposals to supply these goods, services or works and can also be used to record details of a completed tender stage, including details of bids received.
 
-The `tender` section is defined as:
+The `tender` object is defined as:
 
 ```{field-description} ../../build/current_lang/release-schema.json /definitions/Tender
 ```
@@ -234,7 +234,7 @@ The `tender` section is defined as:
 ```
 ````
 
-Each `tender` section has the following fields: 
+Each `tender` ojbect has the following fields: 
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Tender
