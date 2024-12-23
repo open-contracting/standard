@@ -30,7 +30,11 @@ Only including fields which have values will keep versioned datasets cleaner.
 
 ### Emptying fields and values
 
-There can be cases where a publisher needs to remove, rather than update, a value which was set in a previous release. In this case, the fields must be set to `null`. See the [merging documentation](merging) for more details.
+There can be cases where a publisher needs to remove, rather than update, a value which was set in a previous release. In this case, the fields must be set to `null`.
+
+```{seealso}
+[Merging reference documentation](merging)
+```
 
 ## Language
 
@@ -500,7 +504,11 @@ See the [parties](#parties) section.
 
 The identifier block provides a way to [identify the legal entities](identifiers.md#organization-identifiers) involved in a contracting (or planning) process.
 
-When describing an organizational unit (for example, a department or branch of an organization), the `identifier` field should identify the main organization. The other fields should describe the organizational unit. For more information, see [organizational units](../guidance/map/organizational_units.md).
+When describing an organizational unit (for example, a department or branch of an organization), the `identifier` field should identify the main organization. The other fields should describe the organizational unit. 
+
+```{seealso}
+[Worked example: Organizational units](../guidance/map/organizational_units.md)
+```
 
 An `Identifier` is defined as:
 
@@ -571,7 +579,13 @@ Each `ContactPoint` has the following fields:
 
 Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](codelists.md#document-type) codelist.
 
-Documents related to contracting (or planning) processes should be public by default. For more information, see the Open Contracting Partnership's report [Mythbusting Confidentiality in Public Contracting](https://www.open-contracting.org/resources/mythbusting-confidentiality-public-contracting/) and the Center for Global Development's [Principles on Commercial Transparency in Public Contracts](https://www.cgdev.org/publication/principles-commercial-transparency-public-contracts).
+Documents related to contracting (or planning) processes should be public by default.
+
+```{seealso}
+[Mythbusting Confidentiality in Public Contracting (Open Contracting Partnership)](https://www.open-contracting.org/resources/mythbusting-confidentiality-public-contracting/)
+
+[Principles on Commercial Transparency in Public Contracts (Center for Global Development)](https://www.cgdev.org/publication/principles-commercial-transparency-public-contracts)
+```
 
 Documents should be published at their own stable URLs, accessible for free and without the need to search or login, and available at the time of publication of the OCDS release that refers to them.
 
