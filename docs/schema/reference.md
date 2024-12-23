@@ -234,7 +234,7 @@ The `tender` object is defined as:
 ```
 ````
 
-Each `tender` ojbect has the following fields: 
+Each `tender` object has the following fields: 
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Tender
