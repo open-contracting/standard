@@ -68,6 +68,9 @@ A release describes a single contracting or planning process at a particular poi
 :title: release
 ```
 ````
+```{workedexamplelist} The following worked examples are available for releases
+:tag: release
+```
 
 Each release has the following fields:
 
@@ -77,10 +80,6 @@ Each release has the following fields:
 
 ```{extensionlist} The following extensions are available for release
 :list: release
-```
-
-```{workedexamplelist} The following worked examples are available for releases
-:tag: release
 ```
 
 ### Parties
@@ -108,6 +107,10 @@ An `Organization` is defined as:
 ```
 ````
 
+```{workedexamplelist} The following worked examples are available for organizations
+:tag: parties
+```
+
 Each `Organization` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
@@ -123,10 +126,6 @@ Each organization has a `details` object. Through extensions, this can be used t
 
 ```{extensionlist} The following extensions are available for organization details
 :list: partyDetail
-```
-
-```{workedexamplelist} The following worked examples are available for organizations
-:tag: parties
 ```
 
 ### Planning
@@ -147,6 +146,10 @@ Background documents such as feasibility studies and project plans can also be i
 ```
 ````
 
+```{workedexamplelist} The following worked examples are available for planning
+:tag: planning
+```
+
 `planning` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
@@ -156,10 +159,6 @@ Background documents such as feasibility studies and project plans can also be i
 
 ```{extensionlist} The following extensions are available for planning
 :list: planning
-```
-
-```{workedexamplelist} The following worked examples are available for planning
-:tag: planning
 ```
 
 #### Budget 
@@ -234,6 +233,10 @@ The `tender` object is defined as:
 ```
 ````
 
+```{workedexamplelist} The following worked examples are available for tenders
+:tag: tender
+```
+
 Each `tender` object has the following fields: 
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
@@ -243,10 +246,6 @@ Each `tender` object has the following fields:
 
 ```{extensionlist} The following extensions are available for the tender section
 :list: tender
-```
-
-```{workedexamplelist} The following worked examples are available for tenders
-:tag: tender
 ```
 
 ### Bids
@@ -276,6 +275,10 @@ An `Award` is defined as:
 ```
 ````
 
+```{workedexamplelist} The following worked examples are available for awards
+:tag: award
+```
+
 Each `Award` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
@@ -285,10 +288,6 @@ Each `Award` has the following fields:
 
 ```{extensionlist} The following extensions are available for award
 :list: award
-```
-
-```{workedexamplelist} The following worked examples are available for awards
-:tag: award
 ```
 
 ### Contract
@@ -314,6 +313,10 @@ A `Contract` is defined as:
 ```
 ````
 
+```{workedexamplelist} The following worked examples are available for contracts
+:tag: contract
+```
+
 Each `Contract` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
@@ -323,10 +326,6 @@ Each `Contract` has the following fields:
 
 ```{extensionlist} The following extensions are available for contracts
 :list: contract
-```
-
-```{workedexamplelist} The following worked examples are available for contracts
-:tag: contract
 ```
 
 ### Implementation
@@ -347,6 +346,10 @@ The `contracts/implementation` object is defined as:
 ```
 ````
 
+```{workedexamplelist} The following worked examples are available for implementations
+:tag: implementation
+```
+
 Each `contracts/implementation` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
@@ -359,10 +362,6 @@ Each `contracts/implementation` has the following fields:
 ```
 
 Information on subcontracts is not currently included in the core OCDS schema, but might be handled by [proposed extensions](conformance_and_extensions)
-
-```{workedexamplelist} The following worked examples are available for implementations
-:tag: implementation
-```
 
 #### Transaction
 
@@ -436,15 +435,15 @@ An `Amendment` is defined as:
 ```
 ````
 
+```{workedexamplelist} The following worked examples are available for amendments
+:tag: amendment
+```
+
 Each `Amendment` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Amendment
 :collapse: changes
-```
-
-```{workedexamplelist} The following worked examples are available for amendments
-:tag: amendment
 ```
 
 #### Changes
@@ -776,15 +775,15 @@ A `Milestone` is defined as:
 ```
 ````
 
+```{workedexamplelist} The following worked examples are available for milestones
+:tag: milestone
+```
+
 Each `Milestone` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/Milestone
 :collapse: documents
-```
-
-```{workedexamplelist} The following worked examples are available for milestones
-:tag: milestone
 ```
 
 ### Value
