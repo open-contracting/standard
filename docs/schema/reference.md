@@ -257,6 +257,11 @@ The [Bid statistics and details](https://extensions.open-contracting.org/en/exte
 
 The award section is used to announce any awards issued for this tender. There can be multiple awards made. Releases can contain all, or a subset, of these awards. A related award block is required for every contract block, as the award contains information on the suppliers. In particular cases there can be multiple suppliers for a single award: for example, in the case of [consortia](../guidance/map/buyers_suppliers.md#consortia-suppliers) and in [framework agreements](../guidance/map/framework_agreements).
 
+The `awards` array is defined as:
+
+```{field-description} ../../build/current_lang/release-schema.json /properties/awards
+```
+
 An `Award` is defined as:
 
 ```{field-description} ../../build/current_lang/release-schema.json /definitions/Award
@@ -289,6 +294,11 @@ Each `Award` has the following fields:
 ### Contract
 
 The contract section is used to provide details of contracts that have been entered into. Every contract must have a related award, linked via the `awardID` field. This is because supplier information is contained within the 'award'.
+
+The `contracts` array is defined as:
+
+```{field-description} ../../build/current_lang/release-schema.json /properties/contracts
+```
 
 A `Contract` is defined as:
 
@@ -323,7 +333,7 @@ Each `Contract` has the following fields:
 
 Implementation information can be updated over the course of a contract. It belongs nested within the contract it relates to.
 
-The `contracts/implementation` section is defined as:
+The `contracts/implementation` object is defined as:
 
 ```{field-description} ../../build/current_lang/release-schema.json /definitions/Implementation
 ```
@@ -363,6 +373,11 @@ To represent planned payments, use [Milestones](#milestones) instead.
 ```
 
 In most circumstances, the `payer` identifier will match that of the `buyer`, and the `payee` identifier will match that of the `supplier`. 
+
+The `contracts/implementation/transactions` array is defined as:
+
+```{field-description} ../../build/current_lang/release-schema.json /definitions/Implementation/properties/transactions
+```
 
 A `Transaction` is defined as:
 
