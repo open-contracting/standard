@@ -3,14 +3,19 @@ Ensures that `manage.py pre-commit` has been run.
 """
 
 import json
-import os.path
 import sys
+from pathlib import Path
 
 import jsonref
+from ocdsextensionregistry import get_versioned_release_schema
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+basedir = Path(__file__).resolve().parent.parent
 
-from manage import get_metaschema, get_versioned_release_schema
+sys.path.extend([str(basedir), str(basedir / "docs")])
+
+from conf import release  # noqa: E402
+
+from manage import get_metaschema  # noqa: E402
 
 
 def test_versioned_release_schema_is_in_sync():
@@ -18,7 +23,7 @@ def test_versioned_release_schema_is_in_sync():
         actual = json.load(f)
 
     with open("schema/release-schema.json") as f:
-        expected = get_versioned_release_schema(json.load(f))
+        expected = get_versioned_release_schema(json.load(f), release.replace(".", "__"))
 
     assert actual == expected, "Run: python manage.py pre-commit"
 

@@ -768,10 +768,6 @@ Each `Milestone` has the following fields:
 :collapse: documents
 ```
 
-```{extensionlist} The following extensions to milestone are available
-:list: milestones
-```
-
 ```{workedexamplelist} The following worked examples are available for milestones
 :tag: milestone
 ```
