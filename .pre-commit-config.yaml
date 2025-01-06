@@ -5,12 +5,12 @@ default_language_version:
     python: python3.10
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.6.9
+    rev: v0.8.6
     hooks:
       - id: ruff
       - id: ruff-format
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.4.18
+    rev: 0.5.14
     hooks:
       - id: pip-compile
         name: pip-compile common-requirements.in
