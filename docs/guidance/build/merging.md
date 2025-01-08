@@ -48,9 +48,9 @@ Another government agency in Colombia publishes a new procurement opportunity. D
 
 A few days after releasing the tender notice, the government agency receives feedback for potential bidders, and they realize that the estimated contract period set for the tender could be infeasible. They decide to instead negotiate the contract period with the supplier, and they remove the contract period from the opportunity to avoid confusing potential bidders.
 
-A release with a 'tenderAmendment' tag is published, in which both the `startDate` and `endDate` of the `contractPeriod` block have been set to `null`. Also, an `amendments` block is provided to explain the changes.
+A release with a 'tenderAmendment' tag is published, in which both the `startDate` and `endDate` of the `contractPeriod` object have been set to `null`. Also, an `amendments` array is provided to explain the changes.
 
-The final record is shown below. Note that the fields in the `contractPeriod` block have disappeared in the `compiledRelease`, and the `versionedRelease` contains the previous values.
+The final record is shown below. Note that the fields in the `contractPeriod` object have disappeared in the `compiledRelease`, and the `versionedRelease` contains the previous values.
 
 ```{jsoninclude} ../../examples/merging/deletions/object_tender.json
 :jsonpointer:

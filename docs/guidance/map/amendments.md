@@ -18,7 +18,7 @@ The nature of a change can be made explicit using:
 
 * **The release tag** field (`tag`), which is used to identify the type of change. For example, 'contract' identifies information about a new contract, 'contractUpdate' identifies an update to existing information about a contract, and 'contractAmendment' identifies a formal amendment to a contract.
 
-* **The amendments** fields (`tender.amendments`, `awards.amendments` and `contracts.amendments`), which are used to list amendments along with their rationales and references to the releases that contain "before" and "after" values.
+* **The amendments** array. Each item in the array is an `Amendment` object, including a rationale, a description, and references to the releases that contain before and after values.
 
 ## Worked examples
 
@@ -109,7 +109,7 @@ This can be modelled as the separate releases in OCDS as shown below. The origin
 :title: ContractAmendment
 ```
 
-Note that the mapping of the fields remains the same for the contract amendments, except for the `description` column. When a row in the contract signature notices table is identified as an original contract, the description is included in the `contracts/description` field, and when the row represents a contract amendment, it is mapped to the `contracts/amendments/description` field. This aligns with the use of the `description` column, because for contract amendments it is used to include an explanation of the change.
+Note that the mapping of the fields remains the same for the contract amendments, except for the `description` column. When a row in the contract signature notices table is identified as an original contract, the description is included in the `contracts.description` field, and when the row represents a contract amendment, it is mapped to the `contracts.amendments.description` field. This aligns with the use of the `description` column, because for contract amendments it is used to include an explanation of the change.
 
 The advantage of this approach, in contrast with the Easy releases proposal, is that the users have access to the details of each amendment instead of the latest values only without any additional effort of their end.
 
