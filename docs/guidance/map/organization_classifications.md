@@ -39,7 +39,7 @@ This example previously used the [party scale extension](https://extensions.open
 
 ### Option 2: Organization classification extension
 
-In the examples below, two different publishers have disclosed information about organizations involved in their contracting processes. An organization classification needs to consist of at least two parts: an identifier for the list (scheme) from which the classification is taken, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification. In the first example below, the publisher re-uses an existing `classification.scheme`. In the second example below, where a publisher wishes to track specific policy-related data, a local list of categories is used in preference to mapping to a generic set.
+In the examples below, two different publishers have disclosed information about organizations involved in their contracting processes. An organization classification needs to consist of at least two parts: an identifier for the list (scheme) from which the classification is taken, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification. In the first example below, the publisher reuses an existing `classification.scheme`. In the second example below, where a publisher wishes to track specific policy-related data, a local list of categories is used in preference to mapping to a generic set.
 
 #### Classification schemes
 

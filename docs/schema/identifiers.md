@@ -196,7 +196,7 @@ Contracts must cross-reference a related award (using the `awardID` field), as k
 
 An item, document or milestone identifier must be unique within a given array of items, and must be used consistently across all the releases in a (contracting or planning) process.
 
-The same `id` value may be re-used in another array of items within the same release, and no cross-reference between these identifiers is implied.
+The same `id` value may be reused in another array of items within the same release, and no cross-reference between these identifiers is implied.
 
 The use of an identifier means that subsequent releases can update prior identified items, documents or milestones, without needing to republish all the items, documents or milestones.
 

@@ -172,7 +172,7 @@ Per the [normative and non-normative content and changes policy](../governance/n
 
 * `releaseTag.csv`:
   * [#1238](https://github.com/open-contracting/standard/pull/1238) Open the `releaseTag` codelist.
-  * [#1415](https://github.com/open-contracting/standard/pull/1415) [#1509](https://github.com/open-contracting/standard/pull/1509) Align descriptions of 'planning', 'tender', 'award' and 'contract' with the corresponding schema fields.
+  * [#1415](https://github.com/open-contracting/standard/pull/1415) [#1509](https://github.com/open-contracting/standard/pull/1509) ([#1731](https://github.com/open-contracting/standard/pull/1731)) Align descriptions of 'planning', 'tender', 'award' and 'contract' with the corresponding schema fields.
 
 * `unitClassificationScheme.csv`:
   * [#1689](https://github.com/open-contracting/standard/pull/1689) Update the instructions on how to find identifiers within the QUDT scheme.
