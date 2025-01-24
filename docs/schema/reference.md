@@ -377,7 +377,7 @@ See the [amendment implementation guidance](../guidance/map/amendments) for more
 
 ## Building block reference
 
-The following building blocks are commonly re-used throughout the standard.
+The following building blocks are commonly reused throughout the standard.
 
 ### OrganizationReference
 
