@@ -120,7 +120,6 @@ extension_versions = {
     "enquiries": default_extension_version,
     "location": default_extension_version,
     "lots": default_extension_version,
-    "milestone_documents": default_extension_version,
     "participation_fee": default_extension_version,
     "process_title": default_extension_version,
 }
