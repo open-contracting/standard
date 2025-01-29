@@ -1,10 +1,11 @@
-#!/usr/bin/env bash
-# No -e, because diff fails.
-set -uo pipefail
+#!/bin/sh
+
+# No -e, because diff uses exit status 1 when differences are found.
+set -u
 
 curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/docs/conf.py | diff -u - docs/conf.py
 
-for f in .github/workflows/ci.yml .github/workflows/js.yml .github/workflows/spellcheck.yml include/config.mk; do
+for f in .github/workflows/ci.yml .github/workflows/spellcheck.yml include/config.mk; do
     curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/$f | diff -u - $f
 done
 

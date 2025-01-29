@@ -1,15 +1,15 @@
 # See https://github.com/datamade/data-making-guidelines
 
-# See http://clarkgrubb.com/makefile-style-guide#phony-target-arg
+# See https://clarkgrubb.com/makefile-style-guide#phony-target-arg
 FORCE:
 
-# http://blog.jgc.org/2007/06/escaping-comma-and-space-in-gnu-make.html
+# https://blog.jgc.org/2007/06/escaping-comma-and-space-in-gnu-make.html
 COMMA := ,
 SPACE :=
 SPACE +=
 COMMA_SEPARATED_TRANSLATIONS=$(subst $(SPACE),$(COMMA),$(TRANSLATIONS:.%=%))
 
-# See http://clarkgrubb.com/makefile-style-guide#phony-targets
+# See https://clarkgrubb.com/makefile-style-guide#phony-targets
 .PHONY: clean
 clean:
 	rm -rf $(BUILD_DIR)
@@ -45,7 +45,7 @@ extract_schema: $(POT_DIR)
 
 # The codelist CSV files and JSON Schema files must be present for the `csv-table-no-translate` and `jsonschema`
 # directives to succeed, but the contents of the files have no effect on the generated .pot files.
-# See http://www.sphinx-doc.org/en/stable/builders.html#sphinx.builders.gettext.MessageCatalogBuilder
+# See https://www.sphinx-doc.org/en/master/usage/builders/index.html#sphinx.builders.gettext.MessageCatalogBuilder
 .PHONY: extract_markdown
 extract_markdown: current_lang.en
 	sphinx-build -nW --keep-going -q -b gettext $(DOCS_DIR) $(POT_DIR)
@@ -110,7 +110,7 @@ clean_current_lang:
 ### Build
 
 # Build the source documentation.
-# See http://www.sphinx-doc.org/en/stable/builders.html#sphinx.builders.html.DirectoryHTMLBuilder
+# See https://www.sphinx-doc.org/en/master/usage/builders/index.html#sphinx.builders.html.DirectoryHTMLBuilder
 .PHONY: build_source
 build_source: current_lang.en
 	sphinx-build -nW --keep-going -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
