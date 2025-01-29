@@ -159,7 +159,6 @@ $(LANGUAGES:.%=pdf.%): pdf.%: FORCE
 		--javascript-delay $(PDF_DELAY) \
 		--disable-smart-shrinking \
 		--print-media-type \
-		--header-html include/header.html \
 		toc https://standard.open-contracting.org$(PDF_ROOT)/$*/$(PDF_PAGES) $*.pdf
 
 .PHONY: pdf
