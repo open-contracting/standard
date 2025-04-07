@@ -232,12 +232,12 @@ def pre_commit():
         field.sep = "/"
         if name in counts and bool(counts[name]) ^ multilingual:
             if not multilingual and field.schema["type"] == "object":
-                click.secho(f'{field.path} is an object. {" & ".join(counts[name])} is/are multilingual.', fg="yellow")
+                click.secho(f"{field.path} is an object. {' & '.join(counts[name])} is/are multilingual.", fg="yellow")
             elif multilingual:
                 raise click.ClickException(f"{name} is multilingual at {field.path}, but not elsewhere")
             else:
                 raise click.ClickException(
-                    f'{name} is multilingual at {" & ".join(counts[name])}, but not at {field.path}'
+                    f"{name} is multilingual at {' & '.join(counts[name])}, but not at {field.path}"
                 )
         if multilingual:
             counts[name].append(field.path)
