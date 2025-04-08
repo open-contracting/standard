@@ -39,6 +39,7 @@ def custom_warning_formatter(message, category, filename, lineno, line=None):
 
 
 warnings.formatwarning = custom_warning_formatter
+logger = logging.getLogger(__name__)
 
 
 def json_load(filename):
@@ -232,12 +233,12 @@ def pre_commit():
         field.sep = "/"
         if name in counts and bool(counts[name]) ^ multilingual:
             if not multilingual and field.schema["type"] == "object":
-                click.secho(f'{field.path} is an object. {" & ".join(counts[name])} is/are multilingual.', fg="yellow")
+                click.secho(f"{field.path} is an object. {' & '.join(counts[name])} is/are multilingual.", fg="yellow")
             elif multilingual:
                 raise click.ClickException(f"{name} is multilingual at {field.path}, but not elsewhere")
             else:
                 raise click.ClickException(
-                    f'{name} is multilingual at {" & ".join(counts[name])}, but not at {field.path}'
+                    f"{name} is multilingual at {' & '.join(counts[name])}, but not at {field.path}"
                 )
         if multilingual:
             counts[name].append(field.path)
@@ -314,7 +315,7 @@ def update_currency():
     # List One: Current Currency & Funds
     current_codes = {}
     url = "https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/lists/list_one.xml"
-    tree = etree.fromstring(get(url).content)  # noqa: S320 # trusted external
+    tree = etree.fromstring(get(url).content)  # trusted external
     for node in tree.xpath("//CcyNtry"):
         # Entries like Antarctica have no universal currency.
         if node.xpath("./Ccy"):
@@ -329,7 +330,7 @@ def update_currency():
     # List Three: Historic Denominations (Currencies & Funds)
     historic_codes = {}
     url = "https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/lists/list_three.xml"
-    tree = etree.fromstring(get(url).content)  # noqa: S320 # trusted external
+    tree = etree.fromstring(get(url).content)  # trusted external
     for node in tree.xpath("//HstrcCcyNtry"):
         code = node.xpath("./Ccy")[0].text
         title = node.xpath("./CcyNm")[0].text.strip()
@@ -406,7 +407,7 @@ def update_media_type():
                 template = row["Template"]
                 # All messages are expected to be about deprecation and obsoletion.
                 if message:
-                    logging.warning("%s: %s", message, code)
+                    logger.warning("%s: %s", message, code)
                 # "x-emf" has "image/emf" in its "Template" value (but it is deprecated).
                 elif template and template != code:
                     raise click.ClickException(f"expected {code}, got {template}")
