@@ -39,6 +39,7 @@ def custom_warning_formatter(message, category, filename, lineno, line=None):
 
 
 warnings.formatwarning = custom_warning_formatter
+logger = logging.getLogger(__name__)
 
 
 def json_load(filename):
@@ -406,7 +407,7 @@ def update_media_type():
                 template = row["Template"]
                 # All messages are expected to be about deprecation and obsoletion.
                 if message:
-                    logging.warning("%s: %s", message, code)
+                    logger.warning("%s: %s", message, code)
                 # "x-emf" has "image/emf" in its "Template" value (but it is deprecated).
                 elif template and template != code:
                     raise click.ClickException(f"expected {code}, got {template}")
