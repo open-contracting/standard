@@ -315,7 +315,7 @@ def update_currency():
     # List One: Current Currency & Funds
     current_codes = {}
     url = "https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/lists/list_one.xml"
-    tree = etree.fromstring(get(url).content)  # noqa: S320 # trusted external
+    tree = etree.fromstring(get(url).content)  # trusted external
     for node in tree.xpath("//CcyNtry"):
         # Entries like Antarctica have no universal currency.
         if node.xpath("./Ccy"):
@@ -330,7 +330,7 @@ def update_currency():
     # List Three: Historic Denominations (Currencies & Funds)
     historic_codes = {}
     url = "https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/amendments/lists/list_three.xml"
-    tree = etree.fromstring(get(url).content)  # noqa: S320 # trusted external
+    tree = etree.fromstring(get(url).content)  # trusted external
     for node in tree.xpath("//HstrcCcyNtry"):
         code = node.xpath("./Ccy")[0].text
         title = node.xpath("./CcyNm")[0].text.strip()
