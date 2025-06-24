@@ -3,6 +3,8 @@ on: [push, pull_request]
 jobs:
   build:
     uses: open-contracting/.github/.github/workflows/ci-profile.yml@main
+    permissions:
+      contents: read
     secrets:
       private-key: ${{ secrets.PRIVATE_KEY }}
       elasticsearch-password: ${{ secrets.ELASTICSEARCH_PASSWORD }}

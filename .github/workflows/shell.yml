@@ -3,3 +3,5 @@ on: [push, pull_request]
 jobs:
   lint:
     uses: open-contracting/.github/.github/workflows/shell.yml@main
+    permissions:
+      contents: read
