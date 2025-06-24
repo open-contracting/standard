@@ -3,6 +3,8 @@ on: [push, pull_request]
 jobs:
   lint:
     uses: open-contracting/.github/.github/workflows/spellcheck.yml@main
+    permissions:
+      contents: read
     with:
       ignore: fo,sme,zar
       skip: docson,locale,examples,country.csv,currency.csv,language.csv,mediaType.csv
