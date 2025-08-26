@@ -1,21 +1,21 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) Open Contracting Partnership
-# This file is distributed under the same license as the Open Contracting Data Standard package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Open Contracting Data Standard 1.1\n"
+"Project-Id-Version: ocds-11\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-13 09:12-0300\n"
-"PO-Revision-Date: 2021-07-31 18:32+0000\n"
-"Language-Team: French (https://www.transifex.com/open-contracting-partnership-1/teams/112300/fr/)\n"
+"POT-Creation-Date: 2025-08-26 01:08-0400\n"
+"PO-Revision-Date: 2025-08-26 14:09\n"
+"Last-Translator: \n"
+"Language-Team: French\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Crowdin-Project: ocds-11\n"
+"X-Crowdin-Project-ID: 809346\n"
+"X-Crowdin-Language: fr\n"
+"X-Crowdin-File: /primer/releases_and_records.pot\n"
+"X-Crowdin-File-ID: 1108\n"
+"Language: fr_FR\n"
 
 #: ../../docs/primer/releases_and_records.md:1
 msgid "How is OCDS data published?"
@@ -25,101 +25,64 @@ msgstr ""
 msgid "Objectives"
 msgstr ""
 
-#: ../../docs/primer/releases_and_records.md:1
-msgid ""
-"Open Contracting Data Standard (OCDS) data is published and updated over "
-"time using two types of JSON data: “releases” and “records.” This page will:"
+#: ../../docs/primer/releases_and_records.md:6
+msgid "Open Contracting Data Standard (OCDS) data is published and updated over time using two types of JSON data: “releases” and “records.” This page will:"
 msgstr ""
 
-#: ../../docs/primer/releases_and_records.md:3
+#: ../../docs/primer/releases_and_records.md:8
 msgid "Outline the purpose of releases and records"
 msgstr ""
 
-#: ../../docs/primer/releases_and_records.md:4
+#: ../../docs/primer/releases_and_records.md:9
 msgid "Describe how to publish a change history using releases and records"
 msgstr ""
 
-#: ../../docs/primer/releases_and_records.md:5
+#: ../../docs/primer/releases_and_records.md:10
 msgid "Show the components of an OCDS record"
 msgstr ""
 
 #: ../../docs/primer/releases_and_records.md:24
-msgid ""
-"The only thing that can be truly called “OCDS data” is JSON data that "
-"validates against the OCDS schema. There are two schemas for OCDS data: "
-"“releases” and “records.”"
+msgid "The only thing that can be truly called “OCDS data” is JSON data that validates against the OCDS schema. There are two schemas for OCDS data: “releases” and “records.”"
 msgstr ""
 
 #: ../../docs/primer/releases_and_records.md:26
-msgid ""
-"OCDS publishers are encouraged to use releases and records to publish data "
-"in near real-time and to provide a change history. Tracking change over time"
-" is important to users of contracting data because there can be many changes"
-" in the life of a contracting process. Knowing how and when certain "
-"attributes have changed can help users to understand the process, identify "
-"inefficiencies, and spot red flags for corruption."
+msgid "OCDS publishers are encouraged to use releases and records to publish data in near real-time and to provide a change history. Tracking change over time is important to users of contracting data because there can be many changes in the life of a contracting process. Knowing how and when certain attributes have changed can help users to understand the process, identify inefficiencies, and spot red flags for corruption."
 msgstr ""
 
 #: ../../docs/primer/releases_and_records.md:28
-msgid ""
-"A **release** is JSON data that is published each time there is a change to "
-"a contracting process. Releases follow the OCDS [release "
-"schema](../schema/reference) and contain an OCID to identify the contracting"
-" process they relate to."
+msgid "A **release** is JSON data that is published each time there is a change to a contracting process. Releases follow the OCDS [release schema](../schema/reference) and contain an OCID to identify the contracting process they relate to."
 msgstr ""
 
 #: ../../docs/primer/releases_and_records.md:30
-msgid ""
-"Releases are immutable, which means they cannot be changed once published. "
-"There can be many releases per contracting process and the collection of "
-"releases for a contracting process constitutes its change history."
+msgid "Releases are immutable, which means they cannot be changed once published. There can be many releases per contracting process and the collection of releases for a contracting process constitutes its change history."
 msgstr ""
 
 #: ../../docs/primer/releases_and_records.md:32
-msgid ""
-"A **record** is JSON data that acts as an index of all releases for a single"
-" contracting process. While releases are never updated, records are updated "
-"each time there is a change to a contracting process by adding a new release"
-" to this index. Records follow the OCDS [record "
-"schema](../schema/records_reference) and, in addition to the release index, "
-"can also contain:"
+msgid "A **record** is JSON data that acts as an index of all releases for a single contracting process. While releases are never updated, records are updated each time there is a change to a contracting process by adding a new release to this index. Records follow the OCDS [record schema](../schema/records_reference) and, in addition to the release index, can also contain:"
 msgstr ""
 
 #: ../../docs/primer/releases_and_records.md:34
-msgid ""
-"A **compiled release,** which follows the same structure as a release and "
-"provides the latest value of each field. The compiled release makes it easy "
-"for users to get the latest version of the data about a contracting process."
+msgid "A **compiled release,** which follows the same structure as a release and provides the latest value of each field. The compiled release makes it easy for users to get the latest version of the data about a contracting process."
 msgstr ""
 
 #: ../../docs/primer/releases_and_records.md:35
-msgid ""
-"A **versioned release,** which contains a history of changes for each field "
-"and allows users to see how a particular field has changed over time."
+msgid "A **versioned release,** which contains a history of changes for each field and allows users to see how a particular field has changed over time."
 msgstr ""
 
 #: ../../docs/primer/releases_and_records.md:37
-msgid ""
-"Each time a new release is published it is added to the index, the compiled "
-"release is updated with the latest values, and the versioned release is "
-"updated with any new changes."
+msgid "Each time a new release is published it is added to the index, the compiled release is updated with the latest values, and the versioned release is updated with any new changes."
 msgstr ""
 
 #: ../../docs/primer/releases_and_records.md:39
-msgid ""
-"![A contracting process is described by many releases, which are aggregated "
-"into a single record](../_static/png/change_history_process_record.png)"
+msgid "![A contracting process is described by many releases, which are aggregated into a single record](../_static/png/change_history_process_record.png)"
+msgstr ""
+
+#: ../../docs/primer/releases_and_records.md:39
+msgid "A contracting process is described by many releases, which are aggregated into a single record"
 msgstr ""
 
 #: ../../docs/primer/releases_and_records.md:41
-msgid ""
-"Records and releases each contain several fields which can be used in "
-"different sections. The OCDS schema sets out the fields that ought to be "
-"included in each section (where applicable), aiming to reuse simple "
-"structures to represent information. For example, a release may contain "
-"information about items being procured. OCDS’ schema sets out standard "
-"building blocks for items across releases, including the name of the item, a"
-" description, each item’s value, and the currency used."
+msgid "Records and releases each contain several fields which can be used in different sections. The OCDS schema sets out the fields that ought to be included in each section (where applicable), aiming to reuse simple structures to represent information. For example, a release may contain information about items being procured. OCDS’ schema sets out standard building blocks for items across releases, including the name of the item, a description, each item’s value, and the currency used."
 msgstr ""
 
 #: ../../docs/primer/releases_and_records.md:43
@@ -134,29 +97,23 @@ msgstr ""
 msgid "Produce bulk packages of releases and records for users to download"
 msgstr ""
 
-#: ../../docs/primer/releases_and_records.md:1
-msgid ""
-"**To learn more,** go to the next page in the Primer: [How can I implement "
-"the OCDS?](next) You can also review the further resources below to go "
-"deeper into the subjects introduced on this page."
+#: ../../docs/primer/releases_and_records.md:49
+msgid "**To learn more,** go to the next page in the Primer: [How can I implement the OCDS?](next) You can also review the further resources below to go deeper into the subjects introduced on this page."
 msgstr ""
 
-#: ../../docs/primer/releases_and_records.md:3
-msgid ""
-"[OCP Learning: Publishing OCDS Data](https://www.open-"
-"contracting.org/learn/publish/)"
+#: ../../docs/primer/releases_and_records.md:51
+msgid "[OCP Learning: Publishing OCDS Data](https://www.open-contracting.org/learn/publish/)"
 msgstr ""
 
-#: ../../docs/primer/releases_and_records.md:4
-msgid ""
-"[Video Learning Guide to the "
-"OCDS](https://www.youtube.com/playlist?list=PL7sSifLpWd8hLOVrNMiwNApXAsOr06E1Q)"
+#: ../../docs/primer/releases_and_records.md:52
+msgid "[Video Learning Guide to the OCDS](https://www.youtube.com/playlist?list=PL7sSifLpWd8hLOVrNMiwNApXAsOr06E1Q)"
 msgstr ""
 
-#: ../../docs/primer/releases_and_records.md:5
+#: ../../docs/primer/releases_and_records.md:53
 msgid "[OCDS Schema Release Reference](../schema/reference)"
 msgstr ""
 
-#: ../../docs/primer/releases_and_records.md:6
+#: ../../docs/primer/releases_and_records.md:54
 msgid "[OCDS Schema Record Reference](../schema/records_reference)"
 msgstr ""
+
