@@ -19,8 +19,6 @@ DIST_FILES=
 POT_DIR=$(BUILD_DIR)/locale
 # The prefix, if any, to the schema and codelists domains.
 DOMAIN_PREFIX=
-# The Transifex project name.
-TRANSIFEX_PROJECT=open-contracting-standard-1-1
 # Any additional extract targets.
 EXTRACT_TARGETS=
 # Extra arguments for sphinx-autobuild.
