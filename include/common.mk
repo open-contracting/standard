@@ -63,37 +63,6 @@ docs/locale: $(TRANSLATIONS:.%=docs/locale/%)
 pocount:
 	find $(LOCALE_DIR) -name LC_MESSAGES -exec pocount --incomplete --short "{}" +
 
-### Transifex
-
-.PHONY: clean_txconfig
-clean_txconfig:
-	rm -f .tx/config
-	sphinx-intl create-txconfig
-
-.PHONY: update_txconfig
-update_txconfig:
-	sphinx-intl update-txconfig-resources --transifex-organization-name $(TRANSIFEX_ORGANIZATION) --transifex-project-name $(TRANSIFEX_PROJECT) --pot-dir $(POT_DIR) --locale-dir $(LOCALE_DIR)
-
-# Builds and pushes the .pot files (`source_file` in .tx/config) to Transifex.
-.PHONY: push
-push: extract
-	tx push -s
-
-force_push.%: extract
-	tx push -f -s -t -l $*
-
-# Also pushes the translation .po files (`file_filter` in .tx/config) to Transifex.
-.PHONY: force_push
-force_push: extract
-	tx push -f -s -t -l $(COMMA_SEPARATED_TRANSLATIONS)
-
-pull.%: FORCE
-	tx pull -f -l $*
-
-.PHONY: pull
-pull:
-	tx pull -f -l $(COMMA_SEPARATED_TRANSLATIONS)
-
 ### Current language
 
 # Create a symlink for the language, so that file paths in `jsonschema` directives resolve.
