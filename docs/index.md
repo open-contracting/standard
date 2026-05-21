@@ -48,7 +48,7 @@ Review the schemas, codelists and rules that need to be followed to publish OCDS
 :link-type: doc
 :text-align: center
 
-Get free support and learn how to participate in the OCDS community
+Get support and learn how to participate in the OCDS community
 ```
 
 ```{grid-item-card} History
