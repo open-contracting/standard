@@ -2,8 +2,8 @@
 
 An OCDS [record](../schema/records_reference) aggregates all the releases available for a contracting (or planning) process at a given time, and can include:
 
-* a compiled release, which expresses the current state of the contracting (or planning) process, by showing only the most recent field values
-* a versioned release, which expresses all historical states of the contracting (or planning) process, by showing all the field values over time
+* a compiled release, which expresses the current state of the contracting (or planning) process, by showing only the most recent field values.
+* a versioned release, which expresses all historical states of the contracting (or planning) process, by showing all the field values over time.
 
 **Merging** is the process of combining individual releases with the same OCDS version into a compiled or versioned release, described in more detail below. At a high level:
 
@@ -18,20 +18,14 @@ Guidance: [Updates and deletions](../guidance/build/merging)
 
 ### Discarded fields
 
-In the release schema, `"omitWhenMerged": true` is declared on fields that must be discarded during merging. These are presently: `id`, `date` and `tag`.
+In the release schema, `"omitWhenMerged": true` is declared on fields that must be discarded during merging. These are presently: `id`, `date`, `publisher` and `tag`.
 
 * For a compiled release:
-  * Both the fields and their values are discarded, because they are metadata about the individual releases; the compiled release replaces these with its own metadata.
+  * Both the fields and their values are discarded, because they are metadata about the individual releases. The compiled release replaces these with its own metadata, as described below.
 * For a versioned release:
   * The fields are discarded, but their values are moved, as described below, in order to indicate from which releases each other field value is taken.
 
 If `omitWhenMerged` is set to `false`, ignore it.
-
-```{note}
-The compiled release presently uses the same schema as the release schema, which means that the `id`, `date` and `tag` fields are required in a compiled release. We invite discussion on whether to change these requirements in a separate compiled release schema in issue [#330](https://github.com/open-contracting/standard/issues/330).
-
-In the meantime, an intermediate solution is to set `tag` to `["compiled"]`, `date` to the maximum `date` among the individual releases used to create the compiled release, and `id` to `{ocid}-{date}`, like in the [reference implementation](#reference-implementation) of the merge routine.
-```
 
 ### Versioned values
 
@@ -87,6 +81,8 @@ To create a compiled or versioned release, you must:
 1. For a compiled release:
   1. Set `date` to the maximum `date` among the releases.
   1. Set `id` to `{ocid}-{date}`.
+  1. Set `tag` to all the unique tags from all the releases, plus the 'compiled' tag.
+  1. Optionally, set `publisher` to the publisher of the compiled release.
 1. Merge each release (**input**), in order, into the JSON object (**output**), as follows:
 
 #### Object values
