@@ -661,14 +661,14 @@ Support for exchange rates can be provided using extensions.
 
 ### RelatedProcess
 
-In OCDS each contracting process can have only one tender stage. There are a number of cases where it is important to know about related contracting processes, including:
+A `RelatedProcess` is defined as:
 
-* When one planning process results in many tenders;
-* When a contract is awarded following two distinct, but related, tender processes, such as in national frameworks with locally run mini-competitions;
-* When a contract results in the award of sub-contracts - and those sub-contracts are also tracked using OCDS;
-* When a contract is coming up for renewal or replacement, and there is a contracting process to award  the renewal/replacement contract;
+```{field-description} ../../build/current_lang/release-schema.json /definitions/RelatedProcess
+```
 
-In all these cases, the `relatedProcess` block should be used to cross-reference between the relevant contracting processes using their `ocid`.
+The [Related Process](codelists.md#related-process) codelist defines the possible types of relationship. Contracting processes should refer to related processes using the codes in the codelist.
+
+As well as providing a machine-readable link between processes, publishers may also provide links to human-readable documentation in the relevant `documents` array. For example, when a contracting process refers to a planning process, a link to the procurement plan can be provided in `tender/documents`.
 
 ````{admonition} Example
 :class: hint
@@ -682,18 +682,6 @@ In all these cases, the `relatedProcess` block should be used to cross-reference
 ```{jsonschema} ../../build/current_lang/release-schema.json
 :pointer: /definitions/RelatedProcess
 ```
-
-A related process can be declared at two points in an OCDS release.
-
-**(1) At the release level** - used to point backwards to prior processes, such as planning or framework establishment.
-
-**(2) At the contract level** - used to point onward to sub-contracts, renewal or replacement processes that relate solely to the particular contract the field appears in.
-
-As well as providing this machine-readable link between processes, publishers may also provide links to human-readable documentation in the relevant `documents` blocks. For example:
-
-* When recording a `release/relatedProcess` pointing to the ocid of the planning process that resulted in a tender, a `tender/documents` entry with a `documentType` of 'procurementPlan' and a link to web pages about the procurement plan could be provided;
-* When recording a `contract/relatedProcess` pointing to the ocid of a  sub-contracting process, a `contract/documents` entry with a `documentType` of 'subContract' and a title that describes it as the subcontracting process, could be provided;
-* When recording a `contract/relatedProcess` pointing to the ocid of a contracting process to renew a given contract, a `contract/documents` entry with a `documentType` of 'tenderNotice' and a title that describes it as the successor process, could be provided;
 
 ### Location
 
