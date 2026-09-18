@@ -145,36 +145,38 @@ There are no identifiers for the individual supplier/value pairings on the origi
 
 [View the example in Paraguay's API](https://contrataciones.gov.py/datos/api/v3/doc/ocds/record/ocds-03ad3f-340885-1)
 ```
+
 ## Purchase orders
 
 A purchase order is a specific type of contract, an official document issued by a buyer committing to pay a supplier for the supply of specific goods, services or works to be delivered in the future.
 
 Purchase orders can be issued against an existing contract, or if no prior contract exists then acceptance of a purchase order by a supplier forms a contract between buyer and supplier.
 
-Purchase orders that are made against contracts with a definite quantity or value of items ought to not be disclosed in the `contracts` section of OCDS, due to the risk of double counting items on the purchase order and the contract it relates to.
+Purchase orders can be made against contracts that specify only minimum and maximum limits on the quantity or value of the items being procured. Such contracts are known as indefinite-delivery/indefinite-quantity (IDIQ) contracts. IDIQ contracts are considered to be two-stage procurement techniques and ought to be modelled according to the [guidance for framework agreements](https://standard.open-contracting.org/staging/1.2-dev/en/guidance/map/framework_agreements/).
+
+Purchase orders made against contracts with definite quantities or values ought to not be disclosed in the `contracts` section of OCDS, due to the risk of double counting.
 
 ### Example: Double counting contracts and purchase orders
 
-The UK's Department for Transport awards a £1.2m, 12-month contract to KPMG to provide the Project Management Office function for a project to construct a new highway bypass. The contract specifies that payment will be made quarterly in arrears in four equal amounts. The contract is represented in the `contracts` section of OCDS as follows:
+A buyer awards a contract worth 3,150m Gs for cleaning services across several office buildings. The contract is added to the `contracts` array.
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../examples/purchase_orders/parent_contract.csv
 ```
 
-Calculating the sum of the contract value in the above example gives the correct result of £1.2m.
 
-The Department for Transport issues a purchase order on the final day of each quarter of the contract term, each for £300k.
+The buyer issues three purchase orders for cleaning in three different buildings.
 
-If purchase orders were also disclosed in the `contracts` section of OCDS, by the end of the contract term, the `contracts` section of OCDS would be populated as follows:
+If the purchase orders were added to the `contracts` array, it would lead to double counting. The total value of the contracts in the OCDS data would be greater than the value of the real-life contract. 
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../examples/purchase_orders/contracts_pos.csv
 ```
 
-Calculating the sum of the contract value in the above example gives an incorrect result of £2.4m - double the actual value of the contract.
+The correct approach is to add only the 'parent' contract to the `contracts` array.
 
 ```{note}
-The approach for modelling purchase orders in OCDS is under discussion ([GitHub issue](https://github.com/open-contracting/standard/issues/897))
+The approach to modelling purchase orders in OCDS is not yet standardized. To aid standardization, implementers are encouraged to describe their use of purchase orders in the [GitHub issue](https://github.com/open-contracting/standard/issues/897).
 ```
