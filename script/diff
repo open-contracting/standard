@@ -3,14 +3,12 @@
 # No -e, because diff uses exit status 1 when differences are found.
 set -u
 
-curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/docs/conf.py | diff -u - docs/conf.py
-
-for f in .github/workflows/ci.yml .github/workflows/spellcheck.yml include/config.mk; do
-    curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/$f | diff -u - $f
+for f in biome.json .github/workflows/ci.yml .github/workflows/lint.yml .github/workflows/spellcheck.yml docs/conf.py include/config.mk; do
+    curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/refs/heads/latest/$f | diff -u - $f
 done
 
 if [ -d util ] || [ -d schema/project-level ]; then
-    curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/.gitignore | diff -u - .gitignore
+    curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/refs/heads/latest/.gitignore | diff -u - .gitignore
 else
-    curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/manage.py | diff -u - manage.py
+    curl -sS https://raw.githubusercontent.com/open-contracting/standard_profile_template/refs/heads/latest/manage.py | diff -u - manage.py
 fi
