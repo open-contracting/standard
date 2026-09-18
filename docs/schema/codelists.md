@@ -129,7 +129,6 @@ Added 'parent'. Deprecated 'subContract', 'replacementProcess' and 'renewalProce
 ```
 
 ```{seealso}
-* [Map: Contracting processes and planning processes](../guidance/map/contracting_planning_processes.md)
 * [Map: Framework agreements](../guidance/map/framework_agreements.md)
 ```
 

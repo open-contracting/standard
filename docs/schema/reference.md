@@ -2,7 +2,7 @@
 
 The [Release Schema](release) provides a detailed specification of the fields and data structures to use when publishing contracting data. Supplementary schemas show how to combine releases into release packages and how to compile releases into records.
 
-Releases are immutable – presenting information about a particular event in the lifetime of a contracting (or planning) process. Publishers must not edit a release after publication; a new release can be created by changing the release's `id` and `date`.
+Releases are immutable – presenting information about a particular event in the lifetime of a [contracting (or planning) process](#contracting-and-planning-processes). Publishers must not edit a release after publication; a new release can be created by changing the release's `id` and `date`.
 
 Releases must be published within a [release package](packaging/release_package).
 
@@ -14,9 +14,39 @@ Releases must be published within a [release package](packaging/release_package)
 This page presents the release schema in tables, with additional information in paragraphs. You can also download the canonical version of the release schema as [JSON Schema](../../build/current_lang/release-schema.json), download it as a [CSV spreadsheet](../../build/current_lang/release-schema.csv), view it in an [interactive browser](release), or access it through the [Field-Level Mapping Template](https://www.open-contracting.org/resources/ocds-field-level-mapping-template/).
 ```
 
+## Contracting and planning processes
+
+OCDS recognizes two types of processes: contracting processes and planning processes. In OCDS, a given process is uniquely identified by an [open contracting process identifier](identifiers.md#open-contracting-process-identifier-ocid) (`ocid`).
+
+OCDS defines a contracting process as:
+
+% Align the two blockquotes with the top-level `description` field of the `release-schema.json` file.
+
+> All the actions aimed at implementing one or more contracts. This covers tendering, awarding, contracting and implementation. It does not include actions linked to planning, as these are often less structured and may be linked to multiple contracting processes. In multi-stage procedures (for example, framework agreements with reopening of competition), each round of competition is treated as a separate contracting process.
+>
+> Procedures that failed and were restarted are considered new processes.
+>
+> Boundaries between processes (for example, whether two contracts result from a single process or from two processes) are set by buyers depending on their needs (for example, efficient division of labor, clear communication with the market) and legislation (for example, rules on using procedures and lots).
+
+OCDS defines a planning process as:
+
+> All the actions aimed at planning one or more contracting processes. This covers, for example, need identification, budget planning, and market research.
+>
+> Planning processes are often less structured than contracting processes, so one or more planning processes may lead to one or more contracting processes.
+
+Planning and contracting processes should be linked using the [`relatedProcesses`](#relatedprocess) array.
+
+```{note}
+We recommend publishing data about planning and contracting processes under separate `ocid`s, following the definitions above. That said, publications that combine planning and contracting data under a single `ocid` remain conformant in OCDS 1.2. A required separation can be considered for OCDS 2.0.
+```
+
+```{note}
+In OCDS 1.2 and earlier, it is not possible to publish all information about multi-stage procedures under a single `ocid`. There is guidance on how to deal with this for [framework agreements](../guidance/map/framework_agreements) and for [pre-qualification and pre-selection](../guidance/map/pre-qualification). If you want to disclose this type of information (including other types of multi-stage procedures, such as competitive dialogues and innovation partnerships), [contact the Data Support Team](../../support/index). The approach to modelling multi-stage procedures in a future, backwards-incompatible version of the standard is under discussion on [GitHub](https://github.com/open-contracting/standard/issues/440).
+```
+
 ## Release handling
 
-The full OCDS data model is based on the idea of publishing a new release every time information about a contracting (or planning) process changes. This way, users can gain a full view of change over time, and third-parties can understand what needs to be updated in any system that is tracking the progress of a contracting (or planning) process.
+The full OCDS data model is based on the idea of publishing a new release every time information about a [contracting (or planning) process](#contracting-and-planning-processes) changes. This way, users can gain a full view of change over time, and third-parties can understand what needs to be updated in any system that is tracking the progress of a contracting (or planning) process.
 
 Publishers will need to choose how to generate new releases, and whether to repeat information in each release, or just to provide changes. This choice ought to be based on an understanding of the [merging process](merging) that is used to generate a snapshot record of a full contracting (or planning) process.
 
@@ -56,7 +86,7 @@ For example, a publisher announcing the signing of a contract with a 'contract' 
 
 ### Release
 
-All new information about a contracting (or planning) process is described within a release. 
+All new information about a [contracting (or planning) process](#contracting-and-planning-processes) is described within a release.
 
 ````{admonition} Example
 :class: hint
@@ -148,7 +178,7 @@ The planning section is used in a planning process. This includes information ab
 
 #### Budget 
 
-Apart from documents, the majority of planning information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the contracting (or planning) process to existing projects and budgets even where linked data is not available.
+Apart from documents, the majority of planning information is held within the budget block. This is designed to allow both machine-readable linkable data about budgets, cross-referencing to data held in other standards such as the [Fiscal Data Package](https://specs.frictionlessdata.io/fiscal-data-package/) or [International Aid Transparency Initiative Standard](https://iatistandard.org/en/), and human readable description of the related budgets and projects, supporting users to understand the relationship of the [contracting (or planning) process](#contracting-and-planning-processes) to existing projects and budgets even where linked data is not available.
 
 ````{admonition} Example
 :class: hint
@@ -409,7 +439,7 @@ See the [parties](#parties) section.
 
 #### Identifier
 
-The identifier block provides a way to [identify the legal entities](identifiers.md#organization-identifiers) involved in a contracting (or planning) process.
+The identifier block provides a way to [identify the legal entities](identifiers.md#organization-identifiers) involved in a [contracting (or planning) process](#contracting-and-planning-processes).
 
 When describing an organizational unit (for example, a department or branch of an organization), the `identifier` field should identify the main organization. The other fields should describe the organizational unit. For more information, see [organizational units](../guidance/map/organizational_units.md).
 
@@ -463,7 +493,7 @@ When describing an organizational unit (for example, a department or branch of a
 
 Documents can be attached at a number of points within the standard: to planning, tenders, awards, contracts and implementation. Each document block can consist of multiple documents, classified using the [documentType](codelists.md#document-type) codelist.
 
-Documents related to contracting (or planning) processes should be public by default. For more information, see the Open Contracting Partnership's report [Mythbusting Confidentiality in Public Contracting](https://www.open-contracting.org/resources/mythbusting-confidentiality-public-contracting/) and the Center for Global Development's [Principles on Commercial Transparency in Public Contracts](https://www.cgdev.org/publication/principles-commercial-transparency-public-contracts).
+Documents related to [contracting (or planning) process](#contracting-and-planning-processes) should be public by default. For more information, see the Open Contracting Partnership's report [Mythbusting Confidentiality in Public Contracting](https://www.open-contracting.org/resources/mythbusting-confidentiality-public-contracting/) and the Center for Global Development's [Principles on Commercial Transparency in Public Contracts](https://www.cgdev.org/publication/principles-commercial-transparency-public-contracts).
 
 Documents should be published at their own stable URLs, accessible for free and without the need to search or login, and available at the time of publication of the OCDS release that refers to them.
 
