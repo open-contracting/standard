@@ -5,12 +5,12 @@ set -eu
 main() {
     mkdir -p script include tests
 
-    for f in .pre-commit-config.yaml .python-version Makefile common-requirements.in common-requirements.txt pyproject.toml .github/dependabot.yml .github/workflows/lint.yml .github/workflows/shell.yml docs/_static/favicon-16x16.ico include/common.mk include/prologue.mk script/diff script/update tests/conftest.py tests/test_common.py; do
-        curl -sS -o $f https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/$f
+    for f in .pre-commit-config.yaml .python-version Makefile common-requirements.in common-requirements.txt pyproject.toml .github/dependabot.yml .github/workflows/js.yml .github/workflows/shell.yml docs/_static/favicon-16x16.ico include/common.mk include/prologue.mk script/diff script/update tests/conftest.py tests/test_common.py; do
+        curl -sS -o $f https://raw.githubusercontent.com/open-contracting/standard_profile_template/refs/heads/latest/$f
     done
 
     if [ ! -d schema/project-level ]; then
-        curl -sS -o .gitignore https://raw.githubusercontent.com/open-contracting/standard_profile_template/latest/.gitignore
+        curl -sS -o .gitignore https://raw.githubusercontent.com/open-contracting/standard_profile_template/refs/heads/latest/.gitignore
     fi
 
     chmod +x script/*
