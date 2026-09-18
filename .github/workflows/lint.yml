@@ -4,8 +4,4 @@ jobs:
   lint:
     uses: open-contracting/.github/.github/workflows/lint.yml@main
     permissions:
-      contents: write
-    secrets:
-      personal-access-token: ${{ secrets.PAT }}
-    with:
-      python-version: '3.10'
+      contents: read

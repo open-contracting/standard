@@ -11,7 +11,6 @@ from selenium.webdriver.chrome.options import Options
 def browser(request):
     options = Options()
     options.add_argument("--headless")
-    options.add_argument("--no-sandbox")
 
     browser = webdriver.Chrome(options=options)
     browser.implicitly_wait(3)
