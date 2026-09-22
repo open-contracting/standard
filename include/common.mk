@@ -47,11 +47,11 @@ extract_schema: $(POT_DIR)
 # directives to succeed, but the contents of the files have no effect on the generated .pot files.
 # See https://www.sphinx-doc.org/en/master/usage/builders/index.html#sphinx.builders.gettext.MessageCatalogBuilder
 .PHONY: extract_markdown
-extract_markdown: current_lang.en
+extract_markdown:
 	sphinx-build -nW --keep-going -q -b gettext $(DOCS_DIR) $(POT_DIR)
 
 .PHONY: extract
-extract: extract_theme extract_codelists extract_schema $(EXTRACT_TARGETS) extract_markdown clean_current_lang
+extract: extract_theme extract_codelists extract_schema $(EXTRACT_TARGETS) extract_markdown
 
 $(TRANSLATIONS:.%=docs/locale/%): docs/locale/%: FORCE
 	sphinx-intl update -p $(POT_DIR) -d $(LOCALE_DIR) -l "$*"
@@ -63,43 +63,30 @@ docs/locale: $(TRANSLATIONS:.%=docs/locale/%)
 pocount:
 	find $(LOCALE_DIR) -name LC_MESSAGES -exec pocount --incomplete --short "{}" +
 
-### Current language
-
-# Create a symlink for the language, so that file paths in `jsonschema` directives resolve.
-# (Don't use clean_current_lang as a prerequisite, as then it won't run as a prerequisite later.)
-$(LANGUAGES:.%=current_lang.%): current_lang.%: $(BUILD_DIR)
-	rm -f $(BUILD_DIR)/current_lang
-	ln -s $* $(BUILD_DIR)/current_lang
-
-# Deploy script complains if current_lang is present.
-.PHONY: clean_current_lang
-clean_current_lang:
-	rm $(BUILD_DIR)/current_lang
-
 ### Build
 
 # Build the source documentation.
 # See https://www.sphinx-doc.org/en/master/usage/builders/index.html#sphinx.builders.html.DirectoryHTMLBuilder
 .PHONY: build_source
-build_source: current_lang.en
+build_source:
 	sphinx-build -nW --keep-going -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
 
 # Build the translated documentation. (Same as source, but with a language configuration setting.)
-$(TRANSLATIONS:.%=build.%): build.%: current_lang.%
+$(TRANSLATIONS:.%=build.%): build.%:
 	sphinx-build -nW --keep-going -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/$* -D language="$*"
 
 .PHONY: source
-source: build_source clean_current_lang
+source: build_source
 
-$(TRANSLATIONS:.%=%): %: build_source compile build.% clean_current_lang
+$(TRANSLATIONS:.%=%): %: build_source compile build.%
 
 .PHONY: all
-all: build_source compile $(TRANSLATIONS:.%=build.%) clean_current_lang
+all: build_source compile $(TRANSLATIONS:.%=build.%)
 
 ### Development
 
 .PHONY: autobuild
-autobuild: current_lang.en
+autobuild:
 	sphinx-autobuild $(SPHINX_AUTOBUILD_EXTRA_ARGS) -nW -q -b dirhtml $(DOCS_DIR) $(BUILD_DIR)/en
 
 .PHONY: update
@@ -111,14 +98,14 @@ update: clean_dist
 # "-" ignores the exit status. Schema files might contain old URLs that redirect, which can only be updated in a new version.
 
 .PHONY: linkcheck_source
-linkcheck_source: current_lang.en
+linkcheck_source:
 	-sphinx-build -q -b linkcheck $(DOCS_DIR) $(BUILD_DIR)/en
 
-$(TRANSLATIONS:.%=linkcheck.%): linkcheck.%: current_lang.%
+$(TRANSLATIONS:.%=linkcheck.%): linkcheck.%:
 	-sphinx-build -q -b linkcheck $(DOCS_DIR) $(BUILD_DIR)/$* -D language="$*"
 
 .PHONY: linkcheck
-linkcheck: linkcheck_source compile $(TRANSLATIONS:.%=linkcheck.%) clean_current_lang
+linkcheck: linkcheck_source compile $(TRANSLATIONS:.%=linkcheck.%)
 
 ### PDF generation
 

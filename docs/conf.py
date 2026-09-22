@@ -132,6 +132,13 @@ def setup(app):
     standard_dir = basedir / "schema"
     standard_build_dir = basedir / "build" / language
 
+    # `build/current_lang` paths in directives resolve to the language being built.
+    standard_build_dir.parent.mkdir(parents=True, exist_ok=True)
+    current_lang = standard_build_dir.parent / "current_lang"
+    current_lang.unlink(missing_ok=True)
+    current_lang.symlink_to(language)
+    app.connect("build-finished", lambda *args: current_lang.unlink(missing_ok=True))
+
     branch = os.getenv("GITHUB_REF_NAME", "latest")
 
     translate(
