@@ -27,13 +27,13 @@
     },
     "publisher": {
       "title": "Publisher",
-      "description": "The original publisher of this release.",
+      "description": "The original publisher of the release. The publisher of a compiled release for a contracting or planning process may differ from the publishers of its releases.",
       "omitWhenMerged": true,
       "$ref": "#/definitions/Identifier"
     },
     "tag": {
       "title": "Release Tag",
-      "description": "A tag labeling the release, using the the open [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. Tags distinguish, for example, planning and contracting processes and the stages of contracting processes. Codes outside the releaseTag codelist might indicate, for example, the notice or form to which the release corresponds, or the event that triggered the publication of the release. Planning processes must not use the 'tender' code, even if they use `tender` fields.",
+      "description": "For a release, a tag labeling the release, using the open [releaseTag](https://standard.open-contracting.org/{{version}}/{{lang}}/schema/codelists/#release-tag) codelist. For a compiled release, all unique tags from all releases for this contracting or planning process, plus the 'compiled' tag. Tags distinguish, for example, planning and contracting processes and the stages of contracting processes. Codes outside the releaseTag codelist might indicate, for example, the notice or form to which the release corresponds, or the event that triggered the publication of the release. Planning processes must not use the 'tender' code, even if they use `tender` fields.",
       "type": "array",
       "items": {
         "type": "string"
