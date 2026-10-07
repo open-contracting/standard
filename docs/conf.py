@@ -35,10 +35,51 @@ extensions = [
     "sphinxcontrib.opencontracting",
     "sphinxcontrib.opendataservices",
     "sphinx_design",
+    "sphinx_reredirects",
 ]
 
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "**/docson/[!p]**", "**/docson/package*.json"]
+
+# Pages that moved within the documentation. Targets are relative to the docs root.
+moved_pages = {
+    "getting_started/building_blocks": "primer/how/",
+    "getting_started/contracting_process": "primer/how/",
+    "getting_started/publication_patterns": "guidance/build/hosting/",
+    "getting_started/quality": "guidance/publish/quality/",
+    "getting_started/releases_and_records": "primer/releases_and_records/",
+    "getting_started/use_cases": "guidance/design/user_needs/",
+    "getting_started/validation": "guidance/build/#check-your-data",
+    "getting_started": "primer/",
+    "guidance/map/awards_contracts_buyers_suppliers": "guidance/map/awards_contracts/",
+    "guidance/map/award_notices_decisions": "guidance/map/awards_contracts/#awards-and-award-notices",
+    "guidance/map/mapping_awards_contracts": "guidance/map/awards_contracts/#awards-and-contracts",
+    "guidance/map/purchase_orders": "guidance/map/awards_contracts/#purchase-orders",
+    "guidance/map/consortia": "guidance/map/buyers_suppliers/#consortia-suppliers",
+    "guidance/map/frameworks": "guidance/map/framework_agreements/",
+    "guidance/map/related_processes": "guidance/map/framework_agreements/",
+    "guidance/map/unsuccessful_tender": "guidance/map/unsuccessful_processes/",
+    "guidance/map/catalogs": "guidance/map/electronic_catalogues/",
+    "extensions": "guidance/map/extensions/",
+    "implementation/amendments": "guidance/map/amendments/",
+    "implementation/hosting": "guidance/build/hosting/",
+    "implementation/levels": "guidance/publish/quality/",
+    "implementation/licensing": "guidance/publish/#license-your-data",
+    "implementation/publication_policy": "guidance/publish/#finalize-your-publication-policy",
+    "implementation/registration": "guidance/build/#register-an-ocid-prefix",
+    "implementation/related_processes": "guidance/map/framework_agreements/",
+    "implementation/serialization": "guidance/build/serialization/",
+    "implementation": "guidance/",
+    "schema/changelog": "history/changelog/",
+    "schema/deprecation": "governance/deprecation/",
+    "support/credits": "history/history_and_development/#appreciation",
+    "support/governance": "governance/",
+    "support/history_and_development": "history/history_and_development/",
+    "support/tools": "support/",
+}
+# https://documatt.com/sphinx-reredirects/usage/
+# The dirhtml builder writes each redirect to <source>/index.html, so the target is relative to <source>/.
+redirects = {source: "../" * (source.count("/") + 1) + target for source, target in moved_pages.items()}
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
