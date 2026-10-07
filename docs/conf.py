@@ -83,6 +83,8 @@ html_theme_options = {
     "analytics_id": "HTWZHRIZ",
     "display_version": True,
     "root_url": f"/profiles/{profile_identifier}" if profile_identifier else "",
+    # Render the banner and version switcher in the theme, instead of with Apache's server-side includes.
+    "versions_url": "../versions.json",
     "short_project": project.replace("Open Contracting Data Standard", "OCDS"),
     "copyright": copyright,
     "license_name": "Apache License 2.0",
