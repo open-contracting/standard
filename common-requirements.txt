@@ -13,6 +13,7 @@ attrs==25.4.0
     # via
     #   cattrs
     #   outcome
+    #   referencing
     #   requests-cache
     #   trio
 babel==2.18.0
@@ -40,9 +41,11 @@ docutils==0.18
     # via
     #   myst-parser
     #   sphinx
+    #   sphinxcontrib-opendataservices
+    #   sphinxcontrib-opendataservices-jsonschema
 elastic-transport==9.2.1
     # via elasticsearch
-elasticsearch==9.3.0
+elasticsearch[requests]==9.3.0
     # via ocdsindex
 h11==0.16.0
     # via
@@ -63,10 +66,21 @@ jinja2==3.1.6
     # via
     #   myst-parser
     #   sphinx
+jscc==0.5.0
+    # via sphinxcontrib-opendataservices-jsonschema
 json-merge-patch==0.2
-    # via ocdsextensionregistry
+    # via
+    #   jscc
+    #   ocdsextensionregistry
+jsonpointer==3.1.1
+    # via
+    #   sphinxcontrib-opendataservices
+    #   sphinxcontrib-opendataservices-jsonschema
 jsonref==1.0.0.post1
-    # via ocdsextensionregistry
+    # via
+    #   jscc
+    #   ocdsextensionregistry
+    #   sphinxcontrib-opendataservices-jsonschema
 linkify-it-py==1.0.1
     # via -r common-requirements.in
 lxml==6.1.0
@@ -84,7 +98,10 @@ mdurl==0.1.2
 mypy-extensions==1.1.0
     # via trio-typing
 myst-parser==0.18.1
-    # via -r common-requirements.in
+    # via
+    #   -r common-requirements.in
+    #   sphinxcontrib-opendataservices
+    #   sphinxcontrib-opendataservices-jsonschema
 ocds-babel==0.3.7
     # via -r common-requirements.in
 ocdsextensionregistry==0.6.5
@@ -116,18 +133,21 @@ python-dateutil==2.9.0.post0
     # via elasticsearch
 pyyaml==6.0.1
     # via myst-parser
+referencing==0.37.0
+    # via sphinxcontrib-opendataservices-jsonschema
 requests==2.33.0
     # via
     #   elasticsearch
+    #   jscc
     #   ocdsextensionregistry
     #   requests-cache
     #   sphinx
 requests-cache==1.1.0
     # via ocdsextensionregistry
+rpds-py==2026.6.3
+    # via referencing
 selenium==4.40.0
     # via -r common-requirements.in
-setuptools==84.0.0
-    # via sphinx-intl
 six==1.16.0
     # via
     #   python-dateutil
@@ -148,6 +168,7 @@ sphinx==5.3.0
     #   myst-parser
     #   sphinx-autobuild
     #   sphinx-intl
+    #   sphinxcontrib-opendataservices
 sphinx-autobuild==2024.9.3
     # via -r common-requirements.in
 sphinx-intl==2.2.0
@@ -160,12 +181,16 @@ sphinxcontrib-htmlhelp==2.0.0
     # via sphinx
 sphinxcontrib-jsmath==1.0.1
     # via sphinx
+sphinxcontrib-opendataservices==0.6.0
+    # via -r common-requirements.in
+sphinxcontrib-opendataservices-jsonschema==0.7.1
+    # via
+    #   -r common-requirements.in
+    #   sphinxcontrib-opendataservices
 sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-standard-theme @ git+https://github.com/open-contracting/standard_theme.git@c1594b82ed4f9d75b85b3cd0dfb86b3a0d9ef965#egg=standard_theme
-    # via -r common-requirements.in
 starlette==1.3.1
     # via sphinx-autobuild
 trio==0.32.0
@@ -191,7 +216,7 @@ uc-micro-py==1.0.1
     # via linkify-it-py
 url-normalize==1.4.3
     # via requests-cache
-urllib3==2.7.0
+urllib3[socks]==2.7.0
     # via
     #   elastic-transport
     #   requests
