@@ -78,10 +78,10 @@ $(TRANSLATIONS:.%=build.%): build.%:
 .PHONY: source
 source: build_source
 
-$(TRANSLATIONS:.%=%): %: build_source compile build.%
+$(TRANSLATIONS:.%=%): %: build_source build.%
 
 .PHONY: all
-all: build_source compile $(TRANSLATIONS:.%=build.%)
+all: build_source $(TRANSLATIONS:.%=build.%)
 
 ### Development
 
@@ -105,7 +105,7 @@ $(TRANSLATIONS:.%=linkcheck.%): linkcheck.%:
 	-sphinx-build -q -b linkcheck $(DOCS_DIR) $(BUILD_DIR)/$* -D language="$*"
 
 .PHONY: linkcheck
-linkcheck: linkcheck_source compile $(TRANSLATIONS:.%=linkcheck.%)
+linkcheck: linkcheck_source $(TRANSLATIONS:.%=linkcheck.%)
 
 ### PDF generation
 

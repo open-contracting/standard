@@ -32,8 +32,4 @@ PDF_PAGES={,primer/{,what/,how/,releases_and_records/,next/},guidance/{,design/,
 # be an indication of an iframe taking too long to load."
 PDF_DELAY=20000
 
-# Empty: `docs/conf.py` compiles the schema and codelists catalogs that `translate` reads.
-.PHONY: compile
-compile:
-
 # Put local targets below.
