@@ -9,6 +9,8 @@ import os
 from glob import glob
 from pathlib import Path
 
+from babel.messages.mofile import write_mo
+from babel.messages.pofile import read_po
 from docutils.nodes import make_id
 from ocds_babel.translate import translate
 from ocdskit.mapping_sheet import mapping_sheet
@@ -115,6 +117,16 @@ linkcheck_ignore = [
 ]
 
 
+def compile_catalogs(localedir, language, domains):
+    """Compile the catalogs that `translate` reads, as `pybabel compile --use-fuzzy` does."""
+    for domain in domains:
+        path = localedir / language / "LC_MESSAGES" / f"{domain}.po"
+        with path.open() as f:
+            catalog = read_po(f, locale=language, domain=domain)
+        with path.with_suffix(".mo").open("wb") as f:
+            write_mo(f, catalog, use_fuzzy=True)
+
+
 def setup(app):
     # The root of the repository.
     basedir = Path(__file__).resolve().parents[1]
@@ -132,7 +144,18 @@ def setup(app):
     standard_dir = basedir / "schema"
     standard_build_dir = basedir / "build" / language
 
+    # `build/current_lang` paths in directives resolve to the language being built.
+    standard_build_dir.parent.mkdir(parents=True, exist_ok=True)
+    current_lang = standard_build_dir.parent / "current_lang"
+    current_lang.unlink(missing_ok=True)
+    current_lang.symlink_to(language)
+    app.connect("build-finished", lambda *args: current_lang.unlink(missing_ok=True))
+
     branch = os.getenv("GITHUB_REF_NAME", "latest")
+
+    # English is the source language, and has no catalogs.
+    if language != "en":
+        compile_catalogs(localedir, language, (schema_domain, codelists_domain))
 
     translate(
         [
