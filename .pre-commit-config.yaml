@@ -1,18 +1,20 @@
 ci:
   autoupdate_schedule: quarterly
   skip: [pip-compile]
-default_language_version:
-    python: python3.10
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.8.6
+    rev: v0.16.10
     hooks:
-      - id: ruff
+      - id: ruff-check
       - id: ruff-format
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.5.14
+    rev: 0.12.23
     hooks:
       - id: pip-compile
         name: pip-compile common-requirements.in
         args: [common-requirements.in, -o, common-requirements.txt]
         files: ^common-requirements\.(in|txt)$
+  - repo: https://github.com/biomejs/pre-commit
+    rev: v2.5.15
+    hooks:
+      - id: biome-check

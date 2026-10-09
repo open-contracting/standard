@@ -1,31 +1,21 @@
 # Configuration file for the Sphinx documentation builder.
 #
-# This file only contains a selection of the most common options. For a full
-# list see the documentation:
+# For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-# -- Path setup --------------------------------------------------------------
-
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use os.path.abspath to make it absolute, like shown here.
-#
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
 import csv
 import json
 import os
 from glob import glob
 from pathlib import Path
 
-import standard_theme
 from docutils.nodes import make_id
 from ocds_babel.translate import translate
 from ocdskit.mapping_sheet import mapping_sheet
 from sphinx.locale import get_translation
 
 # -- Project information -----------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "Open Contracting Data Standard"
 copyright = "Open Contracting Partnership"
@@ -34,12 +24,9 @@ author = "Open Contracting Partnership"
 version = "1.1"
 release = "1.1.5"
 
-
 # -- General configuration ---------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
 extensions = [
     "myst_parser",
     "sphinx.ext.ifconfig",
@@ -49,28 +36,16 @@ extensions = [
     "sphinx_design",
 ]
 
-# Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
-
-# List of patterns, relative to source directory, that match files and
-# directories to ignore when looking for source files.
-# This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "**/docson/[!p]**", "**/docson/package*.json"]
 
-
 # -- Options for HTML output -------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#
 html_theme = "standard_theme"  # 'pydata_sphinx_theme'
-html_theme_path = [standard_theme.get_html_theme_path()]
-html_favicon = "_static/favicon-16x16.ico"
-
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
+html_css_files = ["custom.css"]
+html_js_files = ["renderjson.js", "script.js"]
 
 
 # -- Local configuration -----------------------------------------------------
@@ -84,7 +59,7 @@ repository_url = "https://github.com/open-contracting/standard"
 gettext_compact = False
 # `DOMAIN_PREFIX` from `config.mk`.
 gettext_domain_prefix = f"{profile_identifier}-" if profile_identifier else ""
-locale_dirs = ["locale/", os.path.join(standard_theme.get_html_theme_path(), "locale")]
+locale_dirs = ["locale/"]
 # We use single quotes for codes, which docutils will change to double quotes.
 # https://sourceforge.net/p/docutils/code/HEAD/tree/trunk/docutils/docutils/utils/smartquotes.py
 smartquotes = False
@@ -102,15 +77,13 @@ html_context = {
     "analytics_id": "HTWZHRIZ",
 }
 html_theme_options = {
-    "analytics_id": "HTWZHRIZ",
     "display_version": True,
     "root_url": f"/profiles/{profile_identifier}" if profile_identifier else "",
+    "languages": {"en": "English", "es": "Español", "fr": "Français"},
     "short_project": project.replace("Open Contracting Data Standard", "OCDS"),
-    "copyright": copyright,
-    "license_name": "Apache License 2.0",
-    "license_url": f"{repository_url}/blob/HEAD/LICENSE",
     "repository_url": repository_url,
 }
+html_short_title = f"{html_theme_options['short_project']} v{release}"
 
 # List the extension identifiers and versions that should be part of this specification. The extensions must be in
 # the extension registry: https://github.com/open-contracting/extension_registry/blob/main/extension_versions.csv

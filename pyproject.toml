@@ -4,12 +4,11 @@ version = "0.0.0"
 
 [tool.ruff]
 line-length = 119
-target-version = "py310"
 
 [tool.ruff.lint]
 select = ["ALL"]
 ignore = [
-    "ANN", "C901", "COM812", "D203", "D212", "D415", "EM", "ISC001", "PERF203", "PLR091", "Q000",
+    "ANN", "C901", "COM812", "CPY001", "D203", "D212", "D415", "EM", "ISC001", "PERF203", "PLR091", "Q000",
     "D1", "D205",
     "PTH",
     "D200",  # https://github.com/astral-sh/ruff/issues/6269
@@ -33,3 +32,6 @@ ignore-variadic-names = true
     "D301",  # click escapes
     "TRY003",  # errors
 ]
+
+[tool.uv.pip]
+exclude-newer = "1 week"

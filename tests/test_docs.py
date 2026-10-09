@@ -18,6 +18,3 @@ def test_examples(browser, server, lang):
     select.select_by_visible_text("tenderAmendment")
     assert '"date": "2016-02-05T10:30:00Z"' in examples.text
     assert '"date": "2016-01-01T09:30:00Z"' not in examples.text
-
-    # test collapse expand
-    # xs = examples.find_element(By.LINK_TEXT, '⊖')
