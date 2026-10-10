@@ -26,7 +26,7 @@ def test_search(browser, server, lang, regex):
 # This seems to be an issue in Selenium and/or ChromeDriver.
 @pytest.mark.filterwarnings("ignore:unclosed <socket.socket fd=:ResourceWarning")
 def test_language_switcher(browser, server):
-    if "localhost" in server:
+    if "localhost" in server or len(languages) < 2:
         pytest.skip()
 
     browser.get(f"{server}en/")
