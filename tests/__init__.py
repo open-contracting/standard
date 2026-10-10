@@ -11,8 +11,7 @@ test_basic_params = {
 }
 
 test_search_params = [
-    ("en", r"found \d+ page\(s\) matching"),
-    # See https://github.com/sphinx-doc/sphinx/issues/11008
-    # ('es', r'encontraron \d+ páginas que coinciden'),  # noqa: ERA001
-    # ('fr', r'\d+ page\(s\) correspondant'),  # noqa: ERA001
+    ("en", r"found \d+ pages matching"),
+    ("es", r"encontraron \d+ páginas que coinciden"),
+    ("fr", r"\d+ pages correspondant"),
 ]
