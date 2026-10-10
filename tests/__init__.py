@@ -13,5 +13,5 @@ test_basic_params = {
 test_search_params = [
     ("en", r"found \d+ pages matching"),
     ("es", r"encontraron \d+ páginas que coinciden"),
-    ("fr", r"\d+ pages correspondant"),
+    ("fr", r"\d+ pages correspondant"),  # codespell:ignore
 ]
