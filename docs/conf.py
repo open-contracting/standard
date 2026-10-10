@@ -111,7 +111,7 @@ linkcheck_ignore = [
     # Ignore unwanted links created by linkify.
     r"^http://vnd\.",
     # Ignore expected redirects.
-    r"^https://docs.google.com/spreadsheets/d/[^/]+/pub?gid=\d+&single=true&output=csv$",
+    r"^https://docs\.google\.com/spreadsheets/d/e/[^/]+/pub\?gid=\d+&single=true&output=csv$",
 ]
 
 
