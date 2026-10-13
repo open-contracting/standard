@@ -11,7 +11,6 @@ from pathlib import Path
 
 from babel.messages.mofile import write_mo
 from babel.messages.pofile import read_po
-from docutils.nodes import make_id
 from ocds_babel.translate import translate
 from ocdskit.mapping_sheet import mapping_sheet
 from sphinx.locale import get_translation
@@ -69,9 +68,7 @@ smartquotes = False
 # MyST configuration.
 myst_enable_extensions = ["linkify"]
 myst_heading_anchors = 6
-myst_heading_slug_func = make_id
-# https://github.com/executablebooks/MyST-Parser/issues/357
-suppress_warnings = ["myst.anchor"]
+myst_heading_slug_func = "docutils.nodes.make_id"
 
 # Theme customization.
 navigation_with_keys = False  # restore the Sphinx default
@@ -111,7 +108,7 @@ linkcheck_ignore = [
     # Ignore unwanted links created by linkify.
     r"^http://vnd\.",
     # Ignore expected redirects.
-    r"^https://docs.google.com/spreadsheets/d/[^/]+/pub?gid=\d+&single=true&output=csv$",
+    r"^https://docs\.google\.com/spreadsheets/d/e/[^/]+/pub\?gid=\d+&single=true&output=csv$",
 ]
 
 
@@ -125,7 +122,20 @@ def compile_catalogs(localedir, language, domains):
             write_mo(f, catalog, use_fuzzy=True)
 
 
+def restore_myst_slugs(app, doctree):
+    """Restore the page's heading slugs, which MyST overwrites when parsing a translated title."""
+    # https://github.com/executablebooks/MyST-Parser/issues/844
+    slugs = getattr(doctree, "myst_slugs", None)
+    metadata = app.env.metadata[app.env.docname]
+    if slugs:
+        metadata["myst_slugs"] = slugs
+    else:
+        metadata.pop("myst_slugs", None)
+
+
 def setup(app):
+    app.connect("doctree-read", restore_myst_slugs)
+
     # The root of the repository.
     basedir = Path(__file__).resolve().parents[1]
     # `LOCALE_DIR` from `config.mk`.
